@@ -80,6 +80,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Sager-Form2.resx">
       <DependentUpon>Sager-Form2.cs</DependentUpon>
@@ -96,6 +97,96 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %281%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-computer-icons-computer-software-png-vector-turn-off-download-free-5ab0e7108ce6d0.4911829215215429285771 %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\256 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shutdown_Box_Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuBackground2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuBackground3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MenuBackground31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu-list-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu-list-512 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\232.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\23234.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\win7_ico_shell32_dll-112.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\win7_ico_shell32_dll-1121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\win7_ico_shell32_dll-195.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\win7_ico_shell32_dll-205.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\win7_ico_shell32_dll-004.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\win7_ico_shell32_dll-304.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\win7_ico_shell32_dll-019.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\win7_ico_shell32_dll-033.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\win7_ico_shell32_dll-0041.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\win7_ico_shell32_dll-022.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

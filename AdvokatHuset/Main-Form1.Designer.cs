@@ -28,143 +28,267 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.advokatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sekretærToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.visAlleMedarbejderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sagToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.opretSagToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.Loader_panel = new System.Windows.Forms.Panel();
+            this.Top_Menu_panel = new System.Windows.Forms.Panel();
+            this.General_Menu_Panel = new System.Windows.Forms.Panel();
+            this.General_menuStrip = new System.Windows.Forms.MenuStrip();
+            this.sagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.visSagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.opretAdvokatToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.visAdvokaterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.opretSekretærToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.visAlleSekretærToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Panel_Loader = new System.Windows.Forms.Panel();
-            this.menuStrip1.SuspendLayout();
+            this.ydelserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.advokaterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sekretærToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Menu_Search_button = new System.Windows.Forms.Button();
+            this.Loacal_Folder_button = new System.Windows.Forms.Button();
+            this.Screenshot_button = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.Home_Button = new System.Windows.Forms.Button();
+            this.Back_Button = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.Forward_Button = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Top_Menu_panel.SuspendLayout();
+            this.General_Menu_Panel.SuspendLayout();
+            this.General_menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // Loader_panel
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sagToolStripMenuItem,
-            this.advokatToolStripMenuItem,
-            this.sekretærToolStripMenuItem,
-            this.visAlleMedarbejderToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(973, 24);
-            this.menuStrip1.TabIndex = 8;
-            this.menuStrip1.Text = "menuStrip1";
+            this.Loader_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(80)))), ((int)(((byte)(72)))));
+            this.Loader_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Loader_panel.Location = new System.Drawing.Point(0, 38);
+            this.Loader_panel.Name = "Loader_panel";
+            this.Loader_panel.Size = new System.Drawing.Size(1070, 561);
+            this.Loader_panel.TabIndex = 9;
+            this.Loader_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Loader_panel_Paint);
             // 
-            // advokatToolStripMenuItem
+            // Top_Menu_panel
             // 
-            this.advokatToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.opretAdvokatToolStripMenuItem1,
-            this.visAdvokaterToolStripMenuItem});
-            this.advokatToolStripMenuItem.Name = "advokatToolStripMenuItem";
-            this.advokatToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
-            this.advokatToolStripMenuItem.Text = "Advokater";
-            this.advokatToolStripMenuItem.Click += new System.EventHandler(this.advokatToolStripMenuItem_Click);
+            this.Top_Menu_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
+            this.Top_Menu_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Top_Menu_panel.Controls.Add(this.comboBox1);
+            this.Top_Menu_panel.Controls.Add(this.Menu_Search_button);
+            this.Top_Menu_panel.Controls.Add(this.textBox1);
+            this.Top_Menu_panel.Controls.Add(this.Loacal_Folder_button);
+            this.Top_Menu_panel.Controls.Add(this.Screenshot_button);
+            this.Top_Menu_panel.Controls.Add(this.button3);
+            this.Top_Menu_panel.Controls.Add(this.Home_Button);
+            this.Top_Menu_panel.Controls.Add(this.Back_Button);
+            this.Top_Menu_panel.Controls.Add(this.button6);
+            this.Top_Menu_panel.Controls.Add(this.Forward_Button);
+            this.Top_Menu_panel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Top_Menu_panel.Location = new System.Drawing.Point(0, 0);
+            this.Top_Menu_panel.Name = "Top_Menu_panel";
+            this.Top_Menu_panel.Size = new System.Drawing.Size(1070, 41);
+            this.Top_Menu_panel.TabIndex = 0;
             // 
-            // sekretærToolStripMenuItem
+            // General_Menu_Panel
             // 
-            this.sekretærToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.opretSekretærToolStripMenuItem1,
-            this.visAlleSekretærToolStripMenuItem});
-            this.sekretærToolStripMenuItem.Name = "sekretærToolStripMenuItem";
-            this.sekretærToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.sekretærToolStripMenuItem.Text = "Sekretær";
+            this.General_Menu_Panel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.General_Menu_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
+            this.General_Menu_Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.General_Menu_Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.General_Menu_Panel.Controls.Add(this.General_menuStrip);
+            this.General_Menu_Panel.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.General_Menu_Panel.Location = new System.Drawing.Point(280, 38);
+            this.General_Menu_Panel.Name = "General_Menu_Panel";
+            this.General_Menu_Panel.Size = new System.Drawing.Size(524, 34);
+            this.General_Menu_Panel.TabIndex = 1;
             // 
-            // visAlleMedarbejderToolStripMenuItem
+            // General_menuStrip
             // 
-            this.visAlleMedarbejderToolStripMenuItem.Name = "visAlleMedarbejderToolStripMenuItem";
-            this.visAlleMedarbejderToolStripMenuItem.Size = new System.Drawing.Size(125, 20);
-            this.visAlleMedarbejderToolStripMenuItem.Text = "Vis alle medarbejder";
+            this.General_menuStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.General_menuStrip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.General_menuStrip.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.General_menuStrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.General_menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sagerToolStripMenuItem,
+            this.ydelserToolStripMenuItem,
+            this.advokaterToolStripMenuItem,
+            this.sekretærToolStripMenuItem});
+            this.General_menuStrip.Location = new System.Drawing.Point(0, 0);
+            this.General_menuStrip.Name = "General_menuStrip";
+            this.General_menuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.General_menuStrip.Size = new System.Drawing.Size(522, 32);
+            this.General_menuStrip.TabIndex = 2;
+            this.General_menuStrip.Text = "menuStrip1";
             // 
-            // sagToolStripMenuItem
+            // sagerToolStripMenuItem
             // 
-            this.sagToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.opretSagToolStripMenuItem1,
+            this.sagerToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.sagerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.visSagerToolStripMenuItem});
-            this.sagToolStripMenuItem.Name = "sagToolStripMenuItem";
-            this.sagToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.sagToolStripMenuItem.Text = "Sager";
-            this.sagToolStripMenuItem.Click += new System.EventHandler(this.sagToolStripMenuItem_Click);
-            // 
-            // opretSagToolStripMenuItem1
-            // 
-            this.opretSagToolStripMenuItem1.Name = "opretSagToolStripMenuItem1";
-            this.opretSagToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.opretSagToolStripMenuItem1.Text = "Opret Sag";
+            this.sagerToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sagerToolStripMenuItem.Name = "sagerToolStripMenuItem";
+            this.sagerToolStripMenuItem.Size = new System.Drawing.Size(57, 28);
+            this.sagerToolStripMenuItem.Text = "Sager";
             // 
             // visSagerToolStripMenuItem
             // 
             this.visSagerToolStripMenuItem.Name = "visSagerToolStripMenuItem";
-            this.visSagerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.visSagerToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.visSagerToolStripMenuItem.Text = "Vis Sager";
             // 
-            // opretAdvokatToolStripMenuItem1
+            // ydelserToolStripMenuItem
             // 
-            this.opretAdvokatToolStripMenuItem1.Name = "opretAdvokatToolStripMenuItem1";
-            this.opretAdvokatToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.opretAdvokatToolStripMenuItem1.Text = "Opret Advokat";
+            this.ydelserToolStripMenuItem.Name = "ydelserToolStripMenuItem";
+            this.ydelserToolStripMenuItem.Size = new System.Drawing.Size(57, 28);
+            this.ydelserToolStripMenuItem.Text = "Ydelser";
             // 
-            // visAdvokaterToolStripMenuItem
+            // advokaterToolStripMenuItem
             // 
-            this.visAdvokaterToolStripMenuItem.Name = "visAdvokaterToolStripMenuItem";
-            this.visAdvokaterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.visAdvokaterToolStripMenuItem.Text = "Vis Advokater";
+            this.advokaterToolStripMenuItem.Name = "advokaterToolStripMenuItem";
+            this.advokaterToolStripMenuItem.Size = new System.Drawing.Size(73, 28);
+            this.advokaterToolStripMenuItem.Text = "Advokater";
             // 
-            // opretSekretærToolStripMenuItem1
+            // sekretærToolStripMenuItem
             // 
-            this.opretSekretærToolStripMenuItem1.Name = "opretSekretærToolStripMenuItem1";
-            this.opretSekretærToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.opretSekretærToolStripMenuItem1.Text = "Opret Sekretær";
+            this.sekretærToolStripMenuItem.Name = "sekretærToolStripMenuItem";
+            this.sekretærToolStripMenuItem.Size = new System.Drawing.Size(65, 28);
+            this.sekretærToolStripMenuItem.Text = "Sekretær";
             // 
-            // visAlleSekretærToolStripMenuItem
+            // textBox1
             // 
-            this.visAlleSekretærToolStripMenuItem.Name = "visAlleSekretærToolStripMenuItem";
-            this.visAlleSekretærToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.visAlleSekretærToolStripMenuItem.Text = "Vis alle Sekretær";
+            this.textBox1.Location = new System.Drawing.Point(456, 8);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(141, 20);
+            this.textBox1.TabIndex = 10;
             // 
-            // Panel_Loader
+            // Menu_Search_button
             // 
-            this.Panel_Loader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.Panel_Loader.Location = new System.Drawing.Point(0, 27);
-            this.Panel_Loader.Name = "Panel_Loader";
-            this.Panel_Loader.Size = new System.Drawing.Size(973, 502);
-            this.Panel_Loader.TabIndex = 9;
+            this.Menu_Search_button.BackgroundImage = global::AdvokatHuset.Properties.Resources.win7_ico_shell32_dll_022;
+            this.Menu_Search_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Menu_Search_button.Location = new System.Drawing.Point(609, 4);
+            this.Menu_Search_button.Margin = new System.Windows.Forms.Padding(0);
+            this.Menu_Search_button.Name = "Menu_Search_button";
+            this.Menu_Search_button.Size = new System.Drawing.Size(25, 26);
+            this.Menu_Search_button.TabIndex = 11;
+            this.Menu_Search_button.UseVisualStyleBackColor = true;
+            // 
+            // Loacal_Folder_button
+            // 
+            this.Loacal_Folder_button.BackgroundImage = global::AdvokatHuset.Properties.Resources.win7_ico_shell32_dll_0041;
+            this.Loacal_Folder_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Loacal_Folder_button.Location = new System.Drawing.Point(225, 4);
+            this.Loacal_Folder_button.Margin = new System.Windows.Forms.Padding(0);
+            this.Loacal_Folder_button.Name = "Loacal_Folder_button";
+            this.Loacal_Folder_button.Size = new System.Drawing.Size(28, 29);
+            this.Loacal_Folder_button.TabIndex = 9;
+            this.Loacal_Folder_button.UseVisualStyleBackColor = true;
+            // 
+            // Screenshot_button
+            // 
+            this.Screenshot_button.BackgroundImage = global::AdvokatHuset.Properties.Resources.unnamed__1_1;
+            this.Screenshot_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Screenshot_button.Location = new System.Drawing.Point(922, 4);
+            this.Screenshot_button.Margin = new System.Windows.Forms.Padding(0);
+            this.Screenshot_button.Name = "Screenshot_button";
+            this.Screenshot_button.Size = new System.Drawing.Size(33, 33);
+            this.Screenshot_button.TabIndex = 8;
+            this.Screenshot_button.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::AdvokatHuset.Properties.Resources.win7_ico_shell32_dll_1121;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.Location = new System.Drawing.Point(11, 4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(33, 33);
+            this.button3.TabIndex = 7;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // Home_Button
+            // 
+            this.Home_Button.BackgroundImage = global::AdvokatHuset.Properties.Resources.images__1___1_;
+            this.Home_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Home_Button.Location = new System.Drawing.Point(101, 5);
+            this.Home_Button.Name = "Home_Button";
+            this.Home_Button.Size = new System.Drawing.Size(30, 30);
+            this.Home_Button.TabIndex = 6;
+            this.Home_Button.UseVisualStyleBackColor = true;
+            // 
+            // Back_Button
+            // 
+            this.Back_Button.BackgroundImage = global::AdvokatHuset.Properties.Resources.Background;
+            this.Back_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Back_Button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Back_Button.Location = new System.Drawing.Point(65, 5);
+            this.Back_Button.Name = "Back_Button";
+            this.Back_Button.Size = new System.Drawing.Size(30, 30);
+            this.Back_Button.TabIndex = 2;
+            this.Back_Button.UseVisualStyleBackColor = true;
+            this.Back_Button.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackgroundImage = global::AdvokatHuset.Properties.Resources._23234;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button6.Location = new System.Drawing.Point(1024, 8);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(33, 27);
+            this.button6.TabIndex = 5;
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // Forward_Button
+            // 
+            this.Forward_Button.BackgroundImage = global::AdvokatHuset.Properties.Resources.Background___Copy;
+            this.Forward_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Forward_Button.Location = new System.Drawing.Point(137, 5);
+            this.Forward_Button.Name = "Forward_Button";
+            this.Forward_Button.Size = new System.Drawing.Size(30, 30);
+            this.Forward_Button.TabIndex = 4;
+            this.Forward_Button.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(386, 8);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(64, 21);
+            this.comboBox1.TabIndex = 12;
             // 
             // Main_Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(973, 527);
-            this.Controls.Add(this.Panel_Loader);
-            this.Controls.Add(this.menuStrip1);
+            this.ClientSize = new System.Drawing.Size(1070, 599);
+            this.Controls.Add(this.General_Menu_Panel);
+            this.Controls.Add(this.Top_Menu_panel);
+            this.Controls.Add(this.Loader_panel);
+            this.MainMenuStrip = this.General_menuStrip;
             this.Name = "Main_Form1";
             this.Text = "Main_Form1";
             this.Load += new System.EventHandler(this.Main_Form1_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.Top_Menu_panel.ResumeLayout(false);
+            this.Top_Menu_panel.PerformLayout();
+            this.General_Menu_Panel.ResumeLayout(false);
+            this.General_Menu_Panel.PerformLayout();
+            this.General_menuStrip.ResumeLayout(false);
+            this.General_menuStrip.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem advokatToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sekretærToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem visAlleMedarbejderToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sagToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem opretSagToolStripMenuItem1;
+        private System.Windows.Forms.Panel Loader_panel;
+        private System.Windows.Forms.Panel Top_Menu_panel;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button Forward_Button;
+        private System.Windows.Forms.Button Back_Button;
+        private System.Windows.Forms.Panel General_Menu_Panel;
+        private System.Windows.Forms.Button Home_Button;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.MenuStrip General_menuStrip;
+        private System.Windows.Forms.ToolStripMenuItem sagerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem visSagerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem opretAdvokatToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem visAdvokaterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem opretSekretærToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem visAlleSekretærToolStripMenuItem;
-        private System.Windows.Forms.Panel Panel_Loader;
+        private System.Windows.Forms.ToolStripMenuItem ydelserToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem advokaterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sekretærToolStripMenuItem;
+        private System.Windows.Forms.Button Screenshot_button;
+        private System.Windows.Forms.Button Loacal_Folder_button;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button Menu_Search_button;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
