@@ -175,6 +175,7 @@
             this.Loacal_Folder_button.Size = new System.Drawing.Size(28, 29);
             this.Loacal_Folder_button.TabIndex = 9;
             this.Loacal_Folder_button.UseVisualStyleBackColor = true;
+            this.Loacal_Folder_button.Click += new System.EventHandler(this.Loacal_Folder_button_Click);
             // 
             // Screenshot_button
             // 
@@ -186,6 +187,7 @@
             this.Screenshot_button.Size = new System.Drawing.Size(33, 33);
             this.Screenshot_button.TabIndex = 8;
             this.Screenshot_button.UseVisualStyleBackColor = true;
+            this.Screenshot_button.Click += new System.EventHandler(this.Screenshot_button_Click);
             // 
             // button3
             // 

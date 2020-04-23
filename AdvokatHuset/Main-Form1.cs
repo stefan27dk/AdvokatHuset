@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Imaging;  //Used for Screenshot
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -116,6 +118,46 @@ namespace AdvokatHuset
         private void Loader_panel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void Screenshot_button_Click(object sender, EventArgs e)
+        {
+            
+
+            Rectangle bounds = Screen.GetBounds(Point.Empty);
+
+            using (Bitmap bitmap = new Bitmap(bounds.Width, bounds.Height))
+            {
+                using (Graphics g = Graphics.FromImage(bitmap))
+                {
+
+                    g.CopyFromScreen(Point.Empty, Point.Empty, bounds.Size);
+                }
+
+
+
+                Random rnd = new Random();
+
+                int i = 0;
+                for (i = 0; i < 15; i++)
+                {
+                    i += rnd.Next(0, 500);
+                }
+
+                bitmap.Save($"C://bbbb {i} .jpg", ImageFormat.Jpeg);
+
+
+
+            }
+
+
+
+
+        }
+
+        private void Loacal_Folder_button_Click(object sender, EventArgs e)
+        {
+            Process.Start("C://");
         }
     }
 }
