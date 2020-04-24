@@ -137,7 +137,7 @@ namespace AdvokatHuset
 
                 
 
-                bitmap.Save($"C://ScreenShot - {DateTime.Now.ToString("dd-MM-yyyy  HH-mm-ss")}.jpg", ImageFormat.Png);
+                bitmap.Save($"C://ScreenShot - {DateTime.Now.ToString("dd-MM-yyyy  HH-mm-ss")}.jpg", ImageFormat.Png);// Screenshot -  Unique Name so it dont get overwrited everytime new screenshot is made
 
 
 
