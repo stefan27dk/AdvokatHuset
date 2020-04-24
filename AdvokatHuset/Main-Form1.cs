@@ -135,16 +135,9 @@ namespace AdvokatHuset
                 }
 
 
+                
 
-                Random rnd = new Random();
-
-                int i = 0;
-                for (i = 0; i < 15; i++)
-                {
-                    i += rnd.Next(0, 500);
-                }
-
-                bitmap.Save($"C://bbbb {i} .jpg", ImageFormat.Jpeg);
+                bitmap.Save($"C://ScreenShot - {DateTime.Now.ToString("dd-MM-yyyy  HH-mm-ss")}.jpg", ImageFormat.Png);
 
 
 
