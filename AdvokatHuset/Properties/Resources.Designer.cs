@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AdvokatHuset.Properties {
+namespace View_GUI.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace AdvokatHuset.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AdvokatHuset.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("View_GUI.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -63,29 +63,9 @@ namespace AdvokatHuset.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _232 {
-            get {
-                object obj = ResourceManager.GetObject("232", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap _23234 {
             get {
                 object obj = ResourceManager.GetObject("23234", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _256__1_ {
-            get {
-                object obj = ResourceManager.GetObject("256 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,26 +93,6 @@ namespace AdvokatHuset.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Background__1_ {
-            get {
-                object obj = ResourceManager.GetObject("Background (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap images__1_ {
-            get {
-                object obj = ResourceManager.GetObject("images (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap images__1___1_ {
             get {
                 object obj = ResourceManager.GetObject("images (1) (1)", resourceCulture);
@@ -143,120 +103,9 @@ namespace AdvokatHuset.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap kisspng_computer_icons_computer_software_png_vector_turn_off_download_free_5ab0e7108ce6d0_4911829215215429285771__1_ {
-            get {
-                object obj = ResourceManager.GetObject("kisspng-computer-icons-computer-software-png-vector-turn-off-download-free-5ab0e7" +
-                        "108ce6d0.4911829215215429285771 (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap menu_list_512 {
-            get {
-                object obj = ResourceManager.GetObject("menu-list-512", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap menu_list_512__1_ {
-            get {
-                object obj = ResourceManager.GetObject("menu-list-512 (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap MenuBackground {
-            get {
-                object obj = ResourceManager.GetObject("MenuBackground", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap MenuBackground2 {
-            get {
-                object obj = ResourceManager.GetObject("MenuBackground2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap MenuBackground3 {
-            get {
-                object obj = ResourceManager.GetObject("MenuBackground3", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap MenuBackground31 {
-            get {
-                object obj = ResourceManager.GetObject("MenuBackground31", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Shutdown_Box_Red {
-            get {
-                object obj = ResourceManager.GetObject("Shutdown_Box_Red", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap unnamed {
-            get {
-                object obj = ResourceManager.GetObject("unnamed", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap unnamed__1_ {
-            get {
-                object obj = ResourceManager.GetObject("unnamed (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap unnamed__1_1 {
             get {
                 object obj = ResourceManager.GetObject("unnamed (1)1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap unnamed1 {
-            get {
-                object obj = ResourceManager.GetObject("unnamed1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -284,39 +133,9 @@ namespace AdvokatHuset.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap win7_ico_shell32_dll_019 {
-            get {
-                object obj = ResourceManager.GetObject("win7_ico_shell32_dll-019", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap win7_ico_shell32_dll_022 {
             get {
                 object obj = ResourceManager.GetObject("win7_ico_shell32_dll-022", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap win7_ico_shell32_dll_033 {
-            get {
-                object obj = ResourceManager.GetObject("win7_ico_shell32_dll-033", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap win7_ico_shell32_dll_112 {
-            get {
-                object obj = ResourceManager.GetObject("win7_ico_shell32_dll-112", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -334,9 +153,9 @@ namespace AdvokatHuset.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap win7_ico_shell32_dll_195 {
+        internal static System.Drawing.Bitmap win7_ico_shell32_dll_131 {
             get {
-                object obj = ResourceManager.GetObject("win7_ico_shell32_dll-195", resourceCulture);
+                object obj = ResourceManager.GetObject("win7_ico_shell32_dll-131", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -344,9 +163,9 @@ namespace AdvokatHuset.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap win7_ico_shell32_dll_205 {
+        internal static System.Drawing.Bitmap win7_ico_shell32_dll_154 {
             get {
-                object obj = ResourceManager.GetObject("win7_ico_shell32_dll-205", resourceCulture);
+                object obj = ResourceManager.GetObject("win7_ico_shell32_dll-154", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -354,9 +173,9 @@ namespace AdvokatHuset.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap win7_ico_shell32_dll_304 {
+        internal static System.Drawing.Bitmap win7_ico_shell32_dll_258 {
             get {
-                object obj = ResourceManager.GetObject("win7_ico_shell32_dll-304", resourceCulture);
+                object obj = ResourceManager.GetObject("win7_ico_shell32_dll-258", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

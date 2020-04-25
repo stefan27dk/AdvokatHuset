@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AdvokatHuset
+namespace View_GUI
 {
     public partial class Advokater_Form3 : Form
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AdvokatHuset
+namespace View_GUI
 {
     static class Program
     {

@@ -1,4 +1,4 @@
-﻿namespace AdvokatHuset
+﻿namespace View_GUI
 {
     partial class Advokater_Form3
     {

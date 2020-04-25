@@ -1,6 +1,6 @@
 ﻿namespace View_GUI
 {
-    partial class Sager_Form2
+    partial class MenuFormSelectionScreenshot___Form5
     {
         /// <summary>
         /// Required designer variable.
@@ -28,35 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.border_panel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // label1
+            // border_panel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(45, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Sager";
+            this.border_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.border_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.border_panel.Location = new System.Drawing.Point(0, 0);
+            this.border_panel.Name = "border_panel";
+            this.border_panel.Size = new System.Drawing.Size(800, 450);
+            this.border_panel.TabIndex = 0;
             // 
-            // Sager_Form2
+            // MenuFormSelectionScreenshot___Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.border_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Sager_Form2";
-            this.Text = "Sager_Form2";
-            this.Load += new System.EventHandler(this.Sager_Form2_Load);
+            this.Name = "MenuFormSelectionScreenshot___Form5";
+            this.Opacity = 0.9D;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "MenuFormSelectionScreenshot___Form5";
+            this.Load += new System.EventHandler(this.MenuFormSelectionScreenshot___Form5_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel border_panel;
     }
 }
