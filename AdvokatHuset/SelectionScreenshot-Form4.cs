@@ -11,6 +11,7 @@ using System.Threading;
 using Domain;
 using System.Diagnostics;
 using System.Media;
+using System.IO;
 
 namespace View_GUI
 {
@@ -202,12 +203,15 @@ namespace View_GUI
 
         private void closeForm_button_Click(object sender, EventArgs e)
         {
+            CloseForm();
+        }
+
+         private void CloseForm()
+        {
             SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\Windows Default.wav");
             simpleSound.Play();
             this.Close();
         }
-
- 
 
         protected override bool ProcessDialogKey(Keys keydata) // ESC Key only on this form "Dont send key event to other "Parrent" forms
           {
@@ -226,6 +230,36 @@ namespace View_GUI
             simpleSound.Play();
 
             help_label.Visible = true;
+        }
+
+        private void open_iimage_in_paint_button_Click(object sender, EventArgs e)
+        {
+
+            //-----------------GET--LAST--Updated--File
+            string Path = @"C:\";
+
+            var files = new DirectoryInfo(Path).GetFiles("*.png*");
+            string lastfile = "";
+
+            DateTime lastupdated = DateTime.MinValue;
+
+            foreach(FileInfo file in files)
+            {
+                if(file.LastWriteTime > lastupdated)
+                {
+                    lastfile = file.FullName;
+                }
+            }
+
+           
+
+            // Opens Last image in paint
+
+            Process.Start("mspaint", $@"""{lastfile}""");
+
+            CloseForm();
+
+
         }
 
         //---------ScreenshotForm--Close with Esc - Key-----::END::------------------------------------------------------------------------------------------------------------------------------------------------------

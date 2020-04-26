@@ -33,6 +33,7 @@
             this.openFolder_button = new System.Windows.Forms.Button();
             this.closeForm_button = new System.Windows.Forms.Button();
             this.selectionScreenshot_button = new System.Windows.Forms.Button();
+            this.open_iimage_in_paint_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // help_label
@@ -42,7 +43,7 @@
             this.help_label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.help_label.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.help_label.ForeColor = System.Drawing.Color.Lavender;
-            this.help_label.Location = new System.Drawing.Point(223, 413);
+            this.help_label.Location = new System.Drawing.Point(276, 411);
             this.help_label.Name = "help_label";
             this.help_label.Size = new System.Drawing.Size(663, 25);
             this.help_label.TabIndex = 4;
@@ -56,7 +57,7 @@
             this.help_button.BackColor = System.Drawing.SystemColors.Control;
             this.help_button.BackgroundImage = global::View_GUI.Properties.Resources.win7_ico_shell32_dll_154;
             this.help_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.help_button.Location = new System.Drawing.Point(164, 404);
+            this.help_button.Location = new System.Drawing.Point(219, 404);
             this.help_button.Name = "help_button";
             this.help_button.Size = new System.Drawing.Size(34, 34);
             this.help_button.TabIndex = 3;
@@ -81,7 +82,7 @@
             this.closeForm_button.BackColor = System.Drawing.SystemColors.Control;
             this.closeForm_button.BackgroundImage = global::View_GUI.Properties.Resources.win7_ico_shell32_dll_131;
             this.closeForm_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.closeForm_button.Location = new System.Drawing.Point(124, 404);
+            this.closeForm_button.Location = new System.Drawing.Point(179, 404);
             this.closeForm_button.Name = "closeForm_button";
             this.closeForm_button.Size = new System.Drawing.Size(34, 34);
             this.closeForm_button.TabIndex = 1;
@@ -101,11 +102,25 @@
             this.selectionScreenshot_button.UseVisualStyleBackColor = true;
             this.selectionScreenshot_button.Click += new System.EventHandler(this.selectionScreenshot_button_Click);
             // 
+            // open_iimage_in_paint_button
+            // 
+            this.open_iimage_in_paint_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.open_iimage_in_paint_button.BackColor = System.Drawing.SystemColors.Control;
+            this.open_iimage_in_paint_button.BackgroundImage = global::View_GUI.Properties.Resources.Paint_icon;
+            this.open_iimage_in_paint_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.open_iimage_in_paint_button.Location = new System.Drawing.Point(113, 404);
+            this.open_iimage_in_paint_button.Name = "open_iimage_in_paint_button";
+            this.open_iimage_in_paint_button.Size = new System.Drawing.Size(34, 34);
+            this.open_iimage_in_paint_button.TabIndex = 5;
+            this.open_iimage_in_paint_button.UseVisualStyleBackColor = false;
+            this.open_iimage_in_paint_button.Click += new System.EventHandler(this.open_iimage_in_paint_button_Click);
+            // 
             // SelectionScreenshot_Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.open_iimage_in_paint_button);
             this.Controls.Add(this.help_label);
             this.Controls.Add(this.help_button);
             this.Controls.Add(this.openFolder_button);
@@ -134,5 +149,6 @@
         private System.Windows.Forms.Button openFolder_button;
         private System.Windows.Forms.Button help_button;
         private System.Windows.Forms.Label help_label;
+        private System.Windows.Forms.Button open_iimage_in_paint_button;
     }
 }

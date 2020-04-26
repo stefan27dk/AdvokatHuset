@@ -34,21 +34,23 @@
             this.menuPanelDropDown = new System.Windows.Forms.Panel();
             this.screenshot_DropDown_menustrip = new System.Windows.Forms.MenuStrip();
             this.Top_Menu_panel = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.General_Menu_Panel = new System.Windows.Forms.Panel();
             this.General_menuStrip = new System.Windows.Forms.MenuStrip();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.Menu_Search_button = new System.Windows.Forms.Button();
             this.sagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.visSagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ydelserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.advokaterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sekretærToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kunderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kørselToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button2 = new System.Windows.Forms.Button();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.Menu_Search_button = new System.Windows.Forms.Button();
             this.Loacal_Folder_button = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.Home_Button = new System.Windows.Forms.Button();
@@ -58,12 +60,12 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.open_browser_button = new System.Windows.Forms.Button();
+            this.developer_button = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.setting_button = new System.Windows.Forms.Button();
             this.sound_recorder_button = new System.Windows.Forms.Button();
             this.calendar_button = new System.Windows.Forms.Button();
             this.calculator_button = new System.Windows.Forms.Button();
-            this.developer_button = new System.Windows.Forms.Button();
-            this.setting_button = new System.Windows.Forms.Button();
             this.text_writer_button = new System.Windows.Forms.Button();
             this.notes_button = new System.Windows.Forms.Button();
             this.timer_button = new System.Windows.Forms.Button();
@@ -78,6 +80,7 @@
             // Loader_panel
             // 
             this.Loader_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(80)))), ((int)(((byte)(72)))));
+            this.Loader_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Loader_panel.Controls.Add(this.task_bar_panel);
             this.Loader_panel.Controls.Add(this.item_menu_top_panel);
             this.Loader_panel.Controls.Add(this.menuPanelDropDown);
@@ -92,15 +95,16 @@
             this.task_bar_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.task_bar_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.task_bar_panel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.task_bar_panel.Location = new System.Drawing.Point(0, 560);
+            this.task_bar_panel.Location = new System.Drawing.Point(0, 558);
             this.task_bar_panel.Name = "task_bar_panel";
-            this.task_bar_panel.Size = new System.Drawing.Size(1084, 39);
+            this.task_bar_panel.Size = new System.Drawing.Size(1082, 39);
             this.task_bar_panel.TabIndex = 2;
             // 
             // item_menu_top_panel
             // 
+            this.item_menu_top_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.item_menu_top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.item_menu_top_panel.Location = new System.Drawing.Point(1019, 39);
+            this.item_menu_top_panel.Location = new System.Drawing.Point(1019, 61);
             this.item_menu_top_panel.Name = "item_menu_top_panel";
             this.item_menu_top_panel.Size = new System.Drawing.Size(40, 21);
             this.item_menu_top_panel.TabIndex = 1;
@@ -108,6 +112,7 @@
             // 
             // menuPanelDropDown
             // 
+            this.menuPanelDropDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.menuPanelDropDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.menuPanelDropDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.menuPanelDropDown.Controls.Add(this.button5);
@@ -122,7 +127,7 @@
             this.menuPanelDropDown.Controls.Add(this.text_writer_button);
             this.menuPanelDropDown.Controls.Add(this.notes_button);
             this.menuPanelDropDown.Controls.Add(this.timer_button);
-            this.menuPanelDropDown.Location = new System.Drawing.Point(859, 50);
+            this.menuPanelDropDown.Location = new System.Drawing.Point(859, 71);
             this.menuPanelDropDown.Name = "menuPanelDropDown";
             this.menuPanelDropDown.Size = new System.Drawing.Size(200, 243);
             this.menuPanelDropDown.TabIndex = 0;
@@ -148,11 +153,12 @@
             // 
             this.Top_Menu_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.Top_Menu_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Top_Menu_panel.Controls.Add(this.panel2);
+            this.Top_Menu_panel.Controls.Add(this.Menu_Search_button);
+            this.Top_Menu_panel.Controls.Add(this.panel1);
+            this.Top_Menu_panel.Controls.Add(this.General_Menu_Panel);
             this.Top_Menu_panel.Controls.Add(this.button2);
             this.Top_Menu_panel.Controls.Add(this.screenshot_DropDown_menustrip);
-            this.Top_Menu_panel.Controls.Add(this.comboBox1);
-            this.Top_Menu_panel.Controls.Add(this.Menu_Search_button);
-            this.Top_Menu_panel.Controls.Add(this.textBox1);
             this.Top_Menu_panel.Controls.Add(this.Loacal_Folder_button);
             this.Top_Menu_panel.Controls.Add(this.button3);
             this.Top_Menu_panel.Controls.Add(this.Home_Button);
@@ -162,39 +168,26 @@
             this.Top_Menu_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.Top_Menu_panel.Location = new System.Drawing.Point(0, 0);
             this.Top_Menu_panel.Name = "Top_Menu_panel";
-            this.Top_Menu_panel.Size = new System.Drawing.Size(1084, 44);
+            this.Top_Menu_panel.Size = new System.Drawing.Size(1084, 63);
             this.Top_Menu_panel.TabIndex = 0;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(386, 8);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(64, 21);
-            this.comboBox1.TabIndex = 12;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(456, 8);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(141, 20);
-            this.textBox1.TabIndex = 10;
             // 
             // General_Menu_Panel
             // 
+            this.General_Menu_Panel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.General_Menu_Panel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.General_Menu_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.General_Menu_Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.General_Menu_Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.General_Menu_Panel.Controls.Add(this.General_menuStrip);
             this.General_Menu_Panel.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.General_Menu_Panel.Location = new System.Drawing.Point(280, 38);
+            this.General_Menu_Panel.Location = new System.Drawing.Point(273, 2);
             this.General_Menu_Panel.Name = "General_Menu_Panel";
-            this.General_Menu_Panel.Size = new System.Drawing.Size(524, 34);
+            this.General_Menu_Panel.Size = new System.Drawing.Size(524, 55);
             this.General_Menu_Panel.TabIndex = 1;
             // 
             // General_menuStrip
             // 
+            this.General_menuStrip.AutoSize = false;
             this.General_menuStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
             this.General_menuStrip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.General_menuStrip.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -203,23 +196,65 @@
             this.sagerToolStripMenuItem,
             this.ydelserToolStripMenuItem,
             this.advokaterToolStripMenuItem,
-            this.sekretærToolStripMenuItem});
+            this.sekretærToolStripMenuItem,
+            this.kunderToolStripMenuItem,
+            this.kørselToolStripMenuItem});
             this.General_menuStrip.Location = new System.Drawing.Point(0, 0);
             this.General_menuStrip.Name = "General_menuStrip";
             this.General_menuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.General_menuStrip.Size = new System.Drawing.Size(522, 32);
+            this.General_menuStrip.Size = new System.Drawing.Size(522, 53);
             this.General_menuStrip.TabIndex = 2;
             this.General_menuStrip.Text = "menuStrip1";
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Location = new System.Drawing.Point(-1, 48);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(272, 10);
+            this.panel1.TabIndex = 13;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.panel2.AutoSize = true;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Location = new System.Drawing.Point(799, 48);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(284, 10);
+            this.panel2.TabIndex = 14;
+            // 
+            // Menu_Search_button
+            // 
+            this.Menu_Search_button.BackgroundImage = global::View_GUI.Properties.Resources.Start_Menu_Search_icon1;
+            this.Menu_Search_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Menu_Search_button.Location = new System.Drawing.Point(194, 5);
+            this.Menu_Search_button.Margin = new System.Windows.Forms.Padding(0);
+            this.Menu_Search_button.Name = "Menu_Search_button";
+            this.Menu_Search_button.Size = new System.Drawing.Size(30, 30);
+            this.Menu_Search_button.TabIndex = 11;
+            this.Menu_Search_button.UseVisualStyleBackColor = true;
+            // 
             // sagerToolStripMenuItem
             // 
+            this.sagerToolStripMenuItem.AutoSize = false;
             this.sagerToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.sagerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.visSagerToolStripMenuItem});
             this.sagerToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sagerToolStripMenuItem.Image = global::View_GUI.Properties.Resources.Documents_icon__1_;
+            this.sagerToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.sagerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.sagerToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.sagerToolStripMenuItem.Name = "sagerToolStripMenuItem";
-            this.sagerToolStripMenuItem.Size = new System.Drawing.Size(57, 28);
+            this.sagerToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
+            this.sagerToolStripMenuItem.Size = new System.Drawing.Size(50, 50);
             this.sagerToolStripMenuItem.Text = "Sager";
+            this.sagerToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.sagerToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.sagerToolStripMenuItem.Click += new System.EventHandler(this.sagerToolStripMenuItem_Click);
             // 
             // visSagerToolStripMenuItem
@@ -230,25 +265,69 @@
             // 
             // ydelserToolStripMenuItem
             // 
+            this.ydelserToolStripMenuItem.AutoSize = false;
+            this.ydelserToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ydelserToolStripMenuItem.Image = global::View_GUI.Properties.Resources.document_excel_icon__1_;
+            this.ydelserToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ydelserToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ydelserToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.ydelserToolStripMenuItem.Name = "ydelserToolStripMenuItem";
-            this.ydelserToolStripMenuItem.Size = new System.Drawing.Size(67, 28);
+            this.ydelserToolStripMenuItem.Size = new System.Drawing.Size(60, 50);
             this.ydelserToolStripMenuItem.Text = "Ydelser";
+            this.ydelserToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // advokaterToolStripMenuItem
             // 
+            this.advokaterToolStripMenuItem.AutoSize = false;
+            this.advokaterToolStripMenuItem.Image = global::View_GUI.Properties.Resources.Office_Customer_Male_Light_icon__1_;
+            this.advokaterToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.advokaterToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.advokaterToolStripMenuItem.Name = "advokaterToolStripMenuItem";
-            this.advokaterToolStripMenuItem.Size = new System.Drawing.Size(81, 28);
+            this.advokaterToolStripMenuItem.Size = new System.Drawing.Size(75, 55);
             this.advokaterToolStripMenuItem.Text = "Advokater";
+            this.advokaterToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.advokaterToolStripMenuItem.Click += new System.EventHandler(this.advokaterToolStripMenuItem_Click);
             // 
             // sekretærToolStripMenuItem
             // 
+            this.sekretærToolStripMenuItem.AutoSize = false;
+            this.sekretærToolStripMenuItem.Image = global::View_GUI.Properties.Resources.Office_Customer_Female_Light_icon__1_;
+            this.sekretærToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.sekretærToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.sekretærToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.sekretærToolStripMenuItem.Name = "sekretærToolStripMenuItem";
-            this.sekretærToolStripMenuItem.Size = new System.Drawing.Size(77, 28);
+            this.sekretærToolStripMenuItem.Size = new System.Drawing.Size(70, 50);
             this.sekretærToolStripMenuItem.Text = "Sekretær";
+            this.sekretærToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.sekretærToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // kunderToolStripMenuItem
+            // 
+            this.kunderToolStripMenuItem.AutoSize = false;
+            this.kunderToolStripMenuItem.Image = global::View_GUI.Properties.Resources.people_icon__1_;
+            this.kunderToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.kunderToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.kunderToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.kunderToolStripMenuItem.Name = "kunderToolStripMenuItem";
+            this.kunderToolStripMenuItem.Size = new System.Drawing.Size(50, 50);
+            this.kunderToolStripMenuItem.Text = "Kunder";
+            this.kunderToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // kørselToolStripMenuItem
+            // 
+            this.kørselToolStripMenuItem.AutoSize = false;
+            this.kørselToolStripMenuItem.Image = global::View_GUI.Properties.Resources._11111111111;
+            this.kørselToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.kørselToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.kørselToolStripMenuItem.Name = "kørselToolStripMenuItem";
+            this.kørselToolStripMenuItem.Size = new System.Drawing.Size(60, 70);
+            this.kørselToolStripMenuItem.Text = "Kørsel";
+            this.kørselToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.kørselToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // button2
             // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.button2.BackgroundImage = global::View_GUI.Properties.Resources.Opera_Snapshot_2020_04_26_221511_cdn0_iconfinder_com;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button2.Location = new System.Drawing.Point(941, 0);
@@ -319,25 +398,14 @@
             this.toolStripMenuItem5.Text = "1";
             this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
             // 
-            // Menu_Search_button
-            // 
-            this.Menu_Search_button.BackgroundImage = global::View_GUI.Properties.Resources.win7_ico_shell32_dll_022;
-            this.Menu_Search_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Menu_Search_button.Location = new System.Drawing.Point(609, 4);
-            this.Menu_Search_button.Margin = new System.Windows.Forms.Padding(0);
-            this.Menu_Search_button.Name = "Menu_Search_button";
-            this.Menu_Search_button.Size = new System.Drawing.Size(25, 26);
-            this.Menu_Search_button.TabIndex = 11;
-            this.Menu_Search_button.UseVisualStyleBackColor = true;
-            // 
             // Loacal_Folder_button
             // 
             this.Loacal_Folder_button.BackgroundImage = global::View_GUI.Properties.Resources.win7_ico_shell32_dll_0041;
             this.Loacal_Folder_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Loacal_Folder_button.Location = new System.Drawing.Point(225, 4);
+            this.Loacal_Folder_button.Location = new System.Drawing.Point(229, 4);
             this.Loacal_Folder_button.Margin = new System.Windows.Forms.Padding(0);
             this.Loacal_Folder_button.Name = "Loacal_Folder_button";
-            this.Loacal_Folder_button.Size = new System.Drawing.Size(28, 29);
+            this.Loacal_Folder_button.Size = new System.Drawing.Size(30, 30);
             this.Loacal_Folder_button.TabIndex = 9;
             this.Loacal_Folder_button.UseVisualStyleBackColor = true;
             this.Loacal_Folder_button.Click += new System.EventHandler(this.Loacal_Folder_button_Click);
@@ -427,6 +495,16 @@
             this.open_browser_button.UseVisualStyleBackColor = true;
             this.open_browser_button.Click += new System.EventHandler(this.open_browser_button_Click);
             // 
+            // developer_button
+            // 
+            this.developer_button.BackgroundImage = global::View_GUI.Properties.Resources.Apps_utilities_terminal_icon;
+            this.developer_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.developer_button.Location = new System.Drawing.Point(144, 126);
+            this.developer_button.Name = "developer_button";
+            this.developer_button.Size = new System.Drawing.Size(41, 39);
+            this.developer_button.TabIndex = 17;
+            this.developer_button.UseVisualStyleBackColor = true;
+            // 
             // button1
             // 
             this.button1.BackgroundImage = global::View_GUI.Properties.Resources.Paint_icon;
@@ -437,6 +515,16 @@
             this.button1.TabIndex = 21;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // setting_button
+            // 
+            this.setting_button.BackgroundImage = global::View_GUI.Properties.Resources.Categories_preferences_system_icon;
+            this.setting_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.setting_button.Location = new System.Drawing.Point(78, 126);
+            this.setting_button.Name = "setting_button";
+            this.setting_button.Size = new System.Drawing.Size(41, 39);
+            this.setting_button.TabIndex = 16;
+            this.setting_button.UseVisualStyleBackColor = true;
             // 
             // sound_recorder_button
             // 
@@ -469,26 +557,6 @@
             this.calculator_button.TabIndex = 18;
             this.calculator_button.UseVisualStyleBackColor = true;
             this.calculator_button.Click += new System.EventHandler(this.calculator_button_Click);
-            // 
-            // developer_button
-            // 
-            this.developer_button.BackgroundImage = global::View_GUI.Properties.Resources.Apps_utilities_terminal_icon;
-            this.developer_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.developer_button.Location = new System.Drawing.Point(144, 126);
-            this.developer_button.Name = "developer_button";
-            this.developer_button.Size = new System.Drawing.Size(41, 39);
-            this.developer_button.TabIndex = 17;
-            this.developer_button.UseVisualStyleBackColor = true;
-            // 
-            // setting_button
-            // 
-            this.setting_button.BackgroundImage = global::View_GUI.Properties.Resources.Categories_preferences_system_icon;
-            this.setting_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.setting_button.Location = new System.Drawing.Point(78, 126);
-            this.setting_button.Name = "setting_button";
-            this.setting_button.Size = new System.Drawing.Size(41, 39);
-            this.setting_button.TabIndex = 16;
-            this.setting_button.UseVisualStyleBackColor = true;
             // 
             // text_writer_button
             // 
@@ -525,7 +593,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1084, 599);
-            this.Controls.Add(this.General_Menu_Panel);
             this.Controls.Add(this.Top_Menu_panel);
             this.Controls.Add(this.Loader_panel);
             this.MainMenuStrip = this.General_menuStrip;
@@ -539,7 +606,6 @@
             this.Top_Menu_panel.ResumeLayout(false);
             this.Top_Menu_panel.PerformLayout();
             this.General_Menu_Panel.ResumeLayout(false);
-            this.General_Menu_Panel.PerformLayout();
             this.General_menuStrip.ResumeLayout(false);
             this.General_menuStrip.PerformLayout();
             this.ResumeLayout(false);
@@ -562,9 +628,7 @@
         private System.Windows.Forms.ToolStripMenuItem advokaterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sekretærToolStripMenuItem;
         private System.Windows.Forms.Button Loacal_Folder_button;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button Menu_Search_button;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.MenuStrip screenshot_DropDown_menustrip;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
@@ -586,5 +650,9 @@
         private System.Windows.Forms.Button open_browser_button;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ToolStripMenuItem kunderToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kørselToolStripMenuItem;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

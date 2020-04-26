@@ -197,6 +197,7 @@ namespace View_GUI
 
         private void Main_Form1_Load(object sender, EventArgs e)
         {
+            General_Menu_Panel.BringToFront();// Advokate,Sager ETC. menu to top
             menuPanelDropDown.BringToFront();//ItemMenuPanel
             General_menuStrip.ForeColor = Color.FromArgb(0, 204, 255);//Color of the Menu Strip "General menu"
             screenshot_DropDown_menustrip.Renderer = new BrowserMenuRenderer(); // Custumized THEME For the DROP DOWN MENU FOR THE SCREENSHOTS
