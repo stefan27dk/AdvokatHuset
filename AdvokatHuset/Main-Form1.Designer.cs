@@ -391,6 +391,7 @@
             this.sound_recorder_button.Size = new System.Drawing.Size(41, 39);
             this.sound_recorder_button.TabIndex = 20;
             this.sound_recorder_button.UseVisualStyleBackColor = true;
+            this.sound_recorder_button.Click += new System.EventHandler(this.sound_recorder_button_Click);
             // 
             // calendar_button
             // 

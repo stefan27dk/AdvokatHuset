@@ -395,6 +395,12 @@ namespace View_GUI
             System.Diagnostics.Process paintProcess =  System.Diagnostics.Process.Start("mspaint.exe");
         }
 
+        private void sound_recorder_button_Click(object sender, EventArgs e)
+        {
+          
+          
+        }
+
 
         // General Menu Button Events---::END::---------------------------------------------------------------------------------------------------------------------------------------------
 
