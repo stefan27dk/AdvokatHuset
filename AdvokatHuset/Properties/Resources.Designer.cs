@@ -233,6 +233,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap glossy_3d_blue_orbs2_075_icon {
+            get {
+                object obj = ResourceManager.GetObject("glossy-3d-blue-orbs2-075-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hnet_com_image {
             get {
                 object obj = ResourceManager.GetObject("hnet.com-image", resourceCulture);
@@ -273,9 +283,29 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Mail_at_icon {
+            get {
+                object obj = ResourceManager.GetObject("Mail-at-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap microphone_icon {
             get {
                 object obj = ResourceManager.GetObject("microphone-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mmm {
+            get {
+                object obj = ResourceManager.GetObject("mmm", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

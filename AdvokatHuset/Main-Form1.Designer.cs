@@ -55,6 +55,8 @@
             this.Back_Button = new System.Windows.Forms.Button();
             this.item_menu_button = new System.Windows.Forms.Button();
             this.Forward_Button = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.open_browser_button = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.sound_recorder_button = new System.Windows.Forms.Button();
@@ -108,19 +110,21 @@
             // 
             this.menuPanelDropDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.menuPanelDropDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.menuPanelDropDown.Controls.Add(this.button5);
+            this.menuPanelDropDown.Controls.Add(this.button4);
             this.menuPanelDropDown.Controls.Add(this.open_browser_button);
+            this.menuPanelDropDown.Controls.Add(this.developer_button);
             this.menuPanelDropDown.Controls.Add(this.button1);
+            this.menuPanelDropDown.Controls.Add(this.setting_button);
             this.menuPanelDropDown.Controls.Add(this.sound_recorder_button);
             this.menuPanelDropDown.Controls.Add(this.calendar_button);
             this.menuPanelDropDown.Controls.Add(this.calculator_button);
-            this.menuPanelDropDown.Controls.Add(this.developer_button);
-            this.menuPanelDropDown.Controls.Add(this.setting_button);
             this.menuPanelDropDown.Controls.Add(this.text_writer_button);
             this.menuPanelDropDown.Controls.Add(this.notes_button);
             this.menuPanelDropDown.Controls.Add(this.timer_button);
             this.menuPanelDropDown.Location = new System.Drawing.Point(859, 50);
             this.menuPanelDropDown.Name = "menuPanelDropDown";
-            this.menuPanelDropDown.Size = new System.Drawing.Size(200, 267);
+            this.menuPanelDropDown.Size = new System.Drawing.Size(200, 243);
             this.menuPanelDropDown.TabIndex = 0;
             this.menuPanelDropDown.Visible = false;
             // 
@@ -392,11 +396,31 @@
             this.Forward_Button.TabIndex = 4;
             this.Forward_Button.UseVisualStyleBackColor = true;
             // 
+            // button5
+            // 
+            this.button5.BackgroundImage = global::View_GUI.Properties.Resources.mmm;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button5.Location = new System.Drawing.Point(144, 185);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(41, 39);
+            this.button5.TabIndex = 24;
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.BackgroundImage = global::View_GUI.Properties.Resources.Mail_at_icon;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button4.Location = new System.Drawing.Point(78, 185);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(41, 39);
+            this.button4.TabIndex = 23;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
             // open_browser_button
             // 
             this.open_browser_button.BackgroundImage = global::View_GUI.Properties.Resources.Apps_preferences_web_browser_shortcuts_icon;
             this.open_browser_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.open_browser_button.Location = new System.Drawing.Point(17, 190);
+            this.open_browser_button.Location = new System.Drawing.Point(17, 185);
             this.open_browser_button.Name = "open_browser_button";
             this.open_browser_button.Size = new System.Drawing.Size(41, 39);
             this.open_browser_button.TabIndex = 22;
@@ -407,7 +431,7 @@
             // 
             this.button1.BackgroundImage = global::View_GUI.Properties.Resources.Paint_icon;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Location = new System.Drawing.Point(144, 136);
+            this.button1.Location = new System.Drawing.Point(78, 72);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(41, 39);
             this.button1.TabIndex = 21;
@@ -418,7 +442,7 @@
             // 
             this.sound_recorder_button.BackgroundImage = global::View_GUI.Properties.Resources.microphone_icon;
             this.sound_recorder_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.sound_recorder_button.Location = new System.Drawing.Point(78, 136);
+            this.sound_recorder_button.Location = new System.Drawing.Point(18, 126);
             this.sound_recorder_button.Name = "sound_recorder_button";
             this.sound_recorder_button.Size = new System.Drawing.Size(41, 39);
             this.sound_recorder_button.TabIndex = 20;
@@ -429,7 +453,7 @@
             // 
             this.calendar_button.BackgroundImage = global::View_GUI.Properties.Resources.date_icon;
             this.calendar_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.calendar_button.Location = new System.Drawing.Point(17, 136);
+            this.calendar_button.Location = new System.Drawing.Point(17, 16);
             this.calendar_button.Name = "calendar_button";
             this.calendar_button.Size = new System.Drawing.Size(41, 39);
             this.calendar_button.TabIndex = 19;
@@ -439,7 +463,7 @@
             // 
             this.calculator_button.BackgroundImage = global::View_GUI.Properties.Resources.Calculator_3_icon;
             this.calculator_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.calculator_button.Location = new System.Drawing.Point(144, 79);
+            this.calculator_button.Location = new System.Drawing.Point(144, 71);
             this.calculator_button.Name = "calculator_button";
             this.calculator_button.Size = new System.Drawing.Size(41, 39);
             this.calculator_button.TabIndex = 18;
@@ -450,7 +474,7 @@
             // 
             this.developer_button.BackgroundImage = global::View_GUI.Properties.Resources.Apps_utilities_terminal_icon;
             this.developer_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.developer_button.Location = new System.Drawing.Point(78, 79);
+            this.developer_button.Location = new System.Drawing.Point(144, 126);
             this.developer_button.Name = "developer_button";
             this.developer_button.Size = new System.Drawing.Size(41, 39);
             this.developer_button.TabIndex = 17;
@@ -460,7 +484,7 @@
             // 
             this.setting_button.BackgroundImage = global::View_GUI.Properties.Resources.Categories_preferences_system_icon;
             this.setting_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.setting_button.Location = new System.Drawing.Point(17, 79);
+            this.setting_button.Location = new System.Drawing.Point(78, 126);
             this.setting_button.Name = "setting_button";
             this.setting_button.Size = new System.Drawing.Size(41, 39);
             this.setting_button.TabIndex = 16;
@@ -490,7 +514,7 @@
             // 
             this.timer_button.BackgroundImage = global::View_GUI.Properties.Resources._42608_stopwatch_icon;
             this.timer_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.timer_button.Location = new System.Drawing.Point(18, 16);
+            this.timer_button.Location = new System.Drawing.Point(18, 72);
             this.timer_button.Name = "timer_button";
             this.timer_button.Size = new System.Drawing.Size(40, 38);
             this.timer_button.TabIndex = 13;
@@ -560,5 +584,7 @@
         private System.Windows.Forms.Panel item_menu_top_panel;
         private System.Windows.Forms.Panel task_bar_panel;
         private System.Windows.Forms.Button open_browser_button;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
     }
 }

@@ -309,5 +309,14 @@
   <ItemGroup>
     <None Include="Resources\Apps-preferences-web-browser-shortcuts-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mail-at-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\glossy-3d-blue-orbs2-075-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mmm.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
