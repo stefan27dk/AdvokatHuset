@@ -93,6 +93,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Apps_utilities_terminal_icon {
+            get {
+                object obj = ResourceManager.GetObject("Apps-utilities-terminal-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap azael_ba4ea_001 {
             get {
                 object obj = ResourceManager.GetObject("azael-ba4ea-001", resourceCulture);
@@ -166,6 +176,16 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap Camera11 {
             get {
                 object obj = ResourceManager.GetObject("Camera11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Categories_applications_utilities_icon {
+            get {
+                object obj = ResourceManager.GetObject("Categories-applications-utilities-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

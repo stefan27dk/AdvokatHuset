@@ -300,5 +300,11 @@
   <ItemGroup>
     <None Include="Resources\Home-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Categories-applications-utilities-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apps-utilities-terminal-icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

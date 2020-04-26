@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.Loader_panel = new System.Windows.Forms.Panel();
+            this.task_bar_panel = new System.Windows.Forms.Panel();
+            this.item_menu_top_panel = new System.Windows.Forms.Panel();
             this.menuPanelDropDown = new System.Windows.Forms.Panel();
             this.screenshot_DropDown_menustrip = new System.Windows.Forms.MenuStrip();
             this.Top_Menu_panel = new System.Windows.Forms.Panel();
@@ -62,8 +64,6 @@
             this.text_writer_button = new System.Windows.Forms.Button();
             this.notes_button = new System.Windows.Forms.Button();
             this.timer_button = new System.Windows.Forms.Button();
-            this.item_menu_top_panel = new System.Windows.Forms.Panel();
-            this.task_bar_panel = new System.Windows.Forms.Panel();
             this.Loader_panel.SuspendLayout();
             this.menuPanelDropDown.SuspendLayout();
             this.screenshot_DropDown_menustrip.SuspendLayout();
@@ -83,6 +83,25 @@
             this.Loader_panel.Name = "Loader_panel";
             this.Loader_panel.Size = new System.Drawing.Size(1084, 599);
             this.Loader_panel.TabIndex = 9;
+            // 
+            // task_bar_panel
+            // 
+            this.task_bar_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.task_bar_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.task_bar_panel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.task_bar_panel.Location = new System.Drawing.Point(0, 560);
+            this.task_bar_panel.Name = "task_bar_panel";
+            this.task_bar_panel.Size = new System.Drawing.Size(1084, 39);
+            this.task_bar_panel.TabIndex = 2;
+            // 
+            // item_menu_top_panel
+            // 
+            this.item_menu_top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.item_menu_top_panel.Location = new System.Drawing.Point(1019, 39);
+            this.item_menu_top_panel.Name = "item_menu_top_panel";
+            this.item_menu_top_panel.Size = new System.Drawing.Size(40, 21);
+            this.item_menu_top_panel.TabIndex = 1;
+            this.item_menu_top_panel.Visible = false;
             // 
             // menuPanelDropDown
             // 
@@ -416,7 +435,7 @@
             // 
             // developer_button
             // 
-            this.developer_button.BackgroundImage = global::View_GUI.Properties.Resources.win7_ico_shell32_dll_080;
+            this.developer_button.BackgroundImage = global::View_GUI.Properties.Resources.Apps_utilities_terminal_icon;
             this.developer_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.developer_button.Location = new System.Drawing.Point(78, 79);
             this.developer_button.Name = "developer_button";
@@ -463,25 +482,6 @@
             this.timer_button.Size = new System.Drawing.Size(40, 38);
             this.timer_button.TabIndex = 13;
             this.timer_button.UseVisualStyleBackColor = true;
-            // 
-            // item_menu_top_panel
-            // 
-            this.item_menu_top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.item_menu_top_panel.Location = new System.Drawing.Point(1019, 39);
-            this.item_menu_top_panel.Name = "item_menu_top_panel";
-            this.item_menu_top_panel.Size = new System.Drawing.Size(40, 21);
-            this.item_menu_top_panel.TabIndex = 1;
-            this.item_menu_top_panel.Visible = false;
-            // 
-            // task_bar_panel
-            // 
-            this.task_bar_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.task_bar_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.task_bar_panel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.task_bar_panel.Location = new System.Drawing.Point(0, 560);
-            this.task_bar_panel.Name = "task_bar_panel";
-            this.task_bar_panel.Size = new System.Drawing.Size(1084, 39);
-            this.task_bar_panel.TabIndex = 2;
             // 
             // Main_Form1
             // 
