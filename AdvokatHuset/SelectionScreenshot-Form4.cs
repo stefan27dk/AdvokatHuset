@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Threading;
 using Domain;
 using System.Diagnostics;
+using System.Media;
 
 namespace View_GUI
 {
@@ -20,7 +21,7 @@ namespace View_GUI
         private bool canDraw;
         private int startX, startY;
         private Rectangle rect = Screen.GetBounds(Point.Empty);
-
+        Screenshot screenshot;
 
 
         public SelectionScreenshot_Form4()
@@ -54,14 +55,28 @@ namespace View_GUI
 
         private void SelectionScreenshot_Form4_MouseDown(object sender, MouseEventArgs e)
         {
-            canDraw = true; // On mouse Down - Now we can draw
+      
 
-            // Start Position of Drawing
-            // e is the mouse 
-            startX = e.X;
-            startY = e.Y;
+            if (e.Button == MouseButtons.Left)// If mouse button Left Down than Draw
+            {
+                canDraw = true; // On mouse Down - Now we can draw
+
+                // Start Position of Drawing
+                // e is the mouse 
+                startX = e.X;
+                startY = e.Y;
+            }
+
+     
+            if(e.Button == MouseButtons.Right)// If Mouse Right Button pressed Make Screenshot
+            {
+                MakeScreenshotNow();
+            }
+
         }
 
+
+      
 
 
 
@@ -112,20 +127,44 @@ namespace View_GUI
         }
 
 
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  Make all buttons invisible on screenshot
 
 
         private void selectionScreenshot_button_Click(object sender, EventArgs e)  // Make Screenshot form the Selection
         {
-            selectionScreenshot_button.Visible = false;  // Make the button invisible so it does not come in the screenshot
+            MakeScreenshotNow();
 
-            Screenshot screenshot = new Screenshot();
-            screenshot.MakeSelectionScreenshot(rect);   // Screenshot Class Method
-
-            selectionScreenshot_button.Visible = true;  // Make the button visible again
+        
         }
 
 
+        private void MakeScreenshotNow()
+        {
+            //Hide All Buttons
+            selectionScreenshot_button.Visible = false;   // Make the button invisible so it does not come in the screenshot
+            openFolder_button.Visible = false;
+            help_button.Visible = false;
+            closeForm_button.Visible = false;
+             
+            Cursor.Current = Cursors.WaitCursor;
+            //Sound
+            SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\chimes.wav");
+            simpleSound.Play();
 
+            //Scrennshot
+            screenshot = new Screenshot();
+            screenshot.MakeSelectionScreenshot(rect);   // Screenshot Class Method
+
+            Cursor.Current = Cursors.Default;
+
+            //SHOW ALL Buttons Again --------
+            selectionScreenshot_button.Visible = true;  // Make the button visible again
+            openFolder_button.Visible = true;
+            help_button.Visible = true;
+            closeForm_button.Visible = true;
+        }
+
+         
 
 
 
@@ -136,6 +175,8 @@ namespace View_GUI
             {
                  Close();
             }
+
+            
         }
 
 
@@ -161,6 +202,8 @@ namespace View_GUI
 
         private void closeForm_button_Click(object sender, EventArgs e)
         {
+            SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\Windows Default.wav");
+            simpleSound.Play();
             this.Close();
         }
 
@@ -179,6 +222,9 @@ namespace View_GUI
 
         private void help_button_Click(object sender, EventArgs e)
         {
+            SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\Windows Balloon.wav");
+            simpleSound.Play();
+
             help_label.Visible = true;
         }
 
@@ -188,7 +234,10 @@ namespace View_GUI
 
         private void openFolder_button_Click(object sender, EventArgs e)
         {
-           
+            SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\recycle.wav");
+            simpleSound.Play();
+             
+
             Process.Start("C://"); // Opens Default App - Directory with Screenshots, Pdf etc.
             this.Close();
         }

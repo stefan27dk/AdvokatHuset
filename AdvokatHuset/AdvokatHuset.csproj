@@ -216,5 +216,26 @@
   <ItemGroup>
     <None Include="Resources\win7_ico_shell32_dll-154.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\win7_ico_shell32_dll-159.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\win7_ico_shell32_dll-295.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\win7_ico_shell32_dll-259.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Camera11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hnet.com-image.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\azael-ba4ea-001.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camera-icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

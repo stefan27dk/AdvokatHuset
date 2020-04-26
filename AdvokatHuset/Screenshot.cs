@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;// Used for the Screenshot function
 using System.Drawing.Imaging; // Used for the Screenshot function
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -67,7 +68,11 @@ namespace Domain
 
 
 
-
+             private void PlaySound()
+             {
+               SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\chord.wav");
+               simpleSound.Play();
+             }
 
 
 
@@ -77,6 +82,10 @@ namespace Domain
 
         public void MakeSelectionScreenshot(Rectangle selection)
         {
+            bool exception = false;
+            try
+            {
+
             Form currentForm = Form.ActiveForm; // Get current Form
 
             int locationX = currentForm.Location.X + selection.Location.X + 8; // + 8; "If form has Normal Border + 8" // Get Form Location x and plus it with the rectangle X: So we know where on the screen is the rectangle. The rectangles scope is only in the Forms scope "The 8px Tolerance is because of the Forms window itself "The window border"
@@ -93,6 +102,18 @@ namespace Domain
                 }
 
             }
+
+            }
+            catch(Exception e)
+            {
+                exception = true;
+            }
+
+            if(exception == true) // If there is exceptio play Failed sound - // Exception can happen because the rectangle can be null
+            {
+                PlaySound();
+            }
+
 
         }
         //---------------------Selection-Screenshot--::END::-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

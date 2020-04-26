@@ -91,13 +91,13 @@
             this.help_label.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.help_label.AutoSize = true;
             this.help_label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.help_label.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.help_label.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.help_label.ForeColor = System.Drawing.Color.Lavender;
             this.help_label.Location = new System.Drawing.Point(223, 413);
             this.help_label.Name = "help_label";
-            this.help_label.Size = new System.Drawing.Size(457, 24);
+            this.help_label.Size = new System.Drawing.Size(663, 25);
             this.help_label.TabIndex = 4;
-            this.help_label.Text = "Press Mouse Left button and drag, than press save button";
+            this.help_label.Text = "Press Mouse Left button and drag, than press save button or Mouse Right Click";
             this.help_label.UseCompatibleTextRendering = true;
             this.help_label.Visible = false;
             // 

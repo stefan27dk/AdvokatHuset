@@ -29,15 +29,16 @@
         private void InitializeComponent()
         {
             this.Loader_panel = new System.Windows.Forms.Panel();
-            this.item_menu_panel = new System.Windows.Forms.Panel();
-            this.selectAreaScreenshot_button = new System.Windows.Forms.Button();
-            this.screenshotForm_button = new System.Windows.Forms.Button();
+            this.screenshot_DropDown_menustrip = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.Top_Menu_panel = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.Menu_Search_button = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.Loacal_Folder_button = new System.Windows.Forms.Button();
-            this.Screenshot_button = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.Home_Button = new System.Windows.Forms.Button();
             this.Back_Button = new System.Windows.Forms.Button();
@@ -50,7 +51,7 @@
             this.ydelserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.advokaterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sekretærToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Loader_panel.SuspendLayout();
+            this.screenshot_DropDown_menustrip.SuspendLayout();
             this.Top_Menu_panel.SuspendLayout();
             this.General_Menu_Panel.SuspendLayout();
             this.General_menuStrip.SuspendLayout();
@@ -59,58 +60,99 @@
             // Loader_panel
             // 
             this.Loader_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(80)))), ((int)(((byte)(72)))));
-            this.Loader_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Loader_panel.Controls.Add(this.item_menu_panel);
-            this.Loader_panel.Controls.Add(this.selectAreaScreenshot_button);
-            this.Loader_panel.Controls.Add(this.screenshotForm_button);
-            this.Loader_panel.Location = new System.Drawing.Point(0, 38);
+            this.Loader_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Loader_panel.Location = new System.Drawing.Point(0, 0);
             this.Loader_panel.Name = "Loader_panel";
-            this.Loader_panel.Size = new System.Drawing.Size(1070, 561);
+            this.Loader_panel.Size = new System.Drawing.Size(1084, 599);
             this.Loader_panel.TabIndex = 9;
-            this.Loader_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Loader_panel_Paint);
             // 
-            // item_menu_panel
+            // screenshot_DropDown_menustrip
             // 
-            this.item_menu_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.item_menu_panel.Location = new System.Drawing.Point(766, 116);
-            this.item_menu_panel.Name = "item_menu_panel";
-            this.item_menu_panel.Size = new System.Drawing.Size(270, 233);
-            this.item_menu_panel.TabIndex = 1;
-            this.item_menu_panel.Visible = false;
+            this.screenshot_DropDown_menustrip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.screenshot_DropDown_menustrip.AutoSize = false;
+            this.screenshot_DropDown_menustrip.BackColor = System.Drawing.Color.Black;
+            this.screenshot_DropDown_menustrip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.screenshot_DropDown_menustrip.Dock = System.Windows.Forms.DockStyle.None;
+            this.screenshot_DropDown_menustrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem2});
+            this.screenshot_DropDown_menustrip.Location = new System.Drawing.Point(912, 0);
+            this.screenshot_DropDown_menustrip.Name = "screenshot_DropDown_menustrip";
+            this.screenshot_DropDown_menustrip.Padding = new System.Windows.Forms.Padding(1, 1, 0, 1);
+            this.screenshot_DropDown_menustrip.Size = new System.Drawing.Size(42, 42);
+            this.screenshot_DropDown_menustrip.TabIndex = 0;
+            this.screenshot_DropDown_menustrip.Text = "menuStrip1";
             // 
-            // selectAreaScreenshot_button
+            // toolStripMenuItem2
             // 
-            this.selectAreaScreenshot_button.BackgroundImage = global::View_GUI.Properties.Resources.unnamed__1_1;
-            this.selectAreaScreenshot_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.selectAreaScreenshot_button.Location = new System.Drawing.Point(922, 49);
-            this.selectAreaScreenshot_button.Margin = new System.Windows.Forms.Padding(0);
-            this.selectAreaScreenshot_button.Name = "selectAreaScreenshot_button";
-            this.selectAreaScreenshot_button.Size = new System.Drawing.Size(33, 33);
-            this.selectAreaScreenshot_button.TabIndex = 14;
-            this.selectAreaScreenshot_button.UseVisualStyleBackColor = true;
-            this.selectAreaScreenshot_button.Click += new System.EventHandler(this.selectAreaScreenshot_button_Click);
+            this.toolStripMenuItem2.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
+            this.toolStripMenuItem2.AutoSize = false;
+            this.toolStripMenuItem2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.toolStripMenuItem2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem3,
+            this.toolStripMenuItem4,
+            this.toolStripMenuItem5});
+            this.toolStripMenuItem2.Image = global::View_GUI.Properties.Resources.camera_icon;
+            this.toolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItem2.MergeAction = System.Windows.Forms.MergeAction.Replace;
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Padding = new System.Windows.Forms.Padding(0);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(41, 40);
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            this.toolStripMenuItem2.MouseEnter += new System.EventHandler(this.toolStripMenuItem2_MouseEnter);
             // 
-            // screenshotForm_button
+            // toolStripMenuItem3
             // 
-            this.screenshotForm_button.BackgroundImage = global::View_GUI.Properties.Resources.unnamed__1_1;
-            this.screenshotForm_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.screenshotForm_button.Location = new System.Drawing.Point(922, 5);
-            this.screenshotForm_button.Margin = new System.Windows.Forms.Padding(0);
-            this.screenshotForm_button.Name = "screenshotForm_button";
-            this.screenshotForm_button.Size = new System.Drawing.Size(33, 33);
-            this.screenshotForm_button.TabIndex = 13;
-            this.screenshotForm_button.UseVisualStyleBackColor = true;
-            this.screenshotForm_button.Click += new System.EventHandler(this.screenshotForm_button_Click);
+            this.toolStripMenuItem3.AutoSize = false;
+            this.toolStripMenuItem3.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.toolStripMenuItem3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.toolStripMenuItem3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripMenuItem3.Image = global::View_GUI.Properties.Resources.win7_ico_shell32_dll_159;
+            this.toolStripMenuItem3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripMenuItem3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItem3.ImageTransparentColor = System.Drawing.SystemColors.Control;
+            this.toolStripMenuItem3.Margin = new System.Windows.Forms.Padding(5, 10, 0, 10);
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(41, 40);
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.AutoSize = false;
+            this.toolStripMenuItem4.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.toolStripMenuItem4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.toolStripMenuItem4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripMenuItem4.Image = global::View_GUI.Properties.Resources.win7_ico_shell32_dll_295;
+            this.toolStripMenuItem4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItem4.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(41, 40);
+            this.toolStripMenuItem4.Text = "2";
+            this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
+            // 
+            // toolStripMenuItem5
+            // 
+            this.toolStripMenuItem5.AutoSize = false;
+            this.toolStripMenuItem5.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.toolStripMenuItem5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.toolStripMenuItem5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripMenuItem5.Image = global::View_GUI.Properties.Resources.win7_ico_shell32_dll_259;
+            this.toolStripMenuItem5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItem5.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(41, 40);
+            this.toolStripMenuItem5.Text = "1";
+            this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
             // 
             // Top_Menu_panel
             // 
             this.Top_Menu_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.Top_Menu_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Top_Menu_panel.Controls.Add(this.screenshot_DropDown_menustrip);
             this.Top_Menu_panel.Controls.Add(this.comboBox1);
             this.Top_Menu_panel.Controls.Add(this.Menu_Search_button);
             this.Top_Menu_panel.Controls.Add(this.textBox1);
             this.Top_Menu_panel.Controls.Add(this.Loacal_Folder_button);
-            this.Top_Menu_panel.Controls.Add(this.Screenshot_button);
             this.Top_Menu_panel.Controls.Add(this.button3);
             this.Top_Menu_panel.Controls.Add(this.Home_Button);
             this.Top_Menu_panel.Controls.Add(this.Back_Button);
@@ -119,7 +161,7 @@
             this.Top_Menu_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.Top_Menu_panel.Location = new System.Drawing.Point(0, 0);
             this.Top_Menu_panel.Name = "Top_Menu_panel";
-            this.Top_Menu_panel.Size = new System.Drawing.Size(1070, 41);
+            this.Top_Menu_panel.Size = new System.Drawing.Size(1084, 44);
             this.Top_Menu_panel.TabIndex = 0;
             // 
             // comboBox1
@@ -160,18 +202,6 @@
             this.Loacal_Folder_button.UseVisualStyleBackColor = true;
             this.Loacal_Folder_button.Click += new System.EventHandler(this.Loacal_Folder_button_Click);
             // 
-            // Screenshot_button
-            // 
-            this.Screenshot_button.BackgroundImage = global::View_GUI.Properties.Resources.unnamed__1_1;
-            this.Screenshot_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Screenshot_button.Location = new System.Drawing.Point(922, 4);
-            this.Screenshot_button.Margin = new System.Windows.Forms.Padding(0);
-            this.Screenshot_button.Name = "Screenshot_button";
-            this.Screenshot_button.Size = new System.Drawing.Size(33, 33);
-            this.Screenshot_button.TabIndex = 8;
-            this.Screenshot_button.UseVisualStyleBackColor = true;
-            this.Screenshot_button.Click += new System.EventHandler(this.Screenshot_button_Click);
-            // 
             // button3
             // 
             this.button3.BackgroundImage = global::View_GUI.Properties.Resources.win7_ico_shell32_dll_1121;
@@ -206,6 +236,7 @@
             // 
             // item_menu_button
             // 
+            this.item_menu_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.item_menu_button.BackgroundImage = global::View_GUI.Properties.Resources._23234;
             this.item_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.item_menu_button.Location = new System.Drawing.Point(1024, 8);
@@ -296,7 +327,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1070, 599);
+            this.ClientSize = new System.Drawing.Size(1084, 599);
             this.Controls.Add(this.General_Menu_Panel);
             this.Controls.Add(this.Top_Menu_panel);
             this.Controls.Add(this.Loader_panel);
@@ -304,7 +335,8 @@
             this.Name = "Main_Form1";
             this.Text = "Main_Form1";
             this.Load += new System.EventHandler(this.Main_Form1_Load);
-            this.Loader_panel.ResumeLayout(false);
+            this.screenshot_DropDown_menustrip.ResumeLayout(false);
+            this.screenshot_DropDown_menustrip.PerformLayout();
             this.Top_Menu_panel.ResumeLayout(false);
             this.Top_Menu_panel.PerformLayout();
             this.General_Menu_Panel.ResumeLayout(false);
@@ -330,13 +362,14 @@
         private System.Windows.Forms.ToolStripMenuItem ydelserToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem advokaterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sekretærToolStripMenuItem;
-        private System.Windows.Forms.Button Screenshot_button;
         private System.Windows.Forms.Button Loacal_Folder_button;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button Menu_Search_button;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button screenshotForm_button;
-        private System.Windows.Forms.Button selectAreaScreenshot_button;
-        private System.Windows.Forms.Panel item_menu_panel;
+        private System.Windows.Forms.MenuStrip screenshot_DropDown_menustrip;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
     }
 }

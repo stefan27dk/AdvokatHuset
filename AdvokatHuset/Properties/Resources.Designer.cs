@@ -73,6 +73,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap azael_ba4ea_001 {
+            get {
+                object obj = ResourceManager.GetObject("azael-ba4ea-001", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Background {
             get {
                 object obj = ResourceManager.GetObject("Background", resourceCulture);
@@ -86,6 +96,36 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap Background___Copy {
             get {
                 object obj = ResourceManager.GetObject("Background - Copy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap camera_icon {
+            get {
+                object obj = ResourceManager.GetObject("camera-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Camera11 {
+            get {
+                object obj = ResourceManager.GetObject("Camera11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hnet_com_image {
+            get {
+                object obj = ResourceManager.GetObject("hnet.com-image", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +213,39 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap win7_ico_shell32_dll_159 {
+            get {
+                object obj = ResourceManager.GetObject("win7_ico_shell32_dll-159", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap win7_ico_shell32_dll_258 {
             get {
                 object obj = ResourceManager.GetObject("win7_ico_shell32_dll-258", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap win7_ico_shell32_dll_259 {
+            get {
+                object obj = ResourceManager.GetObject("win7_ico_shell32_dll-259", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap win7_ico_shell32_dll_295 {
+            get {
+                object obj = ResourceManager.GetObject("win7_ico_shell32_dll-295", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
