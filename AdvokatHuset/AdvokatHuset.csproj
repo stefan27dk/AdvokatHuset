@@ -306,5 +306,8 @@
   <ItemGroup>
     <None Include="Resources\Apps-utilities-terminal-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apps-preferences-web-browser-shortcuts-icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -93,6 +93,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Apps_preferences_web_browser_shortcuts_icon {
+            get {
+                object obj = ResourceManager.GetObject("Apps-preferences-web-browser-shortcuts-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Apps_utilities_terminal_icon {
             get {
                 object obj = ResourceManager.GetObject("Apps-utilities-terminal-icon", resourceCulture);

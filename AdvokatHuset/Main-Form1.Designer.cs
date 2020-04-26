@@ -55,6 +55,7 @@
             this.Back_Button = new System.Windows.Forms.Button();
             this.item_menu_button = new System.Windows.Forms.Button();
             this.Forward_Button = new System.Windows.Forms.Button();
+            this.open_browser_button = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.sound_recorder_button = new System.Windows.Forms.Button();
             this.calendar_button = new System.Windows.Forms.Button();
@@ -107,6 +108,7 @@
             // 
             this.menuPanelDropDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.menuPanelDropDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.menuPanelDropDown.Controls.Add(this.open_browser_button);
             this.menuPanelDropDown.Controls.Add(this.button1);
             this.menuPanelDropDown.Controls.Add(this.sound_recorder_button);
             this.menuPanelDropDown.Controls.Add(this.calendar_button);
@@ -118,7 +120,7 @@
             this.menuPanelDropDown.Controls.Add(this.timer_button);
             this.menuPanelDropDown.Location = new System.Drawing.Point(859, 50);
             this.menuPanelDropDown.Name = "menuPanelDropDown";
-            this.menuPanelDropDown.Size = new System.Drawing.Size(200, 211);
+            this.menuPanelDropDown.Size = new System.Drawing.Size(200, 267);
             this.menuPanelDropDown.TabIndex = 0;
             this.menuPanelDropDown.Visible = false;
             // 
@@ -390,6 +392,17 @@
             this.Forward_Button.TabIndex = 4;
             this.Forward_Button.UseVisualStyleBackColor = true;
             // 
+            // open_browser_button
+            // 
+            this.open_browser_button.BackgroundImage = global::View_GUI.Properties.Resources.Apps_preferences_web_browser_shortcuts_icon;
+            this.open_browser_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.open_browser_button.Location = new System.Drawing.Point(17, 190);
+            this.open_browser_button.Name = "open_browser_button";
+            this.open_browser_button.Size = new System.Drawing.Size(41, 39);
+            this.open_browser_button.TabIndex = 22;
+            this.open_browser_button.UseVisualStyleBackColor = true;
+            this.open_browser_button.Click += new System.EventHandler(this.open_browser_button_Click);
+            // 
             // button1
             // 
             this.button1.BackgroundImage = global::View_GUI.Properties.Resources.Paint_icon;
@@ -546,5 +559,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel item_menu_top_panel;
         private System.Windows.Forms.Panel task_bar_panel;
+        private System.Windows.Forms.Button open_browser_button;
     }
 }

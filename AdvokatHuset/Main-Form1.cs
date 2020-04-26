@@ -401,6 +401,11 @@ namespace View_GUI
           
         }
 
+        private void open_browser_button_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("http:\\google.com");
+        }
+
 
         // General Menu Button Events---::END::---------------------------------------------------------------------------------------------------------------------------------------------
 
