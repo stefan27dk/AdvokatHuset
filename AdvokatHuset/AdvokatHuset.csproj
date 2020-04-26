@@ -237,5 +237,68 @@
   <ItemGroup>
     <None Include="Resources\camera-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\win7_ico_shell32_dll-265.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\win7_ico_shell32_dll-260.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\win7_ico_shell32_dll-269.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\win7_ico_shell32_dll-080.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\win7_ico_shell32_dll-071.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\windows-7-calculator-icon-2 %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calculator-3-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Control-Panel-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\date-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Camera-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Camera-icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Categories-preferences-system-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\42608-stopwatch-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\libreoffice-writer-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Opera Snapshot_2020-04-26_221557_cdn2.iconfinder.com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Opera Snapshot_2020-04-26_221511_cdn0.iconfinder.com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-document-save-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\microphone-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paint-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home-icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

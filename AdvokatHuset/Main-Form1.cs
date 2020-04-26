@@ -197,6 +197,7 @@ namespace View_GUI
 
         private void Main_Form1_Load(object sender, EventArgs e)
         {
+            menuPanelDropDown.BringToFront();//ItemMenuPanel
             General_menuStrip.ForeColor = Color.FromArgb(0, 204, 255);//Color of the Menu Strip "General menu"
             screenshot_DropDown_menustrip.Renderer = new BrowserMenuRenderer(); // Custumized THEME For the DROP DOWN MENU FOR THE SCREENSHOTS
         }
@@ -349,9 +350,49 @@ namespace View_GUI
             AdvokaterForm3.Show();
         }
 
+
+
+
+
         private void toolStripMenuItem2_MouseEnter(object sender, EventArgs e)
         {
             toolStripMenuItem2.ShowDropDown();
+        }
+
+
+
+
+
+
+
+        private void item_menu_button_Click_1(object sender, EventArgs e)  // SHow hide Item Menu
+        {
+            if(menuPanelDropDown.Visible == false)
+            {
+            menuPanelDropDown.Visible = true;
+            item_menu_top_panel.Visible = true;
+            }
+
+            else
+            {
+                menuPanelDropDown.Visible = false;
+                item_menu_top_panel.Visible = false;
+            }
+
+        }
+
+
+
+        private void calculator_button_Click(object sender, EventArgs e) //Start Calculator
+        {
+             
+            System.Diagnostics.Process calculatorProcess = System.Diagnostics.Process.Start("calc.exe");
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process paintProcess =  System.Diagnostics.Process.Start("mspaint.exe");
         }
 
 
