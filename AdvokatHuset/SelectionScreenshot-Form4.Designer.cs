@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.help_label = new System.Windows.Forms.Label();
             this.help_button = new System.Windows.Forms.Button();
             this.openFolder_button = new System.Windows.Forms.Button();
             this.closeForm_button = new System.Windows.Forms.Button();
             this.selectionScreenshot_button = new System.Windows.Forms.Button();
             this.open_iimage_in_paint_button = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // help_label
@@ -75,6 +77,7 @@
             this.openFolder_button.TabIndex = 2;
             this.openFolder_button.UseVisualStyleBackColor = true;
             this.openFolder_button.Click += new System.EventHandler(this.openFolder_button_Click);
+            this.openFolder_button.MouseHover += new System.EventHandler(this.openFolder_button_MouseHover);
             // 
             // closeForm_button
             // 
@@ -88,6 +91,7 @@
             this.closeForm_button.TabIndex = 1;
             this.closeForm_button.UseVisualStyleBackColor = false;
             this.closeForm_button.Click += new System.EventHandler(this.closeForm_button_Click);
+            this.closeForm_button.MouseHover += new System.EventHandler(this.closeForm_button_MouseHover);
             // 
             // selectionScreenshot_button
             // 
@@ -101,6 +105,7 @@
             this.selectionScreenshot_button.TabIndex = 0;
             this.selectionScreenshot_button.UseVisualStyleBackColor = true;
             this.selectionScreenshot_button.Click += new System.EventHandler(this.selectionScreenshot_button_Click);
+            this.selectionScreenshot_button.MouseHover += new System.EventHandler(this.selectionScreenshot_button_MouseHover_1);
             // 
             // open_iimage_in_paint_button
             // 
@@ -114,6 +119,7 @@
             this.open_iimage_in_paint_button.TabIndex = 5;
             this.open_iimage_in_paint_button.UseVisualStyleBackColor = false;
             this.open_iimage_in_paint_button.Click += new System.EventHandler(this.open_iimage_in_paint_button_Click);
+            this.open_iimage_in_paint_button.MouseHover += new System.EventHandler(this.open_iimage_in_paint_button_MouseHover_1);
             // 
             // SelectionScreenshot_Form4
             // 
@@ -150,5 +156,6 @@
         private System.Windows.Forms.Button help_button;
         private System.Windows.Forms.Label help_label;
         private System.Windows.Forms.Button open_iimage_in_paint_button;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

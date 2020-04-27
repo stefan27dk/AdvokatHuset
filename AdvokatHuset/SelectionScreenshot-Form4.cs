@@ -23,17 +23,18 @@ namespace View_GUI
         private int startX, startY;
         private Rectangle rect = Screen.GetBounds(Point.Empty);
         Screenshot screenshot;
+        
 
 
+
+        // Initialize
         public SelectionScreenshot_Form4()
         {
-
             menuForm.Show();
             this.TransparencyKey = Color.Turquoise;   // Transparent BackColor
             this.BackColor = Color.Turquoise;   // Transparent BackColor
             this.DoubleBuffered = true; // Removes Flickering on drawing
-           
-
+ 
             InitializeComponent();
         }
 
@@ -41,11 +42,10 @@ namespace View_GUI
 
 
 
-
+        // LOAD
         private void SelectionScreenshot_Form4_Load(object sender, EventArgs e)
         {
-            
-
+          
 
         }
 
@@ -53,7 +53,7 @@ namespace View_GUI
      
 
 
-
+       // Start Point of Draw "Rectangle"
         private void SelectionScreenshot_Form4_MouseDown(object sender, MouseEventArgs e)
         {
       
@@ -81,7 +81,7 @@ namespace View_GUI
 
 
 
-
+        // Stop Drawing Rectangle on Mouse Up
         private void SelectionScreenshot_Form4_MouseUp(object sender, MouseEventArgs e)
         {
             canDraw = false;  // When you leave the mouse button you stop drawing the rectangle 
@@ -91,7 +91,7 @@ namespace View_GUI
 
 
 
-
+          // Draw the Rectangle SIZE   ------ DRAWS the SIZE OF THE RECTANGLE NOT THE VISIBLE RED LINES
         private void SelectionScreenshot_Form4_MouseMove(object sender, MouseEventArgs e)
         {
              
@@ -115,7 +115,7 @@ namespace View_GUI
 
 
 
-        //--Paint---Rectangle-------
+        //--Paint---Rectangle-------THIS TAKES the size of the rectangle and paints it red
         protected override void OnPaint(PaintEventArgs e)
         {
             using (Pen pen = new Pen(Color.Red, 2))
@@ -128,24 +128,36 @@ namespace View_GUI
         }
 
 
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  Make all buttons invisible on screenshot
+        
 
 
+
+
+
+
+
+        // Make Screenshot button " Discet"
         private void selectionScreenshot_button_Click(object sender, EventArgs e)  // Make Screenshot form the Selection
         {
             MakeScreenshotNow();
-
         
         }
 
 
+
+
+
+
+         // The Main Method - Make Screenshot
         private void MakeScreenshotNow()
         {
             //Hide All Buttons
-       ;
+       
              
             Cursor.Current = Cursors.WaitCursor;
-            //Sound
+
+
+            //Sound-------------
             SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\chimes.wav");
             simpleSound.Play();
 
@@ -156,7 +168,7 @@ namespace View_GUI
             Cursor.Current = Cursors.Default;
 
             //SHOW ALL Buttons Again --------
-        ;
+      
         }
 
          
@@ -176,6 +188,9 @@ namespace View_GUI
 
 
 
+
+
+         // On Selection Screen FORM Closing close the menu with the "Save, Edit in Paint, Open folder, etc.  "The menu is made of another Form because of the transparency"
         private void SelectionScreenshot_Form4_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (menuForm == null)
@@ -199,19 +214,30 @@ namespace View_GUI
 
 
 
-
+        // Close Selection Cut button
         private void closeForm_button_Click(object sender, EventArgs e)
         {
             CloseForm();
         }
 
+
+
+
+
+
+        // Close Selection cut Method
          private void CloseForm()
-        {
+         {
             SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\Windows Default.wav");
             simpleSound.Play();
             this.Close();
-        }
+         }
 
+
+
+
+
+        // ESC Buttoen Down - Close Selection Cut
         protected override bool ProcessDialogKey(Keys keydata) // ESC Key only on this form "Dont send key event to other "Parrent" forms
           {
             if(Form.ModifierKeys == Keys.None && keydata == Keys.Escape)
@@ -229,7 +255,7 @@ namespace View_GUI
 
 
 
-
+         // Help button
         private void help_button_Click(object sender, EventArgs e)
         {
             SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\Windows Balloon.wav");
@@ -243,11 +269,11 @@ namespace View_GUI
 
 
 
-
-        private void open_iimage_in_paint_button_Click(object sender, EventArgs e)
+           // Opens Last Image in Paint -Main - Method
+        private void OpenLastImageInPaint()
         {
 
-            //-----------------GET--LAST--Updated--File
+            //----------------GET--LAST--Updated--File
             string Path = @"C:\";
 
             var files = new DirectoryInfo(Path).GetFiles("*.png*");
@@ -255,25 +281,64 @@ namespace View_GUI
 
             DateTime lastupdated = DateTime.MinValue;
 
-            foreach(FileInfo file in files)
+            foreach (FileInfo file in files)
             {
-                if(file.LastWriteTime > lastupdated)
+                if (file.LastWriteTime > lastupdated)
                 {
                     lastfile = file.FullName;
                 }
             }
 
-           
 
-            // Opens Last image in paint
+
+            //---------------- Opens Last image in paint
 
             Process.Start("mspaint", $@"""{lastfile}""");
 
             CloseForm();
-
-
         }
 
+
+
+
+
+
+         // Opens the last Image in Paint
+        private void open_iimage_in_paint_button_Click(object sender, EventArgs e)
+        {
+            OpenLastImageInPaint();
+        }
+
+
+
+
+
+
+        //Shortcut keys  -- Paint, Foldet, ETC--- Place here all shortcuts
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == (Keys.Control | Keys.E))
+            {
+                OpenLastImageInPaint();// Paint
+            }
+
+
+            if (keyData == (Keys.Control | Keys.F))
+            {
+                OpenFolder();// FOLDER
+            }
+
+
+            if (keyData == (Keys.Control | Keys.S))
+            {
+                MakeScreenshotNow();
+            }
+                  
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+    
+ 
         //---------ScreenshotForm--Close with Esc - Key-----::END::------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -282,22 +347,37 @@ namespace View_GUI
 
 
 
+            // Open Folder - Main Method
+           private void OpenFolder()
+           {
 
-
-
-
-
-
-
-
-        private void openFolder_button_Click(object sender, EventArgs e)
-        {
+            //Sound
             SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\recycle.wav");
             simpleSound.Play();
+
+            // Opens Folder
+            screenshot = new Screenshot();
+            Process.Start($@"{screenshot.ScreenshotSavePath}"); // Opens Default App - Directory with Screenshots, Pdf etc.
+            this.Close();
+
+           }
+
+
+
+        // Save ToolTip
+        private void selectionScreenshot_button_MouseHover(object sender, EventArgs e)
+        {
              
 
-            Process.Start("C://"); // Opens Default App - Directory with Screenshots, Pdf etc.
-            this.Close();
+        }
+
+
+
+       // Paint ToolTip
+        private void open_iimage_in_paint_button_MouseHover(object sender, EventArgs e)
+        {
+      
+
         }
 
 
@@ -305,6 +385,81 @@ namespace View_GUI
 
 
 
+
+
+
+        // Save Screenshot "Make Screenshot"
+        private void selectionScreenshot_button_MouseHover_1(object sender, EventArgs e)
+        {
+            ToolTip tip = new ToolTip();
+        
+            tip.AutoPopDelay = 3000;
+            tip.InitialDelay = 500;
+            tip.ReshowDelay = 1000;
+            tip.ShowAlways = true;
+
+            tip.SetToolTip(selectionScreenshot_button, "Save: Press: \"CTRL + S\"");
+        }
+
+
+
+
+        // Tool Tip Folder
+        private void openFolder_button_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tip = new ToolTip();
+             
+            tip.AutoPopDelay = 3000;
+            tip.InitialDelay = 500;
+            tip.ReshowDelay = 1000;
+            tip.ShowAlways = true;
+
+            tip.SetToolTip(openFolder_button, "Open Local Folder: Press: \"CTRL + F\"");
+        }
+
+
+
+        // Tool Tip Paint
+        private void open_iimage_in_paint_button_MouseHover_1(object sender, EventArgs e)
+        {
+            ToolTip tip = new ToolTip();
+        
+            tip.AutoPopDelay = 3000;
+            tip.InitialDelay = 500;
+            tip.ReshowDelay = 1000;
+            tip.ShowAlways = true;
+
+            tip.SetToolTip(open_iimage_in_paint_button, "Open Last Image in Paint: Press:  \"CTRL + E\"");
+        }
+
+
+        // Close Selection Screenshot- Tooltip
+        private void closeForm_button_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tip = new ToolTip();
+
+            tip.AutoPopDelay = 3000;
+            tip.InitialDelay = 500;
+            tip.ReshowDelay = 1000;
+            tip.ShowAlways = true;
+
+            tip.SetToolTip(closeForm_button, "EXIT Press: \"ESC\"");
+        }
+
+
+
+
+
+
+
+        // Open Folder with the screenshots
+        private void openFolder_button_Click(object sender, EventArgs e)
+        {
+            OpenFolder();
+        }
+
+         
+       
 
 
     }

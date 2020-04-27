@@ -369,5 +369,29 @@
   <ItemGroup>
     <None Include="Resources\Start-Menu-Search-icon1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\App-world-clock-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart-search-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail-yellow-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\App-world-clock-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Email-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notes-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Groups-Meeting-Light-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Groups-Meeting-Light-icon %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

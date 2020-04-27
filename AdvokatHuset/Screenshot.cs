@@ -13,13 +13,13 @@ namespace Domain
     class Screenshot
     {
 
-       string ScreenshotNameDateTime { get; set; } 
-       string ScreenshotSavePath { get; set; }
+     public  string ScreenshotNameDateTime { get; set; } 
+     public  string ScreenshotSavePath { get; set; }
 
         public Screenshot()  // Constructor
         {
-            ScreenshotSavePath = "C://ScreenShot - ";
-            ScreenshotNameDateTime = DateTime.Now.ToString("dd-MM-yyyy  HH-mm-ss");
+            ScreenshotSavePath = "C://";
+            ScreenshotNameDateTime = "ScreenShot -"+DateTime.Now.ToString("dd -MM-yyyy  HH-mm-ss")+".png";
         }
 
 
@@ -113,7 +113,7 @@ namespace Domain
                 {
 
                     g.CopyFromScreen(locationX, locationY, 0, 0, bmp.Size, CopyPixelOperation.SourceCopy);
-                    bmp.Save($"{ScreenshotSavePath}{ScreenshotNameDateTime}.png", ImageFormat.Png);// Screenshot -  Unique Name so it dont get overwrited everytime new screenshot is made
+                    bmp.Save($"{ScreenshotSavePath}{ScreenshotNameDateTime}", ImageFormat.Png);// Screenshot -  Unique Name so it dont get overwrited everytime new screenshot is made
                 }
 
             }

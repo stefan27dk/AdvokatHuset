@@ -113,6 +113,26 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap App_world_clock_icon {
+            get {
+                object obj = ResourceManager.GetObject("App-world-clock-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap App_world_clock_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("App-world-clock-icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Apps_preferences_web_browser_shortcuts_icon {
             get {
                 object obj = ResourceManager.GetObject("Apps-preferences-web-browser-shortcuts-icon", resourceCulture);
@@ -233,6 +253,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap chart_search_icon {
+            get {
+                object obj = ResourceManager.GetObject("chart-search-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Control_Panel_icon {
             get {
                 object obj = ResourceManager.GetObject("Control-Panel-icon", resourceCulture);
@@ -293,9 +323,39 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Email_icon {
+            get {
+                object obj = ResourceManager.GetObject("Email-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap glossy_3d_blue_orbs2_075_icon {
             get {
                 object obj = ResourceManager.GetObject("glossy-3d-blue-orbs2-075-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Groups_Meeting_Light_icon {
+            get {
+                object obj = ResourceManager.GetObject("Groups-Meeting-Light-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Groups_Meeting_Light_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Groups-Meeting-Light-icon (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -353,6 +413,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mail_yellow_icon {
+            get {
+                object obj = ResourceManager.GetObject("mail-yellow-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap microphone_icon {
             get {
                 object obj = ResourceManager.GetObject("microphone-icon", resourceCulture);
@@ -366,6 +436,16 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap mmm {
             get {
                 object obj = ResourceManager.GetObject("mmm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Notes_icon {
+            get {
+                object obj = ResourceManager.GetObject("Notes-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

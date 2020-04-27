@@ -20,9 +20,9 @@ namespace View_GUI
 
 
     public partial class Main_Form1 : Form
-    {    
+    {
         //Forms--::START::
-        Sager_Form2 SagerForm2 = new Sager_Form2();  //Form2
+        public static Sager_Form2 SagerForm2 = new Sager_Form2();  //Form2
         Advokater_Form3 AdvokaterForm3 = new Advokater_Form3();//Form3
         //Forms--::END::
 
@@ -117,10 +117,9 @@ namespace View_GUI
             public override Color MenuItemPressedGradientEnd { get { return Color.FromArgb(51, 55, 56); } }
  
         }
-    
+
 
         //------------------MENU DROP DOWN FOR SCREENSHOTS------RENDER---Custumized-Theme-----::END::-----------------------------------------------------------------------
-
 
 
 
@@ -131,7 +130,7 @@ namespace View_GUI
         //Form Load
         private void Main_Form1_Load(object sender, EventArgs e)
         {
-            
+          
             General_Menu_Panel.BringToFront();// Advokate,Sager ETC. menu to top
             itemMenuPanelDropDown.BringToFront();//ItemMenuPanel
             General_menuStrip.ForeColor = Color.FromArgb(0, 204, 255);//Color of the Menu Strip "General menu"
@@ -243,11 +242,19 @@ namespace View_GUI
         //-------Top--BAR----<--,---->, Home, Etc.-------::START::-------------------------------------------------------------------------------------------------------------------------------------
           
 
-        private void Loacal_Folder_button_Click(object sender, EventArgs e) // Open Default Folder
-        {
+            // Open Local Folder --- Main Method
+          private void OpenLocalFolder()
+          {
             Process.Start("C://"); // Opens Default App - Directory with Screenshots, Pdf etc.
             SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\recycle.wav");
             simpleSound.Play();
+          }
+
+
+
+        private void Loacal_Folder_button_Click(object sender, EventArgs e) // Open Default Folder
+        {
+            OpenLocalFolder();
         }
    
         //-------Top--BAR----<--,---->, Home, Etc.-------::END::-------------------------------------------------------------------------------------------------------------------------------------
@@ -286,6 +293,24 @@ namespace View_GUI
             SagerForm2.AutoScroll = true;
             Loader_panel.Controls.Add(SagerForm2);
             SagerForm2.Show();
+
+
+            SagerForm2.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            //SagerForm2.WindowState = FormWindowState.Maximized;
+            //SagerForm2.WindowState = FormWindowState.Maximized;
+            //SagerForm2.MinimumSize = this.Size;
+            //SagerForm2.MaximumSize = this.Size;
+
+
+            //FormCollection fc = Application.OpenForms;
+            //foreach (Form frm in fc)
+            //{
+            //    if (frm.Name == SagerForm2.Name)
+            //    {
+            //        frm.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            //    }
+            //}
+
         }
 
 
@@ -301,7 +326,7 @@ namespace View_GUI
             Loader_panel.Controls.Add(AdvokaterForm3);
             AdvokaterForm3.Show();
         }
-        
+
 
         // General Menu Button Events---::END::---------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -319,13 +344,13 @@ namespace View_GUI
         //-----------------------------ITEM-Menu-------::START::------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-        // Menu Open Button
-        private void item_menu_button_Click_1(object sender, EventArgs e)  // SHow hide Item Menu
-        {
-            if(itemMenuPanelDropDown.Visible == false)
+            private void OpenItemMenu() // The menu with tools, Claculator, timer, setting, etc.
             {
-            itemMenuPanelDropDown.Visible = true;
-            item_menu_top_panel.Visible = true;
+
+            if (itemMenuPanelDropDown.Visible == false)
+            {
+                itemMenuPanelDropDown.Visible = true;
+                item_menu_top_panel.Visible = true;
             }
 
             else
@@ -333,6 +358,41 @@ namespace View_GUI
                 itemMenuPanelDropDown.Visible = false;
                 item_menu_top_panel.Visible = false;
             }
+
+            SoundPlayer clicksound = new SoundPlayer(@"C:\Windows\Media\Windows Navigation Start.wav");
+            clicksound.Play();
+
+            }
+
+
+
+
+        //Shortcut keys for Opening Item Menu
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+
+            // Open Item Menu Shortcut
+            if (keyData == (Keys.Control | Keys.G))
+            {
+                OpenItemMenu();
+            }
+
+            // Open Folder Shortcut
+            if (keyData == (Keys.Control | Keys.F))
+            {
+                OpenLocalFolder();// FOLDER
+            }
+
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+
+
+
+        // Item Menu Open Button
+        private void item_menu_button_Click_1(object sender, EventArgs e)  // SHow hide Item Menu
+        {
+            OpenItemMenu();
 
         }
 
@@ -385,7 +445,12 @@ namespace View_GUI
             simpleSound.Play();
         }
 
-         
+        private void Main_Form1_ResizeBegin(object sender, EventArgs e)
+        {
+            SagerForm2.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+        }
+
+
         //-----------------------------ITEM-Menu-------::START::------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
