@@ -383,6 +383,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap home_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("home-icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap images__1___1_ {
             get {
                 object obj = ResourceManager.GetObject("images (1) (1)", resourceCulture);
