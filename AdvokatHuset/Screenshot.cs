@@ -57,10 +57,20 @@ namespace Domain
         public void MakeFormScreenshot()
         {
             Form currentForm = Form.ActiveForm; // Get the Active Form  
+
+            
             using (Bitmap bmp = new Bitmap(currentForm.Width, currentForm.Height)) // New Bitmap
             {
-                currentForm.DrawToBitmap(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height)); // Current Form to Bitmap "Rectangle Location and Size"
-                bmp.Save($"{ScreenshotSavePath}{ScreenshotNameDateTime}.png", ImageFormat.Png);// Screenshot -  Unique Name so it dont get overwrited everytime new screenshot is made
+                 
+                using (Graphics gr = Graphics.FromImage(bmp))
+                {
+
+                    gr.CopyFromScreen(currentForm.Location.X, currentForm.Location.Y, 0, 0, bmp.Size, CopyPixelOperation.SourceCopy);
+                    bmp.Save($"{ScreenshotSavePath}{ScreenshotNameDateTime}.png", ImageFormat.Png);// Screenshot -  Unique Name so it dont get overwrited everytime new screenshot is made
+                }
+
+                //currentForm.DrawToBitmap(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height)); // Current Form to Bitmap "Rectangle Location and Size"
+                //bmp.Save($"{ScreenshotSavePath}{ScreenshotNameDateTime}.png", ImageFormat.Png);// Screenshot -  Unique Name so it dont get overwrited everytime new screenshot is made
             }
         }
 
@@ -68,6 +78,10 @@ namespace Domain
 
 
 
+
+
+
+              // Error - Sound
              private void PlaySound()
              {
                SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\chord.wav");
@@ -83,6 +97,7 @@ namespace Domain
         public void MakeSelectionScreenshot(Rectangle selection)
         {
             bool exception = false;
+
             try
             {
 
@@ -104,7 +119,7 @@ namespace Domain
             }
 
             }
-            catch(Exception e)
+            catch(Exception)
             {
                 exception = true;
             }

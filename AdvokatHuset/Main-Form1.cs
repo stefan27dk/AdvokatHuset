@@ -199,57 +199,65 @@ namespace View_GUI
         {
             
             General_Menu_Panel.BringToFront();// Advokate,Sager ETC. menu to top
-            menuPanelDropDown.BringToFront();//ItemMenuPanel
+            itemMenuPanelDropDown.BringToFront();//ItemMenuPanel
             General_menuStrip.ForeColor = Color.FromArgb(0, 204, 255);//Color of the Menu Strip "General menu"
             screenshot_DropDown_menustrip.Renderer = new BrowserMenuRenderer(); // Custumized THEME For the DROP DOWN MENU FOR THE SCREENSHOTS
         }
 
-    
-  
-
-
-         
 
 
 
-   
+
+
+
+
+
+
 
 
 
 
         // Screenshot----------::START::------------------------------------------------------------------------------------------------------------------------------
-  
 
-         //Sound
-         private void ScreenshotSound()
+
+        // Screenshot Sound
+        private void ScreenshotSound()
          {
             SoundPlayer sscreenshotSound = new SoundPlayer(@"C:\\Windows\Media\Windows Information Bar.wav");
             sscreenshotSound.Play();
          }
 
 
-
-        private void toolStripMenuItem2_Click(object sender, EventArgs e)
-        {
+        // Screenshot Entire Screen Main - Method----"For Main button and Entire Screen button"
+          private void ScreenshotEntireScreen()
+          {
             //  Screenhsot - Entire - Screen - AND - Type- Menu
             ScreenshotSound();
             screenshot = new Screenshot();
             screenshot.MakeScrenshot();
-        }
+          }
 
 
-        // Click-Button - Entire Screen
-        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+
+        // Main Screenshot Button --> Drop Down
+        private void main_screenshot_button_Click(object sender, EventArgs e)
         {
-
-            ScreenshotSound();
-            screenshot = new Screenshot();
-            screenshot.MakeScrenshot();
+            ScreenshotEntireScreen();
         }
 
 
 
-        //Click-Button - Form
+
+        // Screenshot Click-Button - Entire Screen
+        private void screenshotEntireScreen_button_Click(object sender, EventArgs e)
+        {
+            ScreenshotEntireScreen();
+
+        }
+
+
+
+        //Screenshot Click-Button - Form
         private void toolStripMenuItem4_Click(object sender, EventArgs e)
         {
             ScreenshotSound();
@@ -257,38 +265,42 @@ namespace View_GUI
             screenshot.MakeFormScreenshot();
         }
 
+ 
 
-        //Selectin - Area - Button - Click
-        private void toolStripMenuItem5_Click(object sender, EventArgs e)
+
+        //Screenshot Selectin - Area - Button - Click
+        private void selection_screenshot_button_Click(object sender, EventArgs e)
         {
             SoundPlayer screenSelectionButtonSound = new SoundPlayer(@"C:\Windows\Media\Windows Feed Discovered.wav");
             screenSelectionButtonSound.Play();
-
 
             SelectionScreenshot_Form4 SelectionScreenshotForm4 = new SelectionScreenshot_Form4();//SelectionScreenshotForm
             SelectionScreenshotForm4.Show();
         }
 
 
-        // Screenshot----------::END::-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
 
-
-
-
-
-
-
-        private void item_menu_button_Click(object sender, EventArgs e)
+        // Main Screenshot button on Hover Show Drop Down
+        private void main_screenshot_button_MouseEnter(object sender, EventArgs e)
         {
-               
-            //activeControl = item_menu_panel;
+            main_screenshot_button.ShowDropDown();
         }
 
-       
+        // Screenshot----------::END::-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+           
+
+
+
+
+
+
+
+
+  
 
 
 
@@ -351,15 +363,9 @@ namespace View_GUI
             Loader_panel.Controls.Add(AdvokaterForm3);
             AdvokaterForm3.Show();
         }
+        
 
-
-
-
-
-        private void toolStripMenuItem2_MouseEnter(object sender, EventArgs e)
-        {
-            toolStripMenuItem2.ShowDropDown();
-        }
+        // General Menu Button Events---::END::---------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -367,17 +373,21 @@ namespace View_GUI
 
 
 
+        //-----------------------------ITEM-Menu-------::START::------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+        // Menu Open Button
         private void item_menu_button_Click_1(object sender, EventArgs e)  // SHow hide Item Menu
         {
-            if(menuPanelDropDown.Visible == false)
+            if(itemMenuPanelDropDown.Visible == false)
             {
-            menuPanelDropDown.Visible = true;
+            itemMenuPanelDropDown.Visible = true;
             item_menu_top_panel.Visible = true;
             }
 
             else
             {
-                menuPanelDropDown.Visible = false;
+                itemMenuPanelDropDown.Visible = false;
                 item_menu_top_panel.Visible = false;
             }
 
@@ -385,6 +395,8 @@ namespace View_GUI
 
 
 
+
+        // Open Calculator
         private void calculator_button_Click(object sender, EventArgs e) //Start Calculator
         {
              
@@ -392,30 +404,47 @@ namespace View_GUI
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+
+         // Open Paint
+        private void open_paint_button_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process paintProcess =  System.Diagnostics.Process.Start("mspaint.exe");
+            System.Diagnostics.Process paintProcess = System.Diagnostics.Process.Start("mspaint.exe");
         }
 
+
+
+
+        //Sound Recorder
         private void sound_recorder_button_Click(object sender, EventArgs e)
         {
           
           
         }
 
+
+
+
+        //Open Browser
         private void open_browser_button_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("http:\\google.com");
         }
 
-        private void button2_Click(object sender, EventArgs e)
+
+
+        
+        // Bell button 
+        private void bell_button_Click(object sender, EventArgs e)
         {
+
             SoundPlayer simpleSound = new SoundPlayer(@"C:\Windows\Media\ding.wav");
             simpleSound.Play();
         }
 
+         
+        //-----------------------------ITEM-Menu-------::START::------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-        // General Menu Button Events---::END::---------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
