@@ -32,32 +32,6 @@
             this.task_bar_panel = new System.Windows.Forms.Panel();
             this.item_menu_top_panel = new System.Windows.Forms.Panel();
             this.itemMenuPanelDropDown = new System.Windows.Forms.Panel();
-            this.screenshot_DropDown_menustrip = new System.Windows.Forms.MenuStrip();
-            this.Top_Menu_panel = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.General_Menu_Panel = new System.Windows.Forms.Panel();
-            this.General_menuStrip = new System.Windows.Forms.MenuStrip();
-            this.Menu_Search_button = new System.Windows.Forms.Button();
-            this.sagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.visSagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ydelserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.member_item = new System.Windows.Forms.ToolStripMenuItem();
-            this.advokaterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sekretærToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kunderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kørselToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bell_button = new System.Windows.Forms.Button();
-            this.main_screenshot_button = new System.Windows.Forms.ToolStripMenuItem();
-            this.screenshotEntireScreen_button = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.selection_screenshot_button = new System.Windows.Forms.ToolStripMenuItem();
-            this.Loacal_Folder_button = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.Home_Button = new System.Windows.Forms.Button();
-            this.Back_Button = new System.Windows.Forms.Button();
-            this.item_menu_button = new System.Windows.Forms.Button();
-            this.Forward_Button = new System.Windows.Forms.Button();
             this.statistics_button = new System.Windows.Forms.Button();
             this.world_clock_button = new System.Windows.Forms.Button();
             this.open_my_email_button = new System.Windows.Forms.Button();
@@ -72,6 +46,32 @@
             this.text_writer_button = new System.Windows.Forms.Button();
             this.notes_button = new System.Windows.Forms.Button();
             this.timer_button = new System.Windows.Forms.Button();
+            this.screenshot_DropDown_menustrip = new System.Windows.Forms.MenuStrip();
+            this.main_screenshot_button = new System.Windows.Forms.ToolStripMenuItem();
+            this.screenshotEntireScreen_button = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.selection_screenshot_button = new System.Windows.Forms.ToolStripMenuItem();
+            this.Top_Menu_panel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.Menu_Search_button = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.General_Menu_Panel = new System.Windows.Forms.Panel();
+            this.General_menuStrip = new System.Windows.Forms.MenuStrip();
+            this.sagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.visSagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ydelserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.member_item = new System.Windows.Forms.ToolStripMenuItem();
+            this.advokaterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sekretærToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kunderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kørselToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bell_button = new System.Windows.Forms.Button();
+            this.Loacal_Folder_button = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.Home_Button = new System.Windows.Forms.Button();
+            this.Back_Button = new System.Windows.Forms.Button();
+            this.item_menu_button = new System.Windows.Forms.Button();
+            this.Forward_Button = new System.Windows.Forms.Button();
             this.Loader_panel.SuspendLayout();
             this.itemMenuPanelDropDown.SuspendLayout();
             this.screenshot_DropDown_menustrip.SuspendLayout();
@@ -138,6 +138,164 @@
             this.itemMenuPanelDropDown.TabIndex = 0;
             this.itemMenuPanelDropDown.Visible = false;
             // 
+            // statistics_button
+            // 
+            this.statistics_button.BackgroundImage = global::View_GUI.Properties.Resources.chart_search_icon;
+            this.statistics_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.statistics_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.statistics_button.Location = new System.Drawing.Point(81, 244);
+            this.statistics_button.Name = "statistics_button";
+            this.statistics_button.Size = new System.Drawing.Size(41, 39);
+            this.statistics_button.TabIndex = 26;
+            this.statistics_button.UseVisualStyleBackColor = true;
+            // 
+            // world_clock_button
+            // 
+            this.world_clock_button.BackgroundImage = global::View_GUI.Properties.Resources.App_world_clock_icon1;
+            this.world_clock_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.world_clock_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.world_clock_button.Location = new System.Drawing.Point(17, 244);
+            this.world_clock_button.Name = "world_clock_button";
+            this.world_clock_button.Size = new System.Drawing.Size(41, 39);
+            this.world_clock_button.TabIndex = 25;
+            this.world_clock_button.UseVisualStyleBackColor = true;
+            // 
+            // open_my_email_button
+            // 
+            this.open_my_email_button.BackgroundImage = global::View_GUI.Properties.Resources.mail_yellow_icon;
+            this.open_my_email_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.open_my_email_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.open_my_email_button.Location = new System.Drawing.Point(144, 185);
+            this.open_my_email_button.Name = "open_my_email_button";
+            this.open_my_email_button.Size = new System.Drawing.Size(41, 39);
+            this.open_my_email_button.TabIndex = 24;
+            this.open_my_email_button.UseVisualStyleBackColor = true;
+            // 
+            // open_my_webpage_button
+            // 
+            this.open_my_webpage_button.BackgroundImage = global::View_GUI.Properties.Resources.Email_icon;
+            this.open_my_webpage_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.open_my_webpage_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.open_my_webpage_button.Location = new System.Drawing.Point(78, 185);
+            this.open_my_webpage_button.Name = "open_my_webpage_button";
+            this.open_my_webpage_button.Size = new System.Drawing.Size(41, 39);
+            this.open_my_webpage_button.TabIndex = 23;
+            this.open_my_webpage_button.UseVisualStyleBackColor = true;
+            // 
+            // open_browser_button
+            // 
+            this.open_browser_button.BackgroundImage = global::View_GUI.Properties.Resources.Apps_preferences_web_browser_shortcuts_icon;
+            this.open_browser_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.open_browser_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.open_browser_button.Location = new System.Drawing.Point(17, 185);
+            this.open_browser_button.Name = "open_browser_button";
+            this.open_browser_button.Size = new System.Drawing.Size(41, 39);
+            this.open_browser_button.TabIndex = 22;
+            this.open_browser_button.UseVisualStyleBackColor = true;
+            this.open_browser_button.Click += new System.EventHandler(this.open_browser_button_Click);
+            // 
+            // developer_button
+            // 
+            this.developer_button.BackgroundImage = global::View_GUI.Properties.Resources.Apps_utilities_terminal_icon;
+            this.developer_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.developer_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.developer_button.Location = new System.Drawing.Point(144, 126);
+            this.developer_button.Name = "developer_button";
+            this.developer_button.Size = new System.Drawing.Size(41, 39);
+            this.developer_button.TabIndex = 17;
+            this.developer_button.UseVisualStyleBackColor = true;
+            // 
+            // open_paint_button
+            // 
+            this.open_paint_button.BackgroundImage = global::View_GUI.Properties.Resources.Paint_icon;
+            this.open_paint_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.open_paint_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.open_paint_button.Location = new System.Drawing.Point(78, 72);
+            this.open_paint_button.Name = "open_paint_button";
+            this.open_paint_button.Size = new System.Drawing.Size(41, 39);
+            this.open_paint_button.TabIndex = 21;
+            this.open_paint_button.UseVisualStyleBackColor = true;
+            this.open_paint_button.Click += new System.EventHandler(this.open_paint_button_Click);
+            // 
+            // setting_button
+            // 
+            this.setting_button.BackgroundImage = global::View_GUI.Properties.Resources.Categories_preferences_system_icon;
+            this.setting_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.setting_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.setting_button.Location = new System.Drawing.Point(78, 126);
+            this.setting_button.Name = "setting_button";
+            this.setting_button.Size = new System.Drawing.Size(41, 39);
+            this.setting_button.TabIndex = 16;
+            this.setting_button.UseVisualStyleBackColor = true;
+            // 
+            // sound_recorder_button
+            // 
+            this.sound_recorder_button.BackgroundImage = global::View_GUI.Properties.Resources.microphone_icon;
+            this.sound_recorder_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.sound_recorder_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sound_recorder_button.Location = new System.Drawing.Point(18, 126);
+            this.sound_recorder_button.Name = "sound_recorder_button";
+            this.sound_recorder_button.Size = new System.Drawing.Size(41, 39);
+            this.sound_recorder_button.TabIndex = 20;
+            this.sound_recorder_button.UseVisualStyleBackColor = true;
+            this.sound_recorder_button.Click += new System.EventHandler(this.sound_recorder_button_Click);
+            // 
+            // calendar_button
+            // 
+            this.calendar_button.BackgroundImage = global::View_GUI.Properties.Resources.date_icon;
+            this.calendar_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.calendar_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.calendar_button.Location = new System.Drawing.Point(17, 16);
+            this.calendar_button.Name = "calendar_button";
+            this.calendar_button.Size = new System.Drawing.Size(41, 39);
+            this.calendar_button.TabIndex = 19;
+            this.calendar_button.UseVisualStyleBackColor = true;
+            // 
+            // calculator_button
+            // 
+            this.calculator_button.BackgroundImage = global::View_GUI.Properties.Resources.Calculator_3_icon;
+            this.calculator_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.calculator_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.calculator_button.Location = new System.Drawing.Point(144, 71);
+            this.calculator_button.Name = "calculator_button";
+            this.calculator_button.Size = new System.Drawing.Size(41, 39);
+            this.calculator_button.TabIndex = 18;
+            this.calculator_button.UseVisualStyleBackColor = true;
+            this.calculator_button.Click += new System.EventHandler(this.calculator_button_Click);
+            // 
+            // text_writer_button
+            // 
+            this.text_writer_button.BackgroundImage = global::View_GUI.Properties.Resources.libreoffice_writer_icon;
+            this.text_writer_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.text_writer_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.text_writer_button.Location = new System.Drawing.Point(144, 16);
+            this.text_writer_button.Name = "text_writer_button";
+            this.text_writer_button.Size = new System.Drawing.Size(41, 39);
+            this.text_writer_button.TabIndex = 15;
+            this.text_writer_button.UseVisualStyleBackColor = true;
+            // 
+            // notes_button
+            // 
+            this.notes_button.BackgroundImage = global::View_GUI.Properties.Resources.Notes_icon;
+            this.notes_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.notes_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.notes_button.Location = new System.Drawing.Point(78, 16);
+            this.notes_button.Name = "notes_button";
+            this.notes_button.Size = new System.Drawing.Size(41, 39);
+            this.notes_button.TabIndex = 14;
+            this.notes_button.UseVisualStyleBackColor = true;
+            // 
+            // timer_button
+            // 
+            this.timer_button.BackgroundImage = global::View_GUI.Properties.Resources._42608_stopwatch_icon;
+            this.timer_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.timer_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.timer_button.Location = new System.Drawing.Point(18, 72);
+            this.timer_button.Name = "timer_button";
+            this.timer_button.Size = new System.Drawing.Size(40, 38);
+            this.timer_button.TabIndex = 13;
+            this.timer_button.UseVisualStyleBackColor = true;
+            // 
             // screenshot_DropDown_menustrip
             // 
             this.screenshot_DropDown_menustrip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -153,6 +311,78 @@
             this.screenshot_DropDown_menustrip.Size = new System.Drawing.Size(42, 41);
             this.screenshot_DropDown_menustrip.TabIndex = 0;
             this.screenshot_DropDown_menustrip.Text = "menuStrip1";
+            // 
+            // main_screenshot_button
+            // 
+            this.main_screenshot_button.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
+            this.main_screenshot_button.AutoSize = false;
+            this.main_screenshot_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.main_screenshot_button.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.main_screenshot_button.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.screenshotEntireScreen_button,
+            this.toolStripMenuItem4,
+            this.selection_screenshot_button});
+            this.main_screenshot_button.Image = global::View_GUI.Properties.Resources.camera_icon;
+            this.main_screenshot_button.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.main_screenshot_button.MergeAction = System.Windows.Forms.MergeAction.Replace;
+            this.main_screenshot_button.Name = "main_screenshot_button";
+            this.main_screenshot_button.Padding = new System.Windows.Forms.Padding(0);
+            this.main_screenshot_button.Size = new System.Drawing.Size(41, 40);
+            this.main_screenshot_button.Click += new System.EventHandler(this.main_screenshot_button_Click);
+            this.main_screenshot_button.MouseEnter += new System.EventHandler(this.main_screenshot_button_MouseEnter);
+            // 
+            // screenshotEntireScreen_button
+            // 
+            this.screenshotEntireScreen_button.AutoSize = false;
+            this.screenshotEntireScreen_button.AutoToolTip = true;
+            this.screenshotEntireScreen_button.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.screenshotEntireScreen_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.screenshotEntireScreen_button.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.screenshotEntireScreen_button.Image = global::View_GUI.Properties.Resources.win7_ico_shell32_dll_159;
+            this.screenshotEntireScreen_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.screenshotEntireScreen_button.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.screenshotEntireScreen_button.ImageTransparentColor = System.Drawing.SystemColors.Control;
+            this.screenshotEntireScreen_button.Margin = new System.Windows.Forms.Padding(5, 10, 0, 10);
+            this.screenshotEntireScreen_button.Name = "screenshotEntireScreen_button";
+            this.screenshotEntireScreen_button.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.A)));
+            this.screenshotEntireScreen_button.Size = new System.Drawing.Size(41, 40);
+            this.screenshotEntireScreen_button.ToolTipText = "CTRL +SHIFT + A";
+            this.screenshotEntireScreen_button.Click += new System.EventHandler(this.screenshotEntireScreen_button_Click);
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.AutoSize = false;
+            this.toolStripMenuItem4.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.toolStripMenuItem4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.toolStripMenuItem4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripMenuItem4.Image = global::View_GUI.Properties.Resources.win7_ico_shell32_dll_295;
+            this.toolStripMenuItem4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItem4.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.F)));
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(41, 40);
+            this.toolStripMenuItem4.Text = "2";
+            this.toolStripMenuItem4.ToolTipText = "CTRL + SHIF + F";
+            this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
+            // 
+            // selection_screenshot_button
+            // 
+            this.selection_screenshot_button.AutoSize = false;
+            this.selection_screenshot_button.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.selection_screenshot_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.selection_screenshot_button.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.selection_screenshot_button.Image = global::View_GUI.Properties.Resources.win7_ico_shell32_dll_259;
+            this.selection_screenshot_button.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.selection_screenshot_button.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
+            this.selection_screenshot_button.Name = "selection_screenshot_button";
+            this.selection_screenshot_button.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.C)));
+            this.selection_screenshot_button.Size = new System.Drawing.Size(41, 40);
+            this.selection_screenshot_button.Text = "1";
+            this.selection_screenshot_button.ToolTipText = "CTRL + SHIFT + C";
+            this.selection_screenshot_button.Click += new System.EventHandler(this.selection_screenshot_button_Click);
             // 
             // Top_Menu_panel
             // 
@@ -186,6 +416,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(261, 10);
             this.panel2.TabIndex = 14;
+            // 
+            // Menu_Search_button
+            // 
+            this.Menu_Search_button.BackgroundImage = global::View_GUI.Properties.Resources.Start_Menu_Search_icon1;
+            this.Menu_Search_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Menu_Search_button.Location = new System.Drawing.Point(194, 5);
+            this.Menu_Search_button.Margin = new System.Windows.Forms.Padding(0);
+            this.Menu_Search_button.Name = "Menu_Search_button";
+            this.Menu_Search_button.Size = new System.Drawing.Size(30, 30);
+            this.Menu_Search_button.TabIndex = 11;
+            this.Menu_Search_button.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -232,17 +473,6 @@
             this.General_menuStrip.Size = new System.Drawing.Size(593, 53);
             this.General_menuStrip.TabIndex = 2;
             this.General_menuStrip.Text = "menuStrip1";
-            // 
-            // Menu_Search_button
-            // 
-            this.Menu_Search_button.BackgroundImage = global::View_GUI.Properties.Resources.Start_Menu_Search_icon1;
-            this.Menu_Search_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Menu_Search_button.Location = new System.Drawing.Point(194, 5);
-            this.Menu_Search_button.Margin = new System.Windows.Forms.Padding(0);
-            this.Menu_Search_button.Name = "Menu_Search_button";
-            this.Menu_Search_button.Size = new System.Drawing.Size(30, 30);
-            this.Menu_Search_button.TabIndex = 11;
-            this.Menu_Search_button.UseVisualStyleBackColor = true;
             // 
             // sagerToolStripMenuItem
             // 
@@ -357,78 +587,6 @@
             this.bell_button.UseVisualStyleBackColor = true;
             this.bell_button.Click += new System.EventHandler(this.bell_button_Click);
             // 
-            // main_screenshot_button
-            // 
-            this.main_screenshot_button.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
-            this.main_screenshot_button.AutoSize = false;
-            this.main_screenshot_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.main_screenshot_button.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.main_screenshot_button.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.screenshotEntireScreen_button,
-            this.toolStripMenuItem4,
-            this.selection_screenshot_button});
-            this.main_screenshot_button.Image = global::View_GUI.Properties.Resources.camera_icon;
-            this.main_screenshot_button.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.main_screenshot_button.MergeAction = System.Windows.Forms.MergeAction.Replace;
-            this.main_screenshot_button.Name = "main_screenshot_button";
-            this.main_screenshot_button.Padding = new System.Windows.Forms.Padding(0);
-            this.main_screenshot_button.Size = new System.Drawing.Size(41, 40);
-            this.main_screenshot_button.Click += new System.EventHandler(this.main_screenshot_button_Click);
-            this.main_screenshot_button.MouseEnter += new System.EventHandler(this.main_screenshot_button_MouseEnter);
-            // 
-            // screenshotEntireScreen_button
-            // 
-            this.screenshotEntireScreen_button.AutoSize = false;
-            this.screenshotEntireScreen_button.AutoToolTip = true;
-            this.screenshotEntireScreen_button.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.screenshotEntireScreen_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.screenshotEntireScreen_button.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.screenshotEntireScreen_button.Image = global::View_GUI.Properties.Resources.win7_ico_shell32_dll_159;
-            this.screenshotEntireScreen_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.screenshotEntireScreen_button.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.screenshotEntireScreen_button.ImageTransparentColor = System.Drawing.SystemColors.Control;
-            this.screenshotEntireScreen_button.Margin = new System.Windows.Forms.Padding(5, 10, 0, 10);
-            this.screenshotEntireScreen_button.Name = "screenshotEntireScreen_button";
-            this.screenshotEntireScreen_button.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.A)));
-            this.screenshotEntireScreen_button.Size = new System.Drawing.Size(41, 40);
-            this.screenshotEntireScreen_button.ToolTipText = "CTRL +SHIFT + A";
-            this.screenshotEntireScreen_button.Click += new System.EventHandler(this.screenshotEntireScreen_button_Click);
-            // 
-            // toolStripMenuItem4
-            // 
-            this.toolStripMenuItem4.AutoSize = false;
-            this.toolStripMenuItem4.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.toolStripMenuItem4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.toolStripMenuItem4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripMenuItem4.Image = global::View_GUI.Properties.Resources.win7_ico_shell32_dll_295;
-            this.toolStripMenuItem4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem4.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.F)));
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(41, 40);
-            this.toolStripMenuItem4.Text = "2";
-            this.toolStripMenuItem4.ToolTipText = "CTRL + SHIF + F";
-            this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
-            // 
-            // selection_screenshot_button
-            // 
-            this.selection_screenshot_button.AutoSize = false;
-            this.selection_screenshot_button.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.selection_screenshot_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.selection_screenshot_button.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.selection_screenshot_button.Image = global::View_GUI.Properties.Resources.win7_ico_shell32_dll_259;
-            this.selection_screenshot_button.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.selection_screenshot_button.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
-            this.selection_screenshot_button.Name = "selection_screenshot_button";
-            this.selection_screenshot_button.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.C)));
-            this.selection_screenshot_button.Size = new System.Drawing.Size(41, 40);
-            this.selection_screenshot_button.Text = "1";
-            this.selection_screenshot_button.ToolTipText = "CTRL + SHIFT + C";
-            this.selection_screenshot_button.Click += new System.EventHandler(this.selection_screenshot_button_Click);
-            // 
             // Loacal_Folder_button
             // 
             this.Loacal_Folder_button.BackgroundImage = global::View_GUI.Properties.Resources.win7_ico_shell32_dll_0041;
@@ -478,12 +636,14 @@
             this.item_menu_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.item_menu_button.BackgroundImage = global::View_GUI.Properties.Resources._23234;
             this.item_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.item_menu_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.item_menu_button.Location = new System.Drawing.Point(1120, 8);
             this.item_menu_button.Name = "item_menu_button";
             this.item_menu_button.Size = new System.Drawing.Size(33, 27);
             this.item_menu_button.TabIndex = 5;
             this.item_menu_button.UseVisualStyleBackColor = true;
             this.item_menu_button.Click += new System.EventHandler(this.item_menu_button_Click_1);
+            this.item_menu_button.MouseHover += new System.EventHandler(this.item_menu_button_MouseHover);
             // 
             // Forward_Button
             // 
@@ -494,150 +654,6 @@
             this.Forward_Button.Size = new System.Drawing.Size(30, 30);
             this.Forward_Button.TabIndex = 4;
             this.Forward_Button.UseVisualStyleBackColor = true;
-            // 
-            // statistics_button
-            // 
-            this.statistics_button.BackgroundImage = global::View_GUI.Properties.Resources.chart_search_icon;
-            this.statistics_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.statistics_button.Location = new System.Drawing.Point(81, 244);
-            this.statistics_button.Name = "statistics_button";
-            this.statistics_button.Size = new System.Drawing.Size(41, 39);
-            this.statistics_button.TabIndex = 26;
-            this.statistics_button.UseVisualStyleBackColor = true;
-            // 
-            // world_clock_button
-            // 
-            this.world_clock_button.BackgroundImage = global::View_GUI.Properties.Resources.App_world_clock_icon1;
-            this.world_clock_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.world_clock_button.Location = new System.Drawing.Point(17, 244);
-            this.world_clock_button.Name = "world_clock_button";
-            this.world_clock_button.Size = new System.Drawing.Size(41, 39);
-            this.world_clock_button.TabIndex = 25;
-            this.world_clock_button.UseVisualStyleBackColor = true;
-            // 
-            // open_my_email_button
-            // 
-            this.open_my_email_button.BackgroundImage = global::View_GUI.Properties.Resources.mail_yellow_icon;
-            this.open_my_email_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.open_my_email_button.Location = new System.Drawing.Point(144, 185);
-            this.open_my_email_button.Name = "open_my_email_button";
-            this.open_my_email_button.Size = new System.Drawing.Size(41, 39);
-            this.open_my_email_button.TabIndex = 24;
-            this.open_my_email_button.UseVisualStyleBackColor = true;
-            // 
-            // open_my_webpage_button
-            // 
-            this.open_my_webpage_button.BackgroundImage = global::View_GUI.Properties.Resources.Email_icon;
-            this.open_my_webpage_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.open_my_webpage_button.Location = new System.Drawing.Point(78, 185);
-            this.open_my_webpage_button.Name = "open_my_webpage_button";
-            this.open_my_webpage_button.Size = new System.Drawing.Size(41, 39);
-            this.open_my_webpage_button.TabIndex = 23;
-            this.open_my_webpage_button.UseVisualStyleBackColor = true;
-            // 
-            // open_browser_button
-            // 
-            this.open_browser_button.BackgroundImage = global::View_GUI.Properties.Resources.Apps_preferences_web_browser_shortcuts_icon;
-            this.open_browser_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.open_browser_button.Location = new System.Drawing.Point(17, 185);
-            this.open_browser_button.Name = "open_browser_button";
-            this.open_browser_button.Size = new System.Drawing.Size(41, 39);
-            this.open_browser_button.TabIndex = 22;
-            this.open_browser_button.UseVisualStyleBackColor = true;
-            this.open_browser_button.Click += new System.EventHandler(this.open_browser_button_Click);
-            // 
-            // developer_button
-            // 
-            this.developer_button.BackgroundImage = global::View_GUI.Properties.Resources.Apps_utilities_terminal_icon;
-            this.developer_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.developer_button.Location = new System.Drawing.Point(144, 126);
-            this.developer_button.Name = "developer_button";
-            this.developer_button.Size = new System.Drawing.Size(41, 39);
-            this.developer_button.TabIndex = 17;
-            this.developer_button.UseVisualStyleBackColor = true;
-            // 
-            // open_paint_button
-            // 
-            this.open_paint_button.BackgroundImage = global::View_GUI.Properties.Resources.Paint_icon;
-            this.open_paint_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.open_paint_button.Location = new System.Drawing.Point(78, 72);
-            this.open_paint_button.Name = "open_paint_button";
-            this.open_paint_button.Size = new System.Drawing.Size(41, 39);
-            this.open_paint_button.TabIndex = 21;
-            this.open_paint_button.UseVisualStyleBackColor = true;
-            this.open_paint_button.Click += new System.EventHandler(this.open_paint_button_Click);
-            // 
-            // setting_button
-            // 
-            this.setting_button.BackgroundImage = global::View_GUI.Properties.Resources.Categories_preferences_system_icon;
-            this.setting_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.setting_button.Location = new System.Drawing.Point(78, 126);
-            this.setting_button.Name = "setting_button";
-            this.setting_button.Size = new System.Drawing.Size(41, 39);
-            this.setting_button.TabIndex = 16;
-            this.setting_button.UseVisualStyleBackColor = true;
-            // 
-            // sound_recorder_button
-            // 
-            this.sound_recorder_button.BackgroundImage = global::View_GUI.Properties.Resources.microphone_icon;
-            this.sound_recorder_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.sound_recorder_button.Location = new System.Drawing.Point(18, 126);
-            this.sound_recorder_button.Name = "sound_recorder_button";
-            this.sound_recorder_button.Size = new System.Drawing.Size(41, 39);
-            this.sound_recorder_button.TabIndex = 20;
-            this.sound_recorder_button.UseVisualStyleBackColor = true;
-            this.sound_recorder_button.Click += new System.EventHandler(this.sound_recorder_button_Click);
-            // 
-            // calendar_button
-            // 
-            this.calendar_button.BackgroundImage = global::View_GUI.Properties.Resources.date_icon;
-            this.calendar_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.calendar_button.Location = new System.Drawing.Point(17, 16);
-            this.calendar_button.Name = "calendar_button";
-            this.calendar_button.Size = new System.Drawing.Size(41, 39);
-            this.calendar_button.TabIndex = 19;
-            this.calendar_button.UseVisualStyleBackColor = true;
-            // 
-            // calculator_button
-            // 
-            this.calculator_button.BackgroundImage = global::View_GUI.Properties.Resources.Calculator_3_icon;
-            this.calculator_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.calculator_button.Location = new System.Drawing.Point(144, 71);
-            this.calculator_button.Name = "calculator_button";
-            this.calculator_button.Size = new System.Drawing.Size(41, 39);
-            this.calculator_button.TabIndex = 18;
-            this.calculator_button.UseVisualStyleBackColor = true;
-            this.calculator_button.Click += new System.EventHandler(this.calculator_button_Click);
-            // 
-            // text_writer_button
-            // 
-            this.text_writer_button.BackgroundImage = global::View_GUI.Properties.Resources.libreoffice_writer_icon;
-            this.text_writer_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.text_writer_button.Location = new System.Drawing.Point(144, 16);
-            this.text_writer_button.Name = "text_writer_button";
-            this.text_writer_button.Size = new System.Drawing.Size(41, 39);
-            this.text_writer_button.TabIndex = 15;
-            this.text_writer_button.UseVisualStyleBackColor = true;
-            // 
-            // notes_button
-            // 
-            this.notes_button.BackgroundImage = global::View_GUI.Properties.Resources.Notes_icon;
-            this.notes_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.notes_button.Location = new System.Drawing.Point(78, 16);
-            this.notes_button.Name = "notes_button";
-            this.notes_button.Size = new System.Drawing.Size(41, 39);
-            this.notes_button.TabIndex = 14;
-            this.notes_button.UseVisualStyleBackColor = true;
-            // 
-            // timer_button
-            // 
-            this.timer_button.BackgroundImage = global::View_GUI.Properties.Resources._42608_stopwatch_icon;
-            this.timer_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.timer_button.Location = new System.Drawing.Point(18, 72);
-            this.timer_button.Name = "timer_button";
-            this.timer_button.Size = new System.Drawing.Size(40, 38);
-            this.timer_button.TabIndex = 13;
-            this.timer_button.UseVisualStyleBackColor = true;
             // 
             // Main_Form1
             // 
@@ -650,7 +666,6 @@
             this.Name = "Main_Form1";
             this.Text = "Main_Form1";
             this.Load += new System.EventHandler(this.Main_Form1_Load);
-            this.ResizeBegin += new System.EventHandler(this.Main_Form1_ResizeBegin);
             this.Loader_panel.ResumeLayout(false);
             this.itemMenuPanelDropDown.ResumeLayout(false);
             this.screenshot_DropDown_menustrip.ResumeLayout(false);

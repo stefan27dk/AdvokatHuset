@@ -21,6 +21,7 @@ namespace View_GUI
 
     public partial class Main_Form1 : Form
     {
+
         //Forms--::START::
         public static Sager_Form2 SagerForm2 = new Sager_Form2();  //Form2
         Advokater_Form3 AdvokaterForm3 = new Advokater_Form3();//Form3
@@ -37,7 +38,7 @@ namespace View_GUI
         {
 
             InitializeComponent();
-            General_menuStrip.Renderer = new MyRenderer(); // Used for General_menuStrip to change the "Selection Background Color" "Renderer"
+            
          
         }
 
@@ -130,11 +131,12 @@ namespace View_GUI
         //Form Load
         private void Main_Form1_Load(object sender, EventArgs e)
         {
-          
-            General_Menu_Panel.BringToFront();// Advokate,Sager ETC. menu to top
+       
             itemMenuPanelDropDown.BringToFront();//ItemMenuPanel
-            General_menuStrip.ForeColor = Color.FromArgb(0, 204, 255);//Color of the Menu Strip "General menu"
             screenshot_DropDown_menustrip.Renderer = new BrowserMenuRenderer(); // Custumized THEME For the DROP DOWN MENU FOR THE SCREENSHOTS
+            General_menuStrip.Renderer = new MyRenderer(); // Used for General_menuStrip to change the "Selection Background Color" "Renderer"
+            General_menuStrip.ForeColor = Color.FromArgb(0, 204, 255);//Color of the Menu Strip "General menu"
+            General_Menu_Panel.BringToFront();// Advokate,Sager ETC. menu to top
         }
 
 
@@ -229,11 +231,7 @@ namespace View_GUI
 
 
 
-
-
-
-
-  
+    
 
 
 
@@ -245,7 +243,8 @@ namespace View_GUI
             // Open Local Folder --- Main Method
           private void OpenLocalFolder()
           {
-            Process.Start("C://"); // Opens Default App - Directory with Screenshots, Pdf etc.
+            screenshot = new Screenshot();
+            Process.Start($@"{screenshot.ScreenshotSavePath}"); // Opens Default App - Directory with Screenshots, Pdf etc.
             SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\recycle.wav");
             simpleSound.Play();
           }
@@ -256,14 +255,20 @@ namespace View_GUI
         {
             OpenLocalFolder();
         }
-   
+
+
+
+
+
+        // Bell button 
+        private void bell_button_Click(object sender, EventArgs e)
+        {
+
+            SoundPlayer simpleSound = new SoundPlayer(@"C:\Windows\Media\ding.wav");
+            simpleSound.Play();
+        }
+
         //-------Top--BAR----<--,---->, Home, Etc.-------::END::-------------------------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
-
 
 
 
@@ -282,36 +287,35 @@ namespace View_GUI
         }
 
 
+
+
+
+
+
+
          //Sager
         private void sagerToolStripMenuItem_Click(object sender, EventArgs e)
-        {  
+        {
+
             //Forms for Hide "Hide all other Forms"
             HideAllForms();
 
-            // Show SagerForm2
+             // Show SagerForm2
             SagerForm2.TopLevel = false;
-            SagerForm2.AutoScroll = true;
             Loader_panel.Controls.Add(SagerForm2);
+            SagerForm2.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            SagerForm2.Dock = DockStyle.Fill;
             SagerForm2.Show();
-
-
-            SagerForm2.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            //SagerForm2.WindowState = FormWindowState.Maximized;
-            //SagerForm2.WindowState = FormWindowState.Maximized;
-            //SagerForm2.MinimumSize = this.Size;
-            //SagerForm2.MaximumSize = this.Size;
-
-
-            //FormCollection fc = Application.OpenForms;
-            //foreach (Form frm in fc)
-            //{
-            //    if (frm.Name == SagerForm2.Name)
-            //    {
-            //        frm.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            //    }
-            //}
-
+      
         }
+
+
+
+
+
+ 
+
+
 
 
         //Advokater
@@ -319,12 +323,15 @@ namespace View_GUI
         {
             //Forms for Hide "Hide all other Forms"
             HideAllForms();
-
-            //Show AdvokaterForm3
+ 
+            // SHow AdvokaterForm3
             AdvokaterForm3.TopLevel = false;
-            AdvokaterForm3.AutoScroll = true;
             Loader_panel.Controls.Add(AdvokaterForm3);
+            AdvokaterForm3.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            AdvokaterForm3.Dock = DockStyle.Fill;
             AdvokaterForm3.Show();
+      
+
         }
 
 
@@ -344,7 +351,7 @@ namespace View_GUI
         //-----------------------------ITEM-Menu-------::START::------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-            private void OpenItemMenu() // The menu with tools, Claculator, timer, setting, etc.
+          private void OpenItemMenu() // The menu with tools, Claculator, timer, setting, etc.
             {
 
             if (itemMenuPanelDropDown.Visible == false)
@@ -363,6 +370,9 @@ namespace View_GUI
             clicksound.Play();
 
             }
+
+
+
 
 
 
@@ -389,12 +399,20 @@ namespace View_GUI
 
 
 
+
+
+
+
         // Item Menu Open Button
         private void item_menu_button_Click_1(object sender, EventArgs e)  // SHow hide Item Menu
         {
             OpenItemMenu();
 
         }
+
+
+
+
 
 
 
@@ -436,25 +454,22 @@ namespace View_GUI
 
 
 
-        
-        // Bell button 
-        private void bell_button_Click(object sender, EventArgs e)
+        // Item Menu ToolTip
+        private void item_menu_button_MouseHover(object sender, EventArgs e)
         {
+       
+            ToolTip ItemMenuToolTip = new ToolTip();
+            ItemMenuToolTip.AutoPopDelay = 3000;
+            ItemMenuToolTip.InitialDelay = 500;
+            ItemMenuToolTip.ReshowDelay = 1000;
+            ItemMenuToolTip.ShowAlways = true;
 
-            SoundPlayer simpleSound = new SoundPlayer(@"C:\Windows\Media\ding.wav");
-            simpleSound.Play();
+            ItemMenuToolTip.SetToolTip(item_menu_button, "CTRL + G");
+            ToolTip tip = new ToolTip();
+ 
         }
-
-        private void Main_Form1_ResizeBegin(object sender, EventArgs e)
-        {
-            SagerForm2.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-        }
-
 
         //-----------------------------ITEM-Menu-------::START::------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-
 
 
 

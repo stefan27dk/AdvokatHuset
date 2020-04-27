@@ -199,25 +199,23 @@ namespace View_GUI
                menuForm.Show();
             }
 
-
-                if (menuForm != null)
-                {
-                menuForm.Close();
-                }
+     
+           if (menuForm != null)
+           {
+           menuForm.Close();
+           }
 
         }
 
 
 
+          
 
 
-
-
-
-        // Close Selection Cut button
+        // Close Selection Cut button  "THIS FORM"
         private void closeForm_button_Click(object sender, EventArgs e)
         {
-            CloseForm();
+            CloseForm();// Method
         }
 
 
@@ -230,7 +228,7 @@ namespace View_GUI
          {
             SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\Windows Default.wav");
             simpleSound.Play();
-            this.Close();
+            this.Close(); // Close this Form
          }
 
 
@@ -249,13 +247,15 @@ namespace View_GUI
             return base.ProcessDialogKey(keydata);
           }
 
+        //---------ScreenshotForm--Close with Esc - Key-----::END::------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
 
 
 
-         // Help button
+
+        // Help button
         private void help_button_Click(object sender, EventArgs e)
         {
             SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\Windows Balloon.wav");
@@ -339,11 +339,6 @@ namespace View_GUI
 
     
  
-        //---------ScreenshotForm--Close with Esc - Key-----::END::------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-
-
 
 
 
@@ -363,22 +358,7 @@ namespace View_GUI
            }
 
 
-
-        // Save ToolTip
-        private void selectionScreenshot_button_MouseHover(object sender, EventArgs e)
-        {
-             
-
-        }
-
-
-
-       // Paint ToolTip
-        private void open_iimage_in_paint_button_MouseHover(object sender, EventArgs e)
-        {
-      
-
-        }
+  
 
 
 
@@ -386,9 +366,9 @@ namespace View_GUI
 
 
 
+         //---------ToolTips---::START::------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-        // Save Screenshot "Make Screenshot"
+        // Save Screenshot "Make Screenshot" - ToolTip
         private void selectionScreenshot_button_MouseHover_1(object sender, EventArgs e)
         {
             ToolTip tip = new ToolTip();
@@ -400,6 +380,7 @@ namespace View_GUI
 
             tip.SetToolTip(selectionScreenshot_button, "Save: Press: \"CTRL + S\"");
         }
+
 
 
 
@@ -419,6 +400,8 @@ namespace View_GUI
 
 
 
+
+
         // Tool Tip Paint
         private void open_iimage_in_paint_button_MouseHover_1(object sender, EventArgs e)
         {
@@ -431,6 +414,8 @@ namespace View_GUI
 
             tip.SetToolTip(open_iimage_in_paint_button, "Open Last Image in Paint: Press:  \"CTRL + E\"");
         }
+
+
 
 
         // Close Selection Screenshot- Tooltip
@@ -446,6 +431,7 @@ namespace View_GUI
             tip.SetToolTip(closeForm_button, "EXIT Press: \"ESC\"");
         }
 
+        //---------ToolTips---::END::------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
