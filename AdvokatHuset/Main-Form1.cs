@@ -75,8 +75,7 @@ namespace View_GUI
 
 
 
-
-
+                               
 
 
 
@@ -131,7 +130,7 @@ namespace View_GUI
         //Form Load
         private void Main_Form1_Load(object sender, EventArgs e)
         {
-       
+            screenshotButton_back_panel.BringToFront();
             itemMenuPanelDropDown.BringToFront();//ItemMenuPanel
             screenshot_DropDown_menustrip.Renderer = new BrowserMenuRenderer(); // Custumized THEME For the DROP DOWN MENU FOR THE SCREENSHOTS
             General_menuStrip.Renderer = new MyRenderer(); // Used for General_menuStrip to change the "Selection Background Color" "Renderer"
@@ -221,7 +220,11 @@ namespace View_GUI
         // Main Screenshot button on Hover Show Drop Down
         private void main_screenshot_button_MouseEnter(object sender, EventArgs e)
         {
+            Size size = new Size();   // New Size
+            size.Width = 55;
+             
             main_screenshot_button.ShowDropDown();
+            main_screenshot_button.DropDown.MaximumSize = size;
         }
 
         // Screenshot----------::END::-----------------------------------------------------------------------------------------------------------------------------------------------------------------
