@@ -55,8 +55,8 @@ namespace View_GUI
         private class MyColors : ProfessionalColorTable  //Overriding Colors
         {
             public override Color MenuItemSelected { get { return Color.FromArgb(250, 182, 72); } }
-            public override Color MenuItemSelectedGradientBegin  { get { return Color.FromArgb(250, 182, 72); } }
-            public override Color MenuItemSelectedGradientEnd { get { return Color.FromArgb(250, 182, 72); } }
+            public override Color MenuItemSelectedGradientBegin  { get { return Color.FromArgb(255, 182, 110); } }
+            public override Color MenuItemSelectedGradientEnd { get { return Color.FromArgb(69, 69, 69); } }
         }
         //General_menustrip-Custumized-Theme-------::END::----------------------------------------------------------------------------------------------
 
@@ -197,6 +197,7 @@ namespace View_GUI
 
         private void Main_Form1_Load(object sender, EventArgs e)
         {
+            
             General_Menu_Panel.BringToFront();// Advokate,Sager ETC. menu to top
             menuPanelDropDown.BringToFront();//ItemMenuPanel
             General_menuStrip.ForeColor = Color.FromArgb(0, 204, 255);//Color of the Menu Strip "General menu"
@@ -405,6 +406,12 @@ namespace View_GUI
         private void open_browser_button_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("http:\\google.com");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SoundPlayer simpleSound = new SoundPlayer(@"C:\Windows\Media\ding.wav");
+            simpleSound.Play();
         }
 
 

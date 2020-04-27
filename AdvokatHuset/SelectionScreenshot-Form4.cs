@@ -142,10 +142,7 @@ namespace View_GUI
         private void MakeScreenshotNow()
         {
             //Hide All Buttons
-            selectionScreenshot_button.Visible = false;   // Make the button invisible so it does not come in the screenshot
-            openFolder_button.Visible = false;
-            help_button.Visible = false;
-            closeForm_button.Visible = false;
+       ;
              
             Cursor.Current = Cursors.WaitCursor;
             //Sound
@@ -159,10 +156,7 @@ namespace View_GUI
             Cursor.Current = Cursors.Default;
 
             //SHOW ALL Buttons Again --------
-            selectionScreenshot_button.Visible = true;  // Make the button visible again
-            openFolder_button.Visible = true;
-            help_button.Visible = true;
-            closeForm_button.Visible = true;
+        ;
         }
 
          
@@ -196,8 +190,13 @@ namespace View_GUI
                 menuForm.Close();
                 }
 
-
         }
+
+
+
+
+
+
 
 
 
@@ -224,6 +223,13 @@ namespace View_GUI
             return base.ProcessDialogKey(keydata);
           }
 
+
+
+
+
+
+
+
         private void help_button_Click(object sender, EventArgs e)
         {
             SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\Windows Balloon.wav");
@@ -231,6 +237,12 @@ namespace View_GUI
 
             help_label.Visible = true;
         }
+
+
+
+
+
+
 
         private void open_iimage_in_paint_button_Click(object sender, EventArgs e)
         {
@@ -263,6 +275,18 @@ namespace View_GUI
         }
 
         //---------ScreenshotForm--Close with Esc - Key-----::END::------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
