@@ -53,10 +53,22 @@ namespace View_GUI
         }
 
         private class MyColors : ProfessionalColorTable  //Overriding Colors
-        {
-            public override Color MenuItemSelected { get { return Color.FromArgb(250, 182, 72); } }
+        {   
+            
+            // Drop Down Background - Right
+            public override Color ToolStripDropDownBackground { get { return Color.FromArgb(64, 63, 61); }}// Drop Down Right background
+
+            public override Color MenuItemSelected { get { return Color.FromArgb(128, 122, 111); } }// Selected item color
             public override Color MenuItemSelectedGradientBegin  { get { return Color.FromArgb(255, 182, 110); } }
             public override Color MenuItemSelectedGradientEnd { get { return Color.FromArgb(69, 69, 69); } }
+            public override Color MenuItemPressedGradientBegin { get { return Color.FromArgb(52, 71, 66); } }
+            public override Color MenuItemPressedGradientEnd { get { return Color.FromArgb(51, 55, 56); } }
+            public override Color ImageMarginGradientBegin { get { return Color.FromArgb(52, 71, 66); } }
+            public override Color ImageMarginGradientMiddle { get { return Color.FromArgb(58, 58, 64); } }
+            public override Color ImageMarginGradientEnd { get { return Color.FromArgb(48, 48, 54); } }
+
+            //Drop Down Border
+            public override Color MenuBorder { get { return Color.FromArgb(255, 183, 89); } }
         }
         //General_menustrip-Custumized-Theme-------::END::----------------------------------------------------------------------------------------------
 
@@ -74,118 +86,38 @@ namespace View_GUI
         }
 
 
-
         public class BrowserColors : ProfessionalColorTable
         {
-            public override Color ToolStripDropDownBackground  // Drop Down Background - Right
-            {
-                get
-                {
-                    return Color.FromArgb(48, 48, 54);   //---------------->
-                }
-            }
 
-            public override Color ImageMarginGradientBegin
-            {
-                get
-                {
-                    return Color.FromArgb(52, 71, 66);     //---------------->
-                }
-            }
+            
+            public override Color ToolStripDropDownBackground { get { return Color.FromArgb(48, 48, 54); }  } // Drop Down Background - Right
 
-            public override Color ImageMarginGradientMiddle
-            {
-                get
-                {
-                    return Color.FromArgb(58, 58, 64); //---------------->
-                }
-            }
+            public override Color ImageMarginGradientBegin { get { return Color.FromArgb(52, 71, 66); } }
 
-            public override Color ImageMarginGradientEnd
-            {
-                get
-                {
-                    return Color.FromArgb(48, 48, 54);
-                }
-            }
+            public override Color ImageMarginGradientMiddle { get { return Color.FromArgb(58, 58, 64); } }
 
-            public override Color MenuBorder //Drop Down Border
-            {
-                get
-                {
-                    return Color.Red; //---------------->
-                }
-            }
-           
+            public override Color ImageMarginGradientEnd { get { return Color.FromArgb(48, 48, 54); } }
 
-            public override Color MenuItemBorder
-            {
-                get
-                {
-                    return Color.Red;   //---------------->
-                }
-            }
+            public override Color MenuBorder { get { return Color.Red; } } //Drop Down Border
 
-            public override Color MenuItemSelected
-            {
-                get
-                {
-                    return Color.FromArgb(255);   //---------------->
-                }
-            }
+            public override Color MenuItemBorder { get { return Color.Red; } }
 
-            public override Color MenuStripGradientBegin
-            {
-                get
-                {
-                    return Color.FromArgb(52, 71, 66);
-                }
-            }
+            public override Color MenuItemSelected { get { return Color.FromArgb(255); } }
 
-            public override Color MenuStripGradientEnd
-            {
-                get
-                {
-                    return Color.FromArgb(52, 71, 66);
-                }
-            }
+            public override Color MenuStripGradientBegin { get { return Color.FromArgb(52, 71, 66); } }
 
-            public override Color MenuItemSelectedGradientBegin
-            {
-                get
-                {
-                    return Color.FromArgb(52, 71, 66);
-                }
-            }
+            public override Color MenuStripGradientEnd { get { return Color.FromArgb(52, 71, 66); } }
 
-            public override Color MenuItemSelectedGradientEnd
-            {
-                get
-                {
-                    return Color.FromArgb(52, 71, 66);
-                }
-            }
+            public override Color MenuItemSelectedGradientBegin { get { return Color.FromArgb(52, 71, 66); } }
 
-            public override Color MenuItemPressedGradientBegin
-            {
-                get
-                {
-                    return Color.FromArgb(52, 71, 66);   //---------------->
-                }
-            }
+            public override Color MenuItemSelectedGradientEnd { get { return Color.FromArgb(52, 71, 66); } }
 
-            public override Color MenuItemPressedGradientEnd
-            {
-                get
-                {
-                    return Color.FromArgb(51, 55, 56);
-                }
-            }
+            public override Color MenuItemPressedGradientBegin {  get { return Color.FromArgb(52, 71, 66);   } }    
 
-
-
-
+            public override Color MenuItemPressedGradientEnd { get { return Color.FromArgb(51, 55, 56); } }
+ 
         }
+    
 
         //------------------MENU DROP DOWN FOR SCREENSHOTS------RENDER---Custumized-Theme-----::END::-----------------------------------------------------------------------
 
@@ -195,6 +127,8 @@ namespace View_GUI
 
 
 
+
+        //Form Load
         private void Main_Form1_Load(object sender, EventArgs e)
         {
             
@@ -328,8 +262,12 @@ namespace View_GUI
 
 
 
+
+
+
         // General Menu Button Events---------"Advokater","Sager",Etc.--------::START::------------------------------------------------------------------------------------------------------------------
 
+        // Hide All Forms
         private void HideAllForms()
         {
             AdvokaterForm3.Hide();
@@ -337,7 +275,7 @@ namespace View_GUI
         }
 
 
-
+         //Sager
         private void sagerToolStripMenuItem_Click(object sender, EventArgs e)
         {  
             //Forms for Hide "Hide all other Forms"
@@ -351,7 +289,7 @@ namespace View_GUI
         }
 
 
-
+        //Advokater
         private void advokaterToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Forms for Hide "Hide all other Forms"
@@ -366,6 +304,11 @@ namespace View_GUI
         
 
         // General Menu Button Events---::END::---------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
 
 
 

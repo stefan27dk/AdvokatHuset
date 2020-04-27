@@ -445,8 +445,10 @@
             // 
             // visSagerToolStripMenuItem
             // 
+            this.visSagerToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.visSagerToolStripMenuItem.Image = global::View_GUI.Properties.Resources.Documents_icon__1_;
             this.visSagerToolStripMenuItem.Name = "visSagerToolStripMenuItem";
-            this.visSagerToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.visSagerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.visSagerToolStripMenuItem.Text = "Vis Sager";
             // 
             // ydelserToolStripMenuItem
