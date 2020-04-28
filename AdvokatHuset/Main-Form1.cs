@@ -254,9 +254,12 @@ namespace View_GUI
 
 
 
+
+        // Open Local Folder Button
         private void Loacal_Folder_button_Click(object sender, EventArgs e) // Open Default Folder
         {
-            OpenLocalFolder();
+            OpenLocalFolder();// Main Method
+        
         }
 
 
@@ -355,7 +358,7 @@ namespace View_GUI
 
 
           private void OpenItemMenu() // The menu with tools, Claculator, timer, setting, etc.
-            {
+          {
 
             if (itemMenuPanelDropDown.Visible == false)
             {
@@ -369,10 +372,12 @@ namespace View_GUI
                 item_menu_top_panel.Visible = false;
             }
 
+            // Open Close Sound
             SoundPlayer clicksound = new SoundPlayer(@"C:\Windows\Media\Windows Navigation Start.wav");
             clicksound.Play();
 
-            }
+        
+          }
 
 
 
@@ -430,6 +435,9 @@ namespace View_GUI
 
 
 
+
+
+
          // Open Paint
         private void open_paint_button_Click(object sender, EventArgs e)
         {
@@ -457,7 +465,7 @@ namespace View_GUI
 
 
 
-        // Item Menu ToolTip
+        // ToolTip - Item Menu 
         private void item_menu_button_MouseHover(object sender, EventArgs e)
         {
        
@@ -468,13 +476,27 @@ namespace View_GUI
             ItemMenuToolTip.ShowAlways = true;
 
             ItemMenuToolTip.SetToolTip(item_menu_button, "CTRL + G");
-            ToolTip tip = new ToolTip();
+       
  
         }
 
+
+
         //-----------------------------ITEM-Menu-------::START::------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+        // ToolTIP - Local Folder 
+        private void Loacal_Folder_button_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip localFolderToolTip = new ToolTip();
 
+            localFolderToolTip.AutoPopDelay = 3000;
+            localFolderToolTip.InitialDelay = 500;
+            localFolderToolTip.ReshowDelay = 1000;
+            localFolderToolTip.ShowAlways = true;
+
+            localFolderToolTip.SetToolTip(Loacal_Folder_button, "CTRL + F");
+
+        }
 
     }
 }

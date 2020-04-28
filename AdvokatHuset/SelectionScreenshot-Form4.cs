@@ -190,7 +190,7 @@ namespace View_GUI
 
 
 
-         // On Selection Screen FORM Closing close the menu with the "Save, Edit in Paint, Open folder, etc.  "The menu is made of another Form because of the transparency"
+         // On Selection Screen "FORM Closing" close the menu with the "Save, Edit in Paint, Open folder, etc.  "The menu is made of another Form because of the transparency" On Selection Screenshot Form CLose the menu is also closed
         private void SelectionScreenshot_Form4_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (menuForm == null)
@@ -223,7 +223,7 @@ namespace View_GUI
 
 
 
-        // Close Selection cut Method
+        // Close SelectionScreenshot Form - Main Method
          private void CloseForm()
          {
             SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\Windows Default.wav");
@@ -441,7 +441,7 @@ namespace View_GUI
         // Open Folder with the screenshots
         private void openFolder_button_Click(object sender, EventArgs e)
         {
-            OpenFolder();
+            OpenFolder();// Main - Method - "Open Folder"
         }
 
          

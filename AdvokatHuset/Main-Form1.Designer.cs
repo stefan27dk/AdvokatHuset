@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.Loader_panel = new System.Windows.Forms.Panel();
-            this.screenshotButton_back_panel = new System.Windows.Forms.Panel();
             this.task_bar_panel = new System.Windows.Forms.Panel();
             this.item_menu_top_panel = new System.Windows.Forms.Panel();
             this.itemMenuPanelDropDown = new System.Windows.Forms.Panel();
@@ -47,6 +46,7 @@
             this.text_writer_button = new System.Windows.Forms.Button();
             this.notes_button = new System.Windows.Forms.Button();
             this.timer_button = new System.Windows.Forms.Button();
+            this.screenshotButton_back_panel = new System.Windows.Forms.Panel();
             this.screenshot_DropDown_menustrip = new System.Windows.Forms.MenuStrip();
             this.main_screenshot_button = new System.Windows.Forms.ToolStripMenuItem();
             this.screenshotEntireScreen_button = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,8 +75,8 @@
             this.item_menu_button = new System.Windows.Forms.Button();
             this.Forward_Button = new System.Windows.Forms.Button();
             this.Loader_panel.SuspendLayout();
-            this.screenshotButton_back_panel.SuspendLayout();
             this.itemMenuPanelDropDown.SuspendLayout();
+            this.screenshotButton_back_panel.SuspendLayout();
             this.screenshot_DropDown_menustrip.SuspendLayout();
             this.Top_Menu_panel.SuspendLayout();
             this.General_Menu_Panel.SuspendLayout();
@@ -95,17 +95,6 @@
             this.Loader_panel.Name = "Loader_panel";
             this.Loader_panel.Size = new System.Drawing.Size(1180, 599);
             this.Loader_panel.TabIndex = 9;
-            // 
-            // screenshotButton_back_panel
-            // 
-            this.screenshotButton_back_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.screenshotButton_back_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.screenshotButton_back_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.screenshotButton_back_panel.Controls.Add(this.screenshot_DropDown_menustrip);
-            this.screenshotButton_back_panel.Location = new System.Drawing.Point(970, 0);
-            this.screenshotButton_back_panel.Name = "screenshotButton_back_panel";
-            this.screenshotButton_back_panel.Size = new System.Drawing.Size(45, 44);
-            this.screenshotButton_back_panel.TabIndex = 2;
             // 
             // task_bar_panel
             // 
@@ -310,6 +299,17 @@
             this.timer_button.Size = new System.Drawing.Size(40, 38);
             this.timer_button.TabIndex = 13;
             this.timer_button.UseVisualStyleBackColor = true;
+            // 
+            // screenshotButton_back_panel
+            // 
+            this.screenshotButton_back_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.screenshotButton_back_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.screenshotButton_back_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.screenshotButton_back_panel.Controls.Add(this.screenshot_DropDown_menustrip);
+            this.screenshotButton_back_panel.Location = new System.Drawing.Point(970, 0);
+            this.screenshotButton_back_panel.Name = "screenshotButton_back_panel";
+            this.screenshotButton_back_panel.Size = new System.Drawing.Size(45, 44);
+            this.screenshotButton_back_panel.TabIndex = 2;
             // 
             // screenshot_DropDown_menustrip
             // 
@@ -618,6 +618,7 @@
             this.Loacal_Folder_button.TabIndex = 9;
             this.Loacal_Folder_button.UseVisualStyleBackColor = true;
             this.Loacal_Folder_button.Click += new System.EventHandler(this.Loacal_Folder_button_Click);
+            this.Loacal_Folder_button.MouseHover += new System.EventHandler(this.Loacal_Folder_button_MouseHover);
             // 
             // button3
             // 
@@ -687,8 +688,8 @@
             this.Text = "Main_Form1";
             this.Load += new System.EventHandler(this.Main_Form1_Load);
             this.Loader_panel.ResumeLayout(false);
-            this.screenshotButton_back_panel.ResumeLayout(false);
             this.itemMenuPanelDropDown.ResumeLayout(false);
+            this.screenshotButton_back_panel.ResumeLayout(false);
             this.screenshot_DropDown_menustrip.ResumeLayout(false);
             this.screenshot_DropDown_menustrip.PerformLayout();
             this.Top_Menu_panel.ResumeLayout(false);
