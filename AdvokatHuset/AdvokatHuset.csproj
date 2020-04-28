@@ -52,11 +52,29 @@
     <Compile Include="Advokater-Form3.Designer.cs">
       <DependentUpon>Advokater-Form3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Koersel-Form10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Koersel-Form10.Designer.cs">
+      <DependentUpon>Koersel-Form10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kunder-Form9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kunder-Form9.Designer.cs">
+      <DependentUpon>Kunder-Form9.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main-Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Main-Form1.Designer.cs">
       <DependentUpon>Main-Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Medarbejder-Form6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Medarbejder-Form6.Designer.cs">
+      <DependentUpon>Medarbejder-Form6.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuFormSelectionScreenshot - Form5.cs">
       <SubType>Form</SubType>
@@ -73,17 +91,38 @@
       <DependentUpon>Sager-Form2.cs</DependentUpon>
     </Compile>
     <Compile Include="Screenshot.cs" />
+    <Compile Include="Sekretaer-Form7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sekretaer-Form7.Designer.cs">
+      <DependentUpon>Sekretaer-Form7.cs</DependentUpon>
+    </Compile>
     <Compile Include="SelectionScreenshot-Form4.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SelectionScreenshot-Form4.Designer.cs">
       <DependentUpon>SelectionScreenshot-Form4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ydelser-Form8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ydelser-Form8.Designer.cs">
+      <DependentUpon>Ydelser-Form8.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Advokater-Form3.resx">
       <DependentUpon>Advokater-Form3.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Koersel-Form10.resx">
+      <DependentUpon>Koersel-Form10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kunder-Form9.resx">
+      <DependentUpon>Kunder-Form9.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main-Form1.resx">
       <DependentUpon>Main-Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Medarbejder-Form6.resx">
+      <DependentUpon>Medarbejder-Form6.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuFormSelectionScreenshot - Form5.resx">
       <DependentUpon>MenuFormSelectionScreenshot - Form5.cs</DependentUpon>
@@ -101,8 +140,14 @@
     <EmbeddedResource Include="Sager-Form2.resx">
       <DependentUpon>Sager-Form2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sekretaer-Form7.resx">
+      <DependentUpon>Sekretaer-Form7.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SelectionScreenshot-Form4.resx">
       <DependentUpon>SelectionScreenshot-Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ydelser-Form8.resx">
+      <DependentUpon>Ydelser-Form8.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -395,6 +440,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\home-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webpage-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webpage.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

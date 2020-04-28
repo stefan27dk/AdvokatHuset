@@ -613,6 +613,26 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Webpage {
+            get {
+                object obj = ResourceManager.GetObject("Webpage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Webpage_icon {
+            get {
+                object obj = ResourceManager.GetObject("Webpage-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap win7_ico_shell32_dll_004 {
             get {
                 object obj = ResourceManager.GetObject("win7_ico_shell32_dll-004", resourceCulture);

@@ -23,8 +23,14 @@ namespace View_GUI
     {
 
         //Forms--::START::
-        public static Sager_Form2 SagerForm2 = new Sager_Form2();  //Form2
+        Sager_Form2 SagerForm2 = new Sager_Form2();  //Form2
         Advokater_Form3 AdvokaterForm3 = new Advokater_Form3();//Form3
+        Medarbejder_Form6 MedarbejderForm6 = new Medarbejder_Form6();// Form 6  '
+        Sekretaer_Form7 SekretaerForm7 = new Sekretaer_Form7();// Form 7
+        Ydelser_Form8 YdelserForm8 = new Ydelser_Form8();// Form 8
+        Kunder_Form9 KunderForm9 = new Kunder_Form9(); // Form 9
+        Koersel_Form10 KoerselForm19 = new Koersel_Form10(); // Form 10
+
         //Forms--::END::
 
         Screenshot screenshot; // Screenshot 
@@ -288,8 +294,14 @@ namespace View_GUI
         // Hide All Forms
         private void HideAllForms()
         {
-            AdvokaterForm3.Hide();
             SagerForm2.Hide();
+            AdvokaterForm3.Hide();
+            MedarbejderForm6.Hide();
+            SekretaerForm7.Hide();
+            YdelserForm8.Hide();
+            KunderForm9.Hide();
+            KoerselForm19.Hide();
+
         }
 
 
@@ -319,8 +331,6 @@ namespace View_GUI
 
 
 
- 
-
 
 
 
@@ -341,6 +351,94 @@ namespace View_GUI
         }
 
 
+ 
+
+
+
+        // Medarbejder
+        private void medarbejder_item_Click(object sender, EventArgs e)
+        {
+            //Forms for Hide "Hide all other Forms"
+            HideAllForms();
+
+            MedarbejderForm6.TopLevel = false;
+            Loader_panel.Controls.Add(MedarbejderForm6);
+            MedarbejderForm6.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            MedarbejderForm6.Dock = DockStyle.Fill;
+            MedarbejderForm6.Show();
+        }
+
+
+
+ 
+
+
+        //Sekretær
+        private void sekretærToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Forms for Hide "Hide all other Forms"
+            HideAllForms();
+
+            SekretaerForm7.TopLevel = false;
+            Loader_panel.Controls.Add(SekretaerForm7);
+            SekretaerForm7.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            SekretaerForm7.Dock = DockStyle.Fill;
+            SekretaerForm7.Show();
+        }
+
+
+
+
+
+
+        // Ydelser  
+        private void ydelserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Forms for Hide "Hide all other Forms"
+            HideAllForms();
+
+            YdelserForm8.TopLevel = false;
+            Loader_panel.Controls.Add(YdelserForm8);
+            YdelserForm8.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            YdelserForm8.Dock = DockStyle.Fill;
+            YdelserForm8.Show();
+        }
+
+
+
+
+
+        // Kunder
+        private void kunderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Forms for Hide "Hide all other Forms"
+            HideAllForms();// Dont Forget to add the Form in the Hide Method: So on Form change this will hide and other Form will apear
+
+            KunderForm9.TopLevel = false;
+            Loader_panel.Controls.Add(KunderForm9);
+            KunderForm9.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            KunderForm9.Dock = DockStyle.Fill;
+            KunderForm9.Show();
+        }
+
+
+
+
+
+        // Kørsel
+        private void kørselToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Forms for Hide "Hide all other Forms"
+            HideAllForms();
+
+            KoerselForm19.TopLevel = false;
+            Loader_panel.Controls.Add(KoerselForm19);
+            KoerselForm19.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            KoerselForm19.Dock = DockStyle.Fill;
+
+            KoerselForm19.Show();
+        }
+
         // General Menu Button Events---::END::---------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -357,7 +455,7 @@ namespace View_GUI
         //-----------------------------ITEM-Menu-------::START::------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-          private void OpenItemMenu() // The menu with tools, Claculator, timer, setting, etc.
+        private void OpenItemMenu() // The menu with tools, Claculator, timer, setting, etc.
           {
 
             if (itemMenuPanelDropDown.Visible == false)
@@ -480,9 +578,11 @@ namespace View_GUI
  
         }
 
-
-
+ 
         //-----------------------------ITEM-Menu-------::START::------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 
         // ToolTIP - Local Folder 
         private void Loacal_Folder_button_MouseHover(object sender, EventArgs e)
@@ -497,6 +597,8 @@ namespace View_GUI
             localFolderToolTip.SetToolTip(Loacal_Folder_button, "CTRL + F");
 
         }
+
+
 
     }
 }
