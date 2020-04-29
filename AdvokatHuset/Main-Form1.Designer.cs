@@ -68,12 +68,6 @@
             this.sekretærToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kunderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kørselToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bell_button = new System.Windows.Forms.Button();
-            this.Loacal_Folder_button = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.Back_Button = new System.Windows.Forms.Button();
-            this.item_menu_button = new System.Windows.Forms.Button();
-            this.Forward_Button = new System.Windows.Forms.Button();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -132,6 +126,13 @@
             this.searchToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.bell_button = new System.Windows.Forms.Button();
+            this.Loacal_Folder_button = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.Back_Button = new System.Windows.Forms.Button();
+            this.item_menu_button = new System.Windows.Forms.Button();
+            this.Forward_Button = new System.Windows.Forms.Button();
+            this.task_button1 = new System.Windows.Forms.Button();
             this.Loader_panel.SuspendLayout();
             this.itemMenuPanelDropDown.SuspendLayout();
             this.screenshotButton_back_panel.SuspendLayout();
@@ -145,6 +146,7 @@
             // 
             this.Loader_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(80)))), ((int)(((byte)(72)))));
             this.Loader_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Loader_panel.Controls.Add(this.task_button1);
             this.Loader_panel.Controls.Add(this.task_bar_panel);
             this.Loader_panel.Controls.Add(this.item_menu_top_panel);
             this.Loader_panel.Controls.Add(this.itemMenuPanelDropDown);
@@ -584,7 +586,7 @@
             this.visSagerToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.visSagerToolStripMenuItem.Image = global::View_GUI.Properties.Resources.Documents_icon__1_;
             this.visSagerToolStripMenuItem.Name = "visSagerToolStripMenuItem";
-            this.visSagerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.visSagerToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.visSagerToolStripMenuItem.Text = "Vis Sager";
             // 
             // ydelserToolStripMenuItem
@@ -668,79 +670,6 @@
             this.kørselToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.kørselToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.kørselToolStripMenuItem.Click += new System.EventHandler(this.kørselToolStripMenuItem_Click);
-            // 
-            // bell_button
-            // 
-            this.bell_button.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.bell_button.BackgroundImage = global::View_GUI.Properties.Resources.Opera_Snapshot_2020_04_26_221511_cdn0_iconfinder_com;
-            this.bell_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bell_button.Location = new System.Drawing.Point(1037, 0);
-            this.bell_button.Name = "bell_button";
-            this.bell_button.Size = new System.Drawing.Size(35, 35);
-            this.bell_button.TabIndex = 20;
-            this.bell_button.UseVisualStyleBackColor = true;
-            this.bell_button.Click += new System.EventHandler(this.bell_button_Click);
-            // 
-            // Loacal_Folder_button
-            // 
-            this.Loacal_Folder_button.BackgroundImage = global::View_GUI.Properties.Resources.win7_ico_shell32_dll_0041;
-            this.Loacal_Folder_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Loacal_Folder_button.Location = new System.Drawing.Point(251, 4);
-            this.Loacal_Folder_button.Margin = new System.Windows.Forms.Padding(0);
-            this.Loacal_Folder_button.Name = "Loacal_Folder_button";
-            this.Loacal_Folder_button.Size = new System.Drawing.Size(30, 30);
-            this.Loacal_Folder_button.TabIndex = 9;
-            this.Loacal_Folder_button.UseVisualStyleBackColor = true;
-            this.Loacal_Folder_button.Click += new System.EventHandler(this.Loacal_Folder_button_Click);
-            this.Loacal_Folder_button.MouseHover += new System.EventHandler(this.Loacal_Folder_button_MouseHover);
-            // 
-            // button3
-            // 
-            this.button3.BackgroundImage = global::View_GUI.Properties.Resources.win7_ico_shell32_dll_1121;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.Location = new System.Drawing.Point(11, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(33, 33);
-            this.button3.TabIndex = 7;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // Back_Button
-            // 
-            this.Back_Button.BackgroundImage = global::View_GUI.Properties.Resources.Background;
-            this.Back_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Back_Button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Back_Button.Location = new System.Drawing.Point(65, 5);
-            this.Back_Button.Name = "Back_Button";
-            this.Back_Button.Size = new System.Drawing.Size(30, 30);
-            this.Back_Button.TabIndex = 2;
-            this.Back_Button.UseVisualStyleBackColor = true;
-            this.Back_Button.Click += new System.EventHandler(this.Back_Button_Click);
-            // 
-            // item_menu_button
-            // 
-            this.item_menu_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.item_menu_button.BackgroundImage = global::View_GUI.Properties.Resources._23234;
-            this.item_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.item_menu_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.item_menu_button.Location = new System.Drawing.Point(1122, 7);
-            this.item_menu_button.Name = "item_menu_button";
-            this.item_menu_button.Size = new System.Drawing.Size(33, 27);
-            this.item_menu_button.TabIndex = 5;
-            this.item_menu_button.UseVisualStyleBackColor = true;
-            this.item_menu_button.Click += new System.EventHandler(this.item_menu_button_Click_1);
-            this.item_menu_button.MouseHover += new System.EventHandler(this.item_menu_button_MouseHover);
-            // 
-            // Forward_Button
-            // 
-            this.Forward_Button.BackgroundImage = global::View_GUI.Properties.Resources.Background___Copy;
-            this.Forward_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Forward_Button.Location = new System.Drawing.Point(154, 5);
-            this.Forward_Button.Name = "Forward_Button";
-            this.Forward_Button.Size = new System.Drawing.Size(30, 30);
-            this.Forward_Button.TabIndex = 4;
-            this.Forward_Button.UseVisualStyleBackColor = true;
-            this.Forward_Button.Click += new System.EventHandler(this.Forward_Button_Click);
             // 
             // fileToolStripMenuItem
             // 
@@ -1177,6 +1106,88 @@
             this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
             this.aboutToolStripMenuItem1.Text = "&About...";
             // 
+            // bell_button
+            // 
+            this.bell_button.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.bell_button.BackgroundImage = global::View_GUI.Properties.Resources.Opera_Snapshot_2020_04_26_221511_cdn0_iconfinder_com;
+            this.bell_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bell_button.Location = new System.Drawing.Point(1037, 0);
+            this.bell_button.Name = "bell_button";
+            this.bell_button.Size = new System.Drawing.Size(35, 35);
+            this.bell_button.TabIndex = 20;
+            this.bell_button.UseVisualStyleBackColor = true;
+            this.bell_button.Click += new System.EventHandler(this.bell_button_Click);
+            // 
+            // Loacal_Folder_button
+            // 
+            this.Loacal_Folder_button.BackgroundImage = global::View_GUI.Properties.Resources.win7_ico_shell32_dll_0041;
+            this.Loacal_Folder_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Loacal_Folder_button.Location = new System.Drawing.Point(251, 4);
+            this.Loacal_Folder_button.Margin = new System.Windows.Forms.Padding(0);
+            this.Loacal_Folder_button.Name = "Loacal_Folder_button";
+            this.Loacal_Folder_button.Size = new System.Drawing.Size(30, 30);
+            this.Loacal_Folder_button.TabIndex = 9;
+            this.Loacal_Folder_button.UseVisualStyleBackColor = true;
+            this.Loacal_Folder_button.Click += new System.EventHandler(this.Loacal_Folder_button_Click);
+            this.Loacal_Folder_button.MouseHover += new System.EventHandler(this.Loacal_Folder_button_MouseHover);
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::View_GUI.Properties.Resources.win7_ico_shell32_dll_1121;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.Location = new System.Drawing.Point(11, 4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(33, 33);
+            this.button3.TabIndex = 7;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // Back_Button
+            // 
+            this.Back_Button.BackgroundImage = global::View_GUI.Properties.Resources.Background;
+            this.Back_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Back_Button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Back_Button.Location = new System.Drawing.Point(65, 5);
+            this.Back_Button.Name = "Back_Button";
+            this.Back_Button.Size = new System.Drawing.Size(30, 30);
+            this.Back_Button.TabIndex = 2;
+            this.Back_Button.UseVisualStyleBackColor = true;
+            this.Back_Button.Click += new System.EventHandler(this.Back_Button_Click);
+            // 
+            // item_menu_button
+            // 
+            this.item_menu_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.item_menu_button.BackgroundImage = global::View_GUI.Properties.Resources._23234;
+            this.item_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.item_menu_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.item_menu_button.Location = new System.Drawing.Point(1122, 7);
+            this.item_menu_button.Name = "item_menu_button";
+            this.item_menu_button.Size = new System.Drawing.Size(33, 27);
+            this.item_menu_button.TabIndex = 5;
+            this.item_menu_button.UseVisualStyleBackColor = true;
+            this.item_menu_button.Click += new System.EventHandler(this.item_menu_button_Click_1);
+            this.item_menu_button.MouseHover += new System.EventHandler(this.item_menu_button_MouseHover);
+            // 
+            // Forward_Button
+            // 
+            this.Forward_Button.BackgroundImage = global::View_GUI.Properties.Resources.Background___Copy;
+            this.Forward_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Forward_Button.Location = new System.Drawing.Point(154, 5);
+            this.Forward_Button.Name = "Forward_Button";
+            this.Forward_Button.Size = new System.Drawing.Size(30, 30);
+            this.Forward_Button.TabIndex = 4;
+            this.Forward_Button.UseVisualStyleBackColor = true;
+            this.Forward_Button.Click += new System.EventHandler(this.Forward_Button_Click);
+            // 
+            // task_button1
+            // 
+            this.task_button1.Location = new System.Drawing.Point(425, 213);
+            this.task_button1.Name = "task_button1";
+            this.task_button1.Size = new System.Drawing.Size(75, 23);
+            this.task_button1.TabIndex = 3;
+            this.task_button1.Text = "Task";
+            this.task_button1.UseVisualStyleBackColor = true;
+            // 
             // Main_Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1305,5 +1316,6 @@
         private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator11;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
+        private System.Windows.Forms.Button task_button1;
     }
 }
