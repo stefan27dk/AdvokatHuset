@@ -740,6 +740,7 @@
             this.Forward_Button.Size = new System.Drawing.Size(30, 30);
             this.Forward_Button.TabIndex = 4;
             this.Forward_Button.UseVisualStyleBackColor = true;
+            this.Forward_Button.Click += new System.EventHandler(this.Forward_Button_Click);
             // 
             // fileToolStripMenuItem
             // 

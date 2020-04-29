@@ -37,6 +37,7 @@ namespace View_GUI
         Screenshot screenshot; // Screenshot 
         List<Form> formList = new List<Form>();  // Form List: Used to go back to the previews Form that was opened
         int formMinus1 = 0;
+        bool itemClicked = false;
       
 
         public Main_Form1()
@@ -480,6 +481,46 @@ namespace View_GUI
 
 
 
+
+
+
+
+
+
+        //Shortcut keys -----KEY WATCHER- ----SHORTCUT KEYS----------------::START::------------------------------------------------------------------------------------
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+
+            // Open Item Menu Shortcut
+            if (keyData == (Keys.Control | Keys.G))
+            {
+                OpenItemMenu();
+            }
+
+            // Open Folder Shortcut
+            if (keyData == (Keys.Control | Keys.F))
+            {
+                OpenLocalFolder();// FOLDER
+            }
+
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        //Shortcut keys -----KEY WATCHER- ----SHORTCUT KEYS----------------::END::------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         //-----------------------------ITEM-Menu-------::START::------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -507,33 +548,10 @@ namespace View_GUI
 
 
 
+   
 
 
-
-
-        //Shortcut keys -----KEY WATCHER---------------------SHORTCUT KEYS
-        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
-        {
-
-            // Open Item Menu Shortcut
-            if (keyData == (Keys.Control | Keys.G))
-            {
-                OpenItemMenu();
-            }
-
-            // Open Folder Shortcut
-            if (keyData == (Keys.Control | Keys.F))
-            {
-                OpenLocalFolder();// FOLDER
-            }
-
-            return base.ProcessCmdKey(ref msg, keyData);
-        }
-
-
-
-
-
+ 
 
 
 
@@ -612,6 +630,12 @@ namespace View_GUI
 
 
 
+
+
+
+
+
+
         // ToolTIP - Local Folder 
         private void Loacal_Folder_button_MouseHover(object sender, EventArgs e)
         {
@@ -634,67 +658,135 @@ namespace View_GUI
 
 
 
+
+
+
+
+
+
+
  
 
-        // Form History of Opening-------------------------::START::---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-        // Get Visible Form
-        private void General_menuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-            formMinus1 = 0;// Reset Focus View in the listForm so you start again from the last form looking down
-
- 
-            Form lastOpenedForm; // Get the Form before the current one
-                        
-            for (int i = 0; i < Loader_panel.Controls.Count; i++)
-            {
-
-                if (Loader_panel.Controls[i] is Form) // Loop Controls of the Loaderpanel - "Contols are the tings that are in the Loader panel" Ex: Forms, buttons, textboxes. etc. if they are placed in the panel, the panel have their controls like LoaderPanel.Controls.Add(Form1);
-                {
-                    lastOpenedForm = (Form)Loader_panel.Controls[i];
-
-                    if (lastOpenedForm.Visible)// If the Form is visible than it is the one we are looking at " the others are hidden"
-                    {
-                        //MessageBox.Show(lastOpenedForm.Name, "1", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        formList.Add(lastOpenedForm); // Add to List
-                    }
-
-
-                }
-            }
-        }
-
-
-          
+        // Form History of Opening-------ADDING TO LIST------------------::START::---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
-
-         // Back - Button - History
+        // Back - Button - History
         private void Back_Button_Click(object sender, EventArgs e)
         
         {
-            HideAllForms(); // Hide ALL
+
+            // Add the last Form if the Item menu was last Clicked "not the back and forward button"
+            if (itemClicked == true)
+            {
+                itemClicked = false;
+                AddFormToList(); // Add the current Form to List   "Doing it like that because the Item Click is triggered before Loader_panel shows the Form and the last form is not added"
+                formMinus1 = formMinus1 + 1;// Because we added Form to the list
+            }
+
+
+
+
 
             if (formMinus1 < formList.Count - 1)///////////////////// formMinus1 is the the value of going back " It should be less than the list Size"
             {
                 formMinus1 = formMinus1 + 1; // If it is less than the list siz than + 1
             }
 
-            if (formList.Count > formMinus1)
+
+
+
+
+            if (formMinus1 > 0 && formMinus1 < formList.Count)// minimum = 0 and maximum = the last item in the list "formList.Count -1"
             {
-                 
-            Form lastForm = formList[formList.Count - formMinus1]; // Value Back "The value is stored at the top and Reseted when Item in the Menu is Clicked
-            lastForm.Show();
+                HideAllForms(); // Hide ALL    
+                Form lastForm = formList[(formList.Count) - formMinus1]; // Value Back "The value is stored at the top and Reseted when Item in the Menu is Clicked
+               lastForm.Show();
  
             }
+
+
+
 
         }
 
 
-        // Form History of Opening-------------------------::END::---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+        // Forward Button --- History
+        private void Forward_Button_Click(object sender, EventArgs e)
+        {
+ 
+            if (formMinus1 < formList.Count && formMinus1 > 1)
+            {
+                formMinus1 = formMinus1 - 1;// Going up "the formMinus1 is positive and we a are minusing it so when it goes to the list it will show the later form than before
+                HideAllForms(); // Hide ALL
+
+                Form lastForm = formList[formList.Count - formMinus1]; // Value Back "The value is stored at the top and Reseted when Item in the Menu is Clicked
+                lastForm.Show();
+            }
+   
+        }
+
+
+
+
+
+
+
+
+        // Item Clicked --- Add to list
+        private void General_menuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            itemClicked = true;// Now When we Press the back button the Current form in the Loader_panel will be added to the list "The Item Clicked is triggered before the Loader_panel show a form that is why we are nottaking the last form when we press the back button
+            AddFormToList();// Add the Form to List
+        }
+
+
+
+
+
+
+
+         // MAIN - METHOD - Add Form From the Loader_panel to the formList
+        private void AddFormToList()
+        {
+            formMinus1 = 0;// Reset Focus View in the listForm so you start again from the last form looking down
+
+            Form lastOpenedForm; // Get the Form before the current one
+
+
+
+            for (int i = 0; i < Loader_panel.Controls.Count; i++)
+            {
+
+
+                if (Loader_panel.Controls[i] is Form) // Loop Controls of the Loaderpanel - "Contols are the tings that are in the Loader panel" Ex: Forms, buttons, textboxes. etc. if they are placed in the panel, the panel have their controls like LoaderPanel.Controls.Add(Form1);
+                {
+                    lastOpenedForm = (Form)Loader_panel.Controls[i];
+
+              
+
+                    if (lastOpenedForm.Visible && lastOpenedForm != formList[formList.Count-1])// If the Form is visible than it is the one we are looking at " the others are hidden" 
+                    {
+                        //MessageBox.Show(lastOpenedForm.Name, "1", MessageBoxButtons.OK, MessageBoxIcon.Information);  // Used for testing
+                        formList.Add(lastOpenedForm); // Add to List
+                    }
+
+                }
+
+
+            }
+
+ 
+
+        }
+
+        // Form History of Opening--------------ADDING TO LIST------------::END::---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     }
 }
