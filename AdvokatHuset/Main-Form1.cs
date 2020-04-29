@@ -29,23 +29,22 @@ namespace View_GUI
         Sekretaer_Form7 SekretaerForm7 = new Sekretaer_Form7();// Form 7
         Ydelser_Form8 YdelserForm8 = new Ydelser_Form8();// Form 8
         Kunder_Form9 KunderForm9 = new Kunder_Form9(); // Form 9
-        Koersel_Form10 KoerselForm19 = new Koersel_Form10(); // Form 10
+        Koersel_Form10 KoerselForm10 = new Koersel_Form10(); // Form 10
+        Home_Form11 HomeForm11 = new Home_Form11();
 
         //Forms--::END::
 
         Screenshot screenshot; // Screenshot 
- 
-
-
-
-                                      
+        List<Form> formList = new List<Form>();  // Form List: Used to go back to the previews Form that was opened
+        int formMinus1 = 0;
+      
 
         public Main_Form1()
         {
-
+         
             InitializeComponent();
             
-         
+          
         }
 
           
@@ -136,6 +135,10 @@ namespace View_GUI
         //Form Load
         private void Main_Form1_Load(object sender, EventArgs e)
         {
+            Home();// Start Form in the Loader_Panel
+            formList.Add(HomeForm11);
+
+
             screenshotButton_back_panel.BringToFront();
             itemMenuPanelDropDown.BringToFront();//ItemMenuPanel
             screenshot_DropDown_menustrip.Renderer = new BrowserMenuRenderer(); // Custumized THEME For the DROP DOWN MENU FOR THE SCREENSHOTS
@@ -278,6 +281,7 @@ namespace View_GUI
 
             SoundPlayer simpleSound = new SoundPlayer(@"C:\Windows\Media\ding.wav");
             simpleSound.Play();
+ 
         }
 
         //-------Top--BAR----<--,---->, Home, Etc.-------::END::-------------------------------------------------------------------------------------------------------------------------------------
@@ -300,7 +304,8 @@ namespace View_GUI
             SekretaerForm7.Hide();
             YdelserForm8.Hide();
             KunderForm9.Hide();
-            KoerselForm19.Hide();
+            KoerselForm10.Hide();
+            HomeForm11.Hide();
 
         }
 
@@ -431,18 +436,41 @@ namespace View_GUI
             //Forms for Hide "Hide all other Forms"
             HideAllForms();
 
-            KoerselForm19.TopLevel = false;
-            Loader_panel.Controls.Add(KoerselForm19);
-            KoerselForm19.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            KoerselForm19.Dock = DockStyle.Fill;
+            KoerselForm10.TopLevel = false;
+            Loader_panel.Controls.Add(KoerselForm10);
+            KoerselForm10.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            KoerselForm10.Dock = DockStyle.Fill;
 
-            KoerselForm19.Show();
+            KoerselForm10.Show();
         }
 
         // General Menu Button Events---::END::---------------------------------------------------------------------------------------------------------------------------------------------
 
+        
+            
+            
+        //Top Menu Bar Left------::START::--------------------------------------------------------------------------------------------------------------------------------------------------
+        // Home
+        private void Home_Button_Click(object sender, EventArgs e)
+        {
+            Home(); // Main Method forHome
+        }
 
 
+        private void Home()// Main Method Home
+        {
+            //Forms for Hide "Hide all other Forms"
+            HideAllForms();
+
+            HomeForm11.TopLevel = false;
+            Loader_panel.Controls.Add(HomeForm11);
+            HomeForm11.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            HomeForm11.Dock = DockStyle.Fill;
+
+            HomeForm11.Show();
+        }
+
+        //Top Menu Bar Left------::END::---------HomeForm11-----------------------------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -483,7 +511,7 @@ namespace View_GUI
 
 
 
-        //Shortcut keys for Opening Item Menu
+        //Shortcut keys -----KEY WATCHER---------------------SHORTCUT KEYS
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
 
@@ -599,6 +627,74 @@ namespace View_GUI
         }
 
 
+
+
+
+
+
+
+
+ 
+
+        // Form History of Opening-------------------------::START::---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+        // Get Visible Form
+        private void General_menuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+            formMinus1 = 0;// Reset Focus View in the listForm so you start again from the last form looking down
+
+ 
+            Form lastOpenedForm; // Get the Form before the current one
+                        
+            for (int i = 0; i < Loader_panel.Controls.Count; i++)
+            {
+
+                if (Loader_panel.Controls[i] is Form) // Loop Controls of the Loaderpanel - "Contols are the tings that are in the Loader panel" Ex: Forms, buttons, textboxes. etc. if they are placed in the panel, the panel have their controls like LoaderPanel.Controls.Add(Form1);
+                {
+                    lastOpenedForm = (Form)Loader_panel.Controls[i];
+
+                    if (lastOpenedForm.Visible)// If the Form is visible than it is the one we are looking at " the others are hidden"
+                    {
+                        //MessageBox.Show(lastOpenedForm.Name, "1", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        formList.Add(lastOpenedForm); // Add to List
+                    }
+
+
+                }
+            }
+        }
+
+
+          
+
+
+
+
+         // Back - Button - History
+        private void Back_Button_Click(object sender, EventArgs e)
+        
+        {
+            HideAllForms(); // Hide ALL
+
+            if (formMinus1 < formList.Count - 1)///////////////////// formMinus1 is the the value of going back " It should be less than the list Size"
+            {
+                formMinus1 = formMinus1 + 1; // If it is less than the list siz than + 1
+            }
+
+            if (formList.Count > formMinus1)
+            {
+                 
+            Form lastForm = formList[formList.Count - formMinus1]; // Value Back "The value is stored at the top and Reseted when Item in the Menu is Clicked
+            lastForm.Show();
+ 
+            }
+
+        }
+
+
+        // Form History of Opening-------------------------::END::---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     }
 }
