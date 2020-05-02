@@ -17,6 +17,8 @@ namespace View_GUI
         public Pen Border;
         public Color MyPanelBackgroundColor;
 
+        public object Tag1;
+        public object Tag2;
 
 
         public MyPanel()
