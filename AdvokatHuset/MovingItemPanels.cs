@@ -18,12 +18,19 @@ namespace View_GUI
         public Panel TaskbarPanel { get; set; }
 
 
+
+
+        /////CLEAN
         // Item Panel - Settings 
         //public int ItemPanelSize { get; set; }
         //public Color ItemPanelBackground { get; set; }// Background
         //public Panel ItemPanelAddControls { get; set; } // Adding content to the panel
         //public int ItemPanelLocationX {get; set;}
         //public int ItemPanelLocationY {get; set;}
+        /////CLEAN
+
+
+
 
         // Item Panel - Relations
         private Control activeControl;
@@ -36,6 +43,8 @@ namespace View_GUI
         // Mini Panel
         public MyPanel miniPanel {get; set;}// Mini task Panel
         private Control MiniActiveControl;
+
+
 
 
         // Top menu
@@ -54,13 +63,25 @@ namespace View_GUI
 
 
 
-        //---------MiniPanels------------------::START::-----------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+        //---------MiniPanel------------------::START::-----------------------------------------------------------------------------------------------------------------
 
         // The Mini Panel
         public void MiniPanelTask()
         {
-              
-            // Panel Demensions
+
+            // MiniPanel Demensions
             miniPanel = new MyPanel();//Added task panel
             //miniPanel.MaximumSize = new Size(40, 10);
             miniPanel.Size = new Size(100, 30);
@@ -68,41 +89,34 @@ namespace View_GUI
             miniPanel.BorderStyle = BorderStyle.FixedSingle;
             miniPanel.Tag = this.miniPanel;
             miniPanel.Tag1 = this.ItemPanel;
-
-
             //miniPanel.Margin = new Padding(5, 5, 5, 5);
             //miniPanel.Padding = new Padding(2);
 
- 
-            
 
-            // Event Handlers
+
+
+            //MiniPanel Event Handlers
             miniPanel.MouseDown += new MouseEventHandler(miniPanel_MouseDown);///Added panel Declaring MouseDown
             miniPanel.MouseUp += new MouseEventHandler(miniPanel_MouseUp);///Added panel Declaring MouseUp
-
             //miniPanel.Location = new System.Drawing.Point(LastMini.Location.X + 110, LastMini.Location.Y);
 
 
             // Added Position
             if(TaskbarPanel.Controls.Count != 0)
             {
-               miniPanel.Location  = new System.Drawing.Point(TaskbarPanel.Controls[TaskbarPanel.Controls.Count -1].Location.X + 110, TaskbarPanel.Controls[TaskbarPanel.Controls.Count -1].Location.Y);// Add 110px to this mini panel so its not over the previeuos
+               miniPanel.Location  = new System.Drawing.Point(TaskbarPanel.Controls[TaskbarPanel.Controls.Count -1].Location.X + 110, TaskbarPanel.Controls[TaskbarPanel.Controls.Count -1].Location.Y);// Add 110px to this mini panel so its not over the previous
             }
             else
             {
-                miniPanel.Location = new System.Drawing.Point(10, 10);
+                miniPanel.Location = new System.Drawing.Point(10, 10); // First Panel add it 10px X axis and 10px Y axis
             }
 
             // Add the Mini Panel to the Loader Panel
             TaskbarPanel.Controls.Add(miniPanel);// Add it to the Taskbarpanel
-            
-
-        
+   
         }
 
     
-
-
 
 
 
@@ -117,32 +131,33 @@ namespace View_GUI
         private void miniPanel_MouseDown(object sender, MouseEventArgs e)
         {
 
-            MiniActiveControl = sender as Control;
-            Cursor.Current = Cursors.Hand;
+            MiniActiveControl = sender as Control; // Get the clicked panel
+            Cursor.Current = Cursors.Hand; 
             ItemPanel.BringToFront();// Show on Top of all
+
+
 
             // Show -  Hide Item Panel
             if (ItemPanel.Visible == true)
             {
                 ItemPanel.Visible = false;
-
-
-
-                MiniPanelLastClickedPanelBorder();//--------------------------------------------------------------TEST
+                MiniPanelLastClickedPanelBorder();// ORANGE -  Make the mini Panel border Orange  - Minipanel related to the Hided ItemPanel
 
             }
 
             else
             {
                 ItemPanel.Visible = true;
-                ChangeBorderColorOfAllOtherItemPanels();
+                ChangeBorderColorOfAllOtherItemPanels();// Item Panel Inactive panels border becomes blue and the active Green
 
                 // Make the Active miniPanels border green
                 MiniPanelBorderInActive();
                 MiniPanelBorderActive();
             }
 
+            OpenedPanelsMiniPanelBorder();
 
+            // CLEAN
             //MiniPanelBorderOnActive();////////////////////////////////////TEST
             //miniPanel.Border = Pens.Lime;    ////////////////////////////TEST
             //miniPanel.Refresh(); /////////TEST
@@ -163,8 +178,8 @@ namespace View_GUI
 
 
 
-        // Mini Item Panel
-        private void MiniPanelBorderInActive()   ////////////////////////////////TEST
+        // Mini Item Panel Border Inactive
+        private void MiniPanelBorderInActive()  
         {
             // Inactive mini panels make them Red
             for (int i = 0; i < TaskbarPanel.Controls.Count; i++)
@@ -182,11 +197,12 @@ namespace View_GUI
 
 
             }
-
+            //CLEAN
             // Active mini panel make it green
 
             //miniPanel.Border = Pens.Lime;    ////////////////////////////TEST
             //miniPanel.Refresh();
+            //CLEAN
 
         }
 
@@ -241,40 +257,48 @@ namespace View_GUI
         }
 
 
-        //-------------------------------------------------------TEST
-        //// All opened windowses minipanel turns blue border
-        //private void OpenedPanelsMiniPanelBorder()
-        //{
-
-        //    // For all opened panels Minipanels becomes blue
-        //    for (int i = 0; i < TaskbarPanel.Controls.Count; i++)
-        //    {
-        //        if (TaskbarPanel.Controls[i] != miniPanel)
-        //        {
-        //            MyPanel a = (MyPanel)TaskbarPanel.Controls[i]; // Convert the object from Control to Type MyPanel and use the "tag" to assign it "The tag is a reference to a object that the current object holds" in this case it refers to itself, the tag is made when the object was made
-
-        //            // Reset all other orange colors
-        //            if (a.Border.Color == Color.Orange)
-        //            {
-
-        //                a.Border = Pens.Red;
-        //                a.Refresh();// Refresh it so the border apears
-        //                LoaderPanel.Controls[i].Tag = a;
 
 
-        //            }
 
 
-        //        }
+     
+        // FOR All opened windowses Minipanels turns blue border
+        private void OpenedPanelsMiniPanelBorder()
+        {
 
 
-        //    }
+            for(int i = 0; i < LoaderPanel.Controls.Count; i++)
+            {
+
+                if(LoaderPanel.Controls[i] is MyPanel && LoaderPanel.Controls[i].Visible == true && LoaderPanel.Controls[i] != ItemPanel)
+                {
+                    MyPanel currentPanel = (MyPanel)LoaderPanel.Controls[i]; // Get The ItemPanel as MyPanel type
+
+                    MyPanel CurrentMiniPanel = (MyPanel)currentPanel.Tag1; // Get the miniPanel that is related to this ItemPanel
+
+                    CurrentMiniPanel.Border = new Pen(Color.FromArgb(66, 188, 245));
+                    CurrentMiniPanel.Refresh();
+
+                }
 
 
-        //}
+            }
+             
+        }
 
 
         // MiniPanels ---EVENTS-------------------::END::--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -308,6 +332,10 @@ namespace View_GUI
             ItemPanel.Controls.Add(topmenu); // Add the top menu to the Item panel
 
         }
+
+
+
+
 
 
 
@@ -381,6 +409,8 @@ namespace View_GUI
 
 
 
+
+
         //---Minimize-Button------::START::-----------------------------------------------------------------------------------------------------
 
         // Minimize Button      "Topmenu of ItemPanel" 
@@ -404,8 +434,9 @@ namespace View_GUI
 
          private void MinimizeButton_Click(object sender, EventArgs eventArgs)
          {
-            MiniPanelLastClickedPanelBorder(); ////-----------------------------TEST
             ItemPanel.Visible = false;
+            MiniPanelLastClickedPanelBorder(); ////-----------------------------TEST
+            OpenedPanelsMiniPanelBorder();
          }
 
         //---Minimize-Button------::END::-----------------------------------------------------------------------------------------------------
@@ -422,44 +453,42 @@ namespace View_GUI
          private void ChangeBorderColorOfAllOtherItemPanels()
          {
               
-            for(int i = 0; i < LoaderPanel.Controls.Count; i++)
+            for(int i = 0; i < LoaderPanel.Controls.Count; i++) // Loop all Loader Panel Controls
             {
-                if (LoaderPanel.Controls[i] is MyPanel && LoaderPanel.Controls[i] != ItemPanel)
+                if (LoaderPanel.Controls[i] is MyPanel && LoaderPanel.Controls[i] != ItemPanel) // If it is of type myPanel and if it is not the Current Panel
                 {
-                    MyPanel a = (MyPanel)LoaderPanel.Controls[i];
+                    MyPanel a = (MyPanel)LoaderPanel.Controls[i];// Convert it "Cast"
 
-                    a.Border = Pens.Red;
+                    a.Border = new Pen(Color.FromArgb(66, 188, 245)); // Give it new Border color
+                    a.Refresh(); // Refresh the border Color so it apears in the form
 
-                    a.Refresh();
-                    LoaderPanel.Controls[i].Tag = a;
-                   
+                    LoaderPanel.Controls[i].Tag = a; // Assign it to the Current items Tag " The tag is the Item Itselsf, the tag got assignet with the current object at the time the object was created.This is used "the Tag"  because " LoaderPanel.Controls[i]" is Read only
+
                 }
 
                
             }
 
+         
+            //ItemPanel Active make it green
+            ItemPanel.Border = Pens.Lime;
+            ItemPanel.Refresh();
+
+
+            // CLEAN
             ////Make Inactive mini panels red
             //MiniPanelBorderInActive();
 
             //// Make the Active mini panel Green
             //MiniPanelBorderActive();
-
-            //ItemPanel Active make it green
-            ItemPanel.Border = Pens.Lime;
-            ItemPanel.Refresh();
-
-         }
-    
+            // CLEAN
 
 
-       
-         //// Change Border Color of Active ItemPanel
-         //private void SelectedItemPanelBorder()
-         //{
-         //   ItemPanel.Border = Pens.Lime;
-         //   ItemPanel.Refresh();
-         //}
+        }
 
+
+
+   
 
 
 
@@ -486,7 +515,7 @@ namespace View_GUI
             ItemPanel.MouseDown += new MouseEventHandler(ItemPanel_MouseDown);///Added panel Declaring MouseDown
             ItemPanel.MouseMove += new MouseEventHandler(ItemPanel_MouseMove);///Added panel Declaring MouseMove
             ItemPanel.MouseUp += new MouseEventHandler(ItemPanel_MouseUp);///Added panel Declaring MouseUp
-            ItemPanel.Paint += new PaintEventHandler(ItemPanel_Paint);// On loading the ItemPanel "On Apearing in the Form"
+            //ItemPanel.Paint += new PaintEventHandler(ItemPanel_Paint);// On loading the ItemPanel "On Apearing in the Form"
             ItemPanel.MouseClick += new MouseEventHandler(ItemPanel_MouseClick);
 
 
@@ -516,7 +545,7 @@ namespace View_GUI
 
 
 
-        // Mouse Down - "On pressing down the the mouse button"
+        // ItemPanel - Mouse Down - "On pressing down the the mouse button"
         private void ItemPanel_MouseDown(object sender, MouseEventArgs e)
         {
 
@@ -530,11 +559,15 @@ namespace View_GUI
             ChangeBorderColorOfAllOtherItemPanels();
 
             //Make Inactive mini panels red
-            MiniPanelBorderInActive();   //---------------------------------------------------------------------TEST
+            MiniPanelBorderInActive();   
 
             // Make the Active mini panel Green
-            MiniPanelBorderActive();   //----------------------------------------------------------------------TEST
+            MiniPanelBorderActive();   
 
+            // For all Opened Panels Except the current one the miniPanels related to them will get blue
+            OpenedPanelsMiniPanelBorder();
+
+            //CLEAN
             //SelectedItemPanelBorder();
 
 
@@ -550,7 +583,7 @@ namespace View_GUI
 
 
 
-        // Mouse Move
+        // ItemPanel Mouse Move
         private void ItemPanel_MouseMove(object sender, MouseEventArgs e)
         {
           
@@ -598,7 +631,7 @@ namespace View_GUI
 
 
 
-
+        // ItemPanel Mouse UP
         private void ItemPanel_MouseUp(object sender, MouseEventArgs e)
         {
             if(activeControl  != null)
@@ -614,29 +647,29 @@ namespace View_GUI
 
 
 
-        // ItemPanel BORDER
-        private void ItemPanel_Paint(object sender, PaintEventArgs e)
-        {
-            ControlPaint.DrawBorder(e.Graphics, this.ItemPanel.ClientRectangle, Color.DarkBlue, ButtonBorderStyle.Solid);
-        }
+        //// ItemPanel BORDER
+        //private void ItemPanel_Paint(object sender, PaintEventArgs e)
+        //{
+        //    ControlPaint.DrawBorder(e.Graphics, this.ItemPanel.ClientRectangle, Color.DarkBlue, ButtonBorderStyle.Solid);
+        //}
 
 
 
 
 
-
+        // ItemPanel Location Changed
         private void ItemPanel_LocationChanged(object sender, EventArgs e)
         {
 
         }
 
-
+        // ItemPanel Key Down
         private void ItemPanel_KeyDown(object sender, KeyEventArgs e)
         {
 
         }
 
-
+        // ItemPanel Mouse Click
         private void ItemPanel_MouseClick(object sender, MouseEventArgs e)
         {
 
