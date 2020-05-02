@@ -92,6 +92,8 @@
     <Compile Include="MenuFormSelectionScreenshot - Form5.Designer.cs">
       <DependentUpon>MenuFormSelectionScreenshot - Form5.cs</DependentUpon>
     </Compile>
+    <Compile Include="MovingItemPanels.cs" />
+    <Compile Include="MyPanel.cs" />
     <Compile Include="Omkostninger.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
@@ -464,6 +466,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Webpage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit-Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

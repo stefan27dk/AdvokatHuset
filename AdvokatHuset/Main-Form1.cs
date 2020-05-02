@@ -13,6 +13,7 @@ using System.Media;
 using Domain;
 using System.Threading;
 using System.Timers;
+using System.Reflection;
 
 namespace View_GUI
 {
@@ -42,7 +43,7 @@ namespace View_GUI
 
         public Main_Form1()
         {
-         
+            
             InitializeComponent();
             
           
@@ -132,14 +133,19 @@ namespace View_GUI
 
 
 
-
         //Form Load
         private void Main_Form1_Load(object sender, EventArgs e)
         {
+
+           
+
             Home();// Start Form in the Loader_Panel
             formList.Add(HomeForm11);
 
+           
 
+
+            MovingItempanels();// Moving Panels
             screenshotButton_back_panel.BringToFront();
             itemMenuPanelDropDown.BringToFront();//ItemMenuPanel
             screenshot_DropDown_menustrip.Renderer = new BrowserMenuRenderer(); // Custumized THEME For the DROP DOWN MENU FOR THE SCREENSHOTS
@@ -467,7 +473,6 @@ namespace View_GUI
             Loader_panel.Controls.Add(HomeForm11);
             HomeForm11.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             HomeForm11.Dock = DockStyle.Fill;
-
             HomeForm11.Show();
         }
 
@@ -787,6 +792,71 @@ namespace View_GUI
         }
 
         // Form History of Opening--------------ADDING TO LIST------------::END::---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+        // MovingItemPanels----------------------------::START::---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+         private void MovingItempanels()
+        {
+            //Panel a = new Panel();
+            //a.BackColor = Color.Red;
+            //a.Height = 30;
+            //a.Width = 40;
+        
+        }
+
+
+     
+        // Add Timer
+        private void timer_button_Click(object sender, EventArgs e)
+        {
+
+          
+            MovingItemPanels MyMovingTimer = new MovingItemPanels();// using Moving Panels Class
+
+            //MovingPanels.ItemPanelAddControls = a;
+            MyMovingTimer.LoaderPanel = Loader_panel;
+            MyMovingTimer.TaskbarPanel = task_bar_panel;
+
+
+
+            MyMovingTimer.ItemPanel.Location = new System.Drawing.Point(30, 100);//Added panel Location
+                                                                                //MovingPanels.ItemPanel.MaximumSize = new Size(300, 100);
+            MyMovingTimer.ItemPanel.Size = new Size(300, 150);
+            MyMovingTimer.ItemPanel.MyPanelBackgroundColor = Color.FromArgb(94, 54, 74);
+
+
+            MyMovingTimer.ItemPanel.BorderStyle = BorderStyle.FixedSingle;
+            //TaskPanel.Padding = new Padding(200);
+            //ItemPanel.Tag = TaskbarPanel.Controls.Count + 1;
+
+
+
+            MyMovingTimer.MiniPanelTask();
+            MyMovingTimer.AddItemPanel();
+            MyMovingTimer.ItemPanel.BringToFront();// Show on top of everything in the Loader Panel
+
+
+        }
+
+
+
+
+
+        // MovingItemPanels----------------------------::END::---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 
     }
 }

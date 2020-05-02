@@ -333,6 +333,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Exit_Red {
+            get {
+                object obj = ResourceManager.GetObject("Exit-Red", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap glossy_3d_blue_orbs2_075_icon {
             get {
                 object obj = ResourceManager.GetObject("glossy-3d-blue-orbs2-075-icon", resourceCulture);
@@ -436,6 +446,16 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap microphone_icon {
             get {
                 object obj = ResourceManager.GetObject("microphone-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minimize {
+            get {
+                object obj = ResourceManager.GetObject("minimize", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
