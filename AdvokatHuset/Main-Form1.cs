@@ -825,25 +825,35 @@ namespace View_GUI
           
             MovingItemPanels MyMovingTimer = new MovingItemPanels();// using Moving Panels Class
 
-            //MovingPanels.ItemPanelAddControls = a;
+            // Holder Panels
             MyMovingTimer.LoaderPanel = Loader_panel;
             MyMovingTimer.TaskbarPanel = task_bar_panel;
 
 
-
+            // ITEM PANEL
             MyMovingTimer.ItemPanel.Location = new System.Drawing.Point(30, 100);//Added panel Location
-                                                                                //MovingPanels.ItemPanel.MaximumSize = new Size(300, 100);
+            //MovingPanels.ItemPanel.MaximumSize = new Size(300, 100);
             MyMovingTimer.ItemPanel.Size = new Size(300, 150);
             MyMovingTimer.ItemPanel.MyPanelBackgroundColor = Color.FromArgb(94, 54, 74);
-
-
             MyMovingTimer.ItemPanel.BorderStyle = BorderStyle.FixedSingle;
             //TaskPanel.Padding = new Padding(200);
             //ItemPanel.Tag = TaskbarPanel.Controls.Count + 1;
 
 
-
+            // MiniPanel
             MyMovingTimer.MiniPanelTask();
+
+            //LABEL
+            //IMAGE
+            MyMovingTimer.minipanelLabel.Image = new Bitmap(Properties.Resources._42608_stopwatch_icon, new Size(20, 20));
+            MyMovingTimer.minipanelLabel.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            //TEXT
+            MyMovingTimer.minipanelLabel.Text = "Timer";
+            MyMovingTimer.minipanelLabel.TextAlign = ContentAlignment.BottomRight;
+            MyMovingTimer.minipanelLabel.Font = new System.Drawing.Font(FontFamily.GenericSansSerif, 9, System.Drawing.FontStyle.Bold); // FONT    //, System.Drawing.GraphicsUnit.Point
+            MyMovingTimer.minipanelLabel.ForeColor = Color.FromArgb(245, 200, 66);
+
+            // Add ITEM PANEL
             MyMovingTimer.AddItemPanel();
             MyMovingTimer.ItemPanel.BringToFront();// Show on top of everything in the Loader Panel
 

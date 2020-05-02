@@ -40,10 +40,10 @@ namespace View_GUI
 
 
 
-        // Mini Panel
+        // Mini Panel - Relations
         public MyPanel miniPanel {get; set;}// Mini task Panel
         private Control MiniActiveControl;
-
+        public Label minipanelLabel;
 
 
 
@@ -55,23 +55,14 @@ namespace View_GUI
 
         public MovingItemPanels() // Constructor
         {
-          
+            
+
         }
 
   
 
 
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
 
@@ -111,6 +102,10 @@ namespace View_GUI
                 miniPanel.Location = new System.Drawing.Point(10, 10); // First Panel add it 10px X axis and 10px Y axis
             }
 
+            MiniPanelINFO(); // Add the content of the MiniPanel
+
+
+
             // Add the Mini Panel to the Loader Panel
             TaskbarPanel.Controls.Add(miniPanel);// Add it to the Taskbarpanel
    
@@ -119,6 +114,20 @@ namespace View_GUI
     
 
 
+
+
+
+          // MiniPanel INFO
+          private void MiniPanelINFO()
+          {
+            minipanelLabel = new Label();
+            minipanelLabel.Width = 80;
+            minipanelLabel.Height = 20;
+            minipanelLabel.Location = new Point(10,2);
+            minipanelLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(miniPanel_MouseDown);
+            miniPanel.Controls.Add(minipanelLabel);
+         
+          }
 
 
 
