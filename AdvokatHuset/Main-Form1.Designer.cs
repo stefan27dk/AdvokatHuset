@@ -273,6 +273,7 @@
             this.developer_button.Size = new System.Drawing.Size(41, 39);
             this.developer_button.TabIndex = 17;
             this.developer_button.UseVisualStyleBackColor = true;
+            this.developer_button.Click += new System.EventHandler(this.developer_button_Click);
             // 
             // open_paint_button
             // 

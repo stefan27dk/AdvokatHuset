@@ -31,7 +31,8 @@ namespace View_GUI
         Ydelser_Form8 YdelserForm8 = new Ydelser_Form8();// Form 8
         Kunder_Form9 KunderForm9 = new Kunder_Form9(); // Form 9
         Koersel_Form10 KoerselForm10 = new Koersel_Form10(); // Form 10
-        Home_Form11 HomeForm11 = new Home_Form11();
+        Home_Form11 HomeForm11 = new Home_Form11();// Start
+        DeveloperForm_Form12 DeveloperForm12 = new DeveloperForm_Form12();//DEV
 
         //Forms--::END::
 
@@ -857,6 +858,22 @@ namespace View_GUI
             MyMovingTimer.AddItemPanel();
             MyMovingTimer.ItemPanel.BringToFront();// Show on top of everything in the Loader Panel
 
+
+        }
+
+
+
+        // Developer Button " tem Menu"
+        private void developer_button_Click(object sender, EventArgs e)
+        {
+            //Forms for Hide "Hide all other Forms"
+            HideAllForms();
+
+            DeveloperForm12.TopLevel = false;
+            Loader_panel.Controls.Add(DeveloperForm12);
+            DeveloperForm12.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            DeveloperForm12.Dock = DockStyle.Fill;
+            DeveloperForm12.Show();
 
         }
 
