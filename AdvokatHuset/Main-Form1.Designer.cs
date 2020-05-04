@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Form1));
             this.Loader_panel = new System.Windows.Forms.Panel();
             this.task_button1 = new System.Windows.Forms.Button();
@@ -133,6 +134,9 @@
             this.Back_Button = new System.Windows.Forms.Button();
             this.item_menu_button = new System.Windows.Forms.Button();
             this.Forward_Button = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.Loader_panel.SuspendLayout();
             this.itemMenuPanelDropDown.SuspendLayout();
             this.screenshotButton_back_panel.SuspendLayout();
@@ -140,6 +144,7 @@
             this.Top_Menu_panel.SuspendLayout();
             this.General_Menu_Panel.SuspendLayout();
             this.General_menuStrip.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Loader_panel
@@ -157,7 +162,7 @@
             // 
             this.task_button1.BackgroundImage = global::View_GUI.Properties.Resources._42608_stopwatch_icon;
             this.task_button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.task_button1.Location = new System.Drawing.Point(425, 213);
+            this.task_button1.Location = new System.Drawing.Point(487, 323);
             this.task_button1.Name = "task_button1";
             this.task_button1.Size = new System.Drawing.Size(75, 23);
             this.task_button1.TabIndex = 3;
@@ -166,7 +171,7 @@
             // 
             // task_bar_panel
             // 
-            this.task_bar_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.task_bar_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.task_bar_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.task_bar_panel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.task_bar_panel.Location = new System.Drawing.Point(0, 560);
@@ -188,7 +193,7 @@
             // itemMenuPanelDropDown
             // 
             this.itemMenuPanelDropDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.itemMenuPanelDropDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.itemMenuPanelDropDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.itemMenuPanelDropDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.itemMenuPanelDropDown.Controls.Add(this.statistics_button);
             this.itemMenuPanelDropDown.Controls.Add(this.world_clock_button);
@@ -1188,6 +1193,26 @@
             this.Forward_Button.UseVisualStyleBackColor = true;
             this.Forward_Button.Click += new System.EventHandler(this.Forward_Button_Click);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem3,
+            this.toolStripMenuItem5});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(81, 48);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(80, 22);
+            this.toolStripMenuItem3.Text = "1";
+            // 
+            // toolStripMenuItem5
+            // 
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(80, 22);
+            this.toolStripMenuItem5.Text = "2";
+            // 
             // Main_Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1211,6 +1236,7 @@
             this.General_Menu_Panel.ResumeLayout(false);
             this.General_menuStrip.ResumeLayout(false);
             this.General_menuStrip.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1320,5 +1346,8 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator11;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
         private System.Windows.Forms.Button task_button1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
     }
 }
