@@ -137,7 +137,10 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.item_menu_back_panekBlack_panel = new System.Windows.Forms.Panel();
+            this.item_menu_back_panel_top_panel = new System.Windows.Forms.Panel();
             this.Loader_panel.SuspendLayout();
+            this.item_menu_top_panel.SuspendLayout();
             this.itemMenuPanelDropDown.SuspendLayout();
             this.screenshotButton_back_panel.SuspendLayout();
             this.screenshot_DropDown_menustrip.SuspendLayout();
@@ -145,6 +148,7 @@
             this.General_Menu_Panel.SuspendLayout();
             this.General_menuStrip.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
+            this.item_menu_back_panekBlack_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // Loader_panel
@@ -182,8 +186,9 @@
             // item_menu_top_panel
             // 
             this.item_menu_top_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.item_menu_top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.item_menu_top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(217)))), ((int)(((byte)(255)))));
             this.item_menu_top_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.item_menu_top_panel.Controls.Add(this.item_menu_back_panel_top_panel);
             this.item_menu_top_panel.Location = new System.Drawing.Point(1116, 61);
             this.item_menu_top_panel.Name = "item_menu_top_panel";
             this.item_menu_top_panel.Size = new System.Drawing.Size(40, 21);
@@ -193,25 +198,12 @@
             // itemMenuPanelDropDown
             // 
             this.itemMenuPanelDropDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.itemMenuPanelDropDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.itemMenuPanelDropDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(217)))), ((int)(((byte)(255)))));
             this.itemMenuPanelDropDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.itemMenuPanelDropDown.Controls.Add(this.statistics_button);
-            this.itemMenuPanelDropDown.Controls.Add(this.world_clock_button);
-            this.itemMenuPanelDropDown.Controls.Add(this.open_my_email_button);
-            this.itemMenuPanelDropDown.Controls.Add(this.open_my_webpage_button);
-            this.itemMenuPanelDropDown.Controls.Add(this.open_browser_button);
-            this.itemMenuPanelDropDown.Controls.Add(this.developer_button);
-            this.itemMenuPanelDropDown.Controls.Add(this.open_paint_button);
-            this.itemMenuPanelDropDown.Controls.Add(this.setting_button);
-            this.itemMenuPanelDropDown.Controls.Add(this.sound_recorder_button);
-            this.itemMenuPanelDropDown.Controls.Add(this.calendar_button);
-            this.itemMenuPanelDropDown.Controls.Add(this.calculator_button);
-            this.itemMenuPanelDropDown.Controls.Add(this.text_writer_button);
-            this.itemMenuPanelDropDown.Controls.Add(this.notes_button);
-            this.itemMenuPanelDropDown.Controls.Add(this.timer_button);
+            this.itemMenuPanelDropDown.Controls.Add(this.item_menu_back_panekBlack_panel);
             this.itemMenuPanelDropDown.Location = new System.Drawing.Point(956, 71);
             this.itemMenuPanelDropDown.Name = "itemMenuPanelDropDown";
-            this.itemMenuPanelDropDown.Size = new System.Drawing.Size(200, 319);
+            this.itemMenuPanelDropDown.Size = new System.Drawing.Size(202, 321);
             this.itemMenuPanelDropDown.TabIndex = 0;
             this.itemMenuPanelDropDown.Visible = false;
             // 
@@ -220,7 +212,7 @@
             this.statistics_button.BackgroundImage = global::View_GUI.Properties.Resources.chart_search_icon;
             this.statistics_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.statistics_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.statistics_button.Location = new System.Drawing.Point(81, 244);
+            this.statistics_button.Location = new System.Drawing.Point(80, 241);
             this.statistics_button.Name = "statistics_button";
             this.statistics_button.Size = new System.Drawing.Size(41, 39);
             this.statistics_button.TabIndex = 26;
@@ -231,7 +223,7 @@
             this.world_clock_button.BackgroundImage = global::View_GUI.Properties.Resources.App_world_clock_icon1;
             this.world_clock_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.world_clock_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.world_clock_button.Location = new System.Drawing.Point(17, 244);
+            this.world_clock_button.Location = new System.Drawing.Point(16, 241);
             this.world_clock_button.Name = "world_clock_button";
             this.world_clock_button.Size = new System.Drawing.Size(41, 39);
             this.world_clock_button.TabIndex = 25;
@@ -242,7 +234,7 @@
             this.open_my_email_button.BackgroundImage = global::View_GUI.Properties.Resources.mail_yellow_icon;
             this.open_my_email_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.open_my_email_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.open_my_email_button.Location = new System.Drawing.Point(144, 185);
+            this.open_my_email_button.Location = new System.Drawing.Point(143, 182);
             this.open_my_email_button.Name = "open_my_email_button";
             this.open_my_email_button.Size = new System.Drawing.Size(41, 39);
             this.open_my_email_button.TabIndex = 24;
@@ -253,7 +245,7 @@
             this.open_my_webpage_button.BackgroundImage = global::View_GUI.Properties.Resources.Webpage;
             this.open_my_webpage_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.open_my_webpage_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.open_my_webpage_button.Location = new System.Drawing.Point(78, 185);
+            this.open_my_webpage_button.Location = new System.Drawing.Point(77, 182);
             this.open_my_webpage_button.Name = "open_my_webpage_button";
             this.open_my_webpage_button.Size = new System.Drawing.Size(41, 39);
             this.open_my_webpage_button.TabIndex = 23;
@@ -264,7 +256,7 @@
             this.open_browser_button.BackgroundImage = global::View_GUI.Properties.Resources.Apps_preferences_web_browser_shortcuts_icon;
             this.open_browser_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.open_browser_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.open_browser_button.Location = new System.Drawing.Point(17, 185);
+            this.open_browser_button.Location = new System.Drawing.Point(16, 182);
             this.open_browser_button.Name = "open_browser_button";
             this.open_browser_button.Size = new System.Drawing.Size(41, 39);
             this.open_browser_button.TabIndex = 22;
@@ -276,7 +268,7 @@
             this.developer_button.BackgroundImage = global::View_GUI.Properties.Resources.Apps_utilities_terminal_icon;
             this.developer_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.developer_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.developer_button.Location = new System.Drawing.Point(144, 126);
+            this.developer_button.Location = new System.Drawing.Point(143, 123);
             this.developer_button.Name = "developer_button";
             this.developer_button.Size = new System.Drawing.Size(41, 39);
             this.developer_button.TabIndex = 17;
@@ -287,7 +279,7 @@
             this.open_paint_button.BackgroundImage = global::View_GUI.Properties.Resources.Paint_icon;
             this.open_paint_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.open_paint_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.open_paint_button.Location = new System.Drawing.Point(78, 72);
+            this.open_paint_button.Location = new System.Drawing.Point(77, 69);
             this.open_paint_button.Name = "open_paint_button";
             this.open_paint_button.Size = new System.Drawing.Size(41, 39);
             this.open_paint_button.TabIndex = 21;
@@ -299,7 +291,7 @@
             this.setting_button.BackgroundImage = global::View_GUI.Properties.Resources.Categories_preferences_system_icon;
             this.setting_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.setting_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.setting_button.Location = new System.Drawing.Point(78, 126);
+            this.setting_button.Location = new System.Drawing.Point(77, 123);
             this.setting_button.Name = "setting_button";
             this.setting_button.Size = new System.Drawing.Size(41, 39);
             this.setting_button.TabIndex = 16;
@@ -310,7 +302,7 @@
             this.sound_recorder_button.BackgroundImage = global::View_GUI.Properties.Resources.microphone_icon;
             this.sound_recorder_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.sound_recorder_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.sound_recorder_button.Location = new System.Drawing.Point(18, 126);
+            this.sound_recorder_button.Location = new System.Drawing.Point(17, 123);
             this.sound_recorder_button.Name = "sound_recorder_button";
             this.sound_recorder_button.Size = new System.Drawing.Size(41, 39);
             this.sound_recorder_button.TabIndex = 20;
@@ -322,7 +314,7 @@
             this.calendar_button.BackgroundImage = global::View_GUI.Properties.Resources.date_icon;
             this.calendar_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.calendar_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.calendar_button.Location = new System.Drawing.Point(17, 16);
+            this.calendar_button.Location = new System.Drawing.Point(16, 13);
             this.calendar_button.Name = "calendar_button";
             this.calendar_button.Size = new System.Drawing.Size(41, 39);
             this.calendar_button.TabIndex = 19;
@@ -333,7 +325,7 @@
             this.calculator_button.BackgroundImage = global::View_GUI.Properties.Resources.Calculator_3_icon;
             this.calculator_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.calculator_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.calculator_button.Location = new System.Drawing.Point(144, 71);
+            this.calculator_button.Location = new System.Drawing.Point(143, 68);
             this.calculator_button.Name = "calculator_button";
             this.calculator_button.Size = new System.Drawing.Size(41, 39);
             this.calculator_button.TabIndex = 18;
@@ -345,7 +337,7 @@
             this.text_writer_button.BackgroundImage = global::View_GUI.Properties.Resources.libreoffice_writer_icon;
             this.text_writer_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.text_writer_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.text_writer_button.Location = new System.Drawing.Point(144, 16);
+            this.text_writer_button.Location = new System.Drawing.Point(143, 13);
             this.text_writer_button.Name = "text_writer_button";
             this.text_writer_button.Size = new System.Drawing.Size(41, 39);
             this.text_writer_button.TabIndex = 15;
@@ -356,7 +348,7 @@
             this.notes_button.BackgroundImage = global::View_GUI.Properties.Resources.Notes_icon;
             this.notes_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.notes_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.notes_button.Location = new System.Drawing.Point(78, 16);
+            this.notes_button.Location = new System.Drawing.Point(77, 13);
             this.notes_button.Name = "notes_button";
             this.notes_button.Size = new System.Drawing.Size(41, 39);
             this.notes_button.TabIndex = 14;
@@ -367,7 +359,7 @@
             this.timer_button.BackgroundImage = global::View_GUI.Properties.Resources._42608_stopwatch_icon;
             this.timer_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.timer_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.timer_button.Location = new System.Drawing.Point(18, 72);
+            this.timer_button.Location = new System.Drawing.Point(17, 69);
             this.timer_button.Name = "timer_button";
             this.timer_button.Size = new System.Drawing.Size(40, 38);
             this.timer_button.TabIndex = 13;
@@ -1213,6 +1205,36 @@
             this.toolStripMenuItem5.Size = new System.Drawing.Size(80, 22);
             this.toolStripMenuItem5.Text = "2";
             // 
+            // item_menu_back_panekBlack_panel
+            // 
+            this.item_menu_back_panekBlack_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.item_menu_back_panekBlack_panel.Controls.Add(this.statistics_button);
+            this.item_menu_back_panekBlack_panel.Controls.Add(this.text_writer_button);
+            this.item_menu_back_panekBlack_panel.Controls.Add(this.world_clock_button);
+            this.item_menu_back_panekBlack_panel.Controls.Add(this.timer_button);
+            this.item_menu_back_panekBlack_panel.Controls.Add(this.open_my_email_button);
+            this.item_menu_back_panekBlack_panel.Controls.Add(this.notes_button);
+            this.item_menu_back_panekBlack_panel.Controls.Add(this.open_my_webpage_button);
+            this.item_menu_back_panekBlack_panel.Controls.Add(this.calculator_button);
+            this.item_menu_back_panekBlack_panel.Controls.Add(this.open_browser_button);
+            this.item_menu_back_panekBlack_panel.Controls.Add(this.calendar_button);
+            this.item_menu_back_panekBlack_panel.Controls.Add(this.developer_button);
+            this.item_menu_back_panekBlack_panel.Controls.Add(this.sound_recorder_button);
+            this.item_menu_back_panekBlack_panel.Controls.Add(this.open_paint_button);
+            this.item_menu_back_panekBlack_panel.Controls.Add(this.setting_button);
+            this.item_menu_back_panekBlack_panel.Location = new System.Drawing.Point(1, 1);
+            this.item_menu_back_panekBlack_panel.Name = "item_menu_back_panekBlack_panel";
+            this.item_menu_back_panekBlack_panel.Size = new System.Drawing.Size(198, 317);
+            this.item_menu_back_panekBlack_panel.TabIndex = 4;
+            // 
+            // item_menu_back_panel_top_panel
+            // 
+            this.item_menu_back_panel_top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.item_menu_back_panel_top_panel.Location = new System.Drawing.Point(1, 4);
+            this.item_menu_back_panel_top_panel.Name = "item_menu_back_panel_top_panel";
+            this.item_menu_back_panel_top_panel.Size = new System.Drawing.Size(36, 18);
+            this.item_menu_back_panel_top_panel.TabIndex = 4;
+            // 
             // Main_Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1228,6 +1250,7 @@
             this.Text = "Main_Form1";
             this.Load += new System.EventHandler(this.Main_Form1_Load);
             this.Loader_panel.ResumeLayout(false);
+            this.item_menu_top_panel.ResumeLayout(false);
             this.itemMenuPanelDropDown.ResumeLayout(false);
             this.screenshotButton_back_panel.ResumeLayout(false);
             this.screenshot_DropDown_menustrip.ResumeLayout(false);
@@ -1237,6 +1260,7 @@
             this.General_menuStrip.ResumeLayout(false);
             this.General_menuStrip.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
+            this.item_menu_back_panekBlack_panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1349,5 +1373,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
+        private System.Windows.Forms.Panel item_menu_back_panekBlack_panel;
+        private System.Windows.Forms.Panel item_menu_back_panel_top_panel;
     }
 }
