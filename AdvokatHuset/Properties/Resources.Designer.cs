@@ -333,6 +333,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap App_world_clock_icon2 {
+            get {
+                object obj = ResourceManager.GetObject("App-world-clock-icon2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap application_edit_icon {
             get {
                 object obj = ResourceManager.GetObject("application-edit-icon", resourceCulture);
@@ -506,6 +516,16 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap Calculator_3_icon {
             get {
                 object obj = ResourceManager.GetObject("Calculator-3-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Calculator_icon {
+            get {
+                object obj = ResourceManager.GetObject("Calculator-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1266,6 +1286,26 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap Webpage_icon {
             get {
                 object obj = ResourceManager.GetObject("Webpage-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Webpage_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Webpage-icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Webpage_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("Webpage-icon1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

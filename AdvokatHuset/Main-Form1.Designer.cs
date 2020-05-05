@@ -206,7 +206,7 @@
             // 
             // item_menu_back_panekBlack_panel
             // 
-            this.item_menu_back_panekBlack_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.item_menu_back_panekBlack_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.item_menu_back_panekBlack_panel.Controls.Add(this.statistics_button);
             this.item_menu_back_panekBlack_panel.Controls.Add(this.text_writer_button);
             this.item_menu_back_panekBlack_panel.Controls.Add(this.world_clock_button);
@@ -295,10 +295,9 @@
             this.General_Menu_Panel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.General_Menu_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.General_Menu_Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.General_Menu_Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.General_Menu_Panel.Controls.Add(this.General_menuStrip);
             this.General_Menu_Panel.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.General_Menu_Panel.Location = new System.Drawing.Point(321, 2);
+            this.General_Menu_Panel.Location = new System.Drawing.Point(338, 2);
             this.General_Menu_Panel.Name = "General_Menu_Panel";
             this.General_Menu_Panel.Size = new System.Drawing.Size(548, 55);
             this.General_Menu_Panel.TabIndex = 1;
@@ -329,7 +328,7 @@
             this.General_menuStrip.Location = new System.Drawing.Point(0, 0);
             this.General_menuStrip.Name = "General_menuStrip";
             this.General_menuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.General_menuStrip.Size = new System.Drawing.Size(546, 53);
+            this.General_menuStrip.Size = new System.Drawing.Size(548, 55);
             this.General_menuStrip.TabIndex = 2;
             this.General_menuStrip.Text = "centerMenu";
             this.General_menuStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.General_menuStrip_ItemClicked);
@@ -348,7 +347,7 @@
             this.toolStripSeparator2,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(43, 49);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(43, 51);
             this.fileToolStripMenuItem.Text = "&File";
             // 
             // toolStripSeparator
@@ -390,7 +389,7 @@
             this.toolStripSeparator4,
             this.selectAllToolStripMenuItem});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(44, 49);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(44, 51);
             this.editToolStripMenuItem.Text = "&Edit";
             // 
             // undoToolStripMenuItem
@@ -429,7 +428,7 @@
             this.customizeToolStripMenuItem,
             this.optionsToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(54, 49);
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(54, 51);
             this.toolsToolStripMenuItem.Text = "&Tools";
             // 
             // customizeToolStripMenuItem
@@ -453,7 +452,7 @@
             this.toolStripSeparator5,
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(49, 49);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(49, 51);
             this.helpToolStripMenuItem.Text = "&Help";
             // 
             // contentsToolStripMenuItem
@@ -499,7 +498,7 @@
             this.toolStripSeparator8,
             this.exitToolStripMenuItem1});
             this.fileToolStripMenuItem1.Name = "fileToolStripMenuItem1";
-            this.fileToolStripMenuItem1.Size = new System.Drawing.Size(43, 49);
+            this.fileToolStripMenuItem1.Size = new System.Drawing.Size(43, 51);
             this.fileToolStripMenuItem1.Text = "&File";
             // 
             // toolStripSeparator6
@@ -541,7 +540,7 @@
             this.toolStripSeparator10,
             this.selectAllToolStripMenuItem1});
             this.editToolStripMenuItem1.Name = "editToolStripMenuItem1";
-            this.editToolStripMenuItem1.Size = new System.Drawing.Size(44, 49);
+            this.editToolStripMenuItem1.Size = new System.Drawing.Size(44, 51);
             this.editToolStripMenuItem1.Text = "&Edit";
             // 
             // undoToolStripMenuItem1
@@ -578,7 +577,7 @@
             this.customizeToolStripMenuItem1,
             this.optionsToolStripMenuItem1});
             this.toolsToolStripMenuItem1.Name = "toolsToolStripMenuItem1";
-            this.toolsToolStripMenuItem1.Size = new System.Drawing.Size(54, 49);
+            this.toolsToolStripMenuItem1.Size = new System.Drawing.Size(54, 51);
             this.toolsToolStripMenuItem1.Text = "&Tools";
             // 
             // customizeToolStripMenuItem1
@@ -602,7 +601,7 @@
             this.toolStripSeparator11,
             this.aboutToolStripMenuItem1});
             this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
-            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(49, 49);
+            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(49, 51);
             this.helpToolStripMenuItem1.Text = "&Help";
             // 
             // contentsToolStripMenuItem1
@@ -781,7 +780,7 @@
             this.visSagerToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.visSagerToolStripMenuItem.Image = global::View_GUI.Properties.Resources.Documents_icon__1_;
             this.visSagerToolStripMenuItem.Name = "visSagerToolStripMenuItem";
-            this.visSagerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.visSagerToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.visSagerToolStripMenuItem.Text = "Vis Sager";
             // 
             // ydelserToolStripMenuItem
@@ -1102,6 +1101,10 @@
             this.statistics_button.BackgroundImage = global::View_GUI.Properties.Resources.chart_search_icon;
             this.statistics_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.statistics_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.statistics_button.FlatAppearance.BorderSize = 0;
+            this.statistics_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.statistics_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
+            this.statistics_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.statistics_button.Location = new System.Drawing.Point(80, 241);
             this.statistics_button.Name = "statistics_button";
             this.statistics_button.Size = new System.Drawing.Size(41, 39);
@@ -1113,6 +1116,10 @@
             this.text_writer_button.BackgroundImage = global::View_GUI.Properties.Resources.libreoffice_writer_icon;
             this.text_writer_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.text_writer_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.text_writer_button.FlatAppearance.BorderSize = 0;
+            this.text_writer_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.text_writer_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
+            this.text_writer_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.text_writer_button.Location = new System.Drawing.Point(143, 13);
             this.text_writer_button.Name = "text_writer_button";
             this.text_writer_button.Size = new System.Drawing.Size(41, 39);
@@ -1121,9 +1128,13 @@
             // 
             // world_clock_button
             // 
-            this.world_clock_button.BackgroundImage = global::View_GUI.Properties.Resources.App_world_clock_icon1;
+            this.world_clock_button.BackgroundImage = global::View_GUI.Properties.Resources.App_world_clock_icon2;
             this.world_clock_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.world_clock_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.world_clock_button.FlatAppearance.BorderSize = 0;
+            this.world_clock_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.world_clock_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
+            this.world_clock_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.world_clock_button.Location = new System.Drawing.Point(16, 241);
             this.world_clock_button.Name = "world_clock_button";
             this.world_clock_button.Size = new System.Drawing.Size(41, 39);
@@ -1135,6 +1146,10 @@
             this.timer_button.BackgroundImage = global::View_GUI.Properties.Resources._42608_stopwatch_icon;
             this.timer_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.timer_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.timer_button.FlatAppearance.BorderSize = 0;
+            this.timer_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.timer_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
+            this.timer_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.timer_button.Location = new System.Drawing.Point(17, 69);
             this.timer_button.Name = "timer_button";
             this.timer_button.Size = new System.Drawing.Size(40, 38);
@@ -1147,6 +1162,10 @@
             this.open_my_email_button.BackgroundImage = global::View_GUI.Properties.Resources.mail_yellow_icon;
             this.open_my_email_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.open_my_email_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.open_my_email_button.FlatAppearance.BorderSize = 0;
+            this.open_my_email_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.open_my_email_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
+            this.open_my_email_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.open_my_email_button.Location = new System.Drawing.Point(143, 182);
             this.open_my_email_button.Name = "open_my_email_button";
             this.open_my_email_button.Size = new System.Drawing.Size(41, 39);
@@ -1158,6 +1177,10 @@
             this.notes_button.BackgroundImage = global::View_GUI.Properties.Resources.Notes_icon;
             this.notes_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.notes_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.notes_button.FlatAppearance.BorderSize = 0;
+            this.notes_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.notes_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
+            this.notes_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.notes_button.Location = new System.Drawing.Point(77, 13);
             this.notes_button.Name = "notes_button";
             this.notes_button.Size = new System.Drawing.Size(41, 39);
@@ -1166,9 +1189,13 @@
             // 
             // open_my_webpage_button
             // 
-            this.open_my_webpage_button.BackgroundImage = global::View_GUI.Properties.Resources.Webpage;
+            this.open_my_webpage_button.BackgroundImage = global::View_GUI.Properties.Resources.Webpage_icon__1_;
             this.open_my_webpage_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.open_my_webpage_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.open_my_webpage_button.FlatAppearance.BorderSize = 0;
+            this.open_my_webpage_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.open_my_webpage_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
+            this.open_my_webpage_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.open_my_webpage_button.Location = new System.Drawing.Point(77, 182);
             this.open_my_webpage_button.Name = "open_my_webpage_button";
             this.open_my_webpage_button.Size = new System.Drawing.Size(41, 39);
@@ -1177,9 +1204,13 @@
             // 
             // calculator_button
             // 
-            this.calculator_button.BackgroundImage = global::View_GUI.Properties.Resources.Calculator_3_icon;
+            this.calculator_button.BackgroundImage = global::View_GUI.Properties.Resources.Calculator_icon;
             this.calculator_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.calculator_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.calculator_button.FlatAppearance.BorderSize = 0;
+            this.calculator_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.calculator_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
+            this.calculator_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.calculator_button.Location = new System.Drawing.Point(143, 68);
             this.calculator_button.Name = "calculator_button";
             this.calculator_button.Size = new System.Drawing.Size(41, 39);
@@ -1192,6 +1223,10 @@
             this.open_browser_button.BackgroundImage = global::View_GUI.Properties.Resources.Apps_preferences_web_browser_shortcuts_icon;
             this.open_browser_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.open_browser_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.open_browser_button.FlatAppearance.BorderSize = 0;
+            this.open_browser_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.open_browser_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
+            this.open_browser_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.open_browser_button.Location = new System.Drawing.Point(16, 182);
             this.open_browser_button.Name = "open_browser_button";
             this.open_browser_button.Size = new System.Drawing.Size(41, 39);
@@ -1204,6 +1239,10 @@
             this.calendar_button.BackgroundImage = global::View_GUI.Properties.Resources.date_icon;
             this.calendar_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.calendar_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.calendar_button.FlatAppearance.BorderSize = 0;
+            this.calendar_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.calendar_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
+            this.calendar_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.calendar_button.Location = new System.Drawing.Point(16, 13);
             this.calendar_button.Name = "calendar_button";
             this.calendar_button.Size = new System.Drawing.Size(41, 39);
@@ -1215,6 +1254,10 @@
             this.developer_button.BackgroundImage = global::View_GUI.Properties.Resources.Apps_utilities_terminal_icon;
             this.developer_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.developer_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.developer_button.FlatAppearance.BorderSize = 0;
+            this.developer_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.developer_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
+            this.developer_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.developer_button.Location = new System.Drawing.Point(143, 123);
             this.developer_button.Name = "developer_button";
             this.developer_button.Size = new System.Drawing.Size(41, 39);
@@ -1227,6 +1270,10 @@
             this.sound_recorder_button.BackgroundImage = global::View_GUI.Properties.Resources.microphone_icon;
             this.sound_recorder_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.sound_recorder_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sound_recorder_button.FlatAppearance.BorderSize = 0;
+            this.sound_recorder_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.sound_recorder_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
+            this.sound_recorder_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sound_recorder_button.Location = new System.Drawing.Point(17, 123);
             this.sound_recorder_button.Name = "sound_recorder_button";
             this.sound_recorder_button.Size = new System.Drawing.Size(41, 39);
@@ -1239,6 +1286,10 @@
             this.open_paint_button.BackgroundImage = global::View_GUI.Properties.Resources.Paint_icon;
             this.open_paint_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.open_paint_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.open_paint_button.FlatAppearance.BorderSize = 0;
+            this.open_paint_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.open_paint_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
+            this.open_paint_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.open_paint_button.Location = new System.Drawing.Point(77, 69);
             this.open_paint_button.Name = "open_paint_button";
             this.open_paint_button.Size = new System.Drawing.Size(41, 39);
@@ -1251,6 +1302,10 @@
             this.setting_button.BackgroundImage = global::View_GUI.Properties.Resources.Categories_preferences_system_icon;
             this.setting_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.setting_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.setting_button.FlatAppearance.BorderSize = 0;
+            this.setting_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.setting_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
+            this.setting_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.setting_button.Location = new System.Drawing.Point(77, 123);
             this.setting_button.Name = "setting_button";
             this.setting_button.Size = new System.Drawing.Size(41, 39);

@@ -671,5 +671,17 @@
   <ItemGroup>
     <None Include="Resources\Untitled %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calculator-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\App-world-clock-icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webpage-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Webpage-icon %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
