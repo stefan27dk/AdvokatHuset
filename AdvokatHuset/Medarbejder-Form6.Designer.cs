@@ -30,7 +30,9 @@
         {
             this.Medarbejder_Top_label = new System.Windows.Forms.Label();
             this.backgroundName_Top_panel = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.backgroundName_Top_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // Medarbejder_Top_label
@@ -54,12 +56,21 @@
             this.backgroundName_Top_panel.Size = new System.Drawing.Size(142, 44);
             this.backgroundName_Top_panel.TabIndex = 4;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(199, 246);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(782, 264);
+            this.dataGridView1.TabIndex = 5;
+            // 
             // Medarbejder_Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1180, 555);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.backgroundName_Top_panel);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -68,6 +79,7 @@
             this.Load += new System.EventHandler(this.Medarbejder_Form6_Load);
             this.backgroundName_Top_panel.ResumeLayout(false);
             this.backgroundName_Top_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -76,5 +88,6 @@
 
         private System.Windows.Forms.Label Medarbejder_Top_label;
         private System.Windows.Forms.Panel backgroundName_Top_panel;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

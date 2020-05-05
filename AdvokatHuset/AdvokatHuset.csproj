@@ -551,5 +551,122 @@
   <ItemGroup>
     <None Include="Resources\Actions-document-save-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Places-user-home-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gnome_panel_force_quit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notes-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\win7_ico_shell32_dll-260 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Note-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\date-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vw-beetle-icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-page-zoom-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Places-folder-yellow-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Places-folder-orange-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Places-folder-orange-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-home-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\navigate-left-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apps-ktorrent-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apps-ktorrent-icon - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-go-previous-view-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Navigate-right-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\navigate-left-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\navigate-left-icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\navigate-left-icon %281%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apps-Dialog-Shutdown-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apps-Dialog-Shutdown-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camera-2-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Camera-2-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-cut-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\App-klickety-game-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\app-drawer-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bell-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bell-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\app-drawer-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\app-drawer-icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\app-drawer-icon %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\app-drawer-icon %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\app-drawer-icon %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\App-klines-game-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-home-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-documents-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-documents-icon %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

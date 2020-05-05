@@ -250,7 +250,7 @@
             this.zipCode_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
             this.zipCode_label.Image = global::View_GUI.Properties.Resources.Compressed_File_Zip_icon;
             this.zipCode_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.zipCode_label.Location = new System.Drawing.Point(51, 198);
+            this.zipCode_label.Location = new System.Drawing.Point(49, 198);
             this.zipCode_label.Name = "zipCode_label";
             this.zipCode_label.Size = new System.Drawing.Size(105, 25);
             this.zipCode_label.TabIndex = 17;
