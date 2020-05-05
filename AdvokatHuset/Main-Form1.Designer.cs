@@ -300,7 +300,7 @@
             this.General_Menu_Panel.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.General_Menu_Panel.Location = new System.Drawing.Point(321, 2);
             this.General_Menu_Panel.Name = "General_Menu_Panel";
-            this.General_Menu_Panel.Size = new System.Drawing.Size(595, 55);
+            this.General_Menu_Panel.Size = new System.Drawing.Size(548, 55);
             this.General_Menu_Panel.TabIndex = 1;
             // 
             // General_menuStrip
@@ -329,7 +329,7 @@
             this.General_menuStrip.Location = new System.Drawing.Point(0, 0);
             this.General_menuStrip.Name = "General_menuStrip";
             this.General_menuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.General_menuStrip.Size = new System.Drawing.Size(593, 53);
+            this.General_menuStrip.Size = new System.Drawing.Size(546, 53);
             this.General_menuStrip.TabIndex = 2;
             this.General_menuStrip.Text = "centerMenu";
             this.General_menuStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.General_menuStrip_ItemClicked);
@@ -770,7 +770,7 @@
             this.sagerToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.sagerToolStripMenuItem.Name = "sagerToolStripMenuItem";
             this.sagerToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
-            this.sagerToolStripMenuItem.Size = new System.Drawing.Size(122, 50);
+            this.sagerToolStripMenuItem.Size = new System.Drawing.Size(60, 50);
             this.sagerToolStripMenuItem.Text = "Sager";
             this.sagerToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.sagerToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
@@ -1068,7 +1068,7 @@
             // item_menu_button
             // 
             this.item_menu_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.item_menu_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_home_icon__1_;
+            this.item_menu_button.BackgroundImage = global::View_GUI.Properties.Resources.Untitled__1_;
             this.item_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.item_menu_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.item_menu_button.FlatAppearance.BorderSize = 0;

@@ -1213,6 +1213,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Untitled__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Untitled (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap vw_beetle_icon {
             get {
                 object obj = ResourceManager.GetObject("vw-beetle-icon", resourceCulture);
