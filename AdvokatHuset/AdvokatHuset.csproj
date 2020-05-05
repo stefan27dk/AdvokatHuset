@@ -683,5 +683,17 @@
   <ItemGroup>
     <None Include="Resources\Webpage-icon %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-documents-icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled %283%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -753,6 +753,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap folder_documents_icon__2_ {
+            get {
+                object obj = ResourceManager.GetObject("folder-documents-icon (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap folder_icon {
             get {
                 object obj = ResourceManager.GetObject("folder-icon", resourceCulture);
@@ -1236,6 +1246,36 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap Untitled__1_ {
             get {
                 object obj = ResourceManager.GetObject("Untitled (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Untitled (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled__2_1 {
+            get {
+                object obj = ResourceManager.GetObject("Untitled (2)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled__3_ {
+            get {
+                object obj = ResourceManager.GetObject("Untitled (3)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

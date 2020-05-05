@@ -62,19 +62,24 @@ namespace View_GUI
         }
 
         private class MyColors : ProfessionalColorTable  //Overriding Colors
-        {   
+        {
+            // Other Properties for the menustrip colors
+            //https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.professionalcolortable?view=netcore-3.1
             
+
             // Drop Down Background - Right
             public override Color ToolStripDropDownBackground { get { return Color.FromArgb(64, 63, 61); }}// Drop Down Right background
 
-            public override Color MenuItemSelected { get { return Color.FromArgb(128, 122, 111); } }// Selected item color
+            public override Color MenuItemSelected { get { return Color.FromArgb(92, 92, 92); } }// Selected item color
+            public override Color MenuItemBorder { get { return Color.FromArgb(70, 70, 80); } }// ITEM BORDER
             public override Color MenuItemSelectedGradientBegin  { get { return Color.FromArgb(255, 182, 110); } }
-            public override Color MenuItemSelectedGradientEnd { get { return Color.FromArgb(69, 69, 69); } }
+            public override Color MenuItemSelectedGradientEnd { get { return Color.FromArgb(52, 52, 52); } }
             public override Color MenuItemPressedGradientBegin { get { return Color.FromArgb(52, 71, 66); } }
             public override Color MenuItemPressedGradientEnd { get { return Color.FromArgb(51, 55, 56); } }
             public override Color ImageMarginGradientBegin { get { return Color.FromArgb(52, 71, 66); } }
             public override Color ImageMarginGradientMiddle { get { return Color.FromArgb(58, 58, 64); } }
             public override Color ImageMarginGradientEnd { get { return Color.FromArgb(48, 48, 54); } }
+            public override Color SeparatorLight { get { return Color.Red; } }
 
             //Drop Down Border
             public override Color MenuBorder { get { return Color.FromArgb(255, 183, 89); } }
@@ -615,6 +620,24 @@ namespace View_GUI
 
 
 
+        // Developer Button " tem Menu"
+        private void developer_button_Click(object sender, EventArgs e)
+        {
+            //Forms for Hide "Hide all other Forms"
+            HideAllForms();
+
+            DeveloperForm12.TopLevel = false;
+            Loader_panel.Controls.Add(DeveloperForm12);
+            DeveloperForm12.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            DeveloperForm12.Dock = DockStyle.Fill;
+            DeveloperForm12.Show();
+
+        }
+
+
+
+
+
         // ToolTip - Item Menu 
         private void item_menu_button_MouseHover(object sender, EventArgs e)
         {
@@ -863,21 +886,7 @@ namespace View_GUI
 
 
 
-        // Developer Button " tem Menu"
-        private void developer_button_Click(object sender, EventArgs e)
-        {
-            //Forms for Hide "Hide all other Forms"
-            HideAllForms();
-
-            DeveloperForm12.TopLevel = false;
-            Loader_panel.Controls.Add(DeveloperForm12);
-            DeveloperForm12.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            DeveloperForm12.Dock = DockStyle.Fill;
-            DeveloperForm12.Show();
-
-        }
-
-
+    
 
 
 
