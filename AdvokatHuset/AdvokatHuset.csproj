@@ -482,5 +482,26 @@
   <ItemGroup>
     <None Include="Resources\minimize.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Phone-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Phone-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\my-numbers-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Compressed-File-Zip-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\name-card-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ID-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barcode-icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

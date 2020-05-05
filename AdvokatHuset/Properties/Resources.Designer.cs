@@ -183,6 +183,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap barcode_icon {
+            get {
+                object obj = ResourceManager.GetObject("barcode-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Calculator_3_icon {
             get {
                 object obj = ResourceManager.GetObject("Calculator-3-icon", resourceCulture);
@@ -256,6 +266,16 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap chart_search_icon {
             get {
                 object obj = ResourceManager.GetObject("chart-search-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Compressed_File_Zip_icon {
+            get {
+                object obj = ResourceManager.GetObject("Compressed-File-Zip-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -403,6 +423,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ID_icon {
+            get {
+                object obj = ResourceManager.GetObject("ID-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap images__1___1_ {
             get {
                 object obj = ResourceManager.GetObject("images (1) (1)", resourceCulture);
@@ -466,6 +496,26 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap mmm {
             get {
                 object obj = ResourceManager.GetObject("mmm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap my_numbers_icon {
+            get {
+                object obj = ResourceManager.GetObject("my-numbers-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap name_card_icon {
+            get {
+                object obj = ResourceManager.GetObject("name-card-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -556,6 +606,26 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap people_icon__1_ {
             get {
                 object obj = ResourceManager.GetObject("people-icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Phone_icon {
+            get {
+                object obj = ResourceManager.GetObject("Phone-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Phone_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Phone-icon (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
