@@ -40,7 +40,6 @@
             this.screenshot_DropDown_menustrip = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.Top_Menu_panel = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
@@ -120,7 +119,6 @@
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.bell_button = new System.Windows.Forms.Button();
             this.Loacal_Folder_button = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.Back_Button = new System.Windows.Forms.Button();
             this.item_menu_button = new System.Windows.Forms.Button();
             this.Forward_Button = new System.Windows.Forms.Button();
@@ -139,6 +137,8 @@
             this.open_paint_button = new System.Windows.Forms.Button();
             this.setting_button = new System.Windows.Forms.Button();
             this.task_button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.Loader_panel.SuspendLayout();
             this.item_menu_top_panel.SuspendLayout();
             this.itemMenuPanelDropDown.SuspendLayout();
@@ -278,16 +278,6 @@
             this.Top_Menu_panel.Name = "Top_Menu_panel";
             this.Top_Menu_panel.Size = new System.Drawing.Size(1180, 63);
             this.Top_Menu_panel.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.panel1.BackColor = System.Drawing.Color.Gray;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(0, 59);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1181, 5);
-            this.panel1.TabIndex = 13;
             // 
             // contextMenuStrip1
             // 
@@ -449,7 +439,7 @@
             this.editToolStripMenuItem1,
             this.toolsToolStripMenuItem1,
             this.helpToolStripMenuItem1});
-            this.General_menuStrip.Location = new System.Drawing.Point(35, 0);
+            this.General_menuStrip.Location = new System.Drawing.Point(26, 0);
             this.General_menuStrip.Margin = new System.Windows.Forms.Padding(0, 30, 0, 0);
             this.General_menuStrip.Name = "General_menuStrip";
             this.General_menuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -1035,21 +1025,6 @@
             this.Loacal_Folder_button.Click += new System.EventHandler(this.Loacal_Folder_button_Click);
             this.Loacal_Folder_button.MouseHover += new System.EventHandler(this.Loacal_Folder_button_MouseHover);
             // 
-            // button3
-            // 
-            this.button3.BackgroundImage = global::View_GUI.Properties.Resources.Apps_Dialog_Shutdown_icon__1_;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(11, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(33, 33);
-            this.button3.TabIndex = 7;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // Back_Button
             // 
             this.Back_Button.BackgroundImage = global::View_GUI.Properties.Resources.navigate_left_icon__1_;
@@ -1325,6 +1300,33 @@
             this.task_button1.Text = "Task";
             this.task_button1.UseVisualStyleBackColor = true;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Gray;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 59);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1178, 2);
+            this.panel1.TabIndex = 13;
+            // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.button3.BackgroundImage = global::View_GUI.Properties.Resources.Apps_Dialog_Shutdown_icon__1_;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(11, 4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(33, 33);
+            this.button3.TabIndex = 7;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // Main_Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1363,7 +1365,6 @@
         private System.Windows.Forms.Button Back_Button;
         private System.Windows.Forms.Panel General_Menu_Panel;
         private System.Windows.Forms.Button Home_Button;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.MenuStrip General_menuStrip;
         private System.Windows.Forms.ToolStripMenuItem sagerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem visSagerToolStripMenuItem;
@@ -1395,7 +1396,6 @@
         private System.Windows.Forms.Button open_my_webpage_button;
         private System.Windows.Forms.ToolStripMenuItem kunderToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kørselToolStripMenuItem;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button statistics_button;
         private System.Windows.Forms.Button world_clock_button;
         private System.Windows.Forms.ToolStripMenuItem medarbejder_item;
@@ -1465,5 +1465,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
         private System.Windows.Forms.Panel item_menu_back_panekBlack_panel;
         private System.Windows.Forms.Panel item_menu_back_panel_top_panel;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button3;
     }
 }
