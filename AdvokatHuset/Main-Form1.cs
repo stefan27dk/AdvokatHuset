@@ -152,7 +152,7 @@ namespace View_GUI
 
 
             MovingItempanels();// Moving Panels
-            screenshotButton_back_panel.BringToFront();
+            //screenshotButton_back_panel.BringToFront();
             itemMenuPanelDropDown.BringToFront();//ItemMenuPanel
             screenshot_DropDown_menustrip.Renderer = new BrowserMenuRenderer(); // Custumized THEME For the DROP DOWN MENU FOR THE SCREENSHOTS
             General_menuStrip.Renderer = new MyRenderer(); // Used for General_menuStrip to change the "Selection Background Color" "Renderer"
