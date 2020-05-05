@@ -728,5 +728,17 @@
   <ItemGroup>
     <None Include="Resources\Untitled %281%291.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\date-icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\App-klickety-game-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ID-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\name-card-icon1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

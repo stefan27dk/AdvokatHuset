@@ -32,16 +32,16 @@
             this.backgroundName_Top_panel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.backPanel_Textboxes_panel = new System.Windows.Forms.Panel();
-            this.adr_textBox = new System.Windows.Forms.TextBox();
+            this.sekretaer_adr_textBox = new System.Windows.Forms.TextBox();
             this.background_textboxes_top_panel = new System.Windows.Forms.Panel();
             this.opret_Kunder_label = new System.Windows.Forms.Label();
-            this.zipcCode_textBox = new System.Windows.Forms.TextBox();
-            this.tlf_textBox = new System.Windows.Forms.TextBox();
-            this.surname_textBox = new System.Windows.Forms.TextBox();
-            this.id_textBox = new System.Windows.Forms.TextBox();
-            this.name_textBox = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.sekretaer_zipcCode_textBox = new System.Windows.Forms.TextBox();
+            this.sekretaer_tlf_textBox = new System.Windows.Forms.TextBox();
+            this.sekretaer_surname_textBox = new System.Windows.Forms.TextBox();
+            this.sekretaer_id_textBox = new System.Windows.Forms.TextBox();
+            this.sekretaer_name_textBox = new System.Windows.Forms.TextBox();
+            this.vis_rediger_sekretaer_button = new System.Windows.Forms.Button();
+            this.opret_sekretaer_button = new System.Windows.Forms.Button();
             this.Save_button = new System.Windows.Forms.Button();
             this.adr_label = new System.Windows.Forms.Label();
             this.zipCode_label = new System.Windows.Forms.Label();
@@ -81,8 +81,8 @@
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(44)))), ((int)(((byte)(39)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.vis_rediger_sekretaer_button);
+            this.panel1.Controls.Add(this.opret_sekretaer_button);
             this.panel1.Location = new System.Drawing.Point(365, 76);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(238, 70);
@@ -95,29 +95,29 @@
             this.backPanel_Textboxes_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.backPanel_Textboxes_panel.Controls.Add(this.Save_button);
             this.backPanel_Textboxes_panel.Controls.Add(this.adr_label);
-            this.backPanel_Textboxes_panel.Controls.Add(this.adr_textBox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.sekretaer_adr_textBox);
             this.backPanel_Textboxes_panel.Controls.Add(this.background_textboxes_top_panel);
             this.backPanel_Textboxes_panel.Controls.Add(this.zipCode_label);
-            this.backPanel_Textboxes_panel.Controls.Add(this.zipcCode_textBox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.sekretaer_zipcCode_textBox);
             this.backPanel_Textboxes_panel.Controls.Add(this.tlf_label);
-            this.backPanel_Textboxes_panel.Controls.Add(this.tlf_textBox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.sekretaer_tlf_textBox);
             this.backPanel_Textboxes_panel.Controls.Add(this.surname_label);
-            this.backPanel_Textboxes_panel.Controls.Add(this.surname_textBox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.sekretaer_surname_textBox);
             this.backPanel_Textboxes_panel.Controls.Add(this.id_label);
-            this.backPanel_Textboxes_panel.Controls.Add(this.id_textBox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.sekretaer_id_textBox);
             this.backPanel_Textboxes_panel.Controls.Add(this.name_label);
-            this.backPanel_Textboxes_panel.Controls.Add(this.name_textBox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.sekretaer_name_textBox);
             this.backPanel_Textboxes_panel.Location = new System.Drawing.Point(284, 155);
             this.backPanel_Textboxes_panel.Name = "backPanel_Textboxes_panel";
             this.backPanel_Textboxes_panel.Size = new System.Drawing.Size(394, 388);
             this.backPanel_Textboxes_panel.TabIndex = 13;
             // 
-            // adr_textBox
+            // sekretaer_adr_textBox
             // 
-            this.adr_textBox.Location = new System.Drawing.Point(158, 249);
-            this.adr_textBox.Name = "adr_textBox";
-            this.adr_textBox.Size = new System.Drawing.Size(100, 20);
-            this.adr_textBox.TabIndex = 20;
+            this.sekretaer_adr_textBox.Location = new System.Drawing.Point(158, 249);
+            this.sekretaer_adr_textBox.Name = "sekretaer_adr_textBox";
+            this.sekretaer_adr_textBox.Size = new System.Drawing.Size(100, 20);
+            this.sekretaer_adr_textBox.TabIndex = 20;
             // 
             // background_textboxes_top_panel
             // 
@@ -141,78 +141,78 @@
             this.opret_Kunder_label.TabIndex = 1;
             this.opret_Kunder_label.Text = "Opret Sekretær";
             // 
-            // zipcCode_textBox
+            // sekretaer_zipcCode_textBox
             // 
-            this.zipcCode_textBox.Location = new System.Drawing.Point(158, 203);
-            this.zipcCode_textBox.Name = "zipcCode_textBox";
-            this.zipcCode_textBox.Size = new System.Drawing.Size(100, 20);
-            this.zipcCode_textBox.TabIndex = 18;
+            this.sekretaer_zipcCode_textBox.Location = new System.Drawing.Point(158, 203);
+            this.sekretaer_zipcCode_textBox.Name = "sekretaer_zipcCode_textBox";
+            this.sekretaer_zipcCode_textBox.Size = new System.Drawing.Size(100, 20);
+            this.sekretaer_zipcCode_textBox.TabIndex = 18;
             // 
-            // tlf_textBox
+            // sekretaer_tlf_textBox
             // 
-            this.tlf_textBox.Location = new System.Drawing.Point(158, 294);
-            this.tlf_textBox.Name = "tlf_textBox";
-            this.tlf_textBox.Size = new System.Drawing.Size(100, 20);
-            this.tlf_textBox.TabIndex = 16;
+            this.sekretaer_tlf_textBox.Location = new System.Drawing.Point(158, 294);
+            this.sekretaer_tlf_textBox.Name = "sekretaer_tlf_textBox";
+            this.sekretaer_tlf_textBox.Size = new System.Drawing.Size(100, 20);
+            this.sekretaer_tlf_textBox.TabIndex = 16;
             // 
-            // surname_textBox
+            // sekretaer_surname_textBox
             // 
-            this.surname_textBox.Location = new System.Drawing.Point(158, 157);
-            this.surname_textBox.Name = "surname_textBox";
-            this.surname_textBox.Size = new System.Drawing.Size(100, 20);
-            this.surname_textBox.TabIndex = 14;
+            this.sekretaer_surname_textBox.Location = new System.Drawing.Point(158, 157);
+            this.sekretaer_surname_textBox.Name = "sekretaer_surname_textBox";
+            this.sekretaer_surname_textBox.Size = new System.Drawing.Size(100, 20);
+            this.sekretaer_surname_textBox.TabIndex = 14;
             // 
-            // id_textBox
+            // sekretaer_id_textBox
             // 
-            this.id_textBox.Location = new System.Drawing.Point(158, 63);
-            this.id_textBox.Name = "id_textBox";
-            this.id_textBox.Size = new System.Drawing.Size(100, 20);
-            this.id_textBox.TabIndex = 12;
+            this.sekretaer_id_textBox.Location = new System.Drawing.Point(158, 63);
+            this.sekretaer_id_textBox.Name = "sekretaer_id_textBox";
+            this.sekretaer_id_textBox.Size = new System.Drawing.Size(100, 20);
+            this.sekretaer_id_textBox.TabIndex = 12;
             // 
-            // name_textBox
+            // sekretaer_name_textBox
             // 
-            this.name_textBox.Location = new System.Drawing.Point(158, 111);
-            this.name_textBox.Name = "name_textBox";
-            this.name_textBox.Size = new System.Drawing.Size(100, 20);
-            this.name_textBox.TabIndex = 10;
+            this.sekretaer_name_textBox.Location = new System.Drawing.Point(158, 111);
+            this.sekretaer_name_textBox.Name = "sekretaer_name_textBox";
+            this.sekretaer_name_textBox.Size = new System.Drawing.Size(100, 20);
+            this.sekretaer_name_textBox.TabIndex = 10;
             // 
-            // button2
+            // vis_rediger_sekretaer_button
             // 
-            this.button2.BackgroundImage = global::View_GUI.Properties.Resources.addressbook_edit_icon__3_;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("OpenSymbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(121, -4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 68);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Vis / Rediger";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
+            this.vis_rediger_sekretaer_button.BackgroundImage = global::View_GUI.Properties.Resources.addressbook_edit_icon__3_;
+            this.vis_rediger_sekretaer_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.vis_rediger_sekretaer_button.FlatAppearance.BorderSize = 0;
+            this.vis_rediger_sekretaer_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.vis_rediger_sekretaer_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.vis_rediger_sekretaer_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.vis_rediger_sekretaer_button.Font = new System.Drawing.Font("OpenSymbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vis_rediger_sekretaer_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.vis_rediger_sekretaer_button.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.vis_rediger_sekretaer_button.Location = new System.Drawing.Point(121, -4);
+            this.vis_rediger_sekretaer_button.Name = "vis_rediger_sekretaer_button";
+            this.vis_rediger_sekretaer_button.Size = new System.Drawing.Size(94, 68);
+            this.vis_rediger_sekretaer_button.TabIndex = 1;
+            this.vis_rediger_sekretaer_button.Text = "Vis / Rediger";
+            this.vis_rediger_sekretaer_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.vis_rediger_sekretaer_button.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // opret_sekretaer_button
             // 
-            this.button1.BackgroundImage = global::View_GUI.Properties.Resources.sign_up_icon1;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("OpenSymbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(42, -17);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 80);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Opret";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
+            this.opret_sekretaer_button.BackgroundImage = global::View_GUI.Properties.Resources.sign_up_icon1;
+            this.opret_sekretaer_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.opret_sekretaer_button.FlatAppearance.BorderSize = 0;
+            this.opret_sekretaer_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.opret_sekretaer_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.opret_sekretaer_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.opret_sekretaer_button.Font = new System.Drawing.Font("OpenSymbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.opret_sekretaer_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.opret_sekretaer_button.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.opret_sekretaer_button.Location = new System.Drawing.Point(42, -17);
+            this.opret_sekretaer_button.Name = "opret_sekretaer_button";
+            this.opret_sekretaer_button.Size = new System.Drawing.Size(50, 80);
+            this.opret_sekretaer_button.TabIndex = 0;
+            this.opret_sekretaer_button.Text = "Opret";
+            this.opret_sekretaer_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.opret_sekretaer_button.UseVisualStyleBackColor = true;
             // 
             // Save_button
             // 
@@ -337,23 +337,23 @@
         private System.Windows.Forms.Label sekretaer_Top_label;
         private System.Windows.Forms.Panel backgroundName_Top_panel;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button vis_rediger_sekretaer_button;
+        private System.Windows.Forms.Button opret_sekretaer_button;
         private System.Windows.Forms.Panel backPanel_Textboxes_panel;
         private System.Windows.Forms.Button Save_button;
         private System.Windows.Forms.Label adr_label;
-        private System.Windows.Forms.TextBox adr_textBox;
+        private System.Windows.Forms.TextBox sekretaer_adr_textBox;
         private System.Windows.Forms.Panel background_textboxes_top_panel;
         private System.Windows.Forms.Label opret_Kunder_label;
         private System.Windows.Forms.Label zipCode_label;
-        private System.Windows.Forms.TextBox zipcCode_textBox;
+        private System.Windows.Forms.TextBox sekretaer_zipcCode_textBox;
         private System.Windows.Forms.Label tlf_label;
-        private System.Windows.Forms.TextBox tlf_textBox;
+        private System.Windows.Forms.TextBox sekretaer_tlf_textBox;
         private System.Windows.Forms.Label surname_label;
-        private System.Windows.Forms.TextBox surname_textBox;
+        private System.Windows.Forms.TextBox sekretaer_surname_textBox;
         private System.Windows.Forms.Label id_label;
-        private System.Windows.Forms.TextBox id_textBox;
+        private System.Windows.Forms.TextBox sekretaer_id_textBox;
         private System.Windows.Forms.Label name_label;
-        private System.Windows.Forms.TextBox name_textBox;
+        private System.Windows.Forms.TextBox sekretaer_name_textBox;
     }
 }

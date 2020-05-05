@@ -319,6 +319,7 @@ namespace View_GUI
             KunderForm9.Hide();
             KoerselForm10.Hide();
             HomeForm11.Hide();
+            DeveloperForm12.Hide();
 
         }
 

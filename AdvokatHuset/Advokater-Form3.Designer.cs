@@ -30,18 +30,18 @@
         {
             this.Advokater_Top_label = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.top_background_panel = new System.Windows.Forms.Panel();
             this.backPanel_Textboxes_panel = new System.Windows.Forms.Panel();
-            this.adr_textBox = new System.Windows.Forms.TextBox();
+            this.advokat_adr_textBox = new System.Windows.Forms.TextBox();
             this.background_textboxes_top_panel = new System.Windows.Forms.Panel();
             this.opret_Advokat_label = new System.Windows.Forms.Label();
-            this.zipcCode_textBox = new System.Windows.Forms.TextBox();
-            this.tlf_textBox = new System.Windows.Forms.TextBox();
-            this.surname_textBox = new System.Windows.Forms.TextBox();
-            this.id_textBox = new System.Windows.Forms.TextBox();
-            this.name_textBox = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.advokat_zipcCode_textBox = new System.Windows.Forms.TextBox();
+            this.advokat_tlf_textBox = new System.Windows.Forms.TextBox();
+            this.advokat_surname_textBox = new System.Windows.Forms.TextBox();
+            this.advokat_id_textBox = new System.Windows.Forms.TextBox();
+            this.advokat_name_textBox = new System.Windows.Forms.TextBox();
+            this.advokat_vis_rediger_buttom = new System.Windows.Forms.Button();
+            this.advokat_opret_button = new System.Windows.Forms.Button();
             this.Save_button = new System.Windows.Forms.Button();
             this.adr_label = new System.Windows.Forms.Label();
             this.zipCode_label = new System.Windows.Forms.Label();
@@ -50,7 +50,7 @@
             this.id_label = new System.Windows.Forms.Label();
             this.name_label = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.top_background_panel.SuspendLayout();
             this.backPanel_Textboxes_panel.SuspendLayout();
             this.background_textboxes_top_panel.SuspendLayout();
             this.SuspendLayout();
@@ -76,17 +76,17 @@
             this.panel1.Size = new System.Drawing.Size(117, 44);
             this.panel1.TabIndex = 5;
             // 
-            // panel2
+            // top_background_panel
             // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Location = new System.Drawing.Point(365, 76);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(238, 70);
-            this.panel2.TabIndex = 14;
+            this.top_background_panel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.top_background_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(44)))), ((int)(((byte)(52)))));
+            this.top_background_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.top_background_panel.Controls.Add(this.advokat_vis_rediger_buttom);
+            this.top_background_panel.Controls.Add(this.advokat_opret_button);
+            this.top_background_panel.Location = new System.Drawing.Point(365, 76);
+            this.top_background_panel.Name = "top_background_panel";
+            this.top_background_panel.Size = new System.Drawing.Size(238, 70);
+            this.top_background_panel.TabIndex = 14;
             // 
             // backPanel_Textboxes_panel
             // 
@@ -95,29 +95,29 @@
             this.backPanel_Textboxes_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.backPanel_Textboxes_panel.Controls.Add(this.Save_button);
             this.backPanel_Textboxes_panel.Controls.Add(this.adr_label);
-            this.backPanel_Textboxes_panel.Controls.Add(this.adr_textBox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.advokat_adr_textBox);
             this.backPanel_Textboxes_panel.Controls.Add(this.background_textboxes_top_panel);
             this.backPanel_Textboxes_panel.Controls.Add(this.zipCode_label);
-            this.backPanel_Textboxes_panel.Controls.Add(this.zipcCode_textBox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.advokat_zipcCode_textBox);
             this.backPanel_Textboxes_panel.Controls.Add(this.tlf_label);
-            this.backPanel_Textboxes_panel.Controls.Add(this.tlf_textBox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.advokat_tlf_textBox);
             this.backPanel_Textboxes_panel.Controls.Add(this.surname_label);
-            this.backPanel_Textboxes_panel.Controls.Add(this.surname_textBox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.advokat_surname_textBox);
             this.backPanel_Textboxes_panel.Controls.Add(this.id_label);
-            this.backPanel_Textboxes_panel.Controls.Add(this.id_textBox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.advokat_id_textBox);
             this.backPanel_Textboxes_panel.Controls.Add(this.name_label);
-            this.backPanel_Textboxes_panel.Controls.Add(this.name_textBox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.advokat_name_textBox);
             this.backPanel_Textboxes_panel.Location = new System.Drawing.Point(284, 155);
             this.backPanel_Textboxes_panel.Name = "backPanel_Textboxes_panel";
             this.backPanel_Textboxes_panel.Size = new System.Drawing.Size(394, 388);
             this.backPanel_Textboxes_panel.TabIndex = 13;
             // 
-            // adr_textBox
+            // advokat_adr_textBox
             // 
-            this.adr_textBox.Location = new System.Drawing.Point(158, 249);
-            this.adr_textBox.Name = "adr_textBox";
-            this.adr_textBox.Size = new System.Drawing.Size(100, 20);
-            this.adr_textBox.TabIndex = 20;
+            this.advokat_adr_textBox.Location = new System.Drawing.Point(158, 249);
+            this.advokat_adr_textBox.Name = "advokat_adr_textBox";
+            this.advokat_adr_textBox.Size = new System.Drawing.Size(100, 20);
+            this.advokat_adr_textBox.TabIndex = 20;
             // 
             // background_textboxes_top_panel
             // 
@@ -141,78 +141,78 @@
             this.opret_Advokat_label.TabIndex = 1;
             this.opret_Advokat_label.Text = "Opret Advokat";
             // 
-            // zipcCode_textBox
+            // advokat_zipcCode_textBox
             // 
-            this.zipcCode_textBox.Location = new System.Drawing.Point(158, 203);
-            this.zipcCode_textBox.Name = "zipcCode_textBox";
-            this.zipcCode_textBox.Size = new System.Drawing.Size(100, 20);
-            this.zipcCode_textBox.TabIndex = 18;
+            this.advokat_zipcCode_textBox.Location = new System.Drawing.Point(158, 203);
+            this.advokat_zipcCode_textBox.Name = "advokat_zipcCode_textBox";
+            this.advokat_zipcCode_textBox.Size = new System.Drawing.Size(100, 20);
+            this.advokat_zipcCode_textBox.TabIndex = 18;
             // 
-            // tlf_textBox
+            // advokat_tlf_textBox
             // 
-            this.tlf_textBox.Location = new System.Drawing.Point(158, 294);
-            this.tlf_textBox.Name = "tlf_textBox";
-            this.tlf_textBox.Size = new System.Drawing.Size(100, 20);
-            this.tlf_textBox.TabIndex = 16;
+            this.advokat_tlf_textBox.Location = new System.Drawing.Point(158, 294);
+            this.advokat_tlf_textBox.Name = "advokat_tlf_textBox";
+            this.advokat_tlf_textBox.Size = new System.Drawing.Size(100, 20);
+            this.advokat_tlf_textBox.TabIndex = 16;
             // 
-            // surname_textBox
+            // advokat_surname_textBox
             // 
-            this.surname_textBox.Location = new System.Drawing.Point(158, 157);
-            this.surname_textBox.Name = "surname_textBox";
-            this.surname_textBox.Size = new System.Drawing.Size(100, 20);
-            this.surname_textBox.TabIndex = 14;
+            this.advokat_surname_textBox.Location = new System.Drawing.Point(158, 157);
+            this.advokat_surname_textBox.Name = "advokat_surname_textBox";
+            this.advokat_surname_textBox.Size = new System.Drawing.Size(100, 20);
+            this.advokat_surname_textBox.TabIndex = 14;
             // 
-            // id_textBox
+            // advokat_id_textBox
             // 
-            this.id_textBox.Location = new System.Drawing.Point(158, 63);
-            this.id_textBox.Name = "id_textBox";
-            this.id_textBox.Size = new System.Drawing.Size(100, 20);
-            this.id_textBox.TabIndex = 12;
+            this.advokat_id_textBox.Location = new System.Drawing.Point(158, 63);
+            this.advokat_id_textBox.Name = "advokat_id_textBox";
+            this.advokat_id_textBox.Size = new System.Drawing.Size(100, 20);
+            this.advokat_id_textBox.TabIndex = 12;
             // 
-            // name_textBox
+            // advokat_name_textBox
             // 
-            this.name_textBox.Location = new System.Drawing.Point(158, 111);
-            this.name_textBox.Name = "name_textBox";
-            this.name_textBox.Size = new System.Drawing.Size(100, 20);
-            this.name_textBox.TabIndex = 10;
+            this.advokat_name_textBox.Location = new System.Drawing.Point(158, 111);
+            this.advokat_name_textBox.Name = "advokat_name_textBox";
+            this.advokat_name_textBox.Size = new System.Drawing.Size(100, 20);
+            this.advokat_name_textBox.TabIndex = 10;
             // 
-            // button2
+            // advokat_vis_rediger_buttom
             // 
-            this.button2.BackgroundImage = global::View_GUI.Properties.Resources.addressbook_edit_icon__3_;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("OpenSymbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(121, -4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 68);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Vis / Rediger";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
+            this.advokat_vis_rediger_buttom.BackgroundImage = global::View_GUI.Properties.Resources.addressbook_edit_icon__3_;
+            this.advokat_vis_rediger_buttom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.advokat_vis_rediger_buttom.FlatAppearance.BorderSize = 0;
+            this.advokat_vis_rediger_buttom.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.advokat_vis_rediger_buttom.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.advokat_vis_rediger_buttom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.advokat_vis_rediger_buttom.Font = new System.Drawing.Font("OpenSymbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.advokat_vis_rediger_buttom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.advokat_vis_rediger_buttom.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.advokat_vis_rediger_buttom.Location = new System.Drawing.Point(121, -4);
+            this.advokat_vis_rediger_buttom.Name = "advokat_vis_rediger_buttom";
+            this.advokat_vis_rediger_buttom.Size = new System.Drawing.Size(94, 68);
+            this.advokat_vis_rediger_buttom.TabIndex = 1;
+            this.advokat_vis_rediger_buttom.Text = "Vis / Rediger";
+            this.advokat_vis_rediger_buttom.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.advokat_vis_rediger_buttom.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // advokat_opret_button
             // 
-            this.button1.BackgroundImage = global::View_GUI.Properties.Resources.sign_up_icon1;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("OpenSymbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(42, -17);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 80);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Opret";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
+            this.advokat_opret_button.BackgroundImage = global::View_GUI.Properties.Resources.sign_up_icon1;
+            this.advokat_opret_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.advokat_opret_button.FlatAppearance.BorderSize = 0;
+            this.advokat_opret_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.advokat_opret_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.advokat_opret_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.advokat_opret_button.Font = new System.Drawing.Font("OpenSymbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.advokat_opret_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.advokat_opret_button.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.advokat_opret_button.Location = new System.Drawing.Point(42, -17);
+            this.advokat_opret_button.Name = "advokat_opret_button";
+            this.advokat_opret_button.Size = new System.Drawing.Size(50, 80);
+            this.advokat_opret_button.TabIndex = 0;
+            this.advokat_opret_button.Text = "Opret";
+            this.advokat_opret_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.advokat_opret_button.UseVisualStyleBackColor = true;
             // 
             // Save_button
             // 
@@ -315,7 +315,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(900, 555);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.top_background_panel);
             this.Controls.Add(this.backPanel_Textboxes_panel);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -323,7 +323,7 @@
             this.Text = "Advokater_Form3";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
+            this.top_background_panel.ResumeLayout(false);
             this.backPanel_Textboxes_panel.ResumeLayout(false);
             this.backPanel_Textboxes_panel.PerformLayout();
             this.background_textboxes_top_panel.ResumeLayout(false);
@@ -336,24 +336,24 @@
 
         private System.Windows.Forms.Label Advokater_Top_label;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel top_background_panel;
+        private System.Windows.Forms.Button advokat_vis_rediger_buttom;
+        private System.Windows.Forms.Button advokat_opret_button;
         private System.Windows.Forms.Panel backPanel_Textboxes_panel;
         private System.Windows.Forms.Button Save_button;
         private System.Windows.Forms.Label adr_label;
-        private System.Windows.Forms.TextBox adr_textBox;
+        private System.Windows.Forms.TextBox advokat_adr_textBox;
         private System.Windows.Forms.Panel background_textboxes_top_panel;
         private System.Windows.Forms.Label opret_Advokat_label;
         private System.Windows.Forms.Label zipCode_label;
-        private System.Windows.Forms.TextBox zipcCode_textBox;
+        private System.Windows.Forms.TextBox advokat_zipcCode_textBox;
         private System.Windows.Forms.Label tlf_label;
-        private System.Windows.Forms.TextBox tlf_textBox;
+        private System.Windows.Forms.TextBox advokat_tlf_textBox;
         private System.Windows.Forms.Label surname_label;
-        private System.Windows.Forms.TextBox surname_textBox;
+        private System.Windows.Forms.TextBox advokat_surname_textBox;
         private System.Windows.Forms.Label id_label;
-        private System.Windows.Forms.TextBox id_textBox;
+        private System.Windows.Forms.TextBox advokat_id_textBox;
         private System.Windows.Forms.Label name_label;
-        private System.Windows.Forms.TextBox name_textBox;
+        private System.Windows.Forms.TextBox advokat_name_textBox;
     }
 }

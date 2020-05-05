@@ -30,19 +30,19 @@
         {
             this.Kunde_Top_label = new System.Windows.Forms.Label();
             this.backgroundName_Top_panel = new System.Windows.Forms.Panel();
-            this.name_textBox = new System.Windows.Forms.TextBox();
+            this.kunder_name_textBox = new System.Windows.Forms.TextBox();
             this.backPanel_Textboxes_panel = new System.Windows.Forms.Panel();
             this.background_textboxes_top_panel = new System.Windows.Forms.Panel();
             this.opret_Kunder_label = new System.Windows.Forms.Label();
-            this.id_textBox = new System.Windows.Forms.TextBox();
-            this.surname_textBox = new System.Windows.Forms.TextBox();
-            this.tlf_textBox = new System.Windows.Forms.TextBox();
-            this.zipcCode_textBox = new System.Windows.Forms.TextBox();
-            this.adr_textBox = new System.Windows.Forms.TextBox();
+            this.kunder_id_textBox = new System.Windows.Forms.TextBox();
+            this.kunder_surname_textBox = new System.Windows.Forms.TextBox();
+            this.kunder_tlf_textBox = new System.Windows.Forms.TextBox();
+            this.kunder_zipcCode_textBox = new System.Windows.Forms.TextBox();
+            this.kunder_adr_textBox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.Save_button = new System.Windows.Forms.Button();
+            this.vis_rediger_kunder_button = new System.Windows.Forms.Button();
+            this.opret_kunde_button = new System.Windows.Forms.Button();
+            this.kunder_Save_button = new System.Windows.Forms.Button();
             this.adr_label = new System.Windows.Forms.Label();
             this.zipCode_label = new System.Windows.Forms.Label();
             this.tlf_label = new System.Windows.Forms.Label();
@@ -76,32 +76,32 @@
             this.backgroundName_Top_panel.Size = new System.Drawing.Size(95, 44);
             this.backgroundName_Top_panel.TabIndex = 9;
             // 
-            // name_textBox
+            // kunder_name_textBox
             // 
-            this.name_textBox.Location = new System.Drawing.Point(158, 111);
-            this.name_textBox.Name = "name_textBox";
-            this.name_textBox.Size = new System.Drawing.Size(100, 20);
-            this.name_textBox.TabIndex = 10;
+            this.kunder_name_textBox.Location = new System.Drawing.Point(158, 111);
+            this.kunder_name_textBox.Name = "kunder_name_textBox";
+            this.kunder_name_textBox.Size = new System.Drawing.Size(100, 20);
+            this.kunder_name_textBox.TabIndex = 10;
             // 
             // backPanel_Textboxes_panel
             // 
             this.backPanel_Textboxes_panel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.backPanel_Textboxes_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.backPanel_Textboxes_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.backPanel_Textboxes_panel.Controls.Add(this.Save_button);
+            this.backPanel_Textboxes_panel.Controls.Add(this.kunder_Save_button);
             this.backPanel_Textboxes_panel.Controls.Add(this.adr_label);
-            this.backPanel_Textboxes_panel.Controls.Add(this.adr_textBox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.kunder_adr_textBox);
             this.backPanel_Textboxes_panel.Controls.Add(this.background_textboxes_top_panel);
             this.backPanel_Textboxes_panel.Controls.Add(this.zipCode_label);
-            this.backPanel_Textboxes_panel.Controls.Add(this.zipcCode_textBox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.kunder_zipcCode_textBox);
             this.backPanel_Textboxes_panel.Controls.Add(this.tlf_label);
-            this.backPanel_Textboxes_panel.Controls.Add(this.tlf_textBox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.kunder_tlf_textBox);
             this.backPanel_Textboxes_panel.Controls.Add(this.surname_label);
-            this.backPanel_Textboxes_panel.Controls.Add(this.surname_textBox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.kunder_surname_textBox);
             this.backPanel_Textboxes_panel.Controls.Add(this.id_label);
-            this.backPanel_Textboxes_panel.Controls.Add(this.id_textBox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.kunder_id_textBox);
             this.backPanel_Textboxes_panel.Controls.Add(this.name_label);
-            this.backPanel_Textboxes_panel.Controls.Add(this.name_textBox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.kunder_name_textBox);
             this.backPanel_Textboxes_panel.Location = new System.Drawing.Point(284, 155);
             this.backPanel_Textboxes_panel.Name = "backPanel_Textboxes_panel";
             this.backPanel_Textboxes_panel.Size = new System.Drawing.Size(394, 388);
@@ -129,107 +129,107 @@
             this.opret_Kunder_label.TabIndex = 1;
             this.opret_Kunder_label.Text = "Opret Kunde";
             // 
-            // id_textBox
+            // kunder_id_textBox
             // 
-            this.id_textBox.Location = new System.Drawing.Point(158, 63);
-            this.id_textBox.Name = "id_textBox";
-            this.id_textBox.Size = new System.Drawing.Size(100, 20);
-            this.id_textBox.TabIndex = 12;
+            this.kunder_id_textBox.Location = new System.Drawing.Point(158, 63);
+            this.kunder_id_textBox.Name = "kunder_id_textBox";
+            this.kunder_id_textBox.Size = new System.Drawing.Size(100, 20);
+            this.kunder_id_textBox.TabIndex = 12;
             // 
-            // surname_textBox
+            // kunder_surname_textBox
             // 
-            this.surname_textBox.Location = new System.Drawing.Point(158, 157);
-            this.surname_textBox.Name = "surname_textBox";
-            this.surname_textBox.Size = new System.Drawing.Size(100, 20);
-            this.surname_textBox.TabIndex = 14;
+            this.kunder_surname_textBox.Location = new System.Drawing.Point(158, 157);
+            this.kunder_surname_textBox.Name = "kunder_surname_textBox";
+            this.kunder_surname_textBox.Size = new System.Drawing.Size(100, 20);
+            this.kunder_surname_textBox.TabIndex = 14;
             // 
-            // tlf_textBox
+            // kunder_tlf_textBox
             // 
-            this.tlf_textBox.Location = new System.Drawing.Point(158, 294);
-            this.tlf_textBox.Name = "tlf_textBox";
-            this.tlf_textBox.Size = new System.Drawing.Size(100, 20);
-            this.tlf_textBox.TabIndex = 16;
+            this.kunder_tlf_textBox.Location = new System.Drawing.Point(158, 294);
+            this.kunder_tlf_textBox.Name = "kunder_tlf_textBox";
+            this.kunder_tlf_textBox.Size = new System.Drawing.Size(100, 20);
+            this.kunder_tlf_textBox.TabIndex = 16;
             // 
-            // zipcCode_textBox
+            // kunder_zipcCode_textBox
             // 
-            this.zipcCode_textBox.Location = new System.Drawing.Point(158, 203);
-            this.zipcCode_textBox.Name = "zipcCode_textBox";
-            this.zipcCode_textBox.Size = new System.Drawing.Size(100, 20);
-            this.zipcCode_textBox.TabIndex = 18;
+            this.kunder_zipcCode_textBox.Location = new System.Drawing.Point(158, 203);
+            this.kunder_zipcCode_textBox.Name = "kunder_zipcCode_textBox";
+            this.kunder_zipcCode_textBox.Size = new System.Drawing.Size(100, 20);
+            this.kunder_zipcCode_textBox.TabIndex = 18;
             // 
-            // adr_textBox
+            // kunder_adr_textBox
             // 
-            this.adr_textBox.Location = new System.Drawing.Point(158, 249);
-            this.adr_textBox.Name = "adr_textBox";
-            this.adr_textBox.Size = new System.Drawing.Size(100, 20);
-            this.adr_textBox.TabIndex = 20;
+            this.kunder_adr_textBox.Location = new System.Drawing.Point(158, 249);
+            this.kunder_adr_textBox.Name = "kunder_adr_textBox";
+            this.kunder_adr_textBox.Size = new System.Drawing.Size(100, 20);
+            this.kunder_adr_textBox.TabIndex = 20;
             // 
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.vis_rediger_kunder_button);
+            this.panel1.Controls.Add(this.opret_kunde_button);
             this.panel1.Location = new System.Drawing.Point(365, 76);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(238, 70);
             this.panel1.TabIndex = 12;
             // 
-            // button2
+            // vis_rediger_kunder_button
             // 
-            this.button2.BackgroundImage = global::View_GUI.Properties.Resources.addressbook_edit_icon__3_;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("OpenSymbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(121, -4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 68);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Vis / Rediger";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
+            this.vis_rediger_kunder_button.BackgroundImage = global::View_GUI.Properties.Resources.addressbook_edit_icon__3_;
+            this.vis_rediger_kunder_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.vis_rediger_kunder_button.FlatAppearance.BorderSize = 0;
+            this.vis_rediger_kunder_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.vis_rediger_kunder_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.vis_rediger_kunder_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.vis_rediger_kunder_button.Font = new System.Drawing.Font("OpenSymbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vis_rediger_kunder_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.vis_rediger_kunder_button.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.vis_rediger_kunder_button.Location = new System.Drawing.Point(121, -4);
+            this.vis_rediger_kunder_button.Name = "vis_rediger_kunder_button";
+            this.vis_rediger_kunder_button.Size = new System.Drawing.Size(94, 68);
+            this.vis_rediger_kunder_button.TabIndex = 1;
+            this.vis_rediger_kunder_button.Text = "Vis / Rediger";
+            this.vis_rediger_kunder_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.vis_rediger_kunder_button.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // opret_kunde_button
             // 
-            this.button1.BackgroundImage = global::View_GUI.Properties.Resources.sign_up_icon1;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("OpenSymbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(42, -17);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 80);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Opret";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
+            this.opret_kunde_button.BackgroundImage = global::View_GUI.Properties.Resources.sign_up_icon1;
+            this.opret_kunde_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.opret_kunde_button.FlatAppearance.BorderSize = 0;
+            this.opret_kunde_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.opret_kunde_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.opret_kunde_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.opret_kunde_button.Font = new System.Drawing.Font("OpenSymbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.opret_kunde_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.opret_kunde_button.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.opret_kunde_button.Location = new System.Drawing.Point(42, -17);
+            this.opret_kunde_button.Name = "opret_kunde_button";
+            this.opret_kunde_button.Size = new System.Drawing.Size(50, 80);
+            this.opret_kunde_button.TabIndex = 0;
+            this.opret_kunde_button.Text = "Opret";
+            this.opret_kunde_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.opret_kunde_button.UseVisualStyleBackColor = true;
             // 
-            // Save_button
+            // kunder_Save_button
             // 
-            this.Save_button.FlatAppearance.BorderSize = 0;
-            this.Save_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.Save_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
-            this.Save_button.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Save_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
-            this.Save_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
-            this.Save_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Save_button.Location = new System.Drawing.Point(163, 335);
-            this.Save_button.Name = "Save_button";
-            this.Save_button.Size = new System.Drawing.Size(90, 30);
-            this.Save_button.TabIndex = 21;
-            this.Save_button.Text = "Gem";
-            this.Save_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Save_button.UseVisualStyleBackColor = true;
+            this.kunder_Save_button.FlatAppearance.BorderSize = 0;
+            this.kunder_Save_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.kunder_Save_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.kunder_Save_button.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kunder_Save_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
+            this.kunder_Save_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
+            this.kunder_Save_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.kunder_Save_button.Location = new System.Drawing.Point(163, 335);
+            this.kunder_Save_button.Name = "kunder_Save_button";
+            this.kunder_Save_button.Size = new System.Drawing.Size(90, 30);
+            this.kunder_Save_button.TabIndex = 21;
+            this.kunder_Save_button.Text = "Gem";
+            this.kunder_Save_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.kunder_Save_button.UseVisualStyleBackColor = true;
             // 
             // adr_label
             // 
@@ -336,24 +336,24 @@
 
         private System.Windows.Forms.Label Kunde_Top_label;
         private System.Windows.Forms.Panel backgroundName_Top_panel;
-        private System.Windows.Forms.TextBox name_textBox;
+        private System.Windows.Forms.TextBox kunder_name_textBox;
         private System.Windows.Forms.Panel backPanel_Textboxes_panel;
         private System.Windows.Forms.Panel background_textboxes_top_panel;
         private System.Windows.Forms.Label opret_Kunder_label;
         private System.Windows.Forms.Label name_label;
         private System.Windows.Forms.Label adr_label;
-        private System.Windows.Forms.TextBox adr_textBox;
+        private System.Windows.Forms.TextBox kunder_adr_textBox;
         private System.Windows.Forms.Label zipCode_label;
-        private System.Windows.Forms.TextBox zipcCode_textBox;
+        private System.Windows.Forms.TextBox kunder_zipcCode_textBox;
         private System.Windows.Forms.Label tlf_label;
-        private System.Windows.Forms.TextBox tlf_textBox;
+        private System.Windows.Forms.TextBox kunder_tlf_textBox;
         private System.Windows.Forms.Label surname_label;
-        private System.Windows.Forms.TextBox surname_textBox;
+        private System.Windows.Forms.TextBox kunder_surname_textBox;
         private System.Windows.Forms.Label id_label;
-        private System.Windows.Forms.TextBox id_textBox;
-        private System.Windows.Forms.Button Save_button;
+        private System.Windows.Forms.TextBox kunder_id_textBox;
+        private System.Windows.Forms.Button kunder_Save_button;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button opret_kunde_button;
+        private System.Windows.Forms.Button vis_rediger_kunder_button;
     }
 }

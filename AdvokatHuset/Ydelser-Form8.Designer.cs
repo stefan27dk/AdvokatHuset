@@ -32,20 +32,20 @@
             this.backgroundName_Top_panel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.backPanel_Textboxes_panel = new System.Windows.Forms.Panel();
-            this.adr_textBox = new System.Windows.Forms.TextBox();
+            this.ydelse_adr_textBox = new System.Windows.Forms.TextBox();
             this.background_textboxes_top_panel = new System.Windows.Forms.Panel();
             this.opret_Kunder_label = new System.Windows.Forms.Label();
-            this.pris_textBox = new System.Windows.Forms.TextBox();
-            this.nr_textBox = new System.Windows.Forms.TextBox();
-            this.navn_textBox = new System.Windows.Forms.TextBox();
-            this.type_comboBox = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.Save_button = new System.Windows.Forms.Button();
+            this.ydelse_pris_textBox = new System.Windows.Forms.TextBox();
+            this.ydelse_nr_textBox = new System.Windows.Forms.TextBox();
+            this.ydelse_navn_textBox = new System.Windows.Forms.TextBox();
+            this.ydelse_type_comboBox = new System.Windows.Forms.ComboBox();
+            this.vis_rediger_button = new System.Windows.Forms.Button();
+            this.ydelse_opret_button = new System.Windows.Forms.Button();
+            this.ydelse_Save_button = new System.Windows.Forms.Button();
             this.art_label = new System.Windows.Forms.Label();
             this.type_label = new System.Windows.Forms.Label();
             this.Pris_label = new System.Windows.Forms.Label();
-            this.id_label = new System.Windows.Forms.Label();
+            this.nr_label = new System.Windows.Forms.Label();
             this.name_label = new System.Windows.Forms.Label();
             this.backgroundName_Top_panel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -79,8 +79,8 @@
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(54)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.vis_rediger_button);
+            this.panel1.Controls.Add(this.ydelse_opret_button);
             this.panel1.Location = new System.Drawing.Point(365, 76);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(238, 70);
@@ -91,29 +91,29 @@
             this.backPanel_Textboxes_panel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.backPanel_Textboxes_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(54)))));
             this.backPanel_Textboxes_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.backPanel_Textboxes_panel.Controls.Add(this.type_comboBox);
-            this.backPanel_Textboxes_panel.Controls.Add(this.Save_button);
+            this.backPanel_Textboxes_panel.Controls.Add(this.ydelse_type_comboBox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.ydelse_Save_button);
             this.backPanel_Textboxes_panel.Controls.Add(this.art_label);
-            this.backPanel_Textboxes_panel.Controls.Add(this.adr_textBox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.ydelse_adr_textBox);
             this.backPanel_Textboxes_panel.Controls.Add(this.background_textboxes_top_panel);
             this.backPanel_Textboxes_panel.Controls.Add(this.type_label);
             this.backPanel_Textboxes_panel.Controls.Add(this.Pris_label);
-            this.backPanel_Textboxes_panel.Controls.Add(this.pris_textBox);
-            this.backPanel_Textboxes_panel.Controls.Add(this.id_label);
-            this.backPanel_Textboxes_panel.Controls.Add(this.nr_textBox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.ydelse_pris_textBox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.nr_label);
+            this.backPanel_Textboxes_panel.Controls.Add(this.ydelse_nr_textBox);
             this.backPanel_Textboxes_panel.Controls.Add(this.name_label);
-            this.backPanel_Textboxes_panel.Controls.Add(this.navn_textBox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.ydelse_navn_textBox);
             this.backPanel_Textboxes_panel.Location = new System.Drawing.Point(284, 155);
             this.backPanel_Textboxes_panel.Name = "backPanel_Textboxes_panel";
             this.backPanel_Textboxes_panel.Size = new System.Drawing.Size(394, 388);
             this.backPanel_Textboxes_panel.TabIndex = 13;
             // 
-            // adr_textBox
+            // ydelse_adr_textBox
             // 
-            this.adr_textBox.Location = new System.Drawing.Point(158, 249);
-            this.adr_textBox.Name = "adr_textBox";
-            this.adr_textBox.Size = new System.Drawing.Size(100, 20);
-            this.adr_textBox.TabIndex = 20;
+            this.ydelse_adr_textBox.Location = new System.Drawing.Point(158, 249);
+            this.ydelse_adr_textBox.Name = "ydelse_adr_textBox";
+            this.ydelse_adr_textBox.Size = new System.Drawing.Size(100, 20);
+            this.ydelse_adr_textBox.TabIndex = 20;
             // 
             // background_textboxes_top_panel
             // 
@@ -137,89 +137,89 @@
             this.opret_Kunder_label.TabIndex = 1;
             this.opret_Kunder_label.Text = "Opret Ydelse";
             // 
-            // pris_textBox
+            // ydelse_pris_textBox
             // 
-            this.pris_textBox.Location = new System.Drawing.Point(158, 157);
-            this.pris_textBox.Name = "pris_textBox";
-            this.pris_textBox.Size = new System.Drawing.Size(100, 20);
-            this.pris_textBox.TabIndex = 14;
+            this.ydelse_pris_textBox.Location = new System.Drawing.Point(158, 157);
+            this.ydelse_pris_textBox.Name = "ydelse_pris_textBox";
+            this.ydelse_pris_textBox.Size = new System.Drawing.Size(100, 20);
+            this.ydelse_pris_textBox.TabIndex = 14;
             // 
-            // nr_textBox
+            // ydelse_nr_textBox
             // 
-            this.nr_textBox.Location = new System.Drawing.Point(158, 63);
-            this.nr_textBox.Name = "nr_textBox";
-            this.nr_textBox.Size = new System.Drawing.Size(100, 20);
-            this.nr_textBox.TabIndex = 12;
+            this.ydelse_nr_textBox.Location = new System.Drawing.Point(158, 63);
+            this.ydelse_nr_textBox.Name = "ydelse_nr_textBox";
+            this.ydelse_nr_textBox.Size = new System.Drawing.Size(100, 20);
+            this.ydelse_nr_textBox.TabIndex = 12;
             // 
-            // navn_textBox
+            // ydelse_navn_textBox
             // 
-            this.navn_textBox.Location = new System.Drawing.Point(158, 111);
-            this.navn_textBox.Name = "navn_textBox";
-            this.navn_textBox.Size = new System.Drawing.Size(100, 20);
-            this.navn_textBox.TabIndex = 10;
+            this.ydelse_navn_textBox.Location = new System.Drawing.Point(158, 111);
+            this.ydelse_navn_textBox.Name = "ydelse_navn_textBox";
+            this.ydelse_navn_textBox.Size = new System.Drawing.Size(100, 20);
+            this.ydelse_navn_textBox.TabIndex = 10;
             // 
-            // type_comboBox
+            // ydelse_type_comboBox
             // 
-            this.type_comboBox.FormattingEnabled = true;
-            this.type_comboBox.Location = new System.Drawing.Point(156, 203);
-            this.type_comboBox.Name = "type_comboBox";
-            this.type_comboBox.Size = new System.Drawing.Size(103, 21);
-            this.type_comboBox.TabIndex = 22;
+            this.ydelse_type_comboBox.FormattingEnabled = true;
+            this.ydelse_type_comboBox.Location = new System.Drawing.Point(156, 203);
+            this.ydelse_type_comboBox.Name = "ydelse_type_comboBox";
+            this.ydelse_type_comboBox.Size = new System.Drawing.Size(103, 21);
+            this.ydelse_type_comboBox.TabIndex = 22;
             // 
-            // button2
+            // vis_rediger_button
             // 
-            this.button2.BackgroundImage = global::View_GUI.Properties.Resources.addressbook_edit_icon__3_;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("OpenSymbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(121, -4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 68);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Vis / Rediger";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
+            this.vis_rediger_button.BackgroundImage = global::View_GUI.Properties.Resources.addressbook_edit_icon__3_;
+            this.vis_rediger_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.vis_rediger_button.FlatAppearance.BorderSize = 0;
+            this.vis_rediger_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.vis_rediger_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.vis_rediger_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.vis_rediger_button.Font = new System.Drawing.Font("OpenSymbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vis_rediger_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.vis_rediger_button.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.vis_rediger_button.Location = new System.Drawing.Point(121, -4);
+            this.vis_rediger_button.Name = "vis_rediger_button";
+            this.vis_rediger_button.Size = new System.Drawing.Size(94, 68);
+            this.vis_rediger_button.TabIndex = 1;
+            this.vis_rediger_button.Text = "Vis / Rediger";
+            this.vis_rediger_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.vis_rediger_button.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // ydelse_opret_button
             // 
-            this.button1.BackgroundImage = global::View_GUI.Properties.Resources.sign_up_icon1;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("OpenSymbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(42, -17);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 80);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Opret";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
+            this.ydelse_opret_button.BackgroundImage = global::View_GUI.Properties.Resources.sign_up_icon1;
+            this.ydelse_opret_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ydelse_opret_button.FlatAppearance.BorderSize = 0;
+            this.ydelse_opret_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.ydelse_opret_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.ydelse_opret_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ydelse_opret_button.Font = new System.Drawing.Font("OpenSymbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ydelse_opret_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.ydelse_opret_button.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ydelse_opret_button.Location = new System.Drawing.Point(42, -17);
+            this.ydelse_opret_button.Name = "ydelse_opret_button";
+            this.ydelse_opret_button.Size = new System.Drawing.Size(50, 80);
+            this.ydelse_opret_button.TabIndex = 0;
+            this.ydelse_opret_button.Text = "Opret";
+            this.ydelse_opret_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ydelse_opret_button.UseVisualStyleBackColor = true;
             // 
-            // Save_button
+            // ydelse_Save_button
             // 
-            this.Save_button.FlatAppearance.BorderSize = 0;
-            this.Save_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.Save_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
-            this.Save_button.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Save_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
-            this.Save_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
-            this.Save_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Save_button.Location = new System.Drawing.Point(163, 335);
-            this.Save_button.Name = "Save_button";
-            this.Save_button.Size = new System.Drawing.Size(90, 30);
-            this.Save_button.TabIndex = 21;
-            this.Save_button.Text = "Gem";
-            this.Save_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Save_button.UseVisualStyleBackColor = true;
+            this.ydelse_Save_button.FlatAppearance.BorderSize = 0;
+            this.ydelse_Save_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.ydelse_Save_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.ydelse_Save_button.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ydelse_Save_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
+            this.ydelse_Save_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
+            this.ydelse_Save_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ydelse_Save_button.Location = new System.Drawing.Point(163, 335);
+            this.ydelse_Save_button.Name = "ydelse_Save_button";
+            this.ydelse_Save_button.Size = new System.Drawing.Size(90, 30);
+            this.ydelse_Save_button.TabIndex = 21;
+            this.ydelse_Save_button.Text = "Gem";
+            this.ydelse_Save_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ydelse_Save_button.UseVisualStyleBackColor = true;
             // 
             // art_label
             // 
@@ -260,18 +260,18 @@
             this.Pris_label.Text = "Pris:";
             this.Pris_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // id_label
+            // nr_label
             // 
-            this.id_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.id_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(190)))), ((int)(((byte)(240)))));
-            this.id_label.Image = global::View_GUI.Properties.Resources.barcode_icon;
-            this.id_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.id_label.Location = new System.Drawing.Point(82, 59);
-            this.id_label.Name = "id_label";
-            this.id_label.Size = new System.Drawing.Size(70, 24);
-            this.id_label.TabIndex = 11;
-            this.id_label.Text = "Nr:";
-            this.id_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.nr_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.nr_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(190)))), ((int)(((byte)(240)))));
+            this.nr_label.Image = global::View_GUI.Properties.Resources.barcode_icon;
+            this.nr_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.nr_label.Location = new System.Drawing.Point(82, 59);
+            this.nr_label.Name = "nr_label";
+            this.nr_label.Size = new System.Drawing.Size(70, 24);
+            this.nr_label.TabIndex = 11;
+            this.nr_label.Text = "Nr:";
+            this.nr_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // name_label
             // 
@@ -314,21 +314,21 @@
         private System.Windows.Forms.Label Ydelser_Top_label;
         private System.Windows.Forms.Panel backgroundName_Top_panel;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button vis_rediger_button;
+        private System.Windows.Forms.Button ydelse_opret_button;
         private System.Windows.Forms.Panel backPanel_Textboxes_panel;
-        private System.Windows.Forms.Button Save_button;
+        private System.Windows.Forms.Button ydelse_Save_button;
         private System.Windows.Forms.Label art_label;
-        private System.Windows.Forms.TextBox adr_textBox;
+        private System.Windows.Forms.TextBox ydelse_adr_textBox;
         private System.Windows.Forms.Panel background_textboxes_top_panel;
         private System.Windows.Forms.Label opret_Kunder_label;
         private System.Windows.Forms.Label type_label;
         private System.Windows.Forms.Label Pris_label;
-        private System.Windows.Forms.TextBox pris_textBox;
-        private System.Windows.Forms.Label id_label;
-        private System.Windows.Forms.TextBox nr_textBox;
+        private System.Windows.Forms.TextBox ydelse_pris_textBox;
+        private System.Windows.Forms.Label nr_label;
+        private System.Windows.Forms.TextBox ydelse_nr_textBox;
         private System.Windows.Forms.Label name_label;
-        private System.Windows.Forms.TextBox navn_textBox;
-        private System.Windows.Forms.ComboBox type_comboBox;
+        private System.Windows.Forms.TextBox ydelse_navn_textBox;
+        private System.Windows.Forms.ComboBox ydelse_type_comboBox;
     }
 }

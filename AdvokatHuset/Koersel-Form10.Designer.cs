@@ -33,12 +33,12 @@
             this.backPanel_Textboxes_panel = new System.Windows.Forms.Panel();
             this.background_textboxes_top_panel = new System.Windows.Forms.Panel();
             this.reg_koersel_label = new System.Windows.Forms.Label();
-            this.koersel_Tid_textBox = new System.Windows.Forms.TextBox();
-            this.sager_ID_comboBox = new System.Windows.Forms.ComboBox();
-            this.advokat_ID_comboBox = new System.Windows.Forms.ComboBox();
-            this.date_dateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.noter_textBox = new System.Windows.Forms.TextBox();
-            this.Save_button = new System.Windows.Forms.Button();
+            this.koersel_koersel_Tid_textBox = new System.Windows.Forms.TextBox();
+            this.koersel_sager_ID_comboBox = new System.Windows.Forms.ComboBox();
+            this.koersel_advokat_ID_comboBox = new System.Windows.Forms.ComboBox();
+            this.koersel_date_dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.koersel_noter_textBox = new System.Windows.Forms.TextBox();
+            this.koersel_Save_button = new System.Windows.Forms.Button();
             this.noter_label = new System.Windows.Forms.Label();
             this.dato_label = new System.Windows.Forms.Label();
             this.koersel_tid_label = new System.Windows.Forms.Label();
@@ -75,16 +75,16 @@
             this.backPanel_Textboxes_panel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.backPanel_Textboxes_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.backPanel_Textboxes_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.backPanel_Textboxes_panel.Controls.Add(this.noter_textBox);
-            this.backPanel_Textboxes_panel.Controls.Add(this.date_dateTimePicker);
-            this.backPanel_Textboxes_panel.Controls.Add(this.advokat_ID_comboBox);
-            this.backPanel_Textboxes_panel.Controls.Add(this.sager_ID_comboBox);
-            this.backPanel_Textboxes_panel.Controls.Add(this.Save_button);
+            this.backPanel_Textboxes_panel.Controls.Add(this.koersel_noter_textBox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.koersel_date_dateTimePicker);
+            this.backPanel_Textboxes_panel.Controls.Add(this.koersel_advokat_ID_comboBox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.koersel_sager_ID_comboBox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.koersel_Save_button);
             this.backPanel_Textboxes_panel.Controls.Add(this.noter_label);
             this.backPanel_Textboxes_panel.Controls.Add(this.background_textboxes_top_panel);
             this.backPanel_Textboxes_panel.Controls.Add(this.dato_label);
             this.backPanel_Textboxes_panel.Controls.Add(this.koersel_tid_label);
-            this.backPanel_Textboxes_panel.Controls.Add(this.koersel_Tid_textBox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.koersel_koersel_Tid_textBox);
             this.backPanel_Textboxes_panel.Controls.Add(this.Advokat_id_label);
             this.backPanel_Textboxes_panel.Controls.Add(this.sag_Id_label);
             this.backPanel_Textboxes_panel.Location = new System.Drawing.Point(284, 155);
@@ -114,60 +114,60 @@
             this.reg_koersel_label.TabIndex = 1;
             this.reg_koersel_label.Text = "Registrer Kørsel";
             // 
-            // koersel_Tid_textBox
+            // koersel_koersel_Tid_textBox
             // 
-            this.koersel_Tid_textBox.Location = new System.Drawing.Point(163, 152);
-            this.koersel_Tid_textBox.Name = "koersel_Tid_textBox";
-            this.koersel_Tid_textBox.Size = new System.Drawing.Size(70, 20);
-            this.koersel_Tid_textBox.TabIndex = 14;
+            this.koersel_koersel_Tid_textBox.Location = new System.Drawing.Point(163, 152);
+            this.koersel_koersel_Tid_textBox.Name = "koersel_koersel_Tid_textBox";
+            this.koersel_koersel_Tid_textBox.Size = new System.Drawing.Size(70, 20);
+            this.koersel_koersel_Tid_textBox.TabIndex = 14;
             // 
-            // sager_ID_comboBox
+            // koersel_sager_ID_comboBox
             // 
-            this.sager_ID_comboBox.FormattingEnabled = true;
-            this.sager_ID_comboBox.Location = new System.Drawing.Point(163, 110);
-            this.sager_ID_comboBox.Name = "sager_ID_comboBox";
-            this.sager_ID_comboBox.Size = new System.Drawing.Size(70, 21);
-            this.sager_ID_comboBox.TabIndex = 22;
+            this.koersel_sager_ID_comboBox.FormattingEnabled = true;
+            this.koersel_sager_ID_comboBox.Location = new System.Drawing.Point(163, 110);
+            this.koersel_sager_ID_comboBox.Name = "koersel_sager_ID_comboBox";
+            this.koersel_sager_ID_comboBox.Size = new System.Drawing.Size(70, 21);
+            this.koersel_sager_ID_comboBox.TabIndex = 22;
             // 
-            // advokat_ID_comboBox
+            // koersel_advokat_ID_comboBox
             // 
-            this.advokat_ID_comboBox.FormattingEnabled = true;
-            this.advokat_ID_comboBox.Location = new System.Drawing.Point(163, 60);
-            this.advokat_ID_comboBox.Name = "advokat_ID_comboBox";
-            this.advokat_ID_comboBox.Size = new System.Drawing.Size(70, 21);
-            this.advokat_ID_comboBox.TabIndex = 23;
+            this.koersel_advokat_ID_comboBox.FormattingEnabled = true;
+            this.koersel_advokat_ID_comboBox.Location = new System.Drawing.Point(163, 60);
+            this.koersel_advokat_ID_comboBox.Name = "koersel_advokat_ID_comboBox";
+            this.koersel_advokat_ID_comboBox.Size = new System.Drawing.Size(70, 21);
+            this.koersel_advokat_ID_comboBox.TabIndex = 23;
             // 
-            // date_dateTimePicker
+            // koersel_date_dateTimePicker
             // 
-            this.date_dateTimePicker.Location = new System.Drawing.Point(165, 198);
-            this.date_dateTimePicker.Name = "date_dateTimePicker";
-            this.date_dateTimePicker.Size = new System.Drawing.Size(136, 20);
-            this.date_dateTimePicker.TabIndex = 24;
+            this.koersel_date_dateTimePicker.Location = new System.Drawing.Point(165, 198);
+            this.koersel_date_dateTimePicker.Name = "koersel_date_dateTimePicker";
+            this.koersel_date_dateTimePicker.Size = new System.Drawing.Size(136, 20);
+            this.koersel_date_dateTimePicker.TabIndex = 24;
             // 
-            // noter_textBox
+            // koersel_noter_textBox
             // 
-            this.noter_textBox.Location = new System.Drawing.Point(121, 269);
-            this.noter_textBox.Multiline = true;
-            this.noter_textBox.Name = "noter_textBox";
-            this.noter_textBox.Size = new System.Drawing.Size(202, 39);
-            this.noter_textBox.TabIndex = 25;
+            this.koersel_noter_textBox.Location = new System.Drawing.Point(121, 269);
+            this.koersel_noter_textBox.Multiline = true;
+            this.koersel_noter_textBox.Name = "koersel_noter_textBox";
+            this.koersel_noter_textBox.Size = new System.Drawing.Size(202, 39);
+            this.koersel_noter_textBox.TabIndex = 25;
             // 
-            // Save_button
+            // koersel_Save_button
             // 
-            this.Save_button.FlatAppearance.BorderSize = 0;
-            this.Save_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.Save_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
-            this.Save_button.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Save_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
-            this.Save_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
-            this.Save_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Save_button.Location = new System.Drawing.Point(163, 335);
-            this.Save_button.Name = "Save_button";
-            this.Save_button.Size = new System.Drawing.Size(90, 30);
-            this.Save_button.TabIndex = 21;
-            this.Save_button.Text = "Gem";
-            this.Save_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Save_button.UseVisualStyleBackColor = true;
+            this.koersel_Save_button.FlatAppearance.BorderSize = 0;
+            this.koersel_Save_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.koersel_Save_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.koersel_Save_button.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.koersel_Save_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
+            this.koersel_Save_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
+            this.koersel_Save_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.koersel_Save_button.Location = new System.Drawing.Point(163, 335);
+            this.koersel_Save_button.Name = "koersel_Save_button";
+            this.koersel_Save_button.Size = new System.Drawing.Size(90, 30);
+            this.koersel_Save_button.TabIndex = 21;
+            this.koersel_Save_button.Text = "Gem";
+            this.koersel_Save_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.koersel_Save_button.UseVisualStyleBackColor = true;
             // 
             // noter_label
             // 
@@ -260,18 +260,18 @@
         private System.Windows.Forms.Label korsel_Top_label;
         private System.Windows.Forms.Panel backgroundName_Top_panel;
         private System.Windows.Forms.Panel backPanel_Textboxes_panel;
-        private System.Windows.Forms.Button Save_button;
+        private System.Windows.Forms.Button koersel_Save_button;
         private System.Windows.Forms.Label noter_label;
         private System.Windows.Forms.Panel background_textboxes_top_panel;
         private System.Windows.Forms.Label reg_koersel_label;
         private System.Windows.Forms.Label dato_label;
         private System.Windows.Forms.Label koersel_tid_label;
-        private System.Windows.Forms.TextBox koersel_Tid_textBox;
+        private System.Windows.Forms.TextBox koersel_koersel_Tid_textBox;
         private System.Windows.Forms.Label Advokat_id_label;
         private System.Windows.Forms.Label sag_Id_label;
-        private System.Windows.Forms.ComboBox sager_ID_comboBox;
-        private System.Windows.Forms.ComboBox advokat_ID_comboBox;
-        private System.Windows.Forms.TextBox noter_textBox;
-        private System.Windows.Forms.DateTimePicker date_dateTimePicker;
+        private System.Windows.Forms.ComboBox koersel_sager_ID_comboBox;
+        private System.Windows.Forms.ComboBox koersel_advokat_ID_comboBox;
+        private System.Windows.Forms.TextBox koersel_noter_textBox;
+        private System.Windows.Forms.DateTimePicker koersel_date_dateTimePicker;
     }
 }
