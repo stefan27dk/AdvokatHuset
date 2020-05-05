@@ -83,9 +83,9 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Location = new System.Drawing.Point(365, 82);
+            this.panel2.Location = new System.Drawing.Point(365, 76);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(238, 65);
+            this.panel2.Size = new System.Drawing.Size(238, 70);
             this.panel2.TabIndex = 14;
             // 
             // backPanel_Textboxes_panel
