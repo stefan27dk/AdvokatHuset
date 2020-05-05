@@ -695,5 +695,38 @@
   <ItemGroup>
     <None Include="Resources\Untitled %283%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apps-konsole-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apps-konsole-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paint-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paint-icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Coin-us-dollar-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question-type-one-correct-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question-type-one-correct-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled %281%291.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

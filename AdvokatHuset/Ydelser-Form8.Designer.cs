@@ -30,7 +30,27 @@
         {
             this.Ydelser_Top_label = new System.Windows.Forms.Label();
             this.backgroundName_Top_panel = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.backPanel_Textboxes_panel = new System.Windows.Forms.Panel();
+            this.adr_textBox = new System.Windows.Forms.TextBox();
+            this.background_textboxes_top_panel = new System.Windows.Forms.Panel();
+            this.opret_Kunder_label = new System.Windows.Forms.Label();
+            this.pris_textBox = new System.Windows.Forms.TextBox();
+            this.nr_textBox = new System.Windows.Forms.TextBox();
+            this.navn_textBox = new System.Windows.Forms.TextBox();
+            this.type_comboBox = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Save_button = new System.Windows.Forms.Button();
+            this.art_label = new System.Windows.Forms.Label();
+            this.type_label = new System.Windows.Forms.Label();
+            this.Pris_label = new System.Windows.Forms.Label();
+            this.id_label = new System.Windows.Forms.Label();
+            this.name_label = new System.Windows.Forms.Label();
             this.backgroundName_Top_panel.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.backPanel_Textboxes_panel.SuspendLayout();
+            this.background_textboxes_top_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // Ydelser_Top_label
@@ -54,18 +74,237 @@
             this.backgroundName_Top_panel.Size = new System.Drawing.Size(97, 44);
             this.backgroundName_Top_panel.TabIndex = 10;
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(54)))));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Location = new System.Drawing.Point(365, 76);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(238, 70);
+            this.panel1.TabIndex = 14;
+            // 
+            // backPanel_Textboxes_panel
+            // 
+            this.backPanel_Textboxes_panel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.backPanel_Textboxes_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(54)))));
+            this.backPanel_Textboxes_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.backPanel_Textboxes_panel.Controls.Add(this.type_comboBox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.Save_button);
+            this.backPanel_Textboxes_panel.Controls.Add(this.art_label);
+            this.backPanel_Textboxes_panel.Controls.Add(this.adr_textBox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.background_textboxes_top_panel);
+            this.backPanel_Textboxes_panel.Controls.Add(this.type_label);
+            this.backPanel_Textboxes_panel.Controls.Add(this.Pris_label);
+            this.backPanel_Textboxes_panel.Controls.Add(this.pris_textBox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.id_label);
+            this.backPanel_Textboxes_panel.Controls.Add(this.nr_textBox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.name_label);
+            this.backPanel_Textboxes_panel.Controls.Add(this.navn_textBox);
+            this.backPanel_Textboxes_panel.Location = new System.Drawing.Point(284, 155);
+            this.backPanel_Textboxes_panel.Name = "backPanel_Textboxes_panel";
+            this.backPanel_Textboxes_panel.Size = new System.Drawing.Size(394, 388);
+            this.backPanel_Textboxes_panel.TabIndex = 13;
+            // 
+            // adr_textBox
+            // 
+            this.adr_textBox.Location = new System.Drawing.Point(158, 249);
+            this.adr_textBox.Name = "adr_textBox";
+            this.adr_textBox.Size = new System.Drawing.Size(100, 20);
+            this.adr_textBox.TabIndex = 20;
+            // 
+            // background_textboxes_top_panel
+            // 
+            this.background_textboxes_top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.background_textboxes_top_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.background_textboxes_top_panel.Controls.Add(this.opret_Kunder_label);
+            this.background_textboxes_top_panel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.background_textboxes_top_panel.Location = new System.Drawing.Point(0, 0);
+            this.background_textboxes_top_panel.Name = "background_textboxes_top_panel";
+            this.background_textboxes_top_panel.Size = new System.Drawing.Size(392, 26);
+            this.background_textboxes_top_panel.TabIndex = 10;
+            // 
+            // opret_Kunder_label
+            // 
+            this.opret_Kunder_label.AutoSize = true;
+            this.opret_Kunder_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.opret_Kunder_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(92)))));
+            this.opret_Kunder_label.Location = new System.Drawing.Point(151, 3);
+            this.opret_Kunder_label.Name = "opret_Kunder_label";
+            this.opret_Kunder_label.Size = new System.Drawing.Size(109, 21);
+            this.opret_Kunder_label.TabIndex = 1;
+            this.opret_Kunder_label.Text = "Opret Ydelse";
+            // 
+            // pris_textBox
+            // 
+            this.pris_textBox.Location = new System.Drawing.Point(158, 157);
+            this.pris_textBox.Name = "pris_textBox";
+            this.pris_textBox.Size = new System.Drawing.Size(100, 20);
+            this.pris_textBox.TabIndex = 14;
+            // 
+            // nr_textBox
+            // 
+            this.nr_textBox.Location = new System.Drawing.Point(158, 63);
+            this.nr_textBox.Name = "nr_textBox";
+            this.nr_textBox.Size = new System.Drawing.Size(100, 20);
+            this.nr_textBox.TabIndex = 12;
+            // 
+            // navn_textBox
+            // 
+            this.navn_textBox.Location = new System.Drawing.Point(158, 111);
+            this.navn_textBox.Name = "navn_textBox";
+            this.navn_textBox.Size = new System.Drawing.Size(100, 20);
+            this.navn_textBox.TabIndex = 10;
+            // 
+            // type_comboBox
+            // 
+            this.type_comboBox.FormattingEnabled = true;
+            this.type_comboBox.Location = new System.Drawing.Point(156, 203);
+            this.type_comboBox.Name = "type_comboBox";
+            this.type_comboBox.Size = new System.Drawing.Size(103, 21);
+            this.type_comboBox.TabIndex = 22;
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::View_GUI.Properties.Resources.addressbook_edit_icon__3_;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("OpenSymbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.Location = new System.Drawing.Point(121, -4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(94, 68);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Vis / Rediger";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::View_GUI.Properties.Resources.sign_up_icon1;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("OpenSymbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(42, -17);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(50, 80);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Opret";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // Save_button
+            // 
+            this.Save_button.FlatAppearance.BorderSize = 0;
+            this.Save_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.Save_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.Save_button.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Save_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
+            this.Save_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
+            this.Save_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Save_button.Location = new System.Drawing.Point(163, 335);
+            this.Save_button.Name = "Save_button";
+            this.Save_button.Size = new System.Drawing.Size(90, 30);
+            this.Save_button.TabIndex = 21;
+            this.Save_button.Text = "Gem";
+            this.Save_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Save_button.UseVisualStyleBackColor = true;
+            // 
+            // art_label
+            // 
+            this.art_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.art_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.art_label.Image = global::View_GUI.Properties.Resources.question_type_one_correct_icon1;
+            this.art_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.art_label.Location = new System.Drawing.Point(70, 245);
+            this.art_label.Name = "art_label";
+            this.art_label.Size = new System.Drawing.Size(80, 33);
+            this.art_label.TabIndex = 19;
+            this.art_label.Text = "Art:";
+            this.art_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // type_label
+            // 
+            this.type_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.type_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.type_label.Image = global::View_GUI.Properties.Resources.Untitled__1_1;
+            this.type_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.type_label.Location = new System.Drawing.Point(42, 195);
+            this.type_label.Name = "type_label";
+            this.type_label.Size = new System.Drawing.Size(110, 35);
+            this.type_label.TabIndex = 17;
+            this.type_label.Text = "Type:";
+            this.type_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // Pris_label
+            // 
+            this.Pris_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.Pris_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.Pris_label.Image = global::View_GUI.Properties.Resources.Coin_us_dollar_icon;
+            this.Pris_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Pris_label.Location = new System.Drawing.Point(65, 149);
+            this.Pris_label.Name = "Pris_label";
+            this.Pris_label.Size = new System.Drawing.Size(85, 33);
+            this.Pris_label.TabIndex = 13;
+            this.Pris_label.Text = "Pris:";
+            this.Pris_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // id_label
+            // 
+            this.id_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.id_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(190)))), ((int)(((byte)(240)))));
+            this.id_label.Image = global::View_GUI.Properties.Resources.barcode_icon;
+            this.id_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.id_label.Location = new System.Drawing.Point(82, 59);
+            this.id_label.Name = "id_label";
+            this.id_label.Size = new System.Drawing.Size(70, 24);
+            this.id_label.TabIndex = 11;
+            this.id_label.Text = "Nr:";
+            this.id_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // name_label
+            // 
+            this.name_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.name_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.name_label.Image = global::View_GUI.Properties.Resources.ID_icon;
+            this.name_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.name_label.Location = new System.Drawing.Point(56, 107);
+            this.name_label.Name = "name_label";
+            this.name_label.Size = new System.Drawing.Size(95, 24);
+            this.name_label.TabIndex = 2;
+            this.name_label.Text = "Navn:";
+            this.name_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // Ydelser_Form8
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(900, 555);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.backPanel_Textboxes_panel);
             this.Controls.Add(this.backgroundName_Top_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Ydelser_Form8";
             this.Text = "Ydelser_Form8";
             this.backgroundName_Top_panel.ResumeLayout(false);
             this.backgroundName_Top_panel.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.backPanel_Textboxes_panel.ResumeLayout(false);
+            this.backPanel_Textboxes_panel.PerformLayout();
+            this.background_textboxes_top_panel.ResumeLayout(false);
+            this.background_textboxes_top_panel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -74,5 +313,22 @@
 
         private System.Windows.Forms.Label Ydelser_Top_label;
         private System.Windows.Forms.Panel backgroundName_Top_panel;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel backPanel_Textboxes_panel;
+        private System.Windows.Forms.Button Save_button;
+        private System.Windows.Forms.Label art_label;
+        private System.Windows.Forms.TextBox adr_textBox;
+        private System.Windows.Forms.Panel background_textboxes_top_panel;
+        private System.Windows.Forms.Label opret_Kunder_label;
+        private System.Windows.Forms.Label type_label;
+        private System.Windows.Forms.Label Pris_label;
+        private System.Windows.Forms.TextBox pris_textBox;
+        private System.Windows.Forms.Label id_label;
+        private System.Windows.Forms.TextBox nr_textBox;
+        private System.Windows.Forms.Label name_label;
+        private System.Windows.Forms.TextBox navn_textBox;
+        private System.Windows.Forms.ComboBox type_comboBox;
     }
 }

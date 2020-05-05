@@ -43,34 +43,14 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.main_screenshot_button = new System.Windows.Forms.ToolStripMenuItem();
             this.screenshotEntireScreen_button = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.selection_screenshot_button = new System.Windows.Forms.ToolStripMenuItem();
             this.Home_Button = new System.Windows.Forms.Button();
             this.Menu_Search_button = new System.Windows.Forms.Button();
-            this.bell_button = new System.Windows.Forms.Button();
-            this.Loacal_Folder_button = new System.Windows.Forms.Button();
-            this.Back_Button = new System.Windows.Forms.Button();
-            this.item_menu_button = new System.Windows.Forms.Button();
-            this.Forward_Button = new System.Windows.Forms.Button();
-            this.statistics_button = new System.Windows.Forms.Button();
-            this.text_writer_button = new System.Windows.Forms.Button();
-            this.world_clock_button = new System.Windows.Forms.Button();
-            this.timer_button = new System.Windows.Forms.Button();
-            this.open_my_email_button = new System.Windows.Forms.Button();
-            this.notes_button = new System.Windows.Forms.Button();
-            this.open_my_webpage_button = new System.Windows.Forms.Button();
-            this.calculator_button = new System.Windows.Forms.Button();
-            this.open_browser_button = new System.Windows.Forms.Button();
-            this.calendar_button = new System.Windows.Forms.Button();
-            this.developer_button = new System.Windows.Forms.Button();
-            this.sound_recorder_button = new System.Windows.Forms.Button();
-            this.open_paint_button = new System.Windows.Forms.Button();
-            this.setting_button = new System.Windows.Forms.Button();
-            this.task_button1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.General_Menu_Panel = new System.Windows.Forms.Panel();
             this.General_menuStrip = new System.Windows.Forms.MenuStrip();
             this.sagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.visSagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -138,7 +118,27 @@
             this.searchToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.General_Menu_Panel = new System.Windows.Forms.Panel();
+            this.bell_button = new System.Windows.Forms.Button();
+            this.Loacal_Folder_button = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.Back_Button = new System.Windows.Forms.Button();
+            this.item_menu_button = new System.Windows.Forms.Button();
+            this.Forward_Button = new System.Windows.Forms.Button();
+            this.statistics_button = new System.Windows.Forms.Button();
+            this.text_writer_button = new System.Windows.Forms.Button();
+            this.world_clock_button = new System.Windows.Forms.Button();
+            this.timer_button = new System.Windows.Forms.Button();
+            this.open_my_email_button = new System.Windows.Forms.Button();
+            this.notes_button = new System.Windows.Forms.Button();
+            this.open_my_webpage_button = new System.Windows.Forms.Button();
+            this.calculator_button = new System.Windows.Forms.Button();
+            this.open_browser_button = new System.Windows.Forms.Button();
+            this.calendar_button = new System.Windows.Forms.Button();
+            this.developer_button = new System.Windows.Forms.Button();
+            this.sound_recorder_button = new System.Windows.Forms.Button();
+            this.open_paint_button = new System.Windows.Forms.Button();
+            this.setting_button = new System.Windows.Forms.Button();
+            this.task_button1 = new System.Windows.Forms.Button();
             this.Loader_panel.SuspendLayout();
             this.item_menu_top_panel.SuspendLayout();
             this.itemMenuPanelDropDown.SuspendLayout();
@@ -147,8 +147,8 @@
             this.screenshot_DropDown_menustrip.SuspendLayout();
             this.Top_Menu_panel.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
-            this.General_menuStrip.SuspendLayout();
             this.General_Menu_Panel.SuspendLayout();
+            this.General_menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // Loader_panel
@@ -299,6 +299,16 @@
             this.toolStripMenuItem5.Size = new System.Drawing.Size(80, 22);
             this.toolStripMenuItem5.Text = "2";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Gray;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 59);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1178, 2);
+            this.panel1.TabIndex = 13;
+            // 
             // main_screenshot_button
             // 
             this.main_screenshot_button.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
@@ -402,340 +412,19 @@
             this.Menu_Search_button.TabIndex = 11;
             this.Menu_Search_button.UseVisualStyleBackColor = true;
             // 
-            // bell_button
+            // General_Menu_Panel
             // 
-            this.bell_button.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.bell_button.BackgroundImage = global::View_GUI.Properties.Resources.bell_icon__1_;
-            this.bell_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.bell_button.FlatAppearance.BorderSize = 0;
-            this.bell_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.bell_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.bell_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bell_button.Location = new System.Drawing.Point(1037, 0);
-            this.bell_button.Name = "bell_button";
-            this.bell_button.Size = new System.Drawing.Size(35, 35);
-            this.bell_button.TabIndex = 20;
-            this.bell_button.UseVisualStyleBackColor = true;
-            this.bell_button.Click += new System.EventHandler(this.bell_button_Click);
-            // 
-            // Loacal_Folder_button
-            // 
-            this.Loacal_Folder_button.BackgroundImage = global::View_GUI.Properties.Resources.folder_icon;
-            this.Loacal_Folder_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Loacal_Folder_button.FlatAppearance.BorderSize = 0;
-            this.Loacal_Folder_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.Loacal_Folder_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.Loacal_Folder_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Loacal_Folder_button.Location = new System.Drawing.Point(263, 4);
-            this.Loacal_Folder_button.Margin = new System.Windows.Forms.Padding(0);
-            this.Loacal_Folder_button.Name = "Loacal_Folder_button";
-            this.Loacal_Folder_button.Size = new System.Drawing.Size(35, 35);
-            this.Loacal_Folder_button.TabIndex = 9;
-            this.Loacal_Folder_button.UseVisualStyleBackColor = true;
-            this.Loacal_Folder_button.Click += new System.EventHandler(this.Loacal_Folder_button_Click);
-            this.Loacal_Folder_button.MouseHover += new System.EventHandler(this.Loacal_Folder_button_MouseHover);
-            // 
-            // Back_Button
-            // 
-            this.Back_Button.BackgroundImage = global::View_GUI.Properties.Resources.navigate_left_icon__1_;
-            this.Back_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Back_Button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Back_Button.FlatAppearance.BorderSize = 0;
-            this.Back_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.Back_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.Back_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Back_Button.Location = new System.Drawing.Point(69, 5);
-            this.Back_Button.Name = "Back_Button";
-            this.Back_Button.Size = new System.Drawing.Size(30, 30);
-            this.Back_Button.TabIndex = 2;
-            this.Back_Button.UseVisualStyleBackColor = true;
-            this.Back_Button.Click += new System.EventHandler(this.Back_Button_Click);
-            // 
-            // item_menu_button
-            // 
-            this.item_menu_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.item_menu_button.BackgroundImage = global::View_GUI.Properties.Resources.Untitled__1_;
-            this.item_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.item_menu_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.item_menu_button.FlatAppearance.BorderSize = 0;
-            this.item_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.item_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.item_menu_button.Location = new System.Drawing.Point(1122, 7);
-            this.item_menu_button.Name = "item_menu_button";
-            this.item_menu_button.Size = new System.Drawing.Size(33, 33);
-            this.item_menu_button.TabIndex = 5;
-            this.item_menu_button.UseVisualStyleBackColor = true;
-            this.item_menu_button.Click += new System.EventHandler(this.item_menu_button_Click_1);
-            this.item_menu_button.MouseHover += new System.EventHandler(this.item_menu_button_MouseHover);
-            // 
-            // Forward_Button
-            // 
-            this.Forward_Button.BackgroundImage = global::View_GUI.Properties.Resources.navigate_left_icon__1___1_;
-            this.Forward_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Forward_Button.FlatAppearance.BorderSize = 0;
-            this.Forward_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.Forward_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.Forward_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Forward_Button.Location = new System.Drawing.Point(152, 5);
-            this.Forward_Button.Name = "Forward_Button";
-            this.Forward_Button.Size = new System.Drawing.Size(30, 30);
-            this.Forward_Button.TabIndex = 4;
-            this.Forward_Button.UseVisualStyleBackColor = true;
-            this.Forward_Button.Click += new System.EventHandler(this.Forward_Button_Click);
-            // 
-            // statistics_button
-            // 
-            this.statistics_button.BackgroundImage = global::View_GUI.Properties.Resources.chart_search_icon;
-            this.statistics_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.statistics_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.statistics_button.FlatAppearance.BorderSize = 0;
-            this.statistics_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.statistics_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
-            this.statistics_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.statistics_button.Location = new System.Drawing.Point(80, 241);
-            this.statistics_button.Name = "statistics_button";
-            this.statistics_button.Size = new System.Drawing.Size(41, 39);
-            this.statistics_button.TabIndex = 26;
-            this.statistics_button.UseVisualStyleBackColor = true;
-            // 
-            // text_writer_button
-            // 
-            this.text_writer_button.BackgroundImage = global::View_GUI.Properties.Resources.libreoffice_writer_icon;
-            this.text_writer_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.text_writer_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.text_writer_button.FlatAppearance.BorderSize = 0;
-            this.text_writer_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.text_writer_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
-            this.text_writer_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.text_writer_button.Location = new System.Drawing.Point(143, 13);
-            this.text_writer_button.Name = "text_writer_button";
-            this.text_writer_button.Size = new System.Drawing.Size(41, 39);
-            this.text_writer_button.TabIndex = 15;
-            this.text_writer_button.UseVisualStyleBackColor = true;
-            // 
-            // world_clock_button
-            // 
-            this.world_clock_button.BackgroundImage = global::View_GUI.Properties.Resources.App_world_clock_icon2;
-            this.world_clock_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.world_clock_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.world_clock_button.FlatAppearance.BorderSize = 0;
-            this.world_clock_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.world_clock_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
-            this.world_clock_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.world_clock_button.Location = new System.Drawing.Point(16, 241);
-            this.world_clock_button.Name = "world_clock_button";
-            this.world_clock_button.Size = new System.Drawing.Size(41, 39);
-            this.world_clock_button.TabIndex = 25;
-            this.world_clock_button.UseVisualStyleBackColor = true;
-            // 
-            // timer_button
-            // 
-            this.timer_button.BackgroundImage = global::View_GUI.Properties.Resources._42608_stopwatch_icon;
-            this.timer_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.timer_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.timer_button.FlatAppearance.BorderSize = 0;
-            this.timer_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.timer_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
-            this.timer_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.timer_button.Location = new System.Drawing.Point(17, 69);
-            this.timer_button.Name = "timer_button";
-            this.timer_button.Size = new System.Drawing.Size(40, 38);
-            this.timer_button.TabIndex = 13;
-            this.timer_button.UseVisualStyleBackColor = true;
-            this.timer_button.Click += new System.EventHandler(this.timer_button_Click);
-            // 
-            // open_my_email_button
-            // 
-            this.open_my_email_button.BackgroundImage = global::View_GUI.Properties.Resources.mail_yellow_icon;
-            this.open_my_email_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.open_my_email_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.open_my_email_button.FlatAppearance.BorderSize = 0;
-            this.open_my_email_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.open_my_email_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
-            this.open_my_email_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.open_my_email_button.Location = new System.Drawing.Point(143, 182);
-            this.open_my_email_button.Name = "open_my_email_button";
-            this.open_my_email_button.Size = new System.Drawing.Size(41, 39);
-            this.open_my_email_button.TabIndex = 24;
-            this.open_my_email_button.UseVisualStyleBackColor = true;
-            // 
-            // notes_button
-            // 
-            this.notes_button.BackgroundImage = global::View_GUI.Properties.Resources.Notes_icon;
-            this.notes_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.notes_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.notes_button.FlatAppearance.BorderSize = 0;
-            this.notes_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.notes_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
-            this.notes_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.notes_button.Location = new System.Drawing.Point(77, 13);
-            this.notes_button.Name = "notes_button";
-            this.notes_button.Size = new System.Drawing.Size(41, 39);
-            this.notes_button.TabIndex = 14;
-            this.notes_button.UseVisualStyleBackColor = true;
-            // 
-            // open_my_webpage_button
-            // 
-            this.open_my_webpage_button.BackgroundImage = global::View_GUI.Properties.Resources.Webpage_icon__1_;
-            this.open_my_webpage_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.open_my_webpage_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.open_my_webpage_button.FlatAppearance.BorderSize = 0;
-            this.open_my_webpage_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.open_my_webpage_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
-            this.open_my_webpage_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.open_my_webpage_button.Location = new System.Drawing.Point(77, 182);
-            this.open_my_webpage_button.Name = "open_my_webpage_button";
-            this.open_my_webpage_button.Size = new System.Drawing.Size(41, 39);
-            this.open_my_webpage_button.TabIndex = 23;
-            this.open_my_webpage_button.UseVisualStyleBackColor = true;
-            // 
-            // calculator_button
-            // 
-            this.calculator_button.BackgroundImage = global::View_GUI.Properties.Resources.Calculator_icon;
-            this.calculator_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.calculator_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.calculator_button.FlatAppearance.BorderSize = 0;
-            this.calculator_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.calculator_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
-            this.calculator_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.calculator_button.Location = new System.Drawing.Point(143, 68);
-            this.calculator_button.Name = "calculator_button";
-            this.calculator_button.Size = new System.Drawing.Size(41, 39);
-            this.calculator_button.TabIndex = 18;
-            this.calculator_button.UseVisualStyleBackColor = true;
-            this.calculator_button.Click += new System.EventHandler(this.calculator_button_Click);
-            // 
-            // open_browser_button
-            // 
-            this.open_browser_button.BackgroundImage = global::View_GUI.Properties.Resources.Apps_preferences_web_browser_shortcuts_icon;
-            this.open_browser_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.open_browser_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.open_browser_button.FlatAppearance.BorderSize = 0;
-            this.open_browser_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.open_browser_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
-            this.open_browser_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.open_browser_button.Location = new System.Drawing.Point(16, 182);
-            this.open_browser_button.Name = "open_browser_button";
-            this.open_browser_button.Size = new System.Drawing.Size(41, 39);
-            this.open_browser_button.TabIndex = 22;
-            this.open_browser_button.UseVisualStyleBackColor = true;
-            this.open_browser_button.Click += new System.EventHandler(this.open_browser_button_Click);
-            // 
-            // calendar_button
-            // 
-            this.calendar_button.BackgroundImage = global::View_GUI.Properties.Resources.date_icon;
-            this.calendar_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.calendar_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.calendar_button.FlatAppearance.BorderSize = 0;
-            this.calendar_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.calendar_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
-            this.calendar_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.calendar_button.Location = new System.Drawing.Point(16, 13);
-            this.calendar_button.Name = "calendar_button";
-            this.calendar_button.Size = new System.Drawing.Size(41, 39);
-            this.calendar_button.TabIndex = 19;
-            this.calendar_button.UseVisualStyleBackColor = true;
-            // 
-            // developer_button
-            // 
-            this.developer_button.BackgroundImage = global::View_GUI.Properties.Resources.Apps_utilities_terminal_icon;
-            this.developer_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.developer_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.developer_button.FlatAppearance.BorderSize = 0;
-            this.developer_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.developer_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
-            this.developer_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.developer_button.Location = new System.Drawing.Point(143, 123);
-            this.developer_button.Name = "developer_button";
-            this.developer_button.Size = new System.Drawing.Size(41, 39);
-            this.developer_button.TabIndex = 17;
-            this.developer_button.UseVisualStyleBackColor = true;
-            this.developer_button.Click += new System.EventHandler(this.developer_button_Click);
-            // 
-            // sound_recorder_button
-            // 
-            this.sound_recorder_button.BackgroundImage = global::View_GUI.Properties.Resources.microphone_icon;
-            this.sound_recorder_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.sound_recorder_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.sound_recorder_button.FlatAppearance.BorderSize = 0;
-            this.sound_recorder_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.sound_recorder_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
-            this.sound_recorder_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sound_recorder_button.Location = new System.Drawing.Point(17, 123);
-            this.sound_recorder_button.Name = "sound_recorder_button";
-            this.sound_recorder_button.Size = new System.Drawing.Size(41, 39);
-            this.sound_recorder_button.TabIndex = 20;
-            this.sound_recorder_button.UseVisualStyleBackColor = true;
-            this.sound_recorder_button.Click += new System.EventHandler(this.sound_recorder_button_Click);
-            // 
-            // open_paint_button
-            // 
-            this.open_paint_button.BackgroundImage = global::View_GUI.Properties.Resources.Paint_icon;
-            this.open_paint_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.open_paint_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.open_paint_button.FlatAppearance.BorderSize = 0;
-            this.open_paint_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.open_paint_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
-            this.open_paint_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.open_paint_button.Location = new System.Drawing.Point(77, 69);
-            this.open_paint_button.Name = "open_paint_button";
-            this.open_paint_button.Size = new System.Drawing.Size(41, 39);
-            this.open_paint_button.TabIndex = 21;
-            this.open_paint_button.UseVisualStyleBackColor = true;
-            this.open_paint_button.Click += new System.EventHandler(this.open_paint_button_Click);
-            // 
-            // setting_button
-            // 
-            this.setting_button.BackgroundImage = global::View_GUI.Properties.Resources.Categories_preferences_system_icon;
-            this.setting_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.setting_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.setting_button.FlatAppearance.BorderSize = 0;
-            this.setting_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.setting_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
-            this.setting_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.setting_button.Location = new System.Drawing.Point(77, 123);
-            this.setting_button.Name = "setting_button";
-            this.setting_button.Size = new System.Drawing.Size(41, 39);
-            this.setting_button.TabIndex = 16;
-            this.setting_button.UseVisualStyleBackColor = true;
-            // 
-            // task_button1
-            // 
-            this.task_button1.BackgroundImage = global::View_GUI.Properties.Resources._42608_stopwatch_icon;
-            this.task_button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.task_button1.Location = new System.Drawing.Point(1003, 409);
-            this.task_button1.Name = "task_button1";
-            this.task_button1.Size = new System.Drawing.Size(75, 23);
-            this.task_button1.TabIndex = 3;
-            this.task_button1.Text = "Task";
-            this.task_button1.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Gray;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 59);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1178, 2);
-            this.panel1.TabIndex = 13;
-            // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.button3.BackgroundImage = global::View_GUI.Properties.Resources.Apps_Dialog_Shutdown_icon__1_;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(11, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(33, 33);
-            this.button3.TabIndex = 7;
-            this.button3.UseVisualStyleBackColor = true;
+            this.General_Menu_Panel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.General_Menu_Panel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.General_Menu_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
+            this.General_Menu_Panel.BackgroundImage = global::View_GUI.Properties.Resources.Untitled__3_;
+            this.General_Menu_Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.General_Menu_Panel.Controls.Add(this.General_menuStrip);
+            this.General_Menu_Panel.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.General_Menu_Panel.Location = new System.Drawing.Point(325, -1);
+            this.General_Menu_Panel.Name = "General_Menu_Panel";
+            this.General_Menu_Panel.Size = new System.Drawing.Size(622, 59);
+            this.General_Menu_Panel.TabIndex = 1;
             // 
             // General_menuStrip
             // 
@@ -1313,19 +1002,330 @@
             this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(130, 22);
             this.aboutToolStripMenuItem1.Text = "&About...";
             // 
-            // General_Menu_Panel
+            // bell_button
             // 
-            this.General_Menu_Panel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.General_Menu_Panel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.General_Menu_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.General_Menu_Panel.BackgroundImage = global::View_GUI.Properties.Resources.Untitled__3_;
-            this.General_Menu_Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.General_Menu_Panel.Controls.Add(this.General_menuStrip);
-            this.General_Menu_Panel.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.General_Menu_Panel.Location = new System.Drawing.Point(325, -1);
-            this.General_Menu_Panel.Name = "General_Menu_Panel";
-            this.General_Menu_Panel.Size = new System.Drawing.Size(622, 59);
-            this.General_Menu_Panel.TabIndex = 1;
+            this.bell_button.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.bell_button.BackgroundImage = global::View_GUI.Properties.Resources.bell_icon__1_;
+            this.bell_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.bell_button.FlatAppearance.BorderSize = 0;
+            this.bell_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.bell_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.bell_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bell_button.Location = new System.Drawing.Point(1037, 0);
+            this.bell_button.Name = "bell_button";
+            this.bell_button.Size = new System.Drawing.Size(35, 35);
+            this.bell_button.TabIndex = 20;
+            this.bell_button.UseVisualStyleBackColor = true;
+            this.bell_button.Click += new System.EventHandler(this.bell_button_Click);
+            // 
+            // Loacal_Folder_button
+            // 
+            this.Loacal_Folder_button.BackgroundImage = global::View_GUI.Properties.Resources.folder_icon;
+            this.Loacal_Folder_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Loacal_Folder_button.FlatAppearance.BorderSize = 0;
+            this.Loacal_Folder_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.Loacal_Folder_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.Loacal_Folder_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Loacal_Folder_button.Location = new System.Drawing.Point(263, 4);
+            this.Loacal_Folder_button.Margin = new System.Windows.Forms.Padding(0);
+            this.Loacal_Folder_button.Name = "Loacal_Folder_button";
+            this.Loacal_Folder_button.Size = new System.Drawing.Size(35, 35);
+            this.Loacal_Folder_button.TabIndex = 9;
+            this.Loacal_Folder_button.UseVisualStyleBackColor = true;
+            this.Loacal_Folder_button.Click += new System.EventHandler(this.Loacal_Folder_button_Click);
+            this.Loacal_Folder_button.MouseHover += new System.EventHandler(this.Loacal_Folder_button_MouseHover);
+            // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.button3.BackgroundImage = global::View_GUI.Properties.Resources.Apps_Dialog_Shutdown_icon__1_;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(11, 4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(33, 33);
+            this.button3.TabIndex = 7;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // Back_Button
+            // 
+            this.Back_Button.BackgroundImage = global::View_GUI.Properties.Resources.navigate_left_icon__1_;
+            this.Back_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Back_Button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Back_Button.FlatAppearance.BorderSize = 0;
+            this.Back_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.Back_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.Back_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Back_Button.Location = new System.Drawing.Point(69, 5);
+            this.Back_Button.Name = "Back_Button";
+            this.Back_Button.Size = new System.Drawing.Size(30, 30);
+            this.Back_Button.TabIndex = 2;
+            this.Back_Button.UseVisualStyleBackColor = true;
+            this.Back_Button.Click += new System.EventHandler(this.Back_Button_Click);
+            // 
+            // item_menu_button
+            // 
+            this.item_menu_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.item_menu_button.BackgroundImage = global::View_GUI.Properties.Resources.Untitled__1_;
+            this.item_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.item_menu_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.item_menu_button.FlatAppearance.BorderSize = 0;
+            this.item_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.item_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.item_menu_button.Location = new System.Drawing.Point(1122, 7);
+            this.item_menu_button.Name = "item_menu_button";
+            this.item_menu_button.Size = new System.Drawing.Size(33, 33);
+            this.item_menu_button.TabIndex = 5;
+            this.item_menu_button.UseVisualStyleBackColor = true;
+            this.item_menu_button.Click += new System.EventHandler(this.item_menu_button_Click_1);
+            this.item_menu_button.MouseHover += new System.EventHandler(this.item_menu_button_MouseHover);
+            // 
+            // Forward_Button
+            // 
+            this.Forward_Button.BackgroundImage = global::View_GUI.Properties.Resources.navigate_left_icon__1___1_;
+            this.Forward_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Forward_Button.FlatAppearance.BorderSize = 0;
+            this.Forward_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.Forward_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.Forward_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Forward_Button.Location = new System.Drawing.Point(152, 5);
+            this.Forward_Button.Name = "Forward_Button";
+            this.Forward_Button.Size = new System.Drawing.Size(30, 30);
+            this.Forward_Button.TabIndex = 4;
+            this.Forward_Button.UseVisualStyleBackColor = true;
+            this.Forward_Button.Click += new System.EventHandler(this.Forward_Button_Click);
+            // 
+            // statistics_button
+            // 
+            this.statistics_button.BackgroundImage = global::View_GUI.Properties.Resources.chart_search_icon;
+            this.statistics_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.statistics_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.statistics_button.FlatAppearance.BorderSize = 0;
+            this.statistics_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.statistics_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
+            this.statistics_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.statistics_button.Location = new System.Drawing.Point(80, 241);
+            this.statistics_button.Name = "statistics_button";
+            this.statistics_button.Size = new System.Drawing.Size(41, 39);
+            this.statistics_button.TabIndex = 26;
+            this.statistics_button.UseVisualStyleBackColor = true;
+            // 
+            // text_writer_button
+            // 
+            this.text_writer_button.BackgroundImage = global::View_GUI.Properties.Resources.libreoffice_writer_icon;
+            this.text_writer_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.text_writer_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.text_writer_button.FlatAppearance.BorderSize = 0;
+            this.text_writer_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.text_writer_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
+            this.text_writer_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.text_writer_button.Location = new System.Drawing.Point(143, 13);
+            this.text_writer_button.Name = "text_writer_button";
+            this.text_writer_button.Size = new System.Drawing.Size(41, 39);
+            this.text_writer_button.TabIndex = 15;
+            this.text_writer_button.UseVisualStyleBackColor = true;
+            // 
+            // world_clock_button
+            // 
+            this.world_clock_button.BackgroundImage = global::View_GUI.Properties.Resources.App_world_clock_icon2;
+            this.world_clock_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.world_clock_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.world_clock_button.FlatAppearance.BorderSize = 0;
+            this.world_clock_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.world_clock_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
+            this.world_clock_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.world_clock_button.Location = new System.Drawing.Point(16, 241);
+            this.world_clock_button.Name = "world_clock_button";
+            this.world_clock_button.Size = new System.Drawing.Size(41, 39);
+            this.world_clock_button.TabIndex = 25;
+            this.world_clock_button.UseVisualStyleBackColor = true;
+            // 
+            // timer_button
+            // 
+            this.timer_button.BackgroundImage = global::View_GUI.Properties.Resources._42608_stopwatch_icon;
+            this.timer_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.timer_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.timer_button.FlatAppearance.BorderSize = 0;
+            this.timer_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.timer_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
+            this.timer_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.timer_button.Location = new System.Drawing.Point(17, 69);
+            this.timer_button.Name = "timer_button";
+            this.timer_button.Size = new System.Drawing.Size(40, 38);
+            this.timer_button.TabIndex = 13;
+            this.timer_button.UseVisualStyleBackColor = true;
+            this.timer_button.Click += new System.EventHandler(this.timer_button_Click);
+            // 
+            // open_my_email_button
+            // 
+            this.open_my_email_button.BackgroundImage = global::View_GUI.Properties.Resources.mail_yellow_icon;
+            this.open_my_email_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.open_my_email_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.open_my_email_button.FlatAppearance.BorderSize = 0;
+            this.open_my_email_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.open_my_email_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
+            this.open_my_email_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.open_my_email_button.Location = new System.Drawing.Point(143, 182);
+            this.open_my_email_button.Name = "open_my_email_button";
+            this.open_my_email_button.Size = new System.Drawing.Size(41, 39);
+            this.open_my_email_button.TabIndex = 24;
+            this.open_my_email_button.UseVisualStyleBackColor = true;
+            // 
+            // notes_button
+            // 
+            this.notes_button.BackgroundImage = global::View_GUI.Properties.Resources.Notes_icon;
+            this.notes_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.notes_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.notes_button.FlatAppearance.BorderSize = 0;
+            this.notes_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.notes_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
+            this.notes_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.notes_button.Location = new System.Drawing.Point(77, 13);
+            this.notes_button.Name = "notes_button";
+            this.notes_button.Size = new System.Drawing.Size(41, 39);
+            this.notes_button.TabIndex = 14;
+            this.notes_button.UseVisualStyleBackColor = true;
+            // 
+            // open_my_webpage_button
+            // 
+            this.open_my_webpage_button.BackgroundImage = global::View_GUI.Properties.Resources.Webpage_icon__1_;
+            this.open_my_webpage_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.open_my_webpage_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.open_my_webpage_button.FlatAppearance.BorderSize = 0;
+            this.open_my_webpage_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.open_my_webpage_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
+            this.open_my_webpage_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.open_my_webpage_button.Location = new System.Drawing.Point(77, 182);
+            this.open_my_webpage_button.Name = "open_my_webpage_button";
+            this.open_my_webpage_button.Size = new System.Drawing.Size(41, 39);
+            this.open_my_webpage_button.TabIndex = 23;
+            this.open_my_webpage_button.UseVisualStyleBackColor = true;
+            // 
+            // calculator_button
+            // 
+            this.calculator_button.BackgroundImage = global::View_GUI.Properties.Resources.Calculator_icon;
+            this.calculator_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.calculator_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.calculator_button.FlatAppearance.BorderSize = 0;
+            this.calculator_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.calculator_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
+            this.calculator_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.calculator_button.Location = new System.Drawing.Point(143, 68);
+            this.calculator_button.Name = "calculator_button";
+            this.calculator_button.Size = new System.Drawing.Size(41, 39);
+            this.calculator_button.TabIndex = 18;
+            this.calculator_button.UseVisualStyleBackColor = true;
+            this.calculator_button.Click += new System.EventHandler(this.calculator_button_Click);
+            // 
+            // open_browser_button
+            // 
+            this.open_browser_button.BackgroundImage = global::View_GUI.Properties.Resources.Apps_preferences_web_browser_shortcuts_icon;
+            this.open_browser_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.open_browser_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.open_browser_button.FlatAppearance.BorderSize = 0;
+            this.open_browser_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.open_browser_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
+            this.open_browser_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.open_browser_button.Location = new System.Drawing.Point(16, 182);
+            this.open_browser_button.Name = "open_browser_button";
+            this.open_browser_button.Size = new System.Drawing.Size(41, 39);
+            this.open_browser_button.TabIndex = 22;
+            this.open_browser_button.UseVisualStyleBackColor = true;
+            this.open_browser_button.Click += new System.EventHandler(this.open_browser_button_Click);
+            // 
+            // calendar_button
+            // 
+            this.calendar_button.BackgroundImage = global::View_GUI.Properties.Resources.date_icon;
+            this.calendar_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.calendar_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.calendar_button.FlatAppearance.BorderSize = 0;
+            this.calendar_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.calendar_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
+            this.calendar_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.calendar_button.Location = new System.Drawing.Point(16, 13);
+            this.calendar_button.Name = "calendar_button";
+            this.calendar_button.Size = new System.Drawing.Size(41, 39);
+            this.calendar_button.TabIndex = 19;
+            this.calendar_button.UseVisualStyleBackColor = true;
+            // 
+            // developer_button
+            // 
+            this.developer_button.BackgroundImage = global::View_GUI.Properties.Resources.Apps_utilities_terminal_icon;
+            this.developer_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.developer_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.developer_button.FlatAppearance.BorderSize = 0;
+            this.developer_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.developer_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
+            this.developer_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.developer_button.Location = new System.Drawing.Point(143, 123);
+            this.developer_button.Name = "developer_button";
+            this.developer_button.Size = new System.Drawing.Size(41, 39);
+            this.developer_button.TabIndex = 17;
+            this.developer_button.UseVisualStyleBackColor = true;
+            this.developer_button.Click += new System.EventHandler(this.developer_button_Click);
+            // 
+            // sound_recorder_button
+            // 
+            this.sound_recorder_button.BackgroundImage = global::View_GUI.Properties.Resources.microphone_icon;
+            this.sound_recorder_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.sound_recorder_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sound_recorder_button.FlatAppearance.BorderSize = 0;
+            this.sound_recorder_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.sound_recorder_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
+            this.sound_recorder_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sound_recorder_button.Location = new System.Drawing.Point(17, 123);
+            this.sound_recorder_button.Name = "sound_recorder_button";
+            this.sound_recorder_button.Size = new System.Drawing.Size(41, 39);
+            this.sound_recorder_button.TabIndex = 20;
+            this.sound_recorder_button.UseVisualStyleBackColor = true;
+            this.sound_recorder_button.Click += new System.EventHandler(this.sound_recorder_button_Click);
+            // 
+            // open_paint_button
+            // 
+            this.open_paint_button.BackgroundImage = global::View_GUI.Properties.Resources.Untitled__5_;
+            this.open_paint_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.open_paint_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.open_paint_button.FlatAppearance.BorderSize = 0;
+            this.open_paint_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.open_paint_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
+            this.open_paint_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.open_paint_button.Location = new System.Drawing.Point(77, 69);
+            this.open_paint_button.Name = "open_paint_button";
+            this.open_paint_button.Size = new System.Drawing.Size(41, 39);
+            this.open_paint_button.TabIndex = 21;
+            this.open_paint_button.UseVisualStyleBackColor = true;
+            this.open_paint_button.Click += new System.EventHandler(this.open_paint_button_Click);
+            // 
+            // setting_button
+            // 
+            this.setting_button.BackgroundImage = global::View_GUI.Properties.Resources.Categories_preferences_system_icon;
+            this.setting_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.setting_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.setting_button.FlatAppearance.BorderSize = 0;
+            this.setting_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.setting_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
+            this.setting_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.setting_button.Location = new System.Drawing.Point(77, 123);
+            this.setting_button.Name = "setting_button";
+            this.setting_button.Size = new System.Drawing.Size(41, 39);
+            this.setting_button.TabIndex = 16;
+            this.setting_button.UseVisualStyleBackColor = true;
+            // 
+            // task_button1
+            // 
+            this.task_button1.BackgroundImage = global::View_GUI.Properties.Resources._42608_stopwatch_icon;
+            this.task_button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.task_button1.Location = new System.Drawing.Point(1003, 409);
+            this.task_button1.Name = "task_button1";
+            this.task_button1.Size = new System.Drawing.Size(75, 23);
+            this.task_button1.TabIndex = 3;
+            this.task_button1.Text = "Task";
+            this.task_button1.UseVisualStyleBackColor = true;
             // 
             // Main_Form1
             // 
@@ -1350,9 +1350,9 @@
             this.screenshot_DropDown_menustrip.PerformLayout();
             this.Top_Menu_panel.ResumeLayout(false);
             this.contextMenuStrip1.ResumeLayout(false);
+            this.General_Menu_Panel.ResumeLayout(false);
             this.General_menuStrip.ResumeLayout(false);
             this.General_menuStrip.PerformLayout();
-            this.General_Menu_Panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
