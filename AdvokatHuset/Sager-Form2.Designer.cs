@@ -32,12 +32,15 @@
             this.backgroundName_Top_panel = new System.Windows.Forms.Panel();
             this.top_background_panel = new System.Windows.Forms.Panel();
             this.backPanel_Textboxes_panel = new System.Windows.Forms.Panel();
+            this.sager_oprets_dato_dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.sager_advokat_id_textBox = new System.Windows.Forms.TextBox();
             this.sager_type_comboBox = new System.Windows.Forms.ComboBox();
             this.sager_kunde_id_texbox = new System.Windows.Forms.TextBox();
             this.background_textboxes_top_panel = new System.Windows.Forms.Panel();
             this.opret_Sager_label = new System.Windows.Forms.Label();
             this.sager_id_textBox = new System.Windows.Forms.TextBox();
-            this.sager_advokat_id_textBox = new System.Windows.Forms.TextBox();
+            this.sager_tilføj_tid_button = new System.Windows.Forms.Button();
+            this.sager_sag_ydelser_button = new System.Windows.Forms.Button();
             this.sager_vise_rediger_button = new System.Windows.Forms.Button();
             this.sager_opret_button = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,7 +49,6 @@
             this.type_label = new System.Windows.Forms.Label();
             this.id_label = new System.Windows.Forms.Label();
             this.name_label = new System.Windows.Forms.Label();
-            this.sager_oprets_dato_dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.backgroundName_Top_panel.SuspendLayout();
             this.top_background_panel.SuspendLayout();
             this.backPanel_Textboxes_panel.SuspendLayout();
@@ -79,11 +81,13 @@
             this.top_background_panel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.top_background_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(54)))));
             this.top_background_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.top_background_panel.Controls.Add(this.sager_tilføj_tid_button);
+            this.top_background_panel.Controls.Add(this.sager_sag_ydelser_button);
             this.top_background_panel.Controls.Add(this.sager_vise_rediger_button);
             this.top_background_panel.Controls.Add(this.sager_opret_button);
-            this.top_background_panel.Location = new System.Drawing.Point(365, 76);
+            this.top_background_panel.Location = new System.Drawing.Point(274, 80);
             this.top_background_panel.Name = "top_background_panel";
-            this.top_background_panel.Size = new System.Drawing.Size(238, 70);
+            this.top_background_panel.Size = new System.Drawing.Size(415, 83);
             this.top_background_panel.TabIndex = 16;
             // 
             // backPanel_Textboxes_panel
@@ -103,10 +107,24 @@
             this.backPanel_Textboxes_panel.Controls.Add(this.id_label);
             this.backPanel_Textboxes_panel.Controls.Add(this.sager_id_textBox);
             this.backPanel_Textboxes_panel.Controls.Add(this.name_label);
-            this.backPanel_Textboxes_panel.Location = new System.Drawing.Point(284, 155);
+            this.backPanel_Textboxes_panel.Location = new System.Drawing.Point(274, 174);
             this.backPanel_Textboxes_panel.Name = "backPanel_Textboxes_panel";
-            this.backPanel_Textboxes_panel.Size = new System.Drawing.Size(394, 388);
+            this.backPanel_Textboxes_panel.Size = new System.Drawing.Size(414, 388);
             this.backPanel_Textboxes_panel.TabIndex = 15;
+            // 
+            // sager_oprets_dato_dateTimePicker
+            // 
+            this.sager_oprets_dato_dateTimePicker.Location = new System.Drawing.Point(176, 111);
+            this.sager_oprets_dato_dateTimePicker.Name = "sager_oprets_dato_dateTimePicker";
+            this.sager_oprets_dato_dateTimePicker.Size = new System.Drawing.Size(140, 20);
+            this.sager_oprets_dato_dateTimePicker.TabIndex = 25;
+            // 
+            // sager_advokat_id_textBox
+            // 
+            this.sager_advokat_id_textBox.Location = new System.Drawing.Point(178, 200);
+            this.sager_advokat_id_textBox.Name = "sager_advokat_id_textBox";
+            this.sager_advokat_id_textBox.Size = new System.Drawing.Size(39, 20);
+            this.sager_advokat_id_textBox.TabIndex = 24;
             // 
             // sager_type_comboBox
             // 
@@ -131,7 +149,7 @@
             this.background_textboxes_top_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.background_textboxes_top_panel.Location = new System.Drawing.Point(0, 0);
             this.background_textboxes_top_panel.Name = "background_textboxes_top_panel";
-            this.background_textboxes_top_panel.Size = new System.Drawing.Size(392, 26);
+            this.background_textboxes_top_panel.Size = new System.Drawing.Size(412, 26);
             this.background_textboxes_top_panel.TabIndex = 10;
             // 
             // opret_Sager_label
@@ -152,16 +170,46 @@
             this.sager_id_textBox.Size = new System.Drawing.Size(39, 20);
             this.sager_id_textBox.TabIndex = 12;
             // 
-            // sager_advokat_id_textBox
+            // sager_tilføj_tid_button
             // 
-            this.sager_advokat_id_textBox.Location = new System.Drawing.Point(178, 200);
-            this.sager_advokat_id_textBox.Name = "sager_advokat_id_textBox";
-            this.sager_advokat_id_textBox.Size = new System.Drawing.Size(39, 20);
-            this.sager_advokat_id_textBox.TabIndex = 24;
+            this.sager_tilføj_tid_button.BackgroundImage = global::View_GUI.Properties.Resources.Untitled__1_3;
+            this.sager_tilføj_tid_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.sager_tilføj_tid_button.FlatAppearance.BorderSize = 0;
+            this.sager_tilføj_tid_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.sager_tilføj_tid_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.sager_tilføj_tid_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sager_tilføj_tid_button.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sager_tilføj_tid_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.sager_tilføj_tid_button.Location = new System.Drawing.Point(317, -12);
+            this.sager_tilføj_tid_button.Name = "sager_tilføj_tid_button";
+            this.sager_tilføj_tid_button.Size = new System.Drawing.Size(97, 93);
+            this.sager_tilføj_tid_button.TabIndex = 3;
+            this.sager_tilføj_tid_button.Text = "Tilføj Tid";
+            this.sager_tilføj_tid_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.sager_tilføj_tid_button.UseVisualStyleBackColor = true;
+            // 
+            // sager_sag_ydelser_button
+            // 
+            this.sager_sag_ydelser_button.BackgroundImage = global::View_GUI.Properties.Resources.Document_Add_icon;
+            this.sager_sag_ydelser_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.sager_sag_ydelser_button.FlatAppearance.BorderSize = 0;
+            this.sager_sag_ydelser_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.sager_sag_ydelser_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.sager_sag_ydelser_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sager_sag_ydelser_button.Font = new System.Drawing.Font("KacstBook", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.sager_sag_ydelser_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.sager_sag_ydelser_button.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.sager_sag_ydelser_button.Location = new System.Drawing.Point(215, -15);
+            this.sager_sag_ydelser_button.Name = "sager_sag_ydelser_button";
+            this.sager_sag_ydelser_button.Size = new System.Drawing.Size(95, 98);
+            this.sager_sag_ydelser_button.TabIndex = 2;
+            this.sager_sag_ydelser_button.Text = "Sag Ydelser";
+            this.sager_sag_ydelser_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.sager_sag_ydelser_button.UseVisualStyleBackColor = true;
             // 
             // sager_vise_rediger_button
             // 
-            this.sager_vise_rediger_button.BackgroundImage = global::View_GUI.Properties.Resources.addressbook_edit_icon__3_;
+            this.sager_vise_rediger_button.BackgroundImage = global::View_GUI.Properties.Resources.addressbook_edit_icon;
             this.sager_vise_rediger_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.sager_vise_rediger_button.FlatAppearance.BorderSize = 0;
             this.sager_vise_rediger_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
@@ -170,9 +218,9 @@
             this.sager_vise_rediger_button.Font = new System.Drawing.Font("OpenSymbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sager_vise_rediger_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.sager_vise_rediger_button.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.sager_vise_rediger_button.Location = new System.Drawing.Point(121, -4);
+            this.sager_vise_rediger_button.Location = new System.Drawing.Point(99, -13);
             this.sager_vise_rediger_button.Name = "sager_vise_rediger_button";
-            this.sager_vise_rediger_button.Size = new System.Drawing.Size(94, 68);
+            this.sager_vise_rediger_button.Size = new System.Drawing.Size(95, 94);
             this.sager_vise_rediger_button.TabIndex = 1;
             this.sager_vise_rediger_button.Text = "Vis / Rediger";
             this.sager_vise_rediger_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -180,7 +228,7 @@
             // 
             // sager_opret_button
             // 
-            this.sager_opret_button.BackgroundImage = global::View_GUI.Properties.Resources.sign_up_icon1;
+            this.sager_opret_button.BackgroundImage = global::View_GUI.Properties.Resources.addressbook_add_icon;
             this.sager_opret_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.sager_opret_button.FlatAppearance.BorderSize = 0;
             this.sager_opret_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
@@ -189,9 +237,9 @@
             this.sager_opret_button.Font = new System.Drawing.Font("OpenSymbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sager_opret_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.sager_opret_button.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.sager_opret_button.Location = new System.Drawing.Point(42, -17);
+            this.sager_opret_button.Location = new System.Drawing.Point(-8, -15);
             this.sager_opret_button.Name = "sager_opret_button";
-            this.sager_opret_button.Size = new System.Drawing.Size(50, 80);
+            this.sager_opret_button.Size = new System.Drawing.Size(95, 96);
             this.sager_opret_button.TabIndex = 0;
             this.sager_opret_button.Text = "Opret";
             this.sager_opret_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -279,20 +327,13 @@
             this.name_label.Text = "Oprets Dato:";
             this.name_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // sager_oprets_dato_dateTimePicker
-            // 
-            this.sager_oprets_dato_dateTimePicker.Location = new System.Drawing.Point(176, 111);
-            this.sager_oprets_dato_dateTimePicker.Name = "sager_oprets_dato_dateTimePicker";
-            this.sager_oprets_dato_dateTimePicker.Size = new System.Drawing.Size(140, 20);
-            this.sager_oprets_dato_dateTimePicker.TabIndex = 25;
-            // 
             // Sager_Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(900, 555);
+            this.ClientSize = new System.Drawing.Size(900, 600);
             this.Controls.Add(this.top_background_panel);
             this.Controls.Add(this.backPanel_Textboxes_panel);
             this.Controls.Add(this.backgroundName_Top_panel);
@@ -332,5 +373,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox sager_advokat_id_textBox;
         private System.Windows.Forms.DateTimePicker sager_oprets_dato_dateTimePicker;
+        private System.Windows.Forms.Button sager_tilføj_tid_button;
+        private System.Windows.Forms.Button sager_sag_ydelser_button;
     }
 }

@@ -770,5 +770,29 @@
   <ItemGroup>
     <None Include="Resources\untitled %288%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled %281%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled %281%293.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Document-Add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open-folder-add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addressbook-add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addressbook-edit-icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

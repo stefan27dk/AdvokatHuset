@@ -203,6 +203,26 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap addressbook_add_icon {
+            get {
+                object obj = ResourceManager.GetObject("addressbook-add-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap addressbook_edit_icon {
+            get {
+                object obj = ResourceManager.GetObject("addressbook-edit-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap addressbook_edit_icon__1_ {
             get {
                 object obj = ResourceManager.GetObject("addressbook-edit-icon (1)", resourceCulture);
@@ -713,6 +733,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Document_Add_icon {
+            get {
+                object obj = ResourceManager.GetObject("Document-Add-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap document_excel_icon {
             get {
                 object obj = ResourceManager.GetObject("document-excel-icon", resourceCulture);
@@ -776,6 +806,16 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap Exit_Red {
             get {
                 object obj = ResourceManager.GetObject("Exit-Red", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap folder_add_icon {
+            get {
+                object obj = ResourceManager.GetObject("folder-add-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1133,6 +1173,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Open_folder_add_icon {
+            get {
+                object obj = ResourceManager.GetObject("Open-folder-add-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Opera_Snapshot_2020_04_26_221511_cdn0_iconfinder_com {
             get {
                 object obj = ResourceManager.GetObject("Opera Snapshot_2020-04-26_221511_cdn0.iconfinder.com", resourceCulture);
@@ -1383,6 +1433,26 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Untitled__1_2 {
+            get {
+                object obj = ResourceManager.GetObject("Untitled (1)2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled__1_3 {
+            get {
+                object obj = ResourceManager.GetObject("Untitled (1)3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Untitled__2_ {
             get {
                 object obj = ResourceManager.GetObject("Untitled (2)", resourceCulture);
@@ -1526,6 +1596,16 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap untitled__8_ {
             get {
                 object obj = ResourceManager.GetObject("untitled (8)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled1 {
+            get {
+                object obj = ResourceManager.GetObject("Untitled1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

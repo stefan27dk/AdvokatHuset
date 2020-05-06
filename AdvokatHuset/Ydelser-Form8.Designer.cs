@@ -32,13 +32,13 @@
             this.backgroundName_Top_panel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.backPanel_Textboxes_panel = new System.Windows.Forms.Panel();
+            this.ydelse_type_comboBox = new System.Windows.Forms.ComboBox();
             this.ydelse_adr_textBox = new System.Windows.Forms.TextBox();
             this.background_textboxes_top_panel = new System.Windows.Forms.Panel();
             this.opret_Kunder_label = new System.Windows.Forms.Label();
             this.ydelse_pris_textBox = new System.Windows.Forms.TextBox();
             this.ydelse_nr_textBox = new System.Windows.Forms.TextBox();
             this.ydelse_navn_textBox = new System.Windows.Forms.TextBox();
-            this.ydelse_type_comboBox = new System.Windows.Forms.ComboBox();
             this.vis_rediger_button = new System.Windows.Forms.Button();
             this.ydelse_opret_button = new System.Windows.Forms.Button();
             this.ydelse_Save_button = new System.Windows.Forms.Button();
@@ -108,6 +108,14 @@
             this.backPanel_Textboxes_panel.Size = new System.Drawing.Size(394, 388);
             this.backPanel_Textboxes_panel.TabIndex = 13;
             // 
+            // ydelse_type_comboBox
+            // 
+            this.ydelse_type_comboBox.FormattingEnabled = true;
+            this.ydelse_type_comboBox.Location = new System.Drawing.Point(156, 203);
+            this.ydelse_type_comboBox.Name = "ydelse_type_comboBox";
+            this.ydelse_type_comboBox.Size = new System.Drawing.Size(103, 21);
+            this.ydelse_type_comboBox.TabIndex = 22;
+            // 
             // ydelse_adr_textBox
             // 
             this.ydelse_adr_textBox.Location = new System.Drawing.Point(158, 249);
@@ -157,14 +165,6 @@
             this.ydelse_navn_textBox.Name = "ydelse_navn_textBox";
             this.ydelse_navn_textBox.Size = new System.Drawing.Size(100, 20);
             this.ydelse_navn_textBox.TabIndex = 10;
-            // 
-            // ydelse_type_comboBox
-            // 
-            this.ydelse_type_comboBox.FormattingEnabled = true;
-            this.ydelse_type_comboBox.Location = new System.Drawing.Point(156, 203);
-            this.ydelse_type_comboBox.Name = "ydelse_type_comboBox";
-            this.ydelse_type_comboBox.Size = new System.Drawing.Size(103, 21);
-            this.ydelse_type_comboBox.TabIndex = 22;
             // 
             // vis_rediger_button
             // 
@@ -291,7 +291,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(900, 555);
+            this.ClientSize = new System.Drawing.Size(900, 600);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.backPanel_Textboxes_panel);
             this.Controls.Add(this.backgroundName_Top_panel);

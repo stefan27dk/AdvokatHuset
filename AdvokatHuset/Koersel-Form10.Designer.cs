@@ -31,13 +31,13 @@
             this.korsel_Top_label = new System.Windows.Forms.Label();
             this.backgroundName_Top_panel = new System.Windows.Forms.Panel();
             this.backPanel_Textboxes_panel = new System.Windows.Forms.Panel();
+            this.koersel_noter_textBox = new System.Windows.Forms.TextBox();
+            this.koersel_date_dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.koersel_advokat_ID_comboBox = new System.Windows.Forms.ComboBox();
+            this.koersel_sager_ID_comboBox = new System.Windows.Forms.ComboBox();
             this.background_textboxes_top_panel = new System.Windows.Forms.Panel();
             this.reg_koersel_label = new System.Windows.Forms.Label();
             this.koersel_koersel_Tid_textBox = new System.Windows.Forms.TextBox();
-            this.koersel_sager_ID_comboBox = new System.Windows.Forms.ComboBox();
-            this.koersel_advokat_ID_comboBox = new System.Windows.Forms.ComboBox();
-            this.koersel_date_dateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.koersel_noter_textBox = new System.Windows.Forms.TextBox();
             this.koersel_Save_button = new System.Windows.Forms.Button();
             this.noter_label = new System.Windows.Forms.Label();
             this.dato_label = new System.Windows.Forms.Label();
@@ -87,10 +87,41 @@
             this.backPanel_Textboxes_panel.Controls.Add(this.koersel_koersel_Tid_textBox);
             this.backPanel_Textboxes_panel.Controls.Add(this.Advokat_id_label);
             this.backPanel_Textboxes_panel.Controls.Add(this.sag_Id_label);
-            this.backPanel_Textboxes_panel.Location = new System.Drawing.Point(284, 155);
+            this.backPanel_Textboxes_panel.Location = new System.Drawing.Point(274, 174);
             this.backPanel_Textboxes_panel.Name = "backPanel_Textboxes_panel";
             this.backPanel_Textboxes_panel.Size = new System.Drawing.Size(394, 388);
             this.backPanel_Textboxes_panel.TabIndex = 13;
+            // 
+            // koersel_noter_textBox
+            // 
+            this.koersel_noter_textBox.Location = new System.Drawing.Point(99, 268);
+            this.koersel_noter_textBox.Multiline = true;
+            this.koersel_noter_textBox.Name = "koersel_noter_textBox";
+            this.koersel_noter_textBox.Size = new System.Drawing.Size(202, 39);
+            this.koersel_noter_textBox.TabIndex = 25;
+            // 
+            // koersel_date_dateTimePicker
+            // 
+            this.koersel_date_dateTimePicker.Location = new System.Drawing.Point(165, 198);
+            this.koersel_date_dateTimePicker.Name = "koersel_date_dateTimePicker";
+            this.koersel_date_dateTimePicker.Size = new System.Drawing.Size(136, 20);
+            this.koersel_date_dateTimePicker.TabIndex = 24;
+            // 
+            // koersel_advokat_ID_comboBox
+            // 
+            this.koersel_advokat_ID_comboBox.FormattingEnabled = true;
+            this.koersel_advokat_ID_comboBox.Location = new System.Drawing.Point(163, 60);
+            this.koersel_advokat_ID_comboBox.Name = "koersel_advokat_ID_comboBox";
+            this.koersel_advokat_ID_comboBox.Size = new System.Drawing.Size(70, 21);
+            this.koersel_advokat_ID_comboBox.TabIndex = 23;
+            // 
+            // koersel_sager_ID_comboBox
+            // 
+            this.koersel_sager_ID_comboBox.FormattingEnabled = true;
+            this.koersel_sager_ID_comboBox.Location = new System.Drawing.Point(163, 110);
+            this.koersel_sager_ID_comboBox.Name = "koersel_sager_ID_comboBox";
+            this.koersel_sager_ID_comboBox.Size = new System.Drawing.Size(70, 21);
+            this.koersel_sager_ID_comboBox.TabIndex = 22;
             // 
             // background_textboxes_top_panel
             // 
@@ -120,37 +151,6 @@
             this.koersel_koersel_Tid_textBox.Name = "koersel_koersel_Tid_textBox";
             this.koersel_koersel_Tid_textBox.Size = new System.Drawing.Size(70, 20);
             this.koersel_koersel_Tid_textBox.TabIndex = 14;
-            // 
-            // koersel_sager_ID_comboBox
-            // 
-            this.koersel_sager_ID_comboBox.FormattingEnabled = true;
-            this.koersel_sager_ID_comboBox.Location = new System.Drawing.Point(163, 110);
-            this.koersel_sager_ID_comboBox.Name = "koersel_sager_ID_comboBox";
-            this.koersel_sager_ID_comboBox.Size = new System.Drawing.Size(70, 21);
-            this.koersel_sager_ID_comboBox.TabIndex = 22;
-            // 
-            // koersel_advokat_ID_comboBox
-            // 
-            this.koersel_advokat_ID_comboBox.FormattingEnabled = true;
-            this.koersel_advokat_ID_comboBox.Location = new System.Drawing.Point(163, 60);
-            this.koersel_advokat_ID_comboBox.Name = "koersel_advokat_ID_comboBox";
-            this.koersel_advokat_ID_comboBox.Size = new System.Drawing.Size(70, 21);
-            this.koersel_advokat_ID_comboBox.TabIndex = 23;
-            // 
-            // koersel_date_dateTimePicker
-            // 
-            this.koersel_date_dateTimePicker.Location = new System.Drawing.Point(165, 198);
-            this.koersel_date_dateTimePicker.Name = "koersel_date_dateTimePicker";
-            this.koersel_date_dateTimePicker.Size = new System.Drawing.Size(136, 20);
-            this.koersel_date_dateTimePicker.TabIndex = 24;
-            // 
-            // koersel_noter_textBox
-            // 
-            this.koersel_noter_textBox.Location = new System.Drawing.Point(121, 269);
-            this.koersel_noter_textBox.Multiline = true;
-            this.koersel_noter_textBox.Name = "koersel_noter_textBox";
-            this.koersel_noter_textBox.Size = new System.Drawing.Size(202, 39);
-            this.koersel_noter_textBox.TabIndex = 25;
             // 
             // koersel_Save_button
             // 
@@ -239,7 +239,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(900, 555);
+            this.ClientSize = new System.Drawing.Size(900, 600);
             this.Controls.Add(this.backPanel_Textboxes_panel);
             this.Controls.Add(this.backgroundName_Top_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
