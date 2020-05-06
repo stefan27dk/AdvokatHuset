@@ -81,7 +81,7 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.vis_rediger_button);
             this.panel1.Controls.Add(this.ydelse_opret_button);
-            this.panel1.Location = new System.Drawing.Point(365, 76);
+            this.panel1.Location = new System.Drawing.Point(365, 91);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(238, 70);
             this.panel1.TabIndex = 14;
@@ -103,7 +103,7 @@
             this.backPanel_Textboxes_panel.Controls.Add(this.ydelse_nr_textBox);
             this.backPanel_Textboxes_panel.Controls.Add(this.name_label);
             this.backPanel_Textboxes_panel.Controls.Add(this.ydelse_navn_textBox);
-            this.backPanel_Textboxes_panel.Location = new System.Drawing.Point(284, 155);
+            this.backPanel_Textboxes_panel.Location = new System.Drawing.Point(284, 170);
             this.backPanel_Textboxes_panel.Name = "backPanel_Textboxes_panel";
             this.backPanel_Textboxes_panel.Size = new System.Drawing.Size(394, 388);
             this.backPanel_Textboxes_panel.TabIndex = 13;

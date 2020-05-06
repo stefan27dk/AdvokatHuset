@@ -83,7 +83,7 @@
             this.top_background_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.top_background_panel.Controls.Add(this.advokat_vis_rediger_buttom);
             this.top_background_panel.Controls.Add(this.advokat_opret_button);
-            this.top_background_panel.Location = new System.Drawing.Point(365, 76);
+            this.top_background_panel.Location = new System.Drawing.Point(365, 91);
             this.top_background_panel.Name = "top_background_panel";
             this.top_background_panel.Size = new System.Drawing.Size(238, 70);
             this.top_background_panel.TabIndex = 14;
@@ -145,7 +145,7 @@
             this.backPanel_Textboxes_panel.Controls.Add(this.advokat_id_textBox);
             this.backPanel_Textboxes_panel.Controls.Add(this.name_label);
             this.backPanel_Textboxes_panel.Controls.Add(this.advokat_name_textBox);
-            this.backPanel_Textboxes_panel.Location = new System.Drawing.Point(284, 155);
+            this.backPanel_Textboxes_panel.Location = new System.Drawing.Point(284, 170);
             this.backPanel_Textboxes_panel.Name = "backPanel_Textboxes_panel";
             this.backPanel_Textboxes_panel.Size = new System.Drawing.Size(394, 388);
             this.backPanel_Textboxes_panel.TabIndex = 13;

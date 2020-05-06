@@ -184,7 +184,7 @@
             this.sager_tilføj_tid_button.Name = "sager_tilføj_tid_button";
             this.sager_tilføj_tid_button.Size = new System.Drawing.Size(97, 93);
             this.sager_tilføj_tid_button.TabIndex = 3;
-            this.sager_tilføj_tid_button.Text = "Tilføj Tid";
+            this.sager_tilføj_tid_button.Text = "   Tilføj Tid";
             this.sager_tilføj_tid_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.sager_tilføj_tid_button.UseVisualStyleBackColor = true;
             // 

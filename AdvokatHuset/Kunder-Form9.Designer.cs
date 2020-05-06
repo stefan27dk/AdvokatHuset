@@ -32,13 +32,13 @@
             this.backgroundName_Top_panel = new System.Windows.Forms.Panel();
             this.kunder_name_textBox = new System.Windows.Forms.TextBox();
             this.backPanel_Textboxes_panel = new System.Windows.Forms.Panel();
+            this.kunder_adr_textBox = new System.Windows.Forms.TextBox();
             this.background_textboxes_top_panel = new System.Windows.Forms.Panel();
             this.opret_Kunder_label = new System.Windows.Forms.Label();
-            this.kunder_id_textBox = new System.Windows.Forms.TextBox();
-            this.kunder_surname_textBox = new System.Windows.Forms.TextBox();
-            this.kunder_tlf_textBox = new System.Windows.Forms.TextBox();
             this.kunder_zipcCode_textBox = new System.Windows.Forms.TextBox();
-            this.kunder_adr_textBox = new System.Windows.Forms.TextBox();
+            this.kunder_tlf_textBox = new System.Windows.Forms.TextBox();
+            this.kunder_surname_textBox = new System.Windows.Forms.TextBox();
+            this.kunder_id_textBox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.vis_rediger_kunder_button = new System.Windows.Forms.Button();
             this.opret_kunde_button = new System.Windows.Forms.Button();
@@ -102,10 +102,17 @@
             this.backPanel_Textboxes_panel.Controls.Add(this.kunder_id_textBox);
             this.backPanel_Textboxes_panel.Controls.Add(this.name_label);
             this.backPanel_Textboxes_panel.Controls.Add(this.kunder_name_textBox);
-            this.backPanel_Textboxes_panel.Location = new System.Drawing.Point(284, 155);
+            this.backPanel_Textboxes_panel.Location = new System.Drawing.Point(284, 170);
             this.backPanel_Textboxes_panel.Name = "backPanel_Textboxes_panel";
             this.backPanel_Textboxes_panel.Size = new System.Drawing.Size(394, 388);
             this.backPanel_Textboxes_panel.TabIndex = 11;
+            // 
+            // kunder_adr_textBox
+            // 
+            this.kunder_adr_textBox.Location = new System.Drawing.Point(158, 249);
+            this.kunder_adr_textBox.Name = "kunder_adr_textBox";
+            this.kunder_adr_textBox.Size = new System.Drawing.Size(100, 20);
+            this.kunder_adr_textBox.TabIndex = 20;
             // 
             // background_textboxes_top_panel
             // 
@@ -129,19 +136,12 @@
             this.opret_Kunder_label.TabIndex = 1;
             this.opret_Kunder_label.Text = "Opret Kunde";
             // 
-            // kunder_id_textBox
+            // kunder_zipcCode_textBox
             // 
-            this.kunder_id_textBox.Location = new System.Drawing.Point(158, 63);
-            this.kunder_id_textBox.Name = "kunder_id_textBox";
-            this.kunder_id_textBox.Size = new System.Drawing.Size(100, 20);
-            this.kunder_id_textBox.TabIndex = 12;
-            // 
-            // kunder_surname_textBox
-            // 
-            this.kunder_surname_textBox.Location = new System.Drawing.Point(158, 157);
-            this.kunder_surname_textBox.Name = "kunder_surname_textBox";
-            this.kunder_surname_textBox.Size = new System.Drawing.Size(100, 20);
-            this.kunder_surname_textBox.TabIndex = 14;
+            this.kunder_zipcCode_textBox.Location = new System.Drawing.Point(158, 203);
+            this.kunder_zipcCode_textBox.Name = "kunder_zipcCode_textBox";
+            this.kunder_zipcCode_textBox.Size = new System.Drawing.Size(100, 20);
+            this.kunder_zipcCode_textBox.TabIndex = 18;
             // 
             // kunder_tlf_textBox
             // 
@@ -150,19 +150,19 @@
             this.kunder_tlf_textBox.Size = new System.Drawing.Size(100, 20);
             this.kunder_tlf_textBox.TabIndex = 16;
             // 
-            // kunder_zipcCode_textBox
+            // kunder_surname_textBox
             // 
-            this.kunder_zipcCode_textBox.Location = new System.Drawing.Point(158, 203);
-            this.kunder_zipcCode_textBox.Name = "kunder_zipcCode_textBox";
-            this.kunder_zipcCode_textBox.Size = new System.Drawing.Size(100, 20);
-            this.kunder_zipcCode_textBox.TabIndex = 18;
+            this.kunder_surname_textBox.Location = new System.Drawing.Point(158, 157);
+            this.kunder_surname_textBox.Name = "kunder_surname_textBox";
+            this.kunder_surname_textBox.Size = new System.Drawing.Size(100, 20);
+            this.kunder_surname_textBox.TabIndex = 14;
             // 
-            // kunder_adr_textBox
+            // kunder_id_textBox
             // 
-            this.kunder_adr_textBox.Location = new System.Drawing.Point(158, 249);
-            this.kunder_adr_textBox.Name = "kunder_adr_textBox";
-            this.kunder_adr_textBox.Size = new System.Drawing.Size(100, 20);
-            this.kunder_adr_textBox.TabIndex = 20;
+            this.kunder_id_textBox.Location = new System.Drawing.Point(158, 63);
+            this.kunder_id_textBox.Name = "kunder_id_textBox";
+            this.kunder_id_textBox.Size = new System.Drawing.Size(100, 20);
+            this.kunder_id_textBox.TabIndex = 12;
             // 
             // panel1
             // 
@@ -171,7 +171,7 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.vis_rediger_kunder_button);
             this.panel1.Controls.Add(this.opret_kunde_button);
-            this.panel1.Location = new System.Drawing.Point(365, 76);
+            this.panel1.Location = new System.Drawing.Point(365, 91);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(238, 70);
             this.panel1.TabIndex = 12;
@@ -314,7 +314,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(900, 555);
+            this.ClientSize = new System.Drawing.Size(900, 600);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.backPanel_Textboxes_panel);
             this.Controls.Add(this.backgroundName_Top_panel);
