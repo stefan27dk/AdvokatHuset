@@ -10,9 +10,9 @@ namespace Domain
 {
     class DB_Connection_Write
     {
-      
+        bool successful = false;
         
-        public void CreateCommand(string queryString, string connectionString)
+        public bool CreateCommand(string queryString, string connectionString)
         {
             try
             {
@@ -24,10 +24,15 @@ namespace Domain
                     command.ExecuteNonQuery();
                 }
 
+                successful = true; // Succesfull Transaction
+
+           
             }
 
                 // Get Information about the Exception        
                catch (Exception e) { MessageBox.Show($"{e.Message} \t {e.InnerException} \t {e.Data}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+
+            return successful;
         }
 
   

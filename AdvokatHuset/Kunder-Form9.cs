@@ -18,6 +18,8 @@ namespace View_GUI
         DB_Connection_Write ConnWrite; // Sql Write "
         DB_Connection_String ConnectionString; // Global Connectionstring
         bool isValid = true;
+        bool successful = false; // Successful Transaction
+
 
         public Kunder_Form9()
         {
@@ -47,8 +49,8 @@ namespace View_GUI
         {
             ConnectionString = new DB_Connection_String(); // Global ConnectionString
             ConnWrite = new DB_Connection_Write(); // "Write to DB Class instance"
-            string KundeQuery = $"DECLARE @UNIQUEX UNIQUEIDENTIFIER SET @UNIQUEX = NEWID(); Insert into Kunde Values('{kundeinstance.Fornavn}','{kundeinstance.Efternavn}',{kundeinstance.PostNr},'{kundeinstance.Adresse}', (@UNIQUEX),'{kundeinstance.Mail}');"; // Query
-            ConnWrite.CreateCommand(KundeQuery, ConnectionString.DBConnectionString); // Write to DB Input and "Execution"
+            string KundeQuery = $"DECLARE @UNIQUEX UNIQUEIDENTIFIER SET @UNIQUEX = NEWID(); Insert into Kunde Values('{kundeinstance.Fornavn}','{kundeinstance.Efternavn}',{kundeinstance.PostNr},'{kundeinstance.Adresse}', (@UNIQUEX),'{kundeinstance.Mail}', '{DateTime.Now.ToString("dd-MM-yyyy HH-mm-ss")}');"; // Query
+            successful = ConnWrite.CreateCommand(KundeQuery, ConnectionString.DBConnectionString); // Write to DB Input and "Execution"
         }
 
 
@@ -107,8 +109,10 @@ namespace View_GUI
         // Validate ALL Inputs
         private void ValidateALL()
         {
+            isValid = true; // Reset it here
+
             //Name Validation----------------------------------------------------------------------------
-            if(kunder_name_textBox.TextLength < 2)
+            if (kunder_name_textBox.TextLength < 2)
             {
                 isValid = false; // Now you cant proceed because its not valid
                 kunder_name_textBox.BackColor = Color.FromArgb(255, 128, 128);
@@ -251,18 +255,37 @@ namespace View_GUI
         }
 
 
+        // Clear All Textboxes
+        private void ClearTextboxes()
+        {
+            kunder_name_textBox.Clear();
+            kunder_surname_textBox.Clear();
+            kunder_tlf_textBox.Clear();
+            kunde_email_textBox.Clear();
+            kunder_zipcCode_textBox.Clear();
+            kunder_adr_textBox.Clear();
+        }
 
 
         // Save Button 
         private void kunder_Save_button_Click(object sender, EventArgs e)
         {
-            TextboxesResetColor();
-            ValidateALL();// Second Validation of All
+            TextboxesResetColor(); // Reset Color
+            ValidateALL(); // Validate All
 
             if (isValid == true)// If all is valid
             {
-                CreateKunde();
+                CreateKunde();  
                 InsertToDB();
+
+
+                // If transaction was successful Clear the textboxes
+                if (successful == true)
+                {
+                ClearTextboxes(); 
+                }
+
+
             }
 
         }
