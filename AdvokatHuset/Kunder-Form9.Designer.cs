@@ -336,9 +336,9 @@
             this.screenshot_datagridview_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.screenshot_datagridview_button.ForeColor = System.Drawing.Color.Black;
             this.screenshot_datagridview_button.Image = global::View_GUI.Properties.Resources.Document_txt_icon__1_;
-            this.screenshot_datagridview_button.Location = new System.Drawing.Point(675, 4);
+            this.screenshot_datagridview_button.Location = new System.Drawing.Point(667, -1);
             this.screenshot_datagridview_button.Name = "screenshot_datagridview_button";
-            this.screenshot_datagridview_button.Size = new System.Drawing.Size(32, 36);
+            this.screenshot_datagridview_button.Size = new System.Drawing.Size(43, 44);
             this.screenshot_datagridview_button.TabIndex = 19;
             this.screenshot_datagridview_button.UseVisualStyleBackColor = true;
             // 
@@ -350,9 +350,9 @@
             this.redo_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.redo_button.ForeColor = System.Drawing.Color.Black;
             this.redo_button.Image = global::View_GUI.Properties.Resources.navigate_left_icon__1___1_;
-            this.redo_button.Location = new System.Drawing.Point(755, 10);
+            this.redo_button.Location = new System.Drawing.Point(755, 0);
             this.redo_button.Name = "redo_button";
-            this.redo_button.Size = new System.Drawing.Size(32, 23);
+            this.redo_button.Size = new System.Drawing.Size(32, 45);
             this.redo_button.TabIndex = 18;
             this.redo_button.UseVisualStyleBackColor = true;
             // 
@@ -364,9 +364,9 @@
             this.undo_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.undo_button.ForeColor = System.Drawing.Color.Black;
             this.undo_button.Image = global::View_GUI.Properties.Resources.navigate_left_icon__1_;
-            this.undo_button.Location = new System.Drawing.Point(713, 9);
+            this.undo_button.Location = new System.Drawing.Point(713, 0);
             this.undo_button.Name = "undo_button";
-            this.undo_button.Size = new System.Drawing.Size(32, 23);
+            this.undo_button.Size = new System.Drawing.Size(32, 45);
             this.undo_button.TabIndex = 17;
             this.undo_button.UseVisualStyleBackColor = true;
             // 
@@ -378,9 +378,9 @@
             this.show_all_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.show_all_button.ForeColor = System.Drawing.Color.Black;
             this.show_all_button.Image = global::View_GUI.Properties.Resources.Documents_icon2;
-            this.show_all_button.Location = new System.Drawing.Point(368, 9);
+            this.show_all_button.Location = new System.Drawing.Point(368, 0);
             this.show_all_button.Name = "show_all_button";
-            this.show_all_button.Size = new System.Drawing.Size(22, 28);
+            this.show_all_button.Size = new System.Drawing.Size(38, 45);
             this.show_all_button.TabIndex = 16;
             this.show_all_button.UseVisualStyleBackColor = true;
             // 
@@ -395,7 +395,7 @@
             this.show_Tlf_Nr_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.show_Tlf_Nr_button.Image = global::View_GUI.Properties.Resources.Phone_icon__1_;
             this.show_Tlf_Nr_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.show_Tlf_Nr_button.Location = new System.Drawing.Point(623, 2);
+            this.show_Tlf_Nr_button.Location = new System.Drawing.Point(624, 2);
             this.show_Tlf_Nr_button.Margin = new System.Windows.Forms.Padding(0);
             this.show_Tlf_Nr_button.Name = "show_Tlf_Nr_button";
             this.show_Tlf_Nr_button.Size = new System.Drawing.Size(40, 40);
@@ -407,15 +407,15 @@
             // search_button
             // 
             this.search_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_page_zoom_icon1;
-            this.search_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.search_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.search_button.FlatAppearance.BorderSize = 0;
             this.search_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.search_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
             this.search_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.search_button.Location = new System.Drawing.Point(316, 8);
+            this.search_button.Location = new System.Drawing.Point(317, -1);
             this.search_button.Margin = new System.Windows.Forms.Padding(0);
             this.search_button.Name = "search_button";
-            this.search_button.Size = new System.Drawing.Size(30, 30);
+            this.search_button.Size = new System.Drawing.Size(27, 45);
             this.search_button.TabIndex = 12;
             this.search_button.UseVisualStyleBackColor = true;
             // 
