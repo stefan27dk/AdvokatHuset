@@ -299,5 +299,19 @@ namespace View_GUI
 
 
         }
+
+
+        // Vis Rediger // Show Datagridview
+        private void vis_rediger_kunder_button_Click(object sender, EventArgs e)
+        {
+            datagridviewBackground_panel.Visible = true;
+        }
+
+
+        // Opret Button
+        private void opret_kunde_button_Click(object sender, EventArgs e)
+        {
+            datagridviewBackground_panel.Visible = false;// Hide Datagridview
+        }
     }
 }

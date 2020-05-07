@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.Loader_panel = new System.Windows.Forms.Panel();
-            this.task_button1 = new System.Windows.Forms.Button();
             this.task_bar_panel = new System.Windows.Forms.Panel();
             this.item_menu_top_panel = new System.Windows.Forms.Panel();
             this.item_menu_back_panel_top_panel = new System.Windows.Forms.Panel();
@@ -78,7 +77,6 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.Loader_panel.SuspendLayout();
             this.item_menu_top_panel.SuspendLayout();
             this.itemMenuPanelDropDown.SuspendLayout();
             this.item_menu_back_panekBlack_panel.SuspendLayout();
@@ -93,24 +91,12 @@
             // 
             this.Loader_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Loader_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Loader_panel.Controls.Add(this.task_button1);
             this.Loader_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Loader_panel.ForeColor = System.Drawing.Color.Transparent;
             this.Loader_panel.Location = new System.Drawing.Point(0, 0);
             this.Loader_panel.Name = "Loader_panel";
             this.Loader_panel.Size = new System.Drawing.Size(1317, 662);
             this.Loader_panel.TabIndex = 9;
-            // 
-            // task_button1
-            // 
-            this.task_button1.BackgroundImage = global::View_GUI.Properties.Resources._42608_stopwatch_icon;
-            this.task_button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.task_button1.Location = new System.Drawing.Point(1003, 409);
-            this.task_button1.Name = "task_button1";
-            this.task_button1.Size = new System.Drawing.Size(75, 23);
-            this.task_button1.TabIndex = 3;
-            this.task_button1.Text = "Task";
-            this.task_button1.UseVisualStyleBackColor = true;
             // 
             // task_bar_panel
             // 
@@ -820,7 +806,6 @@
             this.Name = "Main_Form1";
             this.Text = "Main_Form1";
             this.Load += new System.EventHandler(this.Main_Form1_Load);
-            this.Loader_panel.ResumeLayout(false);
             this.item_menu_top_panel.ResumeLayout(false);
             this.itemMenuPanelDropDown.ResumeLayout(false);
             this.item_menu_back_panekBlack_panel.ResumeLayout(false);
@@ -868,7 +853,6 @@
         private System.Windows.Forms.Button statistics_button;
         private System.Windows.Forms.Button world_clock_button;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.Button task_button1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
