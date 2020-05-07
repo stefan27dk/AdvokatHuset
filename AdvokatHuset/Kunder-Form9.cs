@@ -17,6 +17,7 @@ namespace View_GUI
         Kunde kundeinstance; // Instance af Kunde 
         DB_Connection_Write ConnWrite; // Sql Write "
         DB_Connection_String ConnectionString; // Global Connectionstring
+        bool isValid = true;
 
         public Kunder_Form9()
         {
@@ -51,12 +52,222 @@ namespace View_GUI
         }
 
 
+
+
+        // Key Events------::START::----------------------------------------------------------------------
+
+        // Validate Name
+        private void kunder_name_textBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            e.Handled = (int.TryParse(e.KeyChar.ToString(), out int isNumber) || (e.KeyChar == (char)Keys.Space));///Prevent Numbers and Spaces
+
+        }
+
+
+
+        // Validate Surname
+        private void kunder_surname_textBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = (int.TryParse(e.KeyChar.ToString(), out int isNumber));///Prevent Numbers and Spaces
+        }
+
+
+
+
+        // Zip Code Validating
+        private void kunder_zipcCode_textBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar != (char)8 && e.KeyChar != (char)26)/// "Allow backspace"  and CTRL+Z
+            {
+                    e.Handled = !int.TryParse(e.KeyChar.ToString(), out int isNumber);///Prevent letters
+            }
+        
+        }
+
+
+
+
+        // TLF Validating
+        private void kunder_tlf_textBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar != (char)8 && e.KeyChar != (char)26) // If not Backspace or CTRL+Z
+            {
+                e.Handled =  !int.TryParse(e.KeyChar.ToString(), out int isNumber); // Enable/ Disable e.Handled  "If Not int than disable it" 
+            }
+        }
+
+        // Key Events------::END::----------------------------------------------------------------------
+
+
+
+
+
+
+        // Validate ALL Inputs
+        private void ValidateALL()
+        {
+            //Name Validation----------------------------------------------------------------------------
+            if(kunder_name_textBox.TextLength < 2)
+            {
+                isValid = false; // Now you cant proceed because its not valid
+                kunder_name_textBox.BackColor = Color.FromArgb(255, 128, 128);
+            }
+            else
+            {
+                
+                  for (int i = 0; i < kunder_name_textBox.TextLength; i++)
+                  {
+                 
+                      if(String.IsNullOrEmpty(kunder_name_textBox.Text[i].ToString()) || int.TryParse(kunder_name_textBox.Text[i].ToString(), out int isNumber) || kunder_name_textBox.Text[i].ToString() == " ") // Check for numbers, null, 
+                      {
+                          isValid = false; // Now you cant proceed because its not valid
+                          kunder_name_textBox.BackColor = Color.FromArgb(255, 128, 128);
+                        break;
+                      }
+                      
+                  }
+
+            }
+
+
+
+
+            // Surname Validation------------------------------------------------------------------------ 
+            if (kunder_surname_textBox.TextLength < 2)
+            {
+                isValid = false; // Now you cant proceed because its not valid
+                kunder_surname_textBox.BackColor = Color.FromArgb(255, 128, 128);
+            }
+            else
+            {
+            
+                 for (int i = 0; i < kunder_surname_textBox.TextLength; i++)
+                 {
+                
+                     if (String.IsNullOrEmpty(kunder_surname_textBox.Text[i].ToString()) || int.TryParse(kunder_surname_textBox.Text[i].ToString(), out int isNumber))  
+                     {
+                         isValid = false; // Now you cant proceed because its not valid
+                         kunder_surname_textBox.BackColor = Color.FromArgb(255, 128, 128);
+                        break;
+                     }
+                
+                 }
+
+            }
+
+
+
+             // TLF Validation---------------------------------------------------------------------------
+
+             if (kunder_tlf_textBox.TextLength < 8)
+             {
+                isValid = false;
+                kunder_tlf_textBox.BackColor = Color.FromArgb(255, 128, 128);
+
+            }
+
+            else if(!int.TryParse(kunder_tlf_textBox.Text, out int isNumber))
+            {
+                isValid = false;
+                kunder_tlf_textBox.BackColor = Color.FromArgb(255, 128, 128);
+            }
+
+
+
+             // Email Validation-------------------------------------------------------------------------
+              if(kunde_email_textBox.TextLength < 5)
+              {
+                isValid = false;
+                kunde_email_textBox.BackColor = Color.FromArgb(255, 128, 128);
+
+              }
+              else  
+              {
+                // Check for "@"
+                bool at = false;
+
+                for (int i = 0; i < kunde_email_textBox.TextLength; i++)
+                {
+                     if(kunde_email_textBox.Text[i] == '@')
+                     {
+                        at = true; // Contains "@"
+                     }
+
+                }
+
+                 // If itdont contains "@"
+                if(at == false)
+                {
+                    isValid = false;
+                    kunde_email_textBox.BackColor = Color.FromArgb(255, 128, 128);
+
+                }
+
+
+            }
+
+
+
+              //Zip Code Valiadtion----------------------------------------------------------------------
+               if(kunder_zipcCode_textBox.TextLength < 4)
+               {
+                isValid = false;
+                kunder_zipcCode_textBox.BackColor = Color.FromArgb(255, 128, 128);
+               }
+               else if(!int.TryParse(kunder_zipcCode_textBox.Text, out int isNumber))
+               {
+                isValid = false;
+                kunder_zipcCode_textBox.BackColor = Color.FromArgb(255, 128, 128);
+               }
+            
+
+
+
+            // Adress Validation------------------------------------------------------------------------
+            if(kunder_adr_textBox.TextLength < 2)
+            {
+                isValid = false;
+                kunder_adr_textBox.BackColor = Color.FromArgb(255, 128, 128);
+            }
+            
+           
+        }
+
+
+
+
+
+        // Reset Textboc Color
+        private void TextboxesResetColor()
+        {
+            kunder_name_textBox.BackColor = Color.White;
+            kunder_surname_textBox.BackColor = Color.White;
+            kunder_tlf_textBox.BackColor = Color.White;
+            kunde_email_textBox.BackColor = Color.White;
+            kunder_zipcCode_textBox.BackColor = Color.White;
+            kunder_adr_textBox.BackColor = Color.White;
+
+        }
+
+
+
+
         // Save Button 
         private void kunder_Save_button_Click(object sender, EventArgs e)
         {
-            CreateKunde(); 
-            InsertToDB();
+            TextboxesResetColor();
+            ValidateALL();// Second Validation of All
+
+            if (isValid == true)// If all is valid
+            {
+                CreateKunde();
+                InsertToDB();
+            }
+
         }
+
+
 
 
     }
