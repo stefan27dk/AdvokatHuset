@@ -503,6 +503,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap At_Mail_icon {
+            get {
+                object obj = ResourceManager.GetObject("At-Mail-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap azael_ba4ea_001 {
             get {
                 object obj = ResourceManager.GetObject("azael-ba4ea-001", resourceCulture);
@@ -976,6 +986,26 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap Mail_at_icon {
             get {
                 object obj = ResourceManager.GetObject("Mail-at-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Mail_icon {
+            get {
+                object obj = ResourceManager.GetObject("Mail-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Mail_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Mail-icon (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
