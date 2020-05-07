@@ -825,5 +825,26 @@
   <ItemGroup>
     <None Include="Resources\At-Mail-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Document-txt-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Document-txt-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Documents-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folders-OS-Documents-Library-Metro-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File-Word-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Document-copy-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Documents-icon2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

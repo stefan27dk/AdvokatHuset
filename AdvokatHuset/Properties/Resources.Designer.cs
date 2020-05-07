@@ -753,6 +753,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Document_copy_icon {
+            get {
+                object obj = ResourceManager.GetObject("Document-copy-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap document_excel_icon {
             get {
                 object obj = ResourceManager.GetObject("document-excel-icon", resourceCulture);
@@ -773,6 +783,26 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Document_txt_icon {
+            get {
+                object obj = ResourceManager.GetObject("Document-txt-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Document_txt_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Document-txt-icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Documents_icon {
             get {
                 object obj = ResourceManager.GetObject("Documents-icon", resourceCulture);
@@ -786,6 +816,26 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap Documents_icon__1_ {
             get {
                 object obj = ResourceManager.GetObject("Documents-icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Documents_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("Documents-icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Documents_icon2 {
+            get {
+                object obj = ResourceManager.GetObject("Documents-icon2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -816,6 +866,16 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap Exit_Red {
             get {
                 object obj = ResourceManager.GetObject("Exit-Red", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap File_Word_icon {
+            get {
+                object obj = ResourceManager.GetObject("File-Word-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -866,6 +926,16 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap folder_icon {
             get {
                 object obj = ResourceManager.GetObject("folder-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Folders_OS_Documents_Library_Metro_icon {
+            get {
+                object obj = ResourceManager.GetObject("Folders-OS-Documents-Library-Metro-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -313,5 +313,10 @@ namespace View_GUI
         {
             datagridviewBackground_panel.Visible = false;// Hide Datagridview
         }
+
+        private void show_Tlf_Nr_button_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
