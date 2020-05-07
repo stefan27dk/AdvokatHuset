@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Kunde_Top_label = new System.Windows.Forms.Label();
             this.backgroundName_Top_panel = new System.Windows.Forms.Panel();
             this.kunder_name_textBox = new System.Windows.Forms.TextBox();
@@ -49,10 +50,28 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.vis_rediger_kunder_button = new System.Windows.Forms.Button();
             this.opret_kunde_button = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.Kunde_dataGridView = new System.Windows.Forms.DataGridView();
+            this.advokathusetDataSet = new View_GUI.AdvokathusetDataSet();
+            this.advokathusetDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.kundeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.kundeTableAdapter = new View_GUI.AdvokathusetDataSetTableAdapters.KundeTableAdapter();
+            this.kundeFornavnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kundeEfternavnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kundePostNrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kundeAdresseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kundeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kundeEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.opretsDatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.backgroundName_Top_panel.SuspendLayout();
             this.backPanel_Textboxes_panel.SuspendLayout();
             this.background_textboxes_top_panel.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Kunde_dataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.advokathusetDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.advokathusetDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kundeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Kunde_Top_label
@@ -321,18 +340,108 @@
             this.opret_kunde_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.opret_kunde_button.UseVisualStyleBackColor = true;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.panel2.Controls.Add(this.Kunde_dataGridView);
+            this.panel2.Location = new System.Drawing.Point(2, 220);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(896, 376);
+            this.panel2.TabIndex = 13;
+            // 
+            // Kunde_dataGridView
+            // 
+            this.Kunde_dataGridView.AutoGenerateColumns = false;
+            this.Kunde_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Kunde_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.kundeFornavnDataGridViewTextBoxColumn,
+            this.kundeEfternavnDataGridViewTextBoxColumn,
+            this.kundePostNrDataGridViewTextBoxColumn,
+            this.kundeAdresseDataGridViewTextBoxColumn,
+            this.kundeIDDataGridViewTextBoxColumn,
+            this.kundeEmailDataGridViewTextBoxColumn,
+            this.opretsDatoDataGridViewTextBoxColumn});
+            this.Kunde_dataGridView.DataSource = this.kundeBindingSource;
+            this.Kunde_dataGridView.Location = new System.Drawing.Point(99, 28);
+            this.Kunde_dataGridView.Name = "Kunde_dataGridView";
+            this.Kunde_dataGridView.Size = new System.Drawing.Size(744, 270);
+            this.Kunde_dataGridView.TabIndex = 0;
+            // 
+            // advokathusetDataSet
+            // 
+            this.advokathusetDataSet.DataSetName = "AdvokathusetDataSet";
+            this.advokathusetDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // advokathusetDataSetBindingSource
+            // 
+            this.advokathusetDataSetBindingSource.DataSource = this.advokathusetDataSet;
+            this.advokathusetDataSetBindingSource.Position = 0;
+            // 
+            // kundeBindingSource
+            // 
+            this.kundeBindingSource.DataMember = "Kunde";
+            this.kundeBindingSource.DataSource = this.advokathusetDataSetBindingSource;
+            // 
+            // kundeTableAdapter
+            // 
+            this.kundeTableAdapter.ClearBeforeFill = true;
+            // 
+            // kundeFornavnDataGridViewTextBoxColumn
+            // 
+            this.kundeFornavnDataGridViewTextBoxColumn.DataPropertyName = "Kunde_Fornavn";
+            this.kundeFornavnDataGridViewTextBoxColumn.HeaderText = "Kunde_Fornavn";
+            this.kundeFornavnDataGridViewTextBoxColumn.Name = "kundeFornavnDataGridViewTextBoxColumn";
+            // 
+            // kundeEfternavnDataGridViewTextBoxColumn
+            // 
+            this.kundeEfternavnDataGridViewTextBoxColumn.DataPropertyName = "Kunde_Efternavn";
+            this.kundeEfternavnDataGridViewTextBoxColumn.HeaderText = "Kunde_Efternavn";
+            this.kundeEfternavnDataGridViewTextBoxColumn.Name = "kundeEfternavnDataGridViewTextBoxColumn";
+            // 
+            // kundePostNrDataGridViewTextBoxColumn
+            // 
+            this.kundePostNrDataGridViewTextBoxColumn.DataPropertyName = "Kunde_PostNr";
+            this.kundePostNrDataGridViewTextBoxColumn.HeaderText = "Kunde_PostNr";
+            this.kundePostNrDataGridViewTextBoxColumn.Name = "kundePostNrDataGridViewTextBoxColumn";
+            // 
+            // kundeAdresseDataGridViewTextBoxColumn
+            // 
+            this.kundeAdresseDataGridViewTextBoxColumn.DataPropertyName = "Kunde_Adresse";
+            this.kundeAdresseDataGridViewTextBoxColumn.HeaderText = "Kunde_Adresse";
+            this.kundeAdresseDataGridViewTextBoxColumn.Name = "kundeAdresseDataGridViewTextBoxColumn";
+            // 
+            // kundeIDDataGridViewTextBoxColumn
+            // 
+            this.kundeIDDataGridViewTextBoxColumn.DataPropertyName = "Kunde_ID";
+            this.kundeIDDataGridViewTextBoxColumn.HeaderText = "Kunde_ID";
+            this.kundeIDDataGridViewTextBoxColumn.Name = "kundeIDDataGridViewTextBoxColumn";
+            // 
+            // kundeEmailDataGridViewTextBoxColumn
+            // 
+            this.kundeEmailDataGridViewTextBoxColumn.DataPropertyName = "Kunde_Email";
+            this.kundeEmailDataGridViewTextBoxColumn.HeaderText = "Kunde_Email";
+            this.kundeEmailDataGridViewTextBoxColumn.Name = "kundeEmailDataGridViewTextBoxColumn";
+            // 
+            // opretsDatoDataGridViewTextBoxColumn
+            // 
+            this.opretsDatoDataGridViewTextBoxColumn.DataPropertyName = "Oprets_Dato";
+            this.opretsDatoDataGridViewTextBoxColumn.HeaderText = "Oprets_Dato";
+            this.opretsDatoDataGridViewTextBoxColumn.Name = "opretsDatoDataGridViewTextBoxColumn";
+            // 
             // Kunder_Form9
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(900, 600);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.backPanel_Textboxes_panel);
             this.Controls.Add(this.backgroundName_Top_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Kunder_Form9";
             this.Text = "Kunder_Form9";
+            this.Load += new System.EventHandler(this.Kunder_Form9_Load);
             this.backgroundName_Top_panel.ResumeLayout(false);
             this.backgroundName_Top_panel.PerformLayout();
             this.backPanel_Textboxes_panel.ResumeLayout(false);
@@ -340,6 +449,11 @@
             this.background_textboxes_top_panel.ResumeLayout(false);
             this.background_textboxes_top_panel.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Kunde_dataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.advokathusetDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.advokathusetDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kundeBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -367,5 +481,18 @@
         private System.Windows.Forms.Button vis_rediger_kunder_button;
         private System.Windows.Forms.Label email_label;
         private System.Windows.Forms.TextBox kunde_email_textBox;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridView Kunde_dataGridView;
+        private AdvokathusetDataSet advokathusetDataSet;
+        private System.Windows.Forms.BindingSource advokathusetDataSetBindingSource;
+        private System.Windows.Forms.BindingSource kundeBindingSource;
+        private AdvokathusetDataSetTableAdapters.KundeTableAdapter kundeTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kundeFornavnDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kundeEfternavnDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kundePostNrDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kundeAdresseDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kundeIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kundeEmailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn opretsDatoDataGridViewTextBoxColumn;
     }
 }

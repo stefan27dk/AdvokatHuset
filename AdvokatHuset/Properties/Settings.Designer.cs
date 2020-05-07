@@ -22,5 +22,16 @@ namespace View_GUI.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=BG-1-PC\\SQLEXPRESS;Initial Catalog=Advokathuset;Persist Security Info" +
+            "=True;User ID=abc;Password=abc")]
+        public string AdvokathusetConnectionString {
+            get {
+                return ((string)(this["AdvokathusetConnectionString"]));
+            }
+        }
     }
 }

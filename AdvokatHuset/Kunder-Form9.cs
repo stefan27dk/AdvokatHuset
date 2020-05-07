@@ -290,8 +290,14 @@ namespace View_GUI
 
         }
 
+        private void Kunder_Form9_Load(object sender, EventArgs e)
+        {
+            // Datagridview Fore Color
+            this.Kunde_dataGridView.DefaultCellStyle.ForeColor = Color.Blue;
+            // TODO: This line of code loads data into the 'advokathusetDataSet.Kunde' table. You can move, or remove it, as needed.
+            this.kundeTableAdapter.Fill(this.advokathusetDataSet.Kunde);
 
 
-
+        }
     }
 }
