@@ -140,7 +140,7 @@ SELECT Kunde_Tlf, Kunde_ID FROM Kunde_Tlf WHERE (Kunde_ID = @Kunde_ID) AND (Kund
   <xs:element name="AdvokathusetDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="AdvokathusetDataSet" msprop:Generator_UserDSName="AdvokathusetDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Kunde" msprop:Generator_TableClassName="KundeDataTable" msprop:Generator_TableVarName="tableKunde" msprop:Generator_TablePropName="Kunde" msprop:Generator_RowDeletingName="KundeRowDeleting" msprop:Generator_RowChangingName="KundeRowChanging" msprop:Generator_RowEvHandlerName="KundeRowChangeEventHandler" msprop:Generator_RowDeletedName="KundeRowDeleted" msprop:Generator_UserTableName="Kunde" msprop:Generator_RowChangedName="KundeRowChanged" msprop:Generator_RowEvArgName="KundeRowChangeEvent" msprop:Generator_RowClassName="KundeRow">
+        <xs:element name="Kunde" msprop:Generator_TableClassName="KundeDataTable" msprop:Generator_TableVarName="tableKunde" msprop:Generator_TablePropName="Kunde" msprop:Generator_RowDeletingName="DeletedRowsListDeleting" msprop:Generator_RowChangingName="DeletedRowsListChanging" msprop:Generator_RowEvHandlerName="DeletedRowsListChangeEventHandler" msprop:Generator_RowDeletedName="DeletedRowsListDeleted" msprop:Generator_UserTableName="Kunde" msprop:Generator_RowChangedName="DeletedRowsListChanged" msprop:Generator_RowEvArgName="DeletedRowsListChangeEvent" msprop:Generator_RowClassName="DeletedRowsList">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Kunde_Fornavn" msprop:Generator_ColumnVarNameInTable="columnKunde_Fornavn" msprop:Generator_ColumnPropNameInRow="Kunde_Fornavn" msprop:Generator_ColumnPropNameInTable="Kunde_FornavnColumn" msprop:Generator_UserColumnName="Kunde_Fornavn">
@@ -205,7 +205,7 @@ SELECT Kunde_Tlf, Kunde_ID FROM Kunde_Tlf WHERE (Kunde_ID = @Kunde_ID) AND (Kund
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_Kunde_Tlf_Kunde1" msdata:parent="Kunde" msdata:child="Kunde_Tlf" msdata:parentkey="Kunde_ID" msdata:childkey="Kunde_ID" msprop:Generator_UserChildTable="Kunde_Tlf" msprop:Generator_ChildPropName="GetKunde_TlfRows" msprop:Generator_UserRelationName="FK_Kunde_Tlf_Kunde1" msprop:Generator_ParentPropName="KundeRow" msprop:Generator_RelationVarName="relationFK_Kunde_Tlf_Kunde1" msprop:Generator_UserParentTable="Kunde" />
+      <msdata:Relationship name="FK_Kunde_Tlf_Kunde1" msdata:parent="Kunde" msdata:child="Kunde_Tlf" msdata:parentkey="Kunde_ID" msdata:childkey="Kunde_ID" msprop:Generator_UserChildTable="Kunde_Tlf" msprop:Generator_ChildPropName="GetKunde_TlfRows" msprop:Generator_UserRelationName="FK_Kunde_Tlf_Kunde1" msprop:Generator_ParentPropName="DeletedRowsList" msprop:Generator_RelationVarName="relationFK_Kunde_Tlf_Kunde1" msprop:Generator_UserParentTable="Kunde" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

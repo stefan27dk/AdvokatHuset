@@ -17,14 +17,42 @@ namespace View_GUI
         Kunde kundeinstance; // Instance af Kunde 
         DB_Connection_Write ConnWrite; // Sql Write "
         DB_Connection_String ConnectionString; // Global Connectionstring
-        bool isValid = true;
+        bool isValid = true; // Inputboxes Validator
         bool successful = false; // Successful Transaction
 
+
+        // Undo Delete
+        List<DataGridViewRow> DeletedRowsList = new List<DataGridViewRow>(); // List with deleted Rows
+      
 
         public Kunder_Form9()
         {
             InitializeComponent();
         }
+
+
+
+
+
+        // Load
+        private void Kunder_Form9_Load(object sender, EventArgs e)
+        {
+
+            // Datagridview BAckground Color
+
+            // Datagridview Fore Color
+            this.Kunde_dataGridView.DefaultCellStyle.ForeColor = Color.Blue;
+            // TODO: This line of code loads data into the 'advokathusetDataSet.Kunde' table. You can move, or remove it, as needed.
+            this.kundeTableAdapter.Fill(this.advokathusetDataSet.Kunde);
+
+
+
+        }
+
+
+
+
+
 
 
 
@@ -52,6 +80,8 @@ namespace View_GUI
             string KundeQuery = $"DECLARE @UNIQUEX UNIQUEIDENTIFIER SET @UNIQUEX = NEWID(); Insert into Kunde Values('{kundeinstance.Fornavn}','{kundeinstance.Efternavn}',{kundeinstance.PostNr},'{kundeinstance.Adresse}', (@UNIQUEX),'{kundeinstance.Mail}', '{DateTime.Now.ToString("dd-MM-yyyy HH-mm-ss")}');"; // Query
             successful = ConnWrite.CreateCommand(KundeQuery, ConnectionString.DBConnectionString); // Write to DB Input and "Execution"
         }
+
+
 
 
 
@@ -242,7 +272,7 @@ namespace View_GUI
 
 
 
-        // Reset Textboc Color
+        // Reset Textbox Color
         private void TextboxesResetColor()
         {
             kunder_name_textBox.BackColor = Color.White;
@@ -255,6 +285,8 @@ namespace View_GUI
         }
 
 
+
+
         // Clear All Textboxes
         private void ClearTextboxes()
         {
@@ -265,6 +297,8 @@ namespace View_GUI
             kunder_zipcCode_textBox.Clear();
             kunder_adr_textBox.Clear();
         }
+
+
 
 
         // Save Button 
@@ -290,22 +324,22 @@ namespace View_GUI
 
         }
 
-        private void Kunder_Form9_Load(object sender, EventArgs e)
-        {
-            // Datagridview Fore Color
-            this.Kunde_dataGridView.DefaultCellStyle.ForeColor = Color.Blue;
-            // TODO: This line of code loads data into the 'advokathusetDataSet.Kunde' table. You can move, or remove it, as needed.
-            this.kundeTableAdapter.Fill(this.advokathusetDataSet.Kunde);
 
 
-        }
 
+
+
+        // Form Menu-----------::START::-------------------------------------------
 
         // Vis Rediger // Show Datagridview
         private void vis_rediger_kunder_button_Click(object sender, EventArgs e)
         {
             datagridviewBackground_panel.Visible = true;
+            this.kundeTableAdapter.Fill(this.advokathusetDataSet.Kunde);
         }
+
+
+
 
 
         // Opret Button
@@ -314,9 +348,121 @@ namespace View_GUI
             datagridviewBackground_panel.Visible = false;// Hide Datagridview
         }
 
+        // Form Menu-----------::END::-------------------------------------------
+
+
+
+
+
+
+        // Datagridview Menu-----------::START::-------------------------------------------
+
+        // Tlf Button
         private void show_Tlf_Nr_button_Click(object sender, EventArgs e)
         {
 
         }
+
+
+
+
+
+
+        // Delete Button
+        private void delete_button_Click(object sender, EventArgs e)    
+        {
+
+        
+
+            try
+            {
+                DialogResult deleteDialog = MessageBox.Show("Are you sure that you want to delete the selected row?","Delete: Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if(deleteDialog == DialogResult.Yes)
+                {
+                    AddRowToList(); // Add to list the row that will be deleted
+                    Kunde_dataGridView.Rows.RemoveAt(Kunde_dataGridView.SelectedRows[0].Index); //  Delete selected row
+                    SaveDatagridview(); // Save to DB
+                }
+
+        }
+
+
+            catch (Exception a)  // If No row is Selected Catch the Exception
+            {
+
+
+                DialogResult errordialog = MessageBox.Show("Please Select Row in order to delete:  Do you want to see additional information about the error", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error); // Error Message
+
+                if(errordialog == DialogResult.Yes) // Do you want to see more info about the error
+                {
+                    MessageBox.Show($"{a.Message}:{a.Data}", "Error Information", MessageBoxButtons.OK, MessageBoxIcon.Information); // Additional Informatio´n
+                }
+
+
+}
+
+        }
+   
+
+
+
+         // Add the row for deletion to list
+        private void AddRowToList()
+        {
+           
+            if (Kunde_dataGridView.CurrentRow.Cells.Count == Kunde_dataGridView.ColumnCount) // If all cels are selected on the current row
+            {
+                
+                DataGridViewRow row = (DataGridViewRow)Kunde_dataGridView.SelectedRows[0].Clone();
+                for (int i = 0; i < Kunde_dataGridView.SelectedCells.Count; i++)
+                {
+                    row.Cells[i].Value = Kunde_dataGridView.SelectedCells[i].Value;
+                }
+                DeletedRowsList.Add(row);
+            }
+        }
+
+
+
+        // Save Datagridview
+        private void SaveDatagridview()
+        {
+            this.Kunde_dataGridView.EndEdit(); // End Edit
+            this.kundeTableAdapter.Update(this.advokathusetDataSet.Kunde); // Update
+            this.Kunde_dataGridView.Refresh(); // Refresh
+        }
+
+
+
+
+
+        // Undo  Button
+        private void undo_button_Click(object sender, EventArgs e)
+        {
+           
+
+            // Always the last item
+            if(DeletedRowsList.Count > 0)
+            {
+                int lastindex = DeletedRowsList.Count - 1;
+        
+
+     
+               advokathusetDataSet.Kunde.Rows.Add(DeletedRowsList[lastindex].Cells[0].Value, DeletedRowsList[lastindex].Cells[1].Value, DeletedRowsList[lastindex].Cells[2].Value, DeletedRowsList[lastindex].Cells[3].Value, DeletedRowsList[lastindex].Cells[4].Value, DeletedRowsList[lastindex].Cells[5].Value, DeletedRowsList[lastindex].Cells[6].Value);
+               SaveDatagridview(); // Save to DB  
+
+               //inserdetindex.Add(kunde);
+               DeletedRowsList.RemoveAt(lastindex); // Remove Last index
+
+            }
+
+
+        }
+      
+        
+        // Datagridview Menu-----------::END::-------------------------------------------
+
+
     }
 }

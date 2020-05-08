@@ -309,7 +309,7 @@ namespace View_GUI {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void KundeRowChangeEventHandler(object sender, KundeRowChangeEvent e);
+        public delegate void DeletedRowsListChangeEventHandler(object sender, DeletedRowsListChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void Kunde_TlfRowChangeEventHandler(object sender, Kunde_TlfRowChangeEvent e);
@@ -319,7 +319,7 @@ namespace View_GUI {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class KundeDataTable : global::System.Data.TypedTableBase<KundeRow> {
+        public partial class KundeDataTable : global::System.Data.TypedTableBase<DeletedRowsList> {
             
             private global::System.Data.DataColumn columnKunde_Fornavn;
             
@@ -435,34 +435,34 @@ namespace View_GUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public KundeRow this[int index] {
+            public DeletedRowsList this[int index] {
                 get {
-                    return ((KundeRow)(this.Rows[index]));
+                    return ((DeletedRowsList)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event KundeRowChangeEventHandler KundeRowChanging;
+            public event DeletedRowsListChangeEventHandler DeletedRowsListChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event KundeRowChangeEventHandler KundeRowChanged;
+            public event DeletedRowsListChangeEventHandler DeletedRowsListChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event KundeRowChangeEventHandler KundeRowDeleting;
+            public event DeletedRowsListChangeEventHandler DeletedRowsListDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event KundeRowChangeEventHandler KundeRowDeleted;
+            public event DeletedRowsListChangeEventHandler DeletedRowsListDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddKundeRow(KundeRow row) {
+            public void AddDeletedRowsList(DeletedRowsList row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public KundeRow AddKundeRow(string Kunde_Fornavn, string Kunde_Efternavn, int Kunde_PostNr, string Kunde_Adresse, System.Guid Kunde_ID, string Kunde_Email, string Oprets_Dato) {
-                KundeRow rowKundeRow = ((KundeRow)(this.NewRow()));
+            public DeletedRowsList AddDeletedRowsList(string Kunde_Fornavn, string Kunde_Efternavn, int Kunde_PostNr, string Kunde_Adresse, System.Guid Kunde_ID, string Kunde_Email, string Oprets_Dato) {
+                DeletedRowsList rowDeletedRowsList = ((DeletedRowsList)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Kunde_Fornavn,
                         Kunde_Efternavn,
@@ -471,15 +471,15 @@ namespace View_GUI {
                         Kunde_ID,
                         Kunde_Email,
                         Oprets_Dato};
-                rowKundeRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowKundeRow);
-                return rowKundeRow;
+                rowDeletedRowsList.ItemArray = columnValuesArray;
+                this.Rows.Add(rowDeletedRowsList);
+                return rowDeletedRowsList;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public KundeRow FindByKunde_ID(System.Guid Kunde_ID) {
-                return ((KundeRow)(this.Rows.Find(new object[] {
+            public DeletedRowsList FindByKunde_ID(System.Guid Kunde_ID) {
+                return ((DeletedRowsList)(this.Rows.Find(new object[] {
                             Kunde_ID})));
             }
             
@@ -539,32 +539,36 @@ namespace View_GUI {
                 this.columnKunde_ID.Unique = true;
                 this.columnKunde_Email.MaxLength = 50;
                 this.columnOprets_Dato.MaxLength = 25;
+                this.ExtendedProperties.Add("Generator_RowClassName", "DeletedRowsList");
+                this.ExtendedProperties.Add("Generator_RowEvArgName", "DeletedRowsListChangeEvent");
+                this.ExtendedProperties.Add("Generator_RowEvHandlerName", "DeletedRowsListChangeEventHandler");
+                this.ExtendedProperties.Add("Generator_UserTableName", "Kunde");
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public KundeRow NewKundeRow() {
-                return ((KundeRow)(this.NewRow()));
+            public DeletedRowsList NewDeletedRowsList() {
+                return ((DeletedRowsList)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new KundeRow(builder);
+                return new DeletedRowsList(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(KundeRow);
+                return typeof(DeletedRowsList);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.KundeRowChanged != null)) {
-                    this.KundeRowChanged(this, new KundeRowChangeEvent(((KundeRow)(e.Row)), e.Action));
+                if ((this.DeletedRowsListChanged != null)) {
+                    this.DeletedRowsListChanged(this, new DeletedRowsListChangeEvent(((DeletedRowsList)(e.Row)), e.Action));
                 }
             }
             
@@ -572,8 +576,8 @@ namespace View_GUI {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.KundeRowChanging != null)) {
-                    this.KundeRowChanging(this, new KundeRowChangeEvent(((KundeRow)(e.Row)), e.Action));
+                if ((this.DeletedRowsListChanging != null)) {
+                    this.DeletedRowsListChanging(this, new DeletedRowsListChangeEvent(((DeletedRowsList)(e.Row)), e.Action));
                 }
             }
             
@@ -581,8 +585,8 @@ namespace View_GUI {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.KundeRowDeleted != null)) {
-                    this.KundeRowDeleted(this, new KundeRowChangeEvent(((KundeRow)(e.Row)), e.Action));
+                if ((this.DeletedRowsListDeleted != null)) {
+                    this.DeletedRowsListDeleted(this, new DeletedRowsListChangeEvent(((DeletedRowsList)(e.Row)), e.Action));
                 }
             }
             
@@ -590,14 +594,14 @@ namespace View_GUI {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.KundeRowDeleting != null)) {
-                    this.KundeRowDeleting(this, new KundeRowChangeEvent(((KundeRow)(e.Row)), e.Action));
+                if ((this.DeletedRowsListDeleting != null)) {
+                    this.DeletedRowsListDeleting(this, new DeletedRowsListChangeEvent(((DeletedRowsList)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveKundeRow(KundeRow row) {
+            public void RemoveDeletedRowsList(DeletedRowsList row) {
                 this.Rows.Remove(row);
             }
             
@@ -762,13 +766,13 @@ namespace View_GUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Kunde_TlfRow AddKunde_TlfRow(int Kunde_Tlf, KundeRow parentKundeRowByFK_Kunde_Tlf_Kunde1) {
+            public Kunde_TlfRow AddKunde_TlfRow(int Kunde_Tlf, DeletedRowsList parentDeletedRowsListByFK_Kunde_Tlf_Kunde1) {
                 Kunde_TlfRow rowKunde_TlfRow = ((Kunde_TlfRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Kunde_Tlf,
                         null};
-                if ((parentKundeRowByFK_Kunde_Tlf_Kunde1 != null)) {
-                    columnValuesArray[1] = parentKundeRowByFK_Kunde_Tlf_Kunde1[4];
+                if ((parentDeletedRowsListByFK_Kunde_Tlf_Kunde1 != null)) {
+                    columnValuesArray[1] = parentDeletedRowsListByFK_Kunde_Tlf_Kunde1[4];
                 }
                 rowKunde_TlfRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowKunde_TlfRow);
@@ -945,13 +949,13 @@ namespace View_GUI {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class KundeRow : global::System.Data.DataRow {
+        public partial class DeletedRowsList : global::System.Data.DataRow {
             
             private KundeDataTable tableKunde;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal KundeRow(global::System.Data.DataRowBuilder rb) : 
+            internal DeletedRowsList(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tableKunde = ((KundeDataTable)(this.Table));
             }
@@ -1117,9 +1121,9 @@ namespace View_GUI {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public KundeRow KundeRow {
+            public DeletedRowsList DeletedRowsList {
                 get {
-                    return ((KundeRow)(this.GetParentRow(this.Table.ParentRelations["FK_Kunde_Tlf_Kunde1"])));
+                    return ((DeletedRowsList)(this.GetParentRow(this.Table.ParentRelations["FK_Kunde_Tlf_Kunde1"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_Kunde_Tlf_Kunde1"]);
@@ -1131,22 +1135,22 @@ namespace View_GUI {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class KundeRowChangeEvent : global::System.EventArgs {
+        public class DeletedRowsListChangeEvent : global::System.EventArgs {
             
-            private KundeRow eventRow;
+            private DeletedRowsList eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public KundeRowChangeEvent(KundeRow row, global::System.Data.DataRowAction action) {
+            public DeletedRowsListChangeEvent(DeletedRowsList row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public KundeRow Row {
+            public DeletedRowsList Row {
                 get {
                     return this.eventRow;
                 }
