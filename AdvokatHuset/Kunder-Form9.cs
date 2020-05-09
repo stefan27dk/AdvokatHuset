@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,12 +14,23 @@ namespace View_GUI
 {
     public partial class Kunder_Form9 : Form
     {
-       
+        //DB
         Kunde kundeinstance; // Instance af Kunde 
         DB_Connection_Write ConnWrite; // Sql Write "
-        DB_Connection_String ConnectionString; // Global Connectionstring
+        static  DB_Connection_String ConnectionString = DB_Connection_String.GetConnectionString(); // Global Connectionstring
+        string kundeTLF_Select_Query = "Select* From Kunde_Tlf";
+        SqlConnection connection = new SqlConnection(ConnectionString.DBConnectionString);
+
+        // Kunde TLF - Database 
+        SqlDataAdapter kundeTlfAdapter; 
+        DataSet kundeTlfDataSet; 
+
+
+        // Validate Textboxes bools
         bool isValid = true; // Inputboxes Validator
         bool successful = false; // Successful Transaction
+
+
 
 
         // Undo Delete
@@ -37,13 +49,14 @@ namespace View_GUI
         // Load
         private void Kunder_Form9_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'advokathusetDataSet.Kunde_Tlf' table. You can move, or remove it, as needed.
+            //this.kunde_TlfTableAdapter.Fill(this.advokathusetDataSet.Kunde_Tlf);
 
-            // Datagridview BAckground Color
 
             // Datagridview Fore Color
             this.Kunde_dataGridView.DefaultCellStyle.ForeColor = Color.Blue;
             // TODO: This line of code loads data into the 'advokathusetDataSet.Kunde' table. You can move, or remove it, as needed.
-            this.kundeTableAdapter.Fill(this.advokathusetDataSet.Kunde);
+            //this.kundeTableAdapter.Fill(this.advokathusetDataSet.Kunde);
 
 
 
@@ -75,7 +88,7 @@ namespace View_GUI
         // Insert to DB
         private void InsertToDB()
         {
-            ConnectionString = new DB_Connection_String(); // Global ConnectionString
+           
             ConnWrite = new DB_Connection_Write(); // "Write to DB Class instance"
             string KundeQuery = $"DECLARE @UNIQUEX UNIQUEIDENTIFIER SET @UNIQUEX = NEWID(); Insert into Kunde Values('{kundeinstance.Fornavn}','{kundeinstance.Efternavn}',{kundeinstance.PostNr},'{kundeinstance.Adresse}', (@UNIQUEX),'{kundeinstance.Mail}', '{DateTime.Now.ToString("dd-MM-yyyy HH-mm-ss")}');"; // Query
             successful = ConnWrite.CreateCommand(KundeQuery, ConnectionString.DBConnectionString); // Write to DB Input and "Execution"
@@ -335,7 +348,7 @@ namespace View_GUI
         private void vis_rediger_kunder_button_Click(object sender, EventArgs e)
         {
             datagridviewBackground_panel.Visible = true;
-            this.kundeTableAdapter.Fill(this.advokathusetDataSet.Kunde);
+            //this.kundeTableAdapter.Fill(this.advokathusetDataSet.Kunde);
         }
 
 
@@ -357,9 +370,48 @@ namespace View_GUI
 
         // Datagridview Menu-----------::START::-------------------------------------------
 
+
+
+
+
         // Tlf Button
         private void show_Tlf_Nr_button_Click(object sender, EventArgs e)
         {
+
+
+            //Kunde_dataGridView.Columns.Clear();
+
+            //Kunde_dataGridView.Columns.Add("Kunde_Tlf", "Kunde Tlf");
+            //Kunde_dataGridView.Columns.Add("Kunde_ID", "Kunde ID");
+
+            //ConnectionString = new DB_Connection_String(); // To Check oNLY //TEST////////////
+
+            //SqlConnection c = new SqlConnection(ConnectionString.DBConnectionString);
+
+            //string kundeTlfQuerry = "Select* From Kunde_Tlf";
+            //SqlDataAdapter adapter = new SqlDataAdapter(kundeTlfQuerry, c);
+            //var commandBuilder = new SqlCommandBuilder(adapter);
+            //DataSet kundeTlfDataset = new DataSet();
+            //adapter.Fill(kundeTlfDataset);
+
+            //Kunde_dataGridView.DataSource = kundeTlfDataset.Tables[0];
+
+
+                  
+
+            //SqlConnection connection = new SqlConnection(ConnectionString.DBConnectionString);
+
+            if (kundeTlfAdapter == null || kundeTlfDataSet == null)
+            {
+                kundeTlfAdapter = new SqlDataAdapter(kundeTLF_Select_Query, connection);
+                kundeTlfDataSet = new DataSet();
+            }
+
+            connection.Open();
+            kundeTlfAdapter.Fill(kundeTlfDataSet, "Kunde_Tlf");
+            connection.Close();
+            Kunde_dataGridView.DataSource = kundeTlfDataSet;
+            Kunde_dataGridView.DataMember = "Kunde_Tlf";
 
         }
 
@@ -429,7 +481,7 @@ namespace View_GUI
         private void SaveDatagridview()
         {
             this.Kunde_dataGridView.EndEdit(); // End Edit
-            this.kundeTableAdapter.Update(this.advokathusetDataSet.Kunde); // Update
+            //this.kundeTableAdapter.Update(this.advokathusetDataSet.Kunde); // Update
             this.Kunde_dataGridView.Refresh(); // Refresh
         }
 
@@ -449,7 +501,7 @@ namespace View_GUI
         
 
      
-               advokathusetDataSet.Kunde.Rows.Add(DeletedRowsList[lastindex].Cells[0].Value, DeletedRowsList[lastindex].Cells[1].Value, DeletedRowsList[lastindex].Cells[2].Value, DeletedRowsList[lastindex].Cells[3].Value, DeletedRowsList[lastindex].Cells[4].Value, DeletedRowsList[lastindex].Cells[5].Value, DeletedRowsList[lastindex].Cells[6].Value);
+               //advokathusetDataSet.Kunde.Rows.Add(DeletedRowsList[lastindex].Cells[0].Value, DeletedRowsList[lastindex].Cells[1].Value, DeletedRowsList[lastindex].Cells[2].Value, DeletedRowsList[lastindex].Cells[3].Value, DeletedRowsList[lastindex].Cells[4].Value, DeletedRowsList[lastindex].Cells[5].Value, DeletedRowsList[lastindex].Cells[6].Value);
                SaveDatagridview(); // Save to DB  
 
                //inserdetindex.Add(kunde);
@@ -459,8 +511,33 @@ namespace View_GUI
 
 
         }
-      
-        
+
+
+        // Save
+        private void SAVE_BUTTON_KUNDE_TLF_Click(object sender, EventArgs e)
+        {
+
+            
+     
+            // Save changes to DB  "UPDATE"
+            try
+            {
+                SqlConnection connection = new SqlConnection(ConnectionString.DBConnectionString);
+                SqlCommand kunde_Select_Command = new SqlCommand(kundeTLF_Select_Query, connection);
+                SqlCommandBuilder kundeTLF_builder = new SqlCommandBuilder(kundeTlfAdapter);
+                kundeTlfAdapter.SelectCommand = kunde_Select_Command; // cmd1 is your SELECT command
+                kundeTlfAdapter.Update(kundeTlfDataSet, "Kunde_Tlf"); //here I hope you won't get error :-)
+            }
+
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message.ToString());
+            }
+
+
+        }
+
+
         // Datagridview Menu-----------::END::-------------------------------------------
 
 

@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Kunde_Top_label = new System.Windows.Forms.Label();
             this.backgroundName_Top_panel = new System.Windows.Forms.Panel();
             this.kunder_name_textBox = new System.Windows.Forms.TextBox();
@@ -48,12 +46,8 @@
             this.surname_label = new System.Windows.Forms.Label();
             this.kunder_surname_textBox = new System.Windows.Forms.TextBox();
             this.name_label = new System.Windows.Forms.Label();
-            this.Kunde_dataGridView = new System.Windows.Forms.DataGridView();
-            this.kundeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.advokathusetDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.advokathusetDataSet = new View_GUI.AdvokathusetDataSet();
-            this.kundeTableAdapter = new View_GUI.AdvokathusetDataSetTableAdapters.KundeTableAdapter();
             this.datagridviewBackground_panel = new System.Windows.Forms.Panel();
+            this.print_button = new System.Windows.Forms.Button();
             this.delete_button = new System.Windows.Forms.Button();
             this.screenshot_datagridview_button = new System.Windows.Forms.Button();
             this.undo_button = new System.Windows.Forms.Button();
@@ -66,27 +60,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.vis_rediger_kunder_button = new System.Windows.Forms.Button();
             this.opret_kunde_button = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.kundeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.kundeBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.kundeFornavnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kundeEfternavnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kundePostNrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kundeAdresseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kundeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kundeEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.opretsDatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Kunde_dataGridView = new System.Windows.Forms.DataGridView();
+            this.SAVE_BUTTON_KUNDE_TLF = new System.Windows.Forms.Button();
             this.backgroundName_Top_panel.SuspendLayout();
             this.backPanel_Textboxes_panel.SuspendLayout();
             this.background_textboxes_top_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Kunde_dataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kundeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.advokathusetDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.advokathusetDataSet)).BeginInit();
             this.datagridviewBackground_panel.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kundeBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kundeBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kunde_dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // Kunde_Top_label
@@ -304,55 +285,14 @@
             this.name_label.Text = "Navn:";
             this.name_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // Kunde_dataGridView
-            // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Blue;
-            this.Kunde_dataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.Kunde_dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.Kunde_dataGridView.AutoGenerateColumns = false;
-            this.Kunde_dataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            this.Kunde_dataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Kunde_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Kunde_dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.kundeFornavnDataGridViewTextBoxColumn,
-            this.kundeEfternavnDataGridViewTextBoxColumn,
-            this.kundePostNrDataGridViewTextBoxColumn,
-            this.kundeAdresseDataGridViewTextBoxColumn,
-            this.kundeIDDataGridViewTextBoxColumn,
-            this.kundeEmailDataGridViewTextBoxColumn,
-            this.opretsDatoDataGridViewTextBoxColumn});
-            this.Kunde_dataGridView.DataSource = this.kundeBindingSource1;
-            this.Kunde_dataGridView.GridColor = System.Drawing.Color.Aqua;
-            this.Kunde_dataGridView.Location = new System.Drawing.Point(15, 44);
-            this.Kunde_dataGridView.Name = "Kunde_dataGridView";
-            this.Kunde_dataGridView.Size = new System.Drawing.Size(772, 438);
-            this.Kunde_dataGridView.TabIndex = 0;
-            // 
-            // kundeBindingSource
-            // 
-            this.kundeBindingSource.DataMember = "Kunde";
-            this.kundeBindingSource.DataSource = this.advokathusetDataSetBindingSource;
-            // 
-            // advokathusetDataSetBindingSource
-            // 
-            this.advokathusetDataSetBindingSource.DataSource = this.advokathusetDataSet;
-            this.advokathusetDataSetBindingSource.Position = 0;
-            // 
-            // advokathusetDataSet
-            // 
-            this.advokathusetDataSet.DataSetName = "AdvokathusetDataSet";
-            this.advokathusetDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // kundeTableAdapter
-            // 
-            this.kundeTableAdapter.ClearBeforeFill = true;
-            // 
             // datagridviewBackground_panel
             // 
             this.datagridviewBackground_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.datagridviewBackground_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.datagridviewBackground_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.datagridviewBackground_panel.Controls.Add(this.SAVE_BUTTON_KUNDE_TLF);
+            this.datagridviewBackground_panel.Controls.Add(this.Kunde_dataGridView);
+            this.datagridviewBackground_panel.Controls.Add(this.print_button);
             this.datagridviewBackground_panel.Controls.Add(this.delete_button);
             this.datagridviewBackground_panel.Controls.Add(this.screenshot_datagridview_button);
             this.datagridviewBackground_panel.Controls.Add(this.undo_button);
@@ -362,11 +302,24 @@
             this.datagridviewBackground_panel.Controls.Add(this.show_Tlf_Nr_button);
             this.datagridviewBackground_panel.Controls.Add(this.search_button);
             this.datagridviewBackground_panel.Controls.Add(this.search_textBox);
-            this.datagridviewBackground_panel.Controls.Add(this.Kunde_dataGridView);
             this.datagridviewBackground_panel.Location = new System.Drawing.Point(292, 170);
             this.datagridviewBackground_panel.Name = "datagridviewBackground_panel";
             this.datagridviewBackground_panel.Size = new System.Drawing.Size(802, 488);
             this.datagridviewBackground_panel.TabIndex = 13;
+            // 
+            // print_button
+            // 
+            this.print_button.FlatAppearance.BorderSize = 0;
+            this.print_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.print_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.print_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.print_button.ForeColor = System.Drawing.Color.Black;
+            this.print_button.Image = global::View_GUI.Properties.Resources.Apps_preferences_desktop_printer_icon;
+            this.print_button.Location = new System.Drawing.Point(716, -1);
+            this.print_button.Name = "print_button";
+            this.print_button.Size = new System.Drawing.Size(43, 44);
+            this.print_button.TabIndex = 21;
+            this.print_button.UseVisualStyleBackColor = true;
             // 
             // delete_button
             // 
@@ -392,7 +345,7 @@
             this.screenshot_datagridview_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.screenshot_datagridview_button.ForeColor = System.Drawing.Color.Black;
             this.screenshot_datagridview_button.Image = global::View_GUI.Properties.Resources.Document_txt_icon__1_;
-            this.screenshot_datagridview_button.Location = new System.Drawing.Point(711, -1);
+            this.screenshot_datagridview_button.Location = new System.Drawing.Point(665, -2);
             this.screenshot_datagridview_button.Name = "screenshot_datagridview_button";
             this.screenshot_datagridview_button.Size = new System.Drawing.Size(43, 44);
             this.screenshot_datagridview_button.TabIndex = 19;
@@ -421,7 +374,7 @@
             this.show_all_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.show_all_button.ForeColor = System.Drawing.Color.Black;
             this.show_all_button.Image = global::View_GUI.Properties.Resources.Documents_icon2;
-            this.show_all_button.Location = new System.Drawing.Point(368, 0);
+            this.show_all_button.Location = new System.Drawing.Point(368, -2);
             this.show_all_button.Name = "show_all_button";
             this.show_all_button.Size = new System.Drawing.Size(38, 45);
             this.show_all_button.TabIndex = 16;
@@ -457,7 +410,7 @@
             this.show_Tlf_Nr_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.show_Tlf_Nr_button.Image = global::View_GUI.Properties.Resources.Phone_icon__1_;
             this.show_Tlf_Nr_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.show_Tlf_Nr_button.Location = new System.Drawing.Point(666, -1);
+            this.show_Tlf_Nr_button.Location = new System.Drawing.Point(620, -1);
             this.show_Tlf_Nr_button.Margin = new System.Windows.Forms.Padding(0);
             this.show_Tlf_Nr_button.Name = "show_Tlf_Nr_button";
             this.show_Tlf_Nr_button.Size = new System.Drawing.Size(42, 43);
@@ -541,65 +494,28 @@
             this.opret_kunde_button.UseVisualStyleBackColor = true;
             this.opret_kunde_button.Click += new System.EventHandler(this.opret_kunde_button_Click);
             // 
-            // richTextBox1
+            // Kunde_dataGridView
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(57, 234);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(210, 145);
-            this.richTextBox1.TabIndex = 14;
-            this.richTextBox1.Text = "";
+            this.Kunde_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Kunde_dataGridView.Location = new System.Drawing.Point(15, 59);
+            this.Kunde_dataGridView.Name = "Kunde_dataGridView";
+            this.Kunde_dataGridView.Size = new System.Drawing.Size(773, 403);
+            this.Kunde_dataGridView.TabIndex = 22;
             // 
-            // kundeBindingSource1
+            // SAVE_BUTTON_KUNDE_TLF
             // 
-            this.kundeBindingSource1.DataMember = "Kunde";
-            this.kundeBindingSource1.DataSource = this.advokathusetDataSetBindingSource;
-            // 
-            // kundeBindingSource2
-            // 
-            this.kundeBindingSource2.DataMember = "Kunde";
-            this.kundeBindingSource2.DataSource = this.advokathusetDataSetBindingSource;
-            // 
-            // kundeFornavnDataGridViewTextBoxColumn
-            // 
-            this.kundeFornavnDataGridViewTextBoxColumn.DataPropertyName = "Kunde_Fornavn";
-            this.kundeFornavnDataGridViewTextBoxColumn.HeaderText = "Kunde_Fornavn";
-            this.kundeFornavnDataGridViewTextBoxColumn.Name = "kundeFornavnDataGridViewTextBoxColumn";
-            // 
-            // kundeEfternavnDataGridViewTextBoxColumn
-            // 
-            this.kundeEfternavnDataGridViewTextBoxColumn.DataPropertyName = "Kunde_Efternavn";
-            this.kundeEfternavnDataGridViewTextBoxColumn.HeaderText = "Kunde_Efternavn";
-            this.kundeEfternavnDataGridViewTextBoxColumn.Name = "kundeEfternavnDataGridViewTextBoxColumn";
-            // 
-            // kundePostNrDataGridViewTextBoxColumn
-            // 
-            this.kundePostNrDataGridViewTextBoxColumn.DataPropertyName = "Kunde_PostNr";
-            this.kundePostNrDataGridViewTextBoxColumn.HeaderText = "Kunde_PostNr";
-            this.kundePostNrDataGridViewTextBoxColumn.Name = "kundePostNrDataGridViewTextBoxColumn";
-            // 
-            // kundeAdresseDataGridViewTextBoxColumn
-            // 
-            this.kundeAdresseDataGridViewTextBoxColumn.DataPropertyName = "Kunde_Adresse";
-            this.kundeAdresseDataGridViewTextBoxColumn.HeaderText = "Kunde_Adresse";
-            this.kundeAdresseDataGridViewTextBoxColumn.Name = "kundeAdresseDataGridViewTextBoxColumn";
-            // 
-            // kundeIDDataGridViewTextBoxColumn
-            // 
-            this.kundeIDDataGridViewTextBoxColumn.DataPropertyName = "Kunde_ID";
-            this.kundeIDDataGridViewTextBoxColumn.HeaderText = "Kunde_ID";
-            this.kundeIDDataGridViewTextBoxColumn.Name = "kundeIDDataGridViewTextBoxColumn";
-            // 
-            // kundeEmailDataGridViewTextBoxColumn
-            // 
-            this.kundeEmailDataGridViewTextBoxColumn.DataPropertyName = "Kunde_Email";
-            this.kundeEmailDataGridViewTextBoxColumn.HeaderText = "Kunde_Email";
-            this.kundeEmailDataGridViewTextBoxColumn.Name = "kundeEmailDataGridViewTextBoxColumn";
-            // 
-            // opretsDatoDataGridViewTextBoxColumn
-            // 
-            this.opretsDatoDataGridViewTextBoxColumn.DataPropertyName = "Oprets_Dato";
-            this.opretsDatoDataGridViewTextBoxColumn.HeaderText = "Oprets_Dato";
-            this.opretsDatoDataGridViewTextBoxColumn.Name = "opretsDatoDataGridViewTextBoxColumn";
+            this.SAVE_BUTTON_KUNDE_TLF.FlatAppearance.BorderSize = 0;
+            this.SAVE_BUTTON_KUNDE_TLF.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.SAVE_BUTTON_KUNDE_TLF.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.SAVE_BUTTON_KUNDE_TLF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SAVE_BUTTON_KUNDE_TLF.ForeColor = System.Drawing.Color.Black;
+            this.SAVE_BUTTON_KUNDE_TLF.Image = global::View_GUI.Properties.Resources.navigate_left_icon__1_;
+            this.SAVE_BUTTON_KUNDE_TLF.Location = new System.Drawing.Point(447, 2);
+            this.SAVE_BUTTON_KUNDE_TLF.Name = "SAVE_BUTTON_KUNDE_TLF";
+            this.SAVE_BUTTON_KUNDE_TLF.Size = new System.Drawing.Size(32, 45);
+            this.SAVE_BUTTON_KUNDE_TLF.TabIndex = 23;
+            this.SAVE_BUTTON_KUNDE_TLF.UseVisualStyleBackColor = true;
+            this.SAVE_BUTTON_KUNDE_TLF.Click += new System.EventHandler(this.SAVE_BUTTON_KUNDE_TLF_Click);
             // 
             // Kunder_Form9
             // 
@@ -607,7 +523,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1333, 700);
-            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.datagridviewBackground_panel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.backPanel_Textboxes_panel);
@@ -622,15 +537,10 @@
             this.backPanel_Textboxes_panel.PerformLayout();
             this.background_textboxes_top_panel.ResumeLayout(false);
             this.background_textboxes_top_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Kunde_dataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kundeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.advokathusetDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.advokathusetDataSet)).EndInit();
             this.datagridviewBackground_panel.ResumeLayout(false);
             this.datagridviewBackground_panel.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kundeBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kundeBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kunde_dataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -658,11 +568,6 @@
         private System.Windows.Forms.Button vis_rediger_kunder_button;
         private System.Windows.Forms.Label email_label;
         private System.Windows.Forms.TextBox kunde_email_textBox;
-        private System.Windows.Forms.DataGridView Kunde_dataGridView;
-        private AdvokathusetDataSet advokathusetDataSet;
-        private System.Windows.Forms.BindingSource advokathusetDataSetBindingSource;
-        private System.Windows.Forms.BindingSource kundeBindingSource;
-        private AdvokathusetDataSetTableAdapters.KundeTableAdapter kundeTableAdapter;
         private System.Windows.Forms.Panel datagridviewBackground_panel;
         private System.Windows.Forms.TextBox search_textBox;
         private System.Windows.Forms.Button show_Tlf_Nr_button;
@@ -673,8 +578,6 @@
         private System.Windows.Forms.Button undo_button;
         private System.Windows.Forms.Button screenshot_datagridview_button;
         private System.Windows.Forms.Button delete_button;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.BindingSource kundeBindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn kundeFornavnDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kundeEfternavnDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kundePostNrDataGridViewTextBoxColumn;
@@ -682,6 +585,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn kundeIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kundeEmailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn opretsDatoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource kundeBindingSource2;
+        private System.Windows.Forms.Button print_button;
+        private System.Windows.Forms.DataGridView Kunde_dataGridView;
+        private System.Windows.Forms.Button SAVE_BUTTON_KUNDE_TLF;
     }
 }
