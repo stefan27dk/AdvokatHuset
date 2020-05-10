@@ -17,26 +17,39 @@ namespace View_GUI
         //DB
         Kunde kundeinstance; // Instance af Kunde 
         DB_Connection_Write ConnWrite; // Sql Write "
-        static  DB_Connection_String ConnectionString = DB_Connection_String.GetConnectionString(); // Global Connectionstring
-        string kundeTLF_Select_Query = "Select* From Kunde_Tlf";
-        SqlConnection connection = new SqlConnection(ConnectionString.DBConnectionString);
-
-        // Kunde TLF - Database 
-        SqlDataAdapter kundeTlfAdapter; 
-        DataSet kundeTlfDataSet; 
+        static readonly  DB_Connection_String ConnectionString = DB_Connection_String.GetConnectionString(); // Global Connectionstring
+        static readonly SqlConnection connection = new SqlConnection(ConnectionString.DBConnectionString); // SQL Connection
+        //
+        //
+        // Show Kunde TLF - Database 
+        static string kundeTLF_Select_Query = "Select* From Kunde_Tlf";  // Tlf Query
+        SqlDataAdapter kundeTlfAdapter = new SqlDataAdapter(kundeTLF_Select_Query, connection);
+        DataSet kundeTlfDataSet = new DataSet();
+        //
+        //
+        //
+        // Show Kunder - Database
+        static string show_Kunde_Query = "SELECT* FROM Kunde";
+        SqlDataAdapter showKundeAdapter = new SqlDataAdapter(show_Kunde_Query, connection);
+        DataSet showKunde_Dataset = new DataSet();
+        //
+        //
+        //
+        // Row Edit
+        DataGridViewRow enterRow = new DataGridViewRow();
 
 
         // Validate Textboxes bools
         bool isValid = true; // Inputboxes Validator
         bool successful = false; // Successful Transaction
-
-
-
-
+        //
+        //
+        //
         // Undo Delete
         List<DataGridViewRow> DeletedRowsList = new List<DataGridViewRow>(); // List with deleted Rows
-      
-
+        //
+        //
+        // Initialize
         public Kunder_Form9()
         {
             InitializeComponent();
@@ -49,26 +62,20 @@ namespace View_GUI
         // Load
         private void Kunder_Form9_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'advokathusetDataSet.Kunde_Tlf' table. You can move, or remove it, as needed.
-            //this.kunde_TlfTableAdapter.Fill(this.advokathusetDataSet.Kunde_Tlf);
+          
+            // Show all Kunder "Populating the datagridview with Curtomers "Kunder""
+            LoadKunder();
 
 
             // Datagridview Fore Color
             this.Kunde_dataGridView.DefaultCellStyle.ForeColor = Color.Blue;
-            // TODO: This line of code loads data into the 'advokathusetDataSet.Kunde' table. You can move, or remove it, as needed.
-            //this.kundeTableAdapter.Fill(this.advokathusetDataSet.Kunde);
-
-
 
         }
 
 
 
 
-
-
-
-
+      
 
         // Create Kunde
         private void CreateKunde()
@@ -82,6 +89,8 @@ namespace View_GUI
             kundeinstance.Mail = kunde_email_textBox.Text;
 
         }
+
+
 
 
 
@@ -99,8 +108,8 @@ namespace View_GUI
 
 
 
-        // Key Events------::START::----------------------------------------------------------------------
-
+        // Key Events--Validating--Textboxes----::START::----------------------------------------------------------------------
+        //
         // Validate Name
         private void kunder_name_textBox_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -378,35 +387,6 @@ namespace View_GUI
         private void show_Tlf_Nr_button_Click(object sender, EventArgs e)
         {
 
-
-            //Kunde_dataGridView.Columns.Clear();
-
-            //Kunde_dataGridView.Columns.Add("Kunde_Tlf", "Kunde Tlf");
-            //Kunde_dataGridView.Columns.Add("Kunde_ID", "Kunde ID");
-
-            //ConnectionString = new DB_Connection_String(); // To Check oNLY //TEST////////////
-
-            //SqlConnection c = new SqlConnection(ConnectionString.DBConnectionString);
-
-            //string kundeTlfQuerry = "Select* From Kunde_Tlf";
-            //SqlDataAdapter adapter = new SqlDataAdapter(kundeTlfQuerry, c);
-            //var commandBuilder = new SqlCommandBuilder(adapter);
-            //DataSet kundeTlfDataset = new DataSet();
-            //adapter.Fill(kundeTlfDataset);
-
-            //Kunde_dataGridView.DataSource = kundeTlfDataset.Tables[0];
-
-
-                  
-
-            //SqlConnection connection = new SqlConnection(ConnectionString.DBConnectionString);
-
-            if (kundeTlfAdapter == null || kundeTlfDataSet == null)
-            {
-                kundeTlfAdapter = new SqlDataAdapter(kundeTLF_Select_Query, connection);
-                kundeTlfDataSet = new DataSet();
-            }
-
             connection.Open();
             kundeTlfAdapter.Fill(kundeTlfDataSet, "Kunde_Tlf");
             connection.Close();
@@ -416,7 +396,26 @@ namespace View_GUI
         }
 
 
+        //Shortcut keys -----KEY WATCHER- ----SHORTCUT KEYS----------------::START::------------------------------------------------------------------------------------
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
 
+            // Open Item Menu Shortcut
+            if (keyData == (Keys.Delete))
+            {
+                if(Kunde_dataGridView.Focused && Kunde_dataGridView.SelectedRows.Count > 0)
+                {
+                DeleteFromDatagridview();
+
+                }
+            }
+
+            
+
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        //Shortcut keys -----KEY WATCHER- ----SHORTCUT KEYS----------------::END::------------------------------------------------------------------------------------
 
 
 
@@ -424,20 +423,29 @@ namespace View_GUI
         private void delete_button_Click(object sender, EventArgs e)    
         {
 
-        
 
+            DeleteFromDatagridview();
+
+
+
+        }
+   
+
+
+        private void DeleteFromDatagridview()
+        {
             try
             {
-                DialogResult deleteDialog = MessageBox.Show("Are you sure that you want to delete the selected row?","Delete: Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult deleteDialog = MessageBox.Show("Are you sure that you want to delete the selected row?", "Delete: Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-                if(deleteDialog == DialogResult.Yes)
+                if (deleteDialog == DialogResult.Yes)
                 {
                     AddRowToList(); // Add to list the row that will be deleted
                     Kunde_dataGridView.Rows.RemoveAt(Kunde_dataGridView.SelectedRows[0].Index); //  Delete selected row
                     SaveDatagridview(); // Save to DB
                 }
 
-        }
+            }
 
 
             catch (Exception a)  // If No row is Selected Catch the Exception
@@ -446,17 +454,14 @@ namespace View_GUI
 
                 DialogResult errordialog = MessageBox.Show("Please Select Row in order to delete:  Do you want to see additional information about the error", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error); // Error Message
 
-                if(errordialog == DialogResult.Yes) // Do you want to see more info about the error
+                if (errordialog == DialogResult.Yes) // Do you want to see more info about the error
                 {
                     MessageBox.Show($"{a.Message}:{a.Data}", "Error Information", MessageBoxButtons.OK, MessageBoxIcon.Information); // Additional Informatio´n
                 }
 
 
-}
-
+            }
         }
-   
-
 
 
          // Add the row for deletion to list
@@ -481,8 +486,8 @@ namespace View_GUI
         private void SaveDatagridview()
         {
             this.Kunde_dataGridView.EndEdit(); // End Edit
-            //this.kundeTableAdapter.Update(this.advokathusetDataSet.Kunde); // Update
-            this.Kunde_dataGridView.Refresh(); // Refresh
+            SaveKunder();
+
         }
 
 
@@ -513,6 +518,9 @@ namespace View_GUI
         }
 
 
+
+
+         //TEST---------------------------------
         // Save
         private void SAVE_BUTTON_KUNDE_TLF_Click(object sender, EventArgs e)
         {
@@ -522,10 +530,10 @@ namespace View_GUI
             // Save changes to DB  "UPDATE"
             try
             {
-                SqlConnection connection = new SqlConnection(ConnectionString.DBConnectionString);
-                SqlCommand kunde_Select_Command = new SqlCommand(kundeTLF_Select_Query, connection);
+           
+                SqlCommand kunde_Tlf_Select_Command = new SqlCommand(kundeTLF_Select_Query, connection);
                 SqlCommandBuilder kundeTLF_builder = new SqlCommandBuilder(kundeTlfAdapter);
-                kundeTlfAdapter.SelectCommand = kunde_Select_Command; // cmd1 is your SELECT command
+                kundeTlfAdapter.SelectCommand = kunde_Tlf_Select_Command; 
                 kundeTlfAdapter.Update(kundeTlfDataSet, "Kunde_Tlf"); //here I hope you won't get error :-)
             }
 
@@ -536,6 +544,109 @@ namespace View_GUI
 
 
         }
+
+
+
+        private void LoadKunder()
+        {
+            showKunde_Dataset.Clear(); // Clear all rows so we begin on fresh datagridview "If We dont do that the old Data will remain and the new data will be inserted at the bottom of the datagridview"
+            connection.Open();
+            showKundeAdapter.Fill(showKunde_Dataset, "Kunde");
+            connection.Close();
+            Kunde_dataGridView.DataSource = showKunde_Dataset;
+            Kunde_dataGridView.DataMember = "Kunde";
+        }
+
+
+
+        // Show All Kunder Button
+        private void show_all_button_Click(object sender, EventArgs e)
+        {
+            LoadKunder();
+        }
+
+
+        // Save Cutomers "KUNDER"
+        private void SaveKunder()
+        {
+            // Save changes to DB  "UPDATE Kunder"
+            try
+            {
+                Kunde_dataGridView.EndEdit();
+                SqlCommand kunde_Select_Command = new SqlCommand(show_Kunde_Query, connection);
+                SqlCommandBuilder show_Kunde_Builder = new SqlCommandBuilder(showKundeAdapter);
+                showKundeAdapter.SelectCommand = kunde_Select_Command;
+                showKundeAdapter.Update(showKunde_Dataset, "Kunde"); 
+            }
+
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message.ToString());
+            }
+
+        }
+
+
+
+      
+
+
+        // UPDATE - Get row to Compare on Row enter "Used to determine if the row have been changed so we know when to edit "Save the changes""
+        private void Kunde_dataGridView_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            
+
+            if (Kunde_dataGridView.SelectedRows.Count > 0 ) // I there are
+            {
+
+              // Clone Row
+              enterRow = (DataGridViewRow) Kunde_dataGridView.SelectedRows[0].Clone();
+
+                // Add Data to the Cloned Row
+                for (int i = 0; i < Kunde_dataGridView.SelectedRows[0].Cells.Count; i++)
+                {
+                    enterRow.Cells[i].Value = Kunde_dataGridView.SelectedRows[0].Cells[i].Value;
+                }
+                  
+                
+            }
+
+
+        }
+
+
+        // UPDATE - On ROW LEAVE AFTER VALIDATION  SAVE
+        private void Kunde_dataGridView_RowValidated(object sender, DataGridViewCellEventArgs e)
+        {
+            bool edited = false;
+
+            if (Kunde_dataGridView.SelectedRows.Count > 0)
+            {
+                for (int j = 0; j < Kunde_dataGridView.SelectedRows[0].Cells.Count; j++)
+                {
+                    if (Kunde_dataGridView.SelectedRows[0].Cells[j].Value != null && !Kunde_dataGridView.SelectedRows[0].Cells[j].Value.Equals(enterRow.Cells[j].Value))
+                    {
+                        edited = true;
+                        break;
+                    }
+                }
+
+
+                if (edited == true)
+                {
+
+                    DialogResult saveDialog = MessageBox.Show("Are you sure that you want ot save the changes?", "Save", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    if (saveDialog == DialogResult.Yes)
+                    {
+                        SaveKunder();
+                        //MessageBox.Show("Changes Are Saved", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                }
+
+            }
+        }
+
 
 
         // Datagridview Menu-----------::END::-------------------------------------------

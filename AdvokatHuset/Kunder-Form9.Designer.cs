@@ -47,6 +47,8 @@
             this.kunder_surname_textBox = new System.Windows.Forms.TextBox();
             this.name_label = new System.Windows.Forms.Label();
             this.datagridviewBackground_panel = new System.Windows.Forms.Panel();
+            this.SAVE_BUTTON_KUNDE_TLF = new System.Windows.Forms.Button();
+            this.Kunde_dataGridView = new System.Windows.Forms.DataGridView();
             this.print_button = new System.Windows.Forms.Button();
             this.delete_button = new System.Windows.Forms.Button();
             this.screenshot_datagridview_button = new System.Windows.Forms.Button();
@@ -60,14 +62,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.vis_rediger_kunder_button = new System.Windows.Forms.Button();
             this.opret_kunde_button = new System.Windows.Forms.Button();
-            this.Kunde_dataGridView = new System.Windows.Forms.DataGridView();
-            this.SAVE_BUTTON_KUNDE_TLF = new System.Windows.Forms.Button();
             this.backgroundName_Top_panel.SuspendLayout();
             this.backPanel_Textboxes_panel.SuspendLayout();
             this.background_textboxes_top_panel.SuspendLayout();
             this.datagridviewBackground_panel.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Kunde_dataGridView)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Kunde_Top_label
@@ -307,6 +307,33 @@
             this.datagridviewBackground_panel.Size = new System.Drawing.Size(802, 488);
             this.datagridviewBackground_panel.TabIndex = 13;
             // 
+            // SAVE_BUTTON_KUNDE_TLF
+            // 
+            this.SAVE_BUTTON_KUNDE_TLF.FlatAppearance.BorderSize = 0;
+            this.SAVE_BUTTON_KUNDE_TLF.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.SAVE_BUTTON_KUNDE_TLF.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.SAVE_BUTTON_KUNDE_TLF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SAVE_BUTTON_KUNDE_TLF.ForeColor = System.Drawing.Color.Black;
+            this.SAVE_BUTTON_KUNDE_TLF.Image = global::View_GUI.Properties.Resources.navigate_left_icon__1_;
+            this.SAVE_BUTTON_KUNDE_TLF.Location = new System.Drawing.Point(447, 2);
+            this.SAVE_BUTTON_KUNDE_TLF.Name = "SAVE_BUTTON_KUNDE_TLF";
+            this.SAVE_BUTTON_KUNDE_TLF.Size = new System.Drawing.Size(32, 45);
+            this.SAVE_BUTTON_KUNDE_TLF.TabIndex = 23;
+            this.SAVE_BUTTON_KUNDE_TLF.UseVisualStyleBackColor = true;
+            this.SAVE_BUTTON_KUNDE_TLF.Click += new System.EventHandler(this.SAVE_BUTTON_KUNDE_TLF_Click);
+            // 
+            // Kunde_dataGridView
+            // 
+            this.Kunde_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Kunde_dataGridView.Location = new System.Drawing.Point(15, 59);
+            this.Kunde_dataGridView.MultiSelect = false;
+            this.Kunde_dataGridView.Name = "Kunde_dataGridView";
+            this.Kunde_dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Kunde_dataGridView.Size = new System.Drawing.Size(773, 403);
+            this.Kunde_dataGridView.TabIndex = 22;
+            this.Kunde_dataGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.Kunde_dataGridView_RowEnter);
+            this.Kunde_dataGridView.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.Kunde_dataGridView_RowValidated);
+            // 
             // print_button
             // 
             this.print_button.FlatAppearance.BorderSize = 0;
@@ -379,6 +406,7 @@
             this.show_all_button.Size = new System.Drawing.Size(38, 45);
             this.show_all_button.TabIndex = 16;
             this.show_all_button.UseVisualStyleBackColor = true;
+            this.show_all_button.Click += new System.EventHandler(this.show_all_button_Click);
             // 
             // finished_checkBox
             // 
@@ -494,29 +522,6 @@
             this.opret_kunde_button.UseVisualStyleBackColor = true;
             this.opret_kunde_button.Click += new System.EventHandler(this.opret_kunde_button_Click);
             // 
-            // Kunde_dataGridView
-            // 
-            this.Kunde_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Kunde_dataGridView.Location = new System.Drawing.Point(15, 59);
-            this.Kunde_dataGridView.Name = "Kunde_dataGridView";
-            this.Kunde_dataGridView.Size = new System.Drawing.Size(773, 403);
-            this.Kunde_dataGridView.TabIndex = 22;
-            // 
-            // SAVE_BUTTON_KUNDE_TLF
-            // 
-            this.SAVE_BUTTON_KUNDE_TLF.FlatAppearance.BorderSize = 0;
-            this.SAVE_BUTTON_KUNDE_TLF.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.SAVE_BUTTON_KUNDE_TLF.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.SAVE_BUTTON_KUNDE_TLF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SAVE_BUTTON_KUNDE_TLF.ForeColor = System.Drawing.Color.Black;
-            this.SAVE_BUTTON_KUNDE_TLF.Image = global::View_GUI.Properties.Resources.navigate_left_icon__1_;
-            this.SAVE_BUTTON_KUNDE_TLF.Location = new System.Drawing.Point(447, 2);
-            this.SAVE_BUTTON_KUNDE_TLF.Name = "SAVE_BUTTON_KUNDE_TLF";
-            this.SAVE_BUTTON_KUNDE_TLF.Size = new System.Drawing.Size(32, 45);
-            this.SAVE_BUTTON_KUNDE_TLF.TabIndex = 23;
-            this.SAVE_BUTTON_KUNDE_TLF.UseVisualStyleBackColor = true;
-            this.SAVE_BUTTON_KUNDE_TLF.Click += new System.EventHandler(this.SAVE_BUTTON_KUNDE_TLF_Click);
-            // 
             // Kunder_Form9
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -527,6 +532,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.backPanel_Textboxes_panel);
             this.Controls.Add(this.backgroundName_Top_panel);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Kunder_Form9";
             this.Text = "Kunder_Form9";
@@ -539,8 +545,8 @@
             this.background_textboxes_top_panel.PerformLayout();
             this.datagridviewBackground_panel.ResumeLayout(false);
             this.datagridviewBackground_panel.PerformLayout();
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Kunde_dataGridView)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -578,13 +584,6 @@
         private System.Windows.Forms.Button undo_button;
         private System.Windows.Forms.Button screenshot_datagridview_button;
         private System.Windows.Forms.Button delete_button;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kundeFornavnDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kundeEfternavnDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kundePostNrDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kundeAdresseDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kundeIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kundeEmailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn opretsDatoDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button print_button;
         private System.Windows.Forms.DataGridView Kunde_dataGridView;
         private System.Windows.Forms.Button SAVE_BUTTON_KUNDE_TLF;
