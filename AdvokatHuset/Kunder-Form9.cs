@@ -27,13 +27,13 @@ namespace View_GUI
         DataSet kundeTlfDataSet = new DataSet();
         //
         //
-        //
         // Show Kunder - Database
         static string show_Kunde_Query = "SELECT* FROM Kunde";
         SqlDataAdapter showKundeAdapter = new SqlDataAdapter(show_Kunde_Query, connection);
         DataSet showKunde_Dataset = new DataSet();
+
         //
-        //
+        //   
         //
         // Row Edit
         DataGridViewRow enterRow = new DataGridViewRow();
@@ -62,7 +62,7 @@ namespace View_GUI
         // Load
         private void Kunder_Form9_Load(object sender, EventArgs e)
         {
-          
+
             // Show all Kunder "Populating the datagridview with Curtomers "Kunder""
             LoadKunder();
 
@@ -509,16 +509,19 @@ namespace View_GUI
         // Undo  Button
         private void undo_button_Click(object sender, EventArgs e)
         {
-           
+            //DataTable dtImage = showKunde_Dataset.Tables[0];
+
+            //    showKunde_Dataset.Tables.Add(dtImage);
+
 
             // Always the last item
-            if(DeletedRowsList.Count > 0)
+            if (DeletedRowsList.Count > 0)
             {
                 int lastindex = DeletedRowsList.Count - 1;
-        
 
-     
-               //advokathusetDataSet.Kunde.Rows.Add(DeletedRowsList[lastindex].Cells[0].Value, DeletedRowsList[lastindex].Cells[1].Value, DeletedRowsList[lastindex].Cells[2].Value, DeletedRowsList[lastindex].Cells[3].Value, DeletedRowsList[lastindex].Cells[4].Value, DeletedRowsList[lastindex].Cells[5].Value, DeletedRowsList[lastindex].Cells[6].Value);
+
+
+               showKunde_Dataset.Tables[0].Rows.Add(DeletedRowsList[lastindex].Cells[0].Value, DeletedRowsList[lastindex].Cells[1].Value, DeletedRowsList[lastindex].Cells[2].Value, DeletedRowsList[lastindex].Cells[3].Value, DeletedRowsList[lastindex].Cells[4].Value, DeletedRowsList[lastindex].Cells[5].Value, DeletedRowsList[lastindex].Cells[6].Value);
                SaveDatagridview(); // Save to DB  
 
                //inserdetindex.Add(kunde);
