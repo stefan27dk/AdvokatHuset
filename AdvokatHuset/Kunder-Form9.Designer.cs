@@ -324,12 +324,13 @@
             // 
             // Kunde_dataGridView
             // 
+            this.Kunde_dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.Kunde_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Kunde_dataGridView.Location = new System.Drawing.Point(15, 59);
             this.Kunde_dataGridView.MultiSelect = false;
             this.Kunde_dataGridView.Name = "Kunde_dataGridView";
             this.Kunde_dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Kunde_dataGridView.Size = new System.Drawing.Size(773, 403);
+            this.Kunde_dataGridView.Size = new System.Drawing.Size(773, 412);
             this.Kunde_dataGridView.TabIndex = 22;
             this.Kunde_dataGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.Kunde_dataGridView_RowEnter);
             this.Kunde_dataGridView.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.Kunde_dataGridView_RowValidated);

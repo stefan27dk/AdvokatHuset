@@ -390,11 +390,15 @@ namespace View_GUI
         // Show Kunde_Tlf - Tlf Button
         private void show_Tlf_Nr_button_Click(object sender, EventArgs e)
         {
+            if (ConnectionString.DBConnectionString != null)
+            {
+            kundeTlfDataSet.Clear();// Clear
             connection.Open();
             kundeTlfAdapter.Fill(kundeTlfDataSet, "Kunde_Tlf");
             connection.Close();
             Kunde_dataGridView.DataSource = kundeTlfDataSet;
             Kunde_dataGridView.DataMember = "Kunde_Tlf";
+            }
 
         }
 
@@ -442,28 +446,30 @@ namespace View_GUI
         {
             try
             {
-                DialogResult deleteDialog = MessageBox.Show("Are you sure that you want to delete the selected row?", "Delete: Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-                if (deleteDialog == DialogResult.Yes)
+                if(Kunde_dataGridView.SelectedRows.Count > 0) // Check if any row is selected
                 {
-                    AddRowToList(); // Add to list the row that will be deleted
-                    Kunde_dataGridView.Rows.RemoveAt(Kunde_dataGridView.SelectedRows[0].Index); //  Delete selected row
-                    SaveDatagridview(); // Save to DB
-                }
+                   DialogResult deleteDialog = MessageBox.Show("Are you sure that you want to delete the selected row?", "Delete: Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                   if (deleteDialog == DialogResult.Yes)
+                   {
+                       AddRowToList(); // Add to list the row that will be deleted
+                       Kunde_dataGridView.Rows.RemoveAt(Kunde_dataGridView.SelectedRows[0].Index); //  Delete selected row
+                       SaveDatagridview(); // Save to DB
+                   }
 
+                }
             }
 
 
-            catch (Exception a)  // If No row is Selected Catch the Exception
-            {
-
-                DialogResult errordialog = MessageBox.Show("Please Select Row in order to delete:  Do you want to see additional information about the error", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error); // Error Message
-                if (errordialog == DialogResult.Yes) // Do you want to see more info about the error
-                {
-                    MessageBox.Show($"{a.Message}:{a.Data}", "Error Information", MessageBoxButtons.OK, MessageBoxIcon.Information); // Additional Information
-                }
-
-            }
+               catch (Exception a)  // If No row is Selected Catch the Exception
+               {
+              
+                   DialogResult errordialog = MessageBox.Show("Please Select Row in order to delete:  Do you want to see additional information about the error", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error); // Error Message
+                   if (errordialog == DialogResult.Yes) // Do you want to see more info about the error
+                   {
+                       MessageBox.Show($"{a.Message}:{a.Data}", "Error Information", MessageBoxButtons.OK, MessageBoxIcon.Information); // Additional Information
+                   }
+              
+               }
         }
 
 
@@ -562,12 +568,16 @@ namespace View_GUI
         // Show KCustomers "Kunder" - Main Method
         private void LoadKunder()
         {
+            if(ConnectionString.DBConnectionString != null)
+            {
             showKunde_Dataset.Clear(); // Clear all rows so we begin on fresh datagridview "If We dont do that the old Data will remain and the new data will be inserted at the bottom of the datagridview"
             connection.Open();
             showKundeAdapter.Fill(showKunde_Dataset, "Kunde");
             connection.Close();
             Kunde_dataGridView.DataSource = showKunde_Dataset;
             Kunde_dataGridView.DataMember = "Kunde";
+            }
+
         }
 
 
