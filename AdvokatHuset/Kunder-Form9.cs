@@ -24,13 +24,13 @@ namespace View_GUI
         // Show Kunde TLF - Database 
         static string kundeTLF_Select_Query = "Select* From Kunde_Tlf";  // Tlf Query
         SqlDataAdapter kundeTlfAdapter = new SqlDataAdapter(kundeTLF_Select_Query, connection);
-        DataSet kundeTlfDataSet = new DataSet();
+        //DataSet kundeTlfDataSet = new DataSet();
         //
         //
         // Show Kunder - Database
         static string show_Kunde_Query = "SELECT* FROM Kunde";
         SqlDataAdapter showKundeAdapter = new SqlDataAdapter(show_Kunde_Query, connection);
-        DataSet showKunde_Dataset = new DataSet();
+        DataSet Kunde_Dataset = new DataSet();
 
         //
         //   
@@ -392,11 +392,11 @@ namespace View_GUI
         {
             if (ConnectionString.DBConnectionString != null)
             {
-            kundeTlfDataSet.Clear();// Clear
+            Kunde_Dataset.Clear();// Clear
             connection.Open();
-            kundeTlfAdapter.Fill(kundeTlfDataSet, "Kunde_Tlf");
+            kundeTlfAdapter.Fill(Kunde_Dataset, "Kunde_Tlf");
             connection.Close();
-            Kunde_dataGridView.DataSource = kundeTlfDataSet;
+            Kunde_dataGridView.DataSource = Kunde_Dataset;
             Kunde_dataGridView.DataMember = "Kunde_Tlf";
             }
 
@@ -509,9 +509,9 @@ namespace View_GUI
         // Undo  Button
         private void undo_button_Click(object sender, EventArgs e)
         {
-            //DataTable dtImage = showKunde_Dataset.Tables[0];
+            //DataTable dtImage = Kunde_Dataset.Tables[0];
 
-            //    showKunde_Dataset.Tables.Add(dtImage);
+            //    Kunde_Dataset.Tables.Add(dtImage);
 
 
             // Always the last item
@@ -519,9 +519,9 @@ namespace View_GUI
             {
                 int lastindex = DeletedRowsList.Count - 1;
 
+               
 
-
-               showKunde_Dataset.Tables[0].Rows.Add(DeletedRowsList[lastindex].Cells[0].Value, DeletedRowsList[lastindex].Cells[1].Value, DeletedRowsList[lastindex].Cells[2].Value, DeletedRowsList[lastindex].Cells[3].Value, DeletedRowsList[lastindex].Cells[4].Value, DeletedRowsList[lastindex].Cells[5].Value, DeletedRowsList[lastindex].Cells[6].Value);
+               Kunde_Dataset.Tables[0].Rows.Add(DeletedRowsList[lastindex].Cells[0].Value, DeletedRowsList[lastindex].Cells[1].Value, DeletedRowsList[lastindex].Cells[2].Value, DeletedRowsList[lastindex].Cells[3].Value, DeletedRowsList[lastindex].Cells[4].Value, DeletedRowsList[lastindex].Cells[5].Value, DeletedRowsList[lastindex].Cells[6].Value);
                SaveDatagridview(); // Save to DB  
 
                //inserdetindex.Add(kunde);
@@ -551,7 +551,7 @@ namespace View_GUI
                 SqlCommand kunde_Tlf_Select_Command = new SqlCommand(kundeTLF_Select_Query, connection);
                 SqlCommandBuilder kundeTLF_builder = new SqlCommandBuilder(kundeTlfAdapter);
                 kundeTlfAdapter.SelectCommand = kunde_Tlf_Select_Command; 
-                kundeTlfAdapter.Update(kundeTlfDataSet, "Kunde_Tlf"); //here I hope you won't get error :-)
+                kundeTlfAdapter.Update(Kunde_Dataset, "Kunde_Tlf"); //here I hope you won't get error :-)
             }
 
             catch (Exception err)
@@ -573,11 +573,11 @@ namespace View_GUI
         {
             if(ConnectionString.DBConnectionString != null)
             {
-            showKunde_Dataset.Clear(); // Clear all rows so we begin on fresh datagridview "If We dont do that the old Data will remain and the new data will be inserted at the bottom of the datagridview"
+            Kunde_Dataset.Clear(); // Clear all rows so we begin on fresh datagridview "If We dont do that the old Data will remain and the new data will be inserted at the bottom of the datagridview"
             connection.Open();
-            showKundeAdapter.Fill(showKunde_Dataset, "Kunde");
+            showKundeAdapter.Fill(Kunde_Dataset, "Kunde");
             connection.Close();
-            Kunde_dataGridView.DataSource = showKunde_Dataset;
+            Kunde_dataGridView.DataSource = Kunde_Dataset;
             Kunde_dataGridView.DataMember = "Kunde";
             }
 
@@ -604,17 +604,32 @@ namespace View_GUI
             // Save changes to DB  "UPDATE Kunder"
             try
             {
+                if(Kunde_dataGridView.DataMember == "Kunde") // save Kunde "If datamember is Kunde"
+                {
+
                 Kunde_dataGridView.EndEdit();
                 SqlCommand kunde_Select_Command = new SqlCommand(show_Kunde_Query, connection);
                 SqlCommandBuilder show_Kunde_Builder = new SqlCommandBuilder(showKundeAdapter);
                 showKundeAdapter.SelectCommand = kunde_Select_Command;
-                showKundeAdapter.Update(showKunde_Dataset, "Kunde"); 
+                showKundeAdapter.Update(Kunde_Dataset, "Kunde"); 
+                }
+
+                else if(Kunde_dataGridView.DataMember == "Kunde_Tlf") // Save Kunde_tlf
+                {
+                    Kunde_dataGridView.EndEdit();
+                    SqlCommand kunde_Tlf_Select_Command = new SqlCommand(kundeTLF_Select_Query, connection);
+                    SqlCommandBuilder kundeTLF_builder = new SqlCommandBuilder(kundeTlfAdapter);
+                    kundeTlfAdapter.SelectCommand = kunde_Tlf_Select_Command;
+                    kundeTlfAdapter.Update(Kunde_Dataset, "Kunde_Tlf");
+                }
+
             }
 
             catch (Exception err)
             {
                 MessageBox.Show(err.Message.ToString());
             }
+        
 
         }
 

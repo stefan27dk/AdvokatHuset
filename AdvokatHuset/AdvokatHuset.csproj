@@ -839,5 +839,35 @@
   <ItemGroup>
     <None Include="Resources\Apps-preferences-desktop-printer-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\170796_button_256x256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\170796_button_256x256 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\170796_button_256x256 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\170796_button_256x256 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\170796_button_256x256 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\170796_button_256x256 %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\170796_button_256x256 %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\170796_button_256x256 %285%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-go-previous-view-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-go-previous-view-icon %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
