@@ -66,7 +66,6 @@ namespace View_GUI
             // Show all Kunder "Populating the datagridview with Curtomers "Kunder""
             LoadKunder();
 
-
             // Datagridview Fore Color
             this.Kunde_dataGridView.DefaultCellStyle.ForeColor = Color.Blue;
 
@@ -94,10 +93,9 @@ namespace View_GUI
 
 
 
-        // Insert to DB
+        // Insert to DB  "Insert Kunde to DB"
         private void InsertToDB()
         {
-           
             ConnWrite = new DB_Connection_Write(); // "Write to DB Class instance"
             string KundeQuery = $"DECLARE @UNIQUEX UNIQUEIDENTIFIER SET @UNIQUEX = NEWID(); Insert into Kunde Values('{kundeinstance.Fornavn}','{kundeinstance.Efternavn}',{kundeinstance.PostNr},'{kundeinstance.Adresse}', (@UNIQUEX),'{kundeinstance.Mail}', '{DateTime.Now.ToString("dd-MM-yyyy HH-mm-ss")}');"; // Query
             successful = ConnWrite.CreateCommand(KundeQuery, ConnectionString.DBConnectionString); // Write to DB Input and "Execution"
@@ -108,7 +106,7 @@ namespace View_GUI
 
 
 
-        // Key Events--Validating--Textboxes----::START::----------------------------------------------------------------------
+        // Key Events--Validating--Textboxes----::START::---------------------------------------------- 
         //
         // Validate Name
         private void kunder_name_textBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -351,6 +349,8 @@ namespace View_GUI
 
 
 
+
+
         // Form Menu-----------::START::-------------------------------------------
 
         // Vis Rediger // Show Datagridview
@@ -370,7 +370,13 @@ namespace View_GUI
             datagridviewBackground_panel.Visible = false;// Hide Datagridview
         }
 
-        // Form Menu-----------::END::-------------------------------------------
+        // Form Menu-----------::END::----------------------------------------------
+
+
+
+
+
+
 
 
 
@@ -378,15 +384,12 @@ namespace View_GUI
 
 
         // Datagridview Menu-----------::START::-------------------------------------------
+        
 
 
-
-
-
-        // Tlf Button
+        // Show Kunde_Tlf - Tlf Button
         private void show_Tlf_Nr_button_Click(object sender, EventArgs e)
         {
-
             connection.Open();
             kundeTlfAdapter.Fill(kundeTlfDataSet, "Kunde_Tlf");
             connection.Close();
@@ -396,7 +399,10 @@ namespace View_GUI
         }
 
 
-        //Shortcut keys -----KEY WATCHER- ----SHORTCUT KEYS----------------::START::------------------------------------------------------------------------------------
+
+
+
+        //Shortcut keys-----KEY WATCHER-----------::START::--------------------------------------------------------------------------------
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
 
@@ -415,23 +421,23 @@ namespace View_GUI
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
-        //Shortcut keys -----KEY WATCHER- ----SHORTCUT KEYS----------------::END::------------------------------------------------------------------------------------
+        //Shortcut keys-----KEY WATCHER---------::END::------------------------------------------------------------------------------------
+
+
+
 
 
 
         // Delete Button
         private void delete_button_Click(object sender, EventArgs e)    
         {
-
-
             DeleteFromDatagridview();
-
-
-
         }
    
 
 
+
+        // Delete From Datagridview
         private void DeleteFromDatagridview()
         {
             try
@@ -451,20 +457,20 @@ namespace View_GUI
             catch (Exception a)  // If No row is Selected Catch the Exception
             {
 
-
                 DialogResult errordialog = MessageBox.Show("Please Select Row in order to delete:  Do you want to see additional information about the error", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error); // Error Message
-
                 if (errordialog == DialogResult.Yes) // Do you want to see more info about the error
                 {
-                    MessageBox.Show($"{a.Message}:{a.Data}", "Error Information", MessageBoxButtons.OK, MessageBoxIcon.Information); // Additional Informatio´n
+                    MessageBox.Show($"{a.Message}:{a.Data}", "Error Information", MessageBoxButtons.OK, MessageBoxIcon.Information); // Additional Information
                 }
-
 
             }
         }
 
 
-         // Add the row for deletion to list
+
+
+
+         // Add the row for deletion to list   "Part of Undo"
         private void AddRowToList()
         {
            
@@ -486,7 +492,7 @@ namespace View_GUI
         private void SaveDatagridview()
         {
             this.Kunde_dataGridView.EndEdit(); // End Edit
-            SaveKunder();
+            SaveKunder(); // Save Customers
 
         }
 
@@ -520,12 +526,14 @@ namespace View_GUI
 
 
 
+
+
+
          //TEST---------------------------------
         // Save
         private void SAVE_BUTTON_KUNDE_TLF_Click(object sender, EventArgs e)
         {
-
-            
+     
      
             // Save changes to DB  "UPDATE"
             try
@@ -547,6 +555,11 @@ namespace View_GUI
 
 
 
+
+
+
+
+        // Show KCustomers "Kunder" - Main Method
         private void LoadKunder()
         {
             showKunde_Dataset.Clear(); // Clear all rows so we begin on fresh datagridview "If We dont do that the old Data will remain and the new data will be inserted at the bottom of the datagridview"
@@ -559,11 +572,17 @@ namespace View_GUI
 
 
 
-        // Show All Kunder Button
+
+
+        // Show All Customers "Kunder" - Button
         private void show_all_button_Click(object sender, EventArgs e)
         {
             LoadKunder();
         }
+
+
+
+
 
 
         // Save Cutomers "KUNDER"
@@ -586,9 +605,9 @@ namespace View_GUI
 
         }
 
+           
 
 
-      
 
 
         // UPDATE - Get row to Compare on Row enter "Used to determine if the row have been changed so we know when to edit "Save the changes""
@@ -615,34 +634,40 @@ namespace View_GUI
         }
 
 
-        // UPDATE - On ROW LEAVE AFTER VALIDATION  SAVE
+
+
+
+
+        // UPDATE "SAVE" - On ROW LEAVE AFTER VALIDATION  "Save"
         private void Kunde_dataGridView_RowValidated(object sender, DataGridViewCellEventArgs e)
         {
-            bool edited = false;
+            bool edited = false; // Check if the Row was edited
 
-            if (Kunde_dataGridView.SelectedRows.Count > 0)
+            if (Kunde_dataGridView.SelectedRows.Count > 0) // Selected minimum 1 row
             {
-                for (int j = 0; j < Kunde_dataGridView.SelectedRows[0].Cells.Count; j++)
-                {
-                    if (Kunde_dataGridView.SelectedRows[0].Cells[j].Value != null && !Kunde_dataGridView.SelectedRows[0].Cells[j].Value.Equals(enterRow.Cells[j].Value))
-                    {
-                        edited = true;
-                        break;
-                    }
-                }
 
 
-                if (edited == true)
-                {
+                  for (int j = 0; j < Kunde_dataGridView.SelectedRows[0].Cells.Count; j++)
+                  {
+                      if (Kunde_dataGridView.SelectedRows[0].Cells[j].Value != null && !Kunde_dataGridView.SelectedRows[0].Cells[j].Value.Equals(enterRow.Cells[j].Value))
+                      {
+                          edited = true;
+                          break;
+                      }
+                  }
+                
+                
+                  if (edited == true)
+                  {
+                      DialogResult saveDialog = MessageBox.Show("Are you sure that you want ot save the changes?", "Save", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                      if (saveDialog == DialogResult.Yes)
+                      {
+                          SaveKunder();
+                          //MessageBox.Show("Changes Are Saved", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                      }
+                  }
 
-                    DialogResult saveDialog = MessageBox.Show("Are you sure that you want ot save the changes?", "Save", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                    if (saveDialog == DialogResult.Yes)
-                    {
-                        SaveKunder();
-                        //MessageBox.Show("Changes Are Saved", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
 
-                }
 
             }
         }
