@@ -10,16 +10,19 @@ namespace Domain
 {
     class DB_Connection_Write
     {
+
+        DB_Connection_String Connection = new DB_Connection_String(); // SQL Connection Singleton 
+
         bool successful = false;
         
-        public bool CreateCommand(string queryString, string connectionString)
+        public bool CreateCommand(string Query)
         {
             try
             {
 
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                using (Connection.Get_SQL_Conn_Instance())
                 {
-                    SqlCommand command = new SqlCommand(queryString, connection);
+                    SqlCommand command = new SqlCommand(Query, Connection.Get_SQL_Conn_Instance());
                     command.Connection.Open();
                     command.ExecuteNonQuery();
                 }

@@ -19,8 +19,8 @@ namespace View_GUI
         //DB
         Kunde kundeinstance; // Instance af Kunde 
         DB_Connection_Write ConnWrite; // Sql Write "
-        static readonly  DB_Connection_String ConnectionString = DB_Connection_String.GetConnectionString(); // Global Connectionstring
-        static SqlConnection connection = null; 
+        //static readonly  DB_Connection_String ConnectionString = DB_Connection_String.GetConnectionString(); // Global Connectionstring
+        //static SqlConnection connection = null; 
       
 
 
@@ -55,7 +55,7 @@ namespace View_GUI
 
         // Search string
         string SearchOptions = "";
-        string SearchColumn = "";
+        string SearchColumn_SearchString = "";
 
 
 
@@ -126,7 +126,7 @@ namespace View_GUI
         {
             ConnWrite = new DB_Connection_Write(); // "Write to DB Class instance"
             string KundeQuery = $"DECLARE @UNIQUEX UNIQUEIDENTIFIER SET @UNIQUEX = NEWID(); Insert into Kunde Values('{kundeinstance.Fornavn}','{kundeinstance.Efternavn}',{kundeinstance.PostNr},'{kundeinstance.Adresse}', (@UNIQUEX),'{kundeinstance.Mail}', '{DateTime.Now.ToString("dd-MM-yyyy HH-mm-ss")}');"; // Query
-            successful = ConnWrite.CreateCommand(KundeQuery, ConnectionString.DBConnectionString); // Write to DB Input and "Execution"
+            successful = ConnWrite.CreateCommand(KundeQuery); // Write to DB Input and "Execution"
         }
 
 
@@ -418,29 +418,29 @@ namespace View_GUI
 
 
 
-        
 
 
-        // Show Kunde_Tlf - Tlf Button
-        private void show_Tlf_Nr_button_Click(object sender, EventArgs e)
-        {
-            if (ConnectionString.DBConnectionString != null)
-            {
 
-                using (connection = new SqlConnection(ConnectionString.DBConnectionString))// SQL Connection
-                {
-                    Kunde_Dataset.Clear();// Clear
-                    connection.Open();
-                    kundeTlfAdapter = new SqlDataAdapter(kundeTLF_Select_Query, connection);
-                    kundeTlfAdapter.Fill(Kunde_Dataset, "Kunde_Tlf"); // Filling the dataset
-                    connection.Close();
-                    Kunde_dataGridView.DataSource = Kunde_Dataset; // Getting data from the Dataset and putting it in the datagridview
-                    Kunde_dataGridView.DataMember = "Kunde_Tlf"; // Datamember is Kunde_Tlf
+        //// Show Kunde_Tlf - Tlf Button
+        //private void show_Tlf_Nr_button_Click(object sender, EventArgs e)
+        //{
+        //    if (ConnectionString.DBConnectionString != null)
+        //    {
 
-                }
-            }
+        //        using (connection = new SqlConnection(ConnectionString.DBConnectionString))// SQL Connection
+        //        {
+        //            Kunde_Dataset.Clear();// Clear
+        //            connection.Open();
+        //            kundeTlfAdapter = new SqlDataAdapter(kundeTLF_Select_Query, connection);
+        //            kundeTlfAdapter.Fill(Kunde_Dataset, "Kunde_Tlf"); // Filling the dataset
+        //            connection.Close();
+        //            Kunde_dataGridView.DataSource = Kunde_Dataset; // Getting data from the Dataset and putting it in the datagridview
+        //            Kunde_dataGridView.DataMember = "Kunde_Tlf"; // Datamember is Kunde_Tlf
 
-        }
+        //        }
+        //    }
+
+        //}
 
 
 
@@ -566,32 +566,32 @@ namespace View_GUI
 
 
 
-         //TEST---------------------------------
-        // Save
-        private void SAVE_BUTTON_KUNDE_TLF_Click(object sender, EventArgs e)
-        {
-     
-     
-            // Save changes to DB  "UPDATE"
-            try
-            {
-                using (connection = new SqlConnection(ConnectionString.DBConnectionString))// SQL Connection
-                {
-                    SqlCommand kunde_Tlf_Select_Command = new SqlCommand(kundeTLF_Select_Query, connection);
-                    kundeTlfAdapter = new SqlDataAdapter(kundeTLF_Select_Query, connection);
-                    SqlCommandBuilder kundeTLF_builder = new SqlCommandBuilder(kundeTlfAdapter);
-                    kundeTlfAdapter.SelectCommand = kunde_Tlf_Select_Command;
-                    kundeTlfAdapter.Update(Kunde_Dataset, "Kunde_Tlf"); // Specifying the table is Important "Kunde_tlf" else It will not work in this Configuration "It may Work if it was made in another configoration"
-                }
-            }
-
-            catch (Exception err)
-            {
-                MessageBox.Show(err.Message.ToString());
-            }
+        ////TEST---------------------------------
+        //// Save
+        //private void SAVE_BUTTON_KUNDE_TLF_Click(object sender, EventArgs e)
+        //{
 
 
-        }
+        //    // Save changes to DB  "UPDATE"
+        //    try
+        //    {
+        //        using (connection = new SqlConnection(ConnectionString.DBConnectionString))// SQL Connection
+        //        {
+        //            SqlCommand kunde_Tlf_Select_Command = new SqlCommand(kundeTLF_Select_Query, connection);
+        //            kundeTlfAdapter = new SqlDataAdapter(kundeTLF_Select_Query, connection);
+        //            SqlCommandBuilder kundeTLF_builder = new SqlCommandBuilder(kundeTlfAdapter);
+        //            kundeTlfAdapter.SelectCommand = kunde_Tlf_Select_Command;
+        //            kundeTlfAdapter.Update(Kunde_Dataset, "Kunde_Tlf"); // Specifying the table is Important "Kunde_tlf" else It will not work in this Configuration "It may Work if it was made in another configoration"
+        //        }
+        //    }
+
+        //    catch (Exception err)
+        //    {
+        //        MessageBox.Show(err.Message.ToString());
+        //    }
+
+
+        //}
 
 
 
@@ -602,19 +602,28 @@ namespace View_GUI
         // Show KCustomers "Kunder" - Main Method
         private void LoadKunder()
         {
-            if(ConnectionString.DBConnectionString != null)
-            {
-                using (connection = new SqlConnection(ConnectionString.DBConnectionString))// SQL Connection
-                {
-                    Kunde_Dataset.Clear(); // Clear all rows so we begin on fresh datagridview "If We dont do that the old Data will remain and the new data will be inserted at the bottom of the datagridview"
-                    connection.Open();
-                    showKundeAdapter = new SqlDataAdapter(show_Kunde_Query, connection); // Its at the top of the "file". Make new Apater
-                    showKundeAdapter.Fill(Kunde_Dataset, "Kunde");
-                    connection.Close();
-                    Kunde_dataGridView.DataSource = Kunde_Dataset;
-                    Kunde_dataGridView.DataMember = "Kunde";
-                }
-            }
+
+            Kunde_Dataset.Clear(); // Clear all rows so we begin on fresh datagridview "If We dont do that the old Data will remain and the new data will be inserted at the bottom of the datagridview"
+            Datagridview_Loader Load_Search_Result = new Datagridview_Loader();
+            Load_Search_Result.DB_Populate(show_Kunde_Query, Kunde_Dataset, "Kunde");
+            Kunde_dataGridView.DataSource = Kunde_Dataset;
+            Kunde_dataGridView.DataMember = "Kunde";
+
+
+
+            //if(ConnectionString.DBConnectionString != null)
+            //{
+            //    using (connection = new SqlConnection(ConnectionString.DBConnectionString))// SQL Connection
+            //    {
+            //        Kunde_Dataset.Clear(); // Clear all rows so we begin on fresh datagridview "If We dont do that the old Data will remain and the new data will be inserted at the bottom of the datagridview"
+            //        connection.Open();
+            //        showKundeAdapter = new SqlDataAdapter(show_Kunde_Query, connection); // Its at the top of the "file". Make new Apater
+            //        showKundeAdapter.Fill(Kunde_Dataset, "Kunde");
+            //        connection.Close();
+            //        Kunde_dataGridView.DataSource = Kunde_Dataset;
+            //        Kunde_dataGridView.DataMember = "Kunde";
+            //    }
+            //}
 
         }
 
@@ -637,37 +646,34 @@ namespace View_GUI
         private void SaveDataGridView()
         {
             // Save changes to DB  "UPDATE Kunder"
-            try
-            {
-                using (connection = new SqlConnection(ConnectionString.DBConnectionString))// SQL Connection
-                {
-                    if (Kunde_dataGridView.DataMember == "Kunde") // save Kunde "If datamember is Kunde"
-                    {
 
-                        Kunde_dataGridView.EndEdit();
-                        SqlCommand kunde_Select_Command = new SqlCommand(show_Kunde_Query, connection);
-                        showKundeAdapter = new SqlDataAdapter(show_Kunde_Query, connection);
-                        SqlCommandBuilder show_Kunde_Builder = new SqlCommandBuilder(showKundeAdapter);
-                        showKundeAdapter.SelectCommand = kunde_Select_Command;
-                        showKundeAdapter.Update(Kunde_Dataset, "Kunde");
-                    }
+                Kunde_dataGridView.EndEdit();
+                DatagridView_Save Update_Kunder = new DatagridView_Save();
+                Update_Kunder.DatagridView_Update(show_Kunde_Query, Kunde_Dataset, "Kunde");
 
-                    else if (Kunde_dataGridView.DataMember == "Kunde_Tlf") // Save Kunde_tlf
-                    {
-                        Kunde_dataGridView.EndEdit();
-                        SqlCommand kunde_Tlf_Select_Command = new SqlCommand(kundeTLF_Select_Query, connection);
-                        kundeTlfAdapter = new SqlDataAdapter(kundeTLF_Select_Query, connection);
-                        SqlCommandBuilder kundeTLF_builder = new SqlCommandBuilder(kundeTlfAdapter);
-                        kundeTlfAdapter.SelectCommand = kunde_Tlf_Select_Command;
-                        kundeTlfAdapter.Update(Kunde_Dataset, "Kunde_Tlf");
-                    }
-                }
-            }
+            //try
+            //{
 
-            catch (Exception err)
-            {
-                MessageBox.Show(err.Message.ToString());
-            }
+                //using (connection = new SqlConnection(ConnectionString.DBConnectionString))// SQL Connection
+                //{
+
+                //        Kunde_dataGridView.EndEdit();
+                //        SqlCommand kunde_Select_Command = new SqlCommand(show_Kunde_Query, connection);
+                //        showKundeAdapter = new SqlDataAdapter(show_Kunde_Query, connection);
+                //        SqlCommandBuilder show_Kunde_Builder = new SqlCommandBuilder(showKundeAdapter);
+                //        showKundeAdapter.SelectCommand = kunde_Select_Command;
+                //        showKundeAdapter.Update(Kunde_Dataset, "Kunde");
+
+                //}
+
+
+
+            //}
+
+            //catch (Exception err)
+            //{
+            //    MessageBox.Show(err.Message.ToString());
+            //}
         
 
         }
@@ -763,7 +769,7 @@ namespace View_GUI
             Bitmap bitmapScreenshot = new Bitmap(this.Kunde_dataGridView.Width, this.Kunde_dataGridView.Height);
 
             // Draw to the bitmap
-            Kunde_dataGridView.DrawToBitmap(bitmapScreenshot, new Rectangle(0, 0, this.Kunde_dataGridView.Width*10, this.Kunde_dataGridView.Height));
+            Kunde_dataGridView.DrawToBitmap(bitmapScreenshot, new Rectangle(0, 0, this.Kunde_dataGridView.Width, this.Kunde_dataGridView.Height));
 
             // Reset the height
             Kunde_dataGridView.Height = oldHeight;
@@ -776,17 +782,15 @@ namespace View_GUI
 
         }
 
+   
 
-
-
-
-
-        // Datagridview Screnshot - button
+        // Datagridview Screnshot - Button
         private void screenshot_datagridview_button_Click(object sender, EventArgs e)
         {
             White_DatagridviewStyle(); // Datagridview White Color
             DatagridviewScreenshot(); // Screenshot
             Black_DatagridviewStyle(); // Datagridview Color Style
+           
         }
 
 
@@ -796,9 +800,14 @@ namespace View_GUI
         // Local Folder
         private void local_folder_button_Click(object sender, EventArgs e)
         {
-            Process.Start(@"C://");
+            Open_Local_Folder();
         }
 
+        // Open Local Folder
+        private void Open_Local_Folder()
+        {
+            Process.Start(@"C://");
+        }
 
 
 
@@ -875,40 +884,40 @@ namespace View_GUI
 
         private void Search_Column()
         {
-            //SearchColumn
+            //SearchColumn_SearchString
 
             switch (Search_Column_comboBox.SelectedIndex)
             {
                 case 0: // ALL
-                    SearchColumn = $"IF(ISNUMERIC('{search_textBox.Text}') = 0) BEGIN Select* From Kunde Where  Kunde_Fornavn {SearchOptions} OR Kunde_Efternavn {SearchOptions} OR Kunde_Adresse {SearchOptions} OR Kunde_Email {SearchOptions} OR Kunde_Oprets_Dato {SearchOptions} OR Kunde_ID {SearchOptions} END ELSE  BEGIN SELECT Kunde.*, Kunde_Tlf.Kunde_Tlf From Kunde Full Join Kunde_Tlf ON Kunde.Kunde_ID = Kunde_Tlf.Kunde_ID Where Kunde_PostNr {SearchOptions} OR Kunde_Tlf.Kunde_Tlf {SearchOptions} OR Kunde_Fornavn {SearchOptions} OR Kunde_Efternavn {SearchOptions} OR Kunde_Adresse {SearchOptions} OR Kunde_Email {SearchOptions} OR Kunde_Oprets_Dato {SearchOptions} OR Kunde.Kunde_ID {SearchOptions} END;  ";
+                    SearchColumn_SearchString = $"IF(ISNUMERIC('{search_textBox.Text}') = 0) BEGIN Select* From Kunde Where  Kunde_Fornavn {SearchOptions} OR Kunde_Efternavn {SearchOptions} OR Kunde_Adresse {SearchOptions} OR Kunde_Email {SearchOptions} OR Kunde_Oprets_Dato {SearchOptions} OR Kunde_ID {SearchOptions} END ELSE  BEGIN SELECT Kunde.*, Kunde_Tlf.Kunde_Tlf From Kunde Full Join Kunde_Tlf ON Kunde.Kunde_ID = Kunde_Tlf.Kunde_ID Where Kunde_PostNr {SearchOptions} OR Kunde_Tlf.Kunde_Tlf {SearchOptions} OR Kunde_Fornavn {SearchOptions} OR Kunde_Efternavn {SearchOptions} OR Kunde_Adresse {SearchOptions} OR Kunde_Email {SearchOptions} OR Kunde_Oprets_Dato {SearchOptions} OR Kunde.Kunde_ID {SearchOptions} END;  ";
                     break;
                 case 1: // Name
-                    SearchColumn = $"SELECT* From Kunde Where Kunde.Kunde_Fornavn {SearchOptions}";
+                    SearchColumn_SearchString = $"SELECT* From Kunde Where Kunde.Kunde_Fornavn {SearchOptions}";
                     break;
                 case 2:   // Surname
-                    SearchColumn = $"SELECT* From Kunde Where Kunde.Kunde_Efternavn {SearchOptions}";
+                    SearchColumn_SearchString = $"SELECT* From Kunde Where Kunde.Kunde_Efternavn {SearchOptions}";
                     break;
                 case 3:  //Adress
-                    SearchColumn = $"SELECT* From Kunde Where Kunde.Kunde_Adresse {SearchOptions}";
+                    SearchColumn_SearchString = $"SELECT* From Kunde Where Kunde.Kunde_Adresse {SearchOptions}";
                     break;
                 case 4:  // Zip-Code
-                    SearchColumn = $" IF(ISNUMERIC('{search_textBox.Text}') = 1) BEGIN SELECT* From Kunde Where Kunde_PostNr {SearchOptions} END";
+                    SearchColumn_SearchString = $" IF(ISNUMERIC('{search_textBox.Text}') = 1) BEGIN SELECT* From Kunde Where Kunde_PostNr {SearchOptions} END";
                     break;
                 case 5: //TLF
-                    SearchColumn = $" IF(ISNUMERIC('{search_textBox.Text}') = 1) BEGIN SELECT Kunde.*, Kunde_Tlf.Kunde_Tlf From Kunde Full Join Kunde_Tlf ON  Kunde.Kunde_ID = Kunde_Tlf.Kunde_ID Where Kunde_Tlf.Kunde_Tlf {SearchOptions} END";
+                    SearchColumn_SearchString = $" IF(ISNUMERIC('{search_textBox.Text}') = 1) BEGIN SELECT Kunde.*, Kunde_Tlf.Kunde_Tlf From Kunde Full Join Kunde_Tlf ON  Kunde.Kunde_ID = Kunde_Tlf.Kunde_ID Where Kunde_Tlf.Kunde_Tlf {SearchOptions} END";
                     break;
                 case 6: // ID
-                    SearchColumn = $"SELECT* From Kunde Where Kunde.Kunde_ID {SearchOptions}";
+                    SearchColumn_SearchString = $"SELECT* From Kunde Where Kunde.Kunde_ID {SearchOptions}";
                     break;
                 case 7: // Email
-                    SearchColumn = $"SELECT* From Kunde Where Kunde.Kunde_Email {SearchOptions}";
+                    SearchColumn_SearchString = $"SELECT* From Kunde Where Kunde.Kunde_Email {SearchOptions}";
                     break;
                 case 8: // Date
-                    SearchColumn = $"SELECT* From Kunde Where Kunde.Kunde_Oprets_Dato {SearchOptions}";
+                    SearchColumn_SearchString = $"SELECT* From Kunde Where Kunde.Kunde_Oprets_Dato {SearchOptions}";
 
                     break;
                   
-                    //SearchColumn = $"IF(ISNUMERIC('{search_textBox.Text}') = 0) BEGIN Select* From Kunde Where  Kunde_Fornavn {SearchOptions} " +
+                    //SearchColumn_SearchString = $"IF(ISNUMERIC('{search_textBox.Text}') = 0) BEGIN Select* From Kunde Where  Kunde_Fornavn {SearchOptions} " +
                     //    $"OR Kunde_Efternavn {SearchOptions} OR Kunde_Adresse {SearchOptions} OR Kunde_Email {SearchOptions} OR Kunde_Oprets_Dato {SearchOptions} " +
                     //    $"OR Kunde_ID {SearchOptions} END ELSE BEGIN SELECT Kunde.*, Kunde_Tlf.Kunde_Tlf From Kunde Full Join Kunde_Tlf ON Kunde.Kunde_ID = Kunde_Tlf.Kunde_ID Where Kunde_PostNr {SearchOptions} OR Kunde_Tlf.Kunde_Tlf {SearchOptions} END;";
             }
@@ -919,17 +928,27 @@ namespace View_GUI
         // Search
         private void Search()
         {
-           
-            using (connection = new SqlConnection(ConnectionString.DBConnectionString))// SQL Connection
-            {
-                Kunde_Dataset.Clear(); // Clear all rows so we begin on fresh datagridview "If We dont do that the old Data will remain and the new data will be inserted at the bottom of the datagridview"
-                connection.Open();
-                showKundeAdapter = new SqlDataAdapter(SearchColumn, connection); // Its at the top of the "file". Make new Apater
-                showKundeAdapter.Fill(Kunde_Dataset, "Kunde");
-                connection.Close();
-                Kunde_dataGridView.DataSource = Kunde_Dataset;
-                Kunde_dataGridView.DataMember = "Kunde";
-            }
+
+
+            Kunde_Dataset.Clear(); // Clear all rows so we begin on fresh datagridview "If We dont do that the old Data will remain and the new data will be inserted at the bottom of the datagridview"
+            Datagridview_Loader Load_Search_Result = new Datagridview_Loader();
+            Load_Search_Result.DB_Populate(SearchColumn_SearchString, Kunde_Dataset, "Kunde");
+            Kunde_dataGridView.DataSource = Kunde_Dataset;
+            Kunde_dataGridView.DataMember = "Kunde";
+
+
+
+
+            //using (connection = new SqlConnection(ConnectionString.DBConnectionString))// SQL Connection
+            //{
+            //    Kunde_Dataset.Clear(); // Clear all rows so we begin on fresh datagridview "If We dont do that the old Data will remain and the new data will be inserted at the bottom of the datagridview"
+            //    connection.Open();
+            //    showKundeAdapter = new SqlDataAdapter(SearchColumn_SearchString, connection); // Its at the top of the "file". Make new Apater
+            //    showKundeAdapter.Fill(Kunde_Dataset, "Kunde");
+            //    connection.Close();
+            //    Kunde_dataGridView.DataSource = Kunde_Dataset;
+            //    Kunde_dataGridView.DataMember = "Kunde";
+            //}
 
         }
 

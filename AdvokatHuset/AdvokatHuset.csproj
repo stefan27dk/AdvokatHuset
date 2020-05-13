@@ -63,6 +63,8 @@
       <DependentUpon>Advokater-Form3.cs</DependentUpon>
     </Compile>
     <Compile Include="Chef.cs" />
+    <Compile Include="Datagridview_Loader.cs" />
+    <Compile Include="DatagridView_Save.cs" />
     <Compile Include="DB_Connection_String.cs" />
     <Compile Include="DB_Connection_Write.cs" />
     <Compile Include="DeveloperForm-Form12.cs">

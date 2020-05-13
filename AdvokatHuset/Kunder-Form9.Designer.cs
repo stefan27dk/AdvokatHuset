@@ -32,44 +32,44 @@
             this.backgroundName_Top_panel = new System.Windows.Forms.Panel();
             this.kunder_name_textBox = new System.Windows.Forms.TextBox();
             this.backPanel_Textboxes_panel = new System.Windows.Forms.Panel();
+            this.email_label = new System.Windows.Forms.Label();
             this.kunde_email_textBox = new System.Windows.Forms.TextBox();
+            this.kunder_Save_button = new System.Windows.Forms.Button();
+            this.adr_label = new System.Windows.Forms.Label();
             this.kunder_adr_textBox = new System.Windows.Forms.TextBox();
             this.background_textboxes_top_panel = new System.Windows.Forms.Panel();
             this.opret_Kunder_label = new System.Windows.Forms.Label();
+            this.zipCode_label = new System.Windows.Forms.Label();
             this.kunder_zipcCode_textBox = new System.Windows.Forms.TextBox();
+            this.tlf_label = new System.Windows.Forms.Label();
             this.kunder_tlf_textBox = new System.Windows.Forms.TextBox();
+            this.surname_label = new System.Windows.Forms.Label();
             this.kunder_surname_textBox = new System.Windows.Forms.TextBox();
+            this.name_label = new System.Windows.Forms.Label();
             this.datagridviewBackground_panel = new System.Windows.Forms.Panel();
-            this.Search_Column_comboBox = new System.Windows.Forms.ComboBox();
-            this.Kunde_dataGridView = new System.Windows.Forms.DataGridView();
-            this.search_options_comboBox = new System.Windows.Forms.ComboBox();
-            this.search_textBox = new System.Windows.Forms.TextBox();
             this.change_DatagridView_Color_button = new System.Windows.Forms.Button();
             this.search_Datagridview_pictureBox = new System.Windows.Forms.PictureBox();
+            this.Search_Column_comboBox = new System.Windows.Forms.ComboBox();
             this.local_folder_button = new System.Windows.Forms.Button();
+            this.Kunde_dataGridView = new System.Windows.Forms.DataGridView();
             this.print_button = new System.Windows.Forms.Button();
             this.delete_button = new System.Windows.Forms.Button();
             this.screenshot_datagridview_button = new System.Windows.Forms.Button();
             this.undo_button = new System.Windows.Forms.Button();
             this.show_all_button = new System.Windows.Forms.Button();
+            this.search_options_comboBox = new System.Windows.Forms.ComboBox();
             this.show_Tlf_Nr_button = new System.Windows.Forms.Button();
+            this.search_textBox = new System.Windows.Forms.TextBox();
             this.SAVE_BUTTON_KUNDE_TLF = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.vis_rediger_kunder_button = new System.Windows.Forms.Button();
             this.opret_kunde_button = new System.Windows.Forms.Button();
-            this.email_label = new System.Windows.Forms.Label();
-            this.kunder_Save_button = new System.Windows.Forms.Button();
-            this.adr_label = new System.Windows.Forms.Label();
-            this.zipCode_label = new System.Windows.Forms.Label();
-            this.tlf_label = new System.Windows.Forms.Label();
-            this.surname_label = new System.Windows.Forms.Label();
-            this.name_label = new System.Windows.Forms.Label();
             this.backgroundName_Top_panel.SuspendLayout();
             this.backPanel_Textboxes_panel.SuspendLayout();
             this.background_textboxes_top_panel.SuspendLayout();
             this.datagridviewBackground_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Kunde_dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.search_Datagridview_pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kunde_dataGridView)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -127,6 +127,19 @@
             this.backPanel_Textboxes_panel.Size = new System.Drawing.Size(394, 388);
             this.backPanel_Textboxes_panel.TabIndex = 11;
             // 
+            // email_label
+            // 
+            this.email_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.email_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.email_label.Image = global::View_GUI.Properties.Resources.At_Mail_icon;
+            this.email_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.email_label.Location = new System.Drawing.Point(53, 287);
+            this.email_label.Name = "email_label";
+            this.email_label.Size = new System.Drawing.Size(98, 33);
+            this.email_label.TabIndex = 22;
+            this.email_label.Text = "Email:";
+            this.email_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // kunde_email_textBox
             // 
             this.kunde_email_textBox.Location = new System.Drawing.Point(158, 292);
@@ -134,6 +147,37 @@
             this.kunde_email_textBox.Name = "kunde_email_textBox";
             this.kunde_email_textBox.Size = new System.Drawing.Size(100, 20);
             this.kunde_email_textBox.TabIndex = 23;
+            // 
+            // kunder_Save_button
+            // 
+            this.kunder_Save_button.FlatAppearance.BorderSize = 0;
+            this.kunder_Save_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.kunder_Save_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.kunder_Save_button.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kunder_Save_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
+            this.kunder_Save_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
+            this.kunder_Save_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.kunder_Save_button.Location = new System.Drawing.Point(160, 336);
+            this.kunder_Save_button.Name = "kunder_Save_button";
+            this.kunder_Save_button.Size = new System.Drawing.Size(90, 30);
+            this.kunder_Save_button.TabIndex = 21;
+            this.kunder_Save_button.Text = "Gem";
+            this.kunder_Save_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.kunder_Save_button.UseVisualStyleBackColor = true;
+            this.kunder_Save_button.Click += new System.EventHandler(this.kunder_Save_button_Click);
+            // 
+            // adr_label
+            // 
+            this.adr_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.adr_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.adr_label.Image = global::View_GUI.Properties.Resources.my_numbers_icon;
+            this.adr_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.adr_label.Location = new System.Drawing.Point(70, 197);
+            this.adr_label.Name = "adr_label";
+            this.adr_label.Size = new System.Drawing.Size(80, 25);
+            this.adr_label.TabIndex = 19;
+            this.adr_label.Text = "Adr:";
+            this.adr_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // kunder_adr_textBox
             // 
@@ -165,6 +209,19 @@
             this.opret_Kunder_label.TabIndex = 1;
             this.opret_Kunder_label.Text = "Opret Kunde";
             // 
+            // zipCode_label
+            // 
+            this.zipCode_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.zipCode_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.zipCode_label.Image = global::View_GUI.Properties.Resources.Compressed_File_Zip_icon;
+            this.zipCode_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.zipCode_label.Location = new System.Drawing.Point(49, 150);
+            this.zipCode_label.Name = "zipCode_label";
+            this.zipCode_label.Size = new System.Drawing.Size(105, 25);
+            this.zipCode_label.TabIndex = 17;
+            this.zipCode_label.Text = "PostNr:";
+            this.zipCode_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // kunder_zipcCode_textBox
             // 
             this.kunder_zipcCode_textBox.Location = new System.Drawing.Point(158, 155);
@@ -173,6 +230,19 @@
             this.kunder_zipcCode_textBox.Size = new System.Drawing.Size(100, 20);
             this.kunder_zipcCode_textBox.TabIndex = 18;
             this.kunder_zipcCode_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.kunder_zipcCode_textBox_KeyPress);
+            // 
+            // tlf_label
+            // 
+            this.tlf_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.tlf_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.tlf_label.Image = global::View_GUI.Properties.Resources.Phone_icon__1_;
+            this.tlf_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.tlf_label.Location = new System.Drawing.Point(80, 243);
+            this.tlf_label.Name = "tlf_label";
+            this.tlf_label.Size = new System.Drawing.Size(73, 24);
+            this.tlf_label.TabIndex = 15;
+            this.tlf_label.Text = "Tlf:";
+            this.tlf_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // kunder_tlf_textBox
             // 
@@ -183,6 +253,19 @@
             this.kunder_tlf_textBox.TabIndex = 16;
             this.kunder_tlf_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.kunder_tlf_textBox_KeyPress);
             // 
+            // surname_label
+            // 
+            this.surname_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.surname_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.surname_label.Image = global::View_GUI.Properties.Resources.name_card_icon;
+            this.surname_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.surname_label.Location = new System.Drawing.Point(25, 104);
+            this.surname_label.Name = "surname_label";
+            this.surname_label.Size = new System.Drawing.Size(125, 25);
+            this.surname_label.TabIndex = 13;
+            this.surname_label.Text = "Efternavn:";
+            this.surname_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // kunder_surname_textBox
             // 
             this.kunder_surname_textBox.Location = new System.Drawing.Point(158, 109);
@@ -191,6 +274,19 @@
             this.kunder_surname_textBox.Size = new System.Drawing.Size(100, 20);
             this.kunder_surname_textBox.TabIndex = 14;
             this.kunder_surname_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.kunder_surname_textBox_KeyPress);
+            // 
+            // name_label
+            // 
+            this.name_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.name_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.name_label.Image = global::View_GUI.Properties.Resources.ID_icon;
+            this.name_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.name_label.Location = new System.Drawing.Point(56, 59);
+            this.name_label.Name = "name_label";
+            this.name_label.Size = new System.Drawing.Size(95, 24);
+            this.name_label.TabIndex = 2;
+            this.name_label.Text = "Navn:";
+            this.name_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // datagridviewBackground_panel
             // 
@@ -208,55 +304,11 @@
             this.datagridviewBackground_panel.Controls.Add(this.undo_button);
             this.datagridviewBackground_panel.Controls.Add(this.show_all_button);
             this.datagridviewBackground_panel.Controls.Add(this.search_options_comboBox);
-            this.datagridviewBackground_panel.Controls.Add(this.show_Tlf_Nr_button);
             this.datagridviewBackground_panel.Controls.Add(this.search_textBox);
             this.datagridviewBackground_panel.Location = new System.Drawing.Point(99, 170);
             this.datagridviewBackground_panel.Name = "datagridviewBackground_panel";
-            this.datagridviewBackground_panel.Size = new System.Drawing.Size(1121, 488);
+            this.datagridviewBackground_panel.Size = new System.Drawing.Size(1080, 488);
             this.datagridviewBackground_panel.TabIndex = 13;
-            // 
-            // Search_Column_comboBox
-            // 
-            this.Search_Column_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Search_Column_comboBox.FormattingEnabled = true;
-            this.Search_Column_comboBox.Location = new System.Drawing.Point(124, 19);
-            this.Search_Column_comboBox.Name = "Search_Column_comboBox";
-            this.Search_Column_comboBox.Size = new System.Drawing.Size(71, 21);
-            this.Search_Column_comboBox.TabIndex = 25;
-            this.Search_Column_comboBox.SelectedIndexChanged += new System.EventHandler(this.Search_Column_comboBox_SelectedIndexChanged);
-            // 
-            // Kunde_dataGridView
-            // 
-            this.Kunde_dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.Kunde_dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.Kunde_dataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Kunde_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Kunde_dataGridView.Location = new System.Drawing.Point(10, 59);
-            this.Kunde_dataGridView.MultiSelect = false;
-            this.Kunde_dataGridView.Name = "Kunde_dataGridView";
-            this.Kunde_dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Kunde_dataGridView.Size = new System.Drawing.Size(1093, 412);
-            this.Kunde_dataGridView.TabIndex = 22;
-            this.Kunde_dataGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.Kunde_dataGridView_RowEnter);
-            this.Kunde_dataGridView.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.Kunde_dataGridView_RowValidated);
-            // 
-            // search_options_comboBox
-            // 
-            this.search_options_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.search_options_comboBox.FormattingEnabled = true;
-            this.search_options_comboBox.Location = new System.Drawing.Point(47, 19);
-            this.search_options_comboBox.Name = "search_options_comboBox";
-            this.search_options_comboBox.Size = new System.Drawing.Size(71, 21);
-            this.search_options_comboBox.TabIndex = 14;
-            this.search_options_comboBox.SelectedIndexChanged += new System.EventHandler(this.search_options_comboBox_SelectedIndexChanged);
-            // 
-            // search_textBox
-            // 
-            this.search_textBox.Location = new System.Drawing.Point(202, 20);
-            this.search_textBox.Name = "search_textBox";
-            this.search_textBox.Size = new System.Drawing.Size(154, 20);
-            this.search_textBox.TabIndex = 1;
-            this.search_textBox.TextChanged += new System.EventHandler(this.search_textBox_TextChanged);
             // 
             // change_DatagridView_Color_button
             // 
@@ -266,7 +318,7 @@
             this.change_DatagridView_Color_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.change_DatagridView_Color_button.ForeColor = System.Drawing.Color.Black;
             this.change_DatagridView_Color_button.Image = global::View_GUI.Properties.Resources.Color_Meter_icon__1_;
-            this.change_DatagridView_Color_button.Location = new System.Drawing.Point(1057, 6);
+            this.change_DatagridView_Color_button.Location = new System.Drawing.Point(1034, 5);
             this.change_DatagridView_Color_button.Name = "change_DatagridView_Color_button";
             this.change_DatagridView_Color_button.Size = new System.Drawing.Size(46, 44);
             this.change_DatagridView_Color_button.TabIndex = 27;
@@ -283,6 +335,16 @@
             this.search_Datagridview_pictureBox.TabIndex = 26;
             this.search_Datagridview_pictureBox.TabStop = false;
             // 
+            // Search_Column_comboBox
+            // 
+            this.Search_Column_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Search_Column_comboBox.FormattingEnabled = true;
+            this.Search_Column_comboBox.Location = new System.Drawing.Point(124, 19);
+            this.Search_Column_comboBox.Name = "Search_Column_comboBox";
+            this.Search_Column_comboBox.Size = new System.Drawing.Size(71, 21);
+            this.Search_Column_comboBox.TabIndex = 25;
+            this.Search_Column_comboBox.SelectedIndexChanged += new System.EventHandler(this.Search_Column_comboBox_SelectedIndexChanged);
+            // 
             // local_folder_button
             // 
             this.local_folder_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -294,7 +356,7 @@
             this.local_folder_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.local_folder_button.Image = global::View_GUI.Properties.Resources.folder_icon;
             this.local_folder_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.local_folder_button.Location = new System.Drawing.Point(914, 5);
+            this.local_folder_button.Location = new System.Drawing.Point(891, 4);
             this.local_folder_button.Margin = new System.Windows.Forms.Padding(0);
             this.local_folder_button.Name = "local_folder_button";
             this.local_folder_button.Size = new System.Drawing.Size(42, 43);
@@ -302,6 +364,20 @@
             this.local_folder_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.local_folder_button.UseVisualStyleBackColor = true;
             this.local_folder_button.Click += new System.EventHandler(this.local_folder_button_Click);
+            // 
+            // Kunde_dataGridView
+            // 
+            this.Kunde_dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.Kunde_dataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Kunde_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Kunde_dataGridView.Location = new System.Drawing.Point(4, 63);
+            this.Kunde_dataGridView.MultiSelect = false;
+            this.Kunde_dataGridView.Name = "Kunde_dataGridView";
+            this.Kunde_dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Kunde_dataGridView.Size = new System.Drawing.Size(1068, 412);
+            this.Kunde_dataGridView.TabIndex = 22;
+            this.Kunde_dataGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.Kunde_dataGridView_RowEnter);
+            this.Kunde_dataGridView.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.Kunde_dataGridView_RowValidated);
             // 
             // print_button
             // 
@@ -311,7 +387,7 @@
             this.print_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.print_button.ForeColor = System.Drawing.Color.Black;
             this.print_button.Image = global::View_GUI.Properties.Resources.Apps_preferences_desktop_printer_icon;
-            this.print_button.Location = new System.Drawing.Point(1008, 5);
+            this.print_button.Location = new System.Drawing.Point(985, 4);
             this.print_button.Name = "print_button";
             this.print_button.Size = new System.Drawing.Size(43, 44);
             this.print_button.TabIndex = 21;
@@ -341,7 +417,7 @@
             this.screenshot_datagridview_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.screenshot_datagridview_button.ForeColor = System.Drawing.Color.Black;
             this.screenshot_datagridview_button.Image = global::View_GUI.Properties.Resources.Document_txt_icon__1_;
-            this.screenshot_datagridview_button.Location = new System.Drawing.Point(959, 6);
+            this.screenshot_datagridview_button.Location = new System.Drawing.Point(936, 5);
             this.screenshot_datagridview_button.Name = "screenshot_datagridview_button";
             this.screenshot_datagridview_button.Size = new System.Drawing.Size(43, 44);
             this.screenshot_datagridview_button.TabIndex = 19;
@@ -381,6 +457,16 @@
             this.show_all_button.UseVisualStyleBackColor = true;
             this.show_all_button.Click += new System.EventHandler(this.show_all_button_Click);
             // 
+            // search_options_comboBox
+            // 
+            this.search_options_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.search_options_comboBox.FormattingEnabled = true;
+            this.search_options_comboBox.Location = new System.Drawing.Point(47, 19);
+            this.search_options_comboBox.Name = "search_options_comboBox";
+            this.search_options_comboBox.Size = new System.Drawing.Size(71, 21);
+            this.search_options_comboBox.TabIndex = 14;
+            this.search_options_comboBox.SelectedIndexChanged += new System.EventHandler(this.search_options_comboBox_SelectedIndexChanged);
+            // 
             // show_Tlf_Nr_button
             // 
             this.show_Tlf_Nr_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -392,14 +478,21 @@
             this.show_Tlf_Nr_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.show_Tlf_Nr_button.Image = global::View_GUI.Properties.Resources.Phone_icon__1_;
             this.show_Tlf_Nr_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.show_Tlf_Nr_button.Location = new System.Drawing.Point(428, 4);
+            this.show_Tlf_Nr_button.Location = new System.Drawing.Point(957, 60);
             this.show_Tlf_Nr_button.Margin = new System.Windows.Forms.Padding(0);
             this.show_Tlf_Nr_button.Name = "show_Tlf_Nr_button";
             this.show_Tlf_Nr_button.Size = new System.Drawing.Size(42, 43);
             this.show_Tlf_Nr_button.TabIndex = 13;
             this.show_Tlf_Nr_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.show_Tlf_Nr_button.UseVisualStyleBackColor = true;
-            this.show_Tlf_Nr_button.Click += new System.EventHandler(this.show_Tlf_Nr_button_Click);
+            // 
+            // search_textBox
+            // 
+            this.search_textBox.Location = new System.Drawing.Point(202, 20);
+            this.search_textBox.Name = "search_textBox";
+            this.search_textBox.Size = new System.Drawing.Size(154, 20);
+            this.search_textBox.TabIndex = 1;
+            this.search_textBox.TextChanged += new System.EventHandler(this.search_textBox_TextChanged);
             // 
             // SAVE_BUTTON_KUNDE_TLF
             // 
@@ -414,7 +507,6 @@
             this.SAVE_BUTTON_KUNDE_TLF.Size = new System.Drawing.Size(32, 45);
             this.SAVE_BUTTON_KUNDE_TLF.TabIndex = 23;
             this.SAVE_BUTTON_KUNDE_TLF.UseVisualStyleBackColor = true;
-            this.SAVE_BUTTON_KUNDE_TLF.Click += new System.EventHandler(this.SAVE_BUTTON_KUNDE_TLF_Click);
             // 
             // panel1
             // 
@@ -469,102 +561,6 @@
             this.opret_kunde_button.UseVisualStyleBackColor = true;
             this.opret_kunde_button.Click += new System.EventHandler(this.opret_kunde_button_Click);
             // 
-            // email_label
-            // 
-            this.email_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.email_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.email_label.Image = global::View_GUI.Properties.Resources.At_Mail_icon;
-            this.email_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.email_label.Location = new System.Drawing.Point(53, 287);
-            this.email_label.Name = "email_label";
-            this.email_label.Size = new System.Drawing.Size(98, 33);
-            this.email_label.TabIndex = 22;
-            this.email_label.Text = "Email:";
-            this.email_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // kunder_Save_button
-            // 
-            this.kunder_Save_button.FlatAppearance.BorderSize = 0;
-            this.kunder_Save_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.kunder_Save_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
-            this.kunder_Save_button.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kunder_Save_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
-            this.kunder_Save_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
-            this.kunder_Save_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.kunder_Save_button.Location = new System.Drawing.Point(160, 336);
-            this.kunder_Save_button.Name = "kunder_Save_button";
-            this.kunder_Save_button.Size = new System.Drawing.Size(90, 30);
-            this.kunder_Save_button.TabIndex = 21;
-            this.kunder_Save_button.Text = "Gem";
-            this.kunder_Save_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.kunder_Save_button.UseVisualStyleBackColor = true;
-            this.kunder_Save_button.Click += new System.EventHandler(this.kunder_Save_button_Click);
-            // 
-            // adr_label
-            // 
-            this.adr_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.adr_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.adr_label.Image = global::View_GUI.Properties.Resources.my_numbers_icon;
-            this.adr_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.adr_label.Location = new System.Drawing.Point(70, 197);
-            this.adr_label.Name = "adr_label";
-            this.adr_label.Size = new System.Drawing.Size(80, 25);
-            this.adr_label.TabIndex = 19;
-            this.adr_label.Text = "Adr:";
-            this.adr_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // zipCode_label
-            // 
-            this.zipCode_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.zipCode_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.zipCode_label.Image = global::View_GUI.Properties.Resources.Compressed_File_Zip_icon;
-            this.zipCode_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.zipCode_label.Location = new System.Drawing.Point(49, 150);
-            this.zipCode_label.Name = "zipCode_label";
-            this.zipCode_label.Size = new System.Drawing.Size(105, 25);
-            this.zipCode_label.TabIndex = 17;
-            this.zipCode_label.Text = "PostNr:";
-            this.zipCode_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // tlf_label
-            // 
-            this.tlf_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.tlf_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.tlf_label.Image = global::View_GUI.Properties.Resources.Phone_icon__1_;
-            this.tlf_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.tlf_label.Location = new System.Drawing.Point(80, 243);
-            this.tlf_label.Name = "tlf_label";
-            this.tlf_label.Size = new System.Drawing.Size(73, 24);
-            this.tlf_label.TabIndex = 15;
-            this.tlf_label.Text = "Tlf:";
-            this.tlf_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // surname_label
-            // 
-            this.surname_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.surname_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.surname_label.Image = global::View_GUI.Properties.Resources.name_card_icon;
-            this.surname_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.surname_label.Location = new System.Drawing.Point(25, 104);
-            this.surname_label.Name = "surname_label";
-            this.surname_label.Size = new System.Drawing.Size(125, 25);
-            this.surname_label.TabIndex = 13;
-            this.surname_label.Text = "Efternavn:";
-            this.surname_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // name_label
-            // 
-            this.name_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.name_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.name_label.Image = global::View_GUI.Properties.Resources.ID_icon;
-            this.name_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.name_label.Location = new System.Drawing.Point(56, 59);
-            this.name_label.Name = "name_label";
-            this.name_label.Size = new System.Drawing.Size(95, 24);
-            this.name_label.TabIndex = 2;
-            this.name_label.Text = "Navn:";
-            this.name_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // Kunder_Form9
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -576,6 +572,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.backPanel_Textboxes_panel);
             this.Controls.Add(this.backgroundName_Top_panel);
+            this.Controls.Add(this.show_Tlf_Nr_button);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Kunder_Form9";
@@ -589,8 +586,8 @@
             this.background_textboxes_top_panel.PerformLayout();
             this.datagridviewBackground_panel.ResumeLayout(false);
             this.datagridviewBackground_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Kunde_dataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.search_Datagridview_pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Kunde_dataGridView)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
