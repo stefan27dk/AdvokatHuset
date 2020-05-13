@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Domain;
+ 
 
 namespace View_GUI
 {
@@ -18,23 +20,24 @@ namespace View_GUI
         Kunde kundeinstance; // Instance af Kunde 
         DB_Connection_Write ConnWrite; // Sql Write "
         static readonly  DB_Connection_String ConnectionString = DB_Connection_String.GetConnectionString(); // Global Connectionstring
-        static readonly SqlConnection connection = new SqlConnection(ConnectionString.DBConnectionString); // SQL Connection
-        //
-        //
+        static SqlConnection connection = null; 
+      
+
+
         // Show Kunde TLF - Database 
         static string kundeTLF_Select_Query = "Select* From Kunde_Tlf";  // Tlf Query
-        SqlDataAdapter kundeTlfAdapter = new SqlDataAdapter(kundeTLF_Select_Query, connection);
+        SqlDataAdapter kundeTlfAdapter = null;
         //DataSet kundeTlfDataSet = new DataSet();
-        //
-        //
-        // Show Kunder - Database
-        static string show_Kunde_Query = "SELECT* FROM Kunde";
-        SqlDataAdapter showKundeAdapter = new SqlDataAdapter(show_Kunde_Query, connection);
-        DataSet Kunde_Dataset = new DataSet();
+    
 
-        //
-        //   
-        //
+
+        // Show Kunder - Database
+        static string show_Kunde_Query = "Select Kunde.*, Kunde_Tlf.Kunde_Tlf  From Kunde Full Join Kunde_Tlf ON Kunde.Kunde_ID = Kunde_Tlf.Kunde_ID";
+        SqlDataAdapter showKundeAdapter = null;
+        DataSet Kunde_Dataset = new DataSet(); // Dataset for "Show Kunde" and "Show Kunde_Tlf"
+   
+
+
         // Row Edit
         DataGridViewRow enterRow = new DataGridViewRow();
 
@@ -42,13 +45,20 @@ namespace View_GUI
         // Validate Textboxes bools
         bool isValid = true; // Inputboxes Validator
         bool successful = false; // Successful Transaction
-        //
-        //
-        //
+     
+
+
         // Undo Delete
         List<DataGridViewRow> DeletedRowsList = new List<DataGridViewRow>(); // List with deleted Rows
-        //
-        //
+
+
+
+        // Search string
+        string SearchOptions = "";
+        string SearchColumn = "";
+
+
+
         // Initialize
         public Kunder_Form9()
         {
@@ -62,19 +72,37 @@ namespace View_GUI
         // Load
         private void Kunder_Form9_Load(object sender, EventArgs e)
         {
-
-            // Show all Kunder "Populating the datagridview with Curtomers "Kunder""
-            LoadKunder();
-
-            // Datagridview Fore Color
-            this.Kunde_dataGridView.DefaultCellStyle.ForeColor = Color.Blue;
-
+            Black_DatagridviewStyle();
+            LoadKunder();// Show all Kunder "Populating the datagridview with Curtomers "Kunder""
+            Search_ComboBox_Options_Content(); // Populate Search Combobox
+            Search_ComboBox_Column_Content(); // Populate Column Search Combobox
         }
 
 
+         // Datagridview Color Style
+         private void Black_DatagridviewStyle()
+        {
 
+            this.Kunde_dataGridView.RowsDefaultCellStyle.BackColor = Color.FromArgb(64, 64, 64);
+            this.Kunde_dataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(34, 34, 34);
+            this.Kunde_dataGridView.DefaultCellStyle.ForeColor = Color.FromArgb(59, 203, 255);  // Datagridview Fore Color
+            this.Kunde_dataGridView.GridColor = Color.Gray;
+            this.Kunde_dataGridView.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font(FontFamily.GenericSerif, 9, System.Drawing.FontStyle.Bold); // FONT    //, System.Drawing.GraphicsUnit.Point
 
-      
+        }
+
+        //  Datagridview Color Style "White" 
+        private void White_DatagridviewStyle()
+        {
+
+            this.Kunde_dataGridView.RowsDefaultCellStyle.BackColor = DefaultBackColor;
+            this.Kunde_dataGridView.AlternatingRowsDefaultCellStyle.BackColor = DefaultBackColor;
+            this.Kunde_dataGridView.DefaultCellStyle.ForeColor = DefaultForeColor;  // Datagridview Fore Color
+            this.Kunde_dataGridView.GridColor = Color.Gray;
+            this.Kunde_dataGridView.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font(FontFamily.GenericSerif, 9, System.Drawing.FontStyle.Bold); // FONT    //, System.Drawing.GraphicsUnit.Point
+
+        }
+
 
         // Create Kunde
         private void CreateKunde()
@@ -106,8 +134,11 @@ namespace View_GUI
 
 
 
+
+
+
         // Key Events--Validating--Textboxes----::START::---------------------------------------------- 
-        //
+      
         // Validate Name
         private void kunder_name_textBox_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -156,17 +187,22 @@ namespace View_GUI
 
 
 
+
+
+
+
         // Validate ALL Inputs
         private void ValidateALL()
         {
             isValid = true; // Reset it here
 
-            //Name Validation----------------------------------------------------------------------------
+            //Name Validation---------------------------------------------------------------------------->
             if (kunder_name_textBox.TextLength < 2)
             {
                 isValid = false; // Now you cant proceed because its not valid
                 kunder_name_textBox.BackColor = Color.FromArgb(255, 128, 128);
             }
+
             else
             {
                 
@@ -187,7 +223,7 @@ namespace View_GUI
 
 
 
-            // Surname Validation------------------------------------------------------------------------ 
+            // Surname Validation------------------------------------------------------------------------> 
             if (kunder_surname_textBox.TextLength < 2)
             {
                 isValid = false; // Now you cant proceed because its not valid
@@ -212,7 +248,7 @@ namespace View_GUI
 
 
 
-             // TLF Validation---------------------------------------------------------------------------
+             // TLF Validation--------------------------------------------------------------------------->
 
              if (kunder_tlf_textBox.TextLength < 8)
              {
@@ -229,13 +265,14 @@ namespace View_GUI
 
 
 
-             // Email Validation-------------------------------------------------------------------------
+             // Email Validation------------------------------------------------------------------------->
               if(kunde_email_textBox.TextLength < 5)
               {
                 isValid = false;
                 kunde_email_textBox.BackColor = Color.FromArgb(255, 128, 128);
 
               }
+
               else  
               {
                 // Check for "@"
@@ -263,7 +300,7 @@ namespace View_GUI
 
 
 
-              //Zip Code Valiadtion----------------------------------------------------------------------
+              //Zip Code Valiadtion---------------------------------------------------------------------->
                if(kunder_zipcCode_textBox.TextLength < 4)
                {
                 isValid = false;
@@ -278,7 +315,7 @@ namespace View_GUI
 
 
 
-            // Adress Validation------------------------------------------------------------------------
+            // Adress Validation------------------------------------------------------------------------>
             if(kunder_adr_textBox.TextLength < 2)
             {
                 isValid = false;
@@ -287,7 +324,6 @@ namespace View_GUI
             
            
         }
-
 
 
 
@@ -382,8 +418,6 @@ namespace View_GUI
 
 
 
-
-        // Datagridview Menu-----------::START::-------------------------------------------
         
 
 
@@ -392,12 +426,18 @@ namespace View_GUI
         {
             if (ConnectionString.DBConnectionString != null)
             {
-            Kunde_Dataset.Clear();// Clear
-            connection.Open();
-            kundeTlfAdapter.Fill(Kunde_Dataset, "Kunde_Tlf");
-            connection.Close();
-            Kunde_dataGridView.DataSource = Kunde_Dataset;
-            Kunde_dataGridView.DataMember = "Kunde_Tlf";
+
+                using (connection = new SqlConnection(ConnectionString.DBConnectionString))// SQL Connection
+                {
+                    Kunde_Dataset.Clear();// Clear
+                    connection.Open();
+                    kundeTlfAdapter = new SqlDataAdapter(kundeTLF_Select_Query, connection);
+                    kundeTlfAdapter.Fill(Kunde_Dataset, "Kunde_Tlf"); // Filling the dataset
+                    connection.Close();
+                    Kunde_dataGridView.DataSource = Kunde_Dataset; // Getting data from the Dataset and putting it in the datagridview
+                    Kunde_dataGridView.DataMember = "Kunde_Tlf"; // Datamember is Kunde_Tlf
+
+                }
             }
 
         }
@@ -416,12 +456,10 @@ namespace View_GUI
                 if(Kunde_dataGridView.Focused && Kunde_dataGridView.SelectedRows.Count > 0)
                 {
                 DeleteFromDatagridview();
-
                 }
             }
 
-            
-
+             
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
@@ -453,7 +491,7 @@ namespace View_GUI
                    {
                        AddRowToList(); // Add to list the row that will be deleted
                        Kunde_dataGridView.Rows.RemoveAt(Kunde_dataGridView.SelectedRows[0].Index); //  Delete selected row
-                       SaveDatagridview(); // Save to DB
+                       SaveDataGridView(); // Save to DB
                    }
 
                 }
@@ -493,14 +531,7 @@ namespace View_GUI
         }
 
 
-
-        // Save Datagridview
-        private void SaveDatagridview()
-        {
-            this.Kunde_dataGridView.EndEdit(); // End Edit
-            SaveKunder(); // Save Customers
-
-        }
+      
 
 
 
@@ -515,17 +546,14 @@ namespace View_GUI
 
 
             // Always the last item
-            if (DeletedRowsList.Count > 0)
+            if (DeletedRowsList.Count > 0 && Kunde_dataGridView.DataMember == "Kunde")
             {
                 int lastindex = DeletedRowsList.Count - 1;
-
-               
-
                Kunde_Dataset.Tables[0].Rows.Add(DeletedRowsList[lastindex].Cells[0].Value, DeletedRowsList[lastindex].Cells[1].Value, DeletedRowsList[lastindex].Cells[2].Value, DeletedRowsList[lastindex].Cells[3].Value, DeletedRowsList[lastindex].Cells[4].Value, DeletedRowsList[lastindex].Cells[5].Value, DeletedRowsList[lastindex].Cells[6].Value);
-               SaveDatagridview(); // Save to DB  
+               SaveDataGridView(); // Save to DB  
 
-               //inserdetindex.Add(kunde);
-               DeletedRowsList.RemoveAt(lastindex); // Remove Last index
+                //inserdetindex.Add(kunde);
+                DeletedRowsList.RemoveAt(lastindex); // Remove Last index
 
             }
 
@@ -547,11 +575,14 @@ namespace View_GUI
             // Save changes to DB  "UPDATE"
             try
             {
-           
-                SqlCommand kunde_Tlf_Select_Command = new SqlCommand(kundeTLF_Select_Query, connection);
-                SqlCommandBuilder kundeTLF_builder = new SqlCommandBuilder(kundeTlfAdapter);
-                kundeTlfAdapter.SelectCommand = kunde_Tlf_Select_Command; 
-                kundeTlfAdapter.Update(Kunde_Dataset, "Kunde_Tlf"); //here I hope you won't get error :-)
+                using (connection = new SqlConnection(ConnectionString.DBConnectionString))// SQL Connection
+                {
+                    SqlCommand kunde_Tlf_Select_Command = new SqlCommand(kundeTLF_Select_Query, connection);
+                    kundeTlfAdapter = new SqlDataAdapter(kundeTLF_Select_Query, connection);
+                    SqlCommandBuilder kundeTLF_builder = new SqlCommandBuilder(kundeTlfAdapter);
+                    kundeTlfAdapter.SelectCommand = kunde_Tlf_Select_Command;
+                    kundeTlfAdapter.Update(Kunde_Dataset, "Kunde_Tlf"); // Specifying the table is Important "Kunde_tlf" else It will not work in this Configuration "It may Work if it was made in another configoration"
+                }
             }
 
             catch (Exception err)
@@ -573,12 +604,16 @@ namespace View_GUI
         {
             if(ConnectionString.DBConnectionString != null)
             {
-            Kunde_Dataset.Clear(); // Clear all rows so we begin on fresh datagridview "If We dont do that the old Data will remain and the new data will be inserted at the bottom of the datagridview"
-            connection.Open();
-            showKundeAdapter.Fill(Kunde_Dataset, "Kunde");
-            connection.Close();
-            Kunde_dataGridView.DataSource = Kunde_Dataset;
-            Kunde_dataGridView.DataMember = "Kunde";
+                using (connection = new SqlConnection(ConnectionString.DBConnectionString))// SQL Connection
+                {
+                    Kunde_Dataset.Clear(); // Clear all rows so we begin on fresh datagridview "If We dont do that the old Data will remain and the new data will be inserted at the bottom of the datagridview"
+                    connection.Open();
+                    showKundeAdapter = new SqlDataAdapter(show_Kunde_Query, connection); // Its at the top of the "file". Make new Apater
+                    showKundeAdapter.Fill(Kunde_Dataset, "Kunde");
+                    connection.Close();
+                    Kunde_dataGridView.DataSource = Kunde_Dataset;
+                    Kunde_dataGridView.DataMember = "Kunde";
+                }
             }
 
         }
@@ -599,30 +634,34 @@ namespace View_GUI
 
 
         // Save Cutomers "KUNDER"
-        private void SaveKunder()
+        private void SaveDataGridView()
         {
             // Save changes to DB  "UPDATE Kunder"
             try
             {
-                if(Kunde_dataGridView.DataMember == "Kunde") // save Kunde "If datamember is Kunde"
+                using (connection = new SqlConnection(ConnectionString.DBConnectionString))// SQL Connection
                 {
+                    if (Kunde_dataGridView.DataMember == "Kunde") // save Kunde "If datamember is Kunde"
+                    {
 
-                Kunde_dataGridView.EndEdit();
-                SqlCommand kunde_Select_Command = new SqlCommand(show_Kunde_Query, connection);
-                SqlCommandBuilder show_Kunde_Builder = new SqlCommandBuilder(showKundeAdapter);
-                showKundeAdapter.SelectCommand = kunde_Select_Command;
-                showKundeAdapter.Update(Kunde_Dataset, "Kunde"); 
+                        Kunde_dataGridView.EndEdit();
+                        SqlCommand kunde_Select_Command = new SqlCommand(show_Kunde_Query, connection);
+                        showKundeAdapter = new SqlDataAdapter(show_Kunde_Query, connection);
+                        SqlCommandBuilder show_Kunde_Builder = new SqlCommandBuilder(showKundeAdapter);
+                        showKundeAdapter.SelectCommand = kunde_Select_Command;
+                        showKundeAdapter.Update(Kunde_Dataset, "Kunde");
+                    }
+
+                    else if (Kunde_dataGridView.DataMember == "Kunde_Tlf") // Save Kunde_tlf
+                    {
+                        Kunde_dataGridView.EndEdit();
+                        SqlCommand kunde_Tlf_Select_Command = new SqlCommand(kundeTLF_Select_Query, connection);
+                        kundeTlfAdapter = new SqlDataAdapter(kundeTLF_Select_Query, connection);
+                        SqlCommandBuilder kundeTLF_builder = new SqlCommandBuilder(kundeTlfAdapter);
+                        kundeTlfAdapter.SelectCommand = kunde_Tlf_Select_Command;
+                        kundeTlfAdapter.Update(Kunde_Dataset, "Kunde_Tlf");
+                    }
                 }
-
-                else if(Kunde_dataGridView.DataMember == "Kunde_Tlf") // Save Kunde_tlf
-                {
-                    Kunde_dataGridView.EndEdit();
-                    SqlCommand kunde_Tlf_Select_Command = new SqlCommand(kundeTLF_Select_Query, connection);
-                    SqlCommandBuilder kundeTLF_builder = new SqlCommandBuilder(kundeTlfAdapter);
-                    kundeTlfAdapter.SelectCommand = kunde_Tlf_Select_Command;
-                    kundeTlfAdapter.Update(Kunde_Dataset, "Kunde_Tlf");
-                }
-
             }
 
             catch (Exception err)
@@ -634,6 +673,8 @@ namespace View_GUI
         }
 
            
+
+
 
 
 
@@ -666,6 +707,7 @@ namespace View_GUI
 
 
 
+
         // UPDATE "SAVE" - On ROW LEAVE AFTER VALIDATION  "Save"
         private void Kunde_dataGridView_RowValidated(object sender, DataGridViewCellEventArgs e)
         {
@@ -690,7 +732,7 @@ namespace View_GUI
                       DialogResult saveDialog = MessageBox.Show("Are you sure that you want ot save the changes?", "Save", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                       if (saveDialog == DialogResult.Yes)
                       {
-                          SaveKunder();
+                          SaveDataGridView();
                           //MessageBox.Show("Changes Are Saved", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
                       }
                   }
@@ -702,7 +744,272 @@ namespace View_GUI
 
 
 
-        // Datagridview Menu-----------::END::-------------------------------------------
+
+
+
+
+        // Datagridview Screenshot - Main Mehtod
+        private void DatagridviewScreenshot()
+        {
+          
+
+            int oldHeight = Kunde_dataGridView.Height;
+            Kunde_dataGridView.Height = Kunde_dataGridView.RowCount * Kunde_dataGridView.RowTemplate.Height;
+
+
+
+
+            // Bitmap
+            Bitmap bitmapScreenshot = new Bitmap(this.Kunde_dataGridView.Width, this.Kunde_dataGridView.Height);
+
+            // Draw to the bitmap
+            Kunde_dataGridView.DrawToBitmap(bitmapScreenshot, new Rectangle(0, 0, this.Kunde_dataGridView.Width*10, this.Kunde_dataGridView.Height));
+
+            // Reset the height
+            Kunde_dataGridView.Height = oldHeight;
+
+            // Save bitmap
+            bitmapScreenshot.Save(@"C:\dt.png");
+            Clipboard.SetDataObject(bitmapScreenshot);  // Copy Image to Clipboard Also
+
+      
+
+        }
+
+
+
+
+
+
+        // Datagridview Screnshot - button
+        private void screenshot_datagridview_button_Click(object sender, EventArgs e)
+        {
+            White_DatagridviewStyle(); // Datagridview White Color
+            DatagridviewScreenshot(); // Screenshot
+            Black_DatagridviewStyle(); // Datagridview Color Style
+        }
+
+
+
+
+
+        // Local Folder
+        private void local_folder_button_Click(object sender, EventArgs e)
+        {
+            Process.Start(@"C://");
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //------------------------(SEARCH)-----::START::---------------------------------------------------------------------------------
+
+        // Search ComboBox - Content
+        private void Search_ComboBox_Options_Content()
+        {
+            search_options_comboBox.Items.Add("Indholder");
+            search_options_comboBox.Items.Add("Præcis");
+            search_options_comboBox.Items.Add("Start");
+            search_options_comboBox.Items.Add("Slut");
+            search_options_comboBox.SelectedIndex = 0;
+        }
+     
+        // Search Options
+        private void Search_Options()
+        {
+            switch(search_options_comboBox.SelectedIndex) //If Combobox index --->
+            {
+                // ---> Equals 0,1,2,3 // Assign SearchOptions // Accordingly
+
+                case 0: //Contains
+                    SearchOptions = $"Like  '%{search_textBox.Text}%'";
+                    break;
+                case 1: // Exact
+                    SearchOptions = $"Like '{search_textBox.Text}'";
+                    break;
+
+                case 2: // Start
+                    SearchOptions = $"Like '{search_textBox.Text}%'";
+                    break;
+
+                case 3: //End
+                    SearchOptions = $"Like  '%{search_textBox.Text}'";
+                    break;
+
+               
+            
+            }
+           
+        }
+
+
+
+
+        // Search Column - Content
+        private void Search_ComboBox_Column_Content()
+        {
+            Search_Column_comboBox.Items.Add("Alle");
+            Search_Column_comboBox.Items.Add("Navn");
+            Search_Column_comboBox.Items.Add("Efternavn");
+            Search_Column_comboBox.Items.Add("Adresse");
+            Search_Column_comboBox.Items.Add("PostNr");
+            Search_Column_comboBox.Items.Add("Tlf");
+            Search_Column_comboBox.Items.Add("ID");
+            Search_Column_comboBox.Items.Add("Email");
+            Search_Column_comboBox.Items.Add("Dato");
+            Search_Column_comboBox.SelectedIndex = 0;
+
+        }
+
+        private void Search_Column()
+        {
+            //SearchColumn
+
+            switch (Search_Column_comboBox.SelectedIndex)
+            {
+                case 0: // ALL
+                    SearchColumn = $"IF(ISNUMERIC('{search_textBox.Text}') = 0) BEGIN Select* From Kunde Where  Kunde_Fornavn {SearchOptions} OR Kunde_Efternavn {SearchOptions} OR Kunde_Adresse {SearchOptions} OR Kunde_Email {SearchOptions} OR Kunde_Oprets_Dato {SearchOptions} OR Kunde_ID {SearchOptions} END ELSE  BEGIN SELECT Kunde.*, Kunde_Tlf.Kunde_Tlf From Kunde Full Join Kunde_Tlf ON Kunde.Kunde_ID = Kunde_Tlf.Kunde_ID Where Kunde_PostNr {SearchOptions} OR Kunde_Tlf.Kunde_Tlf {SearchOptions} OR Kunde_Fornavn {SearchOptions} OR Kunde_Efternavn {SearchOptions} OR Kunde_Adresse {SearchOptions} OR Kunde_Email {SearchOptions} OR Kunde_Oprets_Dato {SearchOptions} OR Kunde.Kunde_ID {SearchOptions} END;  ";
+                    break;
+                case 1: // Name
+                    SearchColumn = $"SELECT* From Kunde Where Kunde.Kunde_Fornavn {SearchOptions}";
+                    break;
+                case 2:   // Surname
+                    SearchColumn = $"SELECT* From Kunde Where Kunde.Kunde_Efternavn {SearchOptions}";
+                    break;
+                case 3:  //Adress
+                    SearchColumn = $"SELECT* From Kunde Where Kunde.Kunde_Adresse {SearchOptions}";
+                    break;
+                case 4:  // Zip-Code
+                    SearchColumn = $" IF(ISNUMERIC('{search_textBox.Text}') = 1) BEGIN SELECT* From Kunde Where Kunde_PostNr {SearchOptions} END";
+                    break;
+                case 5: //TLF
+                    SearchColumn = $" IF(ISNUMERIC('{search_textBox.Text}') = 1) BEGIN SELECT Kunde.*, Kunde_Tlf.Kunde_Tlf From Kunde Full Join Kunde_Tlf ON  Kunde.Kunde_ID = Kunde_Tlf.Kunde_ID Where Kunde_Tlf.Kunde_Tlf {SearchOptions} END";
+                    break;
+                case 6: // ID
+                    SearchColumn = $"SELECT* From Kunde Where Kunde.Kunde_ID {SearchOptions}";
+                    break;
+                case 7: // Email
+                    SearchColumn = $"SELECT* From Kunde Where Kunde.Kunde_Email {SearchOptions}";
+                    break;
+                case 8: // Date
+                    SearchColumn = $"SELECT* From Kunde Where Kunde.Kunde_Oprets_Dato {SearchOptions}";
+
+                    break;
+                  
+                    //SearchColumn = $"IF(ISNUMERIC('{search_textBox.Text}') = 0) BEGIN Select* From Kunde Where  Kunde_Fornavn {SearchOptions} " +
+                    //    $"OR Kunde_Efternavn {SearchOptions} OR Kunde_Adresse {SearchOptions} OR Kunde_Email {SearchOptions} OR Kunde_Oprets_Dato {SearchOptions} " +
+                    //    $"OR Kunde_ID {SearchOptions} END ELSE BEGIN SELECT Kunde.*, Kunde_Tlf.Kunde_Tlf From Kunde Full Join Kunde_Tlf ON Kunde.Kunde_ID = Kunde_Tlf.Kunde_ID Where Kunde_PostNr {SearchOptions} OR Kunde_Tlf.Kunde_Tlf {SearchOptions} END;";
+            }
+        }
+
+
+
+        // Search
+        private void Search()
+        {
+           
+            using (connection = new SqlConnection(ConnectionString.DBConnectionString))// SQL Connection
+            {
+                Kunde_Dataset.Clear(); // Clear all rows so we begin on fresh datagridview "If We dont do that the old Data will remain and the new data will be inserted at the bottom of the datagridview"
+                connection.Open();
+                showKundeAdapter = new SqlDataAdapter(SearchColumn, connection); // Its at the top of the "file". Make new Apater
+                showKundeAdapter.Fill(Kunde_Dataset, "Kunde");
+                connection.Close();
+                Kunde_dataGridView.DataSource = Kunde_Dataset;
+                Kunde_dataGridView.DataMember = "Kunde";
+            }
+
+        }
+
+
+
+        private void Search_Resources()
+        {
+            Search_Options(); // Like
+            Search_Column(); // Column and Search String
+            Search(); // Ask the DB and Get Answer
+        }
+
+        // Search On Text Changed
+        private void search_textBox_TextChanged(object sender, EventArgs e)
+        {
+            Search_Resources();
+        }
+
+        private void search_button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        // Automaticly Search on "Option Change"
+        private void search_options_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (search_textBox.Text.Length > 0)// Search if Textbox is not empty
+            {
+                Search_Resources();
+            }
+        }
+
+
+
+
+        // Search Automaticly when you change "Column Option"
+        private void Search_Column_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(search_textBox.Text.Length >0)// Search if Textbox is not empty
+            {
+                Search_Resources(); 
+            }
+        }
+
+        //------------------------(SEARCH)-----::END::---------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+        //--------------Datagridview - Change - Color------------::START:------------------------------------------------
+        // Datagridview Change Color Button
+        private void change_DatagridView_Color_button_Click(object sender, EventArgs e)
+        {
+            Change_Datgridview_Color();
+        }
+
+
+        // Datagridview Change Color - Main Method
+        private void Change_Datgridview_Color()
+        {
+            if (this.Kunde_dataGridView.RowsDefaultCellStyle.BackColor == Color.FromArgb(64, 64, 64))
+            {
+                White_DatagridviewStyle();
+            }
+
+            else
+            {
+                Black_DatagridviewStyle();
+            }
+        }
+
+        //--------------Datagridview - Change - Color------------::END:------------------------------------------------
 
 
     }

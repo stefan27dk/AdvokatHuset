@@ -823,6 +823,26 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Color_Meter_icon {
+            get {
+                object obj = ResourceManager.GetObject("Color-Meter-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Color_Meter_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Color-Meter-icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Compressed_File_Zip_icon {
             get {
                 object obj = ResourceManager.GetObject("Compressed-File-Zip-icon", resourceCulture);

@@ -39,7 +39,8 @@ namespace Domain
                     bmp.Save($"{ScreenshotSavePath}{ScreenshotNameDateTime}.png", ImageFormat.Png);// Screenshot -  Unique Name so it dont get overwrited everytime new screenshot is made
                 }
             }
-            
+
+           
         }
 
         //----------------Screenshot-Entire--Screen-----::END::--------------------------------------------------------------------------------------------
