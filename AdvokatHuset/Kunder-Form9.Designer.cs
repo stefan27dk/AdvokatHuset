@@ -40,22 +40,28 @@
             this.kunder_tlf_textBox = new System.Windows.Forms.TextBox();
             this.kunder_surname_textBox = new System.Windows.Forms.TextBox();
             this.datagridviewBackground_panel = new System.Windows.Forms.Panel();
-            this.Search_Column_comboBox = new System.Windows.Forms.ComboBox();
             this.Kunde_dataGridView = new System.Windows.Forms.DataGridView();
-            this.search_options_comboBox = new System.Windows.Forms.ComboBox();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.search_textBox = new System.Windows.Forms.TextBox();
-            this.mark_current_row_button = new System.Windows.Forms.Button();
-            this.Kunde_Tlf_button = new System.Windows.Forms.Button();
+            this.search_options_comboBox = new System.Windows.Forms.ComboBox();
+            this.Search_Column_comboBox = new System.Windows.Forms.ComboBox();
             this.reset_Search_Textbox_button = new System.Windows.Forms.Button();
-            this.change_DatagridView_Color_button = new System.Windows.Forms.Button();
             this.search_Datagridview_pictureBox = new System.Windows.Forms.PictureBox();
-            this.local_folder_button = new System.Windows.Forms.Button();
-            this.print_button = new System.Windows.Forms.Button();
-            this.delete_button = new System.Windows.Forms.Button();
-            this.screenshot_datagridview_button = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.change_DatagridView_Color_button = new System.Windows.Forms.Button();
+            this.mark_current_row_button = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.undo_button = new System.Windows.Forms.Button();
-            this.show_all_button = new System.Windows.Forms.Button();
+            this.delete_button = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.local_folder_button = new System.Windows.Forms.Button();
+            this.screenshot_datagridview_button = new System.Windows.Forms.Button();
+            this.print_button = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Kunde_Tlf_button = new System.Windows.Forms.Button();
+            this.show_all_button = new System.Windows.Forms.Button();
+            this.top_Menu_background_panel = new System.Windows.Forms.Panel();
             this.vis_rediger_kunder_button = new System.Windows.Forms.Button();
             this.opret_kunde_button = new System.Windows.Forms.Button();
             this.email_label = new System.Windows.Forms.Label();
@@ -70,8 +76,13 @@
             this.background_textboxes_top_panel.SuspendLayout();
             this.datagridviewBackground_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Kunde_dataGridView)).BeginInit();
+            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.search_Datagridview_pictureBox)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.top_Menu_background_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // Kunde_Top_label
@@ -127,6 +138,7 @@
             this.backPanel_Textboxes_panel.Name = "backPanel_Textboxes_panel";
             this.backPanel_Textboxes_panel.Size = new System.Drawing.Size(394, 388);
             this.backPanel_Textboxes_panel.TabIndex = 11;
+            this.backPanel_Textboxes_panel.Visible = false;
             // 
             // kunde_email_textBox
             // 
@@ -198,35 +210,14 @@
             this.datagridviewBackground_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.datagridviewBackground_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.datagridviewBackground_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.datagridviewBackground_panel.Controls.Add(this.mark_current_row_button);
-            this.datagridviewBackground_panel.Controls.Add(this.Kunde_Tlf_button);
-            this.datagridviewBackground_panel.Controls.Add(this.reset_Search_Textbox_button);
-            this.datagridviewBackground_panel.Controls.Add(this.change_DatagridView_Color_button);
-            this.datagridviewBackground_panel.Controls.Add(this.search_Datagridview_pictureBox);
-            this.datagridviewBackground_panel.Controls.Add(this.show_all_button);
-            this.datagridviewBackground_panel.Controls.Add(this.Search_Column_comboBox);
-            this.datagridviewBackground_panel.Controls.Add(this.local_folder_button);
+            this.datagridviewBackground_panel.Controls.Add(this.panel5);
+            this.datagridviewBackground_panel.Controls.Add(this.panel4);
+            this.datagridviewBackground_panel.Controls.Add(this.panel1);
             this.datagridviewBackground_panel.Controls.Add(this.Kunde_dataGridView);
-            this.datagridviewBackground_panel.Controls.Add(this.print_button);
-            this.datagridviewBackground_panel.Controls.Add(this.delete_button);
-            this.datagridviewBackground_panel.Controls.Add(this.screenshot_datagridview_button);
-            this.datagridviewBackground_panel.Controls.Add(this.undo_button);
-            this.datagridviewBackground_panel.Controls.Add(this.search_options_comboBox);
-            this.datagridviewBackground_panel.Controls.Add(this.search_textBox);
-            this.datagridviewBackground_panel.Location = new System.Drawing.Point(152, 170);
+            this.datagridviewBackground_panel.Location = new System.Drawing.Point(146, 170);
             this.datagridviewBackground_panel.Name = "datagridviewBackground_panel";
             this.datagridviewBackground_panel.Size = new System.Drawing.Size(1080, 488);
             this.datagridviewBackground_panel.TabIndex = 13;
-            // 
-            // Search_Column_comboBox
-            // 
-            this.Search_Column_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Search_Column_comboBox.FormattingEnabled = true;
-            this.Search_Column_comboBox.Location = new System.Drawing.Point(124, 19);
-            this.Search_Column_comboBox.Name = "Search_Column_comboBox";
-            this.Search_Column_comboBox.Size = new System.Drawing.Size(71, 21);
-            this.Search_Column_comboBox.TabIndex = 25;
-            this.Search_Column_comboBox.SelectedIndexChanged += new System.EventHandler(this.Search_Column_comboBox_SelectedIndexChanged);
             // 
             // Kunde_dataGridView
             // 
@@ -234,69 +225,64 @@
             this.Kunde_dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.Kunde_dataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Kunde_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Kunde_dataGridView.Location = new System.Drawing.Point(11, 59);
+            this.Kunde_dataGridView.Location = new System.Drawing.Point(7, 59);
             this.Kunde_dataGridView.MultiSelect = false;
             this.Kunde_dataGridView.Name = "Kunde_dataGridView";
             this.Kunde_dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Kunde_dataGridView.Size = new System.Drawing.Size(1064, 372);
+            this.Kunde_dataGridView.Size = new System.Drawing.Size(1064, 412);
             this.Kunde_dataGridView.TabIndex = 22;
             this.Kunde_dataGridView.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Kunde_dataGridView_ColumnHeaderMouseClick);
             this.Kunde_dataGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.Kunde_dataGridView_RowEnter);
             this.Kunde_dataGridView.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.Kunde_dataGridView_RowValidated);
             // 
-            // search_options_comboBox
+            // panel6
             // 
-            this.search_options_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.search_options_comboBox.FormattingEnabled = true;
-            this.search_options_comboBox.Location = new System.Drawing.Point(47, 19);
-            this.search_options_comboBox.Name = "search_options_comboBox";
-            this.search_options_comboBox.Size = new System.Drawing.Size(71, 21);
-            this.search_options_comboBox.TabIndex = 14;
-            this.search_options_comboBox.SelectedIndexChanged += new System.EventHandler(this.search_options_comboBox_SelectedIndexChanged);
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.panel6.BackgroundImage = global::View_GUI.Properties.Resources.Search_Back_6_Panel;
+            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel6.Controls.Add(this.search_textBox);
+            this.panel6.Controls.Add(this.search_options_comboBox);
+            this.panel6.Controls.Add(this.Search_Column_comboBox);
+            this.panel6.Controls.Add(this.reset_Search_Textbox_button);
+            this.panel6.Controls.Add(this.search_Datagridview_pictureBox);
+            this.panel6.Location = new System.Drawing.Point(150, 174);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(420, 53);
+            this.panel6.TabIndex = 32;
             // 
             // search_textBox
             // 
-            this.search_textBox.Location = new System.Drawing.Point(202, 20);
+            this.search_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            this.search_textBox.Location = new System.Drawing.Point(203, 17);
             this.search_textBox.Name = "search_textBox";
             this.search_textBox.Size = new System.Drawing.Size(154, 20);
             this.search_textBox.TabIndex = 1;
             this.search_textBox.TextChanged += new System.EventHandler(this.search_textBox_TextChanged);
             this.search_textBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.search_textBox_MouseDown);
             // 
-            // mark_current_row_button
+            // search_options_comboBox
             // 
-            this.mark_current_row_button.BackgroundImage = global::View_GUI.Properties.Resources.preferences_desktop_color_icon1;
-            this.mark_current_row_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.mark_current_row_button.FlatAppearance.BorderSize = 0;
-            this.mark_current_row_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.mark_current_row_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.mark_current_row_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.mark_current_row_button.ForeColor = System.Drawing.Color.Black;
-            this.mark_current_row_button.Location = new System.Drawing.Point(837, 10);
-            this.mark_current_row_button.Name = "mark_current_row_button";
-            this.mark_current_row_button.Size = new System.Drawing.Size(30, 34);
-            this.mark_current_row_button.TabIndex = 30;
-            this.mark_current_row_button.UseVisualStyleBackColor = true;
-            this.mark_current_row_button.Click += new System.EventHandler(this.mark_current_row_button_Click);
+            this.search_options_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.search_options_comboBox.FormattingEnabled = true;
+            this.search_options_comboBox.Location = new System.Drawing.Point(48, 16);
+            this.search_options_comboBox.Name = "search_options_comboBox";
+            this.search_options_comboBox.Size = new System.Drawing.Size(71, 21);
+            this.search_options_comboBox.TabIndex = 14;
+            this.search_options_comboBox.SelectedIndexChanged += new System.EventHandler(this.search_options_comboBox_SelectedIndexChanged);
             // 
-            // Kunde_Tlf_button
+            // Search_Column_comboBox
             // 
-            this.Kunde_Tlf_button.BackgroundImage = global::View_GUI.Properties.Resources.Phone_icon;
-            this.Kunde_Tlf_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Kunde_Tlf_button.FlatAppearance.BorderSize = 0;
-            this.Kunde_Tlf_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.Kunde_Tlf_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.Kunde_Tlf_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Kunde_Tlf_button.ForeColor = System.Drawing.Color.Black;
-            this.Kunde_Tlf_button.Location = new System.Drawing.Point(621, 13);
-            this.Kunde_Tlf_button.Name = "Kunde_Tlf_button";
-            this.Kunde_Tlf_button.Size = new System.Drawing.Size(38, 35);
-            this.Kunde_Tlf_button.TabIndex = 29;
-            this.Kunde_Tlf_button.UseVisualStyleBackColor = true;
-            this.Kunde_Tlf_button.Click += new System.EventHandler(this.Kunde_Tlf_button_Click);
+            this.Search_Column_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Search_Column_comboBox.FormattingEnabled = true;
+            this.Search_Column_comboBox.Location = new System.Drawing.Point(125, 16);
+            this.Search_Column_comboBox.Name = "Search_Column_comboBox";
+            this.Search_Column_comboBox.Size = new System.Drawing.Size(71, 21);
+            this.Search_Column_comboBox.TabIndex = 25;
+            this.Search_Column_comboBox.SelectedIndexChanged += new System.EventHandler(this.Search_Column_comboBox_SelectedIndexChanged);
             // 
             // reset_Search_Textbox_button
             // 
+            this.reset_Search_Textbox_button.BackColor = System.Drawing.Color.Transparent;
             this.reset_Search_Textbox_button.BackgroundImage = global::View_GUI.Properties.Resources.Untitled2;
             this.reset_Search_Textbox_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.reset_Search_Textbox_button.FlatAppearance.BorderSize = 0;
@@ -304,40 +290,143 @@
             this.reset_Search_Textbox_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
             this.reset_Search_Textbox_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.reset_Search_Textbox_button.ForeColor = System.Drawing.Color.Black;
-            this.reset_Search_Textbox_button.Location = new System.Drawing.Point(362, 15);
+            this.reset_Search_Textbox_button.Location = new System.Drawing.Point(363, 12);
             this.reset_Search_Textbox_button.Name = "reset_Search_Textbox_button";
             this.reset_Search_Textbox_button.Size = new System.Drawing.Size(43, 30);
             this.reset_Search_Textbox_button.TabIndex = 28;
-            this.reset_Search_Textbox_button.UseVisualStyleBackColor = true;
+            this.reset_Search_Textbox_button.UseVisualStyleBackColor = false;
             this.reset_Search_Textbox_button.Click += new System.EventHandler(this.reset_Search_Textbox_button_Click);
+            // 
+            // search_Datagridview_pictureBox
+            // 
+            this.search_Datagridview_pictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.search_Datagridview_pictureBox.BackgroundImage = global::View_GUI.Properties.Resources.Actions_page_zoom_icon;
+            this.search_Datagridview_pictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.search_Datagridview_pictureBox.Location = new System.Drawing.Point(13, 10);
+            this.search_Datagridview_pictureBox.Name = "search_Datagridview_pictureBox";
+            this.search_Datagridview_pictureBox.Size = new System.Drawing.Size(31, 32);
+            this.search_Datagridview_pictureBox.TabIndex = 26;
+            this.search_Datagridview_pictureBox.TabStop = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.panel3.BackgroundImage = global::View_GUI.Properties.Resources.DGV_Panel;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Location = new System.Drawing.Point(905, 58);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(120, 58);
+            this.panel3.TabIndex = 31;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.panel2.BackgroundImage = global::View_GUI.Properties.Resources.DGV_Panel;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Controls.Add(this.change_DatagridView_Color_button);
+            this.panel2.Controls.Add(this.mark_current_row_button);
+            this.panel2.Location = new System.Drawing.Point(884, 171);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(120, 58);
+            this.panel2.TabIndex = 30;
             // 
             // change_DatagridView_Color_button
             // 
+            this.change_DatagridView_Color_button.BackColor = System.Drawing.Color.Transparent;
             this.change_DatagridView_Color_button.FlatAppearance.BorderSize = 0;
             this.change_DatagridView_Color_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.change_DatagridView_Color_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
             this.change_DatagridView_Color_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.change_DatagridView_Color_button.ForeColor = System.Drawing.Color.Black;
             this.change_DatagridView_Color_button.Image = global::View_GUI.Properties.Resources.Color_Meter_icon__1_;
-            this.change_DatagridView_Color_button.Location = new System.Drawing.Point(785, 6);
+            this.change_DatagridView_Color_button.Location = new System.Drawing.Point(13, 9);
             this.change_DatagridView_Color_button.Name = "change_DatagridView_Color_button";
             this.change_DatagridView_Color_button.Size = new System.Drawing.Size(46, 44);
             this.change_DatagridView_Color_button.TabIndex = 27;
-            this.change_DatagridView_Color_button.UseVisualStyleBackColor = true;
+            this.change_DatagridView_Color_button.UseVisualStyleBackColor = false;
             this.change_DatagridView_Color_button.Click += new System.EventHandler(this.change_DatagridView_Color_button_Click);
             // 
-            // search_Datagridview_pictureBox
+            // mark_current_row_button
             // 
-            this.search_Datagridview_pictureBox.BackgroundImage = global::View_GUI.Properties.Resources.Actions_page_zoom_icon;
-            this.search_Datagridview_pictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.search_Datagridview_pictureBox.Location = new System.Drawing.Point(10, 13);
-            this.search_Datagridview_pictureBox.Name = "search_Datagridview_pictureBox";
-            this.search_Datagridview_pictureBox.Size = new System.Drawing.Size(31, 32);
-            this.search_Datagridview_pictureBox.TabIndex = 26;
-            this.search_Datagridview_pictureBox.TabStop = false;
+            this.mark_current_row_button.BackColor = System.Drawing.Color.Transparent;
+            this.mark_current_row_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.mark_current_row_button.FlatAppearance.BorderSize = 0;
+            this.mark_current_row_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.mark_current_row_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.mark_current_row_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mark_current_row_button.ForeColor = System.Drawing.Color.Black;
+            this.mark_current_row_button.Image = global::View_GUI.Properties.Resources.Grid_Row_Color;
+            this.mark_current_row_button.Location = new System.Drawing.Point(65, 10);
+            this.mark_current_row_button.Name = "mark_current_row_button";
+            this.mark_current_row_button.Size = new System.Drawing.Size(43, 44);
+            this.mark_current_row_button.TabIndex = 30;
+            this.mark_current_row_button.UseVisualStyleBackColor = false;
+            this.mark_current_row_button.Click += new System.EventHandler(this.mark_current_row_button_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.panel5.BackgroundImage = global::View_GUI.Properties.Resources.DGV_Panel;
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel5.Controls.Add(this.undo_button);
+            this.panel5.Controls.Add(this.delete_button);
+            this.panel5.Location = new System.Drawing.Point(442, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(120, 58);
+            this.panel5.TabIndex = 32;
+            // 
+            // undo_button
+            // 
+            this.undo_button.BackColor = System.Drawing.Color.Transparent;
+            this.undo_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.undo_button.FlatAppearance.BorderSize = 0;
+            this.undo_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.undo_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.undo_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.undo_button.ForeColor = System.Drawing.Color.Black;
+            this.undo_button.Image = global::View_GUI.Properties.Resources.Actions_go_previous_view_icon__1_;
+            this.undo_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.undo_button.Location = new System.Drawing.Point(14, 11);
+            this.undo_button.Name = "undo_button";
+            this.undo_button.Size = new System.Drawing.Size(38, 39);
+            this.undo_button.TabIndex = 17;
+            this.undo_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.undo_button.UseVisualStyleBackColor = false;
+            this.undo_button.Click += new System.EventHandler(this.undo_button_Click);
+            // 
+            // delete_button
+            // 
+            this.delete_button.BackColor = System.Drawing.Color.Transparent;
+            this.delete_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
+            this.delete_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.delete_button.FlatAppearance.BorderSize = 0;
+            this.delete_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.delete_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.delete_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.delete_button.ForeColor = System.Drawing.Color.Black;
+            this.delete_button.Location = new System.Drawing.Point(64, 12);
+            this.delete_button.Name = "delete_button";
+            this.delete_button.Size = new System.Drawing.Size(38, 35);
+            this.delete_button.TabIndex = 20;
+            this.delete_button.UseVisualStyleBackColor = false;
+            this.delete_button.Click += new System.EventHandler(this.delete_button_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.panel4.BackgroundImage = global::View_GUI.Properties.Resources.DGV_Panel;
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel4.Controls.Add(this.local_folder_button);
+            this.panel4.Controls.Add(this.screenshot_datagridview_button);
+            this.panel4.Controls.Add(this.print_button);
+            this.panel4.Location = new System.Drawing.Point(885, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(186, 58);
+            this.panel4.TabIndex = 32;
             // 
             // local_folder_button
             // 
+            this.local_folder_button.BackColor = System.Drawing.Color.Transparent;
             this.local_folder_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.local_folder_button.FlatAppearance.BorderSize = 0;
             this.local_folder_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
@@ -347,81 +436,79 @@
             this.local_folder_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.local_folder_button.Image = global::View_GUI.Properties.Resources.folder_icon;
             this.local_folder_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.local_folder_button.Location = new System.Drawing.Point(938, 7);
+            this.local_folder_button.Location = new System.Drawing.Point(22, 8);
             this.local_folder_button.Margin = new System.Windows.Forms.Padding(0);
             this.local_folder_button.Name = "local_folder_button";
             this.local_folder_button.Size = new System.Drawing.Size(42, 43);
             this.local_folder_button.TabIndex = 24;
             this.local_folder_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.local_folder_button.UseVisualStyleBackColor = true;
+            this.local_folder_button.UseVisualStyleBackColor = false;
             this.local_folder_button.Click += new System.EventHandler(this.local_folder_button_Click);
-            // 
-            // print_button
-            // 
-            this.print_button.FlatAppearance.BorderSize = 0;
-            this.print_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.print_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.print_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.print_button.ForeColor = System.Drawing.Color.Black;
-            this.print_button.Image = global::View_GUI.Properties.Resources.Apps_preferences_desktop_printer_icon;
-            this.print_button.Location = new System.Drawing.Point(1032, 4);
-            this.print_button.Name = "print_button";
-            this.print_button.Size = new System.Drawing.Size(43, 44);
-            this.print_button.TabIndex = 21;
-            this.print_button.UseVisualStyleBackColor = true;
-            this.print_button.Click += new System.EventHandler(this.print_button_Click);
-            // 
-            // delete_button
-            // 
-            this.delete_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
-            this.delete_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.delete_button.FlatAppearance.BorderSize = 0;
-            this.delete_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.delete_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.delete_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.delete_button.ForeColor = System.Drawing.Color.Black;
-            this.delete_button.Location = new System.Drawing.Point(497, 12);
-            this.delete_button.Name = "delete_button";
-            this.delete_button.Size = new System.Drawing.Size(38, 35);
-            this.delete_button.TabIndex = 20;
-            this.delete_button.UseVisualStyleBackColor = true;
-            this.delete_button.Click += new System.EventHandler(this.delete_button_Click);
             // 
             // screenshot_datagridview_button
             // 
+            this.screenshot_datagridview_button.BackColor = System.Drawing.Color.Transparent;
             this.screenshot_datagridview_button.FlatAppearance.BorderSize = 0;
             this.screenshot_datagridview_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.screenshot_datagridview_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
             this.screenshot_datagridview_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.screenshot_datagridview_button.ForeColor = System.Drawing.Color.Black;
             this.screenshot_datagridview_button.Image = global::View_GUI.Properties.Resources.Document_txt_icon__1_;
-            this.screenshot_datagridview_button.Location = new System.Drawing.Point(983, 4);
+            this.screenshot_datagridview_button.Location = new System.Drawing.Point(70, 8);
             this.screenshot_datagridview_button.Name = "screenshot_datagridview_button";
             this.screenshot_datagridview_button.Size = new System.Drawing.Size(43, 44);
             this.screenshot_datagridview_button.TabIndex = 19;
-            this.screenshot_datagridview_button.UseVisualStyleBackColor = true;
+            this.screenshot_datagridview_button.UseVisualStyleBackColor = false;
             this.screenshot_datagridview_button.Click += new System.EventHandler(this.screenshot_datagridview_button_Click);
             // 
-            // undo_button
+            // print_button
             // 
-            this.undo_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.undo_button.FlatAppearance.BorderSize = 0;
-            this.undo_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.undo_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.undo_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.undo_button.ForeColor = System.Drawing.Color.Black;
-            this.undo_button.Image = global::View_GUI.Properties.Resources.Actions_go_previous_view_icon__1_;
-            this.undo_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.undo_button.Location = new System.Drawing.Point(453, 10);
-            this.undo_button.Name = "undo_button";
-            this.undo_button.Size = new System.Drawing.Size(38, 39);
-            this.undo_button.TabIndex = 17;
-            this.undo_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.undo_button.UseVisualStyleBackColor = true;
-            this.undo_button.Click += new System.EventHandler(this.undo_button_Click);
+            this.print_button.BackColor = System.Drawing.Color.Transparent;
+            this.print_button.FlatAppearance.BorderSize = 0;
+            this.print_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.print_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.print_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.print_button.ForeColor = System.Drawing.Color.Black;
+            this.print_button.Image = global::View_GUI.Properties.Resources.Print_PDF;
+            this.print_button.Location = new System.Drawing.Point(115, 8);
+            this.print_button.Name = "print_button";
+            this.print_button.Size = new System.Drawing.Size(43, 44);
+            this.print_button.TabIndex = 21;
+            this.print_button.UseVisualStyleBackColor = false;
+            this.print_button.Click += new System.EventHandler(this.print_button_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.panel1.BackgroundImage = global::View_GUI.Properties.Resources.DGV_Panel;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.Kunde_Tlf_button);
+            this.panel1.Controls.Add(this.show_all_button);
+            this.panel1.Location = new System.Drawing.Point(585, -2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(125, 60);
+            this.panel1.TabIndex = 14;
+            // 
+            // Kunde_Tlf_button
+            // 
+            this.Kunde_Tlf_button.BackColor = System.Drawing.Color.Transparent;
+            this.Kunde_Tlf_button.BackgroundImage = global::View_GUI.Properties.Resources.Phone_icon;
+            this.Kunde_Tlf_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Kunde_Tlf_button.FlatAppearance.BorderSize = 0;
+            this.Kunde_Tlf_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.Kunde_Tlf_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.Kunde_Tlf_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kunde_Tlf_button.ForeColor = System.Drawing.Color.Black;
+            this.Kunde_Tlf_button.Location = new System.Drawing.Point(69, 11);
+            this.Kunde_Tlf_button.Name = "Kunde_Tlf_button";
+            this.Kunde_Tlf_button.Size = new System.Drawing.Size(38, 40);
+            this.Kunde_Tlf_button.TabIndex = 29;
+            this.Kunde_Tlf_button.UseVisualStyleBackColor = false;
+            this.Kunde_Tlf_button.Click += new System.EventHandler(this.Kunde_Tlf_button_Click);
             // 
             // show_all_button
             // 
+            this.show_all_button.BackColor = System.Drawing.Color.Transparent;
             this.show_all_button.BackgroundImage = global::View_GUI.Properties.Resources.Documents_icon3;
             this.show_all_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.show_all_button.FlatAppearance.BorderSize = 0;
@@ -429,25 +516,25 @@
             this.show_all_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
             this.show_all_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.show_all_button.ForeColor = System.Drawing.Color.Black;
-            this.show_all_button.Location = new System.Drawing.Point(590, 13);
+            this.show_all_button.Location = new System.Drawing.Point(23, 13);
             this.show_all_button.Name = "show_all_button";
             this.show_all_button.Size = new System.Drawing.Size(31, 35);
             this.show_all_button.TabIndex = 16;
-            this.show_all_button.UseVisualStyleBackColor = true;
+            this.show_all_button.UseVisualStyleBackColor = false;
             this.show_all_button.Click += new System.EventHandler(this.show_all_button_Click);
             // 
-            // panel1
+            // top_Menu_background_panel
             // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BackgroundImage = global::View_GUI.Properties.Resources.Untitled__3_;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.vis_rediger_kunder_button);
-            this.panel1.Controls.Add(this.opret_kunde_button);
-            this.panel1.Location = new System.Drawing.Point(575, 83);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(243, 82);
-            this.panel1.TabIndex = 12;
+            this.top_Menu_background_panel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.top_Menu_background_panel.BackColor = System.Drawing.Color.Transparent;
+            this.top_Menu_background_panel.BackgroundImage = global::View_GUI.Properties.Resources.Untitled__3_;
+            this.top_Menu_background_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.top_Menu_background_panel.Controls.Add(this.vis_rediger_kunder_button);
+            this.top_Menu_background_panel.Controls.Add(this.opret_kunde_button);
+            this.top_Menu_background_panel.Location = new System.Drawing.Point(575, 83);
+            this.top_Menu_background_panel.Name = "top_Menu_background_panel";
+            this.top_Menu_background_panel.Size = new System.Drawing.Size(243, 82);
+            this.top_Menu_background_panel.TabIndex = 12;
             // 
             // vis_rediger_kunder_button
             // 
@@ -591,8 +678,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1333, 700);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.datagridviewBackground_panel);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.top_Menu_background_panel);
             this.Controls.Add(this.backPanel_Textboxes_panel);
             this.Controls.Add(this.backgroundName_Top_panel);
             this.DoubleBuffered = true;
@@ -607,10 +697,15 @@
             this.background_textboxes_top_panel.ResumeLayout(false);
             this.background_textboxes_top_panel.PerformLayout();
             this.datagridviewBackground_panel.ResumeLayout(false);
-            this.datagridviewBackground_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Kunde_dataGridView)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.search_Datagridview_pictureBox)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.top_Menu_background_panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -633,7 +728,7 @@
         private System.Windows.Forms.Label surname_label;
         private System.Windows.Forms.TextBox kunder_surname_textBox;
         private System.Windows.Forms.Button kunder_Save_button;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel top_Menu_background_panel;
         private System.Windows.Forms.Button opret_kunde_button;
         private System.Windows.Forms.Button vis_rediger_kunder_button;
         private System.Windows.Forms.Label email_label;
@@ -654,5 +749,11 @@
         private System.Windows.Forms.Button reset_Search_Textbox_button;
         private System.Windows.Forms.Button Kunde_Tlf_button;
         private System.Windows.Forms.Button mark_current_row_button;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
     }
 }

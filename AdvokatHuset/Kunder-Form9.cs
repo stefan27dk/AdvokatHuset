@@ -417,6 +417,7 @@ namespace View_GUI
         private void vis_rediger_kunder_button_Click(object sender, EventArgs e)
         {
             datagridviewBackground_panel.Visible = true;
+            backPanel_Textboxes_panel.Visible = false;
             //this.kundeTableAdapter.Fill(this.advokathusetDataSet.Kunde);
         }
 
@@ -432,7 +433,9 @@ namespace View_GUI
         // Opret Button
         private void opret_kunde_button_Click(object sender, EventArgs e)
         {
+            backPanel_Textboxes_panel.Visible = true;
             datagridviewBackground_panel.Visible = false;// Hide Datagridview
+           
         }
 
         // Form Menu-----------::END::----------------------------------------------
@@ -455,7 +458,7 @@ namespace View_GUI
             {
                 if(Kunde_dataGridView.Focused && Kunde_dataGridView.SelectedRows.Count > 0)
                 {
-                  DeleteFromDatagridview();
+                    DeleteFromDatagridview();
                 }
             }
 
@@ -508,6 +511,10 @@ namespace View_GUI
                        Kunde_dataGridView.Rows.RemoveAt(Kunde_dataGridView.SelectedRows[0].Index); //  Delete selected row
                        SaveDataGridView(); // Save to DB
                    }
+                    else if(deleteDialog == DialogResult.No)
+                    {
+                        //RefreshDatagridview();
+                    }
 
                 }
             }
@@ -847,6 +854,12 @@ namespace View_GUI
         private void Kunde_Tlf_button_Click(object sender, EventArgs e)
         {
             LoadKunde_Tlf();
+            if(search_textBox.TextLength > 0)
+            {
+                search_textBox.BackColor = Color.FromArgb(255, 192, 192);
+            }
+
+
         }
 
 
@@ -979,6 +992,7 @@ namespace View_GUI
         // MAIN - Search Method
         private void Search_Resources()
         {
+            LoadKunder(); // Used for refreshing the datagridview Because of the Kunde_Tlf Table appears first again
             Search_Options(); // Like
             Search_Column(); // Column and Search String
             Search(); // Ask the DB and Get Answer
@@ -990,6 +1004,7 @@ namespace View_GUI
         // Search On Text Changed
         private void search_textBox_TextChanged(object sender, EventArgs e)
         {
+            
             Search_Resources();
         }
 

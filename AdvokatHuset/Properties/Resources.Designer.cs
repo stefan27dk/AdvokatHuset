@@ -683,6 +683,26 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Back_Panel {
+            get {
+                object obj = ResourceManager.GetObject("Back Panel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Back_Panel__black_Search {
+            get {
+                object obj = ResourceManager.GetObject("Back-Panel- black-Search", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Background {
             get {
                 object obj = ResourceManager.GetObject("Background", resourceCulture);
@@ -923,6 +943,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap DGV_Panel {
+            get {
+                object obj = ResourceManager.GetObject("DGV-Panel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Document_Add_icon {
             get {
                 object obj = ResourceManager.GetObject("Document-Add-icon", resourceCulture);
@@ -1156,6 +1186,16 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap gnome_panel_force_quit {
             get {
                 object obj = ResourceManager.GetObject("gnome_panel_force_quit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Grid_Row_Color {
+            get {
+                object obj = ResourceManager.GetObject("Grid_Row_Color", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1633,6 +1673,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Print_PDF {
+            get {
+                object obj = ResourceManager.GetObject("Print_PDF", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap question_type_one_correct_icon {
             get {
                 object obj = ResourceManager.GetObject("question-type-one-correct-icon", resourceCulture);
@@ -1646,6 +1696,16 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap question_type_one_correct_icon1 {
             get {
                 object obj = ResourceManager.GetObject("question-type-one-correct-icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Search_Back_6_Panel {
+            get {
+                object obj = ResourceManager.GetObject("Search-Back 6-Panel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
