@@ -210,8 +210,10 @@
             this.datagridviewBackground_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.datagridviewBackground_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.datagridviewBackground_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.datagridviewBackground_panel.Controls.Add(this.panel6);
             this.datagridviewBackground_panel.Controls.Add(this.panel5);
             this.datagridviewBackground_panel.Controls.Add(this.panel4);
+            this.datagridviewBackground_panel.Controls.Add(this.panel2);
             this.datagridviewBackground_panel.Controls.Add(this.panel1);
             this.datagridviewBackground_panel.Controls.Add(this.Kunde_dataGridView);
             this.datagridviewBackground_panel.Location = new System.Drawing.Point(146, 170);
@@ -245,7 +247,7 @@
             this.panel6.Controls.Add(this.Search_Column_comboBox);
             this.panel6.Controls.Add(this.reset_Search_Textbox_button);
             this.panel6.Controls.Add(this.search_Datagridview_pictureBox);
-            this.panel6.Location = new System.Drawing.Point(150, 174);
+            this.panel6.Location = new System.Drawing.Point(7, 5);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(420, 53);
             this.panel6.TabIndex = 32;
@@ -325,7 +327,7 @@
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Controls.Add(this.change_DatagridView_Color_button);
             this.panel2.Controls.Add(this.mark_current_row_button);
-            this.panel2.Location = new System.Drawing.Point(884, 171);
+            this.panel2.Location = new System.Drawing.Point(731, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(120, 58);
             this.panel2.TabIndex = 30;
@@ -678,9 +680,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1333, 700);
-            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.datagridviewBackground_panel);
             this.Controls.Add(this.top_Menu_background_panel);
             this.Controls.Add(this.backPanel_Textboxes_panel);
