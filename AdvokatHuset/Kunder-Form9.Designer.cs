@@ -47,6 +47,7 @@
             this.kunder_surname_textBox = new System.Windows.Forms.TextBox();
             this.name_label = new System.Windows.Forms.Label();
             this.datagridviewBackground_panel = new System.Windows.Forms.Panel();
+            this.reset_Search_Textbox_button = new System.Windows.Forms.Button();
             this.change_DatagridView_Color_button = new System.Windows.Forms.Button();
             this.search_Datagridview_pictureBox = new System.Windows.Forms.PictureBox();
             this.Search_Column_comboBox = new System.Windows.Forms.ComboBox();
@@ -58,12 +59,11 @@
             this.undo_button = new System.Windows.Forms.Button();
             this.show_all_button = new System.Windows.Forms.Button();
             this.search_options_comboBox = new System.Windows.Forms.ComboBox();
-            this.show_Tlf_Nr_button = new System.Windows.Forms.Button();
             this.search_textBox = new System.Windows.Forms.TextBox();
-            this.SAVE_BUTTON_KUNDE_TLF = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.vis_rediger_kunder_button = new System.Windows.Forms.Button();
             this.opret_kunde_button = new System.Windows.Forms.Button();
+            this.Kunde_Tlf_button = new System.Windows.Forms.Button();
             this.backgroundName_Top_panel.SuspendLayout();
             this.backPanel_Textboxes_panel.SuspendLayout();
             this.background_textboxes_top_panel.SuspendLayout();
@@ -293,6 +293,8 @@
             this.datagridviewBackground_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.datagridviewBackground_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.datagridviewBackground_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.datagridviewBackground_panel.Controls.Add(this.Kunde_Tlf_button);
+            this.datagridviewBackground_panel.Controls.Add(this.reset_Search_Textbox_button);
             this.datagridviewBackground_panel.Controls.Add(this.change_DatagridView_Color_button);
             this.datagridviewBackground_panel.Controls.Add(this.search_Datagridview_pictureBox);
             this.datagridviewBackground_panel.Controls.Add(this.Search_Column_comboBox);
@@ -309,6 +311,22 @@
             this.datagridviewBackground_panel.Name = "datagridviewBackground_panel";
             this.datagridviewBackground_panel.Size = new System.Drawing.Size(1080, 488);
             this.datagridviewBackground_panel.TabIndex = 13;
+            // 
+            // reset_Search_Textbox_button
+            // 
+            this.reset_Search_Textbox_button.BackgroundImage = global::View_GUI.Properties.Resources.Untitled2;
+            this.reset_Search_Textbox_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.reset_Search_Textbox_button.FlatAppearance.BorderSize = 0;
+            this.reset_Search_Textbox_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.reset_Search_Textbox_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.reset_Search_Textbox_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reset_Search_Textbox_button.ForeColor = System.Drawing.Color.Black;
+            this.reset_Search_Textbox_button.Location = new System.Drawing.Point(362, 15);
+            this.reset_Search_Textbox_button.Name = "reset_Search_Textbox_button";
+            this.reset_Search_Textbox_button.Size = new System.Drawing.Size(43, 30);
+            this.reset_Search_Textbox_button.TabIndex = 28;
+            this.reset_Search_Textbox_button.UseVisualStyleBackColor = true;
+            this.reset_Search_Textbox_button.Click += new System.EventHandler(this.reset_Search_Textbox_button_Click);
             // 
             // change_DatagridView_Color_button
             // 
@@ -376,6 +394,7 @@
             this.Kunde_dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Kunde_dataGridView.Size = new System.Drawing.Size(1068, 412);
             this.Kunde_dataGridView.TabIndex = 22;
+            this.Kunde_dataGridView.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Kunde_dataGridView_ColumnHeaderMouseClick);
             this.Kunde_dataGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.Kunde_dataGridView_RowEnter);
             this.Kunde_dataGridView.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.Kunde_dataGridView_RowValidated);
             // 
@@ -402,7 +421,7 @@
             this.delete_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
             this.delete_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.delete_button.ForeColor = System.Drawing.Color.Black;
-            this.delete_button.Location = new System.Drawing.Point(552, 14);
+            this.delete_button.Location = new System.Drawing.Point(638, 15);
             this.delete_button.Name = "delete_button";
             this.delete_button.Size = new System.Drawing.Size(38, 35);
             this.delete_button.TabIndex = 20;
@@ -434,7 +453,7 @@
             this.undo_button.ForeColor = System.Drawing.Color.Black;
             this.undo_button.Image = global::View_GUI.Properties.Resources.Actions_go_previous_view_icon__1_;
             this.undo_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.undo_button.Location = new System.Drawing.Point(508, 10);
+            this.undo_button.Location = new System.Drawing.Point(594, 13);
             this.undo_button.Name = "undo_button";
             this.undo_button.Size = new System.Drawing.Size(38, 39);
             this.undo_button.TabIndex = 17;
@@ -444,15 +463,16 @@
             // 
             // show_all_button
             // 
+            this.show_all_button.BackgroundImage = global::View_GUI.Properties.Resources.Documents_icon3;
+            this.show_all_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.show_all_button.FlatAppearance.BorderSize = 0;
             this.show_all_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.show_all_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
             this.show_all_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.show_all_button.ForeColor = System.Drawing.Color.Black;
-            this.show_all_button.Image = global::View_GUI.Properties.Resources.Documents_icon2;
-            this.show_all_button.Location = new System.Drawing.Point(393, 7);
+            this.show_all_button.Location = new System.Drawing.Point(557, 15);
             this.show_all_button.Name = "show_all_button";
-            this.show_all_button.Size = new System.Drawing.Size(32, 38);
+            this.show_all_button.Size = new System.Drawing.Size(31, 35);
             this.show_all_button.TabIndex = 16;
             this.show_all_button.UseVisualStyleBackColor = true;
             this.show_all_button.Click += new System.EventHandler(this.show_all_button_Click);
@@ -467,25 +487,6 @@
             this.search_options_comboBox.TabIndex = 14;
             this.search_options_comboBox.SelectedIndexChanged += new System.EventHandler(this.search_options_comboBox_SelectedIndexChanged);
             // 
-            // show_Tlf_Nr_button
-            // 
-            this.show_Tlf_Nr_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.show_Tlf_Nr_button.FlatAppearance.BorderSize = 0;
-            this.show_Tlf_Nr_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.show_Tlf_Nr_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.show_Tlf_Nr_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.show_Tlf_Nr_button.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.show_Tlf_Nr_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.show_Tlf_Nr_button.Image = global::View_GUI.Properties.Resources.Phone_icon__1_;
-            this.show_Tlf_Nr_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.show_Tlf_Nr_button.Location = new System.Drawing.Point(957, 60);
-            this.show_Tlf_Nr_button.Margin = new System.Windows.Forms.Padding(0);
-            this.show_Tlf_Nr_button.Name = "show_Tlf_Nr_button";
-            this.show_Tlf_Nr_button.Size = new System.Drawing.Size(42, 43);
-            this.show_Tlf_Nr_button.TabIndex = 13;
-            this.show_Tlf_Nr_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.show_Tlf_Nr_button.UseVisualStyleBackColor = true;
-            // 
             // search_textBox
             // 
             this.search_textBox.Location = new System.Drawing.Point(202, 20);
@@ -493,20 +494,7 @@
             this.search_textBox.Size = new System.Drawing.Size(154, 20);
             this.search_textBox.TabIndex = 1;
             this.search_textBox.TextChanged += new System.EventHandler(this.search_textBox_TextChanged);
-            // 
-            // SAVE_BUTTON_KUNDE_TLF
-            // 
-            this.SAVE_BUTTON_KUNDE_TLF.FlatAppearance.BorderSize = 0;
-            this.SAVE_BUTTON_KUNDE_TLF.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.SAVE_BUTTON_KUNDE_TLF.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.SAVE_BUTTON_KUNDE_TLF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SAVE_BUTTON_KUNDE_TLF.ForeColor = System.Drawing.Color.Black;
-            this.SAVE_BUTTON_KUNDE_TLF.Image = global::View_GUI.Properties.Resources.navigate_left_icon__1_;
-            this.SAVE_BUTTON_KUNDE_TLF.Location = new System.Drawing.Point(922, 57);
-            this.SAVE_BUTTON_KUNDE_TLF.Name = "SAVE_BUTTON_KUNDE_TLF";
-            this.SAVE_BUTTON_KUNDE_TLF.Size = new System.Drawing.Size(32, 45);
-            this.SAVE_BUTTON_KUNDE_TLF.TabIndex = 23;
-            this.SAVE_BUTTON_KUNDE_TLF.UseVisualStyleBackColor = true;
+            this.search_textBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.search_textBox_MouseDown);
             // 
             // panel1
             // 
@@ -561,6 +549,22 @@
             this.opret_kunde_button.UseVisualStyleBackColor = true;
             this.opret_kunde_button.Click += new System.EventHandler(this.opret_kunde_button_Click);
             // 
+            // Kunde_Tlf_button
+            // 
+            this.Kunde_Tlf_button.BackgroundImage = global::View_GUI.Properties.Resources.Phone_icon;
+            this.Kunde_Tlf_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Kunde_Tlf_button.FlatAppearance.BorderSize = 0;
+            this.Kunde_Tlf_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.Kunde_Tlf_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.Kunde_Tlf_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Kunde_Tlf_button.ForeColor = System.Drawing.Color.Black;
+            this.Kunde_Tlf_button.Location = new System.Drawing.Point(751, 17);
+            this.Kunde_Tlf_button.Name = "Kunde_Tlf_button";
+            this.Kunde_Tlf_button.Size = new System.Drawing.Size(38, 35);
+            this.Kunde_Tlf_button.TabIndex = 29;
+            this.Kunde_Tlf_button.UseVisualStyleBackColor = true;
+            this.Kunde_Tlf_button.Click += new System.EventHandler(this.Kunde_Tlf_button_Click);
+            // 
             // Kunder_Form9
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -568,11 +572,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1333, 700);
             this.Controls.Add(this.datagridviewBackground_panel);
-            this.Controls.Add(this.SAVE_BUTTON_KUNDE_TLF);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.backPanel_Textboxes_panel);
             this.Controls.Add(this.backgroundName_Top_panel);
-            this.Controls.Add(this.show_Tlf_Nr_button);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Kunder_Form9";
@@ -618,7 +620,6 @@
         private System.Windows.Forms.TextBox kunde_email_textBox;
         private System.Windows.Forms.Panel datagridviewBackground_panel;
         private System.Windows.Forms.TextBox search_textBox;
-        private System.Windows.Forms.Button show_Tlf_Nr_button;
         private System.Windows.Forms.ComboBox search_options_comboBox;
         private System.Windows.Forms.Button show_all_button;
         private System.Windows.Forms.Button undo_button;
@@ -626,10 +627,11 @@
         private System.Windows.Forms.Button delete_button;
         private System.Windows.Forms.Button print_button;
         private System.Windows.Forms.DataGridView Kunde_dataGridView;
-        private System.Windows.Forms.Button SAVE_BUTTON_KUNDE_TLF;
         private System.Windows.Forms.Button local_folder_button;
         private System.Windows.Forms.ComboBox Search_Column_comboBox;
         private System.Windows.Forms.PictureBox search_Datagridview_pictureBox;
         private System.Windows.Forms.Button change_DatagridView_Color_button;
+        private System.Windows.Forms.Button reset_Search_Textbox_button;
+        private System.Windows.Forms.Button Kunde_Tlf_button;
     }
 }

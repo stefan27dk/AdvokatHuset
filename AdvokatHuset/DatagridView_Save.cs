@@ -30,13 +30,13 @@ namespace View_GUI
                  {
                        if(Connection.DBConnectionString != null)
                        {
-                       
-                              using (Connection.Get_SQL_Conn_Instance())// SQL Connection
+                     
+                              using (SqlConnection connection = new SqlConnection(new DB_Connection_String().DBConnectionString))// SQL Connection
                               {
                              
                                   //Kunde_dataGridView.EndEdit();
-                                  SqlCommand Select_Command = new SqlCommand(Query, Connection.Get_SQL_Conn_Instance());
-                                  SqlDataAdapter Adapter1 = new SqlDataAdapter(Query, Connection.Get_SQL_Conn_Instance());
+                                  SqlCommand Select_Command = new SqlCommand(Query, connection);
+                                  SqlDataAdapter Adapter1 = new SqlDataAdapter(Query, connection);
                                   SqlCommandBuilder Builder1 = new SqlCommandBuilder(Adapter1);
                                   Adapter1.SelectCommand = Select_Command;
                                   Adapter1.Update(Dataset1, TableName);

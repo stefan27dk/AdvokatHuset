@@ -19,23 +19,25 @@ namespace Domain
         {
             try
             {
-
-                using (Connection.Get_SQL_Conn_Instance())
+                if (Connection.DBConnectionString != null)
                 {
-                    SqlCommand command = new SqlCommand(Query, Connection.Get_SQL_Conn_Instance());
-                    command.Connection.Open();
-                    command.ExecuteNonQuery();
+                    using (SqlConnection connection = new SqlConnection(new DB_Connection_String().DBConnectionString))
+                    {
+                        SqlCommand command = new SqlCommand(Query, connection);
+                        command.Connection.Open();
+                        command.ExecuteNonQuery();
+                    }
+
+                    successful = true; // Succesfull Transaction
+
+
                 }
-
-                successful = true; // Succesfull Transaction
-
-           
             }
 
                 // Get Information about the Exception        
                catch (Exception e) { MessageBox.Show($"{e.Message} \t {e.InnerException} \t {e.Data}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
 
-            return successful;
+               return successful;
         }
 
   

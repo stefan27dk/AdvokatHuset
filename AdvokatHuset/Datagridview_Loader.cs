@@ -27,13 +27,13 @@ namespace View_GUI
                  if(Connection.DBConnectionString != null)
                  {
 
-                    using (Connection.Get_SQL_Conn_Instance())// SQL Connection
+                    using (SqlConnection connection = new SqlConnection(new DB_Connection_String().DBConnectionString))// SQL Connection
                     {
                         //Kunde_Dataset.Clear(); // Clear all rows so we begin on fresh datagridview "If We dont do that the old Data will remain and the new data will be inserted at the bottom of the datagridview"
-                        Connection.Get_SQL_Conn_Instance().Open();
-                        SqlDataAdapter Adapter = new SqlDataAdapter(Query, Connection.Get_SQL_Conn_Instance()); 
+                        connection.Open();
+                        SqlDataAdapter Adapter = new SqlDataAdapter(Query, connection); 
                         Adapter.Fill(Dataset1, TableName);
-                        Connection.Get_SQL_Conn_Instance().Close();
+                        connection.Close();
                         //Kunde_dataGridView.DataSource = Kunde_Dataset;
                         //Kunde_dataGridView.DataMember = "Kunde";
                     }

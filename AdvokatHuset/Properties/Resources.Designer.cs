@@ -233,6 +233,36 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Actions_edit_clear_icon {
+            get {
+                object obj = ResourceManager.GetObject("Actions-edit-clear-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Actions_edit_clear_locationbar_rtl_icon {
+            get {
+                object obj = ResourceManager.GetObject("Actions-edit-clear-locationbar-rtl-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Actions_edit_clear_locationbar_rtl_icon__1___1___1_ {
+            get {
+                object obj = ResourceManager.GetObject("Actions-edit-clear-locationbar-rtl-icon (1) (1) (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Actions_edit_delete_icon {
             get {
                 object obj = ResourceManager.GetObject("Actions-edit-delete-icon", resourceCulture);
@@ -953,6 +983,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Document_txt_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("Document-txt-icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Documents_icon {
             get {
                 object obj = ResourceManager.GetObject("Documents-icon", resourceCulture);
@@ -986,6 +1026,16 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap Documents_icon2 {
             get {
                 object obj = ResourceManager.GetObject("Documents-icon2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Documents_icon3 {
+            get {
+                object obj = ResourceManager.GetObject("Documents-icon3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1856,6 +1906,16 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap Untitled1 {
             get {
                 object obj = ResourceManager.GetObject("Untitled1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled2 {
+            get {
+                object obj = ResourceManager.GetObject("Untitled2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
