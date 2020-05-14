@@ -41,6 +41,8 @@ namespace View_GUI
 
         //TKunde_Tlf - Database
         static string Kunde_Tlf_Select_Query = "Select* From Kunde_Tlf";
+        //static string Kunde_Tlf_Select_Query = "Select Kunde_Tlf.*, Kunde.Kunde_Fornavn, Kunde.Kunde_Efternavn From Kunde_Tlf Inner Join Kunde ON Kunde_Tlf.Kunde_ID = Kunde.Kunde_ID;";
+
 
 
 
@@ -145,7 +147,7 @@ namespace View_GUI
         private void InsertToDB()
         {
             ConnWrite = new DB_Connection_Write(); // "Write to DB Class instance"
-            string KundeQuery = $"DECLARE @UNIQUEX UNIQUEIDENTIFIER SET @UNIQUEX = NEWID(); Insert into Kunde Values('{kundeinstance.Fornavn}','{kundeinstance.Efternavn}',{kundeinstance.PostNr},'{kundeinstance.Adresse}', (@UNIQUEX),'{kundeinstance.Mail}', '{DateTime.Now.ToString("dd-MM-yyyy HH-mm-ss")}');"; // Query
+            string KundeQuery = $"BEGIN DECLARE @UNIQUEX UNIQUEIDENTIFIER SET @UNIQUEX = NEWID(); Insert into Kunde Values('{kundeinstance.Fornavn}','{kundeinstance.Efternavn}',{kundeinstance.PostNr},'{kundeinstance.Adresse}', (@UNIQUEX),'{kundeinstance.Mail}', '{DateTime.Now.ToString("dd-MM-yyyy HH-mm-ss")}'); Insert INTO Kunde_Tlf Values('{kunder_tlf_textBox.Text}',(@UNIQUEX)); END;"; // Query
             successful = ConnWrite.CreateCommand(KundeQuery); // Write to DB Input and "Execution"
         }
 
@@ -599,6 +601,7 @@ namespace View_GUI
         // Load Kunde_Tlf
         private void LoadKunde_Tlf()
         {
+            string Kunde_Tlf_Kunde_navn_Select = "Select Kunde_Tlf.*, Kunde.Kunde_Fornavn, Kunde.Kunde_Efternavn From Kunde_Tlf Inner Join Kunde ON Kunde_Tlf.Kunde_ID = Kunde.Kunde_ID;";
             // Clear the Columns 
             if (Kunde_dataGridView.DataMember == "Kunde")
             {
@@ -608,9 +611,12 @@ namespace View_GUI
             // Kunde_Tlf
             Kunde_Dataset.Clear();
             Datagridview_Loader Load_Kunde_Tlf = new Datagridview_Loader();
-            Load_Kunde_Tlf.DB_Populate(Kunde_Tlf_Select_Query, Kunde_Dataset, "Kunde_Tlf");
+            Load_Kunde_Tlf.DB_Populate(Kunde_Tlf_Kunde_navn_Select, Kunde_Dataset, "Kunde_Tlf");
             Kunde_dataGridView.DataSource = Kunde_Dataset;
             Kunde_dataGridView.DataMember = "Kunde_Tlf";
+            Kunde_dataGridView.Columns[2].ReadOnly = true;  // Forbid Editing Kunde_ForNavn
+            Kunde_dataGridView.Columns[3].ReadOnly = true;  // Forbid Editing Kunde_EfterNavn
+
         }
 
 
@@ -737,23 +743,15 @@ namespace View_GUI
                       DialogResult saveDialog = MessageBox.Show("Are you sure that you want ot save the changes?", "Save", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                       if (saveDialog == DialogResult.Yes)
                       {
-                          SaveDataGridView();
+                          SaveDataGridView(); // Save
+                          RefreshDatagridview(); // Refresh
                           //MessageBox.Show("Changes Are Saved", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
                       }
 
                       else if (saveDialog == DialogResult.No) // Refresh if DialogResult == No
                       {
-                        if(Kunde_dataGridView.DataMember == "Kunde")
-                        {
-                          LoadKunder();
-                        }
-                        else if(Kunde_dataGridView.DataMember == "Kunde_Tlf")
-                        {
-                            LoadKunde_Tlf();
-                        }
-
-
-                      }
+                        RefreshDatagridview(); // Refresh
+                    }
 
                   }
 
@@ -764,6 +762,18 @@ namespace View_GUI
 
 
 
+        // RefreshDatagridview "After Update OR Cancelation"
+        private void RefreshDatagridview()
+        {
+            if (Kunde_dataGridView.DataMember == "Kunde")
+            {
+                LoadKunder();
+            }
+            else if (Kunde_dataGridView.DataMember == "Kunde_Tlf")
+            {
+                LoadKunde_Tlf();
+            }
+        }
     
 
 

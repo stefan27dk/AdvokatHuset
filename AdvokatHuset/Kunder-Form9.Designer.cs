@@ -213,7 +213,7 @@
             this.datagridviewBackground_panel.Controls.Add(this.undo_button);
             this.datagridviewBackground_panel.Controls.Add(this.search_options_comboBox);
             this.datagridviewBackground_panel.Controls.Add(this.search_textBox);
-            this.datagridviewBackground_panel.Location = new System.Drawing.Point(99, 170);
+            this.datagridviewBackground_panel.Location = new System.Drawing.Point(152, 170);
             this.datagridviewBackground_panel.Name = "datagridviewBackground_panel";
             this.datagridviewBackground_panel.Size = new System.Drawing.Size(1080, 488);
             this.datagridviewBackground_panel.TabIndex = 13;
@@ -230,6 +230,7 @@
             // 
             // Kunde_dataGridView
             // 
+            this.Kunde_dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.Kunde_dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.Kunde_dataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Kunde_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -237,7 +238,7 @@
             this.Kunde_dataGridView.MultiSelect = false;
             this.Kunde_dataGridView.Name = "Kunde_dataGridView";
             this.Kunde_dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Kunde_dataGridView.Size = new System.Drawing.Size(1068, 412);
+            this.Kunde_dataGridView.Size = new System.Drawing.Size(1064, 372);
             this.Kunde_dataGridView.TabIndex = 22;
             this.Kunde_dataGridView.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Kunde_dataGridView_ColumnHeaderMouseClick);
             this.Kunde_dataGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.Kunde_dataGridView_RowEnter);
