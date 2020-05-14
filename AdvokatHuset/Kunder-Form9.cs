@@ -9,13 +9,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Reflection;
 using Domain;
- 
+using iTextSharp.text.pdf;
+using iTextSharp.text;
 
 namespace View_GUI
 {
     public partial class Kunder_Form9 : Form
     {
+
+
+        // Local Folder
+        string LocalFolderPath = "C://";  // Gets Assignet in initialize
+
         //DB
         Kunde kundeinstance; // Instance af Kunde 
         DB_Connection_Write ConnWrite; // Sql Write "
@@ -775,13 +783,13 @@ namespace View_GUI
             Bitmap bitmapScreenshot = new Bitmap(this.Kunde_dataGridView.Width, this.Kunde_dataGridView.Height);
 
             // Draw to the bitmap
-            Kunde_dataGridView.DrawToBitmap(bitmapScreenshot, new Rectangle(0, 0, this.Kunde_dataGridView.Width, this.Kunde_dataGridView.Height));
+            Kunde_dataGridView.DrawToBitmap(bitmapScreenshot, new System.Drawing.Rectangle(0, 0, this.Kunde_dataGridView.Width, this.Kunde_dataGridView.Height));
 
             // Reset the height
             Kunde_dataGridView.Height = oldHeight;
 
             // Save bitmap
-            bitmapScreenshot.Save(@"C:\dt.png");
+            bitmapScreenshot.Save(LocalFolderPath+"Kunde_Snapshot  "+DateTime.Now.ToString("dd-MM-yyyy  HH-mm-ss")+".png");
             Clipboard.SetDataObject(bitmapScreenshot);  // Copy Image to Clipboard Also
 
       
@@ -1061,22 +1069,169 @@ namespace View_GUI
 
 
 
+        // Mark Current row
+        private void mark_current_row_button_Click(object sender, EventArgs e)
+        {
+            if(Kunde_dataGridView.SelectedRows[0].DefaultCellStyle.BackColor != Color.FromArgb(191, 50, 95))
+            {
+            Kunde_dataGridView.SelectedRows[0].DefaultCellStyle.BackColor = Color.FromArgb(191, 50, 95);
+            Kunde_dataGridView.SelectedRows[0].DefaultCellStyle.ForeColor = Color.Black;
+            }
+            else
+            {
+                Kunde_dataGridView.SelectedRows[0].DefaultCellStyle.BackColor = Color.FromArgb(2, 222, 160);
+                Kunde_dataGridView.SelectedRows[0].DefaultCellStyle.ForeColor = DefaultForeColor;
+            }
+
+        }
 
 
 
 
 
 
-        // //TEST
-        //private void Kunde_dataGridView_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
-        //{
 
-        //    //if (Kunde_dataGridView.CurrentCell == Kunde_dataGridView.SelectedRows[0].Cells[7])
-        //    //{
 
-        //    //    //MessageBox.Show("sd", "sd", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //    //}
-        //}
+
+        //------------PDF--PRINT------------------::START::-------------------------------------------------------------------------------------------------------------------
+        // Print Datagridview
+        private void print_button_Click(object sender, EventArgs e)
+        {
+            Datagridview_To_PDF();
+            Process.Start(LocalFolderPath);
+
+
+            // Open Last File
+            DirectoryInfo directory = new DirectoryInfo(LocalFolderPath); // Create Directory with path "Not phisical Directory!"
+            FileInfo myFile = (from f in directory.GetFiles() // Get all files in the directory
+            orderby f.LastWriteTime descending // Ascending // Decending
+            select f).First();
+
+            // Opens Last file
+            Process.Start(myFile.FullName);
+          
+        }
+
+
+
+
+        // PFD - Print
+        private void Datagridview_To_PDF()
+          {
+               //USING -  iTextSharp - Class
+               PdfPTable Pdf_DGV = new PdfPTable(Kunde_dataGridView.Columns.Count);
+               Pdf_DGV.DefaultCell.Padding = 3;
+               Pdf_DGV.WidthPercentage = 100;
+               Pdf_DGV.HorizontalAlignment = Element.ALIGN_LEFT;
+               Pdf_DGV.DefaultCell.BorderWidth = 1;
+             
+             
+               // Adding the Columns with their txt to the PDF 
+               foreach(DataGridViewColumn column in Kunde_dataGridView.Columns)
+               {
+                   PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
+                   cell.BackgroundColor = new iTextSharp.text.BaseColor(255, 255, 255); // White Color
+                   Pdf_DGV.AddCell(cell);
+               }
+             
+             
+               //Add Rows and Cells to the Pdf
+
+              for (int i = 0; i < Kunde_dataGridView.Rows.Count; i++)
+              {
+                  for (int a = 0; a < Kunde_dataGridView.Rows[i].Cells.Count; a++)
+                  {
+                      if (Kunde_dataGridView.Rows[i].Cells[a].Value != null)
+                      {
+             
+                          Pdf_DGV.AddCell(Kunde_dataGridView.Rows[i].Cells[a].Value.ToString());
+             
+                      }
+             
+             
+                  }
+              }
+
+
+
+              // Export to PDF
+
+            if(!Directory.Exists(LocalFolderPath))
+            {
+                Directory.CreateDirectory(LocalFolderPath);
+            }
+
+            using(FileStream stream = new FileStream(LocalFolderPath + "Kunder_PDF -  "+DateTime.Now.ToString("dd-MM-yyyy   HH-mm-ss")+".pdf", FileMode.Create))
+            {
+                Document PDF_DOC = new Document(PageSize.A2, 10f, 10f, 10f, 0f);
+                PdfWriter.GetInstance(PDF_DOC, stream);
+                PDF_DOC.Open();
+                PDF_DOC.Add(Pdf_DGV);
+                PDF_DOC.Close();
+                stream.Close();
+
+
+            }
+
+
+
+            ////USING -  iTextSharp - Class
+            //PdfPTable pdfTable = new PdfPTable(Kunde_dataGridView.ColumnCount);
+            //pdfTable.DefaultCell.Padding = 3;
+            //pdfTable.WidthPercentage = 100;
+            //pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
+            //pdfTable.DefaultCell.BorderWidth = 1;
+
+            ////Adding Columns to the Pdf
+            //foreach (DataGridViewColumn column in Kunde_dataGridView.Columns)
+            //{
+            //    PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
+            //    cell.BackgroundColor = new iTextSharp.text.BaseColor(240, 240, 240);
+            //    pdfTable.AddCell(cell);
+            //}
+
+            ////Add Rows and Cells to the Pdf
+
+            //for (int i = 0; i < Kunde_dataGridView.Rows.Count; i++)
+            //{
+            //    for (int a = 0; a < Kunde_dataGridView.Rows[i].Cells.Count; a++)
+            //    {
+            //        if (Kunde_dataGridView.Rows[i].Cells[a].Value != null)
+            //        {
+
+            //            pdfTable.AddCell(Kunde_dataGridView.Rows[i].Cells[a].Value.ToString());
+
+            //        }
+
+
+            //    }
+            //}
+
+
+            ////Export to PDF
+            //string folderPath = "C:\\PDFs\\";
+            //if (!Directory.Exists(folderPath))
+            //{
+            //    Directory.CreateDirectory(folderPath);
+            //}
+            //using (FileStream stream = new FileStream(folderPath + "DataGridViewExport.pdf", FileMode.Create))
+            //{
+            //    Document pdfDoc = new Document(PageSize.A2, 10f, 10f, 10f, 0f);
+            //    PdfWriter.GetInstance(pdfDoc, stream);
+            //    pdfDoc.Open();
+            //    pdfDoc.Add(pdfTable);
+            //    pdfDoc.Close();
+            //    stream.Close();
+            //}
+
+        }
+
+        //------------PDF--PRINT------------------::END::--------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
 
 
 

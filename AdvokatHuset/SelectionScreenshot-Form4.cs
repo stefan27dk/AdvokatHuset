@@ -23,7 +23,7 @@ namespace View_GUI
         private int startX, startY;
         private Rectangle rect = Screen.GetBounds(Point.Empty);
         Screenshot screenshot;
-        
+        string LocalFolderPath = "C://";
 
 
 
@@ -274,27 +274,16 @@ namespace View_GUI
         {
 
             //----------------GET--LAST--Updated--File
-            string Path = @"C:\";
-
-            var files = new DirectoryInfo(Path).GetFiles("*.png*");
-            string lastfile = "";
-
-            DateTime lastupdated = DateTime.MinValue;
-
-            foreach (FileInfo file in files)
-            {
-                if (file.LastWriteTime > lastupdated)
-                {
-                    lastfile = file.FullName;
-                }
-            }
+            
+            // Open Last File
+            DirectoryInfo directory = new DirectoryInfo(LocalFolderPath); // Create Directory with path "Not phisical Directory!"
+            FileInfo lastfile = (from f in directory.GetFiles() // Get all files in the directory
+                               orderby f.LastWriteTime descending // Ascending // Decending
+                               select f).First();
 
 
-
-            //---------------- Opens Last image in paint
-
-            Process.Start("mspaint", $@"""{lastfile}""");
-
+            //Opens Last image in paint
+            Process.Start("mspaint", $@"""{lastfile.FullName}""");
             CloseForm();
         }
 

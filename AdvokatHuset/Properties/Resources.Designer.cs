@@ -1613,6 +1613,26 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap preferences_desktop_color_icon {
+            get {
+                object obj = ResourceManager.GetObject("preferences-desktop-color-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap preferences_desktop_color_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("preferences-desktop-color-icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap question_type_one_correct_icon {
             get {
                 object obj = ResourceManager.GetObject("question-type-one-correct-icon", resourceCulture);
