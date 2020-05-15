@@ -14,6 +14,7 @@ using System.Reflection;
 using Domain;
 using iTextSharp.text.pdf;
 using iTextSharp.text;
+using System.Media;
 
 namespace View_GUI
 {
@@ -634,6 +635,8 @@ namespace View_GUI
         {
             LoadKunder();
 
+
+            // ResetSearch_Textbox Color
             if(search_textBox.Text.Length > 0)
             {
                 search_textBox.BackColor = Color.FromArgb(255, 192, 192);
@@ -824,7 +827,7 @@ namespace View_GUI
             White_DatagridviewStyle(); // Datagridview White Color
             DatagridviewScreenshot(); // Screenshot
             Black_DatagridviewStyle(); // Datagridview Color Style
-           
+            OpenLastFile();
         }
 
 
@@ -845,7 +848,9 @@ namespace View_GUI
         // Open Local Folder
         private void Open_Local_Folder()
         {
-            Process.Start(@"C://");
+            Process.Start(LocalFolderPath);
+            SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\recycle.wav");
+            simpleSound.Play();
         }
 
 
@@ -861,6 +866,30 @@ namespace View_GUI
 
 
         }
+
+
+
+
+
+
+
+        // Clear Search_Text-Box "RESET" - CHANGE IMAGE ON HOVER
+        private void reset_Search_Textbox_button_MouseEnter(object sender, EventArgs e)
+        {
+            reset_Search_Textbox_button.BackgroundImage = Properties.Resources.Hover_Del_3;
+        }
+
+
+
+
+
+        // Clear Search_Text-Box "RESET" - CHANGE IMAGE On Leave - Reset Image
+        private void reset_Search_Textbox_button_MouseLeave(object sender, EventArgs e)
+        {
+            reset_Search_Textbox_button.BackgroundImage = Properties.Resources.Untitled2;
+        }
+
+
 
 
 
@@ -1038,7 +1067,7 @@ namespace View_GUI
         private void reset_Search_Textbox_button_Click(object sender, EventArgs e)
         {
             search_textBox.Clear(); // Clear SearchBox
-            search_textBox.BackColor = DefaultBackColor;
+            search_textBox.BackColor = Color.FromArgb(222, 249, 255);
             LoadKunder(); // Show All
         }
 
@@ -1049,8 +1078,8 @@ namespace View_GUI
         {
             if(search_textBox.Text.Length >0)
             {
-            search_textBox.BackColor = DefaultBackColor;
-            Search_Resources();
+                search_textBox.BackColor = Color.FromArgb(222, 249, 255);
+                Search_Resources();
             }
 
         }
@@ -1065,7 +1094,20 @@ namespace View_GUI
 
 
 
+
+
+
+
+
+
+
+
    
+
+
+
+
+
 
 
 
@@ -1109,6 +1151,16 @@ namespace View_GUI
             }
 
         }
+          //--------------Datagridview - Change - Color------------::END:------------------------------------------------
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1122,21 +1174,33 @@ namespace View_GUI
         // Print Datagridview
         private void print_button_Click(object sender, EventArgs e)
         {
-            Datagridview_To_PDF();
-            Process.Start(LocalFolderPath);
+            Datagridview_To_PDF(); // Method for Converting the Current Datagridview result to PDF
+            OpenLastFile();
 
+        }
+
+
+
+
+        private void OpenLastFile()
+        {
+       
 
             // Open Last File
             DirectoryInfo directory = new DirectoryInfo(LocalFolderPath); // Create Directory with path "Not phisical Directory!"
-            FileInfo myFile = (from f in directory.GetFiles() // Get all files in the directory
-            orderby f.LastWriteTime descending // Ascending // Decending
-            select f).First();
+            FileInfo Last_File = (from f in directory.GetFiles() // Get all files in the directory
+                               orderby f.LastWriteTime descending // Ascending // Decending
+          
+                               select f).First();
+
+
+            string selectFile = "/select, \"" + Last_File.FullName + "\""; // Selects the file in the folder
 
             // Opens Last file
-            Process.Start(myFile.FullName);
-          
-        }
+            Process.Start(Last_File.FullName); // Open PDF,Png etc.
+            Process.Start("explorer.exe", selectFile); // Selects the file in the folder
 
+        }
 
 
 
@@ -1265,7 +1329,7 @@ namespace View_GUI
 
 
 
-        //--------------Datagridview - Change - Color------------::END:------------------------------------------------
+
 
 
 

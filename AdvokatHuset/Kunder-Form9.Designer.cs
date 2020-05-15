@@ -41,24 +41,23 @@
             this.kunder_surname_textBox = new System.Windows.Forms.TextBox();
             this.datagridviewBackground_panel = new System.Windows.Forms.Panel();
             this.Kunde_dataGridView = new System.Windows.Forms.DataGridView();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.background_DGV_Search_panel = new System.Windows.Forms.Panel();
             this.search_textBox = new System.Windows.Forms.TextBox();
             this.search_options_comboBox = new System.Windows.Forms.ComboBox();
             this.Search_Column_comboBox = new System.Windows.Forms.ComboBox();
             this.reset_Search_Textbox_button = new System.Windows.Forms.Button();
             this.search_Datagridview_pictureBox = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.change_DatagridView_Color_button = new System.Windows.Forms.Button();
-            this.mark_current_row_button = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.background_DGV_panel1 = new System.Windows.Forms.Panel();
             this.undo_button = new System.Windows.Forms.Button();
             this.delete_button = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.background_DGV_panel4 = new System.Windows.Forms.Panel();
             this.local_folder_button = new System.Windows.Forms.Button();
             this.screenshot_datagridview_button = new System.Windows.Forms.Button();
             this.print_button = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.background_DGV_panel3 = new System.Windows.Forms.Panel();
+            this.change_DatagridView_Color_button = new System.Windows.Forms.Button();
+            this.mark_current_row_button = new System.Windows.Forms.Button();
+            this.background_DGV_panel2 = new System.Windows.Forms.Panel();
             this.Kunde_Tlf_button = new System.Windows.Forms.Button();
             this.show_all_button = new System.Windows.Forms.Button();
             this.top_Menu_background_panel = new System.Windows.Forms.Panel();
@@ -76,12 +75,12 @@
             this.background_textboxes_top_panel.SuspendLayout();
             this.datagridviewBackground_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Kunde_dataGridView)).BeginInit();
-            this.panel6.SuspendLayout();
+            this.background_DGV_Search_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.search_Datagridview_pictureBox)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.background_DGV_panel1.SuspendLayout();
+            this.background_DGV_panel4.SuspendLayout();
+            this.background_DGV_panel3.SuspendLayout();
+            this.background_DGV_panel2.SuspendLayout();
             this.top_Menu_background_panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -210,11 +209,11 @@
             this.datagridviewBackground_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.datagridviewBackground_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.datagridviewBackground_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.datagridviewBackground_panel.Controls.Add(this.panel6);
-            this.datagridviewBackground_panel.Controls.Add(this.panel5);
-            this.datagridviewBackground_panel.Controls.Add(this.panel4);
-            this.datagridviewBackground_panel.Controls.Add(this.panel2);
-            this.datagridviewBackground_panel.Controls.Add(this.panel1);
+            this.datagridviewBackground_panel.Controls.Add(this.background_DGV_Search_panel);
+            this.datagridviewBackground_panel.Controls.Add(this.background_DGV_panel1);
+            this.datagridviewBackground_panel.Controls.Add(this.background_DGV_panel4);
+            this.datagridviewBackground_panel.Controls.Add(this.background_DGV_panel3);
+            this.datagridviewBackground_panel.Controls.Add(this.background_DGV_panel2);
             this.datagridviewBackground_panel.Controls.Add(this.Kunde_dataGridView);
             this.datagridviewBackground_panel.Location = new System.Drawing.Point(146, 170);
             this.datagridviewBackground_panel.Name = "datagridviewBackground_panel";
@@ -237,20 +236,20 @@
             this.Kunde_dataGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.Kunde_dataGridView_RowEnter);
             this.Kunde_dataGridView.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.Kunde_dataGridView_RowValidated);
             // 
-            // panel6
+            // background_DGV_Search_panel
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            this.panel6.BackgroundImage = global::View_GUI.Properties.Resources.Search_Back_6_Panel;
-            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel6.Controls.Add(this.search_textBox);
-            this.panel6.Controls.Add(this.search_options_comboBox);
-            this.panel6.Controls.Add(this.Search_Column_comboBox);
-            this.panel6.Controls.Add(this.reset_Search_Textbox_button);
-            this.panel6.Controls.Add(this.search_Datagridview_pictureBox);
-            this.panel6.Location = new System.Drawing.Point(7, 5);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(420, 53);
-            this.panel6.TabIndex = 32;
+            this.background_DGV_Search_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.background_DGV_Search_panel.BackgroundImage = global::View_GUI.Properties.Resources.Search_Back_6_Panel;
+            this.background_DGV_Search_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.background_DGV_Search_panel.Controls.Add(this.search_textBox);
+            this.background_DGV_Search_panel.Controls.Add(this.search_options_comboBox);
+            this.background_DGV_Search_panel.Controls.Add(this.Search_Column_comboBox);
+            this.background_DGV_Search_panel.Controls.Add(this.reset_Search_Textbox_button);
+            this.background_DGV_Search_panel.Controls.Add(this.search_Datagridview_pictureBox);
+            this.background_DGV_Search_panel.Location = new System.Drawing.Point(7, 5);
+            this.background_DGV_Search_panel.Name = "background_DGV_Search_panel";
+            this.background_DGV_Search_panel.Size = new System.Drawing.Size(420, 53);
+            this.background_DGV_Search_panel.TabIndex = 32;
             // 
             // search_textBox
             // 
@@ -289,7 +288,7 @@
             this.reset_Search_Textbox_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.reset_Search_Textbox_button.FlatAppearance.BorderSize = 0;
             this.reset_Search_Textbox_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.reset_Search_Textbox_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.reset_Search_Textbox_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.reset_Search_Textbox_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.reset_Search_Textbox_button.ForeColor = System.Drawing.Color.Black;
             this.reset_Search_Textbox_button.Location = new System.Drawing.Point(363, 12);
@@ -298,6 +297,8 @@
             this.reset_Search_Textbox_button.TabIndex = 28;
             this.reset_Search_Textbox_button.UseVisualStyleBackColor = false;
             this.reset_Search_Textbox_button.Click += new System.EventHandler(this.reset_Search_Textbox_button_Click);
+            this.reset_Search_Textbox_button.MouseEnter += new System.EventHandler(this.reset_Search_Textbox_button_MouseEnter);
+            this.reset_Search_Textbox_button.MouseLeave += new System.EventHandler(this.reset_Search_Textbox_button_MouseLeave);
             // 
             // search_Datagridview_pictureBox
             // 
@@ -310,72 +311,17 @@
             this.search_Datagridview_pictureBox.TabIndex = 26;
             this.search_Datagridview_pictureBox.TabStop = false;
             // 
-            // panel3
+            // background_DGV_panel1
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            this.panel3.BackgroundImage = global::View_GUI.Properties.Resources.DGV_Panel;
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Location = new System.Drawing.Point(905, 58);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(120, 58);
-            this.panel3.TabIndex = 31;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            this.panel2.BackgroundImage = global::View_GUI.Properties.Resources.DGV_Panel;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Controls.Add(this.change_DatagridView_Color_button);
-            this.panel2.Controls.Add(this.mark_current_row_button);
-            this.panel2.Location = new System.Drawing.Point(731, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(120, 58);
-            this.panel2.TabIndex = 30;
-            // 
-            // change_DatagridView_Color_button
-            // 
-            this.change_DatagridView_Color_button.BackColor = System.Drawing.Color.Transparent;
-            this.change_DatagridView_Color_button.FlatAppearance.BorderSize = 0;
-            this.change_DatagridView_Color_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.change_DatagridView_Color_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.change_DatagridView_Color_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.change_DatagridView_Color_button.ForeColor = System.Drawing.Color.Black;
-            this.change_DatagridView_Color_button.Image = global::View_GUI.Properties.Resources.Color_Meter_icon__1_;
-            this.change_DatagridView_Color_button.Location = new System.Drawing.Point(13, 9);
-            this.change_DatagridView_Color_button.Name = "change_DatagridView_Color_button";
-            this.change_DatagridView_Color_button.Size = new System.Drawing.Size(46, 44);
-            this.change_DatagridView_Color_button.TabIndex = 27;
-            this.change_DatagridView_Color_button.UseVisualStyleBackColor = false;
-            this.change_DatagridView_Color_button.Click += new System.EventHandler(this.change_DatagridView_Color_button_Click);
-            // 
-            // mark_current_row_button
-            // 
-            this.mark_current_row_button.BackColor = System.Drawing.Color.Transparent;
-            this.mark_current_row_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.mark_current_row_button.FlatAppearance.BorderSize = 0;
-            this.mark_current_row_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.mark_current_row_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.mark_current_row_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.mark_current_row_button.ForeColor = System.Drawing.Color.Black;
-            this.mark_current_row_button.Image = global::View_GUI.Properties.Resources.Grid_Row_Color;
-            this.mark_current_row_button.Location = new System.Drawing.Point(65, 10);
-            this.mark_current_row_button.Name = "mark_current_row_button";
-            this.mark_current_row_button.Size = new System.Drawing.Size(43, 44);
-            this.mark_current_row_button.TabIndex = 30;
-            this.mark_current_row_button.UseVisualStyleBackColor = false;
-            this.mark_current_row_button.Click += new System.EventHandler(this.mark_current_row_button_Click);
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            this.panel5.BackgroundImage = global::View_GUI.Properties.Resources.DGV_Panel;
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel5.Controls.Add(this.undo_button);
-            this.panel5.Controls.Add(this.delete_button);
-            this.panel5.Location = new System.Drawing.Point(442, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(120, 58);
-            this.panel5.TabIndex = 32;
+            this.background_DGV_panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.background_DGV_panel1.BackgroundImage = global::View_GUI.Properties.Resources.DGV_Panel;
+            this.background_DGV_panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.background_DGV_panel1.Controls.Add(this.undo_button);
+            this.background_DGV_panel1.Controls.Add(this.delete_button);
+            this.background_DGV_panel1.Location = new System.Drawing.Point(442, -2);
+            this.background_DGV_panel1.Name = "background_DGV_panel1";
+            this.background_DGV_panel1.Size = new System.Drawing.Size(120, 58);
+            this.background_DGV_panel1.TabIndex = 32;
             // 
             // undo_button
             // 
@@ -388,9 +334,9 @@
             this.undo_button.ForeColor = System.Drawing.Color.Black;
             this.undo_button.Image = global::View_GUI.Properties.Resources.Actions_go_previous_view_icon__1_;
             this.undo_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.undo_button.Location = new System.Drawing.Point(14, 11);
+            this.undo_button.Location = new System.Drawing.Point(19, 12);
             this.undo_button.Name = "undo_button";
-            this.undo_button.Size = new System.Drawing.Size(38, 39);
+            this.undo_button.Size = new System.Drawing.Size(38, 33);
             this.undo_button.TabIndex = 17;
             this.undo_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.undo_button.UseVisualStyleBackColor = false;
@@ -406,25 +352,25 @@
             this.delete_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
             this.delete_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.delete_button.ForeColor = System.Drawing.Color.Black;
-            this.delete_button.Location = new System.Drawing.Point(64, 12);
+            this.delete_button.Location = new System.Drawing.Point(63, 13);
             this.delete_button.Name = "delete_button";
-            this.delete_button.Size = new System.Drawing.Size(38, 35);
+            this.delete_button.Size = new System.Drawing.Size(38, 33);
             this.delete_button.TabIndex = 20;
             this.delete_button.UseVisualStyleBackColor = false;
             this.delete_button.Click += new System.EventHandler(this.delete_button_Click);
             // 
-            // panel4
+            // background_DGV_panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            this.panel4.BackgroundImage = global::View_GUI.Properties.Resources.DGV_Panel;
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel4.Controls.Add(this.local_folder_button);
-            this.panel4.Controls.Add(this.screenshot_datagridview_button);
-            this.panel4.Controls.Add(this.print_button);
-            this.panel4.Location = new System.Drawing.Point(885, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(186, 58);
-            this.panel4.TabIndex = 32;
+            this.background_DGV_panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.background_DGV_panel4.BackgroundImage = global::View_GUI.Properties.Resources.DGV_Panel;
+            this.background_DGV_panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.background_DGV_panel4.Controls.Add(this.local_folder_button);
+            this.background_DGV_panel4.Controls.Add(this.screenshot_datagridview_button);
+            this.background_DGV_panel4.Controls.Add(this.print_button);
+            this.background_DGV_panel4.Location = new System.Drawing.Point(881, -2);
+            this.background_DGV_panel4.Name = "background_DGV_panel4";
+            this.background_DGV_panel4.Size = new System.Drawing.Size(190, 60);
+            this.background_DGV_panel4.TabIndex = 32;
             // 
             // local_folder_button
             // 
@@ -437,11 +383,11 @@
             this.local_folder_button.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.local_folder_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.local_folder_button.Image = global::View_GUI.Properties.Resources.folder_icon;
-            this.local_folder_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.local_folder_button.Location = new System.Drawing.Point(22, 8);
+            this.local_folder_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.local_folder_button.Location = new System.Drawing.Point(27, 12);
             this.local_folder_button.Margin = new System.Windows.Forms.Padding(0);
             this.local_folder_button.Name = "local_folder_button";
-            this.local_folder_button.Size = new System.Drawing.Size(42, 43);
+            this.local_folder_button.Size = new System.Drawing.Size(40, 38);
             this.local_folder_button.TabIndex = 24;
             this.local_folder_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.local_folder_button.UseVisualStyleBackColor = false;
@@ -456,9 +402,10 @@
             this.screenshot_datagridview_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.screenshot_datagridview_button.ForeColor = System.Drawing.Color.Black;
             this.screenshot_datagridview_button.Image = global::View_GUI.Properties.Resources.Document_txt_icon__1_;
-            this.screenshot_datagridview_button.Location = new System.Drawing.Point(70, 8);
+            this.screenshot_datagridview_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.screenshot_datagridview_button.Location = new System.Drawing.Point(74, 12);
             this.screenshot_datagridview_button.Name = "screenshot_datagridview_button";
-            this.screenshot_datagridview_button.Size = new System.Drawing.Size(43, 44);
+            this.screenshot_datagridview_button.Size = new System.Drawing.Size(40, 38);
             this.screenshot_datagridview_button.TabIndex = 19;
             this.screenshot_datagridview_button.UseVisualStyleBackColor = false;
             this.screenshot_datagridview_button.Click += new System.EventHandler(this.screenshot_datagridview_button_Click);
@@ -472,24 +419,70 @@
             this.print_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.print_button.ForeColor = System.Drawing.Color.Black;
             this.print_button.Image = global::View_GUI.Properties.Resources.Print_PDF;
-            this.print_button.Location = new System.Drawing.Point(115, 8);
+            this.print_button.Location = new System.Drawing.Point(122, 12);
             this.print_button.Name = "print_button";
-            this.print_button.Size = new System.Drawing.Size(43, 44);
+            this.print_button.Size = new System.Drawing.Size(40, 38);
             this.print_button.TabIndex = 21;
             this.print_button.UseVisualStyleBackColor = false;
             this.print_button.Click += new System.EventHandler(this.print_button_Click);
             // 
-            // panel1
+            // background_DGV_panel3
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            this.panel1.BackgroundImage = global::View_GUI.Properties.Resources.DGV_Panel;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.Kunde_Tlf_button);
-            this.panel1.Controls.Add(this.show_all_button);
-            this.panel1.Location = new System.Drawing.Point(585, -2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(125, 60);
-            this.panel1.TabIndex = 14;
+            this.background_DGV_panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.background_DGV_panel3.BackgroundImage = global::View_GUI.Properties.Resources.DGV_Panel;
+            this.background_DGV_panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.background_DGV_panel3.Controls.Add(this.change_DatagridView_Color_button);
+            this.background_DGV_panel3.Controls.Add(this.mark_current_row_button);
+            this.background_DGV_panel3.Location = new System.Drawing.Point(731, -2);
+            this.background_DGV_panel3.Name = "background_DGV_panel3";
+            this.background_DGV_panel3.Size = new System.Drawing.Size(125, 60);
+            this.background_DGV_panel3.TabIndex = 30;
+            // 
+            // change_DatagridView_Color_button
+            // 
+            this.change_DatagridView_Color_button.BackColor = System.Drawing.Color.Transparent;
+            this.change_DatagridView_Color_button.FlatAppearance.BorderSize = 0;
+            this.change_DatagridView_Color_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.change_DatagridView_Color_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.change_DatagridView_Color_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.change_DatagridView_Color_button.ForeColor = System.Drawing.Color.Black;
+            this.change_DatagridView_Color_button.Image = global::View_GUI.Properties.Resources.Color_Meter_icon__1_;
+            this.change_DatagridView_Color_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.change_DatagridView_Color_button.Location = new System.Drawing.Point(19, 12);
+            this.change_DatagridView_Color_button.Name = "change_DatagridView_Color_button";
+            this.change_DatagridView_Color_button.Size = new System.Drawing.Size(40, 38);
+            this.change_DatagridView_Color_button.TabIndex = 27;
+            this.change_DatagridView_Color_button.UseVisualStyleBackColor = false;
+            this.change_DatagridView_Color_button.Click += new System.EventHandler(this.change_DatagridView_Color_button_Click);
+            // 
+            // mark_current_row_button
+            // 
+            this.mark_current_row_button.BackColor = System.Drawing.Color.Transparent;
+            this.mark_current_row_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.mark_current_row_button.FlatAppearance.BorderSize = 0;
+            this.mark_current_row_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.mark_current_row_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.mark_current_row_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mark_current_row_button.ForeColor = System.Drawing.Color.Black;
+            this.mark_current_row_button.Image = global::View_GUI.Properties.Resources.Grid_Row_Color;
+            this.mark_current_row_button.Location = new System.Drawing.Point(66, 12);
+            this.mark_current_row_button.Name = "mark_current_row_button";
+            this.mark_current_row_button.Size = new System.Drawing.Size(40, 38);
+            this.mark_current_row_button.TabIndex = 30;
+            this.mark_current_row_button.UseVisualStyleBackColor = false;
+            this.mark_current_row_button.Click += new System.EventHandler(this.mark_current_row_button_Click);
+            // 
+            // background_DGV_panel2
+            // 
+            this.background_DGV_panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.background_DGV_panel2.BackgroundImage = global::View_GUI.Properties.Resources.DGV_Panel;
+            this.background_DGV_panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.background_DGV_panel2.Controls.Add(this.Kunde_Tlf_button);
+            this.background_DGV_panel2.Controls.Add(this.show_all_button);
+            this.background_DGV_panel2.Location = new System.Drawing.Point(585, -2);
+            this.background_DGV_panel2.Name = "background_DGV_panel2";
+            this.background_DGV_panel2.Size = new System.Drawing.Size(125, 60);
+            this.background_DGV_panel2.TabIndex = 14;
             // 
             // Kunde_Tlf_button
             // 
@@ -501,7 +494,7 @@
             this.Kunde_Tlf_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
             this.Kunde_Tlf_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Kunde_Tlf_button.ForeColor = System.Drawing.Color.Black;
-            this.Kunde_Tlf_button.Location = new System.Drawing.Point(69, 11);
+            this.Kunde_Tlf_button.Location = new System.Drawing.Point(68, 10);
             this.Kunde_Tlf_button.Name = "Kunde_Tlf_button";
             this.Kunde_Tlf_button.Size = new System.Drawing.Size(38, 40);
             this.Kunde_Tlf_button.TabIndex = 29;
@@ -511,16 +504,17 @@
             // show_all_button
             // 
             this.show_all_button.BackColor = System.Drawing.Color.Transparent;
-            this.show_all_button.BackgroundImage = global::View_GUI.Properties.Resources.Documents_icon3;
-            this.show_all_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.show_all_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.show_all_button.FlatAppearance.BorderSize = 0;
             this.show_all_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.show_all_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
             this.show_all_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.show_all_button.ForeColor = System.Drawing.Color.Black;
-            this.show_all_button.Location = new System.Drawing.Point(23, 13);
+            this.show_all_button.Image = global::View_GUI.Properties.Resources.Documents_icon7;
+            this.show_all_button.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.show_all_button.Location = new System.Drawing.Point(22, 10);
             this.show_all_button.Name = "show_all_button";
-            this.show_all_button.Size = new System.Drawing.Size(31, 35);
+            this.show_all_button.Size = new System.Drawing.Size(40, 40);
             this.show_all_button.TabIndex = 16;
             this.show_all_button.UseVisualStyleBackColor = false;
             this.show_all_button.Click += new System.EventHandler(this.show_all_button_Click);
@@ -680,7 +674,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1333, 700);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.datagridviewBackground_panel);
             this.Controls.Add(this.top_Menu_background_panel);
             this.Controls.Add(this.backPanel_Textboxes_panel);
@@ -698,13 +691,13 @@
             this.background_textboxes_top_panel.PerformLayout();
             this.datagridviewBackground_panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Kunde_dataGridView)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
+            this.background_DGV_Search_panel.ResumeLayout(false);
+            this.background_DGV_Search_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.search_Datagridview_pictureBox)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.background_DGV_panel1.ResumeLayout(false);
+            this.background_DGV_panel4.ResumeLayout(false);
+            this.background_DGV_panel3.ResumeLayout(false);
+            this.background_DGV_panel2.ResumeLayout(false);
             this.top_Menu_background_panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -749,11 +742,10 @@
         private System.Windows.Forms.Button reset_Search_Textbox_button;
         private System.Windows.Forms.Button Kunde_Tlf_button;
         private System.Windows.Forms.Button mark_current_row_button;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel background_DGV_panel2;
+        private System.Windows.Forms.Panel background_DGV_panel3;
+        private System.Windows.Forms.Panel background_DGV_panel4;
+        private System.Windows.Forms.Panel background_DGV_panel1;
+        private System.Windows.Forms.Panel background_DGV_Search_panel;
     }
 }

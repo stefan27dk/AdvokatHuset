@@ -22,6 +22,8 @@ namespace View_GUI
 
     public partial class Main_Form1 : Form
     {
+        // Local Folder
+        string LocalFolderPath = "C:\\";
 
         //Forms--::START::
         Sager_Form2 SagerForm2 = new Sager_Form2();  //Form2
@@ -268,8 +270,8 @@ namespace View_GUI
             // Open Local Folder --- Main Method
           private void OpenLocalFolder()
           {
-            screenshot = new Screenshot();
-            Process.Start($@"{screenshot.ScreenshotSavePath}"); // Opens Default App - Directory with Screenshots, Pdf etc.
+             
+            Process.Start(LocalFolderPath); // Opens Default App - Directory with Screenshots, Pdf etc.
             SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\recycle.wav");
             simpleSound.Play();
           }

@@ -139,23 +139,17 @@
   <data name="win7_ico_shell32_dll-260" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\win7_ico_shell32_dll-260.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sign-up-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sign-up-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="images (1) (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images (1) (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="11111111111" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\11111111111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Paint-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Paint-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Phone-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Phone-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Untitled2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Untitled2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bell-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bell-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Paint-icon (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Paint-icon (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,6 +223,9 @@
   <data name="libreoffice-writer-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\libreoffice-writer-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Untitled (2)4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Untitled (2)4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Open-folder-add-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Open-folder-add-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -250,6 +247,9 @@
   <data name="Documents-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Documents-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="HoverDel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HoverDel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Untitled (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Untitled (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -265,23 +265,23 @@
   <data name="win7_ico_shell32_dll-131" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\win7_ico_shell32_dll-131.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Untitled (4)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Untitled (4)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Untitled (3)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Untitled (3)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="navigate-left-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\navigate-left-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Untitled (2)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Untitled (2)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Navigate-right-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Navigate-right-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Start-Menu-Search-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Start-Menu-Search-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="people-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\people-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pencil-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pencil-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Office-Customer-Male-Light-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Office-Customer-Male-Light-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="azael-ba4ea-001" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\azael-ba4ea-001.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -294,9 +294,6 @@
   </data>
   <data name="camera-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\camera-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="application-edit-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\application-edit-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DGV-Panel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DGV-Panel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -349,6 +346,9 @@
   <data name="App-klickety-game-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\App-klickety-game-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Search-Back 6-Panel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Search-Back 6-Panel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Untitled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Untitled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -357,6 +357,9 @@
   </data>
   <data name="Apps-utilities-terminal-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Apps-utilities-terminal-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Office-Customer-Male-Light-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Office-Customer-Male-Light-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="vw-beetle-icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\vw-beetle-icon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -394,23 +397,23 @@
   <data name="microphone-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\microphone-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Untitled1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Untitled1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Show Kunde Docv1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Show Kunde Docv1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Groups-Meeting-Light-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Groups-Meeting-Light-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="App-klickety-game-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\App-klickety-game-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="addressbook-add-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\addressbook-add-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Documents-icon3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Documents-icon3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Apps-preferences-desktop-printer-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Apps-preferences-desktop-printer-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Document-Add-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Document-Add-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Places-folder-yellow-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Places-folder-yellow-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="folder-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\folder-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -442,6 +445,9 @@
   <data name="Back Panel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Back Panel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Document Show Kunder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Document Show Kunder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Back-Panel- black-Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Back-Panel- black-Search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -463,17 +469,14 @@
   <data name="navigate-left-icon (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\navigate-left-icon (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Office-Customer-Male-Light-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Office-Customer-Male-Light-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="application-edit-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\application-edit-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="App-world-clock-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\App-world-clock-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="win7_ico_shell32_dll-154" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\win7_ico_shell32_dll-154.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Untitled (2)6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Untitled (2)6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="win7_ico_shell32_dll-269" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\win7_ico_shell32_dll-269.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -490,8 +493,8 @@
   <data name="Untitled (2)3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Untitled (2)3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="minimize" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minimize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="application-edit-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\application-edit-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="hnet.com-image" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hnet.com-image.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -514,6 +517,9 @@
   <data name="win7_ico_shell32_dll-080" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\win7_ico_shell32_dll-080.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="170796_button_256x256 (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\170796_button_256x256 (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Notes-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Notes-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -535,11 +541,17 @@
   <data name="Untitled (5)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Untitled (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="date-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\date-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Color-Meter-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Color-Meter-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="name-card-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\name-card-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Webpage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Webpage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="170796_button_256x256 (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\170796_button_256x256 (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -562,6 +574,9 @@
   <data name="Control-Panel-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Control-Panel-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="At-Mail-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\At-Mail-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="win7_ico_shell32_dll-0041" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\win7_ico_shell32_dll-0041.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -571,11 +586,8 @@
   <data name="Untitled (2)5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Untitled (2)5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Untitled (3)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Untitled (3)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Places-folder-orange-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Places-folder-orange-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Untitled (4)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Untitled (4)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Print_PDF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Print_PDF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -583,11 +595,17 @@
   <data name="win7_ico_shell32_dll-159" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\win7_ico_shell32_dll-159.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Apps-konsole-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Apps-konsole-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Actions-go-previous-view-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Actions-go-previous-view-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="date-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\date-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Zoom-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Zoom-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Navigate-right-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Navigate-right-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Paint-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Paint-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -604,26 +622,32 @@
   <data name="app-drawer-icon (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\app-drawer-icon (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Places-folder-yellow-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Places-folder-yellow-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Documents-icon4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Documents-icon4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="170796_button_256x256 (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\170796_button_256x256 (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Places-folder-orange-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Places-folder-orange-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="42608-stopwatch-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\42608-stopwatch-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Untitled (2)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Untitled (2)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Folders-OS-Documents-Library-Metro-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Folders-OS-Documents-Library-Metro-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Documents-icon6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Documents-icon6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Actions-cut-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Actions-cut-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Start-Menu-Search-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Start-Menu-Search-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Untitled1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Untitled1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="question-type-one-correct-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\question-type-one-correct-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Documents-icon3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Documents-icon3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Paint-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Paint-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="app-drawer-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\app-drawer-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -634,17 +658,20 @@
   <data name="glossy-3d-blue-orbs2-075-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\glossy-3d-blue-orbs2-075-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Office-Customer-Male-Light-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Office-Customer-Male-Light-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Show Kunde Docv11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Show Kunde Docv11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Calculator-3-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Calculator-3-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Webpage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Webpage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sign-up-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sign-up-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="untitled (7)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\untitled (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="camera-2-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\camera-2-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="app-drawer-icon (5)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\app-drawer-icon (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -670,11 +697,11 @@
   <data name="170796_button_256x256 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\170796_button_256x256 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Untitled (2)4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Untitled (2)4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="App-klickety-game-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\App-klickety-game-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="application-edit-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\application-edit-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Documents-icon7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Documents-icon7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Untitled (1)2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Untitled (1)2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -709,23 +736,23 @@
   <data name="Categories-preferences-system-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Categories-preferences-system-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="minimize" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minimize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="win7_ico_shell32_dll-071" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\win7_ico_shell32_dll-071.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="preferences-desktop-color-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\preferences-desktop-color-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="settings-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\settings-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="camera-2-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\camera-2-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="42608-stopwatch-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\42608-stopwatch-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="win7_ico_shell32_dll-022" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\win7_ico_shell32_dll-022.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bell-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bell-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Document-Add-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Document-Add-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="addressbook-edit-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\addressbook-edit-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -739,11 +766,14 @@
   <data name="Camera-icon (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Camera-icon (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Documents-icon5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Documents-icon5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="170796_button_256x256" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\170796_button_256x256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Folders-OS-Documents-Library-Metro-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Folders-OS-Documents-Library-Metro-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="preferences-desktop-color-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\preferences-desktop-color-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="win7_ico_shell32_dll-265" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\win7_ico_shell32_dll-265.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -754,25 +784,22 @@
   <data name="Start-Menu-Search-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Start-Menu-Search-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Actions-edit-clear-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Actions-edit-clear-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Actions-home-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Actions-home-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Actions-document-save-icon (1)2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Actions-document-save-icon (1)2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Zoom-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Zoom-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Actions-edit-clear-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Actions-edit-clear-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Apps-konsole-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Apps-konsole-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Untitled (2)6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Untitled (2)6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="At-Mail-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\At-Mail-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="images (1) (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images (1) (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Search-Back 6-Panel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Search-Back 6-Panel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Hover Del 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hover Del 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
