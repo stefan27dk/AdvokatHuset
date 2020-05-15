@@ -986,5 +986,8 @@
   <ItemGroup>
     <None Include="Resources\Hover Del 3.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Top_Background_menu.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

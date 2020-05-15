@@ -215,7 +215,7 @@
             this.datagridviewBackground_panel.Controls.Add(this.background_DGV_panel3);
             this.datagridviewBackground_panel.Controls.Add(this.background_DGV_panel2);
             this.datagridviewBackground_panel.Controls.Add(this.Kunde_dataGridView);
-            this.datagridviewBackground_panel.Location = new System.Drawing.Point(146, 170);
+            this.datagridviewBackground_panel.Location = new System.Drawing.Point(148, 170);
             this.datagridviewBackground_panel.Name = "datagridviewBackground_panel";
             this.datagridviewBackground_panel.Size = new System.Drawing.Size(1080, 488);
             this.datagridviewBackground_panel.TabIndex = 13;
@@ -318,7 +318,7 @@
             this.background_DGV_panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.background_DGV_panel1.Controls.Add(this.undo_button);
             this.background_DGV_panel1.Controls.Add(this.delete_button);
-            this.background_DGV_panel1.Location = new System.Drawing.Point(442, -2);
+            this.background_DGV_panel1.Location = new System.Drawing.Point(444, -2);
             this.background_DGV_panel1.Name = "background_DGV_panel1";
             this.background_DGV_panel1.Size = new System.Drawing.Size(120, 58);
             this.background_DGV_panel1.TabIndex = 32;
@@ -433,7 +433,7 @@
             this.background_DGV_panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.background_DGV_panel3.Controls.Add(this.change_DatagridView_Color_button);
             this.background_DGV_panel3.Controls.Add(this.mark_current_row_button);
-            this.background_DGV_panel3.Location = new System.Drawing.Point(731, -2);
+            this.background_DGV_panel3.Location = new System.Drawing.Point(733, -2);
             this.background_DGV_panel3.Name = "background_DGV_panel3";
             this.background_DGV_panel3.Size = new System.Drawing.Size(125, 60);
             this.background_DGV_panel3.TabIndex = 30;
@@ -523,13 +523,13 @@
             // 
             this.top_Menu_background_panel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.top_Menu_background_panel.BackColor = System.Drawing.Color.Transparent;
-            this.top_Menu_background_panel.BackgroundImage = global::View_GUI.Properties.Resources.Untitled__3_;
+            this.top_Menu_background_panel.BackgroundImage = global::View_GUI.Properties.Resources.Top_Background_menu;
             this.top_Menu_background_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.top_Menu_background_panel.Controls.Add(this.vis_rediger_kunder_button);
             this.top_Menu_background_panel.Controls.Add(this.opret_kunde_button);
-            this.top_Menu_background_panel.Location = new System.Drawing.Point(575, 83);
+            this.top_Menu_background_panel.Location = new System.Drawing.Point(595, 69);
             this.top_Menu_background_panel.Name = "top_Menu_background_panel";
-            this.top_Menu_background_panel.Size = new System.Drawing.Size(243, 82);
+            this.top_Menu_background_panel.Size = new System.Drawing.Size(243, 91);
             this.top_Menu_background_panel.TabIndex = 12;
             // 
             // vis_rediger_kunder_button
@@ -543,9 +543,9 @@
             this.vis_rediger_kunder_button.Font = new System.Drawing.Font("OpenSymbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.vis_rediger_kunder_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.vis_rediger_kunder_button.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.vis_rediger_kunder_button.Location = new System.Drawing.Point(121, 6);
+            this.vis_rediger_kunder_button.Location = new System.Drawing.Point(125, 11);
             this.vis_rediger_kunder_button.Name = "vis_rediger_kunder_button";
-            this.vis_rediger_kunder_button.Size = new System.Drawing.Size(94, 68);
+            this.vis_rediger_kunder_button.Size = new System.Drawing.Size(95, 68);
             this.vis_rediger_kunder_button.TabIndex = 1;
             this.vis_rediger_kunder_button.Text = "Vis / Rediger";
             this.vis_rediger_kunder_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -554,7 +554,6 @@
             // 
             // opret_kunde_button
             // 
-            this.opret_kunde_button.BackgroundImage = global::View_GUI.Properties.Resources.sign_up_icon1;
             this.opret_kunde_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.opret_kunde_button.FlatAppearance.BorderSize = 0;
             this.opret_kunde_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
@@ -562,10 +561,11 @@
             this.opret_kunde_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.opret_kunde_button.Font = new System.Drawing.Font("OpenSymbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.opret_kunde_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.opret_kunde_button.Image = global::View_GUI.Properties.Resources.sign_up_icon1;
             this.opret_kunde_button.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.opret_kunde_button.Location = new System.Drawing.Point(42, -7);
+            this.opret_kunde_button.Location = new System.Drawing.Point(25, 11);
             this.opret_kunde_button.Name = "opret_kunde_button";
-            this.opret_kunde_button.Size = new System.Drawing.Size(50, 80);
+            this.opret_kunde_button.Size = new System.Drawing.Size(95, 68);
             this.opret_kunde_button.TabIndex = 0;
             this.opret_kunde_button.Text = "Opret";
             this.opret_kunde_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -672,7 +672,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(1333, 700);
             this.Controls.Add(this.datagridviewBackground_panel);
             this.Controls.Add(this.top_Menu_background_panel);

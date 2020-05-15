@@ -86,11 +86,24 @@ namespace View_GUI
         // Load
         private void Kunder_Form9_Load(object sender, EventArgs e)
         {
-            Black_DatagridviewStyle();
+            DatagridviewSetting_Style();
             LoadKunder();// Show all Kunder "Populating the datagridview with Curtomers "Kunder""
             Search_ComboBox_Options_Content(); // Populate Search Combobox
             Search_ComboBox_Column_Content(); // Populate Column Search Combobox
+          
+        }
 
+
+        // Datagridview Settings - Style - Setting on Load
+        private void DatagridviewSetting_Style()
+        {
+
+            Black_DatagridviewStyle();
+            // Datagridview DOUBLE BUFFERING // Double Buffer is Used so the Datagridview dont lagg on resize
+            //Set Double buffering on the Grid using reflection and the bindingflags enum.
+            typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
+            BindingFlags.Instance | BindingFlags.SetProperty, null,
+            Kunde_dataGridView, new object[] { true });
         }
 
 
