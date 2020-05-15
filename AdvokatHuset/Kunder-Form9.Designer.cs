@@ -374,7 +374,9 @@
             // 
             // search_options_comboBox
             // 
+            this.search_options_comboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.search_options_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.search_options_comboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.search_options_comboBox.FormattingEnabled = true;
             this.search_options_comboBox.Location = new System.Drawing.Point(48, 16);
             this.search_options_comboBox.Name = "search_options_comboBox";
@@ -384,6 +386,7 @@
             // 
             // Search_Column_comboBox
             // 
+            this.Search_Column_comboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.Search_Column_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Search_Column_comboBox.FormattingEnabled = true;
             this.Search_Column_comboBox.Location = new System.Drawing.Point(125, 16);

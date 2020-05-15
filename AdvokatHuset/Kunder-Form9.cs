@@ -1228,6 +1228,11 @@ namespace View_GUI
             Process.Start(Last_File.FullName); // Open PDF,Png etc.
             Process.Start("explorer.exe", selectFile); // Selects the file in the folder
 
+
+
+            // SOUND
+            SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\recycle.wav");
+            simpleSound.Play();
         }
 
 
@@ -1387,8 +1392,7 @@ namespace View_GUI
             bitmapScreenshot.Save(LocalFolderPath + "Kunde_Snapshot  " + DateTime.Now.ToString("dd-MM-yyyy  HH-mm-ss") + ".png");
             Clipboard.SetDataObject(bitmapScreenshot);  // Copy Image to Clipboard Also
 
-
-
+        
         }
 
 
