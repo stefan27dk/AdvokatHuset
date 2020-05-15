@@ -133,7 +133,7 @@
             this.backPanel_Textboxes_panel.Controls.Add(this.kunder_surname_textBox);
             this.backPanel_Textboxes_panel.Controls.Add(this.name_label);
             this.backPanel_Textboxes_panel.Controls.Add(this.kunder_name_textBox);
-            this.backPanel_Textboxes_panel.Location = new System.Drawing.Point(500, 170);
+            this.backPanel_Textboxes_panel.Location = new System.Drawing.Point(494, 170);
             this.backPanel_Textboxes_panel.Name = "backPanel_Textboxes_panel";
             this.backPanel_Textboxes_panel.Size = new System.Drawing.Size(394, 388);
             this.backPanel_Textboxes_panel.TabIndex = 11;
@@ -215,7 +215,7 @@
             this.datagridviewBackground_panel.Controls.Add(this.background_DGV_panel3);
             this.datagridviewBackground_panel.Controls.Add(this.background_DGV_panel2);
             this.datagridviewBackground_panel.Controls.Add(this.Kunde_dataGridView);
-            this.datagridviewBackground_panel.Location = new System.Drawing.Point(148, 170);
+            this.datagridviewBackground_panel.Location = new System.Drawing.Point(124, 170);
             this.datagridviewBackground_panel.Name = "datagridviewBackground_panel";
             this.datagridviewBackground_panel.Size = new System.Drawing.Size(1080, 488);
             this.datagridviewBackground_panel.TabIndex = 13;
@@ -528,7 +528,7 @@
             this.top_Menu_background_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.top_Menu_background_panel.Controls.Add(this.vis_rediger_kunder_button);
             this.top_Menu_background_panel.Controls.Add(this.opret_kunde_button);
-            this.top_Menu_background_panel.Location = new System.Drawing.Point(595, 69);
+            this.top_Menu_background_panel.Location = new System.Drawing.Point(571, 69);
             this.top_Menu_background_panel.Name = "top_Menu_background_panel";
             this.top_Menu_background_panel.Size = new System.Drawing.Size(243, 91);
             this.top_Menu_background_panel.TabIndex = 0;
