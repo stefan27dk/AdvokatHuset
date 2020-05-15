@@ -86,7 +86,7 @@ namespace View_GUI
         // Load
         private void Kunder_Form9_Load(object sender, EventArgs e)
         {
-            DatagridviewSetting_Style();
+            DatagridviewSettings_Style();
             LoadKunder();// Show all Kunder "Populating the datagridview with Curtomers "Kunder""
             Search_ComboBox_Options_Content(); // Populate Search Combobox
             Search_ComboBox_Column_Content(); // Populate Column Search Combobox
@@ -94,8 +94,13 @@ namespace View_GUI
         }
 
 
+
+
+
+        //-----------SETTINGS------------::START::--------------------------------------------------------------------------------------------
+
         // Datagridview Settings - Style - Setting on Load
-        private void DatagridviewSetting_Style()
+        private void DatagridviewSettings_Style()
         {
 
             Black_DatagridviewStyle();
@@ -105,6 +110,7 @@ namespace View_GUI
             BindingFlags.Instance | BindingFlags.SetProperty, null,
             Kunde_dataGridView, new object[] { true });
         }
+
 
 
         // Datagridview Color Style
@@ -138,6 +144,16 @@ namespace View_GUI
             this.Kunde_dataGridView.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font(FontFamily.GenericSerif, 9, System.Drawing.FontStyle.Bold); // FONT    //, System.Drawing.GraphicsUnit.Point
 
         }
+
+
+        //-----------SETTINGS------------::END::--------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
 
 
         // Create Kunde
@@ -219,14 +235,7 @@ namespace View_GUI
         // Key Events------::END::----------------------------------------------------------------------
 
 
-
-
-
-
-
-
-
-
+       
         // Validate ALL Inputs
         private void ValidateALL()
         {
@@ -364,15 +373,28 @@ namespace View_GUI
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+        //-----------------CREATE---TEXTBOXES-SETTINGS---------::START::----------------------------------------------
+
         // Reset Textbox Color
         private void TextboxesResetColor()
         {
-            kunder_name_textBox.BackColor = Color.White;
-            kunder_surname_textBox.BackColor = Color.White;
-            kunder_tlf_textBox.BackColor = Color.White;
-            kunde_email_textBox.BackColor = Color.White;
-            kunder_zipcCode_textBox.BackColor = Color.White;
-            kunder_adr_textBox.BackColor = Color.White;
+            kunder_name_textBox.BackColor = Color.FromArgb(220, 243, 250);
+            kunder_surname_textBox.BackColor = Color.FromArgb(220, 243, 250);
+            kunder_tlf_textBox.BackColor = Color.FromArgb(220, 243, 250);
+            kunde_email_textBox.BackColor = Color.FromArgb(220, 243, 250);
+            kunder_zipcCode_textBox.BackColor = Color.FromArgb(220, 243, 250);
+            kunder_adr_textBox.BackColor = Color.FromArgb(220, 243, 250);
 
         }
 
@@ -419,6 +441,21 @@ namespace View_GUI
 
 
 
+        // Clear ALL -Textboxes - BUTTON
+        private void create_Clear_All_textboxes_button_Click(object sender, EventArgs e)
+        {
+            ClearTextboxes();
+            TextboxesResetColor();
+        }
+
+ 
+        //-----------------CREATE---TEXTBOXES-SETTINGS---------::END::----------------------------------------------
+
+
+
+
+
+
 
 
 
@@ -437,12 +474,7 @@ namespace View_GUI
 
 
 
-
-
-
-
-
-
+  
 
         // Opret Button
         private void opret_kunde_button_Click(object sender, EventArgs e)
@@ -458,6 +490,8 @@ namespace View_GUI
 
         
        
+
+
 
 
 
@@ -501,6 +535,14 @@ namespace View_GUI
 
 
 
+
+
+
+
+
+
+
+        //----------DELETE------------------::START::-------------------------------------------------------------------------------------- 
 
         // Delete Button
         private void delete_button_Click(object sender, EventArgs e)    
@@ -567,13 +609,10 @@ namespace View_GUI
         }
 
 
-      
 
 
 
-
-
-        // Undo  Button
+        // Undo  DELETE - Button
         private void undo_button_Click(object sender, EventArgs e)
         {
             //DataTable dtImage = Kunde_Dataset.Tables[0];
@@ -596,9 +635,14 @@ namespace View_GUI
 
         }
 
+        //----------DELETE------------------::END::-------------------------------------------------------------------------------------- 
 
 
-     
+
+
+
+
+
 
 
 
@@ -619,7 +663,9 @@ namespace View_GUI
            
         }
 
-        // Load Kunde_Tlf
+
+
+        // Show_Kunde-Tlf - Load Kunde_Tlf - Main Method
         private void LoadKunde_Tlf()
         {
             string Kunde_Tlf_Kunde_navn_Select = "Select Kunde_Tlf.*, Kunde.Kunde_Fornavn, Kunde.Kunde_Efternavn From Kunde_Tlf Inner Join Kunde ON Kunde_Tlf.Kunde_ID = Kunde.Kunde_ID;";
@@ -643,25 +689,13 @@ namespace View_GUI
 
 
 
-        // Show All Customers "Kunder" - Button
-        private void show_all_button_Click(object sender, EventArgs e)
-        {
-            LoadKunder();
-
-
-            // ResetSearch_Textbox Color
-            if(search_textBox.Text.Length > 0)
-            {
-                search_textBox.BackColor = Color.FromArgb(255, 192, 192);
-            }
-
-
-        }
 
 
 
 
 
+
+         //----SAVE-UPDATE--DATAGRIDVIEW-------::START::---------------------------------------------------------------------------------- 
 
         // Save Cutomers "KUNDER"
         private void SaveDataGridView()
@@ -687,14 +721,7 @@ namespace View_GUI
         }
 
            
-
-
-
-
-
-
-
-
+     
 
         // UPDATE - Get row to Compare on Row enter "Used to determine if the row have been changed so we know when to edit "Save the changes""
         private void Kunde_dataGridView_RowEnter(object sender, DataGridViewCellEventArgs e)
@@ -728,21 +755,8 @@ namespace View_GUI
 
 
 
-        // Reset Row Selection "For Save"
-        private void Kunde_dataGridView_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            Selected_Row_For_Compare();
-        }
 
-
-
-
-
-
-
-
-
-        // UPDATE "SAVE" - On ROW LEAVE AFTER VALIDATION  "Save"
+        // Row Leave - "ON - Validattion" - UPDATE "SAVE" - On ROW LEAVE AFTER VALIDATION  "Save"
         private void Kunde_dataGridView_RowValidated(object sender, DataGridViewCellEventArgs e)
         {
             bool edited = false; // Check if the Row was edited
@@ -751,32 +765,32 @@ namespace View_GUI
             {
 
 
-                  for (int j = 0; j < Kunde_dataGridView.SelectedRows[0].Cells.Count; j++)
-                  {
-                      if (Kunde_dataGridView.SelectedRows[0].Cells[j].Value != null && !Kunde_dataGridView.SelectedRows[0].Cells[j].Value.Equals(enterRow.Cells[j].Value))
-                      {
-                          edited = true;
-                          break;
-                      }
-                  }
-                
-                
-                  if (edited == true)
-                  {
-                      DialogResult saveDialog = MessageBox.Show("Are you sure that you want ot save the changes?", "Save", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                      if (saveDialog == DialogResult.Yes)
-                      {
-                          SaveDataGridView(); // Save
-                          RefreshDatagridview(); // Refresh
-                          //MessageBox.Show("Changes Are Saved", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                      }
+                for (int j = 0; j < Kunde_dataGridView.SelectedRows[0].Cells.Count; j++)
+                {
+                    if (Kunde_dataGridView.SelectedRows[0].Cells[j].Value != null && !Kunde_dataGridView.SelectedRows[0].Cells[j].Value.Equals(enterRow.Cells[j].Value))
+                    {
+                        edited = true;
+                        break;
+                    }
+                }
 
-                      else if (saveDialog == DialogResult.No) // Refresh if DialogResult == No
-                      {
+
+                if (edited == true)
+                {
+                    DialogResult saveDialog = MessageBox.Show("Are you sure that you want ot save the changes?", "Save", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    if (saveDialog == DialogResult.Yes)
+                    {
+                        SaveDataGridView(); // Save
+                        RefreshDatagridview(); // Refresh
+                                               //MessageBox.Show("Changes Are Saved", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                    else if (saveDialog == DialogResult.No) // Refresh if DialogResult == No
+                    {
                         RefreshDatagridview(); // Refresh
                     }
 
-                  }
+                }
 
 
 
@@ -784,6 +798,18 @@ namespace View_GUI
         }
 
 
+
+
+
+
+
+        // Reset Row Selection "For Save"
+        private void Kunde_dataGridView_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            Selected_Row_For_Compare();
+        }
+
+      
 
         // RefreshDatagridview "After Update OR Cancelation"
         private void RefreshDatagridview()
@@ -797,51 +823,22 @@ namespace View_GUI
                 LoadKunde_Tlf();
             }
         }
-    
 
 
-
-        // Datagridview Screenshot - Main Mehtod
-        private void DatagridviewScreenshot()
-        {
-          
-
-            int oldHeight = Kunde_dataGridView.Height;
-            Kunde_dataGridView.Height = Kunde_dataGridView.RowCount * Kunde_dataGridView.RowTemplate.Height;
+        //----SAVE-UPDATE--DATAGRIDVIEW-------::END::--------------------------------------------------------------------------------------- 
 
 
 
 
-            // Bitmap
-            Bitmap bitmapScreenshot = new Bitmap(this.Kunde_dataGridView.Width, this.Kunde_dataGridView.Height);
 
-            // Draw to the bitmap
-            Kunde_dataGridView.DrawToBitmap(bitmapScreenshot, new System.Drawing.Rectangle(0, 0, this.Kunde_dataGridView.Width, this.Kunde_dataGridView.Height));
 
-            // Reset the height
-            Kunde_dataGridView.Height = oldHeight;
 
-            // Save bitmap
-            bitmapScreenshot.Save(LocalFolderPath+"Kunde_Snapshot  "+DateTime.Now.ToString("dd-MM-yyyy  HH-mm-ss")+".png");
-            Clipboard.SetDataObject(bitmapScreenshot);  // Copy Image to Clipboard Also
+
+
+
 
       
 
-        }
-
-   
-
-
-
-
-        // Datagridview Screnshot - Button
-        private void screenshot_datagridview_button_Click(object sender, EventArgs e)
-        {
-            White_DatagridviewStyle(); // Datagridview White Color
-            DatagridviewScreenshot(); // Screenshot
-            Black_DatagridviewStyle(); // Datagridview Color Style
-            OpenLastFile();
-        }
 
 
 
@@ -849,12 +846,34 @@ namespace View_GUI
 
 
 
+
+
+        //-------------BUTTONS-Datagridview--Menu-------::START::----------------------------------------------------------------------------
 
         // Local Folder
         private void local_folder_button_Click(object sender, EventArgs e)
         {
             Open_Local_Folder();
         }
+
+
+
+
+        // Show All Customers "Kunder" - Button
+        private void show_all_button_Click(object sender, EventArgs e)
+        {
+            LoadKunder();
+
+
+            // ResetSearch_Textbox Color
+            if (search_textBox.Text.Length > 0)
+            {
+                search_textBox.BackColor = Color.FromArgb(255, 192, 192);
+            }
+
+
+        }
+
 
 
 
@@ -865,6 +884,7 @@ namespace View_GUI
             SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\recycle.wav");
             simpleSound.Play();
         }
+
 
 
 
@@ -883,9 +903,7 @@ namespace View_GUI
 
 
 
-
-
-
+        //Button
         // Clear Search_Text-Box "RESET" - CHANGE IMAGE ON HOVER
         private void reset_Search_Textbox_button_MouseEnter(object sender, EventArgs e)
         {
@@ -895,12 +913,18 @@ namespace View_GUI
 
 
 
-
+         //Button
         // Clear Search_Text-Box "RESET" - CHANGE IMAGE On Leave - Reset Image
         private void reset_Search_Textbox_button_MouseLeave(object sender, EventArgs e)
         {
             reset_Search_Textbox_button.BackgroundImage = Properties.Resources.Untitled2;
         }
+
+        //-------------BUTTONS-Datagridview--Menu-------::END::--------------------------------------------------------------------------
+
+
+
+
 
 
 
@@ -1115,17 +1139,8 @@ namespace View_GUI
 
 
 
-   
 
-
-
-
-
-
-
-
-
-        //--------------Datagridview - Change - Color------------::START:------------------------------------------------
+        //--------------Datagridview - Change - Color------------::START:--------------------------------------------------------------
         // Datagridview Change Color Button
         private void change_DatagridView_Color_button_Click(object sender, EventArgs e)
         {
@@ -1164,7 +1179,7 @@ namespace View_GUI
             }
 
         }
-          //--------------Datagridview - Change - Color------------::END:------------------------------------------------
+        //--------------Datagridview - Change - Color------------::END:----------------------------------------------------------------
 
 
 
@@ -1183,7 +1198,7 @@ namespace View_GUI
 
 
 
-        //------------PDF--PRINT------------------::START::-------------------------------------------------------------------------------------------------------------------
+        //------------PDF--PRINT------------------::START::----------------------------------------------------------------------------
         // Print Datagridview
         private void print_button_Click(object sender, EventArgs e)
         {
@@ -1328,7 +1343,9 @@ namespace View_GUI
 
         }
 
-        //------------PDF--PRINT------------------::END::--------------------------------------------------------------------------------------------------------------------
+
+
+        //------------PDF--PRINT------------------::END::-------------------------------------------------------------------------------
 
 
 
@@ -1338,6 +1355,127 @@ namespace View_GUI
 
 
 
+
+
+
+
+
+
+        //-------Datagridview-Screenshot-----------------::START::---------------------------------------------------------------------- 
+
+        // Datagridview Screenshot - Main Mehtod
+        private void DatagridviewScreenshot()
+        {
+
+
+            int oldHeight = Kunde_dataGridView.Height;
+            Kunde_dataGridView.Height = Kunde_dataGridView.RowCount * Kunde_dataGridView.RowTemplate.Height;
+
+
+
+
+            // Bitmap
+            Bitmap bitmapScreenshot = new Bitmap(this.Kunde_dataGridView.Width, this.Kunde_dataGridView.Height);
+
+            // Draw to the bitmap
+            Kunde_dataGridView.DrawToBitmap(bitmapScreenshot, new System.Drawing.Rectangle(0, 0, this.Kunde_dataGridView.Width, this.Kunde_dataGridView.Height));
+
+            // Reset the height
+            Kunde_dataGridView.Height = oldHeight;
+
+            // Save bitmap
+            bitmapScreenshot.Save(LocalFolderPath + "Kunde_Snapshot  " + DateTime.Now.ToString("dd-MM-yyyy  HH-mm-ss") + ".png");
+            Clipboard.SetDataObject(bitmapScreenshot);  // Copy Image to Clipboard Also
+
+
+
+        }
+
+
+
+        // Datagridview Screnshot - Button
+        private void screenshot_datagridview_button_Click(object sender, EventArgs e)
+        {
+            White_DatagridviewStyle(); // Datagridview White Color
+            DatagridviewScreenshot(); // Screenshot
+            Black_DatagridviewStyle(); // Datagridview Color Style
+            OpenLastFile();
+        }
+
+
+        //-------Datagridview-Screenshot-----------------::END::------------------------------------------------------------------------ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //-------------CREATE-TEXTBOXES -- Reset Color on Typing-------------------::START:----------------------------------------------
+
+        // Name - Reset Color
+        private void kunder_name_textBox_TextChanged(object sender, EventArgs e)
+        {
+            kunder_name_textBox.BackColor = Color.FromArgb(220, 243, 250);
+        }
+
+
+
+
+
+        // Surname - Reset Color
+        private void kunder_surname_textBox_TextChanged(object sender, EventArgs e)
+        {
+            kunder_surname_textBox.BackColor = Color.FromArgb(220, 243, 250);
+        }
+
+
+
+
+
+        // Zip Code - Reset Background
+        private void kunder_zipcCode_textBox_TextChanged(object sender, EventArgs e)
+        {
+            kunder_zipcCode_textBox.BackColor = Color.FromArgb(220, 243, 250);
+        }
+
+
+
+
+        // Adress - Reset Background
+        private void kunder_adr_textBox_TextChanged(object sender, EventArgs e)
+        {
+            kunder_adr_textBox.BackColor = Color.FromArgb(220, 243, 250);
+        }
+
+
+
+
+        // Tlf - Reset Background
+        private void kunder_tlf_textBox_TextChanged(object sender, EventArgs e)
+        {
+            kunder_tlf_textBox.BackColor = Color.FromArgb(220, 243, 250);
+        }
+
+
+        // Email - Reset Background 
+        private void kunde_email_textBox_TextChanged(object sender, EventArgs e)
+        {
+            kunde_email_textBox.BackColor = Color.FromArgb(220, 243, 250);
+        }
+
+     
+
+        //-------------CREATE-TEXTBOXES -- Reset Color on Typing-------------------::END:--------------------------------------------------
 
 
 
