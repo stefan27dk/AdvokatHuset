@@ -231,7 +231,7 @@
             this.Kunde_dataGridView.Name = "Kunde_dataGridView";
             this.Kunde_dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Kunde_dataGridView.Size = new System.Drawing.Size(1064, 412);
-            this.Kunde_dataGridView.TabIndex = 22;
+            this.Kunde_dataGridView.TabIndex = 15;
             this.Kunde_dataGridView.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Kunde_dataGridView_ColumnHeaderMouseClick);
             this.Kunde_dataGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.Kunde_dataGridView_RowEnter);
             this.Kunde_dataGridView.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.Kunde_dataGridView_RowValidated);
@@ -249,7 +249,7 @@
             this.background_DGV_Search_panel.Location = new System.Drawing.Point(7, 5);
             this.background_DGV_Search_panel.Name = "background_DGV_Search_panel";
             this.background_DGV_Search_panel.Size = new System.Drawing.Size(420, 53);
-            this.background_DGV_Search_panel.TabIndex = 32;
+            this.background_DGV_Search_panel.TabIndex = 1;
             // 
             // search_textBox
             // 
@@ -257,7 +257,7 @@
             this.search_textBox.Location = new System.Drawing.Point(203, 17);
             this.search_textBox.Name = "search_textBox";
             this.search_textBox.Size = new System.Drawing.Size(154, 20);
-            this.search_textBox.TabIndex = 1;
+            this.search_textBox.TabIndex = 4;
             this.search_textBox.TextChanged += new System.EventHandler(this.search_textBox_TextChanged);
             this.search_textBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.search_textBox_MouseDown);
             // 
@@ -268,7 +268,7 @@
             this.search_options_comboBox.Location = new System.Drawing.Point(48, 16);
             this.search_options_comboBox.Name = "search_options_comboBox";
             this.search_options_comboBox.Size = new System.Drawing.Size(71, 21);
-            this.search_options_comboBox.TabIndex = 14;
+            this.search_options_comboBox.TabIndex = 2;
             this.search_options_comboBox.SelectedIndexChanged += new System.EventHandler(this.search_options_comboBox_SelectedIndexChanged);
             // 
             // Search_Column_comboBox
@@ -278,7 +278,7 @@
             this.Search_Column_comboBox.Location = new System.Drawing.Point(125, 16);
             this.Search_Column_comboBox.Name = "Search_Column_comboBox";
             this.Search_Column_comboBox.Size = new System.Drawing.Size(71, 21);
-            this.Search_Column_comboBox.TabIndex = 25;
+            this.Search_Column_comboBox.TabIndex = 3;
             this.Search_Column_comboBox.SelectedIndexChanged += new System.EventHandler(this.Search_Column_comboBox_SelectedIndexChanged);
             // 
             // reset_Search_Textbox_button
@@ -294,7 +294,7 @@
             this.reset_Search_Textbox_button.Location = new System.Drawing.Point(363, 12);
             this.reset_Search_Textbox_button.Name = "reset_Search_Textbox_button";
             this.reset_Search_Textbox_button.Size = new System.Drawing.Size(43, 30);
-            this.reset_Search_Textbox_button.TabIndex = 28;
+            this.reset_Search_Textbox_button.TabIndex = 5;
             this.reset_Search_Textbox_button.UseVisualStyleBackColor = false;
             this.reset_Search_Textbox_button.Click += new System.EventHandler(this.reset_Search_Textbox_button_Click);
             this.reset_Search_Textbox_button.MouseEnter += new System.EventHandler(this.reset_Search_Textbox_button_MouseEnter);
@@ -321,7 +321,8 @@
             this.background_DGV_panel1.Location = new System.Drawing.Point(444, -2);
             this.background_DGV_panel1.Name = "background_DGV_panel1";
             this.background_DGV_panel1.Size = new System.Drawing.Size(120, 58);
-            this.background_DGV_panel1.TabIndex = 32;
+            this.background_DGV_panel1.TabIndex = 2;
+            this.background_DGV_panel1.TabStop = true;
             // 
             // undo_button
             // 
@@ -337,7 +338,7 @@
             this.undo_button.Location = new System.Drawing.Point(19, 12);
             this.undo_button.Name = "undo_button";
             this.undo_button.Size = new System.Drawing.Size(38, 33);
-            this.undo_button.TabIndex = 17;
+            this.undo_button.TabIndex = 6;
             this.undo_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.undo_button.UseVisualStyleBackColor = false;
             this.undo_button.Click += new System.EventHandler(this.undo_button_Click);
@@ -355,7 +356,7 @@
             this.delete_button.Location = new System.Drawing.Point(63, 13);
             this.delete_button.Name = "delete_button";
             this.delete_button.Size = new System.Drawing.Size(38, 33);
-            this.delete_button.TabIndex = 20;
+            this.delete_button.TabIndex = 7;
             this.delete_button.UseVisualStyleBackColor = false;
             this.delete_button.Click += new System.EventHandler(this.delete_button_Click);
             // 
@@ -370,7 +371,7 @@
             this.background_DGV_panel4.Location = new System.Drawing.Point(881, -2);
             this.background_DGV_panel4.Name = "background_DGV_panel4";
             this.background_DGV_panel4.Size = new System.Drawing.Size(190, 60);
-            this.background_DGV_panel4.TabIndex = 32;
+            this.background_DGV_panel4.TabIndex = 5;
             // 
             // local_folder_button
             // 
@@ -388,7 +389,7 @@
             this.local_folder_button.Margin = new System.Windows.Forms.Padding(0);
             this.local_folder_button.Name = "local_folder_button";
             this.local_folder_button.Size = new System.Drawing.Size(40, 38);
-            this.local_folder_button.TabIndex = 24;
+            this.local_folder_button.TabIndex = 12;
             this.local_folder_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.local_folder_button.UseVisualStyleBackColor = false;
             this.local_folder_button.Click += new System.EventHandler(this.local_folder_button_Click);
@@ -406,7 +407,7 @@
             this.screenshot_datagridview_button.Location = new System.Drawing.Point(74, 12);
             this.screenshot_datagridview_button.Name = "screenshot_datagridview_button";
             this.screenshot_datagridview_button.Size = new System.Drawing.Size(40, 38);
-            this.screenshot_datagridview_button.TabIndex = 19;
+            this.screenshot_datagridview_button.TabIndex = 13;
             this.screenshot_datagridview_button.UseVisualStyleBackColor = false;
             this.screenshot_datagridview_button.Click += new System.EventHandler(this.screenshot_datagridview_button_Click);
             // 
@@ -422,7 +423,7 @@
             this.print_button.Location = new System.Drawing.Point(122, 12);
             this.print_button.Name = "print_button";
             this.print_button.Size = new System.Drawing.Size(40, 38);
-            this.print_button.TabIndex = 21;
+            this.print_button.TabIndex = 14;
             this.print_button.UseVisualStyleBackColor = false;
             this.print_button.Click += new System.EventHandler(this.print_button_Click);
             // 
@@ -436,7 +437,7 @@
             this.background_DGV_panel3.Location = new System.Drawing.Point(733, -2);
             this.background_DGV_panel3.Name = "background_DGV_panel3";
             this.background_DGV_panel3.Size = new System.Drawing.Size(125, 60);
-            this.background_DGV_panel3.TabIndex = 30;
+            this.background_DGV_panel3.TabIndex = 4;
             // 
             // change_DatagridView_Color_button
             // 
@@ -451,7 +452,7 @@
             this.change_DatagridView_Color_button.Location = new System.Drawing.Point(19, 12);
             this.change_DatagridView_Color_button.Name = "change_DatagridView_Color_button";
             this.change_DatagridView_Color_button.Size = new System.Drawing.Size(40, 38);
-            this.change_DatagridView_Color_button.TabIndex = 27;
+            this.change_DatagridView_Color_button.TabIndex = 10;
             this.change_DatagridView_Color_button.UseVisualStyleBackColor = false;
             this.change_DatagridView_Color_button.Click += new System.EventHandler(this.change_DatagridView_Color_button_Click);
             // 
@@ -468,7 +469,7 @@
             this.mark_current_row_button.Location = new System.Drawing.Point(66, 12);
             this.mark_current_row_button.Name = "mark_current_row_button";
             this.mark_current_row_button.Size = new System.Drawing.Size(40, 38);
-            this.mark_current_row_button.TabIndex = 30;
+            this.mark_current_row_button.TabIndex = 11;
             this.mark_current_row_button.UseVisualStyleBackColor = false;
             this.mark_current_row_button.Click += new System.EventHandler(this.mark_current_row_button_Click);
             // 
@@ -482,7 +483,7 @@
             this.background_DGV_panel2.Location = new System.Drawing.Point(585, -2);
             this.background_DGV_panel2.Name = "background_DGV_panel2";
             this.background_DGV_panel2.Size = new System.Drawing.Size(125, 60);
-            this.background_DGV_panel2.TabIndex = 14;
+            this.background_DGV_panel2.TabIndex = 3;
             // 
             // Kunde_Tlf_button
             // 
@@ -497,7 +498,7 @@
             this.Kunde_Tlf_button.Location = new System.Drawing.Point(68, 10);
             this.Kunde_Tlf_button.Name = "Kunde_Tlf_button";
             this.Kunde_Tlf_button.Size = new System.Drawing.Size(38, 40);
-            this.Kunde_Tlf_button.TabIndex = 29;
+            this.Kunde_Tlf_button.TabIndex = 9;
             this.Kunde_Tlf_button.UseVisualStyleBackColor = false;
             this.Kunde_Tlf_button.Click += new System.EventHandler(this.Kunde_Tlf_button_Click);
             // 
@@ -515,7 +516,7 @@
             this.show_all_button.Location = new System.Drawing.Point(22, 10);
             this.show_all_button.Name = "show_all_button";
             this.show_all_button.Size = new System.Drawing.Size(40, 40);
-            this.show_all_button.TabIndex = 16;
+            this.show_all_button.TabIndex = 8;
             this.show_all_button.UseVisualStyleBackColor = false;
             this.show_all_button.Click += new System.EventHandler(this.show_all_button_Click);
             // 
@@ -530,7 +531,7 @@
             this.top_Menu_background_panel.Location = new System.Drawing.Point(595, 69);
             this.top_Menu_background_panel.Name = "top_Menu_background_panel";
             this.top_Menu_background_panel.Size = new System.Drawing.Size(243, 91);
-            this.top_Menu_background_panel.TabIndex = 12;
+            this.top_Menu_background_panel.TabIndex = 0;
             // 
             // vis_rediger_kunder_button
             // 

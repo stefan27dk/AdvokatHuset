@@ -160,7 +160,7 @@
             this.item_menu_back_panekBlack_panel.Location = new System.Drawing.Point(1, 1);
             this.item_menu_back_panekBlack_panel.Name = "item_menu_back_panekBlack_panel";
             this.item_menu_back_panekBlack_panel.Size = new System.Drawing.Size(198, 317);
-            this.item_menu_back_panekBlack_panel.TabIndex = 4;
+            this.item_menu_back_panekBlack_panel.TabIndex = 3;
             // 
             // screenshot_DropDown_menustrip
             // 
@@ -176,7 +176,8 @@
             this.screenshot_DropDown_menustrip.Name = "screenshot_DropDown_menustrip";
             this.screenshot_DropDown_menustrip.Padding = new System.Windows.Forms.Padding(1, 1, 0, 1);
             this.screenshot_DropDown_menustrip.Size = new System.Drawing.Size(42, 43);
-            this.screenshot_DropDown_menustrip.TabIndex = 0;
+            this.screenshot_DropDown_menustrip.TabIndex = 8;
+            this.screenshot_DropDown_menustrip.TabStop = true;
             this.screenshot_DropDown_menustrip.Text = "menuStrip1";
             // 
             // toolStripMenuItem1
@@ -203,7 +204,7 @@
             this.Top_Menu_panel.Location = new System.Drawing.Point(0, 0);
             this.Top_Menu_panel.Name = "Top_Menu_panel";
             this.Top_Menu_panel.Size = new System.Drawing.Size(1317, 63);
-            this.Top_Menu_panel.TabIndex = 0;
+            this.Top_Menu_panel.TabIndex = 1;
             // 
             // panel1
             // 
@@ -270,10 +271,10 @@
             this.screenshotEntireScreen_button.ImageTransparentColor = System.Drawing.SystemColors.Control;
             this.screenshotEntireScreen_button.Margin = new System.Windows.Forms.Padding(5, 10, 0, 10);
             this.screenshotEntireScreen_button.Name = "screenshotEntireScreen_button";
-            this.screenshotEntireScreen_button.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            this.screenshotEntireScreen_button.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
             | System.Windows.Forms.Keys.A)));
             this.screenshotEntireScreen_button.Size = new System.Drawing.Size(41, 40);
-            this.screenshotEntireScreen_button.ToolTipText = "CTRL +SHIFT + A";
+            this.screenshotEntireScreen_button.ToolTipText = "CTRL + ALT + A";
             this.screenshotEntireScreen_button.Click += new System.EventHandler(this.screenshotEntireScreen_button_Click);
             // 
             // toolStripMenuItem4
@@ -286,11 +287,11 @@
             this.toolStripMenuItem4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripMenuItem4.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.F)));
+            this.toolStripMenuItem4.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.S)));
             this.toolStripMenuItem4.Size = new System.Drawing.Size(41, 40);
             this.toolStripMenuItem4.Text = "2";
-            this.toolStripMenuItem4.ToolTipText = "CTRL + SHIF + F";
+            this.toolStripMenuItem4.ToolTipText = "CTRL + ALT + S";
             this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
             // selection_screenshot_button
@@ -303,11 +304,11 @@
             this.selection_screenshot_button.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.selection_screenshot_button.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
             this.selection_screenshot_button.Name = "selection_screenshot_button";
-            this.selection_screenshot_button.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.C)));
+            this.selection_screenshot_button.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.D)));
             this.selection_screenshot_button.Size = new System.Drawing.Size(41, 40);
             this.selection_screenshot_button.Text = "1";
-            this.selection_screenshot_button.ToolTipText = "CTRL + SHIFT + C";
+            this.selection_screenshot_button.ToolTipText = "CTRL + ALT + D";
             this.selection_screenshot_button.Click += new System.EventHandler(this.selection_screenshot_button_Click);
             // 
             // Home_Button
@@ -322,7 +323,7 @@
             this.Home_Button.Location = new System.Drawing.Point(107, 10);
             this.Home_Button.Name = "Home_Button";
             this.Home_Button.Size = new System.Drawing.Size(35, 35);
-            this.Home_Button.TabIndex = 6;
+            this.Home_Button.TabIndex = 3;
             this.Home_Button.UseVisualStyleBackColor = true;
             this.Home_Button.Click += new System.EventHandler(this.Home_Button_Click);
             // 
@@ -338,7 +339,7 @@
             this.Menu_Search_button.Margin = new System.Windows.Forms.Padding(0);
             this.Menu_Search_button.Name = "Menu_Search_button";
             this.Menu_Search_button.Size = new System.Drawing.Size(30, 30);
-            this.Menu_Search_button.TabIndex = 11;
+            this.Menu_Search_button.TabIndex = 5;
             this.Menu_Search_button.UseVisualStyleBackColor = true;
             // 
             // General_Menu_Panel
@@ -353,7 +354,7 @@
             this.General_Menu_Panel.Location = new System.Drawing.Point(334, -1);
             this.General_Menu_Panel.Name = "General_Menu_Panel";
             this.General_Menu_Panel.Size = new System.Drawing.Size(718, 59);
-            this.General_Menu_Panel.TabIndex = 1;
+            this.General_Menu_Panel.TabIndex = 7;
             // 
             // General_menuStrip
             // 
@@ -374,8 +375,10 @@
             this.General_menuStrip.Margin = new System.Windows.Forms.Padding(0, 30, 0, 0);
             this.General_menuStrip.Name = "General_menuStrip";
             this.General_menuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.General_menuStrip.ShowItemToolTips = true;
             this.General_menuStrip.Size = new System.Drawing.Size(623, 57);
-            this.General_menuStrip.TabIndex = 2;
+            this.General_menuStrip.TabIndex = 0;
+            this.General_menuStrip.TabStop = true;
             this.General_menuStrip.Text = "centerMenu";
             this.General_menuStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.General_menuStrip_ItemClicked);
             // 
@@ -390,10 +393,14 @@
             this.sagerToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.sagerToolStripMenuItem.Name = "sagerToolStripMenuItem";
             this.sagerToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
+            this.sagerToolStripMenuItem.ShortcutKeyDisplayString = "";
+            this.sagerToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.A)));
             this.sagerToolStripMenuItem.Size = new System.Drawing.Size(60, 50);
             this.sagerToolStripMenuItem.Text = "Sager";
             this.sagerToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.sagerToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            this.sagerToolStripMenuItem.ToolTipText = "CTRL +SHIFT + A";
             this.sagerToolStripMenuItem.Click += new System.EventHandler(this.sagerToolStripMenuItem_Click);
             // 
             // ydelserToolStripMenuItem
@@ -405,10 +412,13 @@
             this.ydelserToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ydelserToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.ydelserToolStripMenuItem.Name = "ydelserToolStripMenuItem";
+            this.ydelserToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.S)));
             this.ydelserToolStripMenuItem.Size = new System.Drawing.Size(60, 50);
             this.ydelserToolStripMenuItem.Text = "Ydelser";
             this.ydelserToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ydelserToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ydelserToolStripMenuItem.ToolTipText = "CTRL + SHIFT + S";
             this.ydelserToolStripMenuItem.Click += new System.EventHandler(this.ydelserToolStripMenuItem_Click);
             // 
             // medarbejder_item
@@ -418,10 +428,13 @@
             this.medarbejder_item.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.medarbejder_item.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.medarbejder_item.Name = "medarbejder_item";
+            this.medarbejder_item.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.D)));
             this.medarbejder_item.Size = new System.Drawing.Size(90, 60);
             this.medarbejder_item.Text = "Medarbejder";
             this.medarbejder_item.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.medarbejder_item.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.medarbejder_item.ToolTipText = "CTRL + SHIFT + D";
             this.medarbejder_item.Click += new System.EventHandler(this.medarbejder_item_Click);
             // 
             // advokaterToolStripMenuItem
@@ -431,10 +444,13 @@
             this.advokaterToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.advokaterToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.advokaterToolStripMenuItem.Name = "advokaterToolStripMenuItem";
+            this.advokaterToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.F)));
             this.advokaterToolStripMenuItem.Size = new System.Drawing.Size(75, 55);
             this.advokaterToolStripMenuItem.Text = "Advokater";
             this.advokaterToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.advokaterToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.advokaterToolStripMenuItem.ToolTipText = "CTRL + SHIFT + F";
             this.advokaterToolStripMenuItem.Click += new System.EventHandler(this.advokaterToolStripMenuItem_Click);
             // 
             // sekretærToolStripMenuItem
@@ -445,10 +461,13 @@
             this.sekretærToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.sekretærToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.sekretærToolStripMenuItem.Name = "sekretærToolStripMenuItem";
+            this.sekretærToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.G)));
             this.sekretærToolStripMenuItem.Size = new System.Drawing.Size(70, 50);
             this.sekretærToolStripMenuItem.Text = "Sekretær";
             this.sekretærToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.sekretærToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.sekretærToolStripMenuItem.ToolTipText = "CTRL + SHIFT + G";
             this.sekretærToolStripMenuItem.Click += new System.EventHandler(this.sekretærToolStripMenuItem_Click);
             // 
             // kunderToolStripMenuItem
@@ -459,10 +478,13 @@
             this.kunderToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.kunderToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.kunderToolStripMenuItem.Name = "kunderToolStripMenuItem";
+            this.kunderToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.Z)));
             this.kunderToolStripMenuItem.Size = new System.Drawing.Size(50, 50);
             this.kunderToolStripMenuItem.Text = "Kunder";
             this.kunderToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.kunderToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.kunderToolStripMenuItem.ToolTipText = "CTRL + SHIFT + Z";
             this.kunderToolStripMenuItem.Click += new System.EventHandler(this.kunderToolStripMenuItem_Click);
             // 
             // kørselToolStripMenuItem
@@ -472,10 +494,13 @@
             this.kørselToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.kørselToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.kørselToolStripMenuItem.Name = "kørselToolStripMenuItem";
+            this.kørselToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.X)));
             this.kørselToolStripMenuItem.Size = new System.Drawing.Size(60, 70);
             this.kørselToolStripMenuItem.Text = "Kørsel";
             this.kørselToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.kørselToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.kørselToolStripMenuItem.ToolTipText = "CTRL + SHIFT + X";
             this.kørselToolStripMenuItem.Click += new System.EventHandler(this.kørselToolStripMenuItem_Click);
             // 
             // bell_button
@@ -490,7 +515,7 @@
             this.bell_button.Location = new System.Drawing.Point(1199, 3);
             this.bell_button.Name = "bell_button";
             this.bell_button.Size = new System.Drawing.Size(35, 35);
-            this.bell_button.TabIndex = 20;
+            this.bell_button.TabIndex = 9;
             this.bell_button.UseVisualStyleBackColor = true;
             this.bell_button.Click += new System.EventHandler(this.bell_button_Click);
             // 
@@ -506,7 +531,7 @@
             this.Loacal_Folder_button.Margin = new System.Windows.Forms.Padding(0);
             this.Loacal_Folder_button.Name = "Loacal_Folder_button";
             this.Loacal_Folder_button.Size = new System.Drawing.Size(35, 35);
-            this.Loacal_Folder_button.TabIndex = 9;
+            this.Loacal_Folder_button.TabIndex = 6;
             this.Loacal_Folder_button.UseVisualStyleBackColor = true;
             this.Loacal_Folder_button.Click += new System.EventHandler(this.Loacal_Folder_button_Click);
             this.Loacal_Folder_button.MouseHover += new System.EventHandler(this.Loacal_Folder_button_MouseHover);
@@ -525,7 +550,7 @@
             this.button3.Location = new System.Drawing.Point(11, 11);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(33, 33);
-            this.button3.TabIndex = 7;
+            this.button3.TabIndex = 1;
             this.button3.UseVisualStyleBackColor = true;
             // 
             // Back_Button
@@ -556,7 +581,7 @@
             this.item_menu_button.Location = new System.Drawing.Point(1261, 9);
             this.item_menu_button.Name = "item_menu_button";
             this.item_menu_button.Size = new System.Drawing.Size(33, 33);
-            this.item_menu_button.TabIndex = 5;
+            this.item_menu_button.TabIndex = 10;
             this.item_menu_button.UseVisualStyleBackColor = true;
             this.item_menu_button.Click += new System.EventHandler(this.item_menu_button_Click_1);
             this.item_menu_button.MouseHover += new System.EventHandler(this.item_menu_button_MouseHover);
@@ -588,7 +613,7 @@
             this.statistics_button.Location = new System.Drawing.Point(80, 241);
             this.statistics_button.Name = "statistics_button";
             this.statistics_button.Size = new System.Drawing.Size(41, 39);
-            this.statistics_button.TabIndex = 26;
+            this.statistics_button.TabIndex = 14;
             this.statistics_button.UseVisualStyleBackColor = true;
             // 
             // text_writer_button
@@ -603,7 +628,7 @@
             this.text_writer_button.Location = new System.Drawing.Point(143, 13);
             this.text_writer_button.Name = "text_writer_button";
             this.text_writer_button.Size = new System.Drawing.Size(41, 39);
-            this.text_writer_button.TabIndex = 15;
+            this.text_writer_button.TabIndex = 3;
             this.text_writer_button.UseVisualStyleBackColor = true;
             // 
             // world_clock_button
@@ -618,7 +643,7 @@
             this.world_clock_button.Location = new System.Drawing.Point(16, 241);
             this.world_clock_button.Name = "world_clock_button";
             this.world_clock_button.Size = new System.Drawing.Size(41, 39);
-            this.world_clock_button.TabIndex = 25;
+            this.world_clock_button.TabIndex = 13;
             this.world_clock_button.UseVisualStyleBackColor = true;
             // 
             // timer_button
@@ -633,7 +658,7 @@
             this.timer_button.Location = new System.Drawing.Point(17, 69);
             this.timer_button.Name = "timer_button";
             this.timer_button.Size = new System.Drawing.Size(40, 38);
-            this.timer_button.TabIndex = 13;
+            this.timer_button.TabIndex = 4;
             this.timer_button.UseVisualStyleBackColor = true;
             this.timer_button.Click += new System.EventHandler(this.timer_button_Click);
             // 
@@ -649,7 +674,7 @@
             this.open_my_email_button.Location = new System.Drawing.Point(143, 182);
             this.open_my_email_button.Name = "open_my_email_button";
             this.open_my_email_button.Size = new System.Drawing.Size(41, 39);
-            this.open_my_email_button.TabIndex = 24;
+            this.open_my_email_button.TabIndex = 12;
             this.open_my_email_button.UseVisualStyleBackColor = true;
             // 
             // notes_button
@@ -664,7 +689,7 @@
             this.notes_button.Location = new System.Drawing.Point(77, 13);
             this.notes_button.Name = "notes_button";
             this.notes_button.Size = new System.Drawing.Size(41, 39);
-            this.notes_button.TabIndex = 14;
+            this.notes_button.TabIndex = 2;
             this.notes_button.UseVisualStyleBackColor = true;
             // 
             // open_my_webpage_button
@@ -679,7 +704,7 @@
             this.open_my_webpage_button.Location = new System.Drawing.Point(77, 182);
             this.open_my_webpage_button.Name = "open_my_webpage_button";
             this.open_my_webpage_button.Size = new System.Drawing.Size(41, 39);
-            this.open_my_webpage_button.TabIndex = 23;
+            this.open_my_webpage_button.TabIndex = 11;
             this.open_my_webpage_button.UseVisualStyleBackColor = true;
             // 
             // calculator_button
@@ -694,7 +719,7 @@
             this.calculator_button.Location = new System.Drawing.Point(143, 68);
             this.calculator_button.Name = "calculator_button";
             this.calculator_button.Size = new System.Drawing.Size(41, 39);
-            this.calculator_button.TabIndex = 18;
+            this.calculator_button.TabIndex = 6;
             this.calculator_button.UseVisualStyleBackColor = true;
             this.calculator_button.Click += new System.EventHandler(this.calculator_button_Click);
             // 
@@ -710,7 +735,7 @@
             this.open_browser_button.Location = new System.Drawing.Point(16, 182);
             this.open_browser_button.Name = "open_browser_button";
             this.open_browser_button.Size = new System.Drawing.Size(41, 39);
-            this.open_browser_button.TabIndex = 22;
+            this.open_browser_button.TabIndex = 10;
             this.open_browser_button.UseVisualStyleBackColor = true;
             this.open_browser_button.Click += new System.EventHandler(this.open_browser_button_Click);
             // 
@@ -726,7 +751,7 @@
             this.calendar_button.Location = new System.Drawing.Point(16, 13);
             this.calendar_button.Name = "calendar_button";
             this.calendar_button.Size = new System.Drawing.Size(41, 39);
-            this.calendar_button.TabIndex = 19;
+            this.calendar_button.TabIndex = 1;
             this.calendar_button.UseVisualStyleBackColor = true;
             // 
             // developer_button
@@ -741,7 +766,7 @@
             this.developer_button.Location = new System.Drawing.Point(143, 123);
             this.developer_button.Name = "developer_button";
             this.developer_button.Size = new System.Drawing.Size(41, 39);
-            this.developer_button.TabIndex = 17;
+            this.developer_button.TabIndex = 9;
             this.developer_button.UseVisualStyleBackColor = true;
             this.developer_button.Click += new System.EventHandler(this.developer_button_Click);
             // 
@@ -757,7 +782,7 @@
             this.sound_recorder_button.Location = new System.Drawing.Point(17, 123);
             this.sound_recorder_button.Name = "sound_recorder_button";
             this.sound_recorder_button.Size = new System.Drawing.Size(41, 39);
-            this.sound_recorder_button.TabIndex = 20;
+            this.sound_recorder_button.TabIndex = 7;
             this.sound_recorder_button.UseVisualStyleBackColor = true;
             this.sound_recorder_button.Click += new System.EventHandler(this.sound_recorder_button_Click);
             // 
@@ -773,7 +798,7 @@
             this.open_paint_button.Location = new System.Drawing.Point(77, 69);
             this.open_paint_button.Name = "open_paint_button";
             this.open_paint_button.Size = new System.Drawing.Size(41, 39);
-            this.open_paint_button.TabIndex = 21;
+            this.open_paint_button.TabIndex = 5;
             this.open_paint_button.UseVisualStyleBackColor = true;
             this.open_paint_button.Click += new System.EventHandler(this.open_paint_button_Click);
             // 
@@ -789,7 +814,7 @@
             this.setting_button.Location = new System.Drawing.Point(77, 123);
             this.setting_button.Name = "setting_button";
             this.setting_button.Size = new System.Drawing.Size(41, 39);
-            this.setting_button.TabIndex = 16;
+            this.setting_button.TabIndex = 8;
             this.setting_button.UseVisualStyleBackColor = true;
             // 
             // Main_Form1
