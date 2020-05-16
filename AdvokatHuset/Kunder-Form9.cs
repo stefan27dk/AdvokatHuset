@@ -20,7 +20,8 @@ namespace View_GUI
 {
     public partial class Kunder_Form9 : Form
     {
-
+     
+        
 
         // Local Folder
         string LocalFolderPath = "C://";  // Gets Assignet in initialize
@@ -35,9 +36,15 @@ namespace View_GUI
        
 
         // Show Kunder - Database
-        static string show_Kunde_Query = "Select Kunde.*, Kunde_Tlf.Kunde_Tlf  From Kunde Full Join Kunde_Tlf ON Kunde.Kunde_ID = Kunde_Tlf.Kunde_ID";
+        //static string show_Kunde_Query = "Select Kunde.*, Kunde_Tlf.Kunde_Tlf  From Kunde Full Join Kunde_Tlf ON Kunde.Kunde_ID = Kunde_Tlf.Kunde_ID AND";
+        static string show_Kunde_Query = "Select K.Kunde_Fornavn, k.Kunde_Efternavn, K.Kunde_PostNr, P.Distrikt, K.Kunde_Adresse, K.Kunde_ID, TLF.Kunde_Tlf, K.Kunde_Email, K.Kunde_Oprets_Dato" +
+            "  From Kunde AS K Full Join Kunde_Tlf AS TLF ON K.Kunde_ID = TLF.Kunde_ID Full Join Post AS P ON k.Kunde_PostNr = P.PostNr ORDER BY K.Kunde_Fornavn, k.Kunde_Efternavn, K.Kunde_PostNr, " +
+            "P.Distrikt, K.Kunde_Adresse, K.Kunde_ID, TLF.Kunde_Tlf, K.Kunde_Email, K.Kunde_Oprets_Dato";
+
+
+
         DataSet Kunde_Dataset = new DataSet(); // Dataset for "Show Kunde" and "Show Kunde_Tlf"
-                                               //SqlDataAdapter showKundeAdapter = null;
+                                                
 
 
         //TKunde_Tlf - Database
@@ -48,7 +55,8 @@ namespace View_GUI
 
 
         // Row Edit
-        DataGridViewRow enterRow = new DataGridViewRow();
+        DataGridViewRow enterRow = new DataGridViewRow(); // On Enter
+
 
 
 
@@ -72,6 +80,8 @@ namespace View_GUI
         string SearchColumn_SearchString = "";
 
 
+
+ 
 
         // Initialize
         public Kunder_Form9()
@@ -659,7 +669,8 @@ namespace View_GUI
             Load_Customers.DB_Populate(show_Kunde_Query, Kunde_Dataset, "Kunde");
             Kunde_dataGridView.DataSource = Kunde_Dataset;
             Kunde_dataGridView.DataMember = "Kunde";
-            Kunde_dataGridView.Columns[7].ReadOnly = true;  // Forbid Editing Kunde_Tlf
+            Kunde_dataGridView.Columns[3].ReadOnly = true;  // Forbid Editing Kunde_Tlf
+            Kunde_dataGridView.Columns[6].ReadOnly = true;  // Forbid Editing Kunde_Tlf
            
         }
 
@@ -706,15 +717,15 @@ namespace View_GUI
             {
                 Kunde_dataGridView.EndEdit();
                 DatagridView_Save Update_Kunder = new DatagridView_Save();
-                Update_Kunder.DatagridView_Update(Kunde_Tlf_Select_Query, Kunde_Dataset, "Kunde_Tlf");
+                Update_Kunder.DatagridView_Update(Kunde_Tlf_Select_Query, Kunde_Dataset, "Kunde_Tlf", this.Kunde_dataGridView);
 
             }
 
             else if(Kunde_dataGridView.DataMember == "Kunde")   // KUNDE
             {
-                    Kunde_dataGridView.EndEdit();
-                    DatagridView_Save Update_Kunder = new DatagridView_Save();
-                    Update_Kunder.DatagridView_Update("Select* From Kunde", Kunde_Dataset, "Kunde");
+                Kunde_dataGridView.EndEdit();
+                DatagridView_Save Update_Kunder = new DatagridView_Save();
+                Update_Kunder.DatagridView_Update("Select* From Kunde", Kunde_Dataset, "Kunde", this.Kunde_dataGridView);
             }
          
 
@@ -723,7 +734,7 @@ namespace View_GUI
            
      
 
-        // UPDATE - Get row to Compare on Row enter "Used to determine if the row have been changed so we know when to edit "Save the changes""
+        // UPDATE - Get row to Compare on Row enter "Used to determine if the row have been changed so we know when to "Save the changes""
         private void Kunde_dataGridView_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
             Selected_Row_For_Compare();
@@ -735,7 +746,7 @@ namespace View_GUI
        // Row Enter - Main Method "It is used also for reseting the row Comparison when Column Header Is Clicked"
        private void Selected_Row_For_Compare()
         {
-            if (Kunde_dataGridView.SelectedRows.Count > 0) // I there are
+            if (Kunde_dataGridView.SelectedRows.Count > 0) // I there is selected row
             {
 
                 // Clone Row
@@ -759,7 +770,7 @@ namespace View_GUI
         // Row Leave - "ON - Validattion" - UPDATE "SAVE" - On ROW LEAVE AFTER VALIDATION  "Save"
         private void Kunde_dataGridView_RowValidated(object sender, DataGridViewCellEventArgs e)
         {
-            bool edited = false; // Check if the Row was edited
+             bool edited = false; // Check if the Row was edited
 
             if (Kunde_dataGridView.SelectedRows.Count > 0) // Selected minimum 1 row
             {
@@ -767,15 +778,18 @@ namespace View_GUI
 
                 for (int j = 0; j < Kunde_dataGridView.SelectedRows[0].Cells.Count; j++)
                 {
+                
+
                     if (Kunde_dataGridView.SelectedRows[0].Cells[j].Value != null && !Kunde_dataGridView.SelectedRows[0].Cells[j].Value.Equals(enterRow.Cells[j].Value))
                     {
                         edited = true;
                         break;
                     }
                 }
+               
+               
 
-
-                if (edited == true)
+                if (edited == true )
                 {
                     DialogResult saveDialog = MessageBox.Show("Are you sure that you want ot save the changes?", "Save", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                     if (saveDialog == DialogResult.Yes)
@@ -798,9 +812,7 @@ namespace View_GUI
         }
 
 
-
-
-
+      
 
 
         // Reset Row Selection "For Save"
@@ -990,6 +1002,7 @@ namespace View_GUI
             Search_Column_comboBox.Items.Add("Efternavn");
             Search_Column_comboBox.Items.Add("Adresse");
             Search_Column_comboBox.Items.Add("PostNr");
+            Search_Column_comboBox.Items.Add("Distrikt");
             Search_Column_comboBox.Items.Add("Tlf");
             Search_Column_comboBox.Items.Add("ID");
             Search_Column_comboBox.Items.Add("Email");
@@ -998,6 +1011,8 @@ namespace View_GUI
 
         }
 
+
+        // Search Queries - / Columns / Search - Text
         private void Search_Column()
         {
             //SearchColumn_SearchString
@@ -1019,16 +1034,19 @@ namespace View_GUI
                 case 4:  // Zip-Code
                     SearchColumn_SearchString = $" IF(ISNUMERIC('{search_textBox.Text}') = 1) BEGIN SELECT* From Kunde Where Kunde_PostNr {SearchOptions} END";
                     break;
-                case 5: //TLF
+                case 5: // Ditrict
+                    SearchColumn_SearchString = $" SELECT Kunde.*, Post.Distrikt From Kunde Full Join Post ON  Kunde.Kunde_PostNr = Post.PostNr Where Post.Distrikt {SearchOptions};";
+                    break;
+                case 6: //TLF
                     SearchColumn_SearchString = $" IF(ISNUMERIC('{search_textBox.Text}') = 1) BEGIN SELECT Kunde.*, Kunde_Tlf.Kunde_Tlf From Kunde Full Join Kunde_Tlf ON  Kunde.Kunde_ID = Kunde_Tlf.Kunde_ID Where Kunde_Tlf.Kunde_Tlf {SearchOptions} END";
                     break;
-                case 6: // ID
+                case 7: // ID
                     SearchColumn_SearchString = $"SELECT* From Kunde Where Kunde.Kunde_ID {SearchOptions}";
                     break;
-                case 7: // Email
+                case 8: // Email
                     SearchColumn_SearchString = $"SELECT* From Kunde Where Kunde.Kunde_Email {SearchOptions}";
                     break;
-                case 8: // Date
+                case 9: // Date
                     SearchColumn_SearchString = $"SELECT* From Kunde Where Kunde.Kunde_Oprets_Dato {SearchOptions}";
 
                     break;
@@ -1209,7 +1227,7 @@ namespace View_GUI
 
 
 
-
+        // Open Last File
         private void OpenLastFile()
         {
        
@@ -1294,58 +1312,7 @@ namespace View_GUI
 
 
             }
-
-
-
-            ////USING -  iTextSharp - Class
-            //PdfPTable pdfTable = new PdfPTable(Kunde_dataGridView.ColumnCount);
-            //pdfTable.DefaultCell.Padding = 3;
-            //pdfTable.WidthPercentage = 100;
-            //pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
-            //pdfTable.DefaultCell.BorderWidth = 1;
-
-            ////Adding Columns to the Pdf
-            //foreach (DataGridViewColumn column in Kunde_dataGridView.Columns)
-            //{
-            //    PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
-            //    cell.BackgroundColor = new iTextSharp.text.BaseColor(240, 240, 240);
-            //    pdfTable.AddCell(cell);
-            //}
-
-            ////Add Rows and Cells to the Pdf
-
-            //for (int i = 0; i < Kunde_dataGridView.Rows.Count; i++)
-            //{
-            //    for (int a = 0; a < Kunde_dataGridView.Rows[i].Cells.Count; a++)
-            //    {
-            //        if (Kunde_dataGridView.Rows[i].Cells[a].Value != null)
-            //        {
-
-            //            pdfTable.AddCell(Kunde_dataGridView.Rows[i].Cells[a].Value.ToString());
-
-            //        }
-
-
-            //    }
-            //}
-
-
-            ////Export to PDF
-            //string folderPath = "C:\\PDFs\\";
-            //if (!Directory.Exists(folderPath))
-            //{
-            //    Directory.CreateDirectory(folderPath);
-            //}
-            //using (FileStream stream = new FileStream(folderPath + "DataGridViewExport.pdf", FileMode.Create))
-            //{
-            //    Document pdfDoc = new Document(PageSize.A2, 10f, 10f, 10f, 0f);
-            //    PdfWriter.GetInstance(pdfDoc, stream);
-            //    pdfDoc.Open();
-            //    pdfDoc.Add(pdfTable);
-            //    pdfDoc.Close();
-            //    stream.Close();
-            //}
-
+          
         }
 
 
@@ -1477,7 +1444,15 @@ namespace View_GUI
             kunde_email_textBox.BackColor = Color.FromArgb(220, 243, 250);
         }
 
-     
+
+        // ERROR - Handling - Default Datagridview Error handling
+        private void Kunde_dataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            Kunde_dataGridView.RefreshEdit(); // Reset
+            MessageBox.Show("Der Opståd Fejl, Input er ikke i korekt format","Fejl", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+
 
         //-------------CREATE-TEXTBOXES -- Reset Color on Typing-------------------::END:--------------------------------------------------
 

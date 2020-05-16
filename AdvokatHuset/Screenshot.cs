@@ -37,6 +37,11 @@ namespace Domain
                 {
                     g.CopyFromScreen(Point.Empty, Point.Empty, screenBounds.Size);
                     bmp.Save($"{ScreenshotSavePath}{ScreenshotNameDateTime}.png", ImageFormat.Png);// Screenshot -  Unique Name so it dont get overwrited everytime new screenshot is made
+
+                    // Add to Clipboard
+                    Clipboard.SetDataObject(bmp);
+                    Image image = (Image)Clipboard.GetDataObject().GetData(DataFormats.Bitmap);
+                    Clipboard.SetDataObject(image);
                 }
             }
 
@@ -68,6 +73,11 @@ namespace Domain
 
                     gr.CopyFromScreen(currentForm.Location.X, currentForm.Location.Y, 0, 0, bmp.Size, CopyPixelOperation.SourceCopy);
                     bmp.Save($"{ScreenshotSavePath}{ScreenshotNameDateTime}.png", ImageFormat.Png);// Screenshot -  Unique Name so it dont get overwrited everytime new screenshot is made
+
+                    // Add to Clipboard
+                    Clipboard.SetDataObject(bmp);
+                    Image image = (Image)Clipboard.GetDataObject().GetData(DataFormats.Bitmap);
+                    Clipboard.SetDataObject(image);
                 }
 
                 //currentForm.DrawToBitmap(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height)); // Current Form to Bitmap "Rectangle Location and Size"
@@ -106,7 +116,8 @@ namespace Domain
 
             int locationX = currentForm.Location.X + selection.Location.X + 8; // + 8; "If form has Normal Border + 8" // Get Form Location x and plus it with the rectangle X: So we know where on the screen is the rectangle. The rectangles scope is only in the Forms scope "The 8px Tolerance is because of the Forms window itself "The window border"
             int locationY = currentForm.Location.Y + selection.Location.Y +26 ; // + 30; "If form has Border + 30"
-
+            
+             
             using (Bitmap bmp = new Bitmap(selection.Width, selection.Height, PixelFormat.Format32bppArgb))
             {
 
@@ -115,10 +126,19 @@ namespace Domain
 
                     g.CopyFromScreen(locationX, locationY, 0, 0, bmp.Size, CopyPixelOperation.SourceCopy);
                     bmp.Save($"{ScreenshotSavePath}{ScreenshotNameDateTime}.png", ImageFormat.Png);// Screenshot -  Unique Name so it dont get overwrited everytime new screenshot is made
+                
+                        // To Clipboard
+                        Clipboard.SetDataObject(bmp);
+                        Image image = (Image)Clipboard.GetDataObject().GetData(DataFormats.Bitmap);
+                        Clipboard.SetDataObject(image);
+                     
+
+                    }
+
                 }
+                 
 
-            }
-
+ 
             }
             catch(Exception)
             {

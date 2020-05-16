@@ -137,7 +137,7 @@
             this.backPanel_Textboxes_panel.Controls.Add(this.kunder_surname_textBox);
             this.backPanel_Textboxes_panel.Controls.Add(this.name_label);
             this.backPanel_Textboxes_panel.Controls.Add(this.kunder_name_textBox);
-            this.backPanel_Textboxes_panel.Location = new System.Drawing.Point(502, 170);
+            this.backPanel_Textboxes_panel.Location = new System.Drawing.Point(586, 170);
             this.backPanel_Textboxes_panel.Name = "backPanel_Textboxes_panel";
             this.backPanel_Textboxes_panel.Size = new System.Drawing.Size(394, 388);
             this.backPanel_Textboxes_panel.TabIndex = 11;
@@ -342,9 +342,9 @@
             this.datagridviewBackground_panel.Controls.Add(this.background_DGV_panel3);
             this.datagridviewBackground_panel.Controls.Add(this.background_DGV_panel2);
             this.datagridviewBackground_panel.Controls.Add(this.Kunde_dataGridView);
-            this.datagridviewBackground_panel.Location = new System.Drawing.Point(124, 170);
+            this.datagridviewBackground_panel.Location = new System.Drawing.Point(99, 170);
             this.datagridviewBackground_panel.Name = "datagridviewBackground_panel";
-            this.datagridviewBackground_panel.Size = new System.Drawing.Size(1080, 488);
+            this.datagridviewBackground_panel.Size = new System.Drawing.Size(1300, 488);
             this.datagridviewBackground_panel.TabIndex = 13;
             // 
             // background_DGV_Search_panel
@@ -357,7 +357,7 @@
             this.background_DGV_Search_panel.Controls.Add(this.Search_Column_comboBox);
             this.background_DGV_Search_panel.Controls.Add(this.reset_Search_Textbox_button);
             this.background_DGV_Search_panel.Controls.Add(this.search_Datagridview_pictureBox);
-            this.background_DGV_Search_panel.Location = new System.Drawing.Point(7, 5);
+            this.background_DGV_Search_panel.Location = new System.Drawing.Point(2, 3);
             this.background_DGV_Search_panel.Name = "background_DGV_Search_panel";
             this.background_DGV_Search_panel.Size = new System.Drawing.Size(420, 53);
             this.background_DGV_Search_panel.TabIndex = 1;
@@ -432,7 +432,7 @@
             this.background_DGV_panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.background_DGV_panel1.Controls.Add(this.undo_button);
             this.background_DGV_panel1.Controls.Add(this.delete_button);
-            this.background_DGV_panel1.Location = new System.Drawing.Point(444, -2);
+            this.background_DGV_panel1.Location = new System.Drawing.Point(647, -2);
             this.background_DGV_panel1.Name = "background_DGV_panel1";
             this.background_DGV_panel1.Size = new System.Drawing.Size(120, 58);
             this.background_DGV_panel1.TabIndex = 2;
@@ -482,7 +482,7 @@
             this.background_DGV_panel4.Controls.Add(this.local_folder_button);
             this.background_DGV_panel4.Controls.Add(this.screenshot_datagridview_button);
             this.background_DGV_panel4.Controls.Add(this.print_button);
-            this.background_DGV_panel4.Location = new System.Drawing.Point(881, -2);
+            this.background_DGV_panel4.Location = new System.Drawing.Point(1103, -2);
             this.background_DGV_panel4.Name = "background_DGV_panel4";
             this.background_DGV_panel4.Size = new System.Drawing.Size(190, 60);
             this.background_DGV_panel4.TabIndex = 5;
@@ -548,7 +548,7 @@
             this.background_DGV_panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.background_DGV_panel3.Controls.Add(this.change_DatagridView_Color_button);
             this.background_DGV_panel3.Controls.Add(this.mark_current_row_button);
-            this.background_DGV_panel3.Location = new System.Drawing.Point(733, -2);
+            this.background_DGV_panel3.Location = new System.Drawing.Point(950, -2);
             this.background_DGV_panel3.Name = "background_DGV_panel3";
             this.background_DGV_panel3.Size = new System.Drawing.Size(125, 60);
             this.background_DGV_panel3.TabIndex = 4;
@@ -594,7 +594,7 @@
             this.background_DGV_panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.background_DGV_panel2.Controls.Add(this.Kunde_Tlf_button);
             this.background_DGV_panel2.Controls.Add(this.show_all_button);
-            this.background_DGV_panel2.Location = new System.Drawing.Point(585, -2);
+            this.background_DGV_panel2.Location = new System.Drawing.Point(795, -2);
             this.background_DGV_panel2.Name = "background_DGV_panel2";
             this.background_DGV_panel2.Size = new System.Drawing.Size(125, 60);
             this.background_DGV_panel2.TabIndex = 3;
@@ -640,13 +640,14 @@
             this.Kunde_dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.Kunde_dataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Kunde_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Kunde_dataGridView.Location = new System.Drawing.Point(7, 59);
+            this.Kunde_dataGridView.Location = new System.Drawing.Point(5, 59);
             this.Kunde_dataGridView.MultiSelect = false;
             this.Kunde_dataGridView.Name = "Kunde_dataGridView";
             this.Kunde_dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Kunde_dataGridView.Size = new System.Drawing.Size(1064, 412);
+            this.Kunde_dataGridView.Size = new System.Drawing.Size(1290, 412);
             this.Kunde_dataGridView.TabIndex = 15;
             this.Kunde_dataGridView.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Kunde_dataGridView_ColumnHeaderMouseClick);
+            this.Kunde_dataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.Kunde_dataGridView_DataError);
             this.Kunde_dataGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.Kunde_dataGridView_RowEnter);
             this.Kunde_dataGridView.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.Kunde_dataGridView_RowValidated);
             // 
@@ -658,9 +659,9 @@
             this.top_Menu_background_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.top_Menu_background_panel.Controls.Add(this.vis_rediger_kunder_button);
             this.top_Menu_background_panel.Controls.Add(this.opret_kunde_button);
-            this.top_Menu_background_panel.Location = new System.Drawing.Point(579, 69);
+            this.top_Menu_background_panel.Location = new System.Drawing.Point(630, 69);
             this.top_Menu_background_panel.Name = "top_Menu_background_panel";
-            this.top_Menu_background_panel.Size = new System.Drawing.Size(243, 91);
+            this.top_Menu_background_panel.Size = new System.Drawing.Size(240, 90);
             this.top_Menu_background_panel.TabIndex = 0;
             // 
             // vis_rediger_kunder_button
@@ -708,7 +709,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.ClientSize = new System.Drawing.Size(1333, 700);
+            this.ClientSize = new System.Drawing.Size(1500, 700);
             this.Controls.Add(this.datagridviewBackground_panel);
             this.Controls.Add(this.top_Menu_background_panel);
             this.Controls.Add(this.backPanel_Textboxes_panel);

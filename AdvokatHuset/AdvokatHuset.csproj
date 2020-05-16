@@ -59,12 +59,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Advokat.cs" />
-    <Compile Include="Advokater-Form3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Advokater-Form3.Designer.cs">
-      <DependentUpon>Advokater-Form3.cs</DependentUpon>
-    </Compile>
     <Compile Include="Chef.cs" />
     <Compile Include="Datagridview_Loader.cs" />
     <Compile Include="DatagridView_Save.cs" />
@@ -89,6 +83,12 @@
       <DependentUpon>Koersel-Form10.cs</DependentUpon>
     </Compile>
     <Compile Include="Kunde.cs" />
+    <Compile Include="Advokater-Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advokater-Form3.Designer.cs">
+      <DependentUpon>Advokater-Form3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Kunder-Form9.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,9 +154,6 @@
     <Compile Include="Ydelser-Form8.Designer.cs">
       <DependentUpon>Ydelser-Form8.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Advokater-Form3.resx">
-      <DependentUpon>Advokater-Form3.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="DeveloperForm-Form12.resx">
       <DependentUpon>DeveloperForm-Form12.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Koersel-Form10.resx">
       <DependentUpon>Koersel-Form10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advokater-Form3.resx">
+      <DependentUpon>Advokater-Form3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Kunder-Form9.resx">
       <DependentUpon>Kunder-Form9.cs</DependentUpon>
