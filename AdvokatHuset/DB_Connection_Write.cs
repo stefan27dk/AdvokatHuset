@@ -35,7 +35,7 @@ namespace Domain
             }
 
                 // Get Information about the Exception        
-               catch (Exception e) { MessageBox.Show($"{e.Message} \t {e.InnerException} \t {e.Data}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+               catch (Exception e) { MessageBox.Show($"{e.Message} \t {e.InnerException} \t {e.Data} \t {e.ToString()}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
 
                return successful;
         }

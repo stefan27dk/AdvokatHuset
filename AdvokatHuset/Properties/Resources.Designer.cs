@@ -283,6 +283,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Actions_edit_delete_icon2 {
+            get {
+                object obj = ResourceManager.GetObject("Actions-edit-delete-icon2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Actions_go_previous_view_icon {
             get {
                 object obj = ResourceManager.GetObject("Actions-go-previous-view-icon", resourceCulture);
@@ -1793,6 +1803,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap research_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("research-icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap research_icon1 {
             get {
                 object obj = ResourceManager.GetObject("research-icon1", resourceCulture);
@@ -1866,6 +1886,16 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap sign_up_icon1 {
             get {
                 object obj = ResourceManager.GetObject("sign-up-icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Speciale_2 {
+            get {
+                object obj = ResourceManager.GetObject("Speciale 2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2156,6 +2186,16 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap Untitled4 {
             get {
                 object obj = ResourceManager.GetObject("Untitled4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled5 {
+            get {
+                object obj = ResourceManager.GetObject("Untitled5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

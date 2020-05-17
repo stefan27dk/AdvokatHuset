@@ -147,6 +147,7 @@
     <Compile Include="SelectionScreenshot-Form4.Designer.cs">
       <DependentUpon>SelectionScreenshot-Form4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Speciale_Load_Combobox.cs" />
     <Compile Include="Ydelse.cs" />
     <Compile Include="Ydelser-Form8.cs">
       <SubType>Form</SubType>
@@ -1006,6 +1007,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Untitled4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\research-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Speciale 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-edit-delete-icon2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

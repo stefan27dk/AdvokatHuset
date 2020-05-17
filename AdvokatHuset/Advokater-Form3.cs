@@ -472,8 +472,9 @@ namespace View_GUI
         // Vis Rediger // Show Datagridview
         private void vis_rediger_advokater_button_Click(object sender, EventArgs e)
         {
-            datagridviewBackground_panel.Visible = true;
-            backPanel_Textboxes_panel.Visible = false;
+            backPanel_Textboxes_panel.Visible = false; // Opret
+            speciale_BACK_panel.Visible = false;    // Speciale
+            datagridviewBackground_panel.Visible = true; // Datagridview
             //this.advokatTableAdapter.Fill(this.advokathusetDataSet.Advokat);
         }
 
@@ -484,8 +485,9 @@ namespace View_GUI
         // Opret Button
         private void opret_advokat_button_Click(object sender, EventArgs e)
         {
-            backPanel_Textboxes_panel.Visible = true;
             datagridviewBackground_panel.Visible = false;// Hide Datagridview
+            speciale_BACK_panel.Visible = false; // Speciale
+            backPanel_Textboxes_panel.Visible = true; // Opret
            
         }
 
@@ -690,14 +692,9 @@ namespace View_GUI
 
 
 
+            
 
-
-
-
-
-
-
-         //----SAVE-UPDATE--DATAGRIDVIEW-------::START::---------------------------------------------------------------------------------- 
+        //----SAVE-UPDATE--DATAGRIDVIEW-------::START::---------------------------------------------------------------------------------- 
 
         // Save Cutomers "ADVOKATER"
         private void SaveDataGridView()
@@ -904,7 +901,7 @@ namespace View_GUI
         }
 
 
-
+ 
 
         //Button
         // Clear Search_Text-Box "RESET" - CHANGE IMAGE ON HOVER
@@ -1443,6 +1440,16 @@ namespace View_GUI
             advokat_email_textBox.BackColor = Color.FromArgb(220, 243, 250);
         }
 
+        //-------------CREATE-TEXTBOXES -- Reset Color on Typing-------------------::END:--------------------------------------------------
+
+
+
+
+
+
+
+
+
 
         // ERROR - Handling - Default Datagridview Error handling
         private void Advokat_dataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
@@ -1450,10 +1457,125 @@ namespace View_GUI
             Advokat_dataGridView.RefreshEdit(); // Reset
             MessageBox.Show("Der Opståd Fejl, Input er ikke i korekt format","Fejl", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+ 
 
 
 
-        //-------------CREATE-TEXTBOXES -- Reset Color on Typing-------------------::END:--------------------------------------------------
+
+
+
+        // Specialer - MAIN - BUTTON
+        private void main_specialer_button_Click(object sender, EventArgs e)
+        {
+            speciale_BACK_panel.Visible = true; // Speciale
+            datagridviewBackground_panel.Visible = false;  // Datagridview
+            backPanel_Textboxes_panel.Visible = false; // Opret
+        }
+
+
+
+
+
+        //Advokat-----SPECIALER-------::START::-----------------------------------------------------------------------------
+        // Load Specialer Advokat in Combobox
+        private void speciale_comboBox_Click(object sender, EventArgs e)
+        {
+            Load_Specialer((ComboBox)sender);
+        }
+
+
+
+
+        // Clear Advokat Speciale Textbox-- Button
+        private void clear_advokat_speciale_button_Click(object sender, EventArgs e)
+        {
+            speciale_advokat_id_textBox.Clear();
+            speciale_comboBox.Items.Clear();
+        }
+
+
+
+        // Save Advokat - Speciale
+        private void save_Advokat_specaile_button_Click(object sender, EventArgs e)
+        {
+            DB_Connection_Write Save_Advokat_Speciale = new DB_Connection_Write();
+            Save_Advokat_Speciale.CreateCommand($"Insert INTO Advokat_Uddannelser VALUES ('{speciale_comboBox.SelectedItem.ToString()}', '{speciale_advokat_id_textBox.Text}');");
+            speciale_comboBox.Items.Clear();
+            speciale_advokat_id_textBox.Clear();
+
+
+        }
+
+
+        //Advokat-----SPECIALER-------::END::-----------------------------------------------------------------------------
+
+
+
+
+
+
+        // Load Specialer Main Methods ----||Advoakt-Specialer and Create Speciale||
+        private void Load_Specialer(ComboBox combo)
+        {
+            speciale_comboBox.Items.Clear();
+            Speciale_Load_Combobox Load_Specialer = new Speciale_Load_Combobox();
+            string Query = "Select* From Uddannelser";
+            combo = Load_Specialer.Populate_Combobox_Speciale(Query, combo);
+        }
+
+
+
+
+
+
+
+
+
+        //---Create Speciale----------------::START::---------------------------------------------
+
+        // Save new Speciale --- CREATE SPECIALE
+        private void save_speciale_button_Click(object sender, EventArgs e)
+        {
+            DB_Connection_Write Save_Speciale = new DB_Connection_Write();
+            Save_Speciale.CreateCommand($"Insert Into Uddannelser Values('{Add_Specaile_To_DB_comboBox.Text}');");
+            Add_Specaile_To_DB_comboBox.Items.Clear();
+            Add_Specaile_To_DB_comboBox.Text = "";
+
+        }
+
+
+
+
+        // Clear Speciale "Uddanelse" Textbox --BUTTON
+        private void clear_speciale_button_Click(object sender, EventArgs e)
+        {
+            Add_Specaile_To_DB_comboBox.Items.Clear();
+            Add_Specaile_To_DB_comboBox.Text = "";
+        }
+
+
+
+
+
+
+        //Add Speciale to DB ----SAVE--
+        private void Add_Specaile_To_DB_comboBox_Click(object sender, EventArgs e)
+        {
+            Add_Specaile_To_DB_comboBox.Items.Clear();
+            Load_Specialer((ComboBox)sender);
+
+        }
+
+        private void Add_Specaile_To_DB_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Add_Specaile_To_DB_comboBox.SelectedIndex = -1; 
+                
+        }
+    
+
+
+        //---Create Speciale----------------::END::---------------------------------------------
+
 
 
 
