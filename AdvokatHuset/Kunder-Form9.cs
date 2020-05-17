@@ -579,7 +579,7 @@ namespace View_GUI
                    }
                     else if(deleteDialog == DialogResult.No)
                     {
-                        //RefreshDatagridview();
+                        RefreshDatagridview();
                     }
 
                 }
@@ -639,7 +639,7 @@ namespace View_GUI
 
                 //inserdetindex.Add(kunde);
                 DeletedRowsList.RemoveAt(lastindex); // Remove Last index
-
+                RefreshDatagridview(); // Refresh
             }
 
 
@@ -1020,7 +1020,8 @@ namespace View_GUI
             switch (Search_Column_comboBox.SelectedIndex)
             {
                 case 0: // ALL
-                    SearchColumn_SearchString = $"IF(ISNUMERIC('{search_textBox.Text}') = 0) BEGIN Select* From Kunde Where  Kunde_Fornavn {SearchOptions} OR Kunde_Efternavn {SearchOptions} OR Kunde_Adresse {SearchOptions} OR Kunde_Email {SearchOptions} OR Kunde_Oprets_Dato {SearchOptions} OR Kunde_ID {SearchOptions} END ELSE  BEGIN SELECT Kunde.*, Kunde_Tlf.Kunde_Tlf From Kunde Full Join Kunde_Tlf ON Kunde.Kunde_ID = Kunde_Tlf.Kunde_ID Where Kunde_PostNr {SearchOptions} OR Kunde_Tlf.Kunde_Tlf {SearchOptions} OR Kunde_Fornavn {SearchOptions} OR Kunde_Efternavn {SearchOptions} OR Kunde_Adresse {SearchOptions} OR Kunde_Email {SearchOptions} OR Kunde_Oprets_Dato {SearchOptions} OR Kunde.Kunde_ID {SearchOptions} END;  ";
+                    SearchColumn_SearchString = $"IF(ISNUMERIC('{search_textBox.Text}') = 0) BEGIN Select K.Kunde_Fornavn, K.Kunde_Efternavn, K.Kunde_PostNr, P.Distrikt, K.Kunde_Adresse, K.Kunde_Email,  T.Kunde_Tlf, K.Kunde_ID, K.Kunde_Oprets_Dato From KUNDE AS K FULL JOIN Kunde_Tlf As T ON K.Kunde_ID = T.Kunde_ID Full Join Post AS P ON K.Kunde_PostNr = P.PostNr Where K.Kunde_Fornavn {SearchOptions} OR K.Kunde_Efternavn {SearchOptions} OR P.Distrikt {SearchOptions} OR K.Kunde_Adresse {SearchOptions} OR K.Kunde_Email {SearchOptions} OR K.Kunde_ID {SearchOptions} OR K.Kunde_Oprets_Dato {SearchOptions} END ELSE BEGIN Select K.Kunde_Fornavn, K.Kunde_Efternavn, K.Kunde_PostNr, P.Distrikt, K.Kunde_Adresse, K.Kunde_Email,  T.Kunde_Tlf, K.Kunde_ID, K.Kunde_Oprets_Dato From KUNDE AS K FULL JOIN Kunde_Tlf As T ON K.Kunde_ID = T.Kunde_ID Full Join Post AS P ON K.Kunde_PostNr = P.PostNr Where K.Kunde_Fornavn {SearchOptions} OR K.Kunde_Efternavn {SearchOptions} OR K.Kunde_PostNr {SearchOptions} OR P.Distrikt {SearchOptions} OR K.Kunde_Adresse {SearchOptions} OR K.Kunde_Email {SearchOptions} OR T.Kunde_Tlf {SearchOptions} OR K.Kunde_ID {SearchOptions} OR K.Kunde_Oprets_Dato {SearchOptions} END;";
+                    //IF(ISNUMERIC('{search_textBox.Text}') = 0) BEGIN Select* From Kunde Where  Kunde_Fornavn {SearchOptions} OR Kunde_Efternavn {SearchOptions} OR Kunde_Adresse {SearchOptions} OR Kunde_Email {SearchOptions} OR Kunde_Oprets_Dato {SearchOptions} OR Kunde_ID {SearchOptions} END ELSE  BEGIN SELECT Kunde.*, Kunde_Tlf.Kunde_Tlf From Kunde Full Join Kunde_Tlf ON Kunde.Kunde_ID = Kunde_Tlf.Kunde_ID Where Kunde_PostNr {SearchOptions} OR Kunde_Tlf.Kunde_Tlf {SearchOptions} OR Kunde_Fornavn {SearchOptions} OR Kunde_Efternavn {SearchOptions} OR Kunde_Adresse {SearchOptions} OR Kunde_Email {SearchOptions} OR Kunde_Oprets_Dato {SearchOptions} OR Kunde.Kunde_ID {SearchOptions} END;
                     break;
                 case 1: // Name
                     SearchColumn_SearchString = $"SELECT* From Kunde Where Kunde.Kunde_Fornavn {SearchOptions}";
@@ -1088,8 +1089,12 @@ namespace View_GUI
         // Search On Text Changed
         private void search_textBox_TextChanged(object sender, EventArgs e)
         {
-            
             Search_Resources();
+
+            if(search_textBox.Text == "")
+            {
+                LoadKunder();
+            }
         }
 
        
@@ -1185,17 +1190,21 @@ namespace View_GUI
         // Mark Current row
         private void mark_current_row_button_Click(object sender, EventArgs e)
         {
-            if(Kunde_dataGridView.SelectedRows[0].DefaultCellStyle.BackColor != Color.FromArgb(191, 50, 95))
-            {
-            Kunde_dataGridView.SelectedRows[0].DefaultCellStyle.BackColor = Color.FromArgb(191, 50, 95);
-            Kunde_dataGridView.SelectedRows[0].DefaultCellStyle.ForeColor = Color.Black;
-            }
-            else
-            {
-                Kunde_dataGridView.SelectedRows[0].DefaultCellStyle.BackColor = Color.FromArgb(2, 222, 160);
-                Kunde_dataGridView.SelectedRows[0].DefaultCellStyle.ForeColor = DefaultForeColor;
-            }
+             if(Kunde_dataGridView.CurrentRow != null)
+             {
 
+          
+                if(Kunde_dataGridView.SelectedRows[0].DefaultCellStyle.BackColor != Color.FromArgb(191, 50, 95))
+                {
+                Kunde_dataGridView.SelectedRows[0].DefaultCellStyle.BackColor = Color.FromArgb(191, 50, 95);
+                Kunde_dataGridView.SelectedRows[0].DefaultCellStyle.ForeColor = Color.Black;
+                }
+                else
+                {
+                    Kunde_dataGridView.SelectedRows[0].DefaultCellStyle.BackColor = Color.FromArgb(2, 222, 160);
+                    Kunde_dataGridView.SelectedRows[0].DefaultCellStyle.ForeColor = DefaultForeColor;
+                }
+             }
         }
         //--------------Datagridview - Change - Color------------::END:----------------------------------------------------------------
 

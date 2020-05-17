@@ -1613,6 +1613,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pabodie_field_notes_icon {
+            get {
+                object obj = ResourceManager.GetObject("pabodie-field-notes-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Paint_icon {
             get {
                 object obj = ResourceManager.GetObject("Paint-icon", resourceCulture);
@@ -1773,6 +1783,26 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap research_icon {
+            get {
+                object obj = ResourceManager.GetObject("research-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap research_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("research-icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Search_Back_6_Panel {
             get {
                 object obj = ResourceManager.GetObject("Search-Back 6-Panel", resourceCulture);
@@ -1836,6 +1866,16 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap sign_up_icon1 {
             get {
                 object obj = ResourceManager.GetObject("sign-up-icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Speciale_advokat {
+            get {
+                object obj = ResourceManager.GetObject("Speciale advokat", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2096,6 +2136,26 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap Untitled2 {
             get {
                 object obj = ResourceManager.GetObject("Untitled2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled3 {
+            get {
+                object obj = ResourceManager.GetObject("Untitled3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled4 {
+            get {
+                object obj = ResourceManager.GetObject("Untitled4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

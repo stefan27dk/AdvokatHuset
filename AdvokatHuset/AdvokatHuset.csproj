@@ -989,5 +989,23 @@
   <ItemGroup>
     <None Include="Resources\Top_Background_menu.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\research-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pabodie-field-notes-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Speciale advokat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\research-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled4.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

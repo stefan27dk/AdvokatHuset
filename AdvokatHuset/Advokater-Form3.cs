@@ -20,7 +20,8 @@ namespace View_GUI
 {
     public partial class Advokater_Form3 : Form
     {
-
+     
+        
 
         // Local Folder
         string LocalFolderPath = "C://";  // Gets Assignet in initialize
@@ -28,27 +29,29 @@ namespace View_GUI
         //DB
         Advokat advokatinstance; // Instance af Advokat 
         DB_Connection_Write ConnWrite; // Sql Write "
-                                       //static readonly  DB_Connection_String ConnectionString = DB_Connection_String.GetConnectionString(); // Global Connectionstring
-                                       //static SqlConnection connection = null; 
+                                   
 
 
 
 
-        // Show Advokatr - Database
-        static string show_Advokat_Query = "Select Medarbejder.*, Medarbejder_Tlf.Me_Tlf From Medarbejder Full Join Medarbejder_Tlf ON Medarbejder.Me_ID = Medarbejder_Tlf.Me_ID Where Me_Type = 'Advokat';";
+        // Show Advokater - Database
+        static string show_Advokat_Query = "Select M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn AS Advokat_Efternavn , M.Me_PostNr AS Advokat_PostNr, P.Distrikt, M.Me_Adresse AS Advokat_Adresse, M.Me_Email AS Advokat_Email, T.Me_Tlf AS Advokat_Tlf, M.Me_ID AS Advokat_ID, M.Me_Type, M.Me_Oprets_Dato AS Advokat_Oprets_Dato From Medarbejder AS M FULL JOIN Medarbejder_Tlf As T ON M.Me_ID = T.Me_ID Full Join Post AS P ON M.Me_PostNr = P.PostNr Where M.Me_Type = 'Advokat'; ";
+
+
+
         DataSet Advokat_Dataset = new DataSet(); // Dataset for "Show Advokat" and "Show Advokat_Tlf"
-                                         
 
 
-        //TAdvokat_Tlf - Database
-        static string Advokat_Tlf_Select_Query = "Select Medarbejder_Tlf.* From Medarbejder_Tlf inner join Medarbejder ON Medarbejder_Tlf.Me_ID = Medarbejder.Me_ID  Where Medarbejder.Me_Type = 'Advokat';";
-        //static string Advokat_Tlf_Select_Query = "Select Advokat_Tlf.*, Advokat.Advokat_Fornavn, Advokat.Advokat_Efternavn From Advokat_Tlf Inner Join Advokat ON Advokat_Tlf.Advokat_ID = Advokat.Advokat_ID;";
+
+        //Advokat_Tlf - Database
+        //static string Advokat_Tlf_Select_Query = "Select Medarbejder_Tlf.*, Medarbejder.Me_Fornavn, Medarbejder.Me_Efternavn From Medarbejder_Tlf inner join Medarbejder ON Medarbejder_Tlf.Me_ID = Medarbejder.Me_ID  Where Medarbejder.Me_Type = 'Advokat';";
 
 
 
 
         // Row Edit
-        DataGridViewRow enterRow = new DataGridViewRow();
+        DataGridViewRow enterRow = new DataGridViewRow(); // On Enter
+
 
 
 
@@ -73,6 +76,8 @@ namespace View_GUI
 
 
 
+ 
+
         // Initialize
         public Advokater_Form3()
         {
@@ -84,10 +89,10 @@ namespace View_GUI
 
 
         // Load
-        private void Advokatr_Form9_Load(object sender, EventArgs e)
+        private void Advokater_Form9_Load(object sender, EventArgs e)
         {
             DatagridviewSettings_Style();
-            LoadAdvokater();// Show all Advokatr "Populating the datagridview with Curtomers "Advokatr""
+            LoadAdvokater();// Show all Advokater "Populating the datagridview with Curtomers "Advokater""
             Search_ComboBox_Options_Content(); // Populate Search Combobox
             Search_ComboBox_Column_Content(); // Populate Column Search Combobox
           
@@ -160,11 +165,11 @@ namespace View_GUI
         private void CreateAdvokat()
         {
             advokatinstance = new Advokat();
-            advokatinstance.Fornavn = advokatr_name_textBox.Text;
-            advokatinstance.Efternavn = advokatr_surname_textBox.Text;
-            advokatinstance.PostNr = Convert.ToInt32(advokatr_zipcCode_textBox.Text);
-            advokatinstance.Adresse = advokatr_adr_textBox.Text;
-            advokatinstance.TlfNr = Convert.ToInt32(advokatr_tlf_textBox.Text);
+            advokatinstance.Fornavn = advokater_name_textBox.Text;
+            advokatinstance.Efternavn = advokater_surname_textBox.Text;
+            advokatinstance.PostNr = Convert.ToInt32(advokater_zipcCode_textBox.Text);
+            advokatinstance.Adresse = advokater_adr_textBox.Text;
+            advokatinstance.TlfNr = Convert.ToInt32(advokater_tlf_textBox.Text);
             advokatinstance.Mail = advokat_email_textBox.Text;
 
         }
@@ -177,7 +182,7 @@ namespace View_GUI
         private void InsertToDB()
         {
             ConnWrite = new DB_Connection_Write(); // "Write to DB Class instance"
-            string AdvokatQuery = $"BEGIN DECLARE @UNIQUEX UNIQUEIDENTIFIER SET @UNIQUEX = NEWID(); Insert into Advokat Values('{advokatinstance.Fornavn}','{advokatinstance.Efternavn}',{advokatinstance.PostNr},'{advokatinstance.Adresse}', (@UNIQUEX),'{advokatinstance.Mail}', '{DateTime.Now.ToString("dd-MM-yyyy HH-mm-ss")}'); Insert INTO Advokat_Tlf Values('{advokatr_tlf_textBox.Text}',(@UNIQUEX)); END;"; // Query
+            string AdvokatQuery = $"BEGIN DECLARE @UNIQUEX UNIQUEIDENTIFIER SET @UNIQUEX = NEWID(); Insert Into Medarbejder Values('{advokatinstance.Fornavn}','{advokatinstance.Efternavn}',{advokatinstance.PostNr},'{advokatinstance.Adresse}', (@UNIQUEX),'Advokat','{advokatinstance.Mail}', '{DateTime.Now.ToString("dd-MM-yyyy HH-mm-ss")}'); Insert INTO Medarbejder_Tlf Values('{advokater_tlf_textBox.Text}',(@UNIQUEX)); END;"; // Query
             successful = ConnWrite.CreateCommand(AdvokatQuery); // Write to DB Input and "Execution"
         }
 
@@ -192,7 +197,7 @@ namespace View_GUI
         // Key Events--Validating--Textboxes----::START::---------------------------------------------- 
       
         // Validate Name
-        private void advokatr_name_textBox_KeyPress(object sender, KeyPressEventArgs e)
+        private void advokater_name_textBox_KeyPress(object sender, KeyPressEventArgs e)
         {
 
             e.Handled = (int.TryParse(e.KeyChar.ToString(), out int isNumber) || (e.KeyChar == (char)Keys.Space));///Prevent Numbers and Spaces
@@ -202,7 +207,7 @@ namespace View_GUI
 
 
         // Validate Surname
-        private void advokatr_surname_textBox_KeyPress(object sender, KeyPressEventArgs e)
+        private void advokater_surname_textBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = (int.TryParse(e.KeyChar.ToString(), out int isNumber));///Prevent Numbers and Spaces
         }
@@ -211,7 +216,7 @@ namespace View_GUI
 
 
         // Zip Code Validating
-        private void advokatr_zipcCode_textBox_KeyPress(object sender, KeyPressEventArgs e)
+        private void advokater_zipcCode_textBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar != (char)8 && e.KeyChar != (char)26)/// "Allow backspace"  and CTRL+Z
             {
@@ -224,7 +229,7 @@ namespace View_GUI
 
 
         // TLF Validating
-        private void advokatr_tlf_textBox_KeyPress(object sender, KeyPressEventArgs e)
+        private void advokater_tlf_textBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if(e.KeyChar != (char)8 && e.KeyChar != (char)26) // If not Backspace or CTRL+Z
             {
@@ -242,22 +247,22 @@ namespace View_GUI
             isValid = true; // Reset it here
 
             //Name Validation---------------------------------------------------------------------------->
-            if (advokatr_name_textBox.TextLength < 2)
+            if (advokater_name_textBox.TextLength < 2)
             {
                 isValid = false; // Now you cant proceed because its not valid
-                advokatr_name_textBox.BackColor = Color.FromArgb(255, 128, 128);
+                advokater_name_textBox.BackColor = Color.FromArgb(255, 128, 128);
             }
 
             else
             {
                 
-                  for (int i = 0; i < advokatr_name_textBox.TextLength; i++)
+                  for (int i = 0; i < advokater_name_textBox.TextLength; i++)
                   {
                  
-                      if(String.IsNullOrEmpty(advokatr_name_textBox.Text[i].ToString()) || int.TryParse(advokatr_name_textBox.Text[i].ToString(), out int isNumber) || advokatr_name_textBox.Text[i].ToString() == " ") // Check for numbers, null, 
+                      if(String.IsNullOrEmpty(advokater_name_textBox.Text[i].ToString()) || int.TryParse(advokater_name_textBox.Text[i].ToString(), out int isNumber) || advokater_name_textBox.Text[i].ToString() == " ") // Check for numbers, null, 
                       {
                           isValid = false; // Now you cant proceed because its not valid
-                          advokatr_name_textBox.BackColor = Color.FromArgb(255, 128, 128);
+                          advokater_name_textBox.BackColor = Color.FromArgb(255, 128, 128);
                         break;
                       }
                       
@@ -269,21 +274,21 @@ namespace View_GUI
 
 
             // Surname Validation------------------------------------------------------------------------> 
-            if (advokatr_surname_textBox.TextLength < 2)
+            if (advokater_surname_textBox.TextLength < 2)
             {
                 isValid = false; // Now you cant proceed because its not valid
-                advokatr_surname_textBox.BackColor = Color.FromArgb(255, 128, 128);
+                advokater_surname_textBox.BackColor = Color.FromArgb(255, 128, 128);
             }
             else
             {
             
-                 for (int i = 0; i < advokatr_surname_textBox.TextLength; i++)
+                 for (int i = 0; i < advokater_surname_textBox.TextLength; i++)
                  {
                 
-                     if (String.IsNullOrEmpty(advokatr_surname_textBox.Text[i].ToString()) || int.TryParse(advokatr_surname_textBox.Text[i].ToString(), out int isNumber))  
+                     if (String.IsNullOrEmpty(advokater_surname_textBox.Text[i].ToString()) || int.TryParse(advokater_surname_textBox.Text[i].ToString(), out int isNumber))  
                      {
                          isValid = false; // Now you cant proceed because its not valid
-                         advokatr_surname_textBox.BackColor = Color.FromArgb(255, 128, 128);
+                         advokater_surname_textBox.BackColor = Color.FromArgb(255, 128, 128);
                         break;
                      }
                 
@@ -295,17 +300,17 @@ namespace View_GUI
 
              // TLF Validation--------------------------------------------------------------------------->
 
-             if (advokatr_tlf_textBox.TextLength < 8)
+             if (advokater_tlf_textBox.TextLength < 8)
              {
                 isValid = false;
-                advokatr_tlf_textBox.BackColor = Color.FromArgb(255, 128, 128);
+                advokater_tlf_textBox.BackColor = Color.FromArgb(255, 128, 128);
 
             }
 
-            else if(!int.TryParse(advokatr_tlf_textBox.Text, out int isNumber))
+            else if(!int.TryParse(advokater_tlf_textBox.Text, out int isNumber))
             {
                 isValid = false;
-                advokatr_tlf_textBox.BackColor = Color.FromArgb(255, 128, 128);
+                advokater_tlf_textBox.BackColor = Color.FromArgb(255, 128, 128);
             }
 
 
@@ -346,25 +351,25 @@ namespace View_GUI
 
 
               //Zip Code Valiadtion---------------------------------------------------------------------->
-               if(advokatr_zipcCode_textBox.TextLength < 4)
+               if(advokater_zipcCode_textBox.TextLength < 4)
                {
                 isValid = false;
-                advokatr_zipcCode_textBox.BackColor = Color.FromArgb(255, 128, 128);
+                advokater_zipcCode_textBox.BackColor = Color.FromArgb(255, 128, 128);
                }
-               else if(!int.TryParse(advokatr_zipcCode_textBox.Text, out int isNumber))
+               else if(!int.TryParse(advokater_zipcCode_textBox.Text, out int isNumber))
                {
                 isValid = false;
-                advokatr_zipcCode_textBox.BackColor = Color.FromArgb(255, 128, 128);
+                advokater_zipcCode_textBox.BackColor = Color.FromArgb(255, 128, 128);
                }
             
 
 
 
             // Adress Validation------------------------------------------------------------------------>
-            if(advokatr_adr_textBox.TextLength < 2)
+            if(advokater_adr_textBox.TextLength < 2)
             {
                 isValid = false;
-                advokatr_adr_textBox.BackColor = Color.FromArgb(255, 128, 128);
+                advokater_adr_textBox.BackColor = Color.FromArgb(255, 128, 128);
             }
             
            
@@ -389,12 +394,12 @@ namespace View_GUI
         // Reset Textbox Color
         private void TextboxesResetColor()
         {
-            advokatr_name_textBox.BackColor = Color.FromArgb(220, 243, 250);
-            advokatr_surname_textBox.BackColor = Color.FromArgb(220, 243, 250);
-            advokatr_tlf_textBox.BackColor = Color.FromArgb(220, 243, 250);
+            advokater_name_textBox.BackColor = Color.FromArgb(220, 243, 250);
+            advokater_surname_textBox.BackColor = Color.FromArgb(220, 243, 250);
+            advokater_tlf_textBox.BackColor = Color.FromArgb(220, 243, 250);
             advokat_email_textBox.BackColor = Color.FromArgb(220, 243, 250);
-            advokatr_zipcCode_textBox.BackColor = Color.FromArgb(220, 243, 250);
-            advokatr_adr_textBox.BackColor = Color.FromArgb(220, 243, 250);
+            advokater_zipcCode_textBox.BackColor = Color.FromArgb(220, 243, 250);
+            advokater_adr_textBox.BackColor = Color.FromArgb(220, 243, 250);
 
         }
 
@@ -404,19 +409,19 @@ namespace View_GUI
         // Clear All Textboxes
         private void ClearTextboxes()
         {
-            advokatr_name_textBox.Clear();
-            advokatr_surname_textBox.Clear();
-            advokatr_tlf_textBox.Clear();
+            advokater_name_textBox.Clear();
+            advokater_surname_textBox.Clear();
+            advokater_tlf_textBox.Clear();
             advokat_email_textBox.Clear();
-            advokatr_zipcCode_textBox.Clear();
-            advokatr_adr_textBox.Clear();
+            advokater_zipcCode_textBox.Clear();
+            advokater_adr_textBox.Clear();
         }
 
 
 
 
         // Save Button 
-        private void advokatr_Save_button_Click(object sender, EventArgs e)
+        private void advokater_Save_button_Click(object sender, EventArgs e)
         {
             TextboxesResetColor(); // Reset Color
             ValidateALL(); // Validate All
@@ -465,7 +470,7 @@ namespace View_GUI
         // Form Menu-----------::START::-------------------------------------------
 
         // Vis Rediger // Show Datagridview
-        private void vis_rediger_advokatr_button_Click(object sender, EventArgs e)
+        private void vis_rediger_advokater_button_Click(object sender, EventArgs e)
         {
             datagridviewBackground_panel.Visible = true;
             backPanel_Textboxes_panel.Visible = false;
@@ -569,7 +574,7 @@ namespace View_GUI
                    }
                     else if(deleteDialog == DialogResult.No)
                     {
-                        //RefreshDatagridview();
+                        RefreshDatagridview();
                     }
 
                 }
@@ -615,21 +620,17 @@ namespace View_GUI
         // Undo  DELETE - Button
         private void undo_button_Click(object sender, EventArgs e)
         {
-            //DataTable dtImage = Advokat_Dataset.Tables[0];
-
-            //    Advokat_Dataset.Tables.Add(dtImage);
-
-
-            // Always the last item
+         
+            // UNDO
             if (DeletedRowsList.Count > 0 && Advokat_dataGridView.DataMember == "Medarbejder")
             {
                 int lastindex = DeletedRowsList.Count - 1;
-               Advokat_Dataset.Tables[0].Rows.Add(DeletedRowsList[lastindex].Cells[0].Value, DeletedRowsList[lastindex].Cells[1].Value, DeletedRowsList[lastindex].Cells[2].Value, DeletedRowsList[lastindex].Cells[3].Value, DeletedRowsList[lastindex].Cells[4].Value, DeletedRowsList[lastindex].Cells[5].Value, DeletedRowsList[lastindex].Cells[6].Value);
+               Advokat_Dataset.Tables[0].Rows.Add(DeletedRowsList[lastindex].Cells[0].Value, DeletedRowsList[lastindex].Cells[1].Value, DeletedRowsList[lastindex].Cells[2].Value, DeletedRowsList[lastindex].Cells[3].Value, DeletedRowsList[lastindex].Cells[4].Value, DeletedRowsList[lastindex].Cells[5].Value, DeletedRowsList[lastindex].Cells[6].Value, DeletedRowsList[lastindex].Cells[7].Value, DeletedRowsList[lastindex].Cells[8].Value, DeletedRowsList[lastindex].Cells[9].Value);
                SaveDataGridView(); // Save to DB  
 
                 //inserdetindex.Add(advokat);
                 DeletedRowsList.RemoveAt(lastindex); // Remove Last index
-
+                RefreshDatagridview(); //REFRESH
             }
 
 
@@ -646,7 +647,7 @@ namespace View_GUI
 
 
 
-        // Show Customers "Advokatr" - Main Method
+        // Show Customers "Advokater" - Main Method
         private void LoadAdvokater()
         {
             // Clear the Columns "Column Change order because of the second Table Advokat_Tlf" TLF Colum becomes the first
@@ -659,7 +660,8 @@ namespace View_GUI
             Load_Customers.DB_Populate(show_Advokat_Query, Advokat_Dataset, "Medarbejder");
             Advokat_dataGridView.DataSource = Advokat_Dataset;
             Advokat_dataGridView.DataMember = "Medarbejder";
-            //Advokat_dataGridView.Columns[7].ReadOnly = true;  // Forbid Editing Advokat_Tlf
+            Advokat_dataGridView.Columns[3].ReadOnly = true;  // Forbid Editing Advokat_Tlf
+            Advokat_dataGridView.Columns[6].ReadOnly = true;  // Forbid Editing Advokat_Tlf
            
         }
 
@@ -668,7 +670,7 @@ namespace View_GUI
         // Show_Advokat-Tlf - Load Advokat_Tlf - Main Method
         private void LoadAdvokat_Tlf()
         {
-            string Advokat_Tlf_Advokat_navn_Select = "Select Medarbejder_Tlf.*, Medarbejder.Me_Fornavn, Medarbejder.Me_Efternavn From Medarbejder_Tlf inner join Medarbejder ON Medarbejder_Tlf.Me_ID = Medarbejder.Me_ID  Where Medarbejder.Me_Type = 'Advokat';";
+            string Advokat_Tlf_Advokat_Navn_Select = "Select Medarbejder_Tlf.Me_Tlf AS Advokat_Tlf, Medarbejder_Tlf.Me_ID AS Advokat_ID, Medarbejder.Me_Fornavn AS Advokat_Fornavn, Medarbejder.Me_Efternavn AS Advokat_Efternavn From Medarbejder_Tlf inner join Medarbejder ON Medarbejder_Tlf.Me_ID = Medarbejder.Me_ID  Where Medarbejder.Me_Type = 'Advokat';";
             // Clear the Columns 
             if (Advokat_dataGridView.DataMember == "Medarbejder")
             {
@@ -678,11 +680,11 @@ namespace View_GUI
             // Advokat_Tlf
             Advokat_Dataset.Clear();
             Datagridview_Loader Load_Advokat_Tlf = new Datagridview_Loader();
-            Load_Advokat_Tlf.DB_Populate(Advokat_Tlf_Advokat_navn_Select, Advokat_Dataset, "Medarbejder_Tlf");
+            Load_Advokat_Tlf.DB_Populate(Advokat_Tlf_Advokat_Navn_Select, Advokat_Dataset, "Medarbejder_Tlf");
             Advokat_dataGridView.DataSource = Advokat_Dataset;
             Advokat_dataGridView.DataMember = "Medarbejder_Tlf";
-            //Advokat_dataGridView.Columns[2].ReadOnly = true;  // Forbid Editing Advokat_ForNavn
-            //Advokat_dataGridView.Columns[3].ReadOnly = true;  // Forbid Editing Advokat_EfterNavn
+            Advokat_dataGridView.Columns[2].ReadOnly = true;  // Forbid Editing Advokat_ForNavn
+            Advokat_dataGridView.Columns[3].ReadOnly = true;  // Forbid Editing Advokat_EfterNavn
 
         }
 
@@ -697,24 +699,24 @@ namespace View_GUI
 
          //----SAVE-UPDATE--DATAGRIDVIEW-------::START::---------------------------------------------------------------------------------- 
 
-        // Save Cutomers "KUNDER"
+        // Save Cutomers "ADVOKATER"
         private void SaveDataGridView()
-        {
-            bool a = false;
-            // Save changes to DB  "UPDATE Advokatr"
-            if(Advokat_dataGridView.DataMember == "Advokat_Tlf") // Advokat_Tlf
+        {          
+            
+            // Save changes to DB  "UPDATE Advokater"
+            if(Advokat_dataGridView.DataMember == "Medarbejder_Tlf") // Advokat_Tlf
             {
                 Advokat_dataGridView.EndEdit();
                 DatagridView_Save Update_Advokater = new DatagridView_Save();
-                Update_Advokater.DatagridView_Update(Advokat_Tlf_Select_Query, Advokat_Dataset, "Advokat_Tlf", this.Advokat_dataGridView );
+                Update_Advokater.DatagridView_Update("Select Medarbejder_Tlf.Me_Tlf AS Advokat_Tlf, Medarbejder_Tlf.Me_ID AS Advokat_ID From Medarbejder_Tlf", Advokat_Dataset, "Medarbejder_Tlf", this.Advokat_dataGridView);
 
             }
 
-            else if(Advokat_dataGridView.DataMember == "Advokat")   // KUNDE
+            else if(Advokat_dataGridView.DataMember == "Medarbejder")   // ADVOKAT
             {
-                    Advokat_dataGridView.EndEdit();
-                    DatagridView_Save Update_Advokater = new DatagridView_Save();
-                    Update_Advokater.DatagridView_Update("Select* From Advokat", Advokat_Dataset, "Advokat", this.Advokat_dataGridView);
+                Advokat_dataGridView.EndEdit();
+                DatagridView_Save Update_Advokater = new DatagridView_Save();
+                Update_Advokater.DatagridView_Update("SELECT Select M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn AS Advokat_Efternavn , M.Me_PostNr AS Advokat_PostNr, M.Me_Adresse AS Advokat_Adresse, M.Me_Email AS Advokat_Email, M.Me_ID AS Advokat_ID, M.Me_Type, M.Me_Oprets_Dato AS Advokat_Oprets_Dato FROM Medarbejder Where Medarbejder.Me_Type = 'Medarbejder';", Advokat_Dataset, "Medarbejder", this.Advokat_dataGridView);
             }
          
 
@@ -723,7 +725,7 @@ namespace View_GUI
            
      
 
-        // UPDATE - Get row to Compare on Row enter "Used to determine if the row have been changed so we know when to edit "Save the changes""
+        // UPDATE - Get row to Compare on Row enter "Used to determine if the row have been changed so we know when to "Save the changes""
         private void Advokat_dataGridView_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
             Selected_Row_For_Compare();
@@ -735,7 +737,7 @@ namespace View_GUI
        // Row Enter - Main Method "It is used also for reseting the row Comparison when Column Header Is Clicked"
        private void Selected_Row_For_Compare()
         {
-            if (Advokat_dataGridView.SelectedRows.Count > 0) // I there are
+            if (Advokat_dataGridView.SelectedRows.Count > 0) // I there is selected row
             {
 
                 // Clone Row
@@ -759,7 +761,7 @@ namespace View_GUI
         // Row Leave - "ON - Validattion" - UPDATE "SAVE" - On ROW LEAVE AFTER VALIDATION  "Save"
         private void Advokat_dataGridView_RowValidated(object sender, DataGridViewCellEventArgs e)
         {
-            bool edited = false; // Check if the Row was edited
+             bool edited = false; // Check if the Row was edited
 
             if (Advokat_dataGridView.SelectedRows.Count > 0) // Selected minimum 1 row
             {
@@ -767,17 +769,20 @@ namespace View_GUI
 
                 for (int j = 0; j < Advokat_dataGridView.SelectedRows[0].Cells.Count; j++)
                 {
+                
+
                     if (Advokat_dataGridView.SelectedRows[0].Cells[j].Value != null && !Advokat_dataGridView.SelectedRows[0].Cells[j].Value.Equals(enterRow.Cells[j].Value))
                     {
                         edited = true;
                         break;
                     }
                 }
+               
+               
 
-
-                if (edited == true)
+                if (edited == true )
                 {
-                    DialogResult saveDialog = MessageBox.Show("Are you sure that you want ot save the changes?", "Save", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    DialogResult saveDialog = MessageBox.Show("Er du sikker på at du vil gemme?", "GEM", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                     if (saveDialog == DialogResult.Yes)
                     {
                         SaveDataGridView(); // Save
@@ -798,9 +803,7 @@ namespace View_GUI
         }
 
 
-
-
-
+      
 
 
         // Reset Row Selection "For Save"
@@ -814,11 +817,11 @@ namespace View_GUI
         // RefreshDatagridview "After Update OR Cancelation"
         private void RefreshDatagridview()
         {
-            if (Advokat_dataGridView.DataMember == "Advokat")
+            if (Advokat_dataGridView.DataMember == "Medarbejder")
             {
                 LoadAdvokater();
             }
-            else if (Advokat_dataGridView.DataMember == "Advokat_Tlf")
+            else if (Advokat_dataGridView.DataMember == "Medarbejder_Tlf")
             {
                 LoadAdvokat_Tlf();
             }
@@ -859,7 +862,7 @@ namespace View_GUI
 
 
 
-        // Show All Customers "Advokatr" - Button
+        // Show All Customers "Advokater" - Button
         private void show_all_button_Click(object sender, EventArgs e)
         {
             LoadAdvokater();
@@ -990,6 +993,7 @@ namespace View_GUI
             Search_Column_comboBox.Items.Add("Efternavn");
             Search_Column_comboBox.Items.Add("Adresse");
             Search_Column_comboBox.Items.Add("PostNr");
+            Search_Column_comboBox.Items.Add("Distrikt");
             Search_Column_comboBox.Items.Add("Tlf");
             Search_Column_comboBox.Items.Add("ID");
             Search_Column_comboBox.Items.Add("Email");
@@ -998,6 +1002,8 @@ namespace View_GUI
 
         }
 
+
+        // Search Queries - / Columns / Search - Text
         private void Search_Column()
         {
             //SearchColumn_SearchString
@@ -1005,31 +1011,34 @@ namespace View_GUI
             switch (Search_Column_comboBox.SelectedIndex)
             {
                 case 0: // ALL
-                    SearchColumn_SearchString = $"IF(ISNUMERIC('{search_textBox.Text}') = 0) BEGIN Select* From Advokat Where  Advokat_Fornavn {SearchOptions} OR Advokat_Efternavn {SearchOptions} OR Advokat_Adresse {SearchOptions} OR Advokat_Email {SearchOptions} OR Advokat_Oprets_Dato {SearchOptions} OR Advokat_ID {SearchOptions} END ELSE  BEGIN SELECT Advokat.*, Advokat_Tlf.Advokat_Tlf From Advokat Full Join Advokat_Tlf ON Advokat.Advokat_ID = Advokat_Tlf.Advokat_ID Where Advokat_PostNr {SearchOptions} OR Advokat_Tlf.Advokat_Tlf {SearchOptions} OR Advokat_Fornavn {SearchOptions} OR Advokat_Efternavn {SearchOptions} OR Advokat_Adresse {SearchOptions} OR Advokat_Email {SearchOptions} OR Advokat_Oprets_Dato {SearchOptions} OR Advokat.Advokat_ID {SearchOptions} END;  ";
+                    SearchColumn_SearchString = $"IF(ISNUMERIC('{search_textBox.Text}') = 0) BEGIN Select M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn AS Advokat_Efternavn , M.Me_PostNr AS Advokat_PostNr, P.Distrikt, M.Me_Adresse AS Advokat_Adresse, M.Me_Email AS Advokat_Email, T.Me_Tlf AS Advokat_Tlf, M.Me_ID AS Advokat_ID, M.Me_Type, M.Me_Oprets_Dato AS Advokat_Oprets_Dato From Medarbejder AS M FULL JOIN Medarbejder_Tlf As T ON M.Me_ID = T.Me_ID Full Join Post AS P ON M.Me_PostNr = P.PostNr Where M.Me_Fornavn {SearchOptions} OR M.Me_Efternavn {SearchOptions} OR P.Distrikt {SearchOptions} OR M.Me_Adresse {SearchOptions} OR M.Me_Email {SearchOptions} OR M.Me_ID {SearchOptions} OR M.Me_Oprets_Dato {SearchOptions} END ELSE BEGIN Select M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn AS Advokat_Efternavn , M.Me_PostNr AS Advokat_PostNr, P.Distrikt, M.Me_Adresse AS Advokat_Adresse, M.Me_Email AS Advokat_Email, T.Me_Tlf AS Advokat_Tlf, M.Me_ID AS Advokat_ID, M.Me_Type, M.Me_Oprets_Dato AS Advokat_Oprets_Dato From Medarbejder AS M FULL JOIN Medarbejder_Tlf As T ON M.Me_ID = T.Me_ID Full Join Post AS P ON M.Me_PostNr = P.PostNr Where M.Me_Fornavn {SearchOptions} OR M.Me_Efternavn {SearchOptions} OR M.Me_PostNr {SearchOptions} OR P.Distrikt {SearchOptions} OR M.Me_Adresse {SearchOptions} OR M.Me_Email {SearchOptions} OR T.Me_Tlf {SearchOptions} OR M.Me_ID {SearchOptions} OR M.Me_Oprets_Dato {SearchOptions} END;";
                     break;
                 case 1: // Name
-                    SearchColumn_SearchString = $"SELECT* From Advokat Where Advokat.Advokat_Fornavn {SearchOptions}";
+                    SearchColumn_SearchString = $"Select M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn AS Advokat_Efternavn , M.Me_PostNr AS Advokat_PostNr, P.Distrikt, M.Me_Adresse AS Advokat_Adresse, M.Me_Email AS Advokat_Email, T.Me_Tlf AS Advokat_Tlf, M.Me_ID AS Advokat_ID, M.Me_Type, M.Me_Oprets_Dato AS Advokat_Oprets_Dato From Medarbejder AS M FULL JOIN Medarbejder_Tlf As T ON M.Me_ID = T.Me_ID Full Join Post AS P ON M.Me_PostNr = P.PostNr Where M.Me_Fornavn {SearchOptions} AND M.Me_Type = 'Advokat';";
                     break;
                 case 2:   // Surname
-                    SearchColumn_SearchString = $"SELECT* From Advokat Where Advokat.Advokat_Efternavn {SearchOptions}";
+                    SearchColumn_SearchString = $"Select M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn AS Advokat_Efternavn , M.Me_PostNr AS Advokat_PostNr, P.Distrikt, M.Me_Adresse AS Advokat_Adresse, M.Me_Email AS Advokat_Email, T.Me_Tlf AS Advokat_Tlf, M.Me_ID AS Advokat_ID, M.Me_Type, M.Me_Oprets_Dato AS Advokat_Oprets_Dato From Medarbejder AS M FULL JOIN Medarbejder_Tlf As T ON M.Me_ID = T.Me_ID Full Join Post AS P ON M.Me_PostNr = P.PostNr Where M.Me_Efternavn {SearchOptions} AND M.Me_Type = 'Advokat';";
                     break;
                 case 3:  //Adress
-                    SearchColumn_SearchString = $"SELECT* From Advokat Where Advokat.Advokat_Adresse {SearchOptions}";
+                    SearchColumn_SearchString = $"Select M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn AS Advokat_Efternavn , M.Me_PostNr AS Advokat_PostNr, P.Distrikt, M.Me_Adresse AS Advokat_Adresse, M.Me_Email AS Advokat_Email, T.Me_Tlf AS Advokat_Tlf, M.Me_ID AS Advokat_ID, M.Me_Type, M.Me_Oprets_Dato AS Advokat_Oprets_Dato From Medarbejder AS M FULL JOIN Medarbejder_Tlf As T ON M.Me_ID = T.Me_ID Full Join Post AS P ON M.Me_PostNr = P.PostNr Where M.Me_Adresse {SearchOptions} AND M.Me_Type = 'Advokat';";
                     break;
                 case 4:  // Zip-Code
-                    SearchColumn_SearchString = $" IF(ISNUMERIC('{search_textBox.Text}') = 1) BEGIN SELECT* From Advokat Where Advokat_PostNr {SearchOptions} END";
+                    SearchColumn_SearchString = $" IF(ISNUMERIC('{search_textBox.Text}') = 1) BEGIN Select M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn AS Advokat_Efternavn , M.Me_PostNr AS Advokat_PostNr, P.Distrikt, M.Me_Adresse AS Advokat_Adresse, M.Me_Email AS Advokat_Email, T.Me_Tlf AS Advokat_Tlf, M.Me_ID AS Advokat_ID, M.Me_Type, M.Me_Oprets_Dato AS Advokat_Oprets_Dato From Medarbejder AS M FULL JOIN Medarbejder_Tlf As T ON M.Me_ID = T.Me_ID Full Join Post AS P ON M.Me_PostNr = P.PostNr Where M.Me_PostNr {SearchOptions} AND M.Me_Type = 'Advokat'; END";
                     break;
-                case 5: //TLF
-                    SearchColumn_SearchString = $" IF(ISNUMERIC('{search_textBox.Text}') = 1) BEGIN SELECT Advokat.*, Advokat_Tlf.Advokat_Tlf From Advokat Full Join Advokat_Tlf ON  Advokat.Advokat_ID = Advokat_Tlf.Advokat_ID Where Advokat_Tlf.Advokat_Tlf {SearchOptions} END";
+                case 5: // Ditrict
+                    SearchColumn_SearchString = $" Select M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn AS Advokat_Efternavn , M.Me_PostNr AS Advokat_PostNr, P.Distrikt, M.Me_Adresse AS Advokat_Adresse, M.Me_Email AS Advokat_Email, T.Me_Tlf AS Advokat_Tlf, M.Me_ID AS Advokat_ID, M.Me_Type, M.Me_Oprets_Dato AS Advokat_Oprets_Dato From Medarbejder AS M FULL JOIN Medarbejder_Tlf As T ON M.Me_ID = T.Me_ID Full Join Post AS P ON M.Me_PostNr = P.PostNr Where P.Distrikt {SearchOptions} AND M.Me_Type = 'Advokat';";
                     break;
-                case 6: // ID
-                    SearchColumn_SearchString = $"SELECT* From Advokat Where Advokat.Advokat_ID {SearchOptions}";
+                case 6: //TLF
+                    SearchColumn_SearchString = $" IF(ISNUMERIC('{search_textBox.Text}') = 1) BEGIN Select M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn AS Advokat_Efternavn , M.Me_PostNr AS Advokat_PostNr, P.Distrikt, M.Me_Adresse AS Advokat_Adresse, M.Me_Email AS Advokat_Email, T.Me_Tlf AS Advokat_Tlf, M.Me_ID AS Advokat_ID, M.Me_Type, M.Me_Oprets_Dato AS Advokat_Oprets_Dato From Medarbejder AS M FULL JOIN Medarbejder_Tlf As T ON M.Me_ID = T.Me_ID Full Join Post AS P ON M.Me_PostNr = P.PostNr Where T.Me_Tlf {SearchOptions} AND M.Me_Type = 'Advokat'; END";
                     break;
-                case 7: // Email
-                    SearchColumn_SearchString = $"SELECT* From Advokat Where Advokat.Advokat_Email {SearchOptions}";
+                case 7: // ID
+                    SearchColumn_SearchString = $"Select M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn AS Advokat_Efternavn , M.Me_PostNr AS Advokat_PostNr, P.Distrikt, M.Me_Adresse AS Advokat_Adresse, M.Me_Email AS Advokat_Email, T.Me_Tlf AS Advokat_Tlf, M.Me_ID AS Advokat_ID, M.Me_Type, M.Me_Oprets_Dato AS Advokat_Oprets_Dato From Medarbejder AS M FULL JOIN Medarbejder_Tlf As T ON M.Me_ID = T.Me_ID Full Join Post AS P ON M.Me_PostNr = P.PostNr Where M.Me_ID {SearchOptions} AND M.Me_Type = 'Advokat';";
                     break;
-                case 8: // Date
-                    SearchColumn_SearchString = $"SELECT* From Advokat Where Advokat.Advokat_Oprets_Dato {SearchOptions}";
+                case 8: // Email
+                    SearchColumn_SearchString = $"Select M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn AS Advokat_Efternavn , M.Me_PostNr AS Advokat_PostNr, P.Distrikt, M.Me_Adresse AS Advokat_Adresse, M.Me_Email AS Advokat_Email, T.Me_Tlf AS Advokat_Tlf, M.Me_ID AS Advokat_ID, M.Me_Type, M.Me_Oprets_Dato AS Advokat_Oprets_Dato From Medarbejder AS M FULL JOIN Medarbejder_Tlf As T ON M.Me_ID = T.Me_ID Full Join Post AS P ON M.Me_PostNr = P.PostNr Where M.Me_Email {SearchOptions} AND M.Me_Type = 'Advokat';";
+                    break;
+                case 9: // Date
+                    SearchColumn_SearchString = $"Select M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn AS Advokat_Efternavn , M.Me_PostNr AS Advokat_PostNr, P.Distrikt, M.Me_Adresse AS Advokat_Adresse, M.Me_Email AS Advokat_Email, T.Me_Tlf AS Advokat_Tlf, M.Me_ID AS Advokat_ID, M.Me_Type, M.Me_Oprets_Dato AS Advokat_Oprets_Dato From Medarbejder AS M FULL JOIN Medarbejder_Tlf As T ON M.Me_ID = T.Me_ID Full Join Post AS P ON M.Me_PostNr = P.PostNr Where M.Me_Oprets_Dato {SearchOptions} AND M.Me_Type = 'Advokat';";
 
                     break;
                   
@@ -1046,9 +1055,9 @@ namespace View_GUI
         {
             Advokat_Dataset.Clear(); // Clear all rows so we begin on fresh datagridview "If We dont do that the old Data will remain and the new data will be inserted at the bottom of the datagridview"
             Datagridview_Loader Load_Search_Result = new Datagridview_Loader();
-            Load_Search_Result.DB_Populate(SearchColumn_SearchString, Advokat_Dataset, "Advokat");
+            Load_Search_Result.DB_Populate(SearchColumn_SearchString, Advokat_Dataset, "Medarbejder");
             Advokat_dataGridView.DataSource = Advokat_Dataset;
-            Advokat_dataGridView.DataMember = "Advokat";
+            Advokat_dataGridView.DataMember = "Medarbejder";
  
         }
 
@@ -1072,6 +1081,12 @@ namespace View_GUI
         {
             
             Search_Resources();
+
+            if (search_textBox.Text == "")
+            {
+                LoadAdvokater();
+            }
+
         }
 
        
@@ -1167,17 +1182,19 @@ namespace View_GUI
         // Mark Current row
         private void mark_current_row_button_Click(object sender, EventArgs e)
         {
-            if(Advokat_dataGridView.SelectedRows[0].DefaultCellStyle.BackColor != Color.FromArgb(191, 50, 95))
-            {
-            Advokat_dataGridView.SelectedRows[0].DefaultCellStyle.BackColor = Color.FromArgb(191, 50, 95);
-            Advokat_dataGridView.SelectedRows[0].DefaultCellStyle.ForeColor = Color.Black;
+            if(Advokat_dataGridView.CurrentRow != null)
+            { 
+                    if (Advokat_dataGridView.SelectedRows[0].DefaultCellStyle.BackColor != Color.FromArgb(191, 50, 95))
+                    {
+                       Advokat_dataGridView.SelectedRows[0].DefaultCellStyle.BackColor = Color.FromArgb(191, 50, 95);
+                       Advokat_dataGridView.SelectedRows[0].DefaultCellStyle.ForeColor = Color.Black;
+                    }
+                   else
+                   {
+                       Advokat_dataGridView.SelectedRows[0].DefaultCellStyle.BackColor = Color.FromArgb(2, 222, 160);
+                       Advokat_dataGridView.SelectedRows[0].DefaultCellStyle.ForeColor = DefaultForeColor;
+                   }
             }
-            else
-            {
-                Advokat_dataGridView.SelectedRows[0].DefaultCellStyle.BackColor = Color.FromArgb(2, 222, 160);
-                Advokat_dataGridView.SelectedRows[0].DefaultCellStyle.ForeColor = DefaultForeColor;
-            }
-
         }
         //--------------Datagridview - Change - Color------------::END:----------------------------------------------------------------
 
@@ -1209,7 +1226,7 @@ namespace View_GUI
 
 
 
-
+        // Open Last File
         private void OpenLastFile()
         {
        
@@ -1283,7 +1300,7 @@ namespace View_GUI
                 Directory.CreateDirectory(LocalFolderPath);
             }
 
-            using(FileStream stream = new FileStream(LocalFolderPath + "Advokatr_PDF -  "+DateTime.Now.ToString("dd-MM-yyyy   HH-mm-ss")+".pdf", FileMode.Create))
+            using(FileStream stream = new FileStream(LocalFolderPath + "Advokater_PDF -  "+DateTime.Now.ToString("dd-MM-yyyy   HH-mm-ss")+".pdf", FileMode.Create))
             {
                 Document PDF_DOC = new Document(PageSize.A2, 10f, 10f, 10f, 0f);
                 PdfWriter.GetInstance(PDF_DOC, stream);
@@ -1294,58 +1311,7 @@ namespace View_GUI
 
 
             }
-
-
-
-            ////USING -  iTextSharp - Class
-            //PdfPTable pdfTable = new PdfPTable(Advokat_dataGridView.ColumnCount);
-            //pdfTable.DefaultCell.Padding = 3;
-            //pdfTable.WidthPercentage = 100;
-            //pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
-            //pdfTable.DefaultCell.BorderWidth = 1;
-
-            ////Adding Columns to the Pdf
-            //foreach (DataGridViewColumn column in Advokat_dataGridView.Columns)
-            //{
-            //    PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
-            //    cell.BackgroundColor = new iTextSharp.text.BaseColor(240, 240, 240);
-            //    pdfTable.AddCell(cell);
-            //}
-
-            ////Add Rows and Cells to the Pdf
-
-            //for (int i = 0; i < Advokat_dataGridView.Rows.Count; i++)
-            //{
-            //    for (int a = 0; a < Advokat_dataGridView.Rows[i].Cells.Count; a++)
-            //    {
-            //        if (Advokat_dataGridView.Rows[i].Cells[a].Value != null)
-            //        {
-
-            //            pdfTable.AddCell(Advokat_dataGridView.Rows[i].Cells[a].Value.ToString());
-
-            //        }
-
-
-            //    }
-            //}
-
-
-            ////Export to PDF
-            //string folderPath = "C:\\PDFs\\";
-            //if (!Directory.Exists(folderPath))
-            //{
-            //    Directory.CreateDirectory(folderPath);
-            //}
-            //using (FileStream stream = new FileStream(folderPath + "DataGridViewExport.pdf", FileMode.Create))
-            //{
-            //    Document pdfDoc = new Document(PageSize.A2, 10f, 10f, 10f, 0f);
-            //    PdfWriter.GetInstance(pdfDoc, stream);
-            //    pdfDoc.Open();
-            //    pdfDoc.Add(pdfTable);
-            //    pdfDoc.Close();
-            //    stream.Close();
-            //}
-
+          
         }
 
 
@@ -1375,6 +1341,7 @@ namespace View_GUI
 
             int oldHeight = Advokat_dataGridView.Height;
             Advokat_dataGridView.Height = Advokat_dataGridView.RowCount * Advokat_dataGridView.RowTemplate.Height;
+
 
 
 
@@ -1426,9 +1393,9 @@ namespace View_GUI
         //-------------CREATE-TEXTBOXES -- Reset Color on Typing-------------------::START:----------------------------------------------
 
         // Name - Reset Color
-        private void advokatr_name_textBox_TextChanged(object sender, EventArgs e)
+        private void advokater_name_textBox_TextChanged(object sender, EventArgs e)
         {
-            advokatr_name_textBox.BackColor = Color.FromArgb(220, 243, 250);
+            advokater_name_textBox.BackColor = Color.FromArgb(220, 243, 250);
         }
 
 
@@ -1436,9 +1403,9 @@ namespace View_GUI
 
 
         // Surname - Reset Color
-        private void advokatr_surname_textBox_TextChanged(object sender, EventArgs e)
+        private void advokater_surname_textBox_TextChanged(object sender, EventArgs e)
         {
-            advokatr_surname_textBox.BackColor = Color.FromArgb(220, 243, 250);
+            advokater_surname_textBox.BackColor = Color.FromArgb(220, 243, 250);
         }
 
 
@@ -1446,27 +1413,27 @@ namespace View_GUI
 
 
         // Zip Code - Reset Background
-        private void advokatr_zipcCode_textBox_TextChanged(object sender, EventArgs e)
+        private void advokater_zipcCode_textBox_TextChanged(object sender, EventArgs e)
         {
-            advokatr_zipcCode_textBox.BackColor = Color.FromArgb(220, 243, 250);
+            advokater_zipcCode_textBox.BackColor = Color.FromArgb(220, 243, 250);
         }
 
 
 
 
         // Adress - Reset Background
-        private void advokatr_adr_textBox_TextChanged(object sender, EventArgs e)
+        private void advokater_adr_textBox_TextChanged(object sender, EventArgs e)
         {
-            advokatr_adr_textBox.BackColor = Color.FromArgb(220, 243, 250);
+            advokater_adr_textBox.BackColor = Color.FromArgb(220, 243, 250);
         }
 
 
 
 
         // Tlf - Reset Background
-        private void advokatr_tlf_textBox_TextChanged(object sender, EventArgs e)
+        private void advokater_tlf_textBox_TextChanged(object sender, EventArgs e)
         {
-            advokatr_tlf_textBox.BackColor = Color.FromArgb(220, 243, 250);
+            advokater_tlf_textBox.BackColor = Color.FromArgb(220, 243, 250);
         }
 
 
@@ -1476,7 +1443,15 @@ namespace View_GUI
             advokat_email_textBox.BackColor = Color.FromArgb(220, 243, 250);
         }
 
-     
+
+        // ERROR - Handling - Default Datagridview Error handling
+        private void Advokat_dataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            Advokat_dataGridView.RefreshEdit(); // Reset
+            MessageBox.Show("Der Opståd Fejl, Input er ikke i korekt format","Fejl", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+
 
         //-------------CREATE-TEXTBOXES -- Reset Color on Typing-------------------::END:--------------------------------------------------
 

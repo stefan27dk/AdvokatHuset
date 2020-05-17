@@ -30,24 +30,17 @@
         {
             this.Advokat_Top_label = new System.Windows.Forms.Label();
             this.backgroundName_Top_panel = new System.Windows.Forms.Panel();
-            this.advokatr_name_textBox = new System.Windows.Forms.TextBox();
+            this.advokater_name_textBox = new System.Windows.Forms.TextBox();
             this.backPanel_Textboxes_panel = new System.Windows.Forms.Panel();
-            this.create_Clear_All_textboxes_button = new System.Windows.Forms.Button();
-            this.email_label = new System.Windows.Forms.Label();
             this.advokat_email_textBox = new System.Windows.Forms.TextBox();
-            this.advokatr_Save_button = new System.Windows.Forms.Button();
-            this.adr_label = new System.Windows.Forms.Label();
-            this.advokatr_adr_textBox = new System.Windows.Forms.TextBox();
+            this.advokater_adr_textBox = new System.Windows.Forms.TextBox();
             this.background_textboxes_top_panel = new System.Windows.Forms.Panel();
-            this.opret_Advokatr_label = new System.Windows.Forms.Label();
-            this.zipCode_label = new System.Windows.Forms.Label();
-            this.advokatr_zipcCode_textBox = new System.Windows.Forms.TextBox();
-            this.tlf_label = new System.Windows.Forms.Label();
-            this.advokatr_tlf_textBox = new System.Windows.Forms.TextBox();
-            this.surname_label = new System.Windows.Forms.Label();
-            this.advokatr_surname_textBox = new System.Windows.Forms.TextBox();
-            this.name_label = new System.Windows.Forms.Label();
+            this.opret_Advokater_label = new System.Windows.Forms.Label();
+            this.advokater_zipcCode_textBox = new System.Windows.Forms.TextBox();
+            this.advokater_tlf_textBox = new System.Windows.Forms.TextBox();
+            this.advokater_surname_textBox = new System.Windows.Forms.TextBox();
             this.datagridviewBackground_panel = new System.Windows.Forms.Panel();
+            this.Advokat_dataGridView = new System.Windows.Forms.DataGridView();
             this.background_DGV_Search_panel = new System.Windows.Forms.Panel();
             this.search_textBox = new System.Windows.Forms.TextBox();
             this.search_options_comboBox = new System.Windows.Forms.ComboBox();
@@ -65,23 +58,31 @@
             this.change_DatagridView_Color_button = new System.Windows.Forms.Button();
             this.mark_current_row_button = new System.Windows.Forms.Button();
             this.background_DGV_panel2 = new System.Windows.Forms.Panel();
+            this.Advokat_Speciale_button = new System.Windows.Forms.Button();
             this.Advokat_Tlf_button = new System.Windows.Forms.Button();
             this.show_all_button = new System.Windows.Forms.Button();
-            this.Advokat_dataGridView = new System.Windows.Forms.DataGridView();
             this.top_Menu_background_panel = new System.Windows.Forms.Panel();
-            this.vis_rediger_advokatr_button = new System.Windows.Forms.Button();
+            this.vis_rediger_advokater_button = new System.Windows.Forms.Button();
             this.opret_advokat_button = new System.Windows.Forms.Button();
+            this.create_Clear_All_textboxes_button = new System.Windows.Forms.Button();
+            this.email_label = new System.Windows.Forms.Label();
+            this.advokater_Save_button = new System.Windows.Forms.Button();
+            this.adr_label = new System.Windows.Forms.Label();
+            this.zipCode_label = new System.Windows.Forms.Label();
+            this.tlf_label = new System.Windows.Forms.Label();
+            this.surname_label = new System.Windows.Forms.Label();
+            this.name_label = new System.Windows.Forms.Label();
             this.backgroundName_Top_panel.SuspendLayout();
             this.backPanel_Textboxes_panel.SuspendLayout();
             this.background_textboxes_top_panel.SuspendLayout();
             this.datagridviewBackground_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Advokat_dataGridView)).BeginInit();
             this.background_DGV_Search_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.search_Datagridview_pictureBox)).BeginInit();
             this.background_DGV_panel1.SuspendLayout();
             this.background_DGV_panel4.SuspendLayout();
             this.background_DGV_panel3.SuspendLayout();
             this.background_DGV_panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Advokat_dataGridView)).BeginInit();
             this.top_Menu_background_panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,9 +93,9 @@
             this.Advokat_Top_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(92)))));
             this.Advokat_Top_label.Location = new System.Drawing.Point(11, 10);
             this.Advokat_Top_label.Name = "Advokat_Top_label";
-            this.Advokat_Top_label.Size = new System.Drawing.Size(89, 23);
+            this.Advokat_Top_label.Size = new System.Drawing.Size(100, 23);
             this.Advokat_Top_label.TabIndex = 0;
-            this.Advokat_Top_label.Text = "Advokatr";
+            this.Advokat_Top_label.Text = "Advokater";
             // 
             // backgroundName_Top_panel
             // 
@@ -103,19 +104,19 @@
             this.backgroundName_Top_panel.Controls.Add(this.Advokat_Top_label);
             this.backgroundName_Top_panel.Location = new System.Drawing.Point(18, 58);
             this.backgroundName_Top_panel.Name = "backgroundName_Top_panel";
-            this.backgroundName_Top_panel.Size = new System.Drawing.Size(108, 44);
+            this.backgroundName_Top_panel.Size = new System.Drawing.Size(115, 44);
             this.backgroundName_Top_panel.TabIndex = 9;
             // 
-            // advokatr_name_textBox
+            // advokater_name_textBox
             // 
-            this.advokatr_name_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
-            this.advokatr_name_textBox.Location = new System.Drawing.Point(158, 63);
-            this.advokatr_name_textBox.MaxLength = 49;
-            this.advokatr_name_textBox.Name = "advokatr_name_textBox";
-            this.advokatr_name_textBox.Size = new System.Drawing.Size(100, 20);
-            this.advokatr_name_textBox.TabIndex = 1;
-            this.advokatr_name_textBox.TextChanged += new System.EventHandler(this.advokatr_name_textBox_TextChanged);
-            this.advokatr_name_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.advokatr_name_textBox_KeyPress);
+            this.advokater_name_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
+            this.advokater_name_textBox.Location = new System.Drawing.Point(158, 63);
+            this.advokater_name_textBox.MaxLength = 49;
+            this.advokater_name_textBox.Name = "advokater_name_textBox";
+            this.advokater_name_textBox.Size = new System.Drawing.Size(100, 20);
+            this.advokater_name_textBox.TabIndex = 1;
+            this.advokater_name_textBox.TextChanged += new System.EventHandler(this.advokater_name_textBox_TextChanged);
+            this.advokater_name_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.advokater_name_textBox_KeyPress);
             // 
             // backPanel_Textboxes_panel
             // 
@@ -125,53 +126,23 @@
             this.backPanel_Textboxes_panel.Controls.Add(this.create_Clear_All_textboxes_button);
             this.backPanel_Textboxes_panel.Controls.Add(this.email_label);
             this.backPanel_Textboxes_panel.Controls.Add(this.advokat_email_textBox);
-            this.backPanel_Textboxes_panel.Controls.Add(this.advokatr_Save_button);
+            this.backPanel_Textboxes_panel.Controls.Add(this.advokater_Save_button);
             this.backPanel_Textboxes_panel.Controls.Add(this.adr_label);
-            this.backPanel_Textboxes_panel.Controls.Add(this.advokatr_adr_textBox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.advokater_adr_textBox);
             this.backPanel_Textboxes_panel.Controls.Add(this.background_textboxes_top_panel);
             this.backPanel_Textboxes_panel.Controls.Add(this.zipCode_label);
-            this.backPanel_Textboxes_panel.Controls.Add(this.advokatr_zipcCode_textBox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.advokater_zipcCode_textBox);
             this.backPanel_Textboxes_panel.Controls.Add(this.tlf_label);
-            this.backPanel_Textboxes_panel.Controls.Add(this.advokatr_tlf_textBox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.advokater_tlf_textBox);
             this.backPanel_Textboxes_panel.Controls.Add(this.surname_label);
-            this.backPanel_Textboxes_panel.Controls.Add(this.advokatr_surname_textBox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.advokater_surname_textBox);
             this.backPanel_Textboxes_panel.Controls.Add(this.name_label);
-            this.backPanel_Textboxes_panel.Controls.Add(this.advokatr_name_textBox);
-            this.backPanel_Textboxes_panel.Location = new System.Drawing.Point(478, 170);
+            this.backPanel_Textboxes_panel.Controls.Add(this.advokater_name_textBox);
+            this.backPanel_Textboxes_panel.Location = new System.Drawing.Point(636, 170);
             this.backPanel_Textboxes_panel.Name = "backPanel_Textboxes_panel";
             this.backPanel_Textboxes_panel.Size = new System.Drawing.Size(394, 388);
             this.backPanel_Textboxes_panel.TabIndex = 11;
             this.backPanel_Textboxes_panel.Visible = false;
-            // 
-            // create_Clear_All_textboxes_button
-            // 
-            this.create_Clear_All_textboxes_button.BackColor = System.Drawing.Color.Transparent;
-            this.create_Clear_All_textboxes_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
-            this.create_Clear_All_textboxes_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.create_Clear_All_textboxes_button.FlatAppearance.BorderSize = 0;
-            this.create_Clear_All_textboxes_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.create_Clear_All_textboxes_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.create_Clear_All_textboxes_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.create_Clear_All_textboxes_button.ForeColor = System.Drawing.Color.Black;
-            this.create_Clear_All_textboxes_button.Location = new System.Drawing.Point(119, 339);
-            this.create_Clear_All_textboxes_button.Name = "create_Clear_All_textboxes_button";
-            this.create_Clear_All_textboxes_button.Size = new System.Drawing.Size(28, 23);
-            this.create_Clear_All_textboxes_button.TabIndex = 23;
-            this.create_Clear_All_textboxes_button.UseVisualStyleBackColor = false;
-            this.create_Clear_All_textboxes_button.Click += new System.EventHandler(this.create_Clear_All_textboxes_button_Click);
-            // 
-            // email_label
-            // 
-            this.email_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.email_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.email_label.Image = global::View_GUI.Properties.Resources.At_Mail_icon;
-            this.email_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.email_label.Location = new System.Drawing.Point(53, 287);
-            this.email_label.Name = "email_label";
-            this.email_label.Size = new System.Drawing.Size(98, 33);
-            this.email_label.TabIndex = 22;
-            this.email_label.Text = "Email:";
-            this.email_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // advokat_email_textBox
             // 
@@ -183,153 +154,70 @@
             this.advokat_email_textBox.TabIndex = 6;
             this.advokat_email_textBox.TextChanged += new System.EventHandler(this.advokat_email_textBox_TextChanged);
             // 
-            // advokatr_Save_button
+            // advokater_adr_textBox
             // 
-            this.advokatr_Save_button.FlatAppearance.BorderSize = 0;
-            this.advokatr_Save_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.advokatr_Save_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
-            this.advokatr_Save_button.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.advokatr_Save_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
-            this.advokatr_Save_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
-            this.advokatr_Save_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.advokatr_Save_button.Location = new System.Drawing.Point(162, 336);
-            this.advokatr_Save_button.Name = "advokatr_Save_button";
-            this.advokatr_Save_button.Size = new System.Drawing.Size(90, 30);
-            this.advokatr_Save_button.TabIndex = 7;
-            this.advokatr_Save_button.Text = "Gem";
-            this.advokatr_Save_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.advokatr_Save_button.UseVisualStyleBackColor = true;
-            this.advokatr_Save_button.Click += new System.EventHandler(this.advokatr_Save_button_Click);
-            // 
-            // adr_label
-            // 
-            this.adr_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.adr_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.adr_label.Image = global::View_GUI.Properties.Resources.my_numbers_icon;
-            this.adr_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.adr_label.Location = new System.Drawing.Point(70, 197);
-            this.adr_label.Name = "adr_label";
-            this.adr_label.Size = new System.Drawing.Size(80, 25);
-            this.adr_label.TabIndex = 19;
-            this.adr_label.Text = "Adr:";
-            this.adr_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // advokatr_adr_textBox
-            // 
-            this.advokatr_adr_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
-            this.advokatr_adr_textBox.Location = new System.Drawing.Point(158, 201);
-            this.advokatr_adr_textBox.MaxLength = 49;
-            this.advokatr_adr_textBox.Name = "advokatr_adr_textBox";
-            this.advokatr_adr_textBox.Size = new System.Drawing.Size(100, 20);
-            this.advokatr_adr_textBox.TabIndex = 4;
-            this.advokatr_adr_textBox.TextChanged += new System.EventHandler(this.advokatr_adr_textBox_TextChanged);
+            this.advokater_adr_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
+            this.advokater_adr_textBox.Location = new System.Drawing.Point(158, 201);
+            this.advokater_adr_textBox.MaxLength = 49;
+            this.advokater_adr_textBox.Name = "advokater_adr_textBox";
+            this.advokater_adr_textBox.Size = new System.Drawing.Size(100, 20);
+            this.advokater_adr_textBox.TabIndex = 4;
+            this.advokater_adr_textBox.TextChanged += new System.EventHandler(this.advokater_adr_textBox_TextChanged);
             // 
             // background_textboxes_top_panel
             // 
             this.background_textboxes_top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.background_textboxes_top_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.background_textboxes_top_panel.Controls.Add(this.opret_Advokatr_label);
+            this.background_textboxes_top_panel.Controls.Add(this.opret_Advokater_label);
             this.background_textboxes_top_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.background_textboxes_top_panel.Location = new System.Drawing.Point(0, 0);
             this.background_textboxes_top_panel.Name = "background_textboxes_top_panel";
             this.background_textboxes_top_panel.Size = new System.Drawing.Size(392, 26);
             this.background_textboxes_top_panel.TabIndex = 3;
             // 
-            // opret_Advokatr_label
+            // opret_Advokater_label
             // 
-            this.opret_Advokatr_label.AutoSize = true;
-            this.opret_Advokatr_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.opret_Advokatr_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(92)))));
-            this.opret_Advokatr_label.Location = new System.Drawing.Point(151, 3);
-            this.opret_Advokatr_label.Name = "opret_Advokatr_label";
-            this.opret_Advokatr_label.Size = new System.Drawing.Size(119, 21);
-            this.opret_Advokatr_label.TabIndex = 1;
-            this.opret_Advokatr_label.Text = "Opret Advokat";
+            this.opret_Advokater_label.AutoSize = true;
+            this.opret_Advokater_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.opret_Advokater_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(92)))));
+            this.opret_Advokater_label.Location = new System.Drawing.Point(139, 3);
+            this.opret_Advokater_label.Name = "opret_Advokater_label";
+            this.opret_Advokater_label.Size = new System.Drawing.Size(119, 21);
+            this.opret_Advokater_label.TabIndex = 1;
+            this.opret_Advokater_label.Text = "Opret Advokat";
             // 
-            // zipCode_label
+            // advokater_zipcCode_textBox
             // 
-            this.zipCode_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.zipCode_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.zipCode_label.Image = global::View_GUI.Properties.Resources.Compressed_File_Zip_icon;
-            this.zipCode_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.zipCode_label.Location = new System.Drawing.Point(49, 150);
-            this.zipCode_label.Name = "zipCode_label";
-            this.zipCode_label.Size = new System.Drawing.Size(105, 25);
-            this.zipCode_label.TabIndex = 17;
-            this.zipCode_label.Text = "PostNr:";
-            this.zipCode_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.advokater_zipcCode_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
+            this.advokater_zipcCode_textBox.Location = new System.Drawing.Point(158, 155);
+            this.advokater_zipcCode_textBox.MaxLength = 4;
+            this.advokater_zipcCode_textBox.Name = "advokater_zipcCode_textBox";
+            this.advokater_zipcCode_textBox.Size = new System.Drawing.Size(100, 20);
+            this.advokater_zipcCode_textBox.TabIndex = 3;
+            this.advokater_zipcCode_textBox.TextChanged += new System.EventHandler(this.advokater_zipcCode_textBox_TextChanged);
+            this.advokater_zipcCode_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.advokater_zipcCode_textBox_KeyPress);
             // 
-            // advokatr_zipcCode_textBox
+            // advokater_tlf_textBox
             // 
-            this.advokatr_zipcCode_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
-            this.advokatr_zipcCode_textBox.Location = new System.Drawing.Point(158, 155);
-            this.advokatr_zipcCode_textBox.MaxLength = 4;
-            this.advokatr_zipcCode_textBox.Name = "advokatr_zipcCode_textBox";
-            this.advokatr_zipcCode_textBox.Size = new System.Drawing.Size(100, 20);
-            this.advokatr_zipcCode_textBox.TabIndex = 3;
-            this.advokatr_zipcCode_textBox.TextChanged += new System.EventHandler(this.advokatr_zipcCode_textBox_TextChanged);
-            this.advokatr_zipcCode_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.advokatr_zipcCode_textBox_KeyPress);
+            this.advokater_tlf_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
+            this.advokater_tlf_textBox.Location = new System.Drawing.Point(158, 247);
+            this.advokater_tlf_textBox.MaxLength = 8;
+            this.advokater_tlf_textBox.Name = "advokater_tlf_textBox";
+            this.advokater_tlf_textBox.Size = new System.Drawing.Size(100, 20);
+            this.advokater_tlf_textBox.TabIndex = 5;
+            this.advokater_tlf_textBox.TextChanged += new System.EventHandler(this.advokater_tlf_textBox_TextChanged);
+            this.advokater_tlf_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.advokater_tlf_textBox_KeyPress);
             // 
-            // tlf_label
+            // advokater_surname_textBox
             // 
-            this.tlf_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.tlf_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.tlf_label.Image = global::View_GUI.Properties.Resources.Phone_icon__1_;
-            this.tlf_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.tlf_label.Location = new System.Drawing.Point(80, 243);
-            this.tlf_label.Name = "tlf_label";
-            this.tlf_label.Size = new System.Drawing.Size(73, 24);
-            this.tlf_label.TabIndex = 15;
-            this.tlf_label.Text = "Tlf:";
-            this.tlf_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // advokatr_tlf_textBox
-            // 
-            this.advokatr_tlf_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
-            this.advokatr_tlf_textBox.Location = new System.Drawing.Point(158, 247);
-            this.advokatr_tlf_textBox.MaxLength = 8;
-            this.advokatr_tlf_textBox.Name = "advokatr_tlf_textBox";
-            this.advokatr_tlf_textBox.Size = new System.Drawing.Size(100, 20);
-            this.advokatr_tlf_textBox.TabIndex = 5;
-            this.advokatr_tlf_textBox.TextChanged += new System.EventHandler(this.advokatr_tlf_textBox_TextChanged);
-            this.advokatr_tlf_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.advokatr_tlf_textBox_KeyPress);
-            // 
-            // surname_label
-            // 
-            this.surname_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.surname_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.surname_label.Image = global::View_GUI.Properties.Resources.name_card_icon;
-            this.surname_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.surname_label.Location = new System.Drawing.Point(25, 104);
-            this.surname_label.Name = "surname_label";
-            this.surname_label.Size = new System.Drawing.Size(125, 25);
-            this.surname_label.TabIndex = 13;
-            this.surname_label.Text = "Efternavn:";
-            this.surname_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // advokatr_surname_textBox
-            // 
-            this.advokatr_surname_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
-            this.advokatr_surname_textBox.Location = new System.Drawing.Point(158, 109);
-            this.advokatr_surname_textBox.MaxLength = 49;
-            this.advokatr_surname_textBox.Name = "advokatr_surname_textBox";
-            this.advokatr_surname_textBox.Size = new System.Drawing.Size(100, 20);
-            this.advokatr_surname_textBox.TabIndex = 2;
-            this.advokatr_surname_textBox.TextChanged += new System.EventHandler(this.advokatr_surname_textBox_TextChanged);
-            this.advokatr_surname_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.advokatr_surname_textBox_KeyPress);
-            // 
-            // name_label
-            // 
-            this.name_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.name_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.name_label.Image = global::View_GUI.Properties.Resources.ID_icon;
-            this.name_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.name_label.Location = new System.Drawing.Point(56, 59);
-            this.name_label.Name = "name_label";
-            this.name_label.Size = new System.Drawing.Size(95, 24);
-            this.name_label.TabIndex = 2;
-            this.name_label.Text = "Navn:";
-            this.name_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.advokater_surname_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
+            this.advokater_surname_textBox.Location = new System.Drawing.Point(158, 109);
+            this.advokater_surname_textBox.MaxLength = 49;
+            this.advokater_surname_textBox.Name = "advokater_surname_textBox";
+            this.advokater_surname_textBox.Size = new System.Drawing.Size(100, 20);
+            this.advokater_surname_textBox.TabIndex = 2;
+            this.advokater_surname_textBox.TextChanged += new System.EventHandler(this.advokater_surname_textBox_TextChanged);
+            this.advokater_surname_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.advokater_surname_textBox_KeyPress);
             // 
             // datagridviewBackground_panel
             // 
@@ -342,10 +230,27 @@
             this.datagridviewBackground_panel.Controls.Add(this.background_DGV_panel3);
             this.datagridviewBackground_panel.Controls.Add(this.background_DGV_panel2);
             this.datagridviewBackground_panel.Controls.Add(this.Advokat_dataGridView);
-            this.datagridviewBackground_panel.Location = new System.Drawing.Point(100, 170);
+            this.datagridviewBackground_panel.Location = new System.Drawing.Point(56, 167);
             this.datagridviewBackground_panel.Name = "datagridviewBackground_panel";
-            this.datagridviewBackground_panel.Size = new System.Drawing.Size(1300, 488);
+            this.datagridviewBackground_panel.Size = new System.Drawing.Size(1490, 488);
             this.datagridviewBackground_panel.TabIndex = 13;
+            // 
+            // Advokat_dataGridView
+            // 
+            this.Advokat_dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.Advokat_dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.Advokat_dataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Advokat_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Advokat_dataGridView.Location = new System.Drawing.Point(2, 59);
+            this.Advokat_dataGridView.MultiSelect = false;
+            this.Advokat_dataGridView.Name = "Advokat_dataGridView";
+            this.Advokat_dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Advokat_dataGridView.Size = new System.Drawing.Size(1480, 412);
+            this.Advokat_dataGridView.TabIndex = 15;
+            this.Advokat_dataGridView.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Advokat_dataGridView_ColumnHeaderMouseClick);
+            this.Advokat_dataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.Advokat_dataGridView_DataError);
+            this.Advokat_dataGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.Advokat_dataGridView_RowEnter);
+            this.Advokat_dataGridView.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.Advokat_dataGridView_RowValidated);
             // 
             // background_DGV_Search_panel
             // 
@@ -357,7 +262,7 @@
             this.background_DGV_Search_panel.Controls.Add(this.Search_Column_comboBox);
             this.background_DGV_Search_panel.Controls.Add(this.reset_Search_Textbox_button);
             this.background_DGV_Search_panel.Controls.Add(this.search_Datagridview_pictureBox);
-            this.background_DGV_Search_panel.Location = new System.Drawing.Point(7, 5);
+            this.background_DGV_Search_panel.Location = new System.Drawing.Point(2, 3);
             this.background_DGV_Search_panel.Name = "background_DGV_Search_panel";
             this.background_DGV_Search_panel.Size = new System.Drawing.Size(420, 53);
             this.background_DGV_Search_panel.TabIndex = 1;
@@ -432,7 +337,7 @@
             this.background_DGV_panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.background_DGV_panel1.Controls.Add(this.undo_button);
             this.background_DGV_panel1.Controls.Add(this.delete_button);
-            this.background_DGV_panel1.Location = new System.Drawing.Point(444, -2);
+            this.background_DGV_panel1.Location = new System.Drawing.Point(777, -2);
             this.background_DGV_panel1.Name = "background_DGV_panel1";
             this.background_DGV_panel1.Size = new System.Drawing.Size(120, 58);
             this.background_DGV_panel1.TabIndex = 2;
@@ -482,7 +387,7 @@
             this.background_DGV_panel4.Controls.Add(this.local_folder_button);
             this.background_DGV_panel4.Controls.Add(this.screenshot_datagridview_button);
             this.background_DGV_panel4.Controls.Add(this.print_button);
-            this.background_DGV_panel4.Location = new System.Drawing.Point(881, -2);
+            this.background_DGV_panel4.Location = new System.Drawing.Point(1290, -2);
             this.background_DGV_panel4.Name = "background_DGV_panel4";
             this.background_DGV_panel4.Size = new System.Drawing.Size(190, 60);
             this.background_DGV_panel4.TabIndex = 5;
@@ -548,7 +453,7 @@
             this.background_DGV_panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.background_DGV_panel3.Controls.Add(this.change_DatagridView_Color_button);
             this.background_DGV_panel3.Controls.Add(this.mark_current_row_button);
-            this.background_DGV_panel3.Location = new System.Drawing.Point(733, -2);
+            this.background_DGV_panel3.Location = new System.Drawing.Point(1137, -2);
             this.background_DGV_panel3.Name = "background_DGV_panel3";
             this.background_DGV_panel3.Size = new System.Drawing.Size(125, 60);
             this.background_DGV_panel3.TabIndex = 4;
@@ -592,12 +497,29 @@
             this.background_DGV_panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.background_DGV_panel2.BackgroundImage = global::View_GUI.Properties.Resources.DGV_Panel;
             this.background_DGV_panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.background_DGV_panel2.Controls.Add(this.Advokat_Speciale_button);
             this.background_DGV_panel2.Controls.Add(this.Advokat_Tlf_button);
             this.background_DGV_panel2.Controls.Add(this.show_all_button);
-            this.background_DGV_panel2.Location = new System.Drawing.Point(585, -2);
+            this.background_DGV_panel2.Location = new System.Drawing.Point(929, -2);
             this.background_DGV_panel2.Name = "background_DGV_panel2";
-            this.background_DGV_panel2.Size = new System.Drawing.Size(125, 60);
+            this.background_DGV_panel2.Size = new System.Drawing.Size(178, 60);
             this.background_DGV_panel2.TabIndex = 3;
+            // 
+            // Advokat_Speciale_button
+            // 
+            this.Advokat_Speciale_button.BackColor = System.Drawing.Color.Transparent;
+            this.Advokat_Speciale_button.BackgroundImage = global::View_GUI.Properties.Resources.Untitled4;
+            this.Advokat_Speciale_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Advokat_Speciale_button.FlatAppearance.BorderSize = 0;
+            this.Advokat_Speciale_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.Advokat_Speciale_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.Advokat_Speciale_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Advokat_Speciale_button.ForeColor = System.Drawing.Color.Black;
+            this.Advokat_Speciale_button.Location = new System.Drawing.Point(119, 10);
+            this.Advokat_Speciale_button.Name = "Advokat_Speciale_button";
+            this.Advokat_Speciale_button.Size = new System.Drawing.Size(38, 40);
+            this.Advokat_Speciale_button.TabIndex = 10;
+            this.Advokat_Speciale_button.UseVisualStyleBackColor = false;
             // 
             // Advokat_Tlf_button
             // 
@@ -634,54 +556,38 @@
             this.show_all_button.UseVisualStyleBackColor = false;
             this.show_all_button.Click += new System.EventHandler(this.show_all_button_Click);
             // 
-            // Advokat_dataGridView
-            // 
-            this.Advokat_dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.Advokat_dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.Advokat_dataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Advokat_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Advokat_dataGridView.Location = new System.Drawing.Point(5, 65);
-            this.Advokat_dataGridView.MultiSelect = false;
-            this.Advokat_dataGridView.Name = "Advokat_dataGridView";
-            this.Advokat_dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Advokat_dataGridView.Size = new System.Drawing.Size(1290, 412);
-            this.Advokat_dataGridView.TabIndex = 15;
-            this.Advokat_dataGridView.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Advokat_dataGridView_ColumnHeaderMouseClick);
-            this.Advokat_dataGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.Advokat_dataGridView_RowEnter);
-            this.Advokat_dataGridView.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.Advokat_dataGridView_RowValidated);
-            // 
             // top_Menu_background_panel
             // 
             this.top_Menu_background_panel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.top_Menu_background_panel.BackColor = System.Drawing.Color.Transparent;
             this.top_Menu_background_panel.BackgroundImage = global::View_GUI.Properties.Resources.Top_Background_menu;
             this.top_Menu_background_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.top_Menu_background_panel.Controls.Add(this.vis_rediger_advokatr_button);
+            this.top_Menu_background_panel.Controls.Add(this.vis_rediger_advokater_button);
             this.top_Menu_background_panel.Controls.Add(this.opret_advokat_button);
-            this.top_Menu_background_panel.Location = new System.Drawing.Point(555, 69);
+            this.top_Menu_background_panel.Location = new System.Drawing.Point(680, 69);
             this.top_Menu_background_panel.Name = "top_Menu_background_panel";
-            this.top_Menu_background_panel.Size = new System.Drawing.Size(243, 91);
+            this.top_Menu_background_panel.Size = new System.Drawing.Size(249, 90);
             this.top_Menu_background_panel.TabIndex = 0;
             // 
-            // vis_rediger_advokatr_button
+            // vis_rediger_advokater_button
             // 
-            this.vis_rediger_advokatr_button.BackgroundImage = global::View_GUI.Properties.Resources.addressbook_edit_icon__3_;
-            this.vis_rediger_advokatr_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.vis_rediger_advokatr_button.FlatAppearance.BorderSize = 0;
-            this.vis_rediger_advokatr_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.vis_rediger_advokatr_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
-            this.vis_rediger_advokatr_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vis_rediger_advokatr_button.Font = new System.Drawing.Font("OpenSymbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vis_rediger_advokatr_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.vis_rediger_advokatr_button.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.vis_rediger_advokatr_button.Location = new System.Drawing.Point(125, 11);
-            this.vis_rediger_advokatr_button.Name = "vis_rediger_advokatr_button";
-            this.vis_rediger_advokatr_button.Size = new System.Drawing.Size(95, 68);
-            this.vis_rediger_advokatr_button.TabIndex = 1;
-            this.vis_rediger_advokatr_button.Text = "Vis / Rediger";
-            this.vis_rediger_advokatr_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.vis_rediger_advokatr_button.UseVisualStyleBackColor = true;
-            this.vis_rediger_advokatr_button.Click += new System.EventHandler(this.vis_rediger_advokatr_button_Click);
+            this.vis_rediger_advokater_button.BackgroundImage = global::View_GUI.Properties.Resources.addressbook_edit_icon__3_;
+            this.vis_rediger_advokater_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.vis_rediger_advokater_button.FlatAppearance.BorderSize = 0;
+            this.vis_rediger_advokater_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.vis_rediger_advokater_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.vis_rediger_advokater_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.vis_rediger_advokater_button.Font = new System.Drawing.Font("OpenSymbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vis_rediger_advokater_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.vis_rediger_advokater_button.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.vis_rediger_advokater_button.Location = new System.Drawing.Point(125, 11);
+            this.vis_rediger_advokater_button.Name = "vis_rediger_advokater_button";
+            this.vis_rediger_advokater_button.Size = new System.Drawing.Size(95, 68);
+            this.vis_rediger_advokater_button.TabIndex = 1;
+            this.vis_rediger_advokater_button.Text = "Vis / Rediger";
+            this.vis_rediger_advokater_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.vis_rediger_advokater_button.UseVisualStyleBackColor = true;
+            this.vis_rediger_advokater_button.Click += new System.EventHandler(this.vis_rediger_advokater_button_Click);
             // 
             // opret_advokat_button
             // 
@@ -703,12 +609,125 @@
             this.opret_advokat_button.UseVisualStyleBackColor = true;
             this.opret_advokat_button.Click += new System.EventHandler(this.opret_advokat_button_Click);
             // 
+            // create_Clear_All_textboxes_button
+            // 
+            this.create_Clear_All_textboxes_button.BackColor = System.Drawing.Color.Transparent;
+            this.create_Clear_All_textboxes_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
+            this.create_Clear_All_textboxes_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.create_Clear_All_textboxes_button.FlatAppearance.BorderSize = 0;
+            this.create_Clear_All_textboxes_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.create_Clear_All_textboxes_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.create_Clear_All_textboxes_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.create_Clear_All_textboxes_button.ForeColor = System.Drawing.Color.Black;
+            this.create_Clear_All_textboxes_button.Location = new System.Drawing.Point(119, 339);
+            this.create_Clear_All_textboxes_button.Name = "create_Clear_All_textboxes_button";
+            this.create_Clear_All_textboxes_button.Size = new System.Drawing.Size(28, 23);
+            this.create_Clear_All_textboxes_button.TabIndex = 23;
+            this.create_Clear_All_textboxes_button.UseVisualStyleBackColor = false;
+            this.create_Clear_All_textboxes_button.Click += new System.EventHandler(this.create_Clear_All_textboxes_button_Click);
+            // 
+            // email_label
+            // 
+            this.email_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.email_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.email_label.Image = global::View_GUI.Properties.Resources.At_Mail_icon;
+            this.email_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.email_label.Location = new System.Drawing.Point(53, 287);
+            this.email_label.Name = "email_label";
+            this.email_label.Size = new System.Drawing.Size(98, 33);
+            this.email_label.TabIndex = 22;
+            this.email_label.Text = "Email:";
+            this.email_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // advokater_Save_button
+            // 
+            this.advokater_Save_button.FlatAppearance.BorderSize = 0;
+            this.advokater_Save_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.advokater_Save_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.advokater_Save_button.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.advokater_Save_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
+            this.advokater_Save_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
+            this.advokater_Save_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.advokater_Save_button.Location = new System.Drawing.Point(162, 336);
+            this.advokater_Save_button.Name = "advokater_Save_button";
+            this.advokater_Save_button.Size = new System.Drawing.Size(90, 30);
+            this.advokater_Save_button.TabIndex = 7;
+            this.advokater_Save_button.Text = "Gem";
+            this.advokater_Save_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.advokater_Save_button.UseVisualStyleBackColor = true;
+            this.advokater_Save_button.Click += new System.EventHandler(this.advokater_Save_button_Click);
+            // 
+            // adr_label
+            // 
+            this.adr_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.adr_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.adr_label.Image = global::View_GUI.Properties.Resources.my_numbers_icon;
+            this.adr_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.adr_label.Location = new System.Drawing.Point(70, 197);
+            this.adr_label.Name = "adr_label";
+            this.adr_label.Size = new System.Drawing.Size(80, 25);
+            this.adr_label.TabIndex = 19;
+            this.adr_label.Text = "Adr:";
+            this.adr_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // zipCode_label
+            // 
+            this.zipCode_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.zipCode_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.zipCode_label.Image = global::View_GUI.Properties.Resources.Compressed_File_Zip_icon;
+            this.zipCode_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.zipCode_label.Location = new System.Drawing.Point(49, 150);
+            this.zipCode_label.Name = "zipCode_label";
+            this.zipCode_label.Size = new System.Drawing.Size(105, 25);
+            this.zipCode_label.TabIndex = 17;
+            this.zipCode_label.Text = "PostNr:";
+            this.zipCode_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tlf_label
+            // 
+            this.tlf_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.tlf_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.tlf_label.Image = global::View_GUI.Properties.Resources.Phone_icon__1_;
+            this.tlf_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.tlf_label.Location = new System.Drawing.Point(80, 243);
+            this.tlf_label.Name = "tlf_label";
+            this.tlf_label.Size = new System.Drawing.Size(73, 24);
+            this.tlf_label.TabIndex = 15;
+            this.tlf_label.Text = "Tlf:";
+            this.tlf_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // surname_label
+            // 
+            this.surname_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.surname_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.surname_label.Image = global::View_GUI.Properties.Resources.name_card_icon;
+            this.surname_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.surname_label.Location = new System.Drawing.Point(25, 104);
+            this.surname_label.Name = "surname_label";
+            this.surname_label.Size = new System.Drawing.Size(125, 25);
+            this.surname_label.TabIndex = 13;
+            this.surname_label.Text = "Efternavn:";
+            this.surname_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // name_label
+            // 
+            this.name_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.name_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.name_label.Image = global::View_GUI.Properties.Resources.ID_icon;
+            this.name_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.name_label.Location = new System.Drawing.Point(56, 59);
+            this.name_label.Name = "name_label";
+            this.name_label.Size = new System.Drawing.Size(95, 24);
+            this.name_label.TabIndex = 2;
+            this.name_label.Text = "Navn:";
+            this.name_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // Advokater_Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.ClientSize = new System.Drawing.Size(1500, 700);
+            this.ClientSize = new System.Drawing.Size(1600, 700);
             this.Controls.Add(this.datagridviewBackground_panel);
             this.Controls.Add(this.top_Menu_background_panel);
             this.Controls.Add(this.backPanel_Textboxes_panel);
@@ -716,8 +735,8 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Advokater_Form3";
-            this.Text = "Advokatr_Form9";
-            this.Load += new System.EventHandler(this.Advokatr_Form9_Load);
+            this.Text = "Advokater_Form9";
+            this.Load += new System.EventHandler(this.Advokater_Form9_Load);
             this.backgroundName_Top_panel.ResumeLayout(false);
             this.backgroundName_Top_panel.PerformLayout();
             this.backPanel_Textboxes_panel.ResumeLayout(false);
@@ -725,6 +744,7 @@
             this.background_textboxes_top_panel.ResumeLayout(false);
             this.background_textboxes_top_panel.PerformLayout();
             this.datagridviewBackground_panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Advokat_dataGridView)).EndInit();
             this.background_DGV_Search_panel.ResumeLayout(false);
             this.background_DGV_Search_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.search_Datagridview_pictureBox)).EndInit();
@@ -732,7 +752,6 @@
             this.background_DGV_panel4.ResumeLayout(false);
             this.background_DGV_panel3.ResumeLayout(false);
             this.background_DGV_panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Advokat_dataGridView)).EndInit();
             this.top_Menu_background_panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -742,23 +761,23 @@
 
         private System.Windows.Forms.Label Advokat_Top_label;
         private System.Windows.Forms.Panel backgroundName_Top_panel;
-        private System.Windows.Forms.TextBox advokatr_name_textBox;
+        private System.Windows.Forms.TextBox advokater_name_textBox;
         private System.Windows.Forms.Panel backPanel_Textboxes_panel;
         private System.Windows.Forms.Panel background_textboxes_top_panel;
-        private System.Windows.Forms.Label opret_Advokatr_label;
+        private System.Windows.Forms.Label opret_Advokater_label;
         private System.Windows.Forms.Label name_label;
         private System.Windows.Forms.Label adr_label;
-        private System.Windows.Forms.TextBox advokatr_adr_textBox;
+        private System.Windows.Forms.TextBox advokater_adr_textBox;
         private System.Windows.Forms.Label zipCode_label;
-        private System.Windows.Forms.TextBox advokatr_zipcCode_textBox;
+        private System.Windows.Forms.TextBox advokater_zipcCode_textBox;
         private System.Windows.Forms.Label tlf_label;
-        private System.Windows.Forms.TextBox advokatr_tlf_textBox;
+        private System.Windows.Forms.TextBox advokater_tlf_textBox;
         private System.Windows.Forms.Label surname_label;
-        private System.Windows.Forms.TextBox advokatr_surname_textBox;
-        private System.Windows.Forms.Button advokatr_Save_button;
+        private System.Windows.Forms.TextBox advokater_surname_textBox;
+        private System.Windows.Forms.Button advokater_Save_button;
         private System.Windows.Forms.Panel top_Menu_background_panel;
         private System.Windows.Forms.Button opret_advokat_button;
-        private System.Windows.Forms.Button vis_rediger_advokatr_button;
+        private System.Windows.Forms.Button vis_rediger_advokater_button;
         private System.Windows.Forms.Label email_label;
         private System.Windows.Forms.TextBox advokat_email_textBox;
         private System.Windows.Forms.Panel datagridviewBackground_panel;
@@ -783,5 +802,6 @@
         private System.Windows.Forms.Panel background_DGV_panel1;
         private System.Windows.Forms.Panel background_DGV_Search_panel;
         private System.Windows.Forms.Button create_Clear_All_textboxes_button;
+        private System.Windows.Forms.Button Advokat_Speciale_button;
     }
 }
