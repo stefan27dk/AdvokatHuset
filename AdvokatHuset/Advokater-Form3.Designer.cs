@@ -134,7 +134,7 @@
             // 
             // backgroundName_Top_panel
             // 
-            this.backgroundName_Top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.backgroundName_Top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
             this.backgroundName_Top_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.backgroundName_Top_panel.Controls.Add(this.Advokat_Top_label);
             this.backgroundName_Top_panel.Location = new System.Drawing.Point(18, 58);
@@ -300,7 +300,7 @@
             this.speciale_BACK_panel.Controls.Add(this.speciale_Advokat_Top_panel);
             this.speciale_BACK_panel.Location = new System.Drawing.Point(675, 165);
             this.speciale_BACK_panel.Name = "speciale_BACK_panel";
-            this.speciale_BACK_panel.Size = new System.Drawing.Size(394, 543);
+            this.speciale_BACK_panel.Size = new System.Drawing.Size(394, 553);
             this.speciale_BACK_panel.TabIndex = 24;
             this.speciale_BACK_panel.Visible = false;
             // 
@@ -318,7 +318,7 @@
             this.panel3.Controls.Add(this.comboBox1);
             this.panel3.Location = new System.Drawing.Point(1, 368);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(392, 170);
+            this.panel3.Size = new System.Drawing.Size(392, 184);
             this.panel3.TabIndex = 32;
             // 
             // panel2
@@ -337,7 +337,7 @@
             // Add_Specaile_To_DB_comboBox
             // 
             this.Add_Specaile_To_DB_comboBox.FormattingEnabled = true;
-            this.Add_Specaile_To_DB_comboBox.Location = new System.Drawing.Point(181, 17);
+            this.Add_Specaile_To_DB_comboBox.Location = new System.Drawing.Point(192, 18);
             this.Add_Specaile_To_DB_comboBox.MaxDropDownItems = 50;
             this.Add_Specaile_To_DB_comboBox.Name = "Add_Specaile_To_DB_comboBox";
             this.Add_Specaile_To_DB_comboBox.Size = new System.Drawing.Size(100, 21);
@@ -363,7 +363,7 @@
             // speciale_advokat_id_textBox
             // 
             this.speciale_advokat_id_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
-            this.speciale_advokat_id_textBox.Location = new System.Drawing.Point(176, 21);
+            this.speciale_advokat_id_textBox.Location = new System.Drawing.Point(191, 23);
             this.speciale_advokat_id_textBox.MaxLength = 49;
             this.speciale_advokat_id_textBox.Name = "speciale_advokat_id_textBox";
             this.speciale_advokat_id_textBox.Size = new System.Drawing.Size(100, 20);
@@ -373,7 +373,7 @@
             // 
             this.speciale_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.speciale_comboBox.FormattingEnabled = true;
-            this.speciale_comboBox.Location = new System.Drawing.Point(176, 68);
+            this.speciale_comboBox.Location = new System.Drawing.Point(191, 70);
             this.speciale_comboBox.MaxDropDownItems = 50;
             this.speciale_comboBox.Name = "speciale_comboBox";
             this.speciale_comboBox.Size = new System.Drawing.Size(100, 21);
@@ -448,7 +448,7 @@
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(176, 15);
+            this.comboBox1.Location = new System.Drawing.Point(191, 15);
             this.comboBox1.MaxDropDownItems = 50;
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(100, 21);
@@ -457,7 +457,7 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
-            this.textBox1.Location = new System.Drawing.Point(177, 56);
+            this.textBox1.Location = new System.Drawing.Point(192, 56);
             this.textBox1.MaxLength = 49;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
@@ -467,7 +467,7 @@
             // 
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(176, 93);
+            this.comboBox2.Location = new System.Drawing.Point(191, 93);
             this.comboBox2.MaxDropDownItems = 50;
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(100, 21);
@@ -479,7 +479,7 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
             this.label8.Image = global::View_GUI.Properties.Resources.Actions_edit_delete_icon2;
             this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label8.Location = new System.Drawing.Point(7, 89);
+            this.label8.Location = new System.Drawing.Point(22, 89);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(161, 25);
             this.label8.TabIndex = 28;
@@ -492,7 +492,7 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
             this.label5.Image = global::View_GUI.Properties.Resources.name_card_icon;
             this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label5.Location = new System.Drawing.Point(53, 52);
+            this.label5.Location = new System.Drawing.Point(68, 52);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(115, 25);
             this.label5.TabIndex = 27;
@@ -505,7 +505,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
             this.label4.Image = global::View_GUI.Properties.Resources.research_icon__1_;
             this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label4.Location = new System.Drawing.Point(53, 11);
+            this.label4.Location = new System.Drawing.Point(68, 11);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(115, 25);
             this.label4.TabIndex = 25;
@@ -521,7 +521,7 @@
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
             this.button1.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(181, 129);
+            this.button1.Location = new System.Drawing.Point(196, 129);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(90, 30);
             this.button1.TabIndex = 25;
@@ -539,7 +539,7 @@
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(138, 132);
+            this.button2.Location = new System.Drawing.Point(153, 132);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(28, 23);
             this.button2.TabIndex = 26;
@@ -551,7 +551,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
             this.label2.Image = global::View_GUI.Properties.Resources.name_card_icon1;
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label2.Location = new System.Drawing.Point(5, 17);
+            this.label2.Location = new System.Drawing.Point(16, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(163, 24);
             this.label2.TabIndex = 26;
@@ -567,7 +567,7 @@
             this.save_speciale_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
             this.save_speciale_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
             this.save_speciale_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.save_speciale_button.Location = new System.Drawing.Point(186, 62);
+            this.save_speciale_button.Location = new System.Drawing.Point(197, 63);
             this.save_speciale_button.Name = "save_speciale_button";
             this.save_speciale_button.Size = new System.Drawing.Size(90, 30);
             this.save_speciale_button.TabIndex = 27;
@@ -586,7 +586,7 @@
             this.clear_speciale_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
             this.clear_speciale_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clear_speciale_button.ForeColor = System.Drawing.Color.Black;
-            this.clear_speciale_button.Location = new System.Drawing.Point(288, 18);
+            this.clear_speciale_button.Location = new System.Drawing.Point(299, 19);
             this.clear_speciale_button.Name = "clear_speciale_button";
             this.clear_speciale_button.Size = new System.Drawing.Size(28, 23);
             this.clear_speciale_button.TabIndex = 29;
@@ -599,7 +599,7 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
             this.label7.Image = global::View_GUI.Properties.Resources.ID_icon;
             this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label7.Location = new System.Drawing.Point(33, 17);
+            this.label7.Location = new System.Drawing.Point(48, 19);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(135, 24);
             this.label7.TabIndex = 2;
@@ -612,7 +612,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
             this.label6.Image = global::View_GUI.Properties.Resources.research_icon__1_;
             this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label6.Location = new System.Drawing.Point(55, 62);
+            this.label6.Location = new System.Drawing.Point(70, 64);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(115, 25);
             this.label6.TabIndex = 13;
@@ -628,7 +628,7 @@
             this.save_Advokat_specaile_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
             this.save_Advokat_specaile_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
             this.save_Advokat_specaile_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.save_Advokat_specaile_button.Location = new System.Drawing.Point(182, 111);
+            this.save_Advokat_specaile_button.Location = new System.Drawing.Point(197, 113);
             this.save_Advokat_specaile_button.Name = "save_Advokat_specaile_button";
             this.save_Advokat_specaile_button.Size = new System.Drawing.Size(90, 30);
             this.save_Advokat_specaile_button.TabIndex = 7;
@@ -647,7 +647,7 @@
             this.clear_advokat_speciale_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
             this.clear_advokat_speciale_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clear_advokat_speciale_button.ForeColor = System.Drawing.Color.Black;
-            this.clear_advokat_speciale_button.Location = new System.Drawing.Point(139, 114);
+            this.clear_advokat_speciale_button.Location = new System.Drawing.Point(154, 116);
             this.clear_advokat_speciale_button.Name = "clear_advokat_speciale_button";
             this.clear_advokat_speciale_button.Size = new System.Drawing.Size(28, 23);
             this.clear_advokat_speciale_button.TabIndex = 23;
