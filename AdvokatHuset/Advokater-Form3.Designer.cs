@@ -139,7 +139,7 @@
             this.backgroundName_Top_panel.Controls.Add(this.Advokat_Top_label);
             this.backgroundName_Top_panel.Location = new System.Drawing.Point(18, 58);
             this.backgroundName_Top_panel.Name = "backgroundName_Top_panel";
-            this.backgroundName_Top_panel.Size = new System.Drawing.Size(115, 44);
+            this.backgroundName_Top_panel.Size = new System.Drawing.Size(122, 44);
             this.backgroundName_Top_panel.TabIndex = 9;
             // 
             // advokater_name_textBox
