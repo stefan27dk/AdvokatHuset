@@ -270,9 +270,9 @@
             this.datagridviewBackground_panel.Controls.Add(this.background_DGV_panel3);
             this.datagridviewBackground_panel.Controls.Add(this.background_DGV_panel2);
             this.datagridviewBackground_panel.Controls.Add(this.Advokat_dataGridView);
-            this.datagridviewBackground_panel.Location = new System.Drawing.Point(56, 167);
+            this.datagridviewBackground_panel.Location = new System.Drawing.Point(31, 167);
             this.datagridviewBackground_panel.Name = "datagridviewBackground_panel";
-            this.datagridviewBackground_panel.Size = new System.Drawing.Size(1490, 588);
+            this.datagridviewBackground_panel.Size = new System.Drawing.Size(1540, 588);
             this.datagridviewBackground_panel.TabIndex = 13;
             // 
             // Advokat_dataGridView
@@ -281,11 +281,11 @@
             this.Advokat_dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.Advokat_dataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Advokat_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Advokat_dataGridView.Location = new System.Drawing.Point(2, 59);
+            this.Advokat_dataGridView.Location = new System.Drawing.Point(10, 59);
             this.Advokat_dataGridView.MultiSelect = false;
             this.Advokat_dataGridView.Name = "Advokat_dataGridView";
             this.Advokat_dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Advokat_dataGridView.Size = new System.Drawing.Size(1480, 512);
+            this.Advokat_dataGridView.Size = new System.Drawing.Size(1520, 512);
             this.Advokat_dataGridView.TabIndex = 15;
             this.Advokat_dataGridView.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Advokat_dataGridView_ColumnHeaderMouseClick);
             this.Advokat_dataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.Advokat_dataGridView_DataError);
