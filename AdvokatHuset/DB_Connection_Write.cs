@@ -53,19 +53,12 @@ namespace Domain
                 }
 
 
-                //if (e.Number.ToString() == "8169")   2627
-                //{
-                //}
-                //else
-                //{
-                //MessageBox.Show($"{e.Number.ToString()} \t {e.Message} \t {e.InnerException} \t {e.Data} \t {e.ToString()}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                //}
+          
 
             }
 
                return successful;
-        }
+        }       
 
           
     }
