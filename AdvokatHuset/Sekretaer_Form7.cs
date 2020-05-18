@@ -707,7 +707,7 @@ namespace View_GUI
 
          //----SAVE-UPDATE--DATAGRIDVIEW-------::START::---------------------------------------------------------------------------------- 
 
-        // Save Cutomers "SekretaerR"
+        // Save  "Sekretaer"
         private void SaveDataGridView()
         {          
             
@@ -826,11 +826,11 @@ namespace View_GUI
         // RefreshDatagridview "After Update OR Cancelation"
         private void RefreshDatagridview()
         {
-            if (Sekretaer_dataGridView.DataMember == "Sekretaer")
+            if (Sekretaer_dataGridView.DataMember == "Medarbejder")
             {
                 LoadSekretaerer();
             }
-            else if (Sekretaer_dataGridView.DataMember == "Sekretaer_Tlf")
+            else if (Sekretaer_dataGridView.DataMember == "Medarbejder_Tlf")
             {
                 LoadSekretaer_Tlf();
             }
