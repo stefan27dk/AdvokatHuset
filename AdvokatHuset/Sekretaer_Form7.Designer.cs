@@ -98,7 +98,7 @@
             // 
             // backgroundName_Top_panel
             // 
-            this.backgroundName_Top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.backgroundName_Top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(40)))), ((int)(((byte)(44)))));
             this.backgroundName_Top_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.backgroundName_Top_panel.Controls.Add(this.Sekretaer_Top_label);
             this.backgroundName_Top_panel.Location = new System.Drawing.Point(18, 58);
@@ -120,7 +120,7 @@
             // backPanel_Textboxes_panel
             // 
             this.backPanel_Textboxes_panel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.backPanel_Textboxes_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.backPanel_Textboxes_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(40)))), ((int)(((byte)(44)))));
             this.backPanel_Textboxes_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.backPanel_Textboxes_panel.Controls.Add(this.create_Clear_All_textboxes_button);
             this.backPanel_Textboxes_panel.Controls.Add(this.email_label);
@@ -226,7 +226,7 @@
             // 
             // background_textboxes_top_panel
             // 
-            this.background_textboxes_top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.background_textboxes_top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(60)))), ((int)(((byte)(64)))));
             this.background_textboxes_top_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.background_textboxes_top_panel.Controls.Add(this.opret_Sekretaerer_label);
             this.background_textboxes_top_panel.Dock = System.Windows.Forms.DockStyle.Top;

@@ -206,7 +206,7 @@
             // 
             // background_textboxes_top_panel
             // 
-            this.background_textboxes_top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(50)))));
+            this.background_textboxes_top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.background_textboxes_top_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.background_textboxes_top_panel.Controls.Add(this.opret_Advokater_label);
             this.background_textboxes_top_panel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -295,7 +295,7 @@
             // speciale_BACK_panel
             // 
             this.speciale_BACK_panel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.speciale_BACK_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.speciale_BACK_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.speciale_BACK_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.speciale_BACK_panel.Controls.Add(this.panel5);
             this.speciale_BACK_panel.Controls.Add(this.slet_speciale_from_advokate_back__panel);
@@ -307,7 +307,7 @@
             this.speciale_BACK_panel.Controls.Add(this.speciale_Advokat_Top_panel);
             this.speciale_BACK_panel.Location = new System.Drawing.Point(480, 165);
             this.speciale_BACK_panel.Name = "speciale_BACK_panel";
-            this.speciale_BACK_panel.Size = new System.Drawing.Size(786, 400);
+            this.speciale_BACK_panel.Size = new System.Drawing.Size(786, 395);
             this.speciale_BACK_panel.TabIndex = 24;
             this.speciale_BACK_panel.Visible = false;
             // 
@@ -368,7 +368,7 @@
             this.background_Advokat_specialepanel.Controls.Add(this.save_Advokat_specaile_button);
             this.background_Advokat_specialepanel.Controls.Add(this.clear_advokat_speciale_button);
             this.background_Advokat_specialepanel.Controls.Add(this.speciale_comboBox);
-            this.background_Advokat_specialepanel.Location = new System.Drawing.Point(0, 27);
+            this.background_Advokat_specialepanel.Location = new System.Drawing.Point(0, 26);
             this.background_Advokat_specialepanel.Name = "background_Advokat_specialepanel";
             this.background_Advokat_specialepanel.Size = new System.Drawing.Size(392, 168);
             this.background_Advokat_specialepanel.TabIndex = 31;
@@ -465,7 +465,7 @@
             this.slet_speciale_from_advokate_back__panel.Controls.Add(this.delete_speciale_from_advokat_textBox);
             this.slet_speciale_from_advokate_back__panel.Controls.Add(this.delete_speciale_from_advokat_comboBox);
             this.slet_speciale_from_advokate_back__panel.Controls.Add(this.delete_speciale_from_advokat_delete_button);
-            this.slet_speciale_from_advokate_back__panel.Location = new System.Drawing.Point(392, 27);
+            this.slet_speciale_from_advokate_back__panel.Location = new System.Drawing.Point(392, 26);
             this.slet_speciale_from_advokate_back__panel.Name = "slet_speciale_from_advokate_back__panel";
             this.slet_speciale_from_advokate_back__panel.Size = new System.Drawing.Size(392, 168);
             this.slet_speciale_from_advokate_back__panel.TabIndex = 33;
@@ -486,7 +486,7 @@
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.label5);
-            this.panel5.Location = new System.Drawing.Point(393, 0);
+            this.panel5.Location = new System.Drawing.Point(392, 0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(392, 26);
             this.panel5.TabIndex = 32;
