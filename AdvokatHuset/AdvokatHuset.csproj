@@ -89,6 +89,12 @@
     <Compile Include="Advokater-Form3.Designer.cs">
       <DependentUpon>Advokater-Form3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sekretaer_Form7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sekretaer_Form7.Designer.cs">
+      <DependentUpon>Sekretaer_Form7.cs</DependentUpon>
+    </Compile>
     <Compile Include="Kunder-Form9.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,12 +140,6 @@
       <DependentUpon>Sager-Form2.cs</DependentUpon>
     </Compile>
     <Compile Include="Screenshot.cs" />
-    <Compile Include="Sekretaer-Form7.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sekretaer-Form7.Designer.cs">
-      <DependentUpon>Sekretaer-Form7.cs</DependentUpon>
-    </Compile>
     <Compile Include="Sekretær.cs" />
     <Compile Include="SelectionScreenshot-Form4.cs">
       <SubType>Form</SubType>
@@ -167,6 +167,9 @@
     <EmbeddedResource Include="Advokater-Form3.resx">
       <DependentUpon>Advokater-Form3.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sekretaer_Form7.resx">
+      <DependentUpon>Sekretaer_Form7.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Kunder-Form9.resx">
       <DependentUpon>Kunder-Form9.cs</DependentUpon>
     </EmbeddedResource>
@@ -186,9 +189,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sager-Form2.resx">
       <DependentUpon>Sager-Form2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Sekretaer-Form7.resx">
-      <DependentUpon>Sekretaer-Form7.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SelectionScreenshot-Form4.resx">
       <DependentUpon>SelectionScreenshot-Form4.cs</DependentUpon>

@@ -70,6 +70,10 @@ namespace View_GUI
                           case 8152:
                            MessageBox.Show("Inputet var for lang", "Fejl" , MessageBoxButtons.OK, MessageBoxIcon.Error );
                            break;
+                         default:
+                        MessageBox.Show(err.ToString());
+
+                        break;
                      
                        }
 
