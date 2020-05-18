@@ -13,7 +13,7 @@ namespace Domain
 
         public Advokat() //Constructor
         {
-
+               
         }
 
         public void CreateSag()
