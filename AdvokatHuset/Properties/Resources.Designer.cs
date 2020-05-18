@@ -293,6 +293,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Actions_edit_delete_icon3 {
+            get {
+                object obj = ResourceManager.GetObject("Actions-edit-delete-icon3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Actions_go_previous_view_icon {
             get {
                 object obj = ResourceManager.GetObject("Actions-go-previous-view-icon", resourceCulture);
@@ -1806,6 +1816,36 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap research_icon__1_ {
             get {
                 object obj = ResourceManager.GetObject("research-icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap research_icon__2___1_ {
+            get {
+                object obj = ResourceManager.GetObject("research-icon (2) (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap research_icon__2___2_ {
+            get {
+                object obj = ResourceManager.GetObject("research-icon (2) (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap research_icon__2___3_ {
+            get {
+                object obj = ResourceManager.GetObject("research-icon (2) (3)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

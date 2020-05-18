@@ -35,11 +35,38 @@ namespace Domain
             }
 
                 // Get Information about the Exception        
-               catch (Exception e) { MessageBox.Show($"{e.Message} \t {e.InnerException} \t {e.Data} \t {e.ToString()}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            catch (SqlException e) 
+            {
+
+
+                switch(e.Number)
+                {
+                    case 8169:
+                        MessageBox.Show("Forkert Input: Fejlen kan skyldes fx. forkeret \"ID\"", "Fejl", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    case 2627:
+                        MessageBox.Show("Forkert Input: Fejlen kan skyldes fx. Tomt \"Input\"", "Fejl", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    default:
+                  MessageBox.Show($"{e.Number.ToString()} \t {e.Message} \t {e.InnerException} \t {e.Data} \t {e.ToString()}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                }
+
+
+                //if (e.Number.ToString() == "8169")   2627
+                //{
+                //}
+                //else
+                //{
+                //MessageBox.Show($"{e.Number.ToString()} \t {e.Message} \t {e.InnerException} \t {e.Data} \t {e.ToString()}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                //}
+
+            }
 
                return successful;
         }
 
-  
+          
     }
 }

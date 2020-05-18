@@ -1020,5 +1020,17 @@
   <ItemGroup>
     <None Include="Resources\Actions-edit-delete-icon2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\research-icon %282%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\research-icon %282%29 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\research-icon %282%29 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-edit-delete-icon3.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

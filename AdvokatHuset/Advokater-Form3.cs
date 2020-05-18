@@ -171,7 +171,7 @@ namespace View_GUI
             advokatinstance.Adresse = advokater_adr_textBox.Text;
             advokatinstance.TlfNr = Convert.ToInt32(advokater_tlf_textBox.Text);
             advokatinstance.Mail = advokat_email_textBox.Text;
-
+          
         }
 
 
@@ -1499,9 +1499,17 @@ namespace View_GUI
         private void save_Advokat_specaile_button_Click(object sender, EventArgs e)
         {
             DB_Connection_Write Save_Advokat_Speciale = new DB_Connection_Write();
+
+            if(speciale_advokat_id_textBox.Text !="" && speciale_comboBox.SelectedItem != null)
+            {
             Save_Advokat_Speciale.CreateCommand($"Insert INTO Advokat_Uddannelser VALUES ('{speciale_comboBox.SelectedItem.ToString()}', '{speciale_advokat_id_textBox.Text}');");
             speciale_comboBox.Items.Clear();
             speciale_advokat_id_textBox.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Felterne er ugyldig","Fejl", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
 
         }
@@ -1558,7 +1566,7 @@ namespace View_GUI
 
 
 
-        //Add Speciale to DB ----SAVE--
+        //Add Speciale to DB ----::SAVE::---- 
         private void Add_Specaile_To_DB_comboBox_Click(object sender, EventArgs e)
         {
             Add_Specaile_To_DB_comboBox.Items.Clear();
@@ -1571,7 +1579,6 @@ namespace View_GUI
             Add_Specaile_To_DB_comboBox.SelectedIndex = -1; 
                 
         }
-    
 
 
         //---Create Speciale----------------::END::---------------------------------------------
@@ -1580,6 +1587,92 @@ namespace View_GUI
 
 
 
+
+
+
+
+
+
+
+
+
+
+        //----DELETE SPECIALE-------------::START::----------------------------------------------
+
+    
+
+            // Delete Speciale - Combobox - SELECT
+        private void delete_speciale_comboBox_MouseClick(object sender, MouseEventArgs e)
+        {
+           delete_speciale_comboBox.Items.Clear();
+           Load_Specialer((ComboBox)sender);
+        }
+
+
+
+
+        // Delete - Speciale - Button
+        private void delete_speciale_button_Click(object sender, EventArgs e)
+        {
+            if(delete_speciale_comboBox.SelectedIndex != -1)
+            {
+              DB_Connection_Write Delete_Speciale = new DB_Connection_Write();
+              Delete_Speciale.CreateCommand($"Delete FROM Uddannelser Where Advokat_Uddanelse = '{delete_speciale_comboBox.SelectedItem.ToString()}';");
+              delete_speciale_comboBox.Items.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Ugyldig Input","Fejl", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+        //----DELETE SPECIALE-------------::END::----------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //----DELETE SPECIALE- From Advokate------------::START::----------------------------------------------
+
+        // Delete_ Speciale_ From _ advokate
+        private void delete_speciale_from_advokat_comboBox_Click(object sender, EventArgs e)
+        {
+            delete_speciale_from_advokat_comboBox.Items.Clear();
+            Load_Specialer((ComboBox)sender);
+
+        }
+
+
+
+        // Delete Speciale From Advokat  Button
+        private void delete_speciale_from_advokat_delete_button_Click(object sender, EventArgs e)
+        {
+            if (delete_speciale_from_advokat_comboBox.SelectedIndex != -1)
+            {
+  
+                DB_Connection_Write Delete_Speciale_From_Advokat = new DB_Connection_Write();
+                Delete_Speciale_From_Advokat.CreateCommand($"Delete FROM Advokat_Uddannelser Where Advokat_Uddannelser.Advokat_Uddanelse = '{delete_speciale_from_advokat_comboBox.SelectedItem.ToString()}' AND Advokat_Uddannelser.Me_ID = '{delete_speciale_from_advokat_textBox.Text}';");
+                delete_speciale_from_advokat_comboBox.Items.Clear();
+                delete_speciale_from_advokat_textBox.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Ugyldig Input", "Fejl", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        //----DELETE SPECIALE- From Advokate------------::END::----------------------------------------------
 
 
 
