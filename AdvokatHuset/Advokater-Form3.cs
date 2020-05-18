@@ -713,7 +713,7 @@ namespace View_GUI
             {
                 Advokat_dataGridView.EndEdit();
                 DatagridView_Save Update_Advokater = new DatagridView_Save();
-                Update_Advokater.DatagridView_Update("SELECT Select M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn AS Advokat_Efternavn , M.Me_PostNr AS Advokat_PostNr, M.Me_Adresse AS Advokat_Adresse, M.Me_Email AS Advokat_Email, M.Me_ID AS Advokat_ID, M.Me_Type, M.Me_Oprets_Dato AS Advokat_Oprets_Dato FROM Medarbejder Where Medarbejder.Me_Type = 'Medarbejder';", Advokat_Dataset, "Medarbejder", this.Advokat_dataGridView);
+                Update_Advokater.DatagridView_Update("Select M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn AS Advokat_Efternavn , M.Me_PostNr AS Advokat_PostNr, M.Me_Adresse AS Advokat_Adresse, M.Me_Email AS Advokat_Email, M.Me_ID AS Advokat_ID, M.Me_Type, M.Me_Oprets_Dato AS Advokat_Oprets_Dato From Medarbejder AS M;", Advokat_Dataset, "Medarbejder", this.Advokat_dataGridView);
             }
          
 

@@ -59,6 +59,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Advokat.cs" />
+    <Compile Include="Medarbejder-Form6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Medarbejder-Form6.Designer.cs">
+      <DependentUpon>Medarbejder-Form6.cs</DependentUpon>
+    </Compile>
     <Compile Include="Chef.cs" />
     <Compile Include="Datagridview_Loader.cs" />
     <Compile Include="DatagridView_Save.cs" />
@@ -89,6 +95,7 @@
     <Compile Include="Advokater-Form3.Designer.cs">
       <DependentUpon>Advokater-Form3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Medarbejder.cs" />
     <Compile Include="Sekretaer_Form7.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,12 +115,6 @@
     </Compile>
     <Compile Include="Main-Form1.Designer.cs">
       <DependentUpon>Main-Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Medarbejder-Form6.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Medarbejder-Form6.Designer.cs">
-      <DependentUpon>Medarbejder-Form6.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuFormSelectionScreenshot - Form5.cs">
       <SubType>Form</SubType>
@@ -155,6 +156,9 @@
     <Compile Include="Ydelser-Form8.Designer.cs">
       <DependentUpon>Ydelser-Form8.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Medarbejder-Form6.resx">
+      <DependentUpon>Medarbejder-Form6.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeveloperForm-Form12.resx">
       <DependentUpon>DeveloperForm-Form12.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,9 +179,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main-Form1.resx">
       <DependentUpon>Main-Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Medarbejder-Form6.resx">
-      <DependentUpon>Medarbejder-Form6.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuFormSelectionScreenshot - Form5.resx">
       <DependentUpon>MenuFormSelectionScreenshot - Form5.cs</DependentUpon>
