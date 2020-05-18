@@ -995,6 +995,7 @@ namespace View_GUI
             Search_Column_comboBox.Items.Add("ID");
             Search_Column_comboBox.Items.Add("Email");
             Search_Column_comboBox.Items.Add("Dato");
+            Search_Column_comboBox.Items.Add("Speciale");
             Search_Column_comboBox.SelectedIndex = 0;
 
         }
@@ -1036,7 +1037,9 @@ namespace View_GUI
                     break;
                 case 9: // Date
                     SearchColumn_SearchString = $"Select M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn AS Advokat_Efternavn , M.Me_PostNr AS Advokat_PostNr, P.Distrikt, M.Me_Adresse AS Advokat_Adresse, M.Me_Email AS Advokat_Email, T.Me_Tlf AS Advokat_Tlf, M.Me_ID AS Advokat_ID, M.Me_Type, M.Me_Oprets_Dato AS Advokat_Oprets_Dato From Medarbejder AS M FULL JOIN Medarbejder_Tlf As T ON M.Me_ID = T.Me_ID Full Join Post AS P ON M.Me_PostNr = P.PostNr Where M.Me_Oprets_Dato {SearchOptions} AND M.Me_Type = 'Advokat';";
-
+                    break;
+                case 10: // Speciale
+                    SearchColumn_SearchString = $"Select M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn AS Advokat_Efternavn , M.Me_PostNr AS Advokat_PostNr, P.Distrikt, M.Me_Adresse AS Advokat_Adresse, M.Me_Email AS Advokat_Email, T.Me_Tlf AS Advokat_Tlf, M.Me_ID AS Advokat_ID, M.Me_Type, U.Advokat_Uddanelse AS Speciale, M.Me_Oprets_Dato AS Advokat_Oprets_Dato From Medarbejder AS M FULL JOIN Medarbejder_Tlf As T ON M.Me_ID = T.Me_ID Full Join Post AS P ON M.Me_PostNr = P.PostNr FULL Join Advokat_Uddannelser As U ON M.Me_ID = U.Me_Id Where U.Advokat_Uddanelse {SearchOptions} AND M.Me_Type = 'Advokat';";
                     break;
                   
                     //SearchColumn_SearchString = $"IF(ISNUMERIC('{search_textBox.Text}') = 0) BEGIN Select* From Advokat Where  Advokat_Fornavn {SearchOptions} " +
