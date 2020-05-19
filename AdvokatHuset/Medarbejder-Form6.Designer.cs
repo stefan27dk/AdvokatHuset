@@ -591,7 +591,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
             this.label2.Image = global::View_GUI.Properties.Resources.name_card_icon1;
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label2.Location = new System.Drawing.Point(16, 18);
+            this.label2.Location = new System.Drawing.Point(21, 16);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(163, 24);
             this.label2.TabIndex = 26;
@@ -626,7 +626,7 @@
             this.clear_speciale_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
             this.clear_speciale_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clear_speciale_button.ForeColor = System.Drawing.Color.Black;
-            this.clear_speciale_button.Location = new System.Drawing.Point(299, 19);
+            this.clear_speciale_button.Location = new System.Drawing.Point(154, 66);
             this.clear_speciale_button.Name = "clear_speciale_button";
             this.clear_speciale_button.Size = new System.Drawing.Size(28, 23);
             this.clear_speciale_button.TabIndex = 29;
