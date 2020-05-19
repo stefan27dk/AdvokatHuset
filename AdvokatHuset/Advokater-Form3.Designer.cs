@@ -32,46 +32,22 @@
             this.backgroundName_Top_panel = new System.Windows.Forms.Panel();
             this.advokater_name_textBox = new System.Windows.Forms.TextBox();
             this.backPanel_Textboxes_panel = new System.Windows.Forms.Panel();
+            this.create_Clear_All_textboxes_button = new System.Windows.Forms.Button();
+            this.email_label = new System.Windows.Forms.Label();
             this.advokat_email_textBox = new System.Windows.Forms.TextBox();
+            this.advokater_Save_button = new System.Windows.Forms.Button();
+            this.adr_label = new System.Windows.Forms.Label();
             this.advokater_adr_textBox = new System.Windows.Forms.TextBox();
             this.background_textboxes_top_panel = new System.Windows.Forms.Panel();
             this.opret_Advokater_label = new System.Windows.Forms.Label();
+            this.zipCode_label = new System.Windows.Forms.Label();
             this.advokater_zipcCode_textBox = new System.Windows.Forms.TextBox();
+            this.tlf_label = new System.Windows.Forms.Label();
             this.advokater_tlf_textBox = new System.Windows.Forms.TextBox();
+            this.surname_label = new System.Windows.Forms.Label();
             this.advokater_surname_textBox = new System.Windows.Forms.TextBox();
+            this.name_label = new System.Windows.Forms.Label();
             this.datagridviewBackground_panel = new System.Windows.Forms.Panel();
-            this.Advokat_dataGridView = new System.Windows.Forms.DataGridView();
-            this.speciale_BACK_panel = new System.Windows.Forms.Panel();
-            this.delete_speciale_backpanel_panel = new System.Windows.Forms.Panel();
-            this.delete_speciale_comboBox = new System.Windows.Forms.ComboBox();
-            this.add_speciale_backpanel_panel = new System.Windows.Forms.Panel();
-            this.Add_Specaile_To_DB_comboBox = new System.Windows.Forms.ComboBox();
-            this.background_Advokat_specialepanel = new System.Windows.Forms.Panel();
-            this.speciale_advokat_id_textBox = new System.Windows.Forms.TextBox();
-            this.speciale_comboBox = new System.Windows.Forms.ComboBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.speciale_Midd_panel = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.speciale_Advokat_Top_panel = new System.Windows.Forms.Panel();
-            this.speciale_label = new System.Windows.Forms.Label();
-            this.slet_speciale_from_advokate_back__panel = new System.Windows.Forms.Panel();
-            this.delete_speciale_from_advokat_comboBox = new System.Windows.Forms.ComboBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.delete_speciale_from_advokat_textBox = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.delete_speciale_from_advokat_delete_button = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.delete_speciale_button = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.save_speciale_button = new System.Windows.Forms.Button();
-            this.clear_speciale_button = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.save_Advokat_specaile_button = new System.Windows.Forms.Button();
-            this.clear_advokat_speciale_button = new System.Windows.Forms.Button();
             this.background_DGV_Search_panel = new System.Windows.Forms.Panel();
             this.search_textBox = new System.Windows.Forms.TextBox();
             this.search_options_comboBox = new System.Windows.Forms.ComboBox();
@@ -91,38 +67,62 @@
             this.background_DGV_panel2 = new System.Windows.Forms.Panel();
             this.Advokat_Tlf_button = new System.Windows.Forms.Button();
             this.show_all_button = new System.Windows.Forms.Button();
+            this.Advokat_dataGridView = new System.Windows.Forms.DataGridView();
+            this.speciale_BACK_panel = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.slet_speciale_from_advokate_back__panel = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.delete_speciale_from_advokat_textBox = new System.Windows.Forms.TextBox();
+            this.delete_speciale_from_advokat_comboBox = new System.Windows.Forms.ComboBox();
+            this.delete_speciale_from_advokat_delete_button = new System.Windows.Forms.Button();
+            this.delete_speciale_backpanel_panel = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.delete_speciale_comboBox = new System.Windows.Forms.ComboBox();
+            this.delete_speciale_button = new System.Windows.Forms.Button();
+            this.add_speciale_backpanel_panel = new System.Windows.Forms.Panel();
+            this.Add_Specaile_To_DB_comboBox = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.save_speciale_button = new System.Windows.Forms.Button();
+            this.clear_speciale_button = new System.Windows.Forms.Button();
+            this.background_Advokat_specialepanel = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.speciale_advokat_id_textBox = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.save_Advokat_specaile_button = new System.Windows.Forms.Button();
+            this.clear_advokat_speciale_button = new System.Windows.Forms.Button();
+            this.speciale_comboBox = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.speciale_Midd_panel = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.speciale_Advokat_Top_panel = new System.Windows.Forms.Panel();
+            this.speciale_label = new System.Windows.Forms.Label();
             this.top_Menu_background_panel = new System.Windows.Forms.Panel();
             this.main_specialer_button = new System.Windows.Forms.Button();
             this.vis_rediger_advokater_button = new System.Windows.Forms.Button();
             this.opret_advokat_button = new System.Windows.Forms.Button();
-            this.create_Clear_All_textboxes_button = new System.Windows.Forms.Button();
-            this.email_label = new System.Windows.Forms.Label();
-            this.advokater_Save_button = new System.Windows.Forms.Button();
-            this.adr_label = new System.Windows.Forms.Label();
-            this.zipCode_label = new System.Windows.Forms.Label();
-            this.tlf_label = new System.Windows.Forms.Label();
-            this.surname_label = new System.Windows.Forms.Label();
-            this.name_label = new System.Windows.Forms.Label();
             this.backgroundName_Top_panel.SuspendLayout();
             this.backPanel_Textboxes_panel.SuspendLayout();
             this.background_textboxes_top_panel.SuspendLayout();
             this.datagridviewBackground_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Advokat_dataGridView)).BeginInit();
-            this.speciale_BACK_panel.SuspendLayout();
-            this.delete_speciale_backpanel_panel.SuspendLayout();
-            this.add_speciale_backpanel_panel.SuspendLayout();
-            this.background_Advokat_specialepanel.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.speciale_Midd_panel.SuspendLayout();
-            this.speciale_Advokat_Top_panel.SuspendLayout();
-            this.slet_speciale_from_advokate_back__panel.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.background_DGV_Search_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.search_Datagridview_pictureBox)).BeginInit();
             this.background_DGV_panel1.SuspendLayout();
             this.background_DGV_panel4.SuspendLayout();
             this.background_DGV_panel3.SuspendLayout();
             this.background_DGV_panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Advokat_dataGridView)).BeginInit();
+            this.speciale_BACK_panel.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.slet_speciale_from_advokate_back__panel.SuspendLayout();
+            this.delete_speciale_backpanel_panel.SuspendLayout();
+            this.add_speciale_backpanel_panel.SuspendLayout();
+            this.background_Advokat_specialepanel.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.speciale_Midd_panel.SuspendLayout();
+            this.speciale_Advokat_Top_panel.SuspendLayout();
             this.top_Menu_background_panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -184,6 +184,36 @@
             this.backPanel_Textboxes_panel.TabIndex = 11;
             this.backPanel_Textboxes_panel.Visible = false;
             // 
+            // create_Clear_All_textboxes_button
+            // 
+            this.create_Clear_All_textboxes_button.BackColor = System.Drawing.Color.Transparent;
+            this.create_Clear_All_textboxes_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
+            this.create_Clear_All_textboxes_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.create_Clear_All_textboxes_button.FlatAppearance.BorderSize = 0;
+            this.create_Clear_All_textboxes_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.create_Clear_All_textboxes_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.create_Clear_All_textboxes_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.create_Clear_All_textboxes_button.ForeColor = System.Drawing.Color.Black;
+            this.create_Clear_All_textboxes_button.Location = new System.Drawing.Point(119, 339);
+            this.create_Clear_All_textboxes_button.Name = "create_Clear_All_textboxes_button";
+            this.create_Clear_All_textboxes_button.Size = new System.Drawing.Size(28, 23);
+            this.create_Clear_All_textboxes_button.TabIndex = 23;
+            this.create_Clear_All_textboxes_button.UseVisualStyleBackColor = false;
+            this.create_Clear_All_textboxes_button.Click += new System.EventHandler(this.create_Clear_All_textboxes_button_Click);
+            // 
+            // email_label
+            // 
+            this.email_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.email_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.email_label.Image = global::View_GUI.Properties.Resources.At_Mail_icon;
+            this.email_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.email_label.Location = new System.Drawing.Point(53, 287);
+            this.email_label.Name = "email_label";
+            this.email_label.Size = new System.Drawing.Size(98, 33);
+            this.email_label.TabIndex = 22;
+            this.email_label.Text = "Email:";
+            this.email_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // advokat_email_textBox
             // 
             this.advokat_email_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
@@ -193,6 +223,37 @@
             this.advokat_email_textBox.Size = new System.Drawing.Size(100, 20);
             this.advokat_email_textBox.TabIndex = 6;
             this.advokat_email_textBox.TextChanged += new System.EventHandler(this.advokat_email_textBox_TextChanged);
+            // 
+            // advokater_Save_button
+            // 
+            this.advokater_Save_button.FlatAppearance.BorderSize = 0;
+            this.advokater_Save_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.advokater_Save_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.advokater_Save_button.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.advokater_Save_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
+            this.advokater_Save_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
+            this.advokater_Save_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.advokater_Save_button.Location = new System.Drawing.Point(162, 336);
+            this.advokater_Save_button.Name = "advokater_Save_button";
+            this.advokater_Save_button.Size = new System.Drawing.Size(90, 30);
+            this.advokater_Save_button.TabIndex = 7;
+            this.advokater_Save_button.Text = "Gem";
+            this.advokater_Save_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.advokater_Save_button.UseVisualStyleBackColor = true;
+            this.advokater_Save_button.Click += new System.EventHandler(this.advokater_Save_button_Click);
+            // 
+            // adr_label
+            // 
+            this.adr_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.adr_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.adr_label.Image = global::View_GUI.Properties.Resources.my_numbers_icon;
+            this.adr_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.adr_label.Location = new System.Drawing.Point(70, 197);
+            this.adr_label.Name = "adr_label";
+            this.adr_label.Size = new System.Drawing.Size(80, 25);
+            this.adr_label.TabIndex = 19;
+            this.adr_label.Text = "Adr:";
+            this.adr_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // advokater_adr_textBox
             // 
@@ -226,6 +287,19 @@
             this.opret_Advokater_label.TabIndex = 1;
             this.opret_Advokater_label.Text = "Opret Advokat";
             // 
+            // zipCode_label
+            // 
+            this.zipCode_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.zipCode_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.zipCode_label.Image = global::View_GUI.Properties.Resources.Compressed_File_Zip_icon;
+            this.zipCode_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.zipCode_label.Location = new System.Drawing.Point(49, 150);
+            this.zipCode_label.Name = "zipCode_label";
+            this.zipCode_label.Size = new System.Drawing.Size(105, 25);
+            this.zipCode_label.TabIndex = 17;
+            this.zipCode_label.Text = "PostNr:";
+            this.zipCode_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // advokater_zipcCode_textBox
             // 
             this.advokater_zipcCode_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
@@ -236,6 +310,19 @@
             this.advokater_zipcCode_textBox.TabIndex = 3;
             this.advokater_zipcCode_textBox.TextChanged += new System.EventHandler(this.advokater_zipcCode_textBox_TextChanged);
             this.advokater_zipcCode_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.advokater_zipcCode_textBox_KeyPress);
+            // 
+            // tlf_label
+            // 
+            this.tlf_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.tlf_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.tlf_label.Image = global::View_GUI.Properties.Resources.Phone_icon__1_;
+            this.tlf_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.tlf_label.Location = new System.Drawing.Point(80, 243);
+            this.tlf_label.Name = "tlf_label";
+            this.tlf_label.Size = new System.Drawing.Size(73, 24);
+            this.tlf_label.TabIndex = 15;
+            this.tlf_label.Text = "Tlf:";
+            this.tlf_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // advokater_tlf_textBox
             // 
@@ -248,6 +335,19 @@
             this.advokater_tlf_textBox.TextChanged += new System.EventHandler(this.advokater_tlf_textBox_TextChanged);
             this.advokater_tlf_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.advokater_tlf_textBox_KeyPress);
             // 
+            // surname_label
+            // 
+            this.surname_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.surname_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.surname_label.Image = global::View_GUI.Properties.Resources.name_card_icon;
+            this.surname_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.surname_label.Location = new System.Drawing.Point(25, 104);
+            this.surname_label.Name = "surname_label";
+            this.surname_label.Size = new System.Drawing.Size(125, 25);
+            this.surname_label.TabIndex = 13;
+            this.surname_label.Text = "Efternavn:";
+            this.surname_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // advokater_surname_textBox
             // 
             this.advokater_surname_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
@@ -258,6 +358,19 @@
             this.advokater_surname_textBox.TabIndex = 2;
             this.advokater_surname_textBox.TextChanged += new System.EventHandler(this.advokater_surname_textBox_TextChanged);
             this.advokater_surname_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.advokater_surname_textBox_KeyPress);
+            // 
+            // name_label
+            // 
+            this.name_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.name_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.name_label.Image = global::View_GUI.Properties.Resources.ID_icon;
+            this.name_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.name_label.Location = new System.Drawing.Point(56, 59);
+            this.name_label.Name = "name_label";
+            this.name_label.Size = new System.Drawing.Size(95, 24);
+            this.name_label.TabIndex = 2;
+            this.name_label.Text = "Navn:";
+            this.name_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // datagridviewBackground_panel
             // 
@@ -274,426 +387,6 @@
             this.datagridviewBackground_panel.Name = "datagridviewBackground_panel";
             this.datagridviewBackground_panel.Size = new System.Drawing.Size(1540, 588);
             this.datagridviewBackground_panel.TabIndex = 13;
-            // 
-            // Advokat_dataGridView
-            // 
-            this.Advokat_dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.Advokat_dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.Advokat_dataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Advokat_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Advokat_dataGridView.Location = new System.Drawing.Point(10, 59);
-            this.Advokat_dataGridView.MultiSelect = false;
-            this.Advokat_dataGridView.Name = "Advokat_dataGridView";
-            this.Advokat_dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Advokat_dataGridView.Size = new System.Drawing.Size(1520, 512);
-            this.Advokat_dataGridView.TabIndex = 15;
-            this.Advokat_dataGridView.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Advokat_dataGridView_ColumnHeaderMouseClick);
-            this.Advokat_dataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.Advokat_dataGridView_DataError);
-            this.Advokat_dataGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.Advokat_dataGridView_RowEnter);
-            this.Advokat_dataGridView.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.Advokat_dataGridView_RowValidated);
-            // 
-            // speciale_BACK_panel
-            // 
-            this.speciale_BACK_panel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.speciale_BACK_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.speciale_BACK_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.speciale_BACK_panel.Controls.Add(this.panel5);
-            this.speciale_BACK_panel.Controls.Add(this.slet_speciale_from_advokate_back__panel);
-            this.speciale_BACK_panel.Controls.Add(this.delete_speciale_backpanel_panel);
-            this.speciale_BACK_panel.Controls.Add(this.add_speciale_backpanel_panel);
-            this.speciale_BACK_panel.Controls.Add(this.background_Advokat_specialepanel);
-            this.speciale_BACK_panel.Controls.Add(this.panel1);
-            this.speciale_BACK_panel.Controls.Add(this.speciale_Midd_panel);
-            this.speciale_BACK_panel.Controls.Add(this.speciale_Advokat_Top_panel);
-            this.speciale_BACK_panel.Location = new System.Drawing.Point(480, 165);
-            this.speciale_BACK_panel.Name = "speciale_BACK_panel";
-            this.speciale_BACK_panel.Size = new System.Drawing.Size(786, 395);
-            this.speciale_BACK_panel.TabIndex = 24;
-            this.speciale_BACK_panel.Visible = false;
-            // 
-            // delete_speciale_backpanel_panel
-            // 
-            this.delete_speciale_backpanel_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(34)))), ((int)(((byte)(44)))));
-            this.delete_speciale_backpanel_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.delete_speciale_backpanel_panel.Controls.Add(this.label8);
-            this.delete_speciale_backpanel_panel.Controls.Add(this.delete_speciale_comboBox);
-            this.delete_speciale_backpanel_panel.Controls.Add(this.delete_speciale_button);
-            this.delete_speciale_backpanel_panel.Location = new System.Drawing.Point(392, 276);
-            this.delete_speciale_backpanel_panel.Name = "delete_speciale_backpanel_panel";
-            this.delete_speciale_backpanel_panel.Size = new System.Drawing.Size(392, 117);
-            this.delete_speciale_backpanel_panel.TabIndex = 32;
-            // 
-            // delete_speciale_comboBox
-            // 
-            this.delete_speciale_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.delete_speciale_comboBox.FormattingEnabled = true;
-            this.delete_speciale_comboBox.Location = new System.Drawing.Point(191, 24);
-            this.delete_speciale_comboBox.MaxDropDownItems = 50;
-            this.delete_speciale_comboBox.Name = "delete_speciale_comboBox";
-            this.delete_speciale_comboBox.Size = new System.Drawing.Size(100, 21);
-            this.delete_speciale_comboBox.TabIndex = 29;
-            this.delete_speciale_comboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.delete_speciale_comboBox_MouseClick);
-            // 
-            // add_speciale_backpanel_panel
-            // 
-            this.add_speciale_backpanel_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(44)))));
-            this.add_speciale_backpanel_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.add_speciale_backpanel_panel.Controls.Add(this.Add_Specaile_To_DB_comboBox);
-            this.add_speciale_backpanel_panel.Controls.Add(this.label2);
-            this.add_speciale_backpanel_panel.Controls.Add(this.save_speciale_button);
-            this.add_speciale_backpanel_panel.Controls.Add(this.clear_speciale_button);
-            this.add_speciale_backpanel_panel.Location = new System.Drawing.Point(0, 276);
-            this.add_speciale_backpanel_panel.Name = "add_speciale_backpanel_panel";
-            this.add_speciale_backpanel_panel.Size = new System.Drawing.Size(392, 117);
-            this.add_speciale_backpanel_panel.TabIndex = 31;
-            // 
-            // Add_Specaile_To_DB_comboBox
-            // 
-            this.Add_Specaile_To_DB_comboBox.FormattingEnabled = true;
-            this.Add_Specaile_To_DB_comboBox.Location = new System.Drawing.Point(192, 18);
-            this.Add_Specaile_To_DB_comboBox.MaxDropDownItems = 50;
-            this.Add_Specaile_To_DB_comboBox.Name = "Add_Specaile_To_DB_comboBox";
-            this.Add_Specaile_To_DB_comboBox.Size = new System.Drawing.Size(100, 21);
-            this.Add_Specaile_To_DB_comboBox.TabIndex = 25;
-            this.Add_Specaile_To_DB_comboBox.SelectedIndexChanged += new System.EventHandler(this.Add_Specaile_To_DB_comboBox_SelectedIndexChanged);
-            this.Add_Specaile_To_DB_comboBox.Click += new System.EventHandler(this.Add_Specaile_To_DB_comboBox_Click);
-            // 
-            // background_Advokat_specialepanel
-            // 
-            this.background_Advokat_specialepanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            this.background_Advokat_specialepanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.background_Advokat_specialepanel.Controls.Add(this.label7);
-            this.background_Advokat_specialepanel.Controls.Add(this.speciale_advokat_id_textBox);
-            this.background_Advokat_specialepanel.Controls.Add(this.label6);
-            this.background_Advokat_specialepanel.Controls.Add(this.save_Advokat_specaile_button);
-            this.background_Advokat_specialepanel.Controls.Add(this.clear_advokat_speciale_button);
-            this.background_Advokat_specialepanel.Controls.Add(this.speciale_comboBox);
-            this.background_Advokat_specialepanel.Location = new System.Drawing.Point(0, 26);
-            this.background_Advokat_specialepanel.Name = "background_Advokat_specialepanel";
-            this.background_Advokat_specialepanel.Size = new System.Drawing.Size(392, 168);
-            this.background_Advokat_specialepanel.TabIndex = 31;
-            // 
-            // speciale_advokat_id_textBox
-            // 
-            this.speciale_advokat_id_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
-            this.speciale_advokat_id_textBox.Location = new System.Drawing.Point(191, 23);
-            this.speciale_advokat_id_textBox.MaxLength = 49;
-            this.speciale_advokat_id_textBox.Name = "speciale_advokat_id_textBox";
-            this.speciale_advokat_id_textBox.Size = new System.Drawing.Size(100, 20);
-            this.speciale_advokat_id_textBox.TabIndex = 1;
-            // 
-            // speciale_comboBox
-            // 
-            this.speciale_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.speciale_comboBox.FormattingEnabled = true;
-            this.speciale_comboBox.Location = new System.Drawing.Point(191, 70);
-            this.speciale_comboBox.MaxDropDownItems = 50;
-            this.speciale_comboBox.Name = "speciale_comboBox";
-            this.speciale_comboBox.Size = new System.Drawing.Size(100, 21);
-            this.speciale_comboBox.TabIndex = 24;
-            this.speciale_comboBox.Click += new System.EventHandler(this.speciale_comboBox_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(392, 250);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(392, 26);
-            this.panel1.TabIndex = 31;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(92)))));
-            this.label1.Location = new System.Drawing.Point(143, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 21);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Slet Speciale";
-            // 
-            // speciale_Midd_panel
-            // 
-            this.speciale_Midd_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
-            this.speciale_Midd_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.speciale_Midd_panel.Controls.Add(this.label3);
-            this.speciale_Midd_panel.Location = new System.Drawing.Point(0, 250);
-            this.speciale_Midd_panel.Name = "speciale_Midd_panel";
-            this.speciale_Midd_panel.Size = new System.Drawing.Size(392, 26);
-            this.speciale_Midd_panel.TabIndex = 30;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(92)))));
-            this.label3.Location = new System.Drawing.Point(140, 3);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 21);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Tilføj Speciale";
-            // 
-            // speciale_Advokat_Top_panel
-            // 
-            this.speciale_Advokat_Top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.speciale_Advokat_Top_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.speciale_Advokat_Top_panel.Controls.Add(this.speciale_label);
-            this.speciale_Advokat_Top_panel.Location = new System.Drawing.Point(0, 0);
-            this.speciale_Advokat_Top_panel.Name = "speciale_Advokat_Top_panel";
-            this.speciale_Advokat_Top_panel.Size = new System.Drawing.Size(392, 26);
-            this.speciale_Advokat_Top_panel.TabIndex = 3;
-            // 
-            // speciale_label
-            // 
-            this.speciale_label.AutoSize = true;
-            this.speciale_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.speciale_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(92)))));
-            this.speciale_label.Location = new System.Drawing.Point(98, 3);
-            this.speciale_label.Name = "speciale_label";
-            this.speciale_label.Size = new System.Drawing.Size(205, 21);
-            this.speciale_label.TabIndex = 1;
-            this.speciale_label.Text = "Tilføj Speciale til Advokat";
-            // 
-            // slet_speciale_from_advokate_back__panel
-            // 
-            this.slet_speciale_from_advokate_back__panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(34)))), ((int)(((byte)(44)))));
-            this.slet_speciale_from_advokate_back__panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.slet_speciale_from_advokate_back__panel.Controls.Add(this.label9);
-            this.slet_speciale_from_advokate_back__panel.Controls.Add(this.label4);
-            this.slet_speciale_from_advokate_back__panel.Controls.Add(this.delete_speciale_from_advokat_textBox);
-            this.slet_speciale_from_advokate_back__panel.Controls.Add(this.delete_speciale_from_advokat_comboBox);
-            this.slet_speciale_from_advokate_back__panel.Controls.Add(this.delete_speciale_from_advokat_delete_button);
-            this.slet_speciale_from_advokate_back__panel.Location = new System.Drawing.Point(392, 26);
-            this.slet_speciale_from_advokate_back__panel.Name = "slet_speciale_from_advokate_back__panel";
-            this.slet_speciale_from_advokate_back__panel.Size = new System.Drawing.Size(392, 168);
-            this.slet_speciale_from_advokate_back__panel.TabIndex = 33;
-            // 
-            // delete_speciale_from_advokat_comboBox
-            // 
-            this.delete_speciale_from_advokat_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.delete_speciale_from_advokat_comboBox.FormattingEnabled = true;
-            this.delete_speciale_from_advokat_comboBox.Location = new System.Drawing.Point(191, 66);
-            this.delete_speciale_from_advokat_comboBox.MaxDropDownItems = 50;
-            this.delete_speciale_from_advokat_comboBox.Name = "delete_speciale_from_advokat_comboBox";
-            this.delete_speciale_from_advokat_comboBox.Size = new System.Drawing.Size(100, 21);
-            this.delete_speciale_from_advokat_comboBox.TabIndex = 29;
-            this.delete_speciale_from_advokat_comboBox.Click += new System.EventHandler(this.delete_speciale_from_advokat_comboBox_Click);
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.label5);
-            this.panel5.Location = new System.Drawing.Point(392, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(392, 26);
-            this.panel5.TabIndex = 32;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(92)))));
-            this.label5.Location = new System.Drawing.Point(105, 3);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(204, 21);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Slet Speciale fra Advokat";
-            // 
-            // delete_speciale_from_advokat_textBox
-            // 
-            this.delete_speciale_from_advokat_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
-            this.delete_speciale_from_advokat_textBox.Location = new System.Drawing.Point(190, 21);
-            this.delete_speciale_from_advokat_textBox.MaxLength = 49;
-            this.delete_speciale_from_advokat_textBox.Name = "delete_speciale_from_advokat_textBox";
-            this.delete_speciale_from_advokat_textBox.Size = new System.Drawing.Size(100, 20);
-            this.delete_speciale_from_advokat_textBox.TabIndex = 25;
-            // 
-            // label9
-            // 
-            this.label9.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.label9.Image = global::View_GUI.Properties.Resources.ID_icon;
-            this.label9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label9.Location = new System.Drawing.Point(47, 17);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(135, 24);
-            this.label9.TabIndex = 26;
-            this.label9.Text = "Advokat ID:";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.label4.Image = global::View_GUI.Properties.Resources.research_icon__1_;
-            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label4.Location = new System.Drawing.Point(69, 65);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(114, 25);
-            this.label4.TabIndex = 28;
-            this.label4.Text = "Speciale:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // delete_speciale_from_advokat_delete_button
-            // 
-            this.delete_speciale_from_advokat_delete_button.FlatAppearance.BorderSize = 0;
-            this.delete_speciale_from_advokat_delete_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.delete_speciale_from_advokat_delete_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
-            this.delete_speciale_from_advokat_delete_button.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.delete_speciale_from_advokat_delete_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.delete_speciale_from_advokat_delete_button.Image = global::View_GUI.Properties.Resources.Actions_edit_delete_icon3;
-            this.delete_speciale_from_advokat_delete_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.delete_speciale_from_advokat_delete_button.Location = new System.Drawing.Point(197, 108);
-            this.delete_speciale_from_advokat_delete_button.Name = "delete_speciale_from_advokat_delete_button";
-            this.delete_speciale_from_advokat_delete_button.Size = new System.Drawing.Size(90, 30);
-            this.delete_speciale_from_advokat_delete_button.TabIndex = 25;
-            this.delete_speciale_from_advokat_delete_button.Text = "SLET";
-            this.delete_speciale_from_advokat_delete_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.delete_speciale_from_advokat_delete_button.UseVisualStyleBackColor = true;
-            this.delete_speciale_from_advokat_delete_button.Click += new System.EventHandler(this.delete_speciale_from_advokat_delete_button_Click);
-            // 
-            // label8
-            // 
-            this.label8.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.label8.Image = global::View_GUI.Properties.Resources.research_icon__2___3_;
-            this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label8.Location = new System.Drawing.Point(22, 20);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(161, 25);
-            this.label8.TabIndex = 28;
-            this.label8.Text = "SLET Speciale:";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // delete_speciale_button
-            // 
-            this.delete_speciale_button.FlatAppearance.BorderSize = 0;
-            this.delete_speciale_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.delete_speciale_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
-            this.delete_speciale_button.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.delete_speciale_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.delete_speciale_button.Image = global::View_GUI.Properties.Resources.Actions_edit_delete_icon3;
-            this.delete_speciale_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.delete_speciale_button.Location = new System.Drawing.Point(197, 66);
-            this.delete_speciale_button.Name = "delete_speciale_button";
-            this.delete_speciale_button.Size = new System.Drawing.Size(90, 30);
-            this.delete_speciale_button.TabIndex = 25;
-            this.delete_speciale_button.Text = "SLET";
-            this.delete_speciale_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.delete_speciale_button.UseVisualStyleBackColor = true;
-            this.delete_speciale_button.Click += new System.EventHandler(this.delete_speciale_button_Click);
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.label2.Image = global::View_GUI.Properties.Resources.name_card_icon1;
-            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label2.Location = new System.Drawing.Point(16, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(163, 24);
-            this.label2.TabIndex = 26;
-            this.label2.Text = "Speciale Navn:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // save_speciale_button
-            // 
-            this.save_speciale_button.FlatAppearance.BorderSize = 0;
-            this.save_speciale_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.save_speciale_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
-            this.save_speciale_button.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.save_speciale_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
-            this.save_speciale_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
-            this.save_speciale_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.save_speciale_button.Location = new System.Drawing.Point(197, 63);
-            this.save_speciale_button.Name = "save_speciale_button";
-            this.save_speciale_button.Size = new System.Drawing.Size(90, 30);
-            this.save_speciale_button.TabIndex = 27;
-            this.save_speciale_button.Text = "Gem";
-            this.save_speciale_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.save_speciale_button.UseVisualStyleBackColor = true;
-            this.save_speciale_button.Click += new System.EventHandler(this.save_speciale_button_Click);
-            // 
-            // clear_speciale_button
-            // 
-            this.clear_speciale_button.BackColor = System.Drawing.Color.Transparent;
-            this.clear_speciale_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
-            this.clear_speciale_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.clear_speciale_button.FlatAppearance.BorderSize = 0;
-            this.clear_speciale_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.clear_speciale_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.clear_speciale_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clear_speciale_button.ForeColor = System.Drawing.Color.Black;
-            this.clear_speciale_button.Location = new System.Drawing.Point(299, 19);
-            this.clear_speciale_button.Name = "clear_speciale_button";
-            this.clear_speciale_button.Size = new System.Drawing.Size(28, 23);
-            this.clear_speciale_button.TabIndex = 29;
-            this.clear_speciale_button.UseVisualStyleBackColor = false;
-            this.clear_speciale_button.Click += new System.EventHandler(this.clear_speciale_button_Click);
-            // 
-            // label7
-            // 
-            this.label7.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.label7.Image = global::View_GUI.Properties.Resources.ID_icon;
-            this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label7.Location = new System.Drawing.Point(48, 19);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(135, 24);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Advokat ID:";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label6
-            // 
-            this.label6.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.label6.Image = global::View_GUI.Properties.Resources.research_icon__1_;
-            this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label6.Location = new System.Drawing.Point(70, 64);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(115, 25);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Speciale:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // save_Advokat_specaile_button
-            // 
-            this.save_Advokat_specaile_button.FlatAppearance.BorderSize = 0;
-            this.save_Advokat_specaile_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.save_Advokat_specaile_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
-            this.save_Advokat_specaile_button.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.save_Advokat_specaile_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
-            this.save_Advokat_specaile_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
-            this.save_Advokat_specaile_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.save_Advokat_specaile_button.Location = new System.Drawing.Point(197, 113);
-            this.save_Advokat_specaile_button.Name = "save_Advokat_specaile_button";
-            this.save_Advokat_specaile_button.Size = new System.Drawing.Size(90, 30);
-            this.save_Advokat_specaile_button.TabIndex = 7;
-            this.save_Advokat_specaile_button.Text = "Gem";
-            this.save_Advokat_specaile_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.save_Advokat_specaile_button.UseVisualStyleBackColor = true;
-            this.save_Advokat_specaile_button.Click += new System.EventHandler(this.save_Advokat_specaile_button_Click);
-            // 
-            // clear_advokat_speciale_button
-            // 
-            this.clear_advokat_speciale_button.BackColor = System.Drawing.Color.Transparent;
-            this.clear_advokat_speciale_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
-            this.clear_advokat_speciale_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.clear_advokat_speciale_button.FlatAppearance.BorderSize = 0;
-            this.clear_advokat_speciale_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.clear_advokat_speciale_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.clear_advokat_speciale_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clear_advokat_speciale_button.ForeColor = System.Drawing.Color.Black;
-            this.clear_advokat_speciale_button.Location = new System.Drawing.Point(154, 116);
-            this.clear_advokat_speciale_button.Name = "clear_advokat_speciale_button";
-            this.clear_advokat_speciale_button.Size = new System.Drawing.Size(28, 23);
-            this.clear_advokat_speciale_button.TabIndex = 23;
-            this.clear_advokat_speciale_button.UseVisualStyleBackColor = false;
-            this.clear_advokat_speciale_button.Click += new System.EventHandler(this.clear_advokat_speciale_button_Click);
             // 
             // background_DGV_Search_panel
             // 
@@ -982,6 +675,426 @@
             this.show_all_button.UseVisualStyleBackColor = false;
             this.show_all_button.Click += new System.EventHandler(this.show_all_button_Click);
             // 
+            // Advokat_dataGridView
+            // 
+            this.Advokat_dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.Advokat_dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.Advokat_dataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Advokat_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Advokat_dataGridView.Location = new System.Drawing.Point(10, 59);
+            this.Advokat_dataGridView.MultiSelect = false;
+            this.Advokat_dataGridView.Name = "Advokat_dataGridView";
+            this.Advokat_dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Advokat_dataGridView.Size = new System.Drawing.Size(1520, 512);
+            this.Advokat_dataGridView.TabIndex = 15;
+            this.Advokat_dataGridView.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Advokat_dataGridView_ColumnHeaderMouseClick);
+            this.Advokat_dataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.Advokat_dataGridView_DataError);
+            this.Advokat_dataGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.Advokat_dataGridView_RowEnter);
+            this.Advokat_dataGridView.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.Advokat_dataGridView_RowValidated);
+            // 
+            // speciale_BACK_panel
+            // 
+            this.speciale_BACK_panel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.speciale_BACK_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.speciale_BACK_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.speciale_BACK_panel.Controls.Add(this.panel5);
+            this.speciale_BACK_panel.Controls.Add(this.slet_speciale_from_advokate_back__panel);
+            this.speciale_BACK_panel.Controls.Add(this.delete_speciale_backpanel_panel);
+            this.speciale_BACK_panel.Controls.Add(this.add_speciale_backpanel_panel);
+            this.speciale_BACK_panel.Controls.Add(this.background_Advokat_specialepanel);
+            this.speciale_BACK_panel.Controls.Add(this.panel1);
+            this.speciale_BACK_panel.Controls.Add(this.speciale_Midd_panel);
+            this.speciale_BACK_panel.Controls.Add(this.speciale_Advokat_Top_panel);
+            this.speciale_BACK_panel.Location = new System.Drawing.Point(480, 165);
+            this.speciale_BACK_panel.Name = "speciale_BACK_panel";
+            this.speciale_BACK_panel.Size = new System.Drawing.Size(786, 395);
+            this.speciale_BACK_panel.TabIndex = 24;
+            this.speciale_BACK_panel.Visible = false;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.label5);
+            this.panel5.Location = new System.Drawing.Point(392, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(392, 26);
+            this.panel5.TabIndex = 32;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(92)))));
+            this.label5.Location = new System.Drawing.Point(105, 3);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(204, 21);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Slet Speciale fra Advokat";
+            // 
+            // slet_speciale_from_advokate_back__panel
+            // 
+            this.slet_speciale_from_advokate_back__panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(34)))), ((int)(((byte)(44)))));
+            this.slet_speciale_from_advokate_back__panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.slet_speciale_from_advokate_back__panel.Controls.Add(this.label9);
+            this.slet_speciale_from_advokate_back__panel.Controls.Add(this.label4);
+            this.slet_speciale_from_advokate_back__panel.Controls.Add(this.delete_speciale_from_advokat_textBox);
+            this.slet_speciale_from_advokate_back__panel.Controls.Add(this.delete_speciale_from_advokat_comboBox);
+            this.slet_speciale_from_advokate_back__panel.Controls.Add(this.delete_speciale_from_advokat_delete_button);
+            this.slet_speciale_from_advokate_back__panel.Location = new System.Drawing.Point(392, 26);
+            this.slet_speciale_from_advokate_back__panel.Name = "slet_speciale_from_advokate_back__panel";
+            this.slet_speciale_from_advokate_back__panel.Size = new System.Drawing.Size(392, 168);
+            this.slet_speciale_from_advokate_back__panel.TabIndex = 33;
+            // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.label9.Image = global::View_GUI.Properties.Resources.ID_icon;
+            this.label9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label9.Location = new System.Drawing.Point(47, 17);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(135, 24);
+            this.label9.TabIndex = 26;
+            this.label9.Text = "Advokat ID:";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.label4.Image = global::View_GUI.Properties.Resources.research_icon__1_;
+            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label4.Location = new System.Drawing.Point(69, 65);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(114, 25);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "Speciale:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // delete_speciale_from_advokat_textBox
+            // 
+            this.delete_speciale_from_advokat_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
+            this.delete_speciale_from_advokat_textBox.Location = new System.Drawing.Point(190, 21);
+            this.delete_speciale_from_advokat_textBox.MaxLength = 49;
+            this.delete_speciale_from_advokat_textBox.Name = "delete_speciale_from_advokat_textBox";
+            this.delete_speciale_from_advokat_textBox.Size = new System.Drawing.Size(100, 20);
+            this.delete_speciale_from_advokat_textBox.TabIndex = 25;
+            // 
+            // delete_speciale_from_advokat_comboBox
+            // 
+            this.delete_speciale_from_advokat_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.delete_speciale_from_advokat_comboBox.FormattingEnabled = true;
+            this.delete_speciale_from_advokat_comboBox.Location = new System.Drawing.Point(191, 66);
+            this.delete_speciale_from_advokat_comboBox.MaxDropDownItems = 50;
+            this.delete_speciale_from_advokat_comboBox.Name = "delete_speciale_from_advokat_comboBox";
+            this.delete_speciale_from_advokat_comboBox.Size = new System.Drawing.Size(100, 21);
+            this.delete_speciale_from_advokat_comboBox.TabIndex = 29;
+            this.delete_speciale_from_advokat_comboBox.Click += new System.EventHandler(this.delete_speciale_from_advokat_comboBox_Click);
+            // 
+            // delete_speciale_from_advokat_delete_button
+            // 
+            this.delete_speciale_from_advokat_delete_button.FlatAppearance.BorderSize = 0;
+            this.delete_speciale_from_advokat_delete_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.delete_speciale_from_advokat_delete_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.delete_speciale_from_advokat_delete_button.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.delete_speciale_from_advokat_delete_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.delete_speciale_from_advokat_delete_button.Image = global::View_GUI.Properties.Resources.Actions_edit_delete_icon3;
+            this.delete_speciale_from_advokat_delete_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.delete_speciale_from_advokat_delete_button.Location = new System.Drawing.Point(197, 108);
+            this.delete_speciale_from_advokat_delete_button.Name = "delete_speciale_from_advokat_delete_button";
+            this.delete_speciale_from_advokat_delete_button.Size = new System.Drawing.Size(90, 30);
+            this.delete_speciale_from_advokat_delete_button.TabIndex = 25;
+            this.delete_speciale_from_advokat_delete_button.Text = "SLET";
+            this.delete_speciale_from_advokat_delete_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.delete_speciale_from_advokat_delete_button.UseVisualStyleBackColor = true;
+            this.delete_speciale_from_advokat_delete_button.Click += new System.EventHandler(this.delete_speciale_from_advokat_delete_button_Click);
+            // 
+            // delete_speciale_backpanel_panel
+            // 
+            this.delete_speciale_backpanel_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(34)))), ((int)(((byte)(44)))));
+            this.delete_speciale_backpanel_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.delete_speciale_backpanel_panel.Controls.Add(this.label8);
+            this.delete_speciale_backpanel_panel.Controls.Add(this.delete_speciale_comboBox);
+            this.delete_speciale_backpanel_panel.Controls.Add(this.delete_speciale_button);
+            this.delete_speciale_backpanel_panel.Location = new System.Drawing.Point(392, 276);
+            this.delete_speciale_backpanel_panel.Name = "delete_speciale_backpanel_panel";
+            this.delete_speciale_backpanel_panel.Size = new System.Drawing.Size(392, 117);
+            this.delete_speciale_backpanel_panel.TabIndex = 32;
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.label8.Image = global::View_GUI.Properties.Resources.research_icon__2___3_;
+            this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label8.Location = new System.Drawing.Point(22, 20);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(161, 25);
+            this.label8.TabIndex = 28;
+            this.label8.Text = "SLET Speciale:";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // delete_speciale_comboBox
+            // 
+            this.delete_speciale_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.delete_speciale_comboBox.FormattingEnabled = true;
+            this.delete_speciale_comboBox.Location = new System.Drawing.Point(191, 24);
+            this.delete_speciale_comboBox.MaxDropDownItems = 50;
+            this.delete_speciale_comboBox.Name = "delete_speciale_comboBox";
+            this.delete_speciale_comboBox.Size = new System.Drawing.Size(100, 21);
+            this.delete_speciale_comboBox.TabIndex = 29;
+            this.delete_speciale_comboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.delete_speciale_comboBox_MouseClick);
+            // 
+            // delete_speciale_button
+            // 
+            this.delete_speciale_button.FlatAppearance.BorderSize = 0;
+            this.delete_speciale_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.delete_speciale_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.delete_speciale_button.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.delete_speciale_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.delete_speciale_button.Image = global::View_GUI.Properties.Resources.Actions_edit_delete_icon3;
+            this.delete_speciale_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.delete_speciale_button.Location = new System.Drawing.Point(197, 66);
+            this.delete_speciale_button.Name = "delete_speciale_button";
+            this.delete_speciale_button.Size = new System.Drawing.Size(90, 30);
+            this.delete_speciale_button.TabIndex = 25;
+            this.delete_speciale_button.Text = "SLET";
+            this.delete_speciale_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.delete_speciale_button.UseVisualStyleBackColor = true;
+            this.delete_speciale_button.Click += new System.EventHandler(this.delete_speciale_button_Click);
+            // 
+            // add_speciale_backpanel_panel
+            // 
+            this.add_speciale_backpanel_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(44)))));
+            this.add_speciale_backpanel_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.add_speciale_backpanel_panel.Controls.Add(this.Add_Specaile_To_DB_comboBox);
+            this.add_speciale_backpanel_panel.Controls.Add(this.label2);
+            this.add_speciale_backpanel_panel.Controls.Add(this.save_speciale_button);
+            this.add_speciale_backpanel_panel.Controls.Add(this.clear_speciale_button);
+            this.add_speciale_backpanel_panel.Location = new System.Drawing.Point(0, 276);
+            this.add_speciale_backpanel_panel.Name = "add_speciale_backpanel_panel";
+            this.add_speciale_backpanel_panel.Size = new System.Drawing.Size(392, 117);
+            this.add_speciale_backpanel_panel.TabIndex = 31;
+            // 
+            // Add_Specaile_To_DB_comboBox
+            // 
+            this.Add_Specaile_To_DB_comboBox.FormattingEnabled = true;
+            this.Add_Specaile_To_DB_comboBox.Location = new System.Drawing.Point(192, 18);
+            this.Add_Specaile_To_DB_comboBox.MaxDropDownItems = 50;
+            this.Add_Specaile_To_DB_comboBox.Name = "Add_Specaile_To_DB_comboBox";
+            this.Add_Specaile_To_DB_comboBox.Size = new System.Drawing.Size(100, 21);
+            this.Add_Specaile_To_DB_comboBox.TabIndex = 25;
+            this.Add_Specaile_To_DB_comboBox.SelectedIndexChanged += new System.EventHandler(this.Add_Specaile_To_DB_comboBox_SelectedIndexChanged);
+            this.Add_Specaile_To_DB_comboBox.Click += new System.EventHandler(this.Add_Specaile_To_DB_comboBox_Click);
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.label2.Image = global::View_GUI.Properties.Resources.name_card_icon1;
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label2.Location = new System.Drawing.Point(24, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(163, 24);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "Speciale Navn:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // save_speciale_button
+            // 
+            this.save_speciale_button.FlatAppearance.BorderSize = 0;
+            this.save_speciale_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.save_speciale_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.save_speciale_button.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.save_speciale_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
+            this.save_speciale_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
+            this.save_speciale_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.save_speciale_button.Location = new System.Drawing.Point(197, 63);
+            this.save_speciale_button.Name = "save_speciale_button";
+            this.save_speciale_button.Size = new System.Drawing.Size(90, 30);
+            this.save_speciale_button.TabIndex = 27;
+            this.save_speciale_button.Text = "Gem";
+            this.save_speciale_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.save_speciale_button.UseVisualStyleBackColor = true;
+            this.save_speciale_button.Click += new System.EventHandler(this.save_speciale_button_Click);
+            // 
+            // clear_speciale_button
+            // 
+            this.clear_speciale_button.BackColor = System.Drawing.Color.Transparent;
+            this.clear_speciale_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
+            this.clear_speciale_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.clear_speciale_button.FlatAppearance.BorderSize = 0;
+            this.clear_speciale_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.clear_speciale_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.clear_speciale_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clear_speciale_button.ForeColor = System.Drawing.Color.Black;
+            this.clear_speciale_button.Location = new System.Drawing.Point(154, 66);
+            this.clear_speciale_button.Name = "clear_speciale_button";
+            this.clear_speciale_button.Size = new System.Drawing.Size(28, 23);
+            this.clear_speciale_button.TabIndex = 29;
+            this.clear_speciale_button.UseVisualStyleBackColor = false;
+            this.clear_speciale_button.Click += new System.EventHandler(this.clear_speciale_button_Click);
+            // 
+            // background_Advokat_specialepanel
+            // 
+            this.background_Advokat_specialepanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.background_Advokat_specialepanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.background_Advokat_specialepanel.Controls.Add(this.label7);
+            this.background_Advokat_specialepanel.Controls.Add(this.speciale_advokat_id_textBox);
+            this.background_Advokat_specialepanel.Controls.Add(this.label6);
+            this.background_Advokat_specialepanel.Controls.Add(this.save_Advokat_specaile_button);
+            this.background_Advokat_specialepanel.Controls.Add(this.clear_advokat_speciale_button);
+            this.background_Advokat_specialepanel.Controls.Add(this.speciale_comboBox);
+            this.background_Advokat_specialepanel.Location = new System.Drawing.Point(0, 26);
+            this.background_Advokat_specialepanel.Name = "background_Advokat_specialepanel";
+            this.background_Advokat_specialepanel.Size = new System.Drawing.Size(392, 168);
+            this.background_Advokat_specialepanel.TabIndex = 31;
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.label7.Image = global::View_GUI.Properties.Resources.ID_icon;
+            this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label7.Location = new System.Drawing.Point(48, 19);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(135, 24);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Advokat ID:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // speciale_advokat_id_textBox
+            // 
+            this.speciale_advokat_id_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
+            this.speciale_advokat_id_textBox.Location = new System.Drawing.Point(191, 23);
+            this.speciale_advokat_id_textBox.MaxLength = 49;
+            this.speciale_advokat_id_textBox.Name = "speciale_advokat_id_textBox";
+            this.speciale_advokat_id_textBox.Size = new System.Drawing.Size(100, 20);
+            this.speciale_advokat_id_textBox.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.label6.Image = global::View_GUI.Properties.Resources.research_icon__1_;
+            this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label6.Location = new System.Drawing.Point(70, 64);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(115, 25);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Speciale:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // save_Advokat_specaile_button
+            // 
+            this.save_Advokat_specaile_button.FlatAppearance.BorderSize = 0;
+            this.save_Advokat_specaile_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.save_Advokat_specaile_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.save_Advokat_specaile_button.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.save_Advokat_specaile_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
+            this.save_Advokat_specaile_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
+            this.save_Advokat_specaile_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.save_Advokat_specaile_button.Location = new System.Drawing.Point(197, 113);
+            this.save_Advokat_specaile_button.Name = "save_Advokat_specaile_button";
+            this.save_Advokat_specaile_button.Size = new System.Drawing.Size(90, 30);
+            this.save_Advokat_specaile_button.TabIndex = 7;
+            this.save_Advokat_specaile_button.Text = "Gem";
+            this.save_Advokat_specaile_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.save_Advokat_specaile_button.UseVisualStyleBackColor = true;
+            this.save_Advokat_specaile_button.Click += new System.EventHandler(this.save_Advokat_specaile_button_Click);
+            // 
+            // clear_advokat_speciale_button
+            // 
+            this.clear_advokat_speciale_button.BackColor = System.Drawing.Color.Transparent;
+            this.clear_advokat_speciale_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
+            this.clear_advokat_speciale_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.clear_advokat_speciale_button.FlatAppearance.BorderSize = 0;
+            this.clear_advokat_speciale_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.clear_advokat_speciale_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.clear_advokat_speciale_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clear_advokat_speciale_button.ForeColor = System.Drawing.Color.Black;
+            this.clear_advokat_speciale_button.Location = new System.Drawing.Point(154, 116);
+            this.clear_advokat_speciale_button.Name = "clear_advokat_speciale_button";
+            this.clear_advokat_speciale_button.Size = new System.Drawing.Size(28, 23);
+            this.clear_advokat_speciale_button.TabIndex = 23;
+            this.clear_advokat_speciale_button.UseVisualStyleBackColor = false;
+            this.clear_advokat_speciale_button.Click += new System.EventHandler(this.clear_advokat_speciale_button_Click);
+            // 
+            // speciale_comboBox
+            // 
+            this.speciale_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.speciale_comboBox.FormattingEnabled = true;
+            this.speciale_comboBox.Location = new System.Drawing.Point(191, 70);
+            this.speciale_comboBox.MaxDropDownItems = 50;
+            this.speciale_comboBox.Name = "speciale_comboBox";
+            this.speciale_comboBox.Size = new System.Drawing.Size(100, 21);
+            this.speciale_comboBox.TabIndex = 24;
+            this.speciale_comboBox.Click += new System.EventHandler(this.speciale_comboBox_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(392, 250);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(392, 26);
+            this.panel1.TabIndex = 31;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(92)))));
+            this.label1.Location = new System.Drawing.Point(143, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 21);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Slet Speciale";
+            // 
+            // speciale_Midd_panel
+            // 
+            this.speciale_Midd_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
+            this.speciale_Midd_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.speciale_Midd_panel.Controls.Add(this.label3);
+            this.speciale_Midd_panel.Location = new System.Drawing.Point(0, 250);
+            this.speciale_Midd_panel.Name = "speciale_Midd_panel";
+            this.speciale_Midd_panel.Size = new System.Drawing.Size(392, 26);
+            this.speciale_Midd_panel.TabIndex = 30;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(92)))));
+            this.label3.Location = new System.Drawing.Point(140, 3);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(118, 21);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Tilføj Speciale";
+            // 
+            // speciale_Advokat_Top_panel
+            // 
+            this.speciale_Advokat_Top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.speciale_Advokat_Top_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.speciale_Advokat_Top_panel.Controls.Add(this.speciale_label);
+            this.speciale_Advokat_Top_panel.Location = new System.Drawing.Point(0, 0);
+            this.speciale_Advokat_Top_panel.Name = "speciale_Advokat_Top_panel";
+            this.speciale_Advokat_Top_panel.Size = new System.Drawing.Size(392, 26);
+            this.speciale_Advokat_Top_panel.TabIndex = 3;
+            // 
+            // speciale_label
+            // 
+            this.speciale_label.AutoSize = true;
+            this.speciale_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.speciale_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(92)))));
+            this.speciale_label.Location = new System.Drawing.Point(98, 3);
+            this.speciale_label.Name = "speciale_label";
+            this.speciale_label.Size = new System.Drawing.Size(205, 21);
+            this.speciale_label.TabIndex = 1;
+            this.speciale_label.Text = "Tilføj Speciale til Advokat";
+            // 
             // top_Menu_background_panel
             // 
             this.top_Menu_background_panel.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -1056,119 +1169,6 @@
             this.opret_advokat_button.UseVisualStyleBackColor = true;
             this.opret_advokat_button.Click += new System.EventHandler(this.opret_advokat_button_Click);
             // 
-            // create_Clear_All_textboxes_button
-            // 
-            this.create_Clear_All_textboxes_button.BackColor = System.Drawing.Color.Transparent;
-            this.create_Clear_All_textboxes_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
-            this.create_Clear_All_textboxes_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.create_Clear_All_textboxes_button.FlatAppearance.BorderSize = 0;
-            this.create_Clear_All_textboxes_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.create_Clear_All_textboxes_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.create_Clear_All_textboxes_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.create_Clear_All_textboxes_button.ForeColor = System.Drawing.Color.Black;
-            this.create_Clear_All_textboxes_button.Location = new System.Drawing.Point(119, 339);
-            this.create_Clear_All_textboxes_button.Name = "create_Clear_All_textboxes_button";
-            this.create_Clear_All_textboxes_button.Size = new System.Drawing.Size(28, 23);
-            this.create_Clear_All_textboxes_button.TabIndex = 23;
-            this.create_Clear_All_textboxes_button.UseVisualStyleBackColor = false;
-            this.create_Clear_All_textboxes_button.Click += new System.EventHandler(this.create_Clear_All_textboxes_button_Click);
-            // 
-            // email_label
-            // 
-            this.email_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.email_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.email_label.Image = global::View_GUI.Properties.Resources.At_Mail_icon;
-            this.email_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.email_label.Location = new System.Drawing.Point(53, 287);
-            this.email_label.Name = "email_label";
-            this.email_label.Size = new System.Drawing.Size(98, 33);
-            this.email_label.TabIndex = 22;
-            this.email_label.Text = "Email:";
-            this.email_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // advokater_Save_button
-            // 
-            this.advokater_Save_button.FlatAppearance.BorderSize = 0;
-            this.advokater_Save_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.advokater_Save_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
-            this.advokater_Save_button.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.advokater_Save_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
-            this.advokater_Save_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
-            this.advokater_Save_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.advokater_Save_button.Location = new System.Drawing.Point(162, 336);
-            this.advokater_Save_button.Name = "advokater_Save_button";
-            this.advokater_Save_button.Size = new System.Drawing.Size(90, 30);
-            this.advokater_Save_button.TabIndex = 7;
-            this.advokater_Save_button.Text = "Gem";
-            this.advokater_Save_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.advokater_Save_button.UseVisualStyleBackColor = true;
-            this.advokater_Save_button.Click += new System.EventHandler(this.advokater_Save_button_Click);
-            // 
-            // adr_label
-            // 
-            this.adr_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.adr_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.adr_label.Image = global::View_GUI.Properties.Resources.my_numbers_icon;
-            this.adr_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.adr_label.Location = new System.Drawing.Point(70, 197);
-            this.adr_label.Name = "adr_label";
-            this.adr_label.Size = new System.Drawing.Size(80, 25);
-            this.adr_label.TabIndex = 19;
-            this.adr_label.Text = "Adr:";
-            this.adr_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // zipCode_label
-            // 
-            this.zipCode_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.zipCode_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.zipCode_label.Image = global::View_GUI.Properties.Resources.Compressed_File_Zip_icon;
-            this.zipCode_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.zipCode_label.Location = new System.Drawing.Point(49, 150);
-            this.zipCode_label.Name = "zipCode_label";
-            this.zipCode_label.Size = new System.Drawing.Size(105, 25);
-            this.zipCode_label.TabIndex = 17;
-            this.zipCode_label.Text = "PostNr:";
-            this.zipCode_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // tlf_label
-            // 
-            this.tlf_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.tlf_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.tlf_label.Image = global::View_GUI.Properties.Resources.Phone_icon__1_;
-            this.tlf_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.tlf_label.Location = new System.Drawing.Point(80, 243);
-            this.tlf_label.Name = "tlf_label";
-            this.tlf_label.Size = new System.Drawing.Size(73, 24);
-            this.tlf_label.TabIndex = 15;
-            this.tlf_label.Text = "Tlf:";
-            this.tlf_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // surname_label
-            // 
-            this.surname_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.surname_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.surname_label.Image = global::View_GUI.Properties.Resources.name_card_icon;
-            this.surname_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.surname_label.Location = new System.Drawing.Point(25, 104);
-            this.surname_label.Name = "surname_label";
-            this.surname_label.Size = new System.Drawing.Size(125, 25);
-            this.surname_label.TabIndex = 13;
-            this.surname_label.Text = "Efternavn:";
-            this.surname_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // name_label
-            // 
-            this.name_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.name_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.name_label.Image = global::View_GUI.Properties.Resources.ID_icon;
-            this.name_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.name_label.Location = new System.Drawing.Point(56, 59);
-            this.name_label.Name = "name_label";
-            this.name_label.Size = new System.Drawing.Size(95, 24);
-            this.name_label.TabIndex = 2;
-            this.name_label.Text = "Navn:";
-            this.name_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // Advokater_Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1192,8 +1192,19 @@
             this.background_textboxes_top_panel.ResumeLayout(false);
             this.background_textboxes_top_panel.PerformLayout();
             this.datagridviewBackground_panel.ResumeLayout(false);
+            this.background_DGV_Search_panel.ResumeLayout(false);
+            this.background_DGV_Search_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.search_Datagridview_pictureBox)).EndInit();
+            this.background_DGV_panel1.ResumeLayout(false);
+            this.background_DGV_panel4.ResumeLayout(false);
+            this.background_DGV_panel3.ResumeLayout(false);
+            this.background_DGV_panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Advokat_dataGridView)).EndInit();
             this.speciale_BACK_panel.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.slet_speciale_from_advokate_back__panel.ResumeLayout(false);
+            this.slet_speciale_from_advokate_back__panel.PerformLayout();
             this.delete_speciale_backpanel_panel.ResumeLayout(false);
             this.add_speciale_backpanel_panel.ResumeLayout(false);
             this.background_Advokat_specialepanel.ResumeLayout(false);
@@ -1204,17 +1215,6 @@
             this.speciale_Midd_panel.PerformLayout();
             this.speciale_Advokat_Top_panel.ResumeLayout(false);
             this.speciale_Advokat_Top_panel.PerformLayout();
-            this.slet_speciale_from_advokate_back__panel.ResumeLayout(false);
-            this.slet_speciale_from_advokate_back__panel.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.background_DGV_Search_panel.ResumeLayout(false);
-            this.background_DGV_Search_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.search_Datagridview_pictureBox)).EndInit();
-            this.background_DGV_panel1.ResumeLayout(false);
-            this.background_DGV_panel4.ResumeLayout(false);
-            this.background_DGV_panel3.ResumeLayout(false);
-            this.background_DGV_panel2.ResumeLayout(false);
             this.top_Menu_background_panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
