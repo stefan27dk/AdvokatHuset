@@ -8,9 +8,12 @@ namespace Domain
 {
     class Ydelse
     {
-        private int YdelseNr { get; set; }
-        private string Navn { get; set; }
-        private int Honorar { get; set; }
+        //private int YdelseNr { get; set; }
+        public string Navn { get; set; }
+        public double Pris { get; set; }
+        public string Type { get; set; }
+        public string Art { get; set; }
+        public string Oprets_Dato { get; set; }
 
         public Ydelse() //Constructor
         {

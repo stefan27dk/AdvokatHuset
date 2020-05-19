@@ -8,7 +8,7 @@ namespace Domain
 {
     class Kunde:Person
     {
-        private int KundeId { get; set; }
+        //private int KundeId { get; set; }
         
         public Kunde() //Constructor
         {

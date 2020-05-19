@@ -1529,7 +1529,7 @@ namespace View_GUI
         private void Load_Specialer(ComboBox combo)
         {
             speciale_comboBox.Items.Clear();
-            Speciale_Load_Combobox Load_Specialer = new Speciale_Load_Combobox();
+            Load_Combobox Load_Specialer = new Load_Combobox();
             string Query = "Select* From Uddannelser";
             combo = Load_Specialer.Populate_Combobox_Speciale(Query, combo);
         }

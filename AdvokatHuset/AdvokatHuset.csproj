@@ -59,6 +59,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Advokat.cs" />
+    <Compile Include="Ydelser-Form8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ydelser-Form8.Designer.cs">
+      <DependentUpon>Ydelser-Form8.cs</DependentUpon>
+    </Compile>
     <Compile Include="Medarbejder-Form6.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,14 +154,17 @@
     <Compile Include="SelectionScreenshot-Form4.Designer.cs">
       <DependentUpon>SelectionScreenshot-Form4.cs</DependentUpon>
     </Compile>
-    <Compile Include="Speciale_Load_Combobox.cs" />
-    <Compile Include="Ydelse.cs" />
-    <Compile Include="Ydelser-Form8.cs">
+    <Compile Include="Load_Combobox.cs" />
+    <Compile Include="Test1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ydelser-Form8.Designer.cs">
-      <DependentUpon>Ydelser-Form8.cs</DependentUpon>
+    <Compile Include="Test1.Designer.cs">
+      <DependentUpon>Test1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ydelse.cs" />
+    <EmbeddedResource Include="Ydelser-Form8.resx">
+      <DependentUpon>Ydelser-Form8.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Medarbejder-Form6.resx">
       <DependentUpon>Medarbejder-Form6.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,8 +203,8 @@
     <EmbeddedResource Include="SelectionScreenshot-Form4.resx">
       <DependentUpon>SelectionScreenshot-Form4.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ydelser-Form8.resx">
-      <DependentUpon>Ydelser-Form8.cs</DependentUpon>
+    <EmbeddedResource Include="Test1.resx">
+      <DependentUpon>Test1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

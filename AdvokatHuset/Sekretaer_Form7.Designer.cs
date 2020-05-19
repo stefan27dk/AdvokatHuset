@@ -240,7 +240,7 @@
             this.opret_Sekretaerer_label.AutoSize = true;
             this.opret_Sekretaerer_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.opret_Sekretaerer_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(92)))));
-            this.opret_Sekretaerer_label.Location = new System.Drawing.Point(151, 3);
+            this.opret_Sekretaerer_label.Location = new System.Drawing.Point(138, 3);
             this.opret_Sekretaerer_label.Name = "opret_Sekretaerer_label";
             this.opret_Sekretaerer_label.Size = new System.Drawing.Size(132, 21);
             this.opret_Sekretaerer_label.TabIndex = 1;
