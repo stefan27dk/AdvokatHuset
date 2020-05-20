@@ -31,23 +31,23 @@
             this.Sager_Top_label = new System.Windows.Forms.Label();
             this.backgroundName_Top_panel = new System.Windows.Forms.Panel();
             this.top_background_panel = new System.Windows.Forms.Panel();
-            this.backPanel_Textboxes_panel = new System.Windows.Forms.Panel();
-            this.sager_oprets_dato_dateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.sager_advokat_id_textBox = new System.Windows.Forms.TextBox();
-            this.sager_type_comboBox = new System.Windows.Forms.ComboBox();
-            this.sager_kunde_id_texbox = new System.Windows.Forms.TextBox();
-            this.background_textboxes_top_panel = new System.Windows.Forms.Panel();
-            this.opret_Sager_label = new System.Windows.Forms.Label();
-            this.sager_id_textBox = new System.Windows.Forms.TextBox();
             this.sager_tilføj_tid_button = new System.Windows.Forms.Button();
             this.sager_sag_ydelser_button = new System.Windows.Forms.Button();
             this.sager_vise_rediger_button = new System.Windows.Forms.Button();
             this.sager_opret_button = new System.Windows.Forms.Button();
+            this.backPanel_Textboxes_panel = new System.Windows.Forms.Panel();
+            this.sager_oprets_dato_dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
+            this.sager_advokat_id_textBox = new System.Windows.Forms.TextBox();
+            this.sager_type_comboBox = new System.Windows.Forms.ComboBox();
             this.ydelse_Save_button = new System.Windows.Forms.Button();
             this.art_label = new System.Windows.Forms.Label();
+            this.sager_kunde_id_texbox = new System.Windows.Forms.TextBox();
+            this.background_textboxes_top_panel = new System.Windows.Forms.Panel();
+            this.opret_Sager_label = new System.Windows.Forms.Label();
             this.type_label = new System.Windows.Forms.Label();
             this.id_label = new System.Windows.Forms.Label();
+            this.sager_id_textBox = new System.Windows.Forms.TextBox();
             this.name_label = new System.Windows.Forms.Label();
             this.backgroundName_Top_panel.SuspendLayout();
             this.top_background_panel.SuspendLayout();
@@ -85,90 +85,10 @@
             this.top_background_panel.Controls.Add(this.sager_sag_ydelser_button);
             this.top_background_panel.Controls.Add(this.sager_vise_rediger_button);
             this.top_background_panel.Controls.Add(this.sager_opret_button);
-            this.top_background_panel.Location = new System.Drawing.Point(274, 80);
+            this.top_background_panel.Location = new System.Drawing.Point(624, 80);
             this.top_background_panel.Name = "top_background_panel";
             this.top_background_panel.Size = new System.Drawing.Size(415, 83);
             this.top_background_panel.TabIndex = 16;
-            // 
-            // backPanel_Textboxes_panel
-            // 
-            this.backPanel_Textboxes_panel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.backPanel_Textboxes_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(30)))), ((int)(((byte)(50)))));
-            this.backPanel_Textboxes_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.backPanel_Textboxes_panel.Controls.Add(this.sager_oprets_dato_dateTimePicker);
-            this.backPanel_Textboxes_panel.Controls.Add(this.label1);
-            this.backPanel_Textboxes_panel.Controls.Add(this.sager_advokat_id_textBox);
-            this.backPanel_Textboxes_panel.Controls.Add(this.sager_type_comboBox);
-            this.backPanel_Textboxes_panel.Controls.Add(this.ydelse_Save_button);
-            this.backPanel_Textboxes_panel.Controls.Add(this.art_label);
-            this.backPanel_Textboxes_panel.Controls.Add(this.sager_kunde_id_texbox);
-            this.backPanel_Textboxes_panel.Controls.Add(this.background_textboxes_top_panel);
-            this.backPanel_Textboxes_panel.Controls.Add(this.type_label);
-            this.backPanel_Textboxes_panel.Controls.Add(this.id_label);
-            this.backPanel_Textboxes_panel.Controls.Add(this.sager_id_textBox);
-            this.backPanel_Textboxes_panel.Controls.Add(this.name_label);
-            this.backPanel_Textboxes_panel.Location = new System.Drawing.Point(274, 174);
-            this.backPanel_Textboxes_panel.Name = "backPanel_Textboxes_panel";
-            this.backPanel_Textboxes_panel.Size = new System.Drawing.Size(414, 388);
-            this.backPanel_Textboxes_panel.TabIndex = 15;
-            // 
-            // sager_oprets_dato_dateTimePicker
-            // 
-            this.sager_oprets_dato_dateTimePicker.Location = new System.Drawing.Point(176, 111);
-            this.sager_oprets_dato_dateTimePicker.Name = "sager_oprets_dato_dateTimePicker";
-            this.sager_oprets_dato_dateTimePicker.Size = new System.Drawing.Size(140, 20);
-            this.sager_oprets_dato_dateTimePicker.TabIndex = 25;
-            // 
-            // sager_advokat_id_textBox
-            // 
-            this.sager_advokat_id_textBox.Location = new System.Drawing.Point(178, 200);
-            this.sager_advokat_id_textBox.Name = "sager_advokat_id_textBox";
-            this.sager_advokat_id_textBox.Size = new System.Drawing.Size(39, 20);
-            this.sager_advokat_id_textBox.TabIndex = 24;
-            // 
-            // sager_type_comboBox
-            // 
-            this.sager_type_comboBox.FormattingEnabled = true;
-            this.sager_type_comboBox.Location = new System.Drawing.Point(178, 155);
-            this.sager_type_comboBox.Name = "sager_type_comboBox";
-            this.sager_type_comboBox.Size = new System.Drawing.Size(138, 21);
-            this.sager_type_comboBox.TabIndex = 22;
-            // 
-            // sager_kunde_id_texbox
-            // 
-            this.sager_kunde_id_texbox.Location = new System.Drawing.Point(178, 249);
-            this.sager_kunde_id_texbox.Name = "sager_kunde_id_texbox";
-            this.sager_kunde_id_texbox.Size = new System.Drawing.Size(39, 20);
-            this.sager_kunde_id_texbox.TabIndex = 20;
-            // 
-            // background_textboxes_top_panel
-            // 
-            this.background_textboxes_top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
-            this.background_textboxes_top_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.background_textboxes_top_panel.Controls.Add(this.opret_Sager_label);
-            this.background_textboxes_top_panel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.background_textboxes_top_panel.Location = new System.Drawing.Point(0, 0);
-            this.background_textboxes_top_panel.Name = "background_textboxes_top_panel";
-            this.background_textboxes_top_panel.Size = new System.Drawing.Size(412, 26);
-            this.background_textboxes_top_panel.TabIndex = 10;
-            // 
-            // opret_Sager_label
-            // 
-            this.opret_Sager_label.AutoSize = true;
-            this.opret_Sager_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.opret_Sager_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(92)))));
-            this.opret_Sager_label.Location = new System.Drawing.Point(151, 3);
-            this.opret_Sager_label.Name = "opret_Sager_label";
-            this.opret_Sager_label.Size = new System.Drawing.Size(88, 21);
-            this.opret_Sager_label.TabIndex = 1;
-            this.opret_Sager_label.Text = "Opret Sag";
-            // 
-            // sager_id_textBox
-            // 
-            this.sager_id_textBox.Location = new System.Drawing.Point(178, 63);
-            this.sager_id_textBox.Name = "sager_id_textBox";
-            this.sager_id_textBox.Size = new System.Drawing.Size(39, 20);
-            this.sager_id_textBox.TabIndex = 12;
             // 
             // sager_tilføj_tid_button
             // 
@@ -245,6 +165,35 @@
             this.sager_opret_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.sager_opret_button.UseVisualStyleBackColor = true;
             // 
+            // backPanel_Textboxes_panel
+            // 
+            this.backPanel_Textboxes_panel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.backPanel_Textboxes_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(30)))), ((int)(((byte)(50)))));
+            this.backPanel_Textboxes_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.backPanel_Textboxes_panel.Controls.Add(this.sager_oprets_dato_dateTimePicker);
+            this.backPanel_Textboxes_panel.Controls.Add(this.label1);
+            this.backPanel_Textboxes_panel.Controls.Add(this.sager_advokat_id_textBox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.sager_type_comboBox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.ydelse_Save_button);
+            this.backPanel_Textboxes_panel.Controls.Add(this.art_label);
+            this.backPanel_Textboxes_panel.Controls.Add(this.sager_kunde_id_texbox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.background_textboxes_top_panel);
+            this.backPanel_Textboxes_panel.Controls.Add(this.type_label);
+            this.backPanel_Textboxes_panel.Controls.Add(this.id_label);
+            this.backPanel_Textboxes_panel.Controls.Add(this.sager_id_textBox);
+            this.backPanel_Textboxes_panel.Controls.Add(this.name_label);
+            this.backPanel_Textboxes_panel.Location = new System.Drawing.Point(624, 174);
+            this.backPanel_Textboxes_panel.Name = "backPanel_Textboxes_panel";
+            this.backPanel_Textboxes_panel.Size = new System.Drawing.Size(414, 388);
+            this.backPanel_Textboxes_panel.TabIndex = 15;
+            // 
+            // sager_oprets_dato_dateTimePicker
+            // 
+            this.sager_oprets_dato_dateTimePicker.Location = new System.Drawing.Point(176, 111);
+            this.sager_oprets_dato_dateTimePicker.Name = "sager_oprets_dato_dateTimePicker";
+            this.sager_oprets_dato_dateTimePicker.Size = new System.Drawing.Size(140, 20);
+            this.sager_oprets_dato_dateTimePicker.TabIndex = 25;
+            // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
@@ -257,6 +206,21 @@
             this.label1.TabIndex = 23;
             this.label1.Text = "Advokat ID:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // sager_advokat_id_textBox
+            // 
+            this.sager_advokat_id_textBox.Location = new System.Drawing.Point(178, 200);
+            this.sager_advokat_id_textBox.Name = "sager_advokat_id_textBox";
+            this.sager_advokat_id_textBox.Size = new System.Drawing.Size(39, 20);
+            this.sager_advokat_id_textBox.TabIndex = 24;
+            // 
+            // sager_type_comboBox
+            // 
+            this.sager_type_comboBox.FormattingEnabled = true;
+            this.sager_type_comboBox.Location = new System.Drawing.Point(178, 155);
+            this.sager_type_comboBox.Name = "sager_type_comboBox";
+            this.sager_type_comboBox.Size = new System.Drawing.Size(138, 21);
+            this.sager_type_comboBox.TabIndex = 22;
             // 
             // ydelse_Save_button
             // 
@@ -288,6 +252,35 @@
             this.art_label.Text = "Kunde ID:";
             this.art_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // sager_kunde_id_texbox
+            // 
+            this.sager_kunde_id_texbox.Location = new System.Drawing.Point(178, 249);
+            this.sager_kunde_id_texbox.Name = "sager_kunde_id_texbox";
+            this.sager_kunde_id_texbox.Size = new System.Drawing.Size(39, 20);
+            this.sager_kunde_id_texbox.TabIndex = 20;
+            // 
+            // background_textboxes_top_panel
+            // 
+            this.background_textboxes_top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.background_textboxes_top_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.background_textboxes_top_panel.Controls.Add(this.opret_Sager_label);
+            this.background_textboxes_top_panel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.background_textboxes_top_panel.Location = new System.Drawing.Point(0, 0);
+            this.background_textboxes_top_panel.Name = "background_textboxes_top_panel";
+            this.background_textboxes_top_panel.Size = new System.Drawing.Size(412, 26);
+            this.background_textboxes_top_panel.TabIndex = 10;
+            // 
+            // opret_Sager_label
+            // 
+            this.opret_Sager_label.AutoSize = true;
+            this.opret_Sager_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.opret_Sager_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(92)))));
+            this.opret_Sager_label.Location = new System.Drawing.Point(151, 3);
+            this.opret_Sager_label.Name = "opret_Sager_label";
+            this.opret_Sager_label.Size = new System.Drawing.Size(88, 21);
+            this.opret_Sager_label.TabIndex = 1;
+            this.opret_Sager_label.Text = "Opret Sag";
+            // 
             // type_label
             // 
             this.type_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
@@ -314,6 +307,13 @@
             this.id_label.Text = "Sag ID:";
             this.id_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // sager_id_textBox
+            // 
+            this.sager_id_textBox.Location = new System.Drawing.Point(178, 63);
+            this.sager_id_textBox.Name = "sager_id_textBox";
+            this.sager_id_textBox.Size = new System.Drawing.Size(39, 20);
+            this.sager_id_textBox.TabIndex = 12;
+            // 
             // name_label
             // 
             this.name_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
@@ -333,7 +333,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(900, 600);
+            this.ClientSize = new System.Drawing.Size(1600, 800);
             this.Controls.Add(this.top_background_panel);
             this.Controls.Add(this.backPanel_Textboxes_panel);
             this.Controls.Add(this.backgroundName_Top_panel);
