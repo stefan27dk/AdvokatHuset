@@ -70,6 +70,17 @@
             this.type_label = new System.Windows.Forms.Label();
             this.create_Clear_All_textboxes_opret_sag_button = new System.Windows.Forms.Button();
             this.opret_sag_Save_button = new System.Windows.Forms.Button();
+            this.sag_Add_Ydelse_panel = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.ydelse_navn_comboBox = new System.Windows.Forms.ComboBox();
+            this.add_Ydelse_Ydelse_Nr_textBox = new System.Windows.Forms.TextBox();
+            this.sag_Add_Ydelse_Top_panel = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.add_sag_Ydelse_button = new System.Windows.Forms.Button();
+            this.add_Ydelse_Sag_SagID_textBox = new System.Windows.Forms.TextBox();
+            this.ydelseNR_label = new System.Windows.Forms.Label();
+            this.CLEAR_sag_Ydelse_button = new System.Windows.Forms.Button();
+            this.Ydelse_SagID_label = new System.Windows.Forms.Label();
             this.backgroundName_Top_panel.SuspendLayout();
             this.backPanel_Textboxes_Opret_sag_panel.SuspendLayout();
             this.background_textboxes_top_panel.SuspendLayout();
@@ -82,6 +93,8 @@
             this.background_DGV_panel3.SuspendLayout();
             this.background_DGV_panel2.SuspendLayout();
             this.top_Menu_background_panel.SuspendLayout();
+            this.sag_Add_Ydelse_panel.SuspendLayout();
+            this.sag_Add_Ydelse_Top_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // Sager_Top_label
@@ -97,7 +110,7 @@
             // 
             // backgroundName_Top_panel
             // 
-            this.backgroundName_Top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.backgroundName_Top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.backgroundName_Top_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.backgroundName_Top_panel.Controls.Add(this.Sager_Top_label);
             this.backgroundName_Top_panel.Location = new System.Drawing.Point(18, 58);
@@ -117,7 +130,7 @@
             // backPanel_Textboxes_Opret_sag_panel
             // 
             this.backPanel_Textboxes_Opret_sag_panel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.backPanel_Textboxes_Opret_sag_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.backPanel_Textboxes_Opret_sag_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.backPanel_Textboxes_Opret_sag_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.backPanel_Textboxes_Opret_sag_panel.Controls.Add(this.advokat_ID_label);
             this.backPanel_Textboxes_Opret_sag_panel.Controls.Add(this.Kunde_ID_label);
@@ -128,7 +141,7 @@
             this.backPanel_Textboxes_Opret_sag_panel.Controls.Add(this.background_textboxes_top_panel);
             this.backPanel_Textboxes_Opret_sag_panel.Controls.Add(this.opret_sag_advokatID_textBox);
             this.backPanel_Textboxes_Opret_sag_panel.Controls.Add(this.opret_sag_Type_textBox);
-            this.backPanel_Textboxes_Opret_sag_panel.Location = new System.Drawing.Point(770, 165);
+            this.backPanel_Textboxes_Opret_sag_panel.Location = new System.Drawing.Point(718, 165);
             this.backPanel_Textboxes_Opret_sag_panel.Name = "backPanel_Textboxes_Opret_sag_panel";
             this.backPanel_Textboxes_Opret_sag_panel.Size = new System.Drawing.Size(394, 388);
             this.backPanel_Textboxes_Opret_sag_panel.TabIndex = 11;
@@ -145,7 +158,7 @@
             // 
             // background_textboxes_top_panel
             // 
-            this.background_textboxes_top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.background_textboxes_top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.background_textboxes_top_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.background_textboxes_top_panel.Controls.Add(this.opret_Sag_label);
             this.background_textboxes_top_panel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -179,6 +192,7 @@
             this.datagridviewBackground_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.datagridviewBackground_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.datagridviewBackground_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.datagridviewBackground_panel.Controls.Add(this.sag_Add_Ydelse_panel);
             this.datagridviewBackground_panel.Controls.Add(this.background_DGV_Search_panel);
             this.datagridviewBackground_panel.Controls.Add(this.background_DGV_panel1);
             this.datagridviewBackground_panel.Controls.Add(this.background_DGV_panel4);
@@ -530,7 +544,7 @@
             this.top_Menu_background_panel.Controls.Add(this.opret_Sag_button);
             this.top_Menu_background_panel.Location = new System.Drawing.Point(558, 69);
             this.top_Menu_background_panel.Name = "top_Menu_background_panel";
-            this.top_Menu_background_panel.Size = new System.Drawing.Size(723, 90);
+            this.top_Menu_background_panel.Size = new System.Drawing.Size(654, 90);
             this.top_Menu_background_panel.TabIndex = 0;
             // 
             // afslut_sag_button
@@ -723,14 +737,158 @@
             this.opret_sag_Save_button.UseVisualStyleBackColor = true;
             this.opret_sag_Save_button.Click += new System.EventHandler(this.Sag_Save_button_Click);
             // 
+            // sag_Add_Ydelse_panel
+            // 
+            this.sag_Add_Ydelse_panel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.sag_Add_Ydelse_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(30)))), ((int)(((byte)(50)))));
+            this.sag_Add_Ydelse_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.sag_Add_Ydelse_panel.Controls.Add(this.label7);
+            this.sag_Add_Ydelse_panel.Controls.Add(this.ydelse_navn_comboBox);
+            this.sag_Add_Ydelse_panel.Controls.Add(this.add_Ydelse_Ydelse_Nr_textBox);
+            this.sag_Add_Ydelse_panel.Controls.Add(this.sag_Add_Ydelse_Top_panel);
+            this.sag_Add_Ydelse_panel.Controls.Add(this.add_sag_Ydelse_button);
+            this.sag_Add_Ydelse_panel.Controls.Add(this.add_Ydelse_Sag_SagID_textBox);
+            this.sag_Add_Ydelse_panel.Controls.Add(this.ydelseNR_label);
+            this.sag_Add_Ydelse_panel.Controls.Add(this.CLEAR_sag_Ydelse_button);
+            this.sag_Add_Ydelse_panel.Controls.Add(this.Ydelse_SagID_label);
+            this.sag_Add_Ydelse_panel.Location = new System.Drawing.Point(612, 104);
+            this.sag_Add_Ydelse_panel.Name = "sag_Add_Ydelse_panel";
+            this.sag_Add_Ydelse_panel.Size = new System.Drawing.Size(414, 388);
+            this.sag_Add_Ydelse_panel.TabIndex = 26;
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.label7.Image = global::View_GUI.Properties.Resources.barcode_icon;
+            this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label7.Location = new System.Drawing.Point(28, 152);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(135, 24);
+            this.label7.TabIndex = 37;
+            this.label7.Text = "Ydelse Nr:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // ydelse_navn_comboBox
+            // 
+            this.ydelse_navn_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ydelse_navn_comboBox.FormattingEnabled = true;
+            this.ydelse_navn_comboBox.Location = new System.Drawing.Point(169, 107);
+            this.ydelse_navn_comboBox.Name = "ydelse_navn_comboBox";
+            this.ydelse_navn_comboBox.Size = new System.Drawing.Size(209, 21);
+            this.ydelse_navn_comboBox.TabIndex = 33;
+            this.ydelse_navn_comboBox.SelectedIndexChanged += new System.EventHandler(this.ydelse_navn_comboBox_SelectedIndexChanged);
+            this.ydelse_navn_comboBox.SelectionChangeCommitted += new System.EventHandler(this.ydelse_navn_comboBox_SelectionChangeCommitted);
+            this.ydelse_navn_comboBox.Click += new System.EventHandler(this.ydelse_navn_comboBox_Click);
+            // 
+            // add_Ydelse_Ydelse_Nr_textBox
+            // 
+            this.add_Ydelse_Ydelse_Nr_textBox.Location = new System.Drawing.Point(169, 152);
+            this.add_Ydelse_Ydelse_Nr_textBox.MaxLength = 50;
+            this.add_Ydelse_Ydelse_Nr_textBox.Name = "add_Ydelse_Ydelse_Nr_textBox";
+            this.add_Ydelse_Ydelse_Nr_textBox.Size = new System.Drawing.Size(209, 20);
+            this.add_Ydelse_Ydelse_Nr_textBox.TabIndex = 36;
+            this.add_Ydelse_Ydelse_Nr_textBox.TextChanged += new System.EventHandler(this.add_Ydelse_Ydelse_Nr_textBox_TextChanged);
+            // 
+            // sag_Add_Ydelse_Top_panel
+            // 
+            this.sag_Add_Ydelse_Top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.sag_Add_Ydelse_Top_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.sag_Add_Ydelse_Top_panel.Controls.Add(this.label5);
+            this.sag_Add_Ydelse_Top_panel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.sag_Add_Ydelse_Top_panel.Location = new System.Drawing.Point(0, 0);
+            this.sag_Add_Ydelse_Top_panel.Name = "sag_Add_Ydelse_Top_panel";
+            this.sag_Add_Ydelse_Top_panel.Size = new System.Drawing.Size(412, 26);
+            this.sag_Add_Ydelse_Top_panel.TabIndex = 10;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(92)))));
+            this.label5.Location = new System.Drawing.Point(151, 3);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(104, 21);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Tilføj Ydelse";
+            // 
+            // add_sag_Ydelse_button
+            // 
+            this.add_sag_Ydelse_button.FlatAppearance.BorderSize = 0;
+            this.add_sag_Ydelse_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.add_sag_Ydelse_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.add_sag_Ydelse_button.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add_sag_Ydelse_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
+            this.add_sag_Ydelse_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
+            this.add_sag_Ydelse_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.add_sag_Ydelse_button.Location = new System.Drawing.Point(218, 213);
+            this.add_sag_Ydelse_button.Name = "add_sag_Ydelse_button";
+            this.add_sag_Ydelse_button.Size = new System.Drawing.Size(90, 30);
+            this.add_sag_Ydelse_button.TabIndex = 21;
+            this.add_sag_Ydelse_button.Text = "Gem";
+            this.add_sag_Ydelse_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.add_sag_Ydelse_button.UseVisualStyleBackColor = true;
+            this.add_sag_Ydelse_button.Click += new System.EventHandler(this.add_sag_Ydelse_button_Click);
+            // 
+            // add_Ydelse_Sag_SagID_textBox
+            // 
+            this.add_Ydelse_Sag_SagID_textBox.Location = new System.Drawing.Point(169, 61);
+            this.add_Ydelse_Sag_SagID_textBox.Name = "add_Ydelse_Sag_SagID_textBox";
+            this.add_Ydelse_Sag_SagID_textBox.Size = new System.Drawing.Size(209, 20);
+            this.add_Ydelse_Sag_SagID_textBox.TabIndex = 35;
+            this.add_Ydelse_Sag_SagID_textBox.TextChanged += new System.EventHandler(this.add_Ydelse_Sag_SagID_textBox_TextChanged);
+            // 
+            // ydelseNR_label
+            // 
+            this.ydelseNR_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.ydelseNR_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.ydelseNR_label.Image = global::View_GUI.Properties.Resources.name_card_icon;
+            this.ydelseNR_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ydelseNR_label.Location = new System.Drawing.Point(12, 104);
+            this.ydelseNR_label.Name = "ydelseNR_label";
+            this.ydelseNR_label.Size = new System.Drawing.Size(151, 24);
+            this.ydelseNR_label.TabIndex = 28;
+            this.ydelseNR_label.Text = "Ydelse Navn:";
+            this.ydelseNR_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // CLEAR_sag_Ydelse_button
+            // 
+            this.CLEAR_sag_Ydelse_button.BackColor = System.Drawing.Color.Transparent;
+            this.CLEAR_sag_Ydelse_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
+            this.CLEAR_sag_Ydelse_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CLEAR_sag_Ydelse_button.FlatAppearance.BorderSize = 0;
+            this.CLEAR_sag_Ydelse_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.CLEAR_sag_Ydelse_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.CLEAR_sag_Ydelse_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CLEAR_sag_Ydelse_button.ForeColor = System.Drawing.Color.Black;
+            this.CLEAR_sag_Ydelse_button.Location = new System.Drawing.Point(170, 218);
+            this.CLEAR_sag_Ydelse_button.Name = "CLEAR_sag_Ydelse_button";
+            this.CLEAR_sag_Ydelse_button.Size = new System.Drawing.Size(28, 23);
+            this.CLEAR_sag_Ydelse_button.TabIndex = 30;
+            this.CLEAR_sag_Ydelse_button.UseVisualStyleBackColor = false;
+            this.CLEAR_sag_Ydelse_button.Click += new System.EventHandler(this.CLEAR_sag_Ydelse_button_Click);
+            // 
+            // Ydelse_SagID_label
+            // 
+            this.Ydelse_SagID_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.Ydelse_SagID_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.Ydelse_SagID_label.Image = global::View_GUI.Properties.Resources.ID_icon;
+            this.Ydelse_SagID_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Ydelse_SagID_label.Location = new System.Drawing.Point(58, 61);
+            this.Ydelse_SagID_label.Name = "Ydelse_SagID_label";
+            this.Ydelse_SagID_label.Size = new System.Drawing.Size(105, 24);
+            this.Ydelse_SagID_label.TabIndex = 26;
+            this.Ydelse_SagID_label.Text = "Sag ID:";
+            this.Ydelse_SagID_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // Sager_Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(1600, 800);
-            this.Controls.Add(this.backPanel_Textboxes_Opret_sag_panel);
             this.Controls.Add(this.datagridviewBackground_panel);
+            this.Controls.Add(this.backPanel_Textboxes_Opret_sag_panel);
             this.Controls.Add(this.top_Menu_background_panel);
             this.Controls.Add(this.backgroundName_Top_panel);
             this.DoubleBuffered = true;
@@ -754,6 +912,10 @@
             this.background_DGV_panel3.ResumeLayout(false);
             this.background_DGV_panel2.ResumeLayout(false);
             this.top_Menu_background_panel.ResumeLayout(false);
+            this.sag_Add_Ydelse_panel.ResumeLayout(false);
+            this.sag_Add_Ydelse_panel.PerformLayout();
+            this.sag_Add_Ydelse_Top_panel.ResumeLayout(false);
+            this.sag_Add_Ydelse_Top_panel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -802,5 +964,16 @@
         private System.Windows.Forms.Label type_label;
         private System.Windows.Forms.Button afslut_sag_button;
         private System.Windows.Forms.Button copy_selected_column_button;
+        private System.Windows.Forms.Panel sag_Add_Ydelse_panel;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox ydelse_navn_comboBox;
+        private System.Windows.Forms.TextBox add_Ydelse_Ydelse_Nr_textBox;
+        private System.Windows.Forms.Panel sag_Add_Ydelse_Top_panel;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button add_sag_Ydelse_button;
+        private System.Windows.Forms.TextBox add_Ydelse_Sag_SagID_textBox;
+        private System.Windows.Forms.Label ydelseNR_label;
+        private System.Windows.Forms.Button CLEAR_sag_Ydelse_button;
+        private System.Windows.Forms.Label Ydelse_SagID_label;
     }
 }

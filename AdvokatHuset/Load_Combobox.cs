@@ -18,7 +18,7 @@ namespace View_GUI
 
 
 
-        public ComboBox Populate_Combobox_Speciale(string Query, ComboBox Loader_Combobox)
+        public ComboBox Populate_Combobox(string Query, ComboBox Loader_Combobox)
         {
             
 
@@ -42,5 +42,41 @@ namespace View_GUI
            }
                 return Loader_Combobox;
         }
+
+
+
+
+
+        public TextBox PopulateTextbox(string Query, TextBox Loader_TextBox)
+        {
+
+
+            if (Connection.DBConnectionString != null)
+            {
+                using (SqlConnection conn = new SqlConnection(Connection.DBConnectionString))
+                {
+
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand(Query, conn);
+                    SqlDataReader DataReader = cmd.ExecuteReader();
+
+
+                    while(DataReader.Read())
+                    {
+                        Loader_TextBox.Text = DataReader[0].ToString();
+                    }
+
+                }
+
+            }
+
+            return Loader_TextBox;
+
+        }
+
+
+
+
+
     }
 }

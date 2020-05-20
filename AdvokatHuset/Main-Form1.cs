@@ -22,6 +22,41 @@ namespace View_GUI
 
     public partial class Main_Form1 : Form
     {
+
+        //-------------TEST
+        protected override void OnLostFocus(EventArgs e)
+        {
+            base.OnLostFocus(e);
+            this.Focus();
+        }
+
+
+        protected override void OnDeactivate(EventArgs e)
+        {
+            base.OnDeactivate(e);
+            this.Focus();
+        }
+   
+
+        //-------TEST
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         // Local Folder
         string LocalFolderPath = "C:\\";
 
@@ -885,6 +920,28 @@ namespace View_GUI
             MyMovingTimer.ItemPanel.BringToFront();// Show on top of everything in the Loader Panel
 
 
+        }
+
+
+
+
+
+
+        // Hide Program- Button
+        private void hode_Program_button_Click(object sender, EventArgs e)
+        {
+            NotifyIcon notfy1 = new NotifyIcon();
+            notfy1.Icon = new Icon(@"C:\Users\BG-1\Desktop\a.ico");
+            notfy1.Visible = true;
+
+            notfy1.Click += new System.EventHandler(this.Notfy1_Click);
+
+            this.min
+        }
+
+        private void Notfy1_Click(object sender, EventArgs e)
+        {
+            this.Show();
         }
 
 

@@ -63,9 +63,10 @@ namespace View_GUI
         // Validate Textboxes bools
         bool isValid = true; // Inputboxes Validator
         bool successful = false; // Successful Transaction
-     
 
 
+        // Validate ADD-Ydelse
+        bool Add_Ydelse_Validate = true;
 
         // Undo Delete
         List<DataGridViewRow> DeletedRowsList = new List<DataGridViewRow>(); // List with deleted Rows
@@ -748,6 +749,10 @@ namespace View_GUI
 
 
 
+
+
+
+
         //-------------BUTTONS-Datagridview--Menu-------::START::----------------------------------------------------------------------------
 
         // Local Folder
@@ -821,6 +826,12 @@ namespace View_GUI
         }
 
         //-------------BUTTONS-Datagridview--Menu-------::END::--------------------------------------------------------------------------
+
+
+
+
+
+
 
 
 
@@ -1402,6 +1413,193 @@ namespace View_GUI
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //--------------------ADD Ydelse - "Tilføj Ydelse"-----::START::---------------------------------------------------------------
+
+
+
+        // Load Ydelser  - ComboBox
+        private void ydelse_navn_comboBox_Click(object sender, EventArgs e)
+        {
+            ydelse_navn_comboBox.Items.Clear();
+            Load_Combobox Load_Ydelser = new Load_Combobox();
+            ydelse_navn_comboBox = Load_Ydelser.Populate_Combobox("Select Ydelse_Navn From Ydelse", ydelse_navn_comboBox);
+        }
+
+
+
+
+        // On Selected Ydelse Name Get Ydelse ID
+        private void ydelse_navn_comboBox_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            add_Ydelse_Ydelse_Nr_textBox.Clear(); // Clear
+            Load_Combobox Load_Ydelse_Nr = new Load_Combobox();
+            add_Ydelse_Ydelse_Nr_textBox = Load_Ydelse_Nr.PopulateTextbox($"Select Ydelse_Nr From Ydelse Where Ydelse_Navn Like '{ydelse_navn_comboBox.SelectedItem.ToString()}' ", add_Ydelse_Ydelse_Nr_textBox); // Load NR Ydelse NR "ID"
+        }
+
+
+
+
+
+        // Clear Input
+        private void CLEAR_sag_Ydelse_button_Click(object sender, EventArgs e)
+        {
+            Clear_All_TextBoxes();
+        }
+
+
+
+
+
+
+
+         // Clear All Textboxes
+         private void Clear_All_TextBoxes()
+        {
+            add_Ydelse_Sag_SagID_textBox.Clear();
+            ydelse_navn_comboBox.Items.Clear();
+            add_Ydelse_Ydelse_Nr_textBox.Clear();
+        }
+
+
+
+
+
+
+
+        //----:::SAVE::---------------------------------------------------------------------
+        // Save Add Ydelse - Button
+        private void add_sag_Ydelse_button_Click(object sender, EventArgs e)
+        {
+            bool successful;
+
+            ResetColor_TextBoxes();
+            Validate_Add_Ydelse();
+              
+
+            if(Add_Ydelse_Validate == true)
+            {
+                DB_Connection_Write Add_SAg_Ydelse = new DB_Connection_Write();
+                successful =  Add_SAg_Ydelse.CreateCommand($"Insert Into Sag_Ydelser Values('{DateTime.Now.ToString("dd-MM-yyyy   HH-mm-ss")}','{add_Ydelse_Sag_SagID_textBox.Text}','{add_Ydelse_Ydelse_Nr_textBox.Text}');");
+                
+                if(successful == true)
+                {
+                
+                    Clear_All_TextBoxes(); // Clear
+                
+                }
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+        // Validate TextBoxes
+        private void Validate_Add_Ydelse()
+        {
+            Add_Ydelse_Validate = true;
+
+            if (add_Ydelse_Sag_SagID_textBox.Text.Length < 15)
+            {
+                Add_Ydelse_Validate = false;
+                add_Ydelse_Sag_SagID_textBox.BackColor = Color.FromArgb(255, 192, 192);
+            }   
+            
+            if (ydelse_navn_comboBox.SelectedIndex == -1)
+            {
+                Add_Ydelse_Validate = false;
+               
+            }
+
+            if (add_Ydelse_Ydelse_Nr_textBox.Text.Length < 1)
+            {
+                Add_Ydelse_Validate = false;
+                add_Ydelse_Ydelse_Nr_textBox.BackColor = Color.FromArgb(255, 192, 192);
+            }
+           
+
+         }
+
+
+
+
+
+
+
+
+
+        // Reset Color -Textboxes
+        private void ResetColor_TextBoxes()
+        {
+            add_Ydelse_Sag_SagID_textBox.BackColor = DefaultBackColor;
+            add_Ydelse_Ydelse_Nr_textBox.BackColor = DefaultBackColor;
+
+        }
+
+
+
+
+
+
+        // Sag ID - Reset Color
+        private void add_Ydelse_Sag_SagID_textBox_TextChanged(object sender, EventArgs e)
+        {
+            add_Ydelse_Sag_SagID_textBox.BackColor = DefaultBackColor;
+
+        }
+
+
+
+        // Ydelse NR - Reset Color
+        private void add_Ydelse_Ydelse_Nr_textBox_TextChanged(object sender, EventArgs e)
+        {
+            add_Ydelse_Ydelse_Nr_textBox.BackColor = DefaultBackColor;
+
+        }
+
+
+        // Ydelse NR - Reset Color
+        private void ydelse_navn_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            add_Ydelse_Ydelse_Nr_textBox.BackColor = DefaultBackColor;
+
+        }
+
+
+
+        //--------------------ADD Ydelse - "Tilføj Ydelse"-----::END::---------------------------------------------------------------
 
 
 

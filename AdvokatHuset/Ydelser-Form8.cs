@@ -1320,7 +1320,7 @@ namespace View_GUI
             load_Type_Ydelse_comboBox.Items.Clear();
             Load_Combobox Load_Type_ydelse = new Load_Combobox();
             string Query = "Select* From Type_Ydelse";
-            combo = Load_Type_ydelse.Populate_Combobox_Speciale(Query, combo);
+            combo = Load_Type_ydelse.Populate_Combobox(Query, combo);
         }
 
 

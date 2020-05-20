@@ -1525,7 +1525,7 @@ namespace View_GUI
             speciale_comboBox.Items.Clear();
             Load_Combobox Load_Specialer = new Load_Combobox();
             string Query = "Select* From Uddannelser";
-            combo = Load_Specialer.Populate_Combobox_Speciale(Query, combo);
+            combo = Load_Specialer.Populate_Combobox(Query, combo);
         }
 
 
