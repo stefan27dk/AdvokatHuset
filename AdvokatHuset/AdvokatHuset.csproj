@@ -59,6 +59,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Advokat.cs" />
+    <Compile Include="Sager-Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sager-Form2.Designer.cs">
+      <DependentUpon>Sager-Form2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ydelser-Form8.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,12 +146,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Sag.cs" />
-    <Compile Include="Sager-Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sager-Form2.Designer.cs">
-      <DependentUpon>Sager-Form2.cs</DependentUpon>
-    </Compile>
     <Compile Include="Screenshot.cs" />
     <Compile Include="Sekretær.cs" />
     <Compile Include="SelectionScreenshot-Form4.cs">
@@ -162,6 +162,9 @@
       <DependentUpon>Test1.cs</DependentUpon>
     </Compile>
     <Compile Include="Ydelse.cs" />
+    <EmbeddedResource Include="Sager-Form2.resx">
+      <DependentUpon>Sager-Form2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ydelser-Form8.resx">
       <DependentUpon>Ydelser-Form8.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,9 +199,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Sager-Form2.resx">
-      <DependentUpon>Sager-Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SelectionScreenshot-Form4.resx">
       <DependentUpon>SelectionScreenshot-Form4.cs</DependentUpon>
@@ -1041,6 +1041,102 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Actions-edit-delete-icon3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DC ADD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dc Add2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add Time 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add time 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add Time 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cabriolet-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camaro-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cabriolet-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Car  3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Car 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apps-clock-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unit-completed-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\surveys-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-complete-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File-complete-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Completed 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File-complete-icon %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Completed 5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Complete 6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled %281%295.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Completed 7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cm 8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CM 7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-copy-icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-copy-icon %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-copy-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\62930-clipboard-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\62930-clipboard-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\win7_ico_shell32_dll-2601.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\win7_ico_shell32_dll-260 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\win7_ico_shell32_dll-260 %282%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

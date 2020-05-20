@@ -523,14 +523,8 @@ namespace View_GUI
             // Copy Editing Cell
             if (keyData == (Keys.Control | Keys.C | Keys.Alt))
             {
-                for (int i = 0; i < Kunde_dataGridView.SelectedRows[0].Cells.Count; i++)
-                {
-                    if(Kunde_dataGridView.SelectedCells[i].IsInEditMode)
-                    {
-                      Clipboard.SetText(Kunde_dataGridView.SelectedCells[i].Value.ToString());
-                    }
-                }
-                
+               Clipboard.SetText(Kunde_dataGridView.SelectedRows[0].Cells[Kunde_dataGridView.CurrentCell.ColumnIndex].Value.ToString());
+
             }
 
 
@@ -1459,6 +1453,15 @@ namespace View_GUI
         {
             Kunde_dataGridView.RefreshEdit(); // Reset
             MessageBox.Show("Der Opståd Fejl, Input er ikke i korekt format","Fejl", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+
+
+        // Copy To clipboard selected Column
+        private void copy_selected_column_button_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(Kunde_dataGridView.SelectedRows[0].Cells[Kunde_dataGridView.CurrentCell.ColumnIndex].Value.ToString());
+
         }
 
 

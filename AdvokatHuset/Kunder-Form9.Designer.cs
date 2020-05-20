@@ -32,15 +32,22 @@
             this.backgroundName_Top_panel = new System.Windows.Forms.Panel();
             this.kunder_name_textBox = new System.Windows.Forms.TextBox();
             this.backPanel_Textboxes_panel = new System.Windows.Forms.Panel();
+            this.create_Clear_All_textboxes_button = new System.Windows.Forms.Button();
+            this.email_label = new System.Windows.Forms.Label();
             this.kunde_email_textBox = new System.Windows.Forms.TextBox();
+            this.kunder_Save_button = new System.Windows.Forms.Button();
+            this.adr_label = new System.Windows.Forms.Label();
             this.kunder_adr_textBox = new System.Windows.Forms.TextBox();
             this.background_textboxes_top_panel = new System.Windows.Forms.Panel();
             this.opret_Kunder_label = new System.Windows.Forms.Label();
+            this.zipCode_label = new System.Windows.Forms.Label();
             this.kunder_zipcCode_textBox = new System.Windows.Forms.TextBox();
+            this.tlf_label = new System.Windows.Forms.Label();
             this.kunder_tlf_textBox = new System.Windows.Forms.TextBox();
+            this.surname_label = new System.Windows.Forms.Label();
             this.kunder_surname_textBox = new System.Windows.Forms.TextBox();
+            this.name_label = new System.Windows.Forms.Label();
             this.datagridviewBackground_panel = new System.Windows.Forms.Panel();
-            this.Kunde_dataGridView = new System.Windows.Forms.DataGridView();
             this.background_DGV_Search_panel = new System.Windows.Forms.Panel();
             this.search_textBox = new System.Windows.Forms.TextBox();
             this.search_options_comboBox = new System.Windows.Forms.ComboBox();
@@ -60,28 +67,22 @@
             this.background_DGV_panel2 = new System.Windows.Forms.Panel();
             this.Kunde_Tlf_button = new System.Windows.Forms.Button();
             this.show_all_button = new System.Windows.Forms.Button();
+            this.Kunde_dataGridView = new System.Windows.Forms.DataGridView();
             this.top_Menu_background_panel = new System.Windows.Forms.Panel();
             this.vis_rediger_kunder_button = new System.Windows.Forms.Button();
             this.opret_kunde_button = new System.Windows.Forms.Button();
-            this.create_Clear_All_textboxes_button = new System.Windows.Forms.Button();
-            this.email_label = new System.Windows.Forms.Label();
-            this.kunder_Save_button = new System.Windows.Forms.Button();
-            this.adr_label = new System.Windows.Forms.Label();
-            this.zipCode_label = new System.Windows.Forms.Label();
-            this.tlf_label = new System.Windows.Forms.Label();
-            this.surname_label = new System.Windows.Forms.Label();
-            this.name_label = new System.Windows.Forms.Label();
+            this.copy_selected_column_button = new System.Windows.Forms.Button();
             this.backgroundName_Top_panel.SuspendLayout();
             this.backPanel_Textboxes_panel.SuspendLayout();
             this.background_textboxes_top_panel.SuspendLayout();
             this.datagridviewBackground_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Kunde_dataGridView)).BeginInit();
             this.background_DGV_Search_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.search_Datagridview_pictureBox)).BeginInit();
             this.background_DGV_panel1.SuspendLayout();
             this.background_DGV_panel4.SuspendLayout();
             this.background_DGV_panel3.SuspendLayout();
             this.background_DGV_panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Kunde_dataGridView)).BeginInit();
             this.top_Menu_background_panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -143,6 +144,36 @@
             this.backPanel_Textboxes_panel.TabIndex = 11;
             this.backPanel_Textboxes_panel.Visible = false;
             // 
+            // create_Clear_All_textboxes_button
+            // 
+            this.create_Clear_All_textboxes_button.BackColor = System.Drawing.Color.Transparent;
+            this.create_Clear_All_textboxes_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
+            this.create_Clear_All_textboxes_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.create_Clear_All_textboxes_button.FlatAppearance.BorderSize = 0;
+            this.create_Clear_All_textboxes_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.create_Clear_All_textboxes_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.create_Clear_All_textboxes_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.create_Clear_All_textboxes_button.ForeColor = System.Drawing.Color.Black;
+            this.create_Clear_All_textboxes_button.Location = new System.Drawing.Point(119, 339);
+            this.create_Clear_All_textboxes_button.Name = "create_Clear_All_textboxes_button";
+            this.create_Clear_All_textboxes_button.Size = new System.Drawing.Size(28, 23);
+            this.create_Clear_All_textboxes_button.TabIndex = 23;
+            this.create_Clear_All_textboxes_button.UseVisualStyleBackColor = false;
+            this.create_Clear_All_textboxes_button.Click += new System.EventHandler(this.create_Clear_All_textboxes_button_Click);
+            // 
+            // email_label
+            // 
+            this.email_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.email_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.email_label.Image = global::View_GUI.Properties.Resources.At_Mail_icon;
+            this.email_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.email_label.Location = new System.Drawing.Point(53, 287);
+            this.email_label.Name = "email_label";
+            this.email_label.Size = new System.Drawing.Size(98, 33);
+            this.email_label.TabIndex = 22;
+            this.email_label.Text = "Email:";
+            this.email_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // kunde_email_textBox
             // 
             this.kunde_email_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
@@ -152,6 +183,37 @@
             this.kunde_email_textBox.Size = new System.Drawing.Size(100, 20);
             this.kunde_email_textBox.TabIndex = 6;
             this.kunde_email_textBox.TextChanged += new System.EventHandler(this.kunde_email_textBox_TextChanged);
+            // 
+            // kunder_Save_button
+            // 
+            this.kunder_Save_button.FlatAppearance.BorderSize = 0;
+            this.kunder_Save_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.kunder_Save_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.kunder_Save_button.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kunder_Save_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
+            this.kunder_Save_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
+            this.kunder_Save_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.kunder_Save_button.Location = new System.Drawing.Point(162, 336);
+            this.kunder_Save_button.Name = "kunder_Save_button";
+            this.kunder_Save_button.Size = new System.Drawing.Size(90, 30);
+            this.kunder_Save_button.TabIndex = 7;
+            this.kunder_Save_button.Text = "Gem";
+            this.kunder_Save_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.kunder_Save_button.UseVisualStyleBackColor = true;
+            this.kunder_Save_button.Click += new System.EventHandler(this.kunder_Save_button_Click);
+            // 
+            // adr_label
+            // 
+            this.adr_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.adr_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.adr_label.Image = global::View_GUI.Properties.Resources.my_numbers_icon;
+            this.adr_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.adr_label.Location = new System.Drawing.Point(70, 197);
+            this.adr_label.Name = "adr_label";
+            this.adr_label.Size = new System.Drawing.Size(80, 25);
+            this.adr_label.TabIndex = 19;
+            this.adr_label.Text = "Adr:";
+            this.adr_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // kunder_adr_textBox
             // 
@@ -185,6 +247,19 @@
             this.opret_Kunder_label.TabIndex = 1;
             this.opret_Kunder_label.Text = "Opret Kunde";
             // 
+            // zipCode_label
+            // 
+            this.zipCode_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.zipCode_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.zipCode_label.Image = global::View_GUI.Properties.Resources.Compressed_File_Zip_icon;
+            this.zipCode_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.zipCode_label.Location = new System.Drawing.Point(49, 150);
+            this.zipCode_label.Name = "zipCode_label";
+            this.zipCode_label.Size = new System.Drawing.Size(105, 25);
+            this.zipCode_label.TabIndex = 17;
+            this.zipCode_label.Text = "PostNr:";
+            this.zipCode_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // kunder_zipcCode_textBox
             // 
             this.kunder_zipcCode_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
@@ -195,6 +270,19 @@
             this.kunder_zipcCode_textBox.TabIndex = 3;
             this.kunder_zipcCode_textBox.TextChanged += new System.EventHandler(this.kunder_zipcCode_textBox_TextChanged);
             this.kunder_zipcCode_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.kunder_zipcCode_textBox_KeyPress);
+            // 
+            // tlf_label
+            // 
+            this.tlf_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.tlf_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.tlf_label.Image = global::View_GUI.Properties.Resources.Phone_icon__1_;
+            this.tlf_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.tlf_label.Location = new System.Drawing.Point(80, 243);
+            this.tlf_label.Name = "tlf_label";
+            this.tlf_label.Size = new System.Drawing.Size(73, 24);
+            this.tlf_label.TabIndex = 15;
+            this.tlf_label.Text = "Tlf:";
+            this.tlf_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // kunder_tlf_textBox
             // 
@@ -207,6 +295,19 @@
             this.kunder_tlf_textBox.TextChanged += new System.EventHandler(this.kunder_tlf_textBox_TextChanged);
             this.kunder_tlf_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.kunder_tlf_textBox_KeyPress);
             // 
+            // surname_label
+            // 
+            this.surname_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.surname_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.surname_label.Image = global::View_GUI.Properties.Resources.name_card_icon;
+            this.surname_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.surname_label.Location = new System.Drawing.Point(25, 104);
+            this.surname_label.Name = "surname_label";
+            this.surname_label.Size = new System.Drawing.Size(125, 25);
+            this.surname_label.TabIndex = 13;
+            this.surname_label.Text = "Efternavn:";
+            this.surname_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // kunder_surname_textBox
             // 
             this.kunder_surname_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
@@ -217,6 +318,19 @@
             this.kunder_surname_textBox.TabIndex = 2;
             this.kunder_surname_textBox.TextChanged += new System.EventHandler(this.kunder_surname_textBox_TextChanged);
             this.kunder_surname_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.kunder_surname_textBox_KeyPress);
+            // 
+            // name_label
+            // 
+            this.name_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.name_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.name_label.Image = global::View_GUI.Properties.Resources.ID_icon;
+            this.name_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.name_label.Location = new System.Drawing.Point(56, 59);
+            this.name_label.Name = "name_label";
+            this.name_label.Size = new System.Drawing.Size(95, 24);
+            this.name_label.TabIndex = 2;
+            this.name_label.Text = "Navn:";
+            this.name_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // datagridviewBackground_panel
             // 
@@ -233,23 +347,6 @@
             this.datagridviewBackground_panel.Name = "datagridviewBackground_panel";
             this.datagridviewBackground_panel.Size = new System.Drawing.Size(1300, 488);
             this.datagridviewBackground_panel.TabIndex = 13;
-            // 
-            // Kunde_dataGridView
-            // 
-            this.Kunde_dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.Kunde_dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.Kunde_dataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Kunde_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Kunde_dataGridView.Location = new System.Drawing.Point(5, 59);
-            this.Kunde_dataGridView.MultiSelect = false;
-            this.Kunde_dataGridView.Name = "Kunde_dataGridView";
-            this.Kunde_dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Kunde_dataGridView.Size = new System.Drawing.Size(1290, 412);
-            this.Kunde_dataGridView.TabIndex = 15;
-            this.Kunde_dataGridView.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Kunde_dataGridView_ColumnHeaderMouseClick);
-            this.Kunde_dataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.Kunde_dataGridView_DataError);
-            this.Kunde_dataGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.Kunde_dataGridView_RowEnter);
-            this.Kunde_dataGridView.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.Kunde_dataGridView_RowValidated);
             // 
             // background_DGV_Search_panel
             // 
@@ -336,7 +433,7 @@
             this.background_DGV_panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.background_DGV_panel1.Controls.Add(this.undo_button);
             this.background_DGV_panel1.Controls.Add(this.delete_button);
-            this.background_DGV_panel1.Location = new System.Drawing.Point(647, -2);
+            this.background_DGV_panel1.Location = new System.Drawing.Point(597, -2);
             this.background_DGV_panel1.Name = "background_DGV_panel1";
             this.background_DGV_panel1.Size = new System.Drawing.Size(120, 58);
             this.background_DGV_panel1.TabIndex = 2;
@@ -450,11 +547,12 @@
             this.background_DGV_panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.background_DGV_panel3.BackgroundImage = global::View_GUI.Properties.Resources.DGV_Panel;
             this.background_DGV_panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.background_DGV_panel3.Controls.Add(this.copy_selected_column_button);
             this.background_DGV_panel3.Controls.Add(this.change_DatagridView_Color_button);
             this.background_DGV_panel3.Controls.Add(this.mark_current_row_button);
-            this.background_DGV_panel3.Location = new System.Drawing.Point(950, -2);
+            this.background_DGV_panel3.Location = new System.Drawing.Point(889, -2);
             this.background_DGV_panel3.Name = "background_DGV_panel3";
-            this.background_DGV_panel3.Size = new System.Drawing.Size(125, 60);
+            this.background_DGV_panel3.Size = new System.Drawing.Size(186, 60);
             this.background_DGV_panel3.TabIndex = 4;
             // 
             // change_DatagridView_Color_button
@@ -467,7 +565,7 @@
             this.change_DatagridView_Color_button.ForeColor = System.Drawing.Color.Black;
             this.change_DatagridView_Color_button.Image = global::View_GUI.Properties.Resources.Color_Meter_icon__1_;
             this.change_DatagridView_Color_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.change_DatagridView_Color_button.Location = new System.Drawing.Point(19, 12);
+            this.change_DatagridView_Color_button.Location = new System.Drawing.Point(68, 12);
             this.change_DatagridView_Color_button.Name = "change_DatagridView_Color_button";
             this.change_DatagridView_Color_button.Size = new System.Drawing.Size(40, 38);
             this.change_DatagridView_Color_button.TabIndex = 10;
@@ -484,7 +582,7 @@
             this.mark_current_row_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mark_current_row_button.ForeColor = System.Drawing.Color.Black;
             this.mark_current_row_button.Image = global::View_GUI.Properties.Resources.Grid_Row_Color;
-            this.mark_current_row_button.Location = new System.Drawing.Point(66, 12);
+            this.mark_current_row_button.Location = new System.Drawing.Point(115, 12);
             this.mark_current_row_button.Name = "mark_current_row_button";
             this.mark_current_row_button.Size = new System.Drawing.Size(40, 38);
             this.mark_current_row_button.TabIndex = 11;
@@ -498,7 +596,7 @@
             this.background_DGV_panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.background_DGV_panel2.Controls.Add(this.Kunde_Tlf_button);
             this.background_DGV_panel2.Controls.Add(this.show_all_button);
-            this.background_DGV_panel2.Location = new System.Drawing.Point(795, -2);
+            this.background_DGV_panel2.Location = new System.Drawing.Point(758, -2);
             this.background_DGV_panel2.Name = "background_DGV_panel2";
             this.background_DGV_panel2.Size = new System.Drawing.Size(125, 60);
             this.background_DGV_panel2.TabIndex = 3;
@@ -537,6 +635,23 @@
             this.show_all_button.TabIndex = 8;
             this.show_all_button.UseVisualStyleBackColor = false;
             this.show_all_button.Click += new System.EventHandler(this.show_all_button_Click);
+            // 
+            // Kunde_dataGridView
+            // 
+            this.Kunde_dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.Kunde_dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.Kunde_dataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Kunde_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Kunde_dataGridView.Location = new System.Drawing.Point(5, 59);
+            this.Kunde_dataGridView.MultiSelect = false;
+            this.Kunde_dataGridView.Name = "Kunde_dataGridView";
+            this.Kunde_dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Kunde_dataGridView.Size = new System.Drawing.Size(1290, 412);
+            this.Kunde_dataGridView.TabIndex = 15;
+            this.Kunde_dataGridView.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Kunde_dataGridView_ColumnHeaderMouseClick);
+            this.Kunde_dataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.Kunde_dataGridView_DataError);
+            this.Kunde_dataGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.Kunde_dataGridView_RowEnter);
+            this.Kunde_dataGridView.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.Kunde_dataGridView_RowValidated);
             // 
             // top_Menu_background_panel
             // 
@@ -591,118 +706,26 @@
             this.opret_kunde_button.UseVisualStyleBackColor = true;
             this.opret_kunde_button.Click += new System.EventHandler(this.opret_kunde_button_Click);
             // 
-            // create_Clear_All_textboxes_button
+            // copy_selected_column_button
             // 
-            this.create_Clear_All_textboxes_button.BackColor = System.Drawing.Color.Transparent;
-            this.create_Clear_All_textboxes_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
-            this.create_Clear_All_textboxes_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.create_Clear_All_textboxes_button.FlatAppearance.BorderSize = 0;
-            this.create_Clear_All_textboxes_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.create_Clear_All_textboxes_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.create_Clear_All_textboxes_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.create_Clear_All_textboxes_button.ForeColor = System.Drawing.Color.Black;
-            this.create_Clear_All_textboxes_button.Location = new System.Drawing.Point(119, 339);
-            this.create_Clear_All_textboxes_button.Name = "create_Clear_All_textboxes_button";
-            this.create_Clear_All_textboxes_button.Size = new System.Drawing.Size(28, 23);
-            this.create_Clear_All_textboxes_button.TabIndex = 23;
-            this.create_Clear_All_textboxes_button.UseVisualStyleBackColor = false;
-            this.create_Clear_All_textboxes_button.Click += new System.EventHandler(this.create_Clear_All_textboxes_button_Click);
-            // 
-            // email_label
-            // 
-            this.email_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.email_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.email_label.Image = global::View_GUI.Properties.Resources.At_Mail_icon;
-            this.email_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.email_label.Location = new System.Drawing.Point(53, 287);
-            this.email_label.Name = "email_label";
-            this.email_label.Size = new System.Drawing.Size(98, 33);
-            this.email_label.TabIndex = 22;
-            this.email_label.Text = "Email:";
-            this.email_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // kunder_Save_button
-            // 
-            this.kunder_Save_button.FlatAppearance.BorderSize = 0;
-            this.kunder_Save_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.kunder_Save_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
-            this.kunder_Save_button.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kunder_Save_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
-            this.kunder_Save_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
-            this.kunder_Save_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.kunder_Save_button.Location = new System.Drawing.Point(162, 336);
-            this.kunder_Save_button.Name = "kunder_Save_button";
-            this.kunder_Save_button.Size = new System.Drawing.Size(90, 30);
-            this.kunder_Save_button.TabIndex = 7;
-            this.kunder_Save_button.Text = "Gem";
-            this.kunder_Save_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.kunder_Save_button.UseVisualStyleBackColor = true;
-            this.kunder_Save_button.Click += new System.EventHandler(this.kunder_Save_button_Click);
-            // 
-            // adr_label
-            // 
-            this.adr_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.adr_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.adr_label.Image = global::View_GUI.Properties.Resources.my_numbers_icon;
-            this.adr_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.adr_label.Location = new System.Drawing.Point(70, 197);
-            this.adr_label.Name = "adr_label";
-            this.adr_label.Size = new System.Drawing.Size(80, 25);
-            this.adr_label.TabIndex = 19;
-            this.adr_label.Text = "Adr:";
-            this.adr_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // zipCode_label
-            // 
-            this.zipCode_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.zipCode_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.zipCode_label.Image = global::View_GUI.Properties.Resources.Compressed_File_Zip_icon;
-            this.zipCode_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.zipCode_label.Location = new System.Drawing.Point(49, 150);
-            this.zipCode_label.Name = "zipCode_label";
-            this.zipCode_label.Size = new System.Drawing.Size(105, 25);
-            this.zipCode_label.TabIndex = 17;
-            this.zipCode_label.Text = "PostNr:";
-            this.zipCode_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // tlf_label
-            // 
-            this.tlf_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.tlf_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.tlf_label.Image = global::View_GUI.Properties.Resources.Phone_icon__1_;
-            this.tlf_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.tlf_label.Location = new System.Drawing.Point(80, 243);
-            this.tlf_label.Name = "tlf_label";
-            this.tlf_label.Size = new System.Drawing.Size(73, 24);
-            this.tlf_label.TabIndex = 15;
-            this.tlf_label.Text = "Tlf:";
-            this.tlf_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // surname_label
-            // 
-            this.surname_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.surname_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.surname_label.Image = global::View_GUI.Properties.Resources.name_card_icon;
-            this.surname_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.surname_label.Location = new System.Drawing.Point(25, 104);
-            this.surname_label.Name = "surname_label";
-            this.surname_label.Size = new System.Drawing.Size(125, 25);
-            this.surname_label.TabIndex = 13;
-            this.surname_label.Text = "Efternavn:";
-            this.surname_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // name_label
-            // 
-            this.name_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.name_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.name_label.Image = global::View_GUI.Properties.Resources.ID_icon;
-            this.name_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.name_label.Location = new System.Drawing.Point(56, 59);
-            this.name_label.Name = "name_label";
-            this.name_label.Size = new System.Drawing.Size(95, 24);
-            this.name_label.TabIndex = 2;
-            this.name_label.Text = "Navn:";
-            this.name_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.copy_selected_column_button.BackColor = System.Drawing.Color.Transparent;
+            this.copy_selected_column_button.BackgroundImage = global::View_GUI.Properties.Resources.win7_ico_shell32_dll_260__2_;
+            this.copy_selected_column_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.copy_selected_column_button.FlatAppearance.BorderSize = 0;
+            this.copy_selected_column_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.copy_selected_column_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.copy_selected_column_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.copy_selected_column_button.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.copy_selected_column_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.copy_selected_column_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.copy_selected_column_button.Location = new System.Drawing.Point(25, 13);
+            this.copy_selected_column_button.Margin = new System.Windows.Forms.Padding(0);
+            this.copy_selected_column_button.Name = "copy_selected_column_button";
+            this.copy_selected_column_button.Size = new System.Drawing.Size(40, 38);
+            this.copy_selected_column_button.TabIndex = 16;
+            this.copy_selected_column_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.copy_selected_column_button.UseVisualStyleBackColor = false;
+            this.copy_selected_column_button.Click += new System.EventHandler(this.copy_selected_column_button_Click);
             // 
             // Kunder_Form9
             // 
@@ -726,7 +749,6 @@
             this.background_textboxes_top_panel.ResumeLayout(false);
             this.background_textboxes_top_panel.PerformLayout();
             this.datagridviewBackground_panel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Kunde_dataGridView)).EndInit();
             this.background_DGV_Search_panel.ResumeLayout(false);
             this.background_DGV_Search_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.search_Datagridview_pictureBox)).EndInit();
@@ -734,6 +756,7 @@
             this.background_DGV_panel4.ResumeLayout(false);
             this.background_DGV_panel3.ResumeLayout(false);
             this.background_DGV_panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Kunde_dataGridView)).EndInit();
             this.top_Menu_background_panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -784,5 +807,6 @@
         private System.Windows.Forms.Panel background_DGV_panel1;
         private System.Windows.Forms.Panel background_DGV_Search_panel;
         private System.Windows.Forms.Button create_Clear_All_textboxes_button;
+        private System.Windows.Forms.Button copy_selected_column_button;
     }
 }

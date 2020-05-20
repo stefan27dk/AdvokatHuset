@@ -521,14 +521,8 @@ namespace View_GUI
             // Copy Editing Cell
             if (keyData == (Keys.Control | Keys.C | Keys.Alt))
             {
-                for (int i = 0; i < Sekretaer_dataGridView.SelectedRows[0].Cells.Count; i++)
-                {
-                    if(Sekretaer_dataGridView.SelectedCells[i].IsInEditMode)
-                    {
-                      Clipboard.SetText(Sekretaer_dataGridView.SelectedCells[i].Value.ToString());
-                    }
-                }
-                
+            Clipboard.SetText(Sekretaer_dataGridView.SelectedRows[0].Cells[Sekretaer_dataGridView.CurrentCell.ColumnIndex].Value.ToString());
+
             }
 
 
@@ -1459,11 +1453,17 @@ namespace View_GUI
 
 
 
+
         //-------------CREATE-TEXTBOXES -- Reset Color on Typing-------------------::END:--------------------------------------------------
 
 
 
+         // Copy Selected Column
+        private void copy_selected_column_button_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(Sekretaer_dataGridView.SelectedRows[0].Cells[Sekretaer_dataGridView.CurrentCell.ColumnIndex].Value.ToString());
 
+        }
 
 
 

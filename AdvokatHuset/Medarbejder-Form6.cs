@@ -520,14 +520,8 @@ namespace View_GUI
             // Copy Editing Cell
             if (keyData == (Keys.Control | Keys.C | Keys.Alt))
             {
-                for (int i = 0; i < Medarbejder_dataGridView.SelectedRows[0].Cells.Count; i++)
-                {
-                    if(Medarbejder_dataGridView.SelectedCells[i].IsInEditMode)
-                    {
-                      Clipboard.SetText(Medarbejder_dataGridView.SelectedCells[i].Value.ToString());
-                    }
-                }
-                
+            Clipboard.SetText(Medarbejder_dataGridView.SelectedRows[0].Cells[Medarbejder_dataGridView.CurrentCell.ColumnIndex].Value.ToString());
+
             }
 
 
@@ -1670,10 +1664,15 @@ namespace View_GUI
             }
         }
 
+
         //----DELETE SPECIALE- From Medarbejdere------------::END::----------------------------------------------
 
 
 
+        private void copy_selected_column_button_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(Medarbejder_dataGridView.SelectedRows[0].Cells[Medarbejder_dataGridView.CurrentCell.ColumnIndex].Value.ToString());
+        }
 
 
 

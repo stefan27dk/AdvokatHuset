@@ -458,14 +458,7 @@ namespace View_GUI
             // Copy Editing Cell
             if (keyData == (Keys.Control | Keys.C | Keys.Alt))
             {
-                for (int i = 0; i < Ydelse_dataGridView.SelectedRows[0].Cells.Count; i++)
-                {
-                    if(Ydelse_dataGridView.SelectedCells[i].IsInEditMode)
-                    {
-                      Clipboard.SetText(Ydelse_dataGridView.SelectedCells[i].Value.ToString());
-                    }
-                }
-                
+            Clipboard.SetText(Ydelse_dataGridView.SelectedRows[0].Cells[Ydelse_dataGridView.CurrentCell.ColumnIndex].Value.ToString());
             }
 
 
@@ -1338,5 +1331,11 @@ namespace View_GUI
         }
 
 
+        // Copy Selected Column Cell Text
+        private void copy_selected_column_button_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(Ydelse_dataGridView.SelectedRows[0].Cells[Ydelse_dataGridView.CurrentCell.ColumnIndex].Value.ToString());
+
+        }
     }
 }

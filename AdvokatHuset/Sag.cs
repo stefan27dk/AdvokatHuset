@@ -8,12 +8,12 @@ namespace Domain
 {
     class Sag:Omkostninger
     {
-        private int SagId { get; set; }
-        private int SagNr { get; set; }
-        private string Tid { get; set; }
-        private string Dato { get; set; }
-        private string Deadline { get; set; }
-        private string SagType { get; set; }
+        
+        public string AdvokatID { get; set; }
+        public string KundeID { get; set; }
+        public string Oprets_Dato { get; set; }
+        public string SagType { get; set; }
+        public bool Afslutet { get; set; }
 
         public Sag() //Constructor
         {

@@ -2,24 +2,1411 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Reflection;
+using Domain;
+using iTextSharp.text.pdf;
+using iTextSharp.text;
+using System.Media;
 
 namespace View_GUI
 {
     public partial class Sager_Form2 : Form
     {
+     
+        
+
+        // Local Folder
+        string LocalFolderPath = "C://";  // Gets Assignet in initialize
+
+        //DB
+        Sag Saginstance; // Instance af Sag 
+        DB_Connection_Write ConnWrite; // Sql Write "
+        //static readonly  DB_Connection_String ConnectionString = DB_Connection_String.GetConnectionString(); // Global Connectionstring
+        //static SqlConnection connection = null; 
+      
+
+       
+
+        // Show Sag - Database
+        //static string show_Sag_Query = "Select Sag.*, Sag_Tlf.Sag_Tlf  From Sag Full Join Sag_Tlf ON Sag.Sag_ID = Sag_Tlf.Sag_ID AND";
+        static string show_Sag_Query = "Select S.Sag_Type, S.Sag_ID, S.Sag_Oprets_Dato, S.Sag_Slut_Dato, S.Sag_Afslutet, K.Kunde_Fornavn, K.Kunde_Efternavn, S.Sag_Kunde_ID, M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn AS Advokat_Efternavn, S.Sag_Advokat_ID AS Ansvarlig_Advokat_ID, T.Tid, T.Tid_Dato From Sag As S Full Join Tid AS T On S.Sag_ID = T.Sag_ID Inner Join Kunde As K On S.Sag_Kunde_ID = K.Kunde_ID Inner Join Medarbejder AS M ON S.Sag_Advokat_ID = M.Me_ID";
+
+
+
+        DataSet Sag_Dataset = new DataSet(); // Dataset for "Show Sag" and "Show Sag_Tlf"
+                                                
+
+
+        //TSag_Tlf - Database
+        static string Sag_Tlf_Select_Query = "Select* From Sag_Tlf";
+        //static string Sag_Tlf_Select_Query = "Select Sag_Tlf.*, Sag.Sag_Fornavn, Sag.Sag_Efternavn From Sag_Tlf Inner Join Sag ON Sag_Tlf.Sag_ID = Sag.Sag_ID;";
+
+
+
+
+        // Row Edit
+        DataGridViewRow enterRow = new DataGridViewRow(); // On Enter
+
+
+
+
+
+
+        // Validate Textboxes bools
+        bool isValid = true; // Inputboxes Validator
+        bool successful = false; // Successful Transaction
+     
+
+
+
+        // Undo Delete
+        List<DataGridViewRow> DeletedRowsList = new List<DataGridViewRow>(); // List with deleted Rows
+
+
+
+
+        // Search string
+        string SearchOptions = "";
+        string SearchColumn_SearchString = "";
+
+
+
+ 
+
+        // Initialize
         public Sager_Form2()
         {
             InitializeComponent();
         }
 
-        private void Sager_Form2_Load(object sender, EventArgs e)
+
+
+
+
+        // Load
+        private void Sag_Form9_Load(object sender, EventArgs e)
+        {
+            DatagridviewSettings_Style();
+            LoadSag();// Show all Sag "Populating the datagridview with Curtomers "Sag""
+            Search_ComboBox_Options_Content(); // Populate Search Combobox
+            Search_ComboBox_Column_Content(); // Populate Column Search Combobox
+          
+        }
+
+
+
+
+
+        //-----------SETTINGS------------::START::--------------------------------------------------------------------------------------------
+
+        // Datagridview Settings - Style - Setting on Load
+        private void DatagridviewSettings_Style()
         {
 
+            Black_DatagridviewStyle();
+            // Datagridview DOUBLE BUFFERING // Double Buffer is Used so the Datagridview dont lagg on resize
+            //Set Double buffering on the Grid using reflection and the bindingflags enum.
+            typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic |
+            BindingFlags.Instance | BindingFlags.SetProperty, null,
+            Sag_dataGridView, new object[] { true });
         }
+
+
+
+        // Datagridview Color Style
+        private void Black_DatagridviewStyle()
+         {
+
+            this.Sag_dataGridView.RowsDefaultCellStyle.BackColor = Color.FromArgb(64, 64, 64);
+            this.Sag_dataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(34, 34, 34);
+            this.Sag_dataGridView.DefaultCellStyle.ForeColor = Color.FromArgb(59, 203, 255);  // Datagridview Fore Color
+            this.Sag_dataGridView.GridColor = Color.Gray;
+            this.Sag_dataGridView.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font(FontFamily.GenericSerif, 9, System.Drawing.FontStyle.Bold); // FONT    //, System.Drawing.GraphicsUnit.Point
+            this.Sag_dataGridView.DefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 204, 94);
+            this.Sag_dataGridView.DefaultCellStyle.SelectionForeColor = Color.FromArgb(33, 32, 29);
+            
+            //this.Sag_dataGridView.DefaultCellStyle..Font = new System.Drawing.Font(FontFamily.GenericSerif, 9, System.Drawing.FontStyle.Bold);
+
+         }
+
+
+
+
+
+        //  Datagridview Color Style "White" 
+        private void White_DatagridviewStyle()
+        {
+
+            this.Sag_dataGridView.RowsDefaultCellStyle.BackColor = DefaultBackColor;
+            this.Sag_dataGridView.AlternatingRowsDefaultCellStyle.BackColor = DefaultBackColor;
+            this.Sag_dataGridView.DefaultCellStyle.ForeColor = DefaultForeColor;  // Datagridview Fore Color
+            this.Sag_dataGridView.GridColor = Color.Gray;
+            this.Sag_dataGridView.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font(FontFamily.GenericSerif, 9, System.Drawing.FontStyle.Bold); // FONT    //, System.Drawing.GraphicsUnit.Point
+
+        }
+
+
+        //-----------SETTINGS------------::END::--------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // Create Sag------------------------------------------------------------------
+        private void CreateSag()
+        {
+            Saginstance = new Sag();
+            Saginstance.SagType = opret_sag_Type_textBox.Text;
+            Saginstance.AdvokatID = opret_sag_advokatID_textBox.Text;
+            Saginstance.KundeID = opret_sag_Kunde_ID_textBox.Text;
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+        // Insert to DB  "Insert Sag to DB"------------------------------------------
+        private void InsertToDB()
+        {
+            ConnWrite = new DB_Connection_Write(); // "Write to DB Class instance"
+            string SagQuery = $"DECLARE @UNIQUEX UNIQUEIDENTIFIER SET @UNIQUEX = NEWID(); Insert Into Sag Values('{DateTime.Now.ToString("dd-MM-yyyy HH-mm-ss")}', Null, '{Saginstance.SagType}', 0, (@UNIQUEX), '{Saginstance.KundeID}', '{Saginstance.AdvokatID}');"; // Query
+            successful = ConnWrite.CreateCommand(SagQuery); // Write to DB Input and "Execution"
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // validate All -----------::START::-------------------------------------------------------------------------------------
+         private void ValidateAll()
+         {
+
+            // Sag Type - Validating
+           if(opret_sag_Type_textBox.Text.Length < 2)
+           {
+                isValid = false;
+                opret_sag_Type_textBox.BackColor = Color.FromArgb(255, 192, 192);
+
+           }
+
+
+           // Advokat ID Validating
+           if(opret_sag_advokatID_textBox.Text.Length < 15)
+           {
+                isValid = false;
+                opret_sag_advokatID_textBox.BackColor = Color.FromArgb(255, 192, 192);
+           }
+
+           if(opret_sag_Kunde_ID_textBox.Text.Length <15)
+            {
+                isValid = false;
+                opret_sag_Kunde_ID_textBox.BackColor = Color.FromArgb(255, 192, 192);
+            }
+
+
+         }
+
+        // validate All -----------::END::-------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //-----------------CREATE---TEXTBOXES-SETTINGS---------::START::----------------------------------------------
+
+        // Reset Textbox Color
+        private void TextboxesResetColor()
+        {
+            opret_sag_Type_textBox.BackColor = Color.FromArgb(220, 243, 250);
+            opret_sag_advokatID_textBox.BackColor = Color.FromArgb(220, 243, 250);
+            opret_sag_Kunde_ID_textBox.BackColor = Color.FromArgb(220, 243, 250);
+
+        }
+
+
+
+
+        // Clear All Textboxes
+        private void ClearTextboxes()
+        {
+            opret_sag_Type_textBox.Clear();
+            opret_sag_advokatID_textBox.Clear();
+            opret_sag_Kunde_ID_textBox.Clear();
+        }
+
+
+
+
+        // Save Button- 
+        private void Sag_Save_button_Click(object sender, EventArgs e)
+        {
+            TextboxesResetColor(); // Reset Color
+            ValidateAll(); // Validate
+
+            if(isValid == true)
+            {
+                CreateSag(); // Create Sag From the textboxes "ID and Date is autogenerated" 
+                InsertToDB(); // Add it to the DB
+
+
+                // If transaction was successful Clear the textboxes
+                if (successful == true)
+                {
+                   ClearTextboxes(); 
+                }
+            }
+
+    
+        }
+
+
+
+
+        // Clear ALL -Textboxes - BUTTON
+        private void create_Clear_All_textboxes_button_Click(object sender, EventArgs e)
+        {
+            ClearTextboxes();
+            TextboxesResetColor();
+        }
+
+ 
+        //-----------------CREATE---TEXTBOXES-SETTINGS---------::END::----------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // Form Menu-----------::START::-------------------------------------------
+
+        // Vis Rediger // Show Datagridview
+        private void vis_rediger_Sag_button_Click(object sender, EventArgs e)
+        {
+            datagridviewBackground_panel.Visible = true;
+            backPanel_Textboxes_Opret_sag_panel.Visible = false;
+            //this.SagTableAdapter.Fill(this.advokathusetDataSet.Sag);
+        }
+
+
+
+  
+
+        // Opret Button
+        private void opret_Sag_button_Click(object sender, EventArgs e)
+        {
+            backPanel_Textboxes_Opret_sag_panel.Visible = true;
+            datagridviewBackground_panel.Visible = false;// Hide Datagridview
+           
+        }
+
+        // Form Menu-----------::END::----------------------------------------------
+
+
+
+        
+       
+
+
+
+
+
+
+
+        //Shortcut keys-----KEY WATCHER-----------::START::--------------------------------------------------------------------------------
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+
+            // Open Item Menu Shortcut
+            if (keyData == (Keys.Delete))
+            {
+                if(Sag_dataGridView.Focused && Sag_dataGridView.SelectedRows.Count > 0)
+                {
+                    DeleteFromDatagridview();
+                }
+            }
+
+            // Copy Editing Cell
+            if (keyData == (Keys.Control | Keys.C | Keys.Alt))
+            {  
+               Clipboard.SetText(Sag_dataGridView.SelectedRows[0].Cells[Sag_dataGridView.CurrentCell.ColumnIndex].Value.ToString());
+            }
+
+
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        //Shortcut keys-----KEY WATCHER---------::END::------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //----------DELETE------------------::START::-------------------------------------------------------------------------------------- 
+
+        // Delete Button
+        private void delete_button_Click(object sender, EventArgs e)    
+        {
+            DeleteFromDatagridview();
+        }
+   
+
+
+
+        // Delete From Datagridview
+        private void DeleteFromDatagridview()
+        {
+            try
+            {
+                if(Sag_dataGridView.SelectedRows.Count > 0) // Check if any row is selected
+                {
+                   DialogResult deleteDialog = MessageBox.Show("Are you sure that you want to delete the selected row?", "Delete: Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                   if (deleteDialog == DialogResult.Yes)
+                   {
+                       AddRowToList(); // Add to list the row that will be deleted
+                       Sag_dataGridView.Rows.RemoveAt(Sag_dataGridView.SelectedRows[0].Index); //  Delete selected row
+                       SaveDataGridView(); // Save to DB
+                   }
+                    else if(deleteDialog == DialogResult.No)
+                    {
+                        RefreshDatagridview();
+                    }
+
+                }
+            }
+
+
+               catch (Exception a)  // If No row is Selected Catch the Exception
+               {
+              
+                   DialogResult errordialog = MessageBox.Show("Please Select Row in order to delete:  Do you want to see additional information about the error", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error); // Error Message
+                   if (errordialog == DialogResult.Yes) // Do you want to see more info about the error
+                   {
+                       MessageBox.Show($"{a.Message}:{a.Data}", "Error Information", MessageBoxButtons.OK, MessageBoxIcon.Information); // Additional Information
+                   }
+              
+               }
+        }
+
+
+
+
+
+         // Add the row for deletion to list   "Part of Undo"
+        private void AddRowToList()
+        {
+           
+            if (Sag_dataGridView.CurrentRow.Cells.Count == Sag_dataGridView.ColumnCount) // If all cels are selected on the current row
+            {
+                
+                DataGridViewRow row = (DataGridViewRow)Sag_dataGridView.SelectedRows[0].Clone();
+                for (int i = 0; i < Sag_dataGridView.SelectedCells.Count; i++)
+                {
+                    row.Cells[i].Value = Sag_dataGridView.SelectedCells[i].Value;
+                }
+                DeletedRowsList.Add(row);
+            }
+        }
+
+
+
+
+
+        // Undo  DELETE - Button
+        private void undo_button_Click(object sender, EventArgs e)
+        { 
+
+  
+            if (DeletedRowsList.Count > 0 && Sag_dataGridView.DataMember == "Sag")
+            {
+                int lastindex = DeletedRowsList.Count - 1;
+
+                Sag_Dataset.Tables[0].Rows.Add(DeletedRowsList[lastindex].Cells[0].Value, DeletedRowsList[lastindex].Cells[1].Value, DeletedRowsList[lastindex].Cells[2].Value, DeletedRowsList[lastindex].Cells[3].Value, DeletedRowsList[lastindex].Cells[4].Value, DeletedRowsList[lastindex].Cells[5].Value, DeletedRowsList[lastindex].Cells[6].Value, DeletedRowsList[lastindex].Cells[7].Value, DeletedRowsList[lastindex].Cells[8].Value, DeletedRowsList[lastindex].Cells[9].Value, DeletedRowsList[lastindex].Cells[10].Value, DeletedRowsList[lastindex].Cells[11].Value, DeletedRowsList[lastindex].Cells[12].Value);
+
+
+                SaveDataGridView(); // Save to DB  
+
+                //inserdetindex.Add(Sag);
+                DeletedRowsList.RemoveAt(lastindex); // Remove Last index
+                RefreshDatagridview(); // Refresh
+            }
+
+
+        }
+
+        //----------DELETE------------------::END::-------------------------------------------------------------------------------------- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         //---------------------------------LOAD-----------::START::---------------------------------------------------------------------------------------------------------
+
+        // Show Customers "Sag" - Main Method
+        private void LoadSag()
+        {
+            // Clear the Columns "Column Change order because of the second Table Sag_Tlf" TLF Colum becomes the first
+            if(Sag_dataGridView.DataMember == "Sag_Tlf")
+            {
+              Sag_dataGridView.Columns.Clear();
+            }
+
+
+            Sag_Dataset.Clear(); // Clear all rows so we begin on fresh datagridview "If We dont do that the old Data will remain and the new data will be inserted at the bottom of the datagridview"
+            Datagridview_Loader Load_Customers = new Datagridview_Loader();
+            Load_Customers.DB_Populate(show_Sag_Query, Sag_Dataset, "Sag");
+            Sag_dataGridView.DataSource = Sag_Dataset;
+            Sag_dataGridView.DataMember = "Sag";
+            Sag_dataGridView.Columns[5].ReadOnly = true;  // Forbid Editing 
+            Sag_dataGridView.Columns[6].ReadOnly = true;  // Forbid Editing
+            Sag_dataGridView.Columns[7].ReadOnly = true;  // Forbid Editing
+            Sag_dataGridView.Columns[8].ReadOnly = true;  // Forbid Editing
+            Sag_dataGridView.Columns[9].ReadOnly = true;  // Forbid Editing
+            Sag_dataGridView.Columns[10].ReadOnly = true;  // Forbid Editing
+
+        }
+
+
+
+        // Show_Sag-Tlf - Load Sag_Tlf - Main Method
+        private void LoadSag_Tlf()
+        {
+            string Sag_Tlf_Sag_navn_Select = "Select Sag_Tlf.*, Sag.Sag_Fornavn, Sag.Sag_Efternavn From Sag_Tlf Inner Join Sag ON Sag_Tlf.Sag_ID = Sag.Sag_ID;";
+            // Clear the Columns 
+            if (Sag_dataGridView.DataMember == "Sag")
+            {
+                Sag_dataGridView.Columns.Clear();
+            }
+
+            // Sag_Tlf
+            Sag_Dataset.Clear();
+            Datagridview_Loader Load_Sag_Tlf = new Datagridview_Loader();
+            Load_Sag_Tlf.DB_Populate(Sag_Tlf_Sag_navn_Select, Sag_Dataset, "Sag_Tlf");
+            Sag_dataGridView.DataSource = Sag_Dataset;
+            Sag_dataGridView.DataMember = "Sag_Tlf";
+            Sag_dataGridView.Columns[2].ReadOnly = true;  // Forbid Editing Sag_ForNavn
+            Sag_dataGridView.Columns[3].ReadOnly = true;  // Forbid Editing Sag_EfterNavn
+
+        }
+
+
+        //---------------------------------LOAD-----------::END::---------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //----SAVE-UPDATE--DATAGRIDVIEW-------::START::---------------------------------------------------------------------------------- 
+
+        // Save Cutomers "Sag"
+        private void SaveDataGridView()
+        {          
+            
+            // Save changes to DB  "UPDATE Sag"
+            if(Sag_dataGridView.DataMember == "Sag_Tlf") // Sag_Tlf
+            {
+                Sag_dataGridView.EndEdit();
+                DatagridView_Save Update_Sag = new DatagridView_Save();
+                Update_Sag.DatagridView_Update(Sag_Tlf_Select_Query, Sag_Dataset, "Sag_Tlf", this.Sag_dataGridView);
+
+            }
+
+            else if(Sag_dataGridView.DataMember == "Sag")   // Sag
+            {
+                Sag_dataGridView.EndEdit();
+                DatagridView_Save Update_Sag = new DatagridView_Save();
+                Update_Sag.DatagridView_Update("Select S.Sag_Type, S.Sag_ID, S.Sag_Oprets_Dato, S.Sag_Slut_Dato, S.Sag_Afslutet, S.Sag_Kunde_ID, S.Sag_Advokat_ID AS Ansvarlig_Advokat_ID From Sag As S ", Sag_Dataset, "Sag", this.Sag_dataGridView);
+            }
+         
+
+        }
+
+           
+     
+
+        // UPDATE - Get row to Compare on Row enter "Used to determine if the row have been changed so we know when to "Save the changes""
+        private void Sag_dataGridView_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            Selected_Row_For_Compare();
+        }
+
+
+
+
+       // Row Enter - Main Method "It is used also for reseting the row Comparison when Column Header Is Clicked"
+       private void Selected_Row_For_Compare()
+        {
+            if (Sag_dataGridView.SelectedRows.Count > 0) // I there is selected row
+            {
+
+                // Clone Row
+                enterRow = (DataGridViewRow)Sag_dataGridView.SelectedRows[0].Clone();
+
+                // Add Data to the Cloned Row
+                for (int i = 0; i < Sag_dataGridView.SelectedRows[0].Cells.Count; i++)
+                {
+                    enterRow.Cells[i].Value = Sag_dataGridView.SelectedRows[0].Cells[i].Value;
+                }
+
+
+            }
+
+        }
+
+
+
+
+
+        // Row Leave - "ON - Validattion" - UPDATE "SAVE" - On ROW LEAVE AFTER VALIDATION  "Save"
+        private void Sag_dataGridView_RowValidated(object sender, DataGridViewCellEventArgs e)
+        {
+             bool edited = false; // Check if the Row was edited
+
+            if (Sag_dataGridView.SelectedRows.Count > 0) // Selected minimum 1 row
+            {
+
+
+                for (int j = 0; j < Sag_dataGridView.SelectedRows[0].Cells.Count; j++)
+                {
+                
+
+                    if (Sag_dataGridView.SelectedRows[0].Cells[j].Value != null && !Sag_dataGridView.SelectedRows[0].Cells[j].Value.Equals(enterRow.Cells[j].Value))
+                    {
+                        edited = true;
+                        break;
+                    }
+                }
+               
+               
+
+                if (edited == true )
+                {
+                    DialogResult saveDialog = MessageBox.Show("Are you sure that you want ot save the changes?", "Save", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    if (saveDialog == DialogResult.Yes)
+                    {
+                        SaveDataGridView(); // Save
+                        RefreshDatagridview(); // Refresh
+                                               //MessageBox.Show("Changes Are Saved", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                    else if (saveDialog == DialogResult.No) // Refresh if DialogResult == No
+                    {
+                        RefreshDatagridview(); // Refresh
+                    }
+
+                }
+
+
+
+            }
+        }
+
+
+      
+
+
+        // Reset Row Selection "For Save"
+        private void Sag_dataGridView_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            Selected_Row_For_Compare();
+        }
+
+      
+
+        // RefreshDatagridview "After Update OR Cancelation"
+        private void RefreshDatagridview()
+        {
+            if (Sag_dataGridView.DataMember == "Sag")
+            {
+                LoadSag();
+            }
+            else if (Sag_dataGridView.DataMember == "Sag_Tlf")
+            {
+                LoadSag_Tlf();
+            }
+        }
+
+
+        //----SAVE-UPDATE--DATAGRIDVIEW-------::END::--------------------------------------------------------------------------------------- 
+
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //-------------BUTTONS-Datagridview--Menu-------::START::----------------------------------------------------------------------------
+
+        // Local Folder
+        private void local_folder_button_Click(object sender, EventArgs e)
+        {
+            Open_Local_Folder();
+        }
+
+
+
+
+        // Show All Customers "Sag" - Button
+        private void show_all_button_Click(object sender, EventArgs e)
+        {
+            LoadSag();
+
+
+            // ResetSearch_Textbox Color
+            if (search_textBox.Text.Length > 0)
+            {
+                search_textBox.BackColor = Color.FromArgb(255, 192, 192);
+            }
+
+
+        }
+
+
+
+
+        // Open Local Folder
+        private void Open_Local_Folder()
+        {
+            Process.Start(LocalFolderPath);
+            SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\recycle.wav");
+            simpleSound.Play();
+        }
+
+
+
+
+        // Sag_Tlf- Button - Show Tlf
+        private void Sag_Tlf_button_Click(object sender, EventArgs e)
+        {
+            LoadSag_Tlf();
+            if(search_textBox.TextLength > 0)
+            {
+                search_textBox.BackColor = Color.FromArgb(255, 192, 192);
+            }
+
+
+        }
+
+
+
+
+        //Button
+        // Clear Search_Text-Box "RESET" - CHANGE IMAGE ON HOVER
+        private void reset_Search_Textbox_button_MouseEnter(object sender, EventArgs e)
+        {
+            reset_Search_Textbox_button.BackgroundImage = Properties.Resources.Hover_Del_3;
+        }
+
+
+
+
+         //Button
+        // Clear Search_Text-Box "RESET" - CHANGE IMAGE On Leave - Reset Image
+        private void reset_Search_Textbox_button_MouseLeave(object sender, EventArgs e)
+        {
+            reset_Search_Textbox_button.BackgroundImage = Properties.Resources.Untitled2;
+        }
+
+        //-------------BUTTONS-Datagridview--Menu-------::END::--------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //------------------------(SEARCH)-----::START::---------------------------------------------------------------------------------
+
+        // Search ComboBox - Content
+        private void Search_ComboBox_Options_Content()
+        {
+            search_options_comboBox.Items.Add("Indholder");
+            search_options_comboBox.Items.Add("Præcis");
+            search_options_comboBox.Items.Add("Start");
+            search_options_comboBox.Items.Add("Slut");
+            search_options_comboBox.SelectedIndex = 0;
+        }
+     
+        // Search Options
+        private void Search_Options()
+        {
+            switch(search_options_comboBox.SelectedIndex) //If Combobox index --->
+            {
+                // ---> Equals 0,1,2,3 // Assign SearchOptions // Accordingly
+
+                case 0: //Contains
+                    SearchOptions = $"Like  '%{search_textBox.Text}%'";
+                    break;
+                case 1: // Exact
+                    SearchOptions = $"Like '{search_textBox.Text}'";
+                    break;
+
+                case 2: // Start
+                    SearchOptions = $"Like '{search_textBox.Text}%'";
+                    break;
+
+                case 3: //End
+                    SearchOptions = $"Like  '%{search_textBox.Text}'";
+                    break;
+
+               
+            
+            }
+           
+        }
+
+
+
+
+        // Search Column - Content
+        private void Search_ComboBox_Column_Content()
+        {
+            Search_Column_comboBox.Items.Add("Alle");
+            Search_Column_comboBox.Items.Add("Type");
+            Search_Column_comboBox.Items.Add("Sag ID");
+            Search_Column_comboBox.Items.Add("Oprets_Dato");
+            Search_Column_comboBox.Items.Add("Slut_dato");
+            Search_Column_comboBox.Items.Add("Kunde_Navn");
+            Search_Column_comboBox.Items.Add("Kunde Efternavn");
+            Search_Column_comboBox.Items.Add("Kunde ID");
+            Search_Column_comboBox.Items.Add("Advokat_Fornavn");
+            Search_Column_comboBox.Items.Add("Advokat_Efternavn");
+            Search_Column_comboBox.Items.Add("Advokat ID");
+            Search_Column_comboBox.Items.Add("Tid");
+            Search_Column_comboBox.Items.Add("Tid_Dato");
+            Search_Column_comboBox.SelectedIndex = 0;
+
+        }
+
+
+        // Search Queries - / Columns / Search - Text
+        private void Search_Column()
+        {
+            //SearchColumn_SearchString
+
+            switch (Search_Column_comboBox.SelectedIndex)
+            {
+                case 0: // ALL
+                    SearchColumn_SearchString = $"Select S.Sag_Type, S.Sag_ID, S.Sag_Oprets_Dato, S.Sag_Slut_Dato, S.Sag_Afslutet, K.Kunde_Fornavn, K.Kunde_Efternavn, S.Sag_Kunde_ID, M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn AS Advokat_Efternavn, S.Sag_Advokat_ID AS Ansvarlig_Advokat_ID, T.Tid, T.Tid_Dato From Sag As S Full Join Tid AS T On S.Sag_ID = T.Sag_ID Inner Join Kunde As K On S.Sag_Kunde_ID = K.Kunde_ID Inner Join Medarbejder AS M ON S.Sag_Advokat_ID = M.Me_ID Where S.Sag_Type {SearchOptions} OR S.Sag_ID {SearchOptions} OR S.Sag_Oprets_Dato {SearchOptions} OR S.Sag_Slut_Dato {SearchOptions} OR K.Kunde_Fornavn {SearchOptions} OR K.Kunde_Efternavn {SearchOptions} OR S.Sag_Kunde_ID {SearchOptions} OR M.Me_Fornavn {SearchOptions} OR M.Me_Efternavn {SearchOptions} OR S.Sag_Advokat_ID {SearchOptions} OR T.Tid {SearchOptions} OR T.Tid_Dato {SearchOptions};";
+                    //IF(ISNUMERIC('{search_textBox.Text}') = 0) BEGIN Select* From Sag Where  Sag_Fornavn {SearchOptions} OR Sag_Efternavn {SearchOptions} OR Sag_Adresse {SearchOptions} OR Sag_Email {SearchOptions} OR Sag_Oprets_Dato {SearchOptions} OR Sag_ID {SearchOptions} END ELSE  BEGIN SELECT Sag.*, Sag_Tlf.Sag_Tlf From Sag Full Join Sag_Tlf ON Sag.Sag_ID = Sag_Tlf.Sag_ID Where Sag_PostNr {SearchOptions} OR Sag_Tlf.Sag_Tlf {SearchOptions} OR Sag_Fornavn {SearchOptions} OR Sag_Efternavn {SearchOptions} OR Sag_Adresse {SearchOptions} OR Sag_Email {SearchOptions} OR Sag_Oprets_Dato {SearchOptions} OR Sag.Sag_ID {SearchOptions} END;
+                    break;
+                case 1: // Sag Type
+                    SearchColumn_SearchString = $"Select S.Sag_Type, S.Sag_ID, S.Sag_Oprets_Dato, S.Sag_Slut_Dato, S.Sag_Afslutet, K.Kunde_Fornavn, K.Kunde_Efternavn, S.Sag_Kunde_ID, M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn AS Advokat_Efternavn, S.Sag_Advokat_ID AS Ansvarlig_Advokat_ID, T.Tid, T.Tid_Dato From Sag As S Full Join Tid AS T On S.Sag_ID = T.Sag_ID Inner Join Kunde As K On S.Sag_Kunde_ID = K.Kunde_ID Inner Join Medarbejder AS M ON S.Sag_Advokat_ID = M.Me_ID Where S.Sag_Type {SearchOptions}";
+                    break;
+                case 2:   // Sag ID
+                    SearchColumn_SearchString = $"Select S.Sag_Type, S.Sag_ID, S.Sag_Oprets_Dato, S.Sag_Slut_Dato, S.Sag_Afslutet, K.Kunde_Fornavn, K.Kunde_Efternavn, S.Sag_Kunde_ID, M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn AS Advokat_Efternavn, S.Sag_Advokat_ID AS Ansvarlig_Advokat_ID, T.Tid, T.Tid_Dato From Sag As S Full Join Tid AS T On S.Sag_ID = T.Sag_ID Inner Join Kunde As K On S.Sag_Kunde_ID = K.Kunde_ID Inner Join Medarbejder AS M ON S.Sag_Advokat_ID = M.Me_ID Where S.Sag_ID {SearchOptions}";
+                    break;
+                case 3:  //Oprets Dato
+                    SearchColumn_SearchString = $"Select S.Sag_Type, S.Sag_ID, S.Sag_Oprets_Dato, S.Sag_Slut_Dato, S.Sag_Afslutet, K.Kunde_Fornavn, K.Kunde_Efternavn, S.Sag_Kunde_ID, M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn AS Advokat_Efternavn, S.Sag_Advokat_ID AS Ansvarlig_Advokat_ID, T.Tid, T.Tid_Dato From Sag As S Full Join Tid AS T On S.Sag_ID = T.Sag_ID Inner Join Kunde As K On S.Sag_Kunde_ID = K.Kunde_ID Inner Join Medarbejder AS M ON S.Sag_Advokat_ID = M.Me_ID Where S.Sag_Oprets_Dato {SearchOptions}";
+                    break;
+                case 4:  //Slut Dato
+                    SearchColumn_SearchString = $" Select S.Sag_Type, S.Sag_ID, S.Sag_Oprets_Dato, S.Sag_Slut_Dato, S.Sag_Afslutet, K.Kunde_Fornavn, K.Kunde_Efternavn, S.Sag_Kunde_ID, M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn AS Advokat_Efternavn, S.Sag_Advokat_ID AS Ansvarlig_Advokat_ID, T.Tid, T.Tid_Dato From Sag As S Full Join Tid AS T On S.Sag_ID = T.Sag_ID Inner Join Kunde As K On S.Sag_Kunde_ID = K.Kunde_ID Inner Join Medarbejder AS M ON S.Sag_Advokat_ID = M.Me_ID Where S.Sag_Slut_Dato {SearchOptions}";
+                    break;
+                case 5: // Kunde Navn
+                    SearchColumn_SearchString = $"Select S.Sag_Type, S.Sag_ID, S.Sag_Oprets_Dato, S.Sag_Slut_Dato, S.Sag_Afslutet, K.Kunde_Fornavn, K.Kunde_Efternavn, S.Sag_Kunde_ID, M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn AS Advokat_Efternavn, S.Sag_Advokat_ID AS Ansvarlig_Advokat_ID, T.Tid, T.Tid_Dato From Sag As S Full Join Tid AS T On S.Sag_ID = T.Sag_ID Inner Join Kunde As K On S.Sag_Kunde_ID = K.Kunde_ID Inner Join Medarbejder AS M ON S.Sag_Advokat_ID = M.Me_ID Where K.Kunde_Fornavn {SearchOptions}";
+                    break;
+                case 6: //Kunde Efternavn
+                    SearchColumn_SearchString = $"Select S.Sag_Type, S.Sag_ID, S.Sag_Oprets_Dato, S.Sag_Slut_Dato, S.Sag_Afslutet, K.Kunde_Fornavn, K.Kunde_Efternavn, S.Sag_Kunde_ID, M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn AS Advokat_Efternavn, S.Sag_Advokat_ID AS Ansvarlig_Advokat_ID, T.Tid, T.Tid_Dato From Sag As S Full Join Tid AS T On S.Sag_ID = T.Sag_ID Inner Join Kunde As K On S.Sag_Kunde_ID = K.Kunde_ID Inner Join Medarbejder AS M ON S.Sag_Advokat_ID = M.Me_ID Where K.Kunde_Efternavn {SearchOptions}";
+                    break; 
+                case 7: //Kunde ID
+                    SearchColumn_SearchString = $"Select S.Sag_Type, S.Sag_ID, S.Sag_Oprets_Dato, S.Sag_Slut_Dato, S.Sag_Afslutet, K.Kunde_Fornavn, K.Kunde_Efternavn, S.Sag_Kunde_ID, M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn AS Advokat_Efternavn, S.Sag_Advokat_ID AS Ansvarlig_Advokat_ID, T.Tid, T.Tid_Dato From Sag As S Full Join Tid AS T On S.Sag_ID = T.Sag_ID Inner Join Kunde As K On S.Sag_Kunde_ID = K.Kunde_ID Inner Join Medarbejder AS M ON S.Sag_Advokat_ID = M.Me_ID Where K.Kunde_ID {SearchOptions}";
+                    break;
+                case 8: // Advokat Fornavn
+                    SearchColumn_SearchString = $"Select S.Sag_Type, S.Sag_ID, S.Sag_Oprets_Dato, S.Sag_Slut_Dato, S.Sag_Afslutet, K.Kunde_Fornavn, K.Kunde_Efternavn, S.Sag_Kunde_ID, M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn AS Advokat_Efternavn, S.Sag_Advokat_ID AS Ansvarlig_Advokat_ID, T.Tid, T.Tid_Dato From Sag As S Full Join Tid AS T On S.Sag_ID = T.Sag_ID Inner Join Kunde As K On S.Sag_Kunde_ID = K.Kunde_ID Inner Join Medarbejder AS M ON S.Sag_Advokat_ID = M.Me_ID Where M.Me_Fornavn {SearchOptions}";
+                    break;
+                case 9: // Advokat Efternavn
+                    SearchColumn_SearchString = $"Select S.Sag_Type, S.Sag_ID, S.Sag_Oprets_Dato, S.Sag_Slut_Dato, S.Sag_Afslutet, K.Kunde_Fornavn, K.Kunde_Efternavn, S.Sag_Kunde_ID, M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn AS Advokat_Efternavn, S.Sag_Advokat_ID AS Ansvarlig_Advokat_ID, T.Tid, T.Tid_Dato From Sag As S Full Join Tid AS T On S.Sag_ID = T.Sag_ID Inner Join Kunde As K On S.Sag_Kunde_ID = K.Kunde_ID Inner Join Medarbejder AS M ON S.Sag_Advokat_ID = M.Me_ID Where M.Me_Efternavn {SearchOptions}";
+                    break;  
+                case 10: // Advokat ID
+                    SearchColumn_SearchString = $"Select S.Sag_Type, S.Sag_ID, S.Sag_Oprets_Dato, S.Sag_Slut_Dato, S.Sag_Afslutet, K.Kunde_Fornavn, K.Kunde_Efternavn, S.Sag_Kunde_ID, M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn AS Advokat_Efternavn, S.Sag_Advokat_ID AS Ansvarlig_Advokat_ID, T.Tid, T.Tid_Dato From Sag As S Full Join Tid AS T On S.Sag_ID = T.Sag_ID Inner Join Kunde As K On S.Sag_Kunde_ID = K.Kunde_ID Inner Join Medarbejder AS M ON S.Sag_Advokat_ID = M.Me_ID Where M.Me_ID {SearchOptions}";
+                    break;
+                case 11: // Tid
+                    SearchColumn_SearchString = $"Select S.Sag_Type, S.Sag_ID, S.Sag_Oprets_Dato, S.Sag_Slut_Dato, S.Sag_Afslutet, K.Kunde_Fornavn, K.Kunde_Efternavn, S.Sag_Kunde_ID, M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn AS Advokat_Efternavn, S.Sag_Advokat_ID AS Ansvarlig_Advokat_ID, T.Tid, T.Tid_Dato From Sag As S Full Join Tid AS T On S.Sag_ID = T.Sag_ID Inner Join Kunde As K On S.Sag_Kunde_ID = K.Kunde_ID Inner Join Medarbejder AS M ON S.Sag_Advokat_ID = M.Me_ID Where T.Tid {SearchOptions}";
+                    break;
+                case 12: // Tid Dato
+                    SearchColumn_SearchString = $"Select S.Sag_Type, S.Sag_ID, S.Sag_Oprets_Dato, S.Sag_Slut_Dato, S.Sag_Afslutet, K.Kunde_Fornavn, K.Kunde_Efternavn, S.Sag_Kunde_ID, M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn AS Advokat_Efternavn, S.Sag_Advokat_ID AS Ansvarlig_Advokat_ID, T.Tid, T.Tid_Dato From Sag As S Full Join Tid AS T On S.Sag_ID = T.Sag_ID Inner Join Kunde As K On S.Sag_Kunde_ID = K.Kunde_ID Inner Join Medarbejder AS M ON S.Sag_Advokat_ID = M.Me_ID Where T.Tid_Dato {SearchOptions}";
+                    break;
+                   
+            }
+        }
+
+
+
+        // Search - DB - Connection
+        private void Search()
+        {
+            Sag_Dataset.Clear(); // Clear all rows so we begin on fresh datagridview "If We dont do that the old Data will remain and the new data will be inserted at the bottom of the datagridview"
+            Datagridview_Loader Load_Search_Result = new Datagridview_Loader();
+            Load_Search_Result.DB_Populate(SearchColumn_SearchString, Sag_Dataset, "Sag");
+            Sag_dataGridView.DataSource = Sag_Dataset;
+            Sag_dataGridView.DataMember = "Sag";
+ 
+        }
+
+
+
+
+        // MAIN - Search Method
+        private void Search_Resources()
+        {
+            LoadSag(); // Used for refreshing the datagridview Because of the Sag_Tlf Table appears first again
+            Search_Options(); // Like
+            Search_Column(); // Column and Search String
+            Search(); // Ask the DB and Get Answer
+        }
+
+
+
+
+        // Search On Text Changed
+        private void search_textBox_TextChanged(object sender, EventArgs e)
+        {
+            Search_Resources();
+
+            if(search_textBox.Text == "")
+            {
+                LoadSag();
+            }
+        }
+
+       
+
+
+        // Automaticly Search on "Option Change"
+        private void search_options_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (search_textBox.Text.Length > 0)// Search if Textbox is not empty
+            {
+                Search_Resources();
+            }
+        }
+
+
+
+
+        // Search Automaticly when you change "Column Option"
+        private void Search_Column_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(search_textBox.Text.Length >0)// Search if Textbox is not empty
+            {
+                Search_Resources(); 
+            }
+        }
+
+
+
+        // Clear SearchBox
+        private void reset_Search_Textbox_button_Click(object sender, EventArgs e)
+        {
+            search_textBox.Clear(); // Clear SearchBox
+            search_textBox.BackColor = Color.FromArgb(222, 249, 255);
+            LoadSag(); // Show All
+        }
+
+
+
+        // Search Textbox Search on Mouse Down
+        private void search_textBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            if(search_textBox.Text.Length >0)
+            {
+                search_textBox.BackColor = Color.FromArgb(222, 249, 255);
+                Search_Resources();
+            }
+
+        }
+
+        //------------------------(SEARCH)-----::END::---------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //--------------Datagridview - Change - Color------------::START:--------------------------------------------------------------
+        // Datagridview Change Color Button
+        private void change_DatagridView_Color_button_Click(object sender, EventArgs e)
+        {
+            Change_Datgridview_Color();
+        }
+
+
+        // Datagridview Change Color - Main Method
+        private void Change_Datgridview_Color()
+        {
+            if (this.Sag_dataGridView.RowsDefaultCellStyle.BackColor == Color.FromArgb(64, 64, 64))
+            {
+                White_DatagridviewStyle();
+            }
+
+            else
+            {
+                Black_DatagridviewStyle();
+            }
+        }
+
+
+
+        // Mark Current row
+        private void mark_current_row_button_Click(object sender, EventArgs e)
+        {
+             if(Sag_dataGridView.CurrentRow != null)
+             {
+
+          
+                if(Sag_dataGridView.SelectedRows[0].DefaultCellStyle.BackColor != Color.FromArgb(191, 50, 95))
+                {
+                Sag_dataGridView.SelectedRows[0].DefaultCellStyle.BackColor = Color.FromArgb(191, 50, 95);
+                Sag_dataGridView.SelectedRows[0].DefaultCellStyle.ForeColor = Color.Black;
+                }
+                else
+                {
+                    Sag_dataGridView.SelectedRows[0].DefaultCellStyle.BackColor = Color.FromArgb(2, 222, 160);
+                    Sag_dataGridView.SelectedRows[0].DefaultCellStyle.ForeColor = DefaultForeColor;
+                }
+             }
+        }
+        //--------------Datagridview - Change - Color------------::END:----------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //------------PDF--PRINT------------------::START::----------------------------------------------------------------------------
+        // Print Datagridview
+        private void print_button_Click(object sender, EventArgs e)
+        {
+            Datagridview_To_PDF(); // Method for Converting the Current Datagridview result to PDF
+            OpenLastFile();
+
+        }
+
+
+
+        // Open Last File
+        private void OpenLastFile()
+        {
+       
+
+            // Open Last File
+            DirectoryInfo directory = new DirectoryInfo(LocalFolderPath); // Create Directory with path "Not phisical Directory!"
+            FileInfo Last_File = (from f in directory.GetFiles() // Get all files in the directory
+                               orderby f.LastWriteTime descending // Ascending // Decending
+          
+                               select f).First();
+
+
+            string selectFile = "/select, \"" + Last_File.FullName + "\""; // Selects the file in the folder
+
+            // Opens Last file
+            Process.Start(Last_File.FullName); // Open PDF,Png etc.
+            Process.Start("explorer.exe", selectFile); // Selects the file in the folder
+
+
+
+            // SOUND
+            SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\recycle.wav");
+            simpleSound.Play();
+        }
+
+
+
+        // PFD - Print
+        private void Datagridview_To_PDF()
+          {
+               //USING -  iTextSharp - Class
+               PdfPTable Pdf_DGV = new PdfPTable(Sag_dataGridView.Columns.Count);
+               Pdf_DGV.DefaultCell.Padding = 3;
+               Pdf_DGV.WidthPercentage = 100;
+               Pdf_DGV.HorizontalAlignment = Element.ALIGN_LEFT;
+               Pdf_DGV.DefaultCell.BorderWidth = 1;
+             
+             
+               // Adding the Columns with their txt to the PDF 
+               foreach(DataGridViewColumn column in Sag_dataGridView.Columns)
+               {
+                   PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
+                   cell.BackgroundColor = new iTextSharp.text.BaseColor(255, 255, 255); // White Color
+                   Pdf_DGV.AddCell(cell);
+               }
+             
+             
+               //Add Rows and Cells to the Pdf
+
+              for (int i = 0; i < Sag_dataGridView.Rows.Count; i++)
+              {
+                  for (int a = 0; a < Sag_dataGridView.Rows[i].Cells.Count; a++)
+                  {
+                      if (Sag_dataGridView.Rows[i].Cells[a].Value != null)
+                      {
+             
+                          Pdf_DGV.AddCell(Sag_dataGridView.Rows[i].Cells[a].Value.ToString());
+             
+                      }
+             
+             
+                  }
+              }
+
+
+
+              // Export to PDF
+
+            if(!Directory.Exists(LocalFolderPath))
+            {
+                Directory.CreateDirectory(LocalFolderPath);
+            }
+
+            using(FileStream stream = new FileStream(LocalFolderPath + "Sag_PDF -  "+DateTime.Now.ToString("dd-MM-yyyy   HH-mm-ss")+".pdf", FileMode.Create))
+            {
+                Document PDF_DOC = new Document(PageSize.A2, 10f, 10f, 10f, 0f);
+                PdfWriter.GetInstance(PDF_DOC, stream);
+                PDF_DOC.Open();
+                PDF_DOC.Add(Pdf_DGV);
+                PDF_DOC.Close();
+                stream.Close();
+
+
+            }
+          
+        }
+
+
+
+        //------------PDF--PRINT------------------::END::-------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //-------Datagridview-Screenshot-----------------::START::---------------------------------------------------------------------- 
+
+        // Datagridview Screenshot - Main Mehtod
+        private void DatagridviewScreenshot()
+        {
+
+
+            int oldHeight = Sag_dataGridView.Height;
+            Sag_dataGridView.Height = Sag_dataGridView.RowCount * Sag_dataGridView.RowTemplate.Height;
+
+
+
+
+            // Bitmap
+            Bitmap bitmapScreenshot = new Bitmap(this.Sag_dataGridView.Width, this.Sag_dataGridView.Height);
+
+            // Draw to the bitmap
+            Sag_dataGridView.DrawToBitmap(bitmapScreenshot, new System.Drawing.Rectangle(0, 0, this.Sag_dataGridView.Width, this.Sag_dataGridView.Height));
+
+            // Reset the height
+            Sag_dataGridView.Height = oldHeight;
+
+            // Save bitmap
+            bitmapScreenshot.Save(LocalFolderPath + "Sag_Snapshot  " + DateTime.Now.ToString("dd-MM-yyyy  HH-mm-ss") + ".png");
+            Clipboard.SetDataObject(bitmapScreenshot);  // Copy Image to Clipboard Also
+
+        
+        }
+
+
+
+        // Datagridview Screnshot - Button
+        private void screenshot_datagridview_button_Click(object sender, EventArgs e)
+        {
+            White_DatagridviewStyle(); // Datagridview White Color
+            DatagridviewScreenshot(); // Screenshot
+            Black_DatagridviewStyle(); // Datagridview Color Style
+            OpenLastFile();
+        }
+
+
+        //-------Datagridview-Screenshot-----------------::END::------------------------------------------------------------------------ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //-------------CREATE-TEXTBOXES -- Reset Color on Typing-------------------::START:----------------------------------------------
+
+        // Name - Reset Color
+        private void Sag_name_textBox_TextChanged(object sender, EventArgs e)
+        {
+            opret_sag_Type_textBox.BackColor = Color.FromArgb(220, 243, 250);
+        }
+
+
+
+
+
+        // Surname - Reset Color
+        private void Sag_surname_textBox_TextChanged(object sender, EventArgs e)
+        {
+            opret_sag_advokatID_textBox.BackColor = Color.FromArgb(220, 243, 250);
+        }
+
+
+
+
+  
+
+        // Adress - Reset Background
+        private void Sag_adr_textBox_TextChanged(object sender, EventArgs e)
+        {
+            opret_sag_Kunde_ID_textBox.BackColor = Color.FromArgb(220, 243, 250);
+        }
+
+
+
+ 
+ 
+
+        // ERROR - Handling - Default Datagridview Error handling
+        private void Sag_dataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            Sag_dataGridView.RefreshEdit(); // Reset
+            MessageBox.Show("Der Opståd Fejl, Input er ikke i korekt format","Fejl", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+
+
+
+
+        //-------------CREATE-TEXTBOXES -- Reset Color on Typing-------------------::END:--------------------------------------------------
+
+
+
+
+
+        // Copy Selected Column
+        private void copy_selected_column_button_Click(object sender, EventArgs e)
+        {
+           Clipboard.SetText(Sag_dataGridView.SelectedRows[0].Cells[Sag_dataGridView.CurrentCell.ColumnIndex].Value.ToString());
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }

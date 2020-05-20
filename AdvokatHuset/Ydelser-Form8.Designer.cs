@@ -66,6 +66,7 @@
             this.top_Menu_background_panel = new System.Windows.Forms.Panel();
             this.vis_rediger_Ydelse_button = new System.Windows.Forms.Button();
             this.opret_Ydelse_button = new System.Windows.Forms.Button();
+            this.copy_selected_column_button = new System.Windows.Forms.Button();
             this.backgroundName_Top_panel.SuspendLayout();
             this.backPanel_Textboxes_panel.SuspendLayout();
             this.background_textboxes_top_panel.SuspendLayout();
@@ -488,11 +489,12 @@
             this.background_DGV_panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.background_DGV_panel3.BackgroundImage = global::View_GUI.Properties.Resources.DGV_Panel;
             this.background_DGV_panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.background_DGV_panel3.Controls.Add(this.copy_selected_column_button);
             this.background_DGV_panel3.Controls.Add(this.change_DatagridView_Color_button);
             this.background_DGV_panel3.Controls.Add(this.mark_current_row_button);
-            this.background_DGV_panel3.Location = new System.Drawing.Point(707, -2);
+            this.background_DGV_panel3.Location = new System.Drawing.Point(685, -2);
             this.background_DGV_panel3.Name = "background_DGV_panel3";
-            this.background_DGV_panel3.Size = new System.Drawing.Size(125, 60);
+            this.background_DGV_panel3.Size = new System.Drawing.Size(169, 60);
             this.background_DGV_panel3.TabIndex = 4;
             // 
             // change_DatagridView_Color_button
@@ -505,7 +507,7 @@
             this.change_DatagridView_Color_button.ForeColor = System.Drawing.Color.Black;
             this.change_DatagridView_Color_button.Image = global::View_GUI.Properties.Resources.Color_Meter_icon__1_;
             this.change_DatagridView_Color_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.change_DatagridView_Color_button.Location = new System.Drawing.Point(19, 12);
+            this.change_DatagridView_Color_button.Location = new System.Drawing.Point(59, 12);
             this.change_DatagridView_Color_button.Name = "change_DatagridView_Color_button";
             this.change_DatagridView_Color_button.Size = new System.Drawing.Size(40, 38);
             this.change_DatagridView_Color_button.TabIndex = 10;
@@ -522,7 +524,7 @@
             this.mark_current_row_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mark_current_row_button.ForeColor = System.Drawing.Color.Black;
             this.mark_current_row_button.Image = global::View_GUI.Properties.Resources.Grid_Row_Color;
-            this.mark_current_row_button.Location = new System.Drawing.Point(66, 12);
+            this.mark_current_row_button.Location = new System.Drawing.Point(105, 12);
             this.mark_current_row_button.Name = "mark_current_row_button";
             this.mark_current_row_button.Size = new System.Drawing.Size(40, 38);
             this.mark_current_row_button.TabIndex = 11;
@@ -628,14 +630,35 @@
             this.opret_Ydelse_button.UseVisualStyleBackColor = true;
             this.opret_Ydelse_button.Click += new System.EventHandler(this.opret_Ydelse_button_Click);
             // 
+            // copy_selected_column_button
+            // 
+            this.copy_selected_column_button.BackColor = System.Drawing.Color.Transparent;
+            this.copy_selected_column_button.BackgroundImage = global::View_GUI.Properties.Resources.win7_ico_shell32_dll_260__2_;
+            this.copy_selected_column_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.copy_selected_column_button.FlatAppearance.BorderSize = 0;
+            this.copy_selected_column_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.copy_selected_column_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.copy_selected_column_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.copy_selected_column_button.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.copy_selected_column_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.copy_selected_column_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.copy_selected_column_button.Location = new System.Drawing.Point(16, 12);
+            this.copy_selected_column_button.Margin = new System.Windows.Forms.Padding(0);
+            this.copy_selected_column_button.Name = "copy_selected_column_button";
+            this.copy_selected_column_button.Size = new System.Drawing.Size(40, 38);
+            this.copy_selected_column_button.TabIndex = 16;
+            this.copy_selected_column_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.copy_selected_column_button.UseVisualStyleBackColor = false;
+            this.copy_selected_column_button.Click += new System.EventHandler(this.copy_selected_column_button_Click);
+            // 
             // Ydelser_Form8
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(1500, 700);
-            this.Controls.Add(this.backPanel_Textboxes_panel);
             this.Controls.Add(this.datagridviewBackground_panel);
+            this.Controls.Add(this.backPanel_Textboxes_panel);
             this.Controls.Add(this.top_Menu_background_panel);
             this.Controls.Add(this.backgroundName_Top_panel);
             this.DoubleBuffered = true;
@@ -703,5 +726,6 @@
         private System.Windows.Forms.Label Pris_label;
         private System.Windows.Forms.Label name_label;
         private System.Windows.Forms.ComboBox load_Type_Ydelse_comboBox;
+        private System.Windows.Forms.Button copy_selected_column_button;
     }
 }

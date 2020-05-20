@@ -520,14 +520,8 @@ namespace View_GUI
             // Copy Editing Cell
             if (keyData == (Keys.Control | Keys.C | Keys.Alt))
             {
-                for (int i = 0; i < Advokat_dataGridView.SelectedRows[0].Cells.Count; i++)
-                {
-                    if(Advokat_dataGridView.SelectedCells[i].IsInEditMode)
-                    {
-                      Clipboard.SetText(Advokat_dataGridView.SelectedCells[i].Value.ToString());
-                    }
-                }
-                
+                Clipboard.SetText(Advokat_dataGridView.SelectedRows[0].Cells[Advokat_dataGridView.CurrentCell.ColumnIndex].Value.ToString());
+
             }
 
 
@@ -1675,12 +1669,19 @@ namespace View_GUI
             }
         }
 
+
+
         //----DELETE SPECIALE- From Advokate------------::END::----------------------------------------------
 
 
 
 
 
+        // Copy Selected Column Button
+        private void copy_selected_column_button_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(Advokat_dataGridView.SelectedRows[0].Cells[Advokat_dataGridView.CurrentCell.ColumnIndex].Value.ToString());
+        }
 
 
 

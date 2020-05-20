@@ -65,7 +65,7 @@ namespace View_GUI
                                " være værdier der eksister i Database FX: Post Nr skal eksister i Databasen før du kan oprette FX. Kunde med den bestemte Post Nr", "Fejl" , MessageBoxButtons.OK, MessageBoxIcon.Error );
                            break; 
                           case 515:
-                           MessageBox.Show("Inputed var ikke korekt: Der er et tekstfelt-:er: som ikke eksepter Tomt Input:  Null Exception", "Fejl", MessageBoxButtons.OK, MessageBoxIcon.Error );
+                           MessageBox.Show("Inputed var ikke korekt: Der er et tekstfelt: som ikke eksepter Tomt Input:  Null Exception", "Fejl", MessageBoxButtons.OK, MessageBoxIcon.Error );
                            break;  
                           case 8152:
                            MessageBox.Show("Inputet var for lang", "Fejl" , MessageBoxButtons.OK, MessageBoxIcon.Error );

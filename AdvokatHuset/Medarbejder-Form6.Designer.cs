@@ -103,6 +103,7 @@
             this.main_specialer_button = new System.Windows.Forms.Button();
             this.vis_rediger_medarbejdere_button = new System.Windows.Forms.Button();
             this.opret_medarbejder_button = new System.Windows.Forms.Button();
+            this.copy_selected_column_button = new System.Windows.Forms.Button();
             this.backgroundName_Top_panel.SuspendLayout();
             this.backPanel_Textboxes_panel.SuspendLayout();
             this.background_textboxes_top_panel.SuspendLayout();
@@ -877,7 +878,7 @@
             this.background_DGV_panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.background_DGV_panel1.Controls.Add(this.undo_button);
             this.background_DGV_panel1.Controls.Add(this.delete_button);
-            this.background_DGV_panel1.Location = new System.Drawing.Point(834, -2);
+            this.background_DGV_panel1.Location = new System.Drawing.Point(770, -2);
             this.background_DGV_panel1.Name = "background_DGV_panel1";
             this.background_DGV_panel1.Size = new System.Drawing.Size(120, 58);
             this.background_DGV_panel1.TabIndex = 2;
@@ -991,11 +992,12 @@
             this.background_DGV_panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.background_DGV_panel3.BackgroundImage = global::View_GUI.Properties.Resources.DGV_Panel;
             this.background_DGV_panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.background_DGV_panel3.Controls.Add(this.copy_selected_column_button);
             this.background_DGV_panel3.Controls.Add(this.change_DatagridView_Color_button);
             this.background_DGV_panel3.Controls.Add(this.mark_current_row_button);
-            this.background_DGV_panel3.Location = new System.Drawing.Point(1137, -2);
+            this.background_DGV_panel3.Location = new System.Drawing.Point(1068, -2);
             this.background_DGV_panel3.Name = "background_DGV_panel3";
-            this.background_DGV_panel3.Size = new System.Drawing.Size(125, 60);
+            this.background_DGV_panel3.Size = new System.Drawing.Size(194, 60);
             this.background_DGV_panel3.TabIndex = 4;
             // 
             // change_DatagridView_Color_button
@@ -1008,7 +1010,7 @@
             this.change_DatagridView_Color_button.ForeColor = System.Drawing.Color.Black;
             this.change_DatagridView_Color_button.Image = global::View_GUI.Properties.Resources.Color_Meter_icon__1_;
             this.change_DatagridView_Color_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.change_DatagridView_Color_button.Location = new System.Drawing.Point(19, 12);
+            this.change_DatagridView_Color_button.Location = new System.Drawing.Point(71, 11);
             this.change_DatagridView_Color_button.Name = "change_DatagridView_Color_button";
             this.change_DatagridView_Color_button.Size = new System.Drawing.Size(40, 38);
             this.change_DatagridView_Color_button.TabIndex = 10;
@@ -1025,7 +1027,7 @@
             this.mark_current_row_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.mark_current_row_button.ForeColor = System.Drawing.Color.Black;
             this.mark_current_row_button.Image = global::View_GUI.Properties.Resources.Grid_Row_Color;
-            this.mark_current_row_button.Location = new System.Drawing.Point(66, 12);
+            this.mark_current_row_button.Location = new System.Drawing.Point(117, 10);
             this.mark_current_row_button.Name = "mark_current_row_button";
             this.mark_current_row_button.Size = new System.Drawing.Size(40, 38);
             this.mark_current_row_button.TabIndex = 11;
@@ -1039,7 +1041,7 @@
             this.background_DGV_panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.background_DGV_panel2.Controls.Add(this.Medarbejder_Tlf_button);
             this.background_DGV_panel2.Controls.Add(this.show_all_button);
-            this.background_DGV_panel2.Location = new System.Drawing.Point(982, -2);
+            this.background_DGV_panel2.Location = new System.Drawing.Point(918, -2);
             this.background_DGV_panel2.Name = "background_DGV_panel2";
             this.background_DGV_panel2.Size = new System.Drawing.Size(127, 60);
             this.background_DGV_panel2.TabIndex = 3;
@@ -1170,6 +1172,27 @@
             this.opret_medarbejder_button.UseVisualStyleBackColor = true;
             this.opret_medarbejder_button.Click += new System.EventHandler(this.opret_medarbejder_button_Click);
             // 
+            // copy_selected_column_button
+            // 
+            this.copy_selected_column_button.BackColor = System.Drawing.Color.Transparent;
+            this.copy_selected_column_button.BackgroundImage = global::View_GUI.Properties.Resources.win7_ico_shell32_dll_260__2_;
+            this.copy_selected_column_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.copy_selected_column_button.FlatAppearance.BorderSize = 0;
+            this.copy_selected_column_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.copy_selected_column_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.copy_selected_column_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.copy_selected_column_button.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.copy_selected_column_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.copy_selected_column_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.copy_selected_column_button.Location = new System.Drawing.Point(28, 12);
+            this.copy_selected_column_button.Margin = new System.Windows.Forms.Padding(0);
+            this.copy_selected_column_button.Name = "copy_selected_column_button";
+            this.copy_selected_column_button.Size = new System.Drawing.Size(40, 38);
+            this.copy_selected_column_button.TabIndex = 25;
+            this.copy_selected_column_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.copy_selected_column_button.UseVisualStyleBackColor = false;
+            this.copy_selected_column_button.Click += new System.EventHandler(this.copy_selected_column_button_Click);
+            // 
             // Medarbejder_Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1297,5 +1320,6 @@
         private System.Windows.Forms.Button delete_speciale_from_medarbejder_delete_button;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox delete_speciale_from_medarbejder_textBox;
+        private System.Windows.Forms.Button copy_selected_column_button;
     }
 }
