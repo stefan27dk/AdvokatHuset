@@ -32,12 +32,16 @@
             this.backgroundName_Top_panel = new System.Windows.Forms.Panel();
             this.opret_sag_Type_textBox = new System.Windows.Forms.TextBox();
             this.backPanel_Textboxes_Opret_sag_panel = new System.Windows.Forms.Panel();
+            this.advokat_ID_label = new System.Windows.Forms.Label();
+            this.Kunde_ID_label = new System.Windows.Forms.Label();
+            this.type_label = new System.Windows.Forms.Label();
+            this.create_Clear_All_textboxes_opret_sag_button = new System.Windows.Forms.Button();
+            this.opret_sag_Save_button = new System.Windows.Forms.Button();
             this.opret_sag_Kunde_ID_textBox = new System.Windows.Forms.TextBox();
             this.background_textboxes_top_panel = new System.Windows.Forms.Panel();
             this.opret_Sag_label = new System.Windows.Forms.Label();
             this.opret_sag_advokatID_textBox = new System.Windows.Forms.TextBox();
             this.datagridviewBackground_panel = new System.Windows.Forms.Panel();
-            this.Sag_dataGridView = new System.Windows.Forms.DataGridView();
             this.background_DGV_Search_panel = new System.Windows.Forms.Panel();
             this.search_textBox = new System.Windows.Forms.TextBox();
             this.search_options_comboBox = new System.Windows.Forms.ComboBox();
@@ -58,18 +62,7 @@
             this.background_DGV_panel2 = new System.Windows.Forms.Panel();
             this.Sag_Tlf_button = new System.Windows.Forms.Button();
             this.show_all_button = new System.Windows.Forms.Button();
-            this.top_Menu_background_panel = new System.Windows.Forms.Panel();
-            this.afslut_sag_button = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.vis_rediger_Sag_button = new System.Windows.Forms.Button();
-            this.opret_Sag_button = new System.Windows.Forms.Button();
-            this.advokat_ID_label = new System.Windows.Forms.Label();
-            this.Kunde_ID_label = new System.Windows.Forms.Label();
-            this.type_label = new System.Windows.Forms.Label();
-            this.create_Clear_All_textboxes_opret_sag_button = new System.Windows.Forms.Button();
-            this.opret_sag_Save_button = new System.Windows.Forms.Button();
+            this.Sag_dataGridView = new System.Windows.Forms.DataGridView();
             this.sag_Add_Ydelse_panel = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.ydelse_navn_comboBox = new System.Windows.Forms.ComboBox();
@@ -81,20 +74,27 @@
             this.ydelseNR_label = new System.Windows.Forms.Label();
             this.CLEAR_sag_Ydelse_button = new System.Windows.Forms.Button();
             this.Ydelse_SagID_label = new System.Windows.Forms.Label();
+            this.top_Menu_background_panel = new System.Windows.Forms.Panel();
+            this.afslut_sag_button = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.vis_rediger_Sag_button = new System.Windows.Forms.Button();
+            this.opret_Sag_button = new System.Windows.Forms.Button();
             this.backgroundName_Top_panel.SuspendLayout();
             this.backPanel_Textboxes_Opret_sag_panel.SuspendLayout();
             this.background_textboxes_top_panel.SuspendLayout();
             this.datagridviewBackground_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Sag_dataGridView)).BeginInit();
             this.background_DGV_Search_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.search_Datagridview_pictureBox)).BeginInit();
             this.background_DGV_panel1.SuspendLayout();
             this.background_DGV_panel4.SuspendLayout();
             this.background_DGV_panel3.SuspendLayout();
             this.background_DGV_panel2.SuspendLayout();
-            this.top_Menu_background_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Sag_dataGridView)).BeginInit();
             this.sag_Add_Ydelse_panel.SuspendLayout();
             this.sag_Add_Ydelse_Top_panel.SuspendLayout();
+            this.top_Menu_background_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // Sager_Top_label
@@ -147,6 +147,80 @@
             this.backPanel_Textboxes_Opret_sag_panel.TabIndex = 11;
             this.backPanel_Textboxes_Opret_sag_panel.Visible = false;
             // 
+            // advokat_ID_label
+            // 
+            this.advokat_ID_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.advokat_ID_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.advokat_ID_label.Image = global::View_GUI.Properties.Resources.ID_icon1;
+            this.advokat_ID_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.advokat_ID_label.Location = new System.Drawing.Point(7, 109);
+            this.advokat_ID_label.Name = "advokat_ID_label";
+            this.advokat_ID_label.Size = new System.Drawing.Size(140, 24);
+            this.advokat_ID_label.TabIndex = 26;
+            this.advokat_ID_label.Text = "Advokat ID:";
+            this.advokat_ID_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // Kunde_ID_label
+            // 
+            this.Kunde_ID_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.Kunde_ID_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.Kunde_ID_label.Image = global::View_GUI.Properties.Resources.name_card_icon1;
+            this.Kunde_ID_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Kunde_ID_label.Location = new System.Drawing.Point(22, 150);
+            this.Kunde_ID_label.Name = "Kunde_ID_label";
+            this.Kunde_ID_label.Size = new System.Drawing.Size(125, 33);
+            this.Kunde_ID_label.TabIndex = 25;
+            this.Kunde_ID_label.Text = "Kunde ID:";
+            this.Kunde_ID_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // type_label
+            // 
+            this.type_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.type_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.type_label.Image = global::View_GUI.Properties.Resources.App_klickety_game_icon1;
+            this.type_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.type_label.Location = new System.Drawing.Point(56, 55);
+            this.type_label.Name = "type_label";
+            this.type_label.Size = new System.Drawing.Size(90, 35);
+            this.type_label.TabIndex = 24;
+            this.type_label.Text = "Type:";
+            this.type_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // create_Clear_All_textboxes_opret_sag_button
+            // 
+            this.create_Clear_All_textboxes_opret_sag_button.BackColor = System.Drawing.Color.Transparent;
+            this.create_Clear_All_textboxes_opret_sag_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
+            this.create_Clear_All_textboxes_opret_sag_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.create_Clear_All_textboxes_opret_sag_button.FlatAppearance.BorderSize = 0;
+            this.create_Clear_All_textboxes_opret_sag_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.create_Clear_All_textboxes_opret_sag_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.create_Clear_All_textboxes_opret_sag_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.create_Clear_All_textboxes_opret_sag_button.ForeColor = System.Drawing.Color.Black;
+            this.create_Clear_All_textboxes_opret_sag_button.Location = new System.Drawing.Point(118, 200);
+            this.create_Clear_All_textboxes_opret_sag_button.Name = "create_Clear_All_textboxes_opret_sag_button";
+            this.create_Clear_All_textboxes_opret_sag_button.Size = new System.Drawing.Size(28, 23);
+            this.create_Clear_All_textboxes_opret_sag_button.TabIndex = 23;
+            this.create_Clear_All_textboxes_opret_sag_button.UseVisualStyleBackColor = false;
+            this.create_Clear_All_textboxes_opret_sag_button.Click += new System.EventHandler(this.create_Clear_All_textboxes_button_Click);
+            // 
+            // opret_sag_Save_button
+            // 
+            this.opret_sag_Save_button.FlatAppearance.BorderSize = 0;
+            this.opret_sag_Save_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.opret_sag_Save_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.opret_sag_Save_button.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.opret_sag_Save_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
+            this.opret_sag_Save_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
+            this.opret_sag_Save_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.opret_sag_Save_button.Location = new System.Drawing.Point(161, 197);
+            this.opret_sag_Save_button.Name = "opret_sag_Save_button";
+            this.opret_sag_Save_button.Size = new System.Drawing.Size(90, 30);
+            this.opret_sag_Save_button.TabIndex = 7;
+            this.opret_sag_Save_button.Text = "Gem";
+            this.opret_sag_Save_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.opret_sag_Save_button.UseVisualStyleBackColor = true;
+            this.opret_sag_Save_button.Click += new System.EventHandler(this.Sag_Save_button_Click);
+            // 
             // opret_sag_Kunde_ID_textBox
             // 
             this.opret_sag_Kunde_ID_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
@@ -192,7 +266,6 @@
             this.datagridviewBackground_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.datagridviewBackground_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.datagridviewBackground_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.datagridviewBackground_panel.Controls.Add(this.sag_Add_Ydelse_panel);
             this.datagridviewBackground_panel.Controls.Add(this.background_DGV_Search_panel);
             this.datagridviewBackground_panel.Controls.Add(this.background_DGV_panel1);
             this.datagridviewBackground_panel.Controls.Add(this.background_DGV_panel4);
@@ -203,23 +276,6 @@
             this.datagridviewBackground_panel.Name = "datagridviewBackground_panel";
             this.datagridviewBackground_panel.Size = new System.Drawing.Size(1576, 588);
             this.datagridviewBackground_panel.TabIndex = 13;
-            // 
-            // Sag_dataGridView
-            // 
-            this.Sag_dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.Sag_dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.Sag_dataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Sag_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Sag_dataGridView.Location = new System.Drawing.Point(3, 59);
-            this.Sag_dataGridView.MultiSelect = false;
-            this.Sag_dataGridView.Name = "Sag_dataGridView";
-            this.Sag_dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Sag_dataGridView.Size = new System.Drawing.Size(1569, 512);
-            this.Sag_dataGridView.TabIndex = 15;
-            this.Sag_dataGridView.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Sag_dataGridView_ColumnHeaderMouseClick);
-            this.Sag_dataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.Sag_dataGridView_DataError);
-            this.Sag_dataGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.Sag_dataGridView_RowEnter);
-            this.Sag_dataGridView.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.Sag_dataGridView_RowValidated);
             // 
             // background_DGV_Search_panel
             // 
@@ -530,212 +586,22 @@
             this.show_all_button.UseVisualStyleBackColor = false;
             this.show_all_button.Click += new System.EventHandler(this.show_all_button_Click);
             // 
-            // top_Menu_background_panel
+            // Sag_dataGridView
             // 
-            this.top_Menu_background_panel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.top_Menu_background_panel.BackColor = System.Drawing.Color.Transparent;
-            this.top_Menu_background_panel.BackgroundImage = global::View_GUI.Properties.Resources.Top_Background_menu;
-            this.top_Menu_background_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.top_Menu_background_panel.Controls.Add(this.afslut_sag_button);
-            this.top_Menu_background_panel.Controls.Add(this.button3);
-            this.top_Menu_background_panel.Controls.Add(this.button2);
-            this.top_Menu_background_panel.Controls.Add(this.button1);
-            this.top_Menu_background_panel.Controls.Add(this.vis_rediger_Sag_button);
-            this.top_Menu_background_panel.Controls.Add(this.opret_Sag_button);
-            this.top_Menu_background_panel.Location = new System.Drawing.Point(558, 69);
-            this.top_Menu_background_panel.Name = "top_Menu_background_panel";
-            this.top_Menu_background_panel.Size = new System.Drawing.Size(654, 90);
-            this.top_Menu_background_panel.TabIndex = 0;
-            // 
-            // afslut_sag_button
-            // 
-            this.afslut_sag_button.BackgroundImage = global::View_GUI.Properties.Resources.CM_7;
-            this.afslut_sag_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.afslut_sag_button.FlatAppearance.BorderSize = 0;
-            this.afslut_sag_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.afslut_sag_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
-            this.afslut_sag_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.afslut_sag_button.Font = new System.Drawing.Font("OpenSymbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.afslut_sag_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.afslut_sag_button.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.afslut_sag_button.Location = new System.Drawing.Point(129, 11);
-            this.afslut_sag_button.Name = "afslut_sag_button";
-            this.afslut_sag_button.Size = new System.Drawing.Size(95, 68);
-            this.afslut_sag_button.TabIndex = 5;
-            this.afslut_sag_button.Text = "Afslut Sag";
-            this.afslut_sag_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.afslut_sag_button.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.BackgroundImage = global::View_GUI.Properties.Resources.Car_4;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("OpenSymbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(526, 11);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(95, 68);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Tilføj Kørsel";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::View_GUI.Properties.Resources.Add_Time_1;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("OpenSymbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(425, 11);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 68);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Tilføj Tid";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::View_GUI.Properties.Resources.Dc_Add2;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("OpenSymbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(324, 11);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 68);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Tilføj Ydelse";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // vis_rediger_Sag_button
-            // 
-            this.vis_rediger_Sag_button.BackgroundImage = global::View_GUI.Properties.Resources.addressbook_edit_icon__3_;
-            this.vis_rediger_Sag_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.vis_rediger_Sag_button.FlatAppearance.BorderSize = 0;
-            this.vis_rediger_Sag_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.vis_rediger_Sag_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
-            this.vis_rediger_Sag_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vis_rediger_Sag_button.Font = new System.Drawing.Font("OpenSymbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vis_rediger_Sag_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.vis_rediger_Sag_button.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.vis_rediger_Sag_button.Location = new System.Drawing.Point(223, 11);
-            this.vis_rediger_Sag_button.Name = "vis_rediger_Sag_button";
-            this.vis_rediger_Sag_button.Size = new System.Drawing.Size(95, 68);
-            this.vis_rediger_Sag_button.TabIndex = 1;
-            this.vis_rediger_Sag_button.Text = "Vis / Rediger";
-            this.vis_rediger_Sag_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.vis_rediger_Sag_button.UseVisualStyleBackColor = true;
-            this.vis_rediger_Sag_button.Click += new System.EventHandler(this.vis_rediger_Sag_button_Click);
-            // 
-            // opret_Sag_button
-            // 
-            this.opret_Sag_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.opret_Sag_button.FlatAppearance.BorderSize = 0;
-            this.opret_Sag_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.opret_Sag_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
-            this.opret_Sag_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.opret_Sag_button.Font = new System.Drawing.Font("OpenSymbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.opret_Sag_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.opret_Sag_button.Image = global::View_GUI.Properties.Resources.addressbook_add_icon;
-            this.opret_Sag_button.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.opret_Sag_button.Location = new System.Drawing.Point(25, 11);
-            this.opret_Sag_button.Name = "opret_Sag_button";
-            this.opret_Sag_button.Size = new System.Drawing.Size(95, 68);
-            this.opret_Sag_button.TabIndex = 0;
-            this.opret_Sag_button.Text = "Opret";
-            this.opret_Sag_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.opret_Sag_button.UseVisualStyleBackColor = true;
-            this.opret_Sag_button.Click += new System.EventHandler(this.opret_Sag_button_Click);
-            // 
-            // advokat_ID_label
-            // 
-            this.advokat_ID_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.advokat_ID_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.advokat_ID_label.Image = global::View_GUI.Properties.Resources.ID_icon1;
-            this.advokat_ID_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.advokat_ID_label.Location = new System.Drawing.Point(7, 109);
-            this.advokat_ID_label.Name = "advokat_ID_label";
-            this.advokat_ID_label.Size = new System.Drawing.Size(140, 24);
-            this.advokat_ID_label.TabIndex = 26;
-            this.advokat_ID_label.Text = "Advokat ID:";
-            this.advokat_ID_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // Kunde_ID_label
-            // 
-            this.Kunde_ID_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.Kunde_ID_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.Kunde_ID_label.Image = global::View_GUI.Properties.Resources.name_card_icon1;
-            this.Kunde_ID_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Kunde_ID_label.Location = new System.Drawing.Point(22, 150);
-            this.Kunde_ID_label.Name = "Kunde_ID_label";
-            this.Kunde_ID_label.Size = new System.Drawing.Size(125, 33);
-            this.Kunde_ID_label.TabIndex = 25;
-            this.Kunde_ID_label.Text = "Kunde ID:";
-            this.Kunde_ID_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // type_label
-            // 
-            this.type_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.type_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.type_label.Image = global::View_GUI.Properties.Resources.App_klickety_game_icon1;
-            this.type_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.type_label.Location = new System.Drawing.Point(56, 55);
-            this.type_label.Name = "type_label";
-            this.type_label.Size = new System.Drawing.Size(90, 35);
-            this.type_label.TabIndex = 24;
-            this.type_label.Text = "Type:";
-            this.type_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // create_Clear_All_textboxes_opret_sag_button
-            // 
-            this.create_Clear_All_textboxes_opret_sag_button.BackColor = System.Drawing.Color.Transparent;
-            this.create_Clear_All_textboxes_opret_sag_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
-            this.create_Clear_All_textboxes_opret_sag_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.create_Clear_All_textboxes_opret_sag_button.FlatAppearance.BorderSize = 0;
-            this.create_Clear_All_textboxes_opret_sag_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.create_Clear_All_textboxes_opret_sag_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.create_Clear_All_textboxes_opret_sag_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.create_Clear_All_textboxes_opret_sag_button.ForeColor = System.Drawing.Color.Black;
-            this.create_Clear_All_textboxes_opret_sag_button.Location = new System.Drawing.Point(118, 200);
-            this.create_Clear_All_textboxes_opret_sag_button.Name = "create_Clear_All_textboxes_opret_sag_button";
-            this.create_Clear_All_textboxes_opret_sag_button.Size = new System.Drawing.Size(28, 23);
-            this.create_Clear_All_textboxes_opret_sag_button.TabIndex = 23;
-            this.create_Clear_All_textboxes_opret_sag_button.UseVisualStyleBackColor = false;
-            this.create_Clear_All_textboxes_opret_sag_button.Click += new System.EventHandler(this.create_Clear_All_textboxes_button_Click);
-            // 
-            // opret_sag_Save_button
-            // 
-            this.opret_sag_Save_button.FlatAppearance.BorderSize = 0;
-            this.opret_sag_Save_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.opret_sag_Save_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
-            this.opret_sag_Save_button.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.opret_sag_Save_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
-            this.opret_sag_Save_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
-            this.opret_sag_Save_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.opret_sag_Save_button.Location = new System.Drawing.Point(161, 197);
-            this.opret_sag_Save_button.Name = "opret_sag_Save_button";
-            this.opret_sag_Save_button.Size = new System.Drawing.Size(90, 30);
-            this.opret_sag_Save_button.TabIndex = 7;
-            this.opret_sag_Save_button.Text = "Gem";
-            this.opret_sag_Save_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.opret_sag_Save_button.UseVisualStyleBackColor = true;
-            this.opret_sag_Save_button.Click += new System.EventHandler(this.Sag_Save_button_Click);
+            this.Sag_dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.Sag_dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.Sag_dataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Sag_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Sag_dataGridView.Location = new System.Drawing.Point(3, 59);
+            this.Sag_dataGridView.MultiSelect = false;
+            this.Sag_dataGridView.Name = "Sag_dataGridView";
+            this.Sag_dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Sag_dataGridView.Size = new System.Drawing.Size(1569, 512);
+            this.Sag_dataGridView.TabIndex = 15;
+            this.Sag_dataGridView.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Sag_dataGridView_ColumnHeaderMouseClick);
+            this.Sag_dataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.Sag_dataGridView_DataError);
+            this.Sag_dataGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.Sag_dataGridView_RowEnter);
+            this.Sag_dataGridView.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.Sag_dataGridView_RowValidated);
             // 
             // sag_Add_Ydelse_panel
             // 
@@ -751,10 +617,11 @@
             this.sag_Add_Ydelse_panel.Controls.Add(this.ydelseNR_label);
             this.sag_Add_Ydelse_panel.Controls.Add(this.CLEAR_sag_Ydelse_button);
             this.sag_Add_Ydelse_panel.Controls.Add(this.Ydelse_SagID_label);
-            this.sag_Add_Ydelse_panel.Location = new System.Drawing.Point(612, 104);
+            this.sag_Add_Ydelse_panel.Location = new System.Drawing.Point(698, 165);
             this.sag_Add_Ydelse_panel.Name = "sag_Add_Ydelse_panel";
             this.sag_Add_Ydelse_panel.Size = new System.Drawing.Size(414, 388);
             this.sag_Add_Ydelse_panel.TabIndex = 26;
+            this.sag_Add_Ydelse_panel.Visible = false;
             // 
             // label7
             // 
@@ -881,12 +748,147 @@
             this.Ydelse_SagID_label.Text = "Sag ID:";
             this.Ydelse_SagID_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // top_Menu_background_panel
+            // 
+            this.top_Menu_background_panel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.top_Menu_background_panel.BackColor = System.Drawing.Color.Transparent;
+            this.top_Menu_background_panel.BackgroundImage = global::View_GUI.Properties.Resources.Top_Background_menu;
+            this.top_Menu_background_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.top_Menu_background_panel.Controls.Add(this.afslut_sag_button);
+            this.top_Menu_background_panel.Controls.Add(this.button3);
+            this.top_Menu_background_panel.Controls.Add(this.button2);
+            this.top_Menu_background_panel.Controls.Add(this.button1);
+            this.top_Menu_background_panel.Controls.Add(this.vis_rediger_Sag_button);
+            this.top_Menu_background_panel.Controls.Add(this.opret_Sag_button);
+            this.top_Menu_background_panel.Location = new System.Drawing.Point(558, 69);
+            this.top_Menu_background_panel.Name = "top_Menu_background_panel";
+            this.top_Menu_background_panel.Size = new System.Drawing.Size(654, 90);
+            this.top_Menu_background_panel.TabIndex = 0;
+            // 
+            // afslut_sag_button
+            // 
+            this.afslut_sag_button.BackgroundImage = global::View_GUI.Properties.Resources.CM_7;
+            this.afslut_sag_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.afslut_sag_button.FlatAppearance.BorderSize = 0;
+            this.afslut_sag_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.afslut_sag_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.afslut_sag_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.afslut_sag_button.Font = new System.Drawing.Font("OpenSymbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.afslut_sag_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.afslut_sag_button.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.afslut_sag_button.Location = new System.Drawing.Point(129, 11);
+            this.afslut_sag_button.Name = "afslut_sag_button";
+            this.afslut_sag_button.Size = new System.Drawing.Size(95, 68);
+            this.afslut_sag_button.TabIndex = 5;
+            this.afslut_sag_button.Text = "Afslut Sag";
+            this.afslut_sag_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.afslut_sag_button.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::View_GUI.Properties.Resources.Car_4;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("OpenSymbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button3.Location = new System.Drawing.Point(526, 11);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(95, 68);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Tilføj Kørsel";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::View_GUI.Properties.Resources.Add_Time_1;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("OpenSymbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.Location = new System.Drawing.Point(425, 11);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(95, 68);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Tilføj Tid";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::View_GUI.Properties.Resources.Dc_Add2;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("OpenSymbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(324, 11);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(95, 68);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Tilføj Ydelse";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // vis_rediger_Sag_button
+            // 
+            this.vis_rediger_Sag_button.BackgroundImage = global::View_GUI.Properties.Resources.addressbook_edit_icon__3_;
+            this.vis_rediger_Sag_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.vis_rediger_Sag_button.FlatAppearance.BorderSize = 0;
+            this.vis_rediger_Sag_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.vis_rediger_Sag_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.vis_rediger_Sag_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.vis_rediger_Sag_button.Font = new System.Drawing.Font("OpenSymbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vis_rediger_Sag_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.vis_rediger_Sag_button.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.vis_rediger_Sag_button.Location = new System.Drawing.Point(223, 11);
+            this.vis_rediger_Sag_button.Name = "vis_rediger_Sag_button";
+            this.vis_rediger_Sag_button.Size = new System.Drawing.Size(95, 68);
+            this.vis_rediger_Sag_button.TabIndex = 1;
+            this.vis_rediger_Sag_button.Text = "Vis / Rediger";
+            this.vis_rediger_Sag_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.vis_rediger_Sag_button.UseVisualStyleBackColor = true;
+            this.vis_rediger_Sag_button.Click += new System.EventHandler(this.vis_rediger_Sag_button_Click);
+            // 
+            // opret_Sag_button
+            // 
+            this.opret_Sag_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.opret_Sag_button.FlatAppearance.BorderSize = 0;
+            this.opret_Sag_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.opret_Sag_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.opret_Sag_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.opret_Sag_button.Font = new System.Drawing.Font("OpenSymbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.opret_Sag_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.opret_Sag_button.Image = global::View_GUI.Properties.Resources.addressbook_add_icon;
+            this.opret_Sag_button.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.opret_Sag_button.Location = new System.Drawing.Point(25, 11);
+            this.opret_Sag_button.Name = "opret_Sag_button";
+            this.opret_Sag_button.Size = new System.Drawing.Size(95, 68);
+            this.opret_Sag_button.TabIndex = 0;
+            this.opret_Sag_button.Text = "Opret";
+            this.opret_Sag_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.opret_Sag_button.UseVisualStyleBackColor = true;
+            this.opret_Sag_button.Click += new System.EventHandler(this.opret_Sag_button_Click);
+            // 
             // Sager_Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(1600, 800);
+            this.Controls.Add(this.sag_Add_Ydelse_panel);
             this.Controls.Add(this.datagridviewBackground_panel);
             this.Controls.Add(this.backPanel_Textboxes_Opret_sag_panel);
             this.Controls.Add(this.top_Menu_background_panel);
@@ -903,7 +905,6 @@
             this.background_textboxes_top_panel.ResumeLayout(false);
             this.background_textboxes_top_panel.PerformLayout();
             this.datagridviewBackground_panel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Sag_dataGridView)).EndInit();
             this.background_DGV_Search_panel.ResumeLayout(false);
             this.background_DGV_Search_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.search_Datagridview_pictureBox)).EndInit();
@@ -911,11 +912,12 @@
             this.background_DGV_panel4.ResumeLayout(false);
             this.background_DGV_panel3.ResumeLayout(false);
             this.background_DGV_panel2.ResumeLayout(false);
-            this.top_Menu_background_panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Sag_dataGridView)).EndInit();
             this.sag_Add_Ydelse_panel.ResumeLayout(false);
             this.sag_Add_Ydelse_panel.PerformLayout();
             this.sag_Add_Ydelse_Top_panel.ResumeLayout(false);
             this.sag_Add_Ydelse_Top_panel.PerformLayout();
+            this.top_Menu_background_panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

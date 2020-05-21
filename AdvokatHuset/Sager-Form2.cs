@@ -316,7 +316,7 @@ namespace View_GUI
             TextboxesResetColor();
         }
 
- 
+
         //-----------------CREATE---TEXTBOXES-SETTINGS---------::END::----------------------------------------------
 
 
@@ -342,32 +342,81 @@ namespace View_GUI
 
         // Form Menu-----------::START::-------------------------------------------
 
+
+
+        // Opret Button
+        private void opret_Sag_button_Click(object sender, EventArgs e)
+        {
+            HideAll_Menu_Windows();
+            backPanel_Textboxes_Opret_sag_panel.Visible = true;
+
+        }
+
+
+
+
+
+
+
         // Vis Rediger // Show Datagridview
         private void vis_rediger_Sag_button_Click(object sender, EventArgs e)
         {
+            HideAll_Menu_Windows();
             datagridviewBackground_panel.Visible = true;
-            backPanel_Textboxes_Opret_sag_panel.Visible = false;
-            //this.SagTableAdapter.Fill(this.advokathusetDataSet.Sag);
+            
         }
+
+
 
 
 
   
 
-        // Opret Button
-        private void opret_Sag_button_Click(object sender, EventArgs e)
+
+
+
+        // Add - Ydelse - Button
+        private void button1_Click(object sender, EventArgs e)
         {
-            backPanel_Textboxes_Opret_sag_panel.Visible = true;
-            datagridviewBackground_panel.Visible = false;// Hide Datagridview
-           
+            HideAll_Menu_Windows();
+            sag_Add_Ydelse_panel.Visible = true;
         }
+
+
+
+
+
+
+
+        // Hide All Menu_Windows
+        private void HideAll_Menu_Windows()
+        {
+            backPanel_Textboxes_Opret_sag_panel.Visible = false;
+            datagridviewBackground_panel.Visible = false;// Hide Datagridview
+            sag_Add_Ydelse_panel.Visible = false;
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         // Form Menu-----------::END::----------------------------------------------
 
 
 
-        
-       
+
+
 
 
 
@@ -1597,8 +1646,7 @@ namespace View_GUI
 
         }
 
-
-
+        
         //--------------------ADD Ydelse - "Tilføj Ydelse"-----::END::---------------------------------------------------------------
 
 

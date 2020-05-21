@@ -22,41 +22,8 @@ namespace View_GUI
 
     public partial class Main_Form1 : Form
     {
-
-        //-------------TEST
-        protected override void OnLostFocus(EventArgs e)
-        {
-            base.OnLostFocus(e);
-            this.Focus();
-        }
-
-
-        protected override void OnDeactivate(EventArgs e)
-        {
-            base.OnDeactivate(e);
-            this.Focus();
-        }
-   
-
-        //-------TEST
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+    
         // Local Folder
         string LocalFolderPath = "C:\\";
 
@@ -924,8 +891,16 @@ namespace View_GUI
 
 
 
+        // MovingItemPanels----------------------------::END::---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+
+
+
+
+
+
+        //---------------TEST-----------------------------------------------------------------------////////////////////////////////////////////////////////////////////////
 
         // Hide Program- Button
         private void hode_Program_button_Click(object sender, EventArgs e)
@@ -936,7 +911,15 @@ namespace View_GUI
 
             notfy1.Click += new System.EventHandler(this.Notfy1_Click);
 
-            this.min
+
+            this.WindowState = FormWindowState.Maximized;
+            this.MinimumSize = this.Size;
+            this.MaximumSize = this.Size;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Opacity = 0;
+
+
+
         }
 
         private void Notfy1_Click(object sender, EventArgs e)
@@ -944,13 +927,9 @@ namespace View_GUI
             this.Show();
         }
 
+        //---------------TEST-----------------------------------------------------------------------////////////////////////////////////////////////////////////////////////
 
 
-
-
-
-
-        // MovingItemPanels----------------------------::END::---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 

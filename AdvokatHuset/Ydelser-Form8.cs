@@ -161,7 +161,7 @@ namespace View_GUI
         private void CreateYdelse()
         {
             ydelseinstance = new Ydelse();
-            ydelseinstance.Navn = Ydelse_name_textBox.Text;
+            ydelseinstance.Navn = Ydelse_name_comboBox.Text;
             ydelseinstance.Pris = Convert.ToDouble(Ydelse_Pris_textBox.Text);
             ydelseinstance.Type = load_Type_Ydelse_comboBox.SelectedItem.ToString();
             ydelseinstance.Art = Ydelse_Art_textBox.Text;
@@ -191,14 +191,6 @@ namespace View_GUI
         // Key Events--Validating--Textboxes----::START::---------------------------------------------- 
 
   
-        // Validate Name
-        private void Ydelse_name_textBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-            e.Handled = (int.TryParse(e.KeyChar.ToString(), out int isNumber) || (e.KeyChar == (char)Keys.Space));///Prevent Numbers and Spaces
-
-        }
-
 
 
         // Validate Ydelse_Pris
@@ -249,30 +241,13 @@ namespace View_GUI
             isValid = true; // Reset it here
 
             //Name Validation---------------------------------------------------------------------------->
-            if (Ydelse_name_textBox.TextLength < 2)
+            if (Ydelse_name_comboBox.Text.Length < 2)
             {
                 isValid = false; // Now you cant proceed because its not valid
-                Ydelse_name_textBox.BackColor = Color.FromArgb(255, 128, 128);
-            }
-
-            else
-            {
                 
-                  for (int i = 0; i < Ydelse_name_textBox.TextLength; i++)
-                  {
-                 
-                      if(String.IsNullOrEmpty(Ydelse_name_textBox.Text[i].ToString()) || int.TryParse(Ydelse_name_textBox.Text[i].ToString(), out int isNumber) || Ydelse_name_textBox.Text[i].ToString() == " ") // Check for numbers, null, 
-                      {
-                          isValid = false; // Now you cant proceed because its not valid
-                          Ydelse_name_textBox.BackColor = Color.FromArgb(255, 128, 128);
-                        break;
-                      }
-                      
-                  }
-
             }
 
-
+          
 
 
             // PRIS Validation------------------------------------------------------------------------> 
@@ -339,7 +314,7 @@ namespace View_GUI
         // Reset Textbox Color
         private void TextboxesResetColor()
         {
-            Ydelse_name_textBox.BackColor = Color.FromArgb(220, 243, 250);
+         
             Ydelse_Pris_textBox.BackColor = Color.FromArgb(220, 243, 250);
             Ydelse_Art_textBox.BackColor = Color.FromArgb(220, 243, 250);
 
@@ -351,7 +326,8 @@ namespace View_GUI
         // Clear All Textboxes
         private void ClearTextboxes()
         {
-            Ydelse_name_textBox.Clear();
+            Ydelse_name_comboBox.Items.Clear();
+            Ydelse_name_comboBox.Text = "";
             Ydelse_Pris_textBox.Clear();
             load_Type_Ydelse_comboBox.Items.Clear();
             Ydelse_Art_textBox.Clear();
@@ -1264,17 +1240,7 @@ namespace View_GUI
 
         //-------------CREATE-TEXTBOXES -- Reset Color on Typing-------------------::START:----------------------------------------------
 
-     
-        // Name - Reset Color
-        private void Ydelse_name_textBox_TextChanged(object sender, EventArgs e)
-        {
-            Ydelse_name_textBox.BackColor = Color.FromArgb(220, 243, 250);
-        }
-
-
-
-
-
+  
 
         // Ydelse_Pris - Reset Color
         private void Ydelse_Pris_textBox_TextChanged(object sender, EventArgs e)
@@ -1337,5 +1303,28 @@ namespace View_GUI
             Clipboard.SetText(Ydelse_dataGridView.SelectedRows[0].Cells[Ydelse_dataGridView.CurrentCell.ColumnIndex].Value.ToString());
 
         }
+
+
+
+
+
+        // Ydelse Name Combobox - Load
+        private void Ydelse_name_comboBox_Click(object sender, EventArgs e)
+        {
+            Ydelse_name_comboBox.Items.Clear(); // Clear
+            Load_Combobox ydelse_Name = new Load_Combobox();
+            Ydelse_name_comboBox = ydelse_Name.Populate_Combobox("Select Ydelse_Navn From Ydelse", Ydelse_name_comboBox);
+
+        }
+
+
+
+        // Prevent Selecting Item From the dropDown
+        private void Ydelse_name_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Ydelse_name_comboBox.SelectedIndex = -1;
+        }
+
+
     }
 }

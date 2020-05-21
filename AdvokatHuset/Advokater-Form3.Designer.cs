@@ -62,6 +62,7 @@
             this.screenshot_datagridview_button = new System.Windows.Forms.Button();
             this.print_button = new System.Windows.Forms.Button();
             this.background_DGV_panel3 = new System.Windows.Forms.Panel();
+            this.copy_selected_column_button = new System.Windows.Forms.Button();
             this.change_DatagridView_Color_button = new System.Windows.Forms.Button();
             this.mark_current_row_button = new System.Windows.Forms.Button();
             this.background_DGV_panel2 = new System.Windows.Forms.Panel();
@@ -103,7 +104,10 @@
             this.main_specialer_button = new System.Windows.Forms.Button();
             this.vis_rediger_advokater_button = new System.Windows.Forms.Button();
             this.opret_advokat_button = new System.Windows.Forms.Button();
-            this.copy_selected_column_button = new System.Windows.Forms.Button();
+            this.Add_speciale_Advokat_name_comboBox = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.delete_speciale_Advokat_name_comboBox = new System.Windows.Forms.ComboBox();
             this.backgroundName_Top_panel.SuspendLayout();
             this.backPanel_Textboxes_panel.SuspendLayout();
             this.background_textboxes_top_panel.SuspendLayout();
@@ -596,6 +600,27 @@
             this.background_DGV_panel3.Size = new System.Drawing.Size(183, 60);
             this.background_DGV_panel3.TabIndex = 4;
             // 
+            // copy_selected_column_button
+            // 
+            this.copy_selected_column_button.BackColor = System.Drawing.Color.Transparent;
+            this.copy_selected_column_button.BackgroundImage = global::View_GUI.Properties.Resources.win7_ico_shell32_dll_260__2_;
+            this.copy_selected_column_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.copy_selected_column_button.FlatAppearance.BorderSize = 0;
+            this.copy_selected_column_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.copy_selected_column_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.copy_selected_column_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.copy_selected_column_button.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.copy_selected_column_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.copy_selected_column_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.copy_selected_column_button.Location = new System.Drawing.Point(23, 12);
+            this.copy_selected_column_button.Margin = new System.Windows.Forms.Padding(0);
+            this.copy_selected_column_button.Name = "copy_selected_column_button";
+            this.copy_selected_column_button.Size = new System.Drawing.Size(40, 38);
+            this.copy_selected_column_button.TabIndex = 16;
+            this.copy_selected_column_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.copy_selected_column_button.UseVisualStyleBackColor = false;
+            this.copy_selected_column_button.Click += new System.EventHandler(this.copy_selected_column_button_Click);
+            // 
             // change_DatagridView_Color_button
             // 
             this.change_DatagridView_Color_button.BackColor = System.Drawing.Color.Transparent;
@@ -709,7 +734,7 @@
             this.speciale_BACK_panel.Controls.Add(this.speciale_Advokat_Top_panel);
             this.speciale_BACK_panel.Location = new System.Drawing.Point(480, 165);
             this.speciale_BACK_panel.Name = "speciale_BACK_panel";
-            this.speciale_BACK_panel.Size = new System.Drawing.Size(786, 395);
+            this.speciale_BACK_panel.Size = new System.Drawing.Size(786, 495);
             this.speciale_BACK_panel.TabIndex = 24;
             this.speciale_BACK_panel.Visible = false;
             // 
@@ -738,14 +763,16 @@
             // 
             this.slet_speciale_from_advokate_back__panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(34)))), ((int)(((byte)(44)))));
             this.slet_speciale_from_advokate_back__panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.slet_speciale_from_advokate_back__panel.Controls.Add(this.label11);
             this.slet_speciale_from_advokate_back__panel.Controls.Add(this.label9);
+            this.slet_speciale_from_advokate_back__panel.Controls.Add(this.delete_speciale_Advokat_name_comboBox);
             this.slet_speciale_from_advokate_back__panel.Controls.Add(this.label4);
             this.slet_speciale_from_advokate_back__panel.Controls.Add(this.delete_speciale_from_advokat_textBox);
             this.slet_speciale_from_advokate_back__panel.Controls.Add(this.delete_speciale_from_advokat_comboBox);
             this.slet_speciale_from_advokate_back__panel.Controls.Add(this.delete_speciale_from_advokat_delete_button);
             this.slet_speciale_from_advokate_back__panel.Location = new System.Drawing.Point(392, 26);
             this.slet_speciale_from_advokate_back__panel.Name = "slet_speciale_from_advokate_back__panel";
-            this.slet_speciale_from_advokate_back__panel.Size = new System.Drawing.Size(392, 168);
+            this.slet_speciale_from_advokate_back__panel.Size = new System.Drawing.Size(392, 241);
             this.slet_speciale_from_advokate_back__panel.TabIndex = 33;
             // 
             // label9
@@ -754,7 +781,7 @@
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
             this.label9.Image = global::View_GUI.Properties.Resources.ID_icon;
             this.label9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label9.Location = new System.Drawing.Point(47, 17);
+            this.label9.Location = new System.Drawing.Point(47, 85);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(135, 24);
             this.label9.TabIndex = 26;
@@ -767,7 +794,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
             this.label4.Image = global::View_GUI.Properties.Resources.research_icon__1_;
             this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label4.Location = new System.Drawing.Point(69, 65);
+            this.label4.Location = new System.Drawing.Point(69, 133);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(114, 25);
             this.label4.TabIndex = 28;
@@ -777,7 +804,7 @@
             // delete_speciale_from_advokat_textBox
             // 
             this.delete_speciale_from_advokat_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
-            this.delete_speciale_from_advokat_textBox.Location = new System.Drawing.Point(190, 21);
+            this.delete_speciale_from_advokat_textBox.Location = new System.Drawing.Point(190, 89);
             this.delete_speciale_from_advokat_textBox.MaxLength = 49;
             this.delete_speciale_from_advokat_textBox.Name = "delete_speciale_from_advokat_textBox";
             this.delete_speciale_from_advokat_textBox.Size = new System.Drawing.Size(100, 20);
@@ -787,7 +814,7 @@
             // 
             this.delete_speciale_from_advokat_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.delete_speciale_from_advokat_comboBox.FormattingEnabled = true;
-            this.delete_speciale_from_advokat_comboBox.Location = new System.Drawing.Point(191, 66);
+            this.delete_speciale_from_advokat_comboBox.Location = new System.Drawing.Point(191, 134);
             this.delete_speciale_from_advokat_comboBox.MaxDropDownItems = 50;
             this.delete_speciale_from_advokat_comboBox.Name = "delete_speciale_from_advokat_comboBox";
             this.delete_speciale_from_advokat_comboBox.Size = new System.Drawing.Size(100, 21);
@@ -803,7 +830,7 @@
             this.delete_speciale_from_advokat_delete_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.delete_speciale_from_advokat_delete_button.Image = global::View_GUI.Properties.Resources.Actions_edit_delete_icon3;
             this.delete_speciale_from_advokat_delete_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.delete_speciale_from_advokat_delete_button.Location = new System.Drawing.Point(197, 108);
+            this.delete_speciale_from_advokat_delete_button.Location = new System.Drawing.Point(197, 176);
             this.delete_speciale_from_advokat_delete_button.Name = "delete_speciale_from_advokat_delete_button";
             this.delete_speciale_from_advokat_delete_button.Size = new System.Drawing.Size(90, 30);
             this.delete_speciale_from_advokat_delete_button.TabIndex = 25;
@@ -819,7 +846,7 @@
             this.delete_speciale_backpanel_panel.Controls.Add(this.label8);
             this.delete_speciale_backpanel_panel.Controls.Add(this.delete_speciale_comboBox);
             this.delete_speciale_backpanel_panel.Controls.Add(this.delete_speciale_button);
-            this.delete_speciale_backpanel_panel.Location = new System.Drawing.Point(392, 276);
+            this.delete_speciale_backpanel_panel.Location = new System.Drawing.Point(392, 352);
             this.delete_speciale_backpanel_panel.Name = "delete_speciale_backpanel_panel";
             this.delete_speciale_backpanel_panel.Size = new System.Drawing.Size(392, 117);
             this.delete_speciale_backpanel_panel.TabIndex = 32;
@@ -874,7 +901,7 @@
             this.add_speciale_backpanel_panel.Controls.Add(this.label2);
             this.add_speciale_backpanel_panel.Controls.Add(this.save_speciale_button);
             this.add_speciale_backpanel_panel.Controls.Add(this.clear_speciale_button);
-            this.add_speciale_backpanel_panel.Location = new System.Drawing.Point(0, 276);
+            this.add_speciale_backpanel_panel.Location = new System.Drawing.Point(0, 352);
             this.add_speciale_backpanel_panel.Name = "add_speciale_backpanel_panel";
             this.add_speciale_backpanel_panel.Size = new System.Drawing.Size(392, 117);
             this.add_speciale_backpanel_panel.TabIndex = 31;
@@ -942,6 +969,8 @@
             // 
             this.background_Advokat_specialepanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.background_Advokat_specialepanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.background_Advokat_specialepanel.Controls.Add(this.label10);
+            this.background_Advokat_specialepanel.Controls.Add(this.Add_speciale_Advokat_name_comboBox);
             this.background_Advokat_specialepanel.Controls.Add(this.label7);
             this.background_Advokat_specialepanel.Controls.Add(this.speciale_advokat_id_textBox);
             this.background_Advokat_specialepanel.Controls.Add(this.label6);
@@ -950,7 +979,7 @@
             this.background_Advokat_specialepanel.Controls.Add(this.speciale_comboBox);
             this.background_Advokat_specialepanel.Location = new System.Drawing.Point(0, 26);
             this.background_Advokat_specialepanel.Name = "background_Advokat_specialepanel";
-            this.background_Advokat_specialepanel.Size = new System.Drawing.Size(392, 168);
+            this.background_Advokat_specialepanel.Size = new System.Drawing.Size(392, 241);
             this.background_Advokat_specialepanel.TabIndex = 31;
             // 
             // label7
@@ -959,7 +988,7 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
             this.label7.Image = global::View_GUI.Properties.Resources.ID_icon;
             this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label7.Location = new System.Drawing.Point(48, 19);
+            this.label7.Location = new System.Drawing.Point(48, 81);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(135, 24);
             this.label7.TabIndex = 2;
@@ -969,10 +998,10 @@
             // speciale_advokat_id_textBox
             // 
             this.speciale_advokat_id_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
-            this.speciale_advokat_id_textBox.Location = new System.Drawing.Point(191, 23);
+            this.speciale_advokat_id_textBox.Location = new System.Drawing.Point(191, 85);
             this.speciale_advokat_id_textBox.MaxLength = 49;
             this.speciale_advokat_id_textBox.Name = "speciale_advokat_id_textBox";
-            this.speciale_advokat_id_textBox.Size = new System.Drawing.Size(100, 20);
+            this.speciale_advokat_id_textBox.Size = new System.Drawing.Size(194, 20);
             this.speciale_advokat_id_textBox.TabIndex = 1;
             // 
             // label6
@@ -981,7 +1010,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
             this.label6.Image = global::View_GUI.Properties.Resources.research_icon__1_;
             this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label6.Location = new System.Drawing.Point(70, 64);
+            this.label6.Location = new System.Drawing.Point(70, 126);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(115, 25);
             this.label6.TabIndex = 13;
@@ -997,7 +1026,7 @@
             this.save_Advokat_specaile_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
             this.save_Advokat_specaile_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
             this.save_Advokat_specaile_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.save_Advokat_specaile_button.Location = new System.Drawing.Point(197, 113);
+            this.save_Advokat_specaile_button.Location = new System.Drawing.Point(197, 175);
             this.save_Advokat_specaile_button.Name = "save_Advokat_specaile_button";
             this.save_Advokat_specaile_button.Size = new System.Drawing.Size(90, 30);
             this.save_Advokat_specaile_button.TabIndex = 7;
@@ -1016,7 +1045,7 @@
             this.clear_advokat_speciale_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
             this.clear_advokat_speciale_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clear_advokat_speciale_button.ForeColor = System.Drawing.Color.Black;
-            this.clear_advokat_speciale_button.Location = new System.Drawing.Point(154, 116);
+            this.clear_advokat_speciale_button.Location = new System.Drawing.Point(154, 178);
             this.clear_advokat_speciale_button.Name = "clear_advokat_speciale_button";
             this.clear_advokat_speciale_button.Size = new System.Drawing.Size(28, 23);
             this.clear_advokat_speciale_button.TabIndex = 23;
@@ -1027,7 +1056,7 @@
             // 
             this.speciale_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.speciale_comboBox.FormattingEnabled = true;
-            this.speciale_comboBox.Location = new System.Drawing.Point(191, 70);
+            this.speciale_comboBox.Location = new System.Drawing.Point(191, 132);
             this.speciale_comboBox.MaxDropDownItems = 50;
             this.speciale_comboBox.Name = "speciale_comboBox";
             this.speciale_comboBox.Size = new System.Drawing.Size(100, 21);
@@ -1039,7 +1068,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(392, 250);
+            this.panel1.Location = new System.Drawing.Point(392, 326);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(392, 26);
             this.panel1.TabIndex = 31;
@@ -1060,7 +1089,7 @@
             this.speciale_Midd_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
             this.speciale_Midd_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.speciale_Midd_panel.Controls.Add(this.label3);
-            this.speciale_Midd_panel.Location = new System.Drawing.Point(0, 250);
+            this.speciale_Midd_panel.Location = new System.Drawing.Point(0, 326);
             this.speciale_Midd_panel.Name = "speciale_Midd_panel";
             this.speciale_Midd_panel.Size = new System.Drawing.Size(392, 26);
             this.speciale_Midd_panel.TabIndex = 30;
@@ -1171,26 +1200,55 @@
             this.opret_advokat_button.UseVisualStyleBackColor = true;
             this.opret_advokat_button.Click += new System.EventHandler(this.opret_advokat_button_Click);
             // 
-            // copy_selected_column_button
+            // Add_speciale_Advokat_name_comboBox
             // 
-            this.copy_selected_column_button.BackColor = System.Drawing.Color.Transparent;
-            this.copy_selected_column_button.BackgroundImage = global::View_GUI.Properties.Resources.win7_ico_shell32_dll_260__2_;
-            this.copy_selected_column_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.copy_selected_column_button.FlatAppearance.BorderSize = 0;
-            this.copy_selected_column_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.copy_selected_column_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.copy_selected_column_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.copy_selected_column_button.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.copy_selected_column_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.copy_selected_column_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.copy_selected_column_button.Location = new System.Drawing.Point(23, 12);
-            this.copy_selected_column_button.Margin = new System.Windows.Forms.Padding(0);
-            this.copy_selected_column_button.Name = "copy_selected_column_button";
-            this.copy_selected_column_button.Size = new System.Drawing.Size(40, 38);
-            this.copy_selected_column_button.TabIndex = 16;
-            this.copy_selected_column_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.copy_selected_column_button.UseVisualStyleBackColor = false;
-            this.copy_selected_column_button.Click += new System.EventHandler(this.copy_selected_column_button_Click);
+            this.Add_speciale_Advokat_name_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Add_speciale_Advokat_name_comboBox.FormattingEnabled = true;
+            this.Add_speciale_Advokat_name_comboBox.Location = new System.Drawing.Point(191, 36);
+            this.Add_speciale_Advokat_name_comboBox.MaxDropDownItems = 100;
+            this.Add_speciale_Advokat_name_comboBox.Name = "Add_speciale_Advokat_name_comboBox";
+            this.Add_speciale_Advokat_name_comboBox.Size = new System.Drawing.Size(100, 21);
+            this.Add_speciale_Advokat_name_comboBox.TabIndex = 26;
+            this.Add_speciale_Advokat_name_comboBox.SelectedIndexChanged += new System.EventHandler(this.Add_speciale_Advokat_name_comboBox_SelectedIndexChanged);
+            this.Add_speciale_Advokat_name_comboBox.Click += new System.EventHandler(this.Add_speciale_Advokat_name_comboBox_Click);
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.label10.Image = global::View_GUI.Properties.Resources.name_card_icon;
+            this.label10.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label10.Location = new System.Drawing.Point(28, 34);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(154, 24);
+            this.label10.TabIndex = 27;
+            this.label10.Text = "Advokat Navn:";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.label11.Image = global::View_GUI.Properties.Resources.name_card_icon;
+            this.label11.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label11.Location = new System.Drawing.Point(27, 36);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(154, 24);
+            this.label11.TabIndex = 29;
+            this.label11.Text = "Advokat Navn:";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // delete_speciale_Advokat_name_comboBox
+            // 
+            this.delete_speciale_Advokat_name_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.delete_speciale_Advokat_name_comboBox.FormattingEnabled = true;
+            this.delete_speciale_Advokat_name_comboBox.Location = new System.Drawing.Point(190, 38);
+            this.delete_speciale_Advokat_name_comboBox.MaxDropDownItems = 100;
+            this.delete_speciale_Advokat_name_comboBox.Name = "delete_speciale_Advokat_name_comboBox";
+            this.delete_speciale_Advokat_name_comboBox.Size = new System.Drawing.Size(100, 21);
+            this.delete_speciale_Advokat_name_comboBox.TabIndex = 28;
+            this.delete_speciale_Advokat_name_comboBox.SelectedIndexChanged += new System.EventHandler(this.delete_speciale_Advokat_name_comboBox_SelectedIndexChanged);
+            this.delete_speciale_Advokat_name_comboBox.Click += new System.EventHandler(this.delete_speciale_Advokat_name_comboBox_Click);
             // 
             // Advokater_Form3
             // 
@@ -1198,8 +1256,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(1600, 800);
-            this.Controls.Add(this.datagridviewBackground_panel);
             this.Controls.Add(this.speciale_BACK_panel);
+            this.Controls.Add(this.datagridviewBackground_panel);
             this.Controls.Add(this.top_Menu_background_panel);
             this.Controls.Add(this.backPanel_Textboxes_panel);
             this.Controls.Add(this.backgroundName_Top_panel);
@@ -1321,5 +1379,9 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox delete_speciale_from_advokat_textBox;
         private System.Windows.Forms.Button copy_selected_column_button;
+        private System.Windows.Forms.ComboBox Add_speciale_Advokat_name_comboBox;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox delete_speciale_Advokat_name_comboBox;
     }
 }

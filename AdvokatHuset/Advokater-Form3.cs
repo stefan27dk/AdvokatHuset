@@ -1473,6 +1473,14 @@ namespace View_GUI
 
 
 
+
+
+
+
+
+
+
+
         //Advokat-----SPECIALER-------::START::-----------------------------------------------------------------------------
         // Load Specialer Advokat in Combobox
         private void speciale_comboBox_Click(object sender, EventArgs e)
@@ -1512,7 +1520,52 @@ namespace View_GUI
         }
 
 
+
+
+
+
+
+
+
+
+        //-------Combobox Load Name - Add ID---ADD Speciale------------------------------------------------------------------------------------------------
+ 
+
+
+        // Advokat Name - Load Names - Add_speciale_Advokat_name_comboBox
+        private void Add_speciale_Advokat_name_comboBox_Click(object sender, EventArgs e)
+        {
+            Add_speciale_Advokat_name_comboBox.Items.Clear();
+            Load_Combobox Load_Advokat_names = new Load_Combobox();
+            Add_speciale_Advokat_name_comboBox = Load_Advokat_names.Populate_Combobox("Select M.Me_Fornavn From Medarbejder AS M Where M.Me_Type = 'Advokat'; ", Add_speciale_Advokat_name_comboBox);
+        }
+
+
+
+        // Select Advokat Name And Get ID
+        private void Add_speciale_Advokat_name_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            speciale_advokat_id_textBox.Clear();
+
+            Load_Combobox Get_Advokat_ID = new Load_Combobox();
+            speciale_advokat_id_textBox = Get_Advokat_ID.PopulateTextbox($"Select M.Me_ID From Medarbejder As M Where M.Me_Fornavn = '{Add_speciale_Advokat_name_comboBox.SelectedItem.ToString()}'", speciale_advokat_id_textBox);
+        }
+
+
+
+
+        //-------Combobox Load Name - Add ID---ADD Speciale------------------------------------------------------------------------------------------------
+
+
         //Advokat-----SPECIALER-------::END::-----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
 
 
 
@@ -1527,6 +1580,8 @@ namespace View_GUI
             string Query = "Select* From Uddannelser";
             combo = Load_Specialer.Populate_Combobox(Query, combo);
         }
+
+
 
 
 
@@ -1571,6 +1626,9 @@ namespace View_GUI
 
         }
 
+
+
+        // Prevent User Chosing From dropdown
         private void Add_Specaile_To_DB_comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             Add_Specaile_To_DB_comboBox.SelectedIndex = -1; 
@@ -1662,6 +1720,7 @@ namespace View_GUI
                 Delete_Speciale_From_Advokat.CreateCommand($"Delete FROM Advokat_Uddannelser Where Advokat_Uddannelser.Advokat_Uddanelse = '{delete_speciale_from_advokat_comboBox.SelectedItem.ToString()}' AND Advokat_Uddannelser.Me_ID = '{delete_speciale_from_advokat_textBox.Text}';");
                 delete_speciale_from_advokat_comboBox.Items.Clear();
                 delete_speciale_from_advokat_textBox.Clear();
+                delete_speciale_Advokat_name_comboBox.Items.Clear();
             }
             else
             {
@@ -1671,7 +1730,38 @@ namespace View_GUI
 
 
 
+
+
+
+
+
+
+        // Load Advokat Names for deleting Speciale
+        private void delete_speciale_Advokat_name_comboBox_Click(object sender, EventArgs e)
+        {
+            delete_speciale_Advokat_name_comboBox.Items.Clear();
+            Load_Combobox Load_Advokat_names_For_delete_Speciale = new Load_Combobox();
+            delete_speciale_Advokat_name_comboBox = Load_Advokat_names_For_delete_Speciale.Populate_Combobox("Select M.Me_Fornavn From Medarbejder AS M Where M.Me_Type = 'Advokat'; ", delete_speciale_Advokat_name_comboBox);
+        }
+
+
+
+        // Select Advokat Name And Get ID For deleting Speciale
+        private void delete_speciale_Advokat_name_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            delete_speciale_from_advokat_textBox.Clear();
+
+            Load_Combobox Get_Advokat_ID = new Load_Combobox();
+            delete_speciale_from_advokat_textBox = Get_Advokat_ID.PopulateTextbox($"Select M.Me_ID From Medarbejder As M Where M.Me_Fornavn = '{delete_speciale_Advokat_name_comboBox.SelectedItem.ToString()}'", delete_speciale_from_advokat_textBox);
+        }
+
         //----DELETE SPECIALE- From Advokate------------::END::----------------------------------------------
+
+
+
+
+
+
 
 
 
@@ -1682,6 +1772,52 @@ namespace View_GUI
         {
             Clipboard.SetText(Advokat_dataGridView.SelectedRows[0].Cells[Advokat_dataGridView.CurrentCell.ColumnIndex].Value.ToString());
         }
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
