@@ -81,6 +81,17 @@
             this.button1 = new System.Windows.Forms.Button();
             this.vis_rediger_Sag_button = new System.Windows.Forms.Button();
             this.opret_Sag_button = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.add_sag_Advokat_name_comboBox = new System.Windows.Forms.ComboBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.Sag_ID_textBox = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.Update_SAG_Slut_Dato_dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.SAVE_Update_sag_button = new System.Windows.Forms.Button();
+            this.Clear_sag_update_button = new System.Windows.Forms.Button();
             this.backgroundName_Top_panel.SuspendLayout();
             this.backPanel_Textboxes_Opret_sag_panel.SuspendLayout();
             this.background_textboxes_top_panel.SuspendLayout();
@@ -95,6 +106,8 @@
             this.sag_Add_Ydelse_panel.SuspendLayout();
             this.sag_Add_Ydelse_Top_panel.SuspendLayout();
             this.top_Menu_background_panel.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // Sager_Top_label
@@ -121,7 +134,7 @@
             // opret_sag_Type_textBox
             // 
             this.opret_sag_Type_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
-            this.opret_sag_Type_textBox.Location = new System.Drawing.Point(161, 64);
+            this.opret_sag_Type_textBox.Location = new System.Drawing.Point(176, 64);
             this.opret_sag_Type_textBox.MaxLength = 20;
             this.opret_sag_Type_textBox.Name = "opret_sag_Type_textBox";
             this.opret_sag_Type_textBox.Size = new System.Drawing.Size(100, 20);
@@ -132,6 +145,9 @@
             this.backPanel_Textboxes_Opret_sag_panel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.backPanel_Textboxes_Opret_sag_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.backPanel_Textboxes_Opret_sag_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.backPanel_Textboxes_Opret_sag_panel.Controls.Add(this.panel4);
+            this.backPanel_Textboxes_Opret_sag_panel.Controls.Add(this.label10);
+            this.backPanel_Textboxes_Opret_sag_panel.Controls.Add(this.add_sag_Advokat_name_comboBox);
             this.backPanel_Textboxes_Opret_sag_panel.Controls.Add(this.advokat_ID_label);
             this.backPanel_Textboxes_Opret_sag_panel.Controls.Add(this.Kunde_ID_label);
             this.backPanel_Textboxes_Opret_sag_panel.Controls.Add(this.type_label);
@@ -141,7 +157,7 @@
             this.backPanel_Textboxes_Opret_sag_panel.Controls.Add(this.background_textboxes_top_panel);
             this.backPanel_Textboxes_Opret_sag_panel.Controls.Add(this.opret_sag_advokatID_textBox);
             this.backPanel_Textboxes_Opret_sag_panel.Controls.Add(this.opret_sag_Type_textBox);
-            this.backPanel_Textboxes_Opret_sag_panel.Location = new System.Drawing.Point(718, 165);
+            this.backPanel_Textboxes_Opret_sag_panel.Location = new System.Drawing.Point(709, 165);
             this.backPanel_Textboxes_Opret_sag_panel.Name = "backPanel_Textboxes_Opret_sag_panel";
             this.backPanel_Textboxes_Opret_sag_panel.Size = new System.Drawing.Size(394, 388);
             this.backPanel_Textboxes_Opret_sag_panel.TabIndex = 11;
@@ -153,7 +169,7 @@
             this.advokat_ID_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
             this.advokat_ID_label.Image = global::View_GUI.Properties.Resources.ID_icon1;
             this.advokat_ID_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.advokat_ID_label.Location = new System.Drawing.Point(7, 109);
+            this.advokat_ID_label.Location = new System.Drawing.Point(22, 148);
             this.advokat_ID_label.Name = "advokat_ID_label";
             this.advokat_ID_label.Size = new System.Drawing.Size(140, 24);
             this.advokat_ID_label.TabIndex = 26;
@@ -166,7 +182,7 @@
             this.Kunde_ID_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
             this.Kunde_ID_label.Image = global::View_GUI.Properties.Resources.name_card_icon1;
             this.Kunde_ID_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Kunde_ID_label.Location = new System.Drawing.Point(22, 150);
+            this.Kunde_ID_label.Location = new System.Drawing.Point(37, 189);
             this.Kunde_ID_label.Name = "Kunde_ID_label";
             this.Kunde_ID_label.Size = new System.Drawing.Size(125, 33);
             this.Kunde_ID_label.TabIndex = 25;
@@ -179,7 +195,7 @@
             this.type_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
             this.type_label.Image = global::View_GUI.Properties.Resources.App_klickety_game_icon1;
             this.type_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.type_label.Location = new System.Drawing.Point(56, 55);
+            this.type_label.Location = new System.Drawing.Point(71, 55);
             this.type_label.Name = "type_label";
             this.type_label.Size = new System.Drawing.Size(90, 35);
             this.type_label.TabIndex = 24;
@@ -196,7 +212,7 @@
             this.create_Clear_All_textboxes_opret_sag_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
             this.create_Clear_All_textboxes_opret_sag_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.create_Clear_All_textboxes_opret_sag_button.ForeColor = System.Drawing.Color.Black;
-            this.create_Clear_All_textboxes_opret_sag_button.Location = new System.Drawing.Point(118, 200);
+            this.create_Clear_All_textboxes_opret_sag_button.Location = new System.Drawing.Point(191, 241);
             this.create_Clear_All_textboxes_opret_sag_button.Name = "create_Clear_All_textboxes_opret_sag_button";
             this.create_Clear_All_textboxes_opret_sag_button.Size = new System.Drawing.Size(28, 23);
             this.create_Clear_All_textboxes_opret_sag_button.TabIndex = 23;
@@ -212,7 +228,7 @@
             this.opret_sag_Save_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
             this.opret_sag_Save_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
             this.opret_sag_Save_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.opret_sag_Save_button.Location = new System.Drawing.Point(161, 197);
+            this.opret_sag_Save_button.Location = new System.Drawing.Point(234, 238);
             this.opret_sag_Save_button.Name = "opret_sag_Save_button";
             this.opret_sag_Save_button.Size = new System.Drawing.Size(90, 30);
             this.opret_sag_Save_button.TabIndex = 7;
@@ -224,10 +240,10 @@
             // opret_sag_Kunde_ID_textBox
             // 
             this.opret_sag_Kunde_ID_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
-            this.opret_sag_Kunde_ID_textBox.Location = new System.Drawing.Point(161, 158);
+            this.opret_sag_Kunde_ID_textBox.Location = new System.Drawing.Point(176, 197);
             this.opret_sag_Kunde_ID_textBox.MaxLength = 50;
             this.opret_sag_Kunde_ID_textBox.Name = "opret_sag_Kunde_ID_textBox";
-            this.opret_sag_Kunde_ID_textBox.Size = new System.Drawing.Size(100, 20);
+            this.opret_sag_Kunde_ID_textBox.Size = new System.Drawing.Size(191, 20);
             this.opret_sag_Kunde_ID_textBox.TabIndex = 4;
             // 
             // background_textboxes_top_panel
@@ -255,10 +271,10 @@
             // opret_sag_advokatID_textBox
             // 
             this.opret_sag_advokatID_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
-            this.opret_sag_advokatID_textBox.Location = new System.Drawing.Point(161, 113);
+            this.opret_sag_advokatID_textBox.Location = new System.Drawing.Point(176, 152);
             this.opret_sag_advokatID_textBox.MaxLength = 50;
             this.opret_sag_advokatID_textBox.Name = "opret_sag_advokatID_textBox";
-            this.opret_sag_advokatID_textBox.Size = new System.Drawing.Size(100, 20);
+            this.opret_sag_advokatID_textBox.Size = new System.Drawing.Size(191, 20);
             this.opret_sag_advokatID_textBox.TabIndex = 2;
             // 
             // datagridviewBackground_panel
@@ -882,15 +898,155 @@
             this.opret_Sag_button.UseVisualStyleBackColor = true;
             this.opret_Sag_button.Click += new System.EventHandler(this.opret_Sag_button_Click);
             // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.label10.Image = global::View_GUI.Properties.Resources.name_card_icon;
+            this.label10.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label10.Location = new System.Drawing.Point(13, 104);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(154, 24);
+            this.label10.TabIndex = 29;
+            this.label10.Text = "Advokat Navn:";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // add_sag_Advokat_name_comboBox
+            // 
+            this.add_sag_Advokat_name_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.add_sag_Advokat_name_comboBox.FormattingEnabled = true;
+            this.add_sag_Advokat_name_comboBox.Location = new System.Drawing.Point(176, 106);
+            this.add_sag_Advokat_name_comboBox.MaxDropDownItems = 100;
+            this.add_sag_Advokat_name_comboBox.Name = "add_sag_Advokat_name_comboBox";
+            this.add_sag_Advokat_name_comboBox.Size = new System.Drawing.Size(191, 21);
+            this.add_sag_Advokat_name_comboBox.TabIndex = 28;
+            this.add_sag_Advokat_name_comboBox.SelectedIndexChanged += new System.EventHandler(this.add_sag_Advokat_name_comboBox_SelectedIndexChanged);
+            this.add_sag_Advokat_name_comboBox.Click += new System.EventHandler(this.add_sag_Advokat_name_comboBox_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.Sag_ID_textBox);
+            this.panel4.Controls.Add(this.label13);
+            this.panel4.Controls.Add(this.Update_SAG_Slut_Dato_dateTimePicker);
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Controls.Add(this.label8);
+            this.panel4.Controls.Add(this.SAVE_Update_sag_button);
+            this.panel4.Controls.Add(this.Clear_sag_update_button);
+            this.panel4.Location = new System.Drawing.Point(-11, -1);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(414, 388);
+            this.panel4.TabIndex = 39;
+            // 
+            // Sag_ID_textBox
+            // 
+            this.Sag_ID_textBox.Location = new System.Drawing.Point(141, 125);
+            this.Sag_ID_textBox.Name = "Sag_ID_textBox";
+            this.Sag_ID_textBox.Size = new System.Drawing.Size(209, 20);
+            this.Sag_ID_textBox.TabIndex = 38;
+            this.Sag_ID_textBox.TextChanged += new System.EventHandler(this.Sag_ID_textBox_TextChanged);
+            // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.label13.Image = global::View_GUI.Properties.Resources.ID_icon;
+            this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label13.Location = new System.Drawing.Point(30, 123);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(105, 24);
+            this.label13.TabIndex = 32;
+            this.label13.Text = "Sag ID:";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // Update_SAG_Slut_Dato_dateTimePicker
+            // 
+            this.Update_SAG_Slut_Dato_dateTimePicker.Location = new System.Drawing.Point(141, 74);
+            this.Update_SAG_Slut_Dato_dateTimePicker.Name = "Update_SAG_Slut_Dato_dateTimePicker";
+            this.Update_SAG_Slut_Dato_dateTimePicker.Size = new System.Drawing.Size(136, 20);
+            this.Update_SAG_Slut_Dato_dateTimePicker.TabIndex = 26;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.label12);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(412, 26);
+            this.panel5.TabIndex = 10;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(92)))));
+            this.label12.Location = new System.Drawing.Point(169, 3);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(88, 21);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Afslut Sag";
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.label8.Image = global::View_GUI.Properties.Resources.date_icon1;
+            this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label8.Location = new System.Drawing.Point(46, 73);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(87, 25);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "Dato:";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // SAVE_Update_sag_button
+            // 
+            this.SAVE_Update_sag_button.FlatAppearance.BorderSize = 0;
+            this.SAVE_Update_sag_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.SAVE_Update_sag_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.SAVE_Update_sag_button.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SAVE_Update_sag_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
+            this.SAVE_Update_sag_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
+            this.SAVE_Update_sag_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SAVE_Update_sag_button.Location = new System.Drawing.Point(170, 175);
+            this.SAVE_Update_sag_button.Name = "SAVE_Update_sag_button";
+            this.SAVE_Update_sag_button.Size = new System.Drawing.Size(90, 30);
+            this.SAVE_Update_sag_button.TabIndex = 21;
+            this.SAVE_Update_sag_button.Text = "Gem";
+            this.SAVE_Update_sag_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.SAVE_Update_sag_button.UseVisualStyleBackColor = true;
+            this.SAVE_Update_sag_button.Click += new System.EventHandler(this.SAVE_Update_sag_button_Click);
+            // 
+            // Clear_sag_update_button
+            // 
+            this.Clear_sag_update_button.BackColor = System.Drawing.Color.Transparent;
+            this.Clear_sag_update_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
+            this.Clear_sag_update_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Clear_sag_update_button.FlatAppearance.BorderSize = 0;
+            this.Clear_sag_update_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.Clear_sag_update_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.Clear_sag_update_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Clear_sag_update_button.ForeColor = System.Drawing.Color.Black;
+            this.Clear_sag_update_button.Location = new System.Drawing.Point(122, 180);
+            this.Clear_sag_update_button.Name = "Clear_sag_update_button";
+            this.Clear_sag_update_button.Size = new System.Drawing.Size(28, 23);
+            this.Clear_sag_update_button.TabIndex = 30;
+            this.Clear_sag_update_button.UseVisualStyleBackColor = false;
+            this.Clear_sag_update_button.Click += new System.EventHandler(this.Clear_sag_update_button_Click);
+            // 
             // Sager_Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(1600, 800);
+            this.Controls.Add(this.backPanel_Textboxes_Opret_sag_panel);
             this.Controls.Add(this.sag_Add_Ydelse_panel);
             this.Controls.Add(this.datagridviewBackground_panel);
-            this.Controls.Add(this.backPanel_Textboxes_Opret_sag_panel);
             this.Controls.Add(this.top_Menu_background_panel);
             this.Controls.Add(this.backgroundName_Top_panel);
             this.DoubleBuffered = true;
@@ -918,6 +1074,10 @@
             this.sag_Add_Ydelse_Top_panel.ResumeLayout(false);
             this.sag_Add_Ydelse_Top_panel.PerformLayout();
             this.top_Menu_background_panel.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -977,5 +1137,16 @@
         private System.Windows.Forms.Label ydelseNR_label;
         private System.Windows.Forms.Button CLEAR_sag_Ydelse_button;
         private System.Windows.Forms.Label Ydelse_SagID_label;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox add_sag_Advokat_name_comboBox;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TextBox Sag_ID_textBox;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.DateTimePicker Update_SAG_Slut_Dato_dateTimePicker;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button SAVE_Update_sag_button;
+        private System.Windows.Forms.Button Clear_sag_update_button;
     }
 }

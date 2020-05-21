@@ -65,12 +65,16 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.korsel_Top_label = new System.Windows.Forms.Label();
             this.sag_Add_Ydelse_panel = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.ydelseNR_label = new System.Windows.Forms.Label();
-            this.Ydelse_SagID_label = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.ydelse_navn_comboBox = new System.Windows.Forms.ComboBox();
+            this.add_Ydelse_Ydelse_Nr_textBox = new System.Windows.Forms.TextBox();
             this.sag_Add_Ydelse_Top_panel = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.add_Ydelse_Sag_SagID_textBox = new System.Windows.Forms.TextBox();
+            this.ydelseNR_label = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.Ydelse_SagID_label = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.create_Clear_All_textboxes_button = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -86,10 +90,15 @@
             this.button2 = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.add_Ydelse_Ydelse_Nr_textBox = new System.Windows.Forms.TextBox();
-            this.add_Ydelse_Sag_SagID_textBox = new System.Windows.Forms.TextBox();
-            this.ydelse_navn_comboBox = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.top_background_panel.SuspendLayout();
             this.backPanel_Textboxes_panel.SuspendLayout();
             this.background_textboxes_top_panel.SuspendLayout();
@@ -101,6 +110,8 @@
             this.sag_Add_Ydelse_Top_panel.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // top_background_panel
@@ -582,64 +593,33 @@
             this.sag_Add_Ydelse_panel.Size = new System.Drawing.Size(414, 388);
             this.sag_Add_Ydelse_panel.TabIndex = 25;
             // 
-            // button3
+            // label7
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(170, 218);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(28, 23);
-            this.button3.TabIndex = 30;
-            this.button3.UseVisualStyleBackColor = false;
+            this.label7.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.label7.Image = global::View_GUI.Properties.Resources.barcode_icon;
+            this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label7.Location = new System.Drawing.Point(28, 152);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(135, 24);
+            this.label7.TabIndex = 37;
+            this.label7.Text = "Ydelse Nr:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // ydelseNR_label
+            // ydelse_navn_comboBox
             // 
-            this.ydelseNR_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.ydelseNR_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.ydelseNR_label.Image = global::View_GUI.Properties.Resources.name_card_icon;
-            this.ydelseNR_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ydelseNR_label.Location = new System.Drawing.Point(12, 104);
-            this.ydelseNR_label.Name = "ydelseNR_label";
-            this.ydelseNR_label.Size = new System.Drawing.Size(151, 24);
-            this.ydelseNR_label.TabIndex = 28;
-            this.ydelseNR_label.Text = "Ydelse Navn:";
-            this.ydelseNR_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ydelse_navn_comboBox.FormattingEnabled = true;
+            this.ydelse_navn_comboBox.Location = new System.Drawing.Point(169, 107);
+            this.ydelse_navn_comboBox.Name = "ydelse_navn_comboBox";
+            this.ydelse_navn_comboBox.Size = new System.Drawing.Size(209, 21);
+            this.ydelse_navn_comboBox.TabIndex = 33;
             // 
-            // Ydelse_SagID_label
+            // add_Ydelse_Ydelse_Nr_textBox
             // 
-            this.Ydelse_SagID_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.Ydelse_SagID_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.Ydelse_SagID_label.Image = global::View_GUI.Properties.Resources.ID_icon;
-            this.Ydelse_SagID_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Ydelse_SagID_label.Location = new System.Drawing.Point(58, 61);
-            this.Ydelse_SagID_label.Name = "Ydelse_SagID_label";
-            this.Ydelse_SagID_label.Size = new System.Drawing.Size(105, 24);
-            this.Ydelse_SagID_label.TabIndex = 26;
-            this.Ydelse_SagID_label.Text = "Sag ID:";
-            this.Ydelse_SagID_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
-            this.button1.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
-            this.button1.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(218, 213);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 30);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Gem";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
+            this.add_Ydelse_Ydelse_Nr_textBox.Location = new System.Drawing.Point(169, 152);
+            this.add_Ydelse_Ydelse_Nr_textBox.Name = "add_Ydelse_Ydelse_Nr_textBox";
+            this.add_Ydelse_Ydelse_Nr_textBox.Size = new System.Drawing.Size(209, 20);
+            this.add_Ydelse_Ydelse_Nr_textBox.TabIndex = 36;
             // 
             // sag_Add_Ydelse_Top_panel
             // 
@@ -662,6 +642,72 @@
             this.label5.Size = new System.Drawing.Size(104, 21);
             this.label5.TabIndex = 1;
             this.label5.Text = "Tilføj Ydelse";
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.button1.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
+            this.button1.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(218, 213);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(90, 30);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Gem";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // add_Ydelse_Sag_SagID_textBox
+            // 
+            this.add_Ydelse_Sag_SagID_textBox.Location = new System.Drawing.Point(169, 61);
+            this.add_Ydelse_Sag_SagID_textBox.Name = "add_Ydelse_Sag_SagID_textBox";
+            this.add_Ydelse_Sag_SagID_textBox.Size = new System.Drawing.Size(209, 20);
+            this.add_Ydelse_Sag_SagID_textBox.TabIndex = 35;
+            // 
+            // ydelseNR_label
+            // 
+            this.ydelseNR_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.ydelseNR_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.ydelseNR_label.Image = global::View_GUI.Properties.Resources.name_card_icon;
+            this.ydelseNR_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ydelseNR_label.Location = new System.Drawing.Point(12, 104);
+            this.ydelseNR_label.Name = "ydelseNR_label";
+            this.ydelseNR_label.Size = new System.Drawing.Size(151, 24);
+            this.ydelseNR_label.TabIndex = 28;
+            this.ydelseNR_label.Text = "Ydelse Navn:";
+            this.ydelseNR_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Location = new System.Drawing.Point(170, 218);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(28, 23);
+            this.button3.TabIndex = 30;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // Ydelse_SagID_label
+            // 
+            this.Ydelse_SagID_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.Ydelse_SagID_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.Ydelse_SagID_label.Image = global::View_GUI.Properties.Resources.ID_icon;
+            this.Ydelse_SagID_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Ydelse_SagID_label.Location = new System.Drawing.Point(58, 61);
+            this.Ydelse_SagID_label.Name = "Ydelse_SagID_label";
+            this.Ydelse_SagID_label.Size = new System.Drawing.Size(105, 24);
+            this.Ydelse_SagID_label.TabIndex = 26;
+            this.Ydelse_SagID_label.Text = "Sag ID:";
+            this.Ydelse_SagID_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel6
             // 
@@ -843,46 +889,124 @@
             this.label6.TabIndex = 1;
             this.label6.Text = "Tilføj Tid";
             // 
-            // add_Ydelse_Ydelse_Nr_textBox
+            // panel4
             // 
-            this.add_Ydelse_Ydelse_Nr_textBox.Location = new System.Drawing.Point(169, 152);
-            this.add_Ydelse_Ydelse_Nr_textBox.Name = "add_Ydelse_Ydelse_Nr_textBox";
-            this.add_Ydelse_Ydelse_Nr_textBox.Size = new System.Drawing.Size(209, 20);
-            this.add_Ydelse_Ydelse_Nr_textBox.TabIndex = 36;
+            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(30)))), ((int)(((byte)(50)))));
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.textBox3);
+            this.panel4.Controls.Add(this.label13);
+            this.panel4.Controls.Add(this.dateTimePicker2);
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Controls.Add(this.label8);
+            this.panel4.Controls.Add(this.button6);
+            this.panel4.Controls.Add(this.button7);
+            this.panel4.Location = new System.Drawing.Point(958, 49);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(414, 388);
+            this.panel4.TabIndex = 38;
             // 
-            // add_Ydelse_Sag_SagID_textBox
+            // panel5
             // 
-            this.add_Ydelse_Sag_SagID_textBox.Location = new System.Drawing.Point(169, 61);
-            this.add_Ydelse_Sag_SagID_textBox.Name = "add_Ydelse_Sag_SagID_textBox";
-            this.add_Ydelse_Sag_SagID_textBox.Size = new System.Drawing.Size(209, 20);
-            this.add_Ydelse_Sag_SagID_textBox.TabIndex = 35;
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.label12);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(412, 26);
+            this.panel5.TabIndex = 10;
             // 
-            // ydelse_navn_comboBox
+            // label12
             // 
-            this.ydelse_navn_comboBox.FormattingEnabled = true;
-            this.ydelse_navn_comboBox.Location = new System.Drawing.Point(169, 107);
-            this.ydelse_navn_comboBox.Name = "ydelse_navn_comboBox";
-            this.ydelse_navn_comboBox.Size = new System.Drawing.Size(209, 21);
-            this.ydelse_navn_comboBox.TabIndex = 33;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(92)))));
+            this.label12.Location = new System.Drawing.Point(169, 3);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(88, 21);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Afslut Sag";
             // 
-            // label7
+            // button6
             // 
-            this.label7.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.label7.Image = global::View_GUI.Properties.Resources.barcode_icon;
-            this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label7.Location = new System.Drawing.Point(28, 152);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(135, 24);
-            this.label7.TabIndex = 37;
-            this.label7.Text = "Ydelse Nr:";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.button6.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
+            this.button6.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(187, 177);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(90, 30);
+            this.button6.TabIndex = 21;
+            this.button6.Text = "Gem";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Transparent;
+            this.button7.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.ForeColor = System.Drawing.Color.Black;
+            this.button7.Location = new System.Drawing.Point(139, 182);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(28, 23);
+            this.button7.TabIndex = 30;
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(141, 74);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(136, 20);
+            this.dateTimePicker2.TabIndex = 26;
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.label8.Image = global::View_GUI.Properties.Resources.date_icon1;
+            this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label8.Location = new System.Drawing.Point(46, 73);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(87, 25);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "Dato:";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.label13.Image = global::View_GUI.Properties.Resources.ID_icon;
+            this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label13.Location = new System.Drawing.Point(30, 123);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(105, 24);
+            this.label13.TabIndex = 32;
+            this.label13.Text = "Sag ID:";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(141, 125);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(209, 20);
+            this.textBox3.TabIndex = 38;
             // 
             // Test1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1913, 556);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.sag_Add_Ydelse_panel);
             this.Controls.Add(this.panel1);
@@ -913,6 +1037,10 @@
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -981,5 +1109,14 @@
         private System.Windows.Forms.TextBox add_Ydelse_Sag_SagID_textBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox ydelse_navn_comboBox;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
     }
 }

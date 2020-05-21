@@ -276,6 +276,7 @@ namespace View_GUI
         // Clear All Textboxes
         private void ClearTextboxes()
         {
+            add_sag_Advokat_name_comboBox.Items.Clear();
             opret_sag_Type_textBox.Clear();
             opret_sag_advokatID_textBox.Clear();
             opret_sag_Kunde_ID_textBox.Clear();
@@ -1646,8 +1647,129 @@ namespace View_GUI
 
         }
 
-        
+
+        // Load Advokat Names 
+        private void add_sag_Advokat_name_comboBox_Click(object sender, EventArgs e)
+        {
+            add_sag_Advokat_name_comboBox.Items.Clear();
+            Load_Combobox Load_Advokat_names = new Load_Combobox();
+            add_sag_Advokat_name_comboBox = Load_Advokat_names.Populate_Combobox("Select M.Me_Fornavn From Medarbejder AS M Where M.Me_Type = 'Advokat'; ", add_sag_Advokat_name_comboBox);
+        }
+
+
+
+        // Get Advokate ID
+        private void add_sag_Advokat_name_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            opret_sag_advokatID_textBox.Clear();
+
+            Load_Combobox Get_Advokat_ID = new Load_Combobox();
+            opret_sag_advokatID_textBox = Get_Advokat_ID.PopulateTextbox($"Select M.Me_ID From Medarbejder As M Where M.Me_Fornavn = '{add_sag_Advokat_name_comboBox.SelectedItem.ToString()}'", opret_sag_advokatID_textBox);
+        }
+
+
+
         //--------------------ADD Ydelse - "Tilføj Ydelse"-----::END::---------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // Update SAG ----"Afslut SAG"-------------::START::-------------------------------------------------------------------------------------------------
+
+
+
+        // Save Button
+        private void SAVE_Update_sag_button_Click(object sender, EventArgs e)
+        {
+            Update_Sag();
+        }
+
+
+
+
+        private void Update_Sag()
+        {
+            bool successful;
+
+            if(Sag_ID_textBox.Text.Length > 15)
+            {
+
+
+            DB_Connection_Write Update_Sag = new DB_Connection_Write();
+            successful = Update_Sag.CreateCommand($"Update Sag Set Sag.Sag_Afslutet = 1, Sag.Sag_Slut_Dato ='{Update_SAG_Slut_Dato_dateTimePicker.Value.Date.ToShortDateString()}' Where Sag.Sag_ID = '{Sag_ID_textBox.Text}'; IF @@RowCount = 0 BEGIN Select 1/0; END");
+
+
+                if(successful == true)
+                {
+                    Clear_Iput_Update_sag();
+                }
+            }
+            else
+            {
+                Sag_ID_textBox.BackColor = Color.FromArgb(255, 192, 192);
+            }
+
+        }
+
+
+         // Clear Input - Textboxes
+        private void Clear_sag_update_button_Click(object sender, EventArgs e)
+        {
+            Clear_Iput_Update_sag();
+
+        }
+
+
+        private void Clear_Iput_Update_sag()
+        {
+            Sag_ID_textBox.Clear();
+            Update_SAG_Slut_Dato_dateTimePicker.Value = DateTime.Now;
+        }
+
+        // Reset Color SAg ID Textbox
+        private void Sag_ID_textBox_TextChanged(object sender, EventArgs e)
+        {
+            Sag_ID_textBox.BackColor = DefaultBackColor;
+        }
+
+
+
+
+
+
+
+
+
+        // Update SAG ----"Afslut SAG"-------------::START::-------------------------------------------------------------------------------------------------
+
 
 
 
