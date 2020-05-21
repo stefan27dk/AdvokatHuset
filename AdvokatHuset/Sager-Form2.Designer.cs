@@ -1082,7 +1082,7 @@
             this.add_time_back_panel.Controls.Add(this.add_time_Clear_All_textboxes_button);
             this.add_time_back_panel.Controls.Add(this.add_time_save_button);
             this.add_time_back_panel.Controls.Add(this.add_time_top_panel);
-            this.add_time_back_panel.Location = new System.Drawing.Point(264, 154);
+            this.add_time_back_panel.Location = new System.Drawing.Point(698, 154);
             this.add_time_back_panel.Name = "add_time_back_panel";
             this.add_time_back_panel.Size = new System.Drawing.Size(414, 502);
             this.add_time_back_panel.TabIndex = 31;
@@ -1144,6 +1144,8 @@
             this.add_time_ydelse_name_comboBox.Name = "add_time_ydelse_name_comboBox";
             this.add_time_ydelse_name_comboBox.Size = new System.Drawing.Size(209, 21);
             this.add_time_ydelse_name_comboBox.TabIndex = 39;
+            this.add_time_ydelse_name_comboBox.SelectionChangeCommitted += new System.EventHandler(this.add_time_ydelse_name_comboBox_SelectionChangeCommitted);
+            this.add_time_ydelse_name_comboBox.Click += new System.EventHandler(this.add_time_ydelse_name_comboBox_Click);
             // 
             // label15
             // 
@@ -1203,6 +1205,8 @@
             this.add_time_Advokat_name_comboBox.Name = "add_time_Advokat_name_comboBox";
             this.add_time_Advokat_name_comboBox.Size = new System.Drawing.Size(191, 21);
             this.add_time_Advokat_name_comboBox.TabIndex = 32;
+            this.add_time_Advokat_name_comboBox.SelectionChangeCommitted += new System.EventHandler(this.add_time_Advokat_name_comboBox_SelectionChangeCommitted);
+            this.add_time_Advokat_name_comboBox.Click += new System.EventHandler(this.add_time_Advokat_name_comboBox_Click);
             // 
             // label11
             // 
@@ -1371,8 +1375,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(1600, 800);
             this.Controls.Add(this.add_time_back_panel);
-            this.Controls.Add(this.backPanel_Textboxes_Opret_sag_panel);
             this.Controls.Add(this.sag_Add_Ydelse_panel);
+            this.Controls.Add(this.backPanel_Textboxes_Opret_sag_panel);
             this.Controls.Add(this.update_sag_Back_panel);
             this.Controls.Add(this.datagridviewBackground_panel);
             this.Controls.Add(this.top_Menu_background_panel);

@@ -1733,7 +1733,7 @@ namespace View_GUI
 
                 if(successful == true)
                 {
-                    Clear_Iput_Update_sag();
+                    Clear_Input_Update_sag();
                 }
             }
             else
@@ -1747,12 +1747,12 @@ namespace View_GUI
          // Clear Input - Textboxes
         private void Clear_sag_update_button_Click(object sender, EventArgs e)
         {
-            Clear_Iput_Update_sag();
+            Clear_Input_Update_sag();
 
         }
 
 
-        private void Clear_Iput_Update_sag()
+        private void Clear_Input_Update_sag()
         {
             Sag_ID_textBox.Clear();
             Update_SAG_Slut_Dato_dateTimePicker.Value = DateTime.Now;
@@ -1865,6 +1865,8 @@ namespace View_GUI
             }
 
 
+
+            // Sag ID
             if(add_time_sag_id_textBox.Text.Length < 15)
             {
                 Add_time_validate = false;
@@ -1872,7 +1874,7 @@ namespace View_GUI
             }
 
 
-
+            // Ydelse NR
             if(add_time_ydelse_nr_textBox.Text.Length < 15)
             {
                 Add_time_validate = false;
@@ -1887,7 +1889,7 @@ namespace View_GUI
        
 
 
-
+        // Save TIME - Main Method
         private void Save_Time()
         {
             Valudate_Time();
@@ -1895,7 +1897,7 @@ namespace View_GUI
             if(Add_time_validate == true)
             {
                 DB_Connection_Write Add_time_toSag = new DB_Connection_Write();
-             bool succesfull_Added = Add_time_toSag.CreateCommand("$");
+                bool succesfull_Added = Add_time_toSag.CreateCommand($"DECLARE @UniqueID Uniqueidentifier SET @UniqueID = NewID();  Insert Into TID Values('{add_time_sag_textBox.Text}','{Add_Time_sag_dateTimePicker.Value.ToShortDateString()}', (@UniqueID), '{add_time_sag_id_textBox.Text}', '{add_time_ydelse_nr_textBox.Text}', '{add_time_Advokat_name_textBox.Text}'); ");
 
                 if(succesfull_Added == true)
                 {
@@ -2012,20 +2014,21 @@ namespace View_GUI
         }
 
 
+        // CLear All Inputs
         private void Clear_All_Inputs_Add_Time()
         {
             Add_Time_sag_dateTimePicker.Value = DateTime.Now.Date;
             add_time_sag_textBox.Clear();
-            add_time_Advokat_name_comboBox.SelectedIndex = -1;
             add_time_Advokat_name_textBox.Clear();
             add_time_sag_id_textBox.Clear();
+            add_time_Advokat_name_comboBox.SelectedIndex = -1;
             add_time_ydelse_name_comboBox.SelectedIndex = -1;
             add_time_ydelse_nr_textBox.Clear();
             Reset_Input_Color();
         }
 
 
-         // reset Color of the whole Input
+         // Reset Color of the whole Input
         private void Reset_Input_Color()
         {
             add_time_ydelse_nr_textBox.BackColor = DefaultBackColor;
@@ -2033,6 +2036,57 @@ namespace View_GUI
             add_time_Advokat_name_textBox.BackColor = DefaultBackColor;
             add_time_sag_textBox.BackColor = DefaultBackColor;
         }
+
+
+
+        // Advokat Name Loader - Combobox
+        private void add_time_Advokat_name_comboBox_Click(object sender, EventArgs e)
+        {
+            add_time_Advokat_name_comboBox.Items.Clear();
+            Load_Combobox Load_Advokat_names = new Load_Combobox();
+            add_time_Advokat_name_comboBox = Load_Advokat_names.Populate_Combobox("Select M.Me_Fornavn From Medarbejder AS M Where M.Me_Type = 'Advokat'; ", add_time_Advokat_name_comboBox);
+        }
+
+
+
+ 
+
+
+
+         // Get ID Form Advokate name Combobox
+        private void add_time_Advokat_name_comboBox_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+
+            add_time_Advokat_name_textBox.Clear();
+
+            Load_Combobox Get_Advokat_ID = new Load_Combobox();
+            add_time_Advokat_name_textBox = Get_Advokat_ID.PopulateTextbox($"Select M.Me_ID From Medarbejder As M Where M.Me_Fornavn = '{add_time_Advokat_name_comboBox.SelectedItem.ToString()}'", add_time_Advokat_name_textBox);
+        }
+
+
+
+
+
+        // Add - Time - Ydelse Load Names
+        private void add_time_ydelse_name_comboBox_Click(object sender, EventArgs e)
+        {
+            add_time_ydelse_name_comboBox.Items.Clear();
+            Load_Combobox Load_Ydelser = new Load_Combobox();
+            add_time_ydelse_name_comboBox = Load_Ydelser.Populate_Combobox("Select Ydelse_Navn From Ydelse", add_time_ydelse_name_comboBox);
+        }
+
+
+
+
+        // Add - Time - Load  - Ydelser  - Names
+        private void add_time_ydelse_name_comboBox_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            add_Ydelse_Ydelse_Nr_textBox.Clear(); // Clear
+            Load_Combobox Load_Ydelse_Nr = new Load_Combobox();
+            add_time_ydelse_nr_textBox = Load_Ydelse_Nr.PopulateTextbox($"Select Ydelse_Nr From Ydelse Where Ydelse_Navn Like '{add_time_ydelse_name_comboBox.SelectedItem.ToString()}' ", add_time_ydelse_nr_textBox); // Load NR Ydelse NR "ID"
+        }
+
+      
 
 
 
