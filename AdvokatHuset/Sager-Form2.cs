@@ -67,8 +67,16 @@ namespace View_GUI
         bool Add_Ydelse_Validate = true;
 
 
+
+
         // Validate Add Time
         bool Add_time_validate = true;
+
+
+
+        // Validate Kørsel - Tid
+        bool Validate_Koersel_TId = true;
+
 
         // Undo Delete
         List<DataGridViewRow> DeletedRowsList = new List<DataGridViewRow>(); // List with deleted Rows
@@ -394,6 +402,7 @@ namespace View_GUI
         // Hide All Menu_Windows
         private void HideAll_Menu_Windows()
         {
+            Register_Koersel_Back_Panel_panel.Visible = false;
             add_time_back_panel.Visible = false;
             update_sag_Back_panel.Visible = false;
             backPanel_Textboxes_Opret_sag_panel.Visible = false;
@@ -2086,14 +2095,223 @@ namespace View_GUI
             add_time_ydelse_nr_textBox = Load_Ydelse_Nr.PopulateTextbox($"Select Ydelse_Nr From Ydelse Where Ydelse_Navn Like '{add_time_ydelse_name_comboBox.SelectedItem.ToString()}' ", add_time_ydelse_nr_textBox); // Load NR Ydelse NR "ID"
         }
 
-      
-
-
-
-
-
 
         //------------ADD Time--"Tilføj Tid"-----::START::------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+        //--------------------ADD--Kørsel-----::START::---------------------------------------------------------------
+
+        // ADD Kørsel - BUTTON
+        private void Add_Koersel_Sag_button_Click(object sender, EventArgs e)
+        {
+            HideAll_Menu_Windows();
+            Register_Koersel_Back_Panel_panel.Visible = true;
+        }
+
+
+        // kørsel - Advokat name Loader - Combobox
+        private void koersel_Advokat_name_comboBox_Click(object sender, EventArgs e)
+        {
+            koersel_Advokat_name_comboBox.Items.Clear();
+            Load_Combobox Load_Advokat_names = new Load_Combobox();
+            koersel_Advokat_name_comboBox = Load_Advokat_names.Populate_Combobox("Select M.Me_Fornavn From Medarbejder AS M Where M.Me_Type = 'Advokat'; ", koersel_Advokat_name_comboBox);
+        }
+
+
+
+        // Load Advokat ID in the Textbox
+        private void koersel_Advokat_name_comboBox_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+
+            koersel_Advokat_Id_textBox.Clear();
+            Load_Combobox Get_Advokat_ID = new Load_Combobox();
+            koersel_Advokat_Id_textBox = Get_Advokat_ID.PopulateTextbox($"Select M.Me_ID From Medarbejder As M Where M.Me_Fornavn = '{koersel_Advokat_name_comboBox.SelectedItem.ToString()}'", koersel_Advokat_Id_textBox);
+        }
+
+
+
+
+        // Kørsel tid - Reset Color
+        private void koersel_koersel_Tid_textBox_TextChanged(object sender, EventArgs e)
+        {
+            koersel_koersel_Tid_textBox.BackColor = DefaultBackColor;
+        }
+
+
+
+
+
+        // Validate Kørsel Tid 
+        private void koersel_koersel_Tid_textBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            bool have_comma = false;
+            if (e.KeyChar != (char)8 && e.KeyChar != (char)26)/// "Allow backspace"  and CTRL+Z
+            {
+                e.Handled = !decimal.TryParse(e.KeyChar.ToString(), out decimal isNumber);///Prevent letters
+            }
+
+
+
+            // Check for comma
+            for (int i = 0; i < koersel_koersel_Tid_textBox.Text.Length; i++)
+            {
+                int commaIndex = 0;
+
+                if (koersel_koersel_Tid_textBox.Text[i] == ',')
+                {
+                    commaIndex = i;
+                    have_comma = true;
+
+
+                    // Prevent Comma if comma exists
+                    if (e.KeyChar > (char)53)
+                    {
+                        e.Handled = true;
+
+                    }
+
+                    // Max 2 digits after Comma
+                    if (koersel_koersel_Tid_textBox.Text.Length > commaIndex + 2 && e.KeyChar != (char)8)
+                    {
+                        e.Handled = true;
+                    }
+
+                }
+
+
+            }
+
+
+            if (e.KeyChar == (char)44 && have_comma == false)//If Comma and ther is no comma in the textbox than Add it
+            {
+                e.Handled = false;
+            }
+        }
+
+
+
+
+
+
+
+        // Save Method - Kørsel - Tid
+        private void Save_Koersel_Tid()
+        {
+            Validate_Koersel_Tid_Input();
+
+            if (Validate_Koersel_TId == true)
+            {
+                DB_Connection_Write Add_Driving_Time = new DB_Connection_Write();
+                 bool successful = Add_Driving_Time.CreateCommand($" Declare @UniqueID uniqueidentifier SET @UniqueID = NewID(); Insert Into Kørsel Values('{koersel_koersel_Tid_textBox.Text}', '{koersel_date_dateTimePicker.Value.ToShortDateString()}', '{koersel_noter_textBox.Text}', (@UniqueID), '{koersel_Sag_ID_textBox.Text}', '{koersel_Advokat_Id_textBox.Text}');");
+
+                if(successful == true)
+                {
+                    Clear_All_Input_Koersel();
+                }
+
+            }
+
+             
+        }
+
+
+
+
+
+        // Save Button Kørsel- TID
+        private void koersel_Save_button_Click(object sender, EventArgs e)
+        {
+            Save_Koersel_Tid();
+        }
+
+
+
+
+
+
+        private void Validate_Koersel_Tid_Input()
+        {
+            Validate_Koersel_TId = true;
+
+
+
+            // Validate Advokat ID
+            if(koersel_Advokat_Id_textBox.Text.Length < 15)
+            {
+                Validate_Koersel_TId = false;
+                koersel_Advokat_Id_textBox.BackColor = Color.FromArgb(255, 192, 192);
+            }
+
+
+
+
+            // Validate SAG
+            if(koersel_Sag_ID_textBox.Text.Length < 15)
+            {
+                Validate_Koersel_TId = false;
+                koersel_Sag_ID_textBox.BackColor = Color.FromArgb(255, 192, 192);
+            }
+
+
+
+            // Kørsel TID - Validate
+            if(koersel_koersel_Tid_textBox.Text.Length < 1)
+            {
+                Validate_Koersel_TId = false;
+                koersel_koersel_Tid_textBox.BackColor = Color.FromArgb(255, 192, 192);
+            }
+
+       
+
+        }
+
+
+        private void Koersel_Reset_Input_Color()
+        {
+            koersel_Advokat_Id_textBox.BackColor = DefaultBackColor;
+            koersel_Sag_ID_textBox.BackColor = DefaultBackColor;
+            koersel_koersel_Tid_textBox.BackColor = DefaultBackColor;
+
+        }
+
+
+         // Clear All Inputs for Kørsel
+        private void Clear_All_Input_Koersel()
+        {
+            Koersel_Reset_Input_Color();
+            koersel_Advokat_name_comboBox.SelectedIndex = -1;
+            koersel_Advokat_Id_textBox.Clear();
+            koersel_Sag_ID_textBox.Clear();
+            koersel_koersel_Tid_textBox.Clear();
+            koersel_date_dateTimePicker.Value = DateTime.Now;
+            koersel_noter_textBox.Clear();
+        }
+
+
+        private void koersel_Clear_all_button_Click(object sender, EventArgs e)
+        {
+            Clear_All_Input_Koersel();  
+        }
+
+
+
+
+        //-------------------ADD---Kørsel ---------::END::---------------------------------------------------------------
+
+
+
+
+
 
 
 

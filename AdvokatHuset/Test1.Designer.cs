@@ -47,12 +47,10 @@
             this.type_label = new System.Windows.Forms.Label();
             this.backgroundName_Top_panel = new System.Windows.Forms.Panel();
             this.Sager_Top_label = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.Register_Koersel_Bag_Panel_panel = new System.Windows.Forms.Panel();
+            this.koersel_Clear_all_button = new System.Windows.Forms.Button();
             this.koersel_noter_textBox = new System.Windows.Forms.TextBox();
             this.koersel_date_dateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.koersel_advokat_ID_comboBox = new System.Windows.Forms.ComboBox();
-            this.koersel_sager_ID_comboBox = new System.Windows.Forms.ComboBox();
             this.koersel_Save_button = new System.Windows.Forms.Button();
             this.noter_label = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -60,8 +58,6 @@
             this.dato_label = new System.Windows.Forms.Label();
             this.koersel_tid_label = new System.Windows.Forms.Label();
             this.koersel_koersel_Tid_textBox = new System.Windows.Forms.TextBox();
-            this.Advokat_id_label = new System.Windows.Forms.Label();
-            this.sag_Id_label = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.korsel_Top_label = new System.Windows.Forms.Label();
             this.sag_Add_Ydelse_panel = new System.Windows.Forms.Panel();
@@ -107,11 +103,21 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.koersel_Advokat_name_comboBox = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.koersel_Advokat_Id_textBox = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.koersel_Sag_ID_textBox = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.top_background_panel.SuspendLayout();
             this.backPanel_Textboxes_panel.SuspendLayout();
             this.background_textboxes_top_panel.SuspendLayout();
             this.backgroundName_Top_panel.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.Register_Koersel_Bag_Panel_panel.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.sag_Add_Ydelse_panel.SuspendLayout();
@@ -124,6 +130,10 @@
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel13.SuspendLayout();
             this.SuspendLayout();
             // 
             // top_background_panel
@@ -384,48 +394,44 @@
             this.Sager_Top_label.TabIndex = 3;
             this.Sager_Top_label.Text = "Sager";
             // 
-            // panel1
+            // Register_Koersel_Bag_Panel_panel
             // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.koersel_noter_textBox);
-            this.panel1.Controls.Add(this.koersel_date_dateTimePicker);
-            this.panel1.Controls.Add(this.koersel_advokat_ID_comboBox);
-            this.panel1.Controls.Add(this.koersel_sager_ID_comboBox);
-            this.panel1.Controls.Add(this.koersel_Save_button);
-            this.panel1.Controls.Add(this.noter_label);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.dato_label);
-            this.panel1.Controls.Add(this.koersel_tid_label);
-            this.panel1.Controls.Add(this.koersel_koersel_Tid_textBox);
-            this.panel1.Controls.Add(this.Advokat_id_label);
-            this.panel1.Controls.Add(this.sag_Id_label);
-            this.panel1.Location = new System.Drawing.Point(1458, 135);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(394, 388);
-            this.panel1.TabIndex = 21;
+            this.Register_Koersel_Bag_Panel_panel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Register_Koersel_Bag_Panel_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.Register_Koersel_Bag_Panel_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Register_Koersel_Bag_Panel_panel.Controls.Add(this.panel7);
+            this.Register_Koersel_Bag_Panel_panel.Controls.Add(this.panel13);
+            this.Register_Koersel_Bag_Panel_panel.Controls.Add(this.panel12);
+            this.Register_Koersel_Bag_Panel_panel.Controls.Add(this.panel6);
+            this.Register_Koersel_Bag_Panel_panel.Controls.Add(this.koersel_Clear_all_button);
+            this.Register_Koersel_Bag_Panel_panel.Controls.Add(this.koersel_Save_button);
+            this.Register_Koersel_Bag_Panel_panel.Controls.Add(this.panel2);
+            this.Register_Koersel_Bag_Panel_panel.Location = new System.Drawing.Point(1488, 39);
+            this.Register_Koersel_Bag_Panel_panel.Name = "Register_Koersel_Bag_Panel_panel";
+            this.Register_Koersel_Bag_Panel_panel.Size = new System.Drawing.Size(394, 502);
+            this.Register_Koersel_Bag_Panel_panel.TabIndex = 21;
             // 
-            // button4
+            // koersel_Clear_all_button
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(118, 340);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(28, 23);
-            this.button4.TabIndex = 31;
-            this.button4.UseVisualStyleBackColor = false;
+            this.koersel_Clear_all_button.BackColor = System.Drawing.Color.Transparent;
+            this.koersel_Clear_all_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
+            this.koersel_Clear_all_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.koersel_Clear_all_button.FlatAppearance.BorderSize = 0;
+            this.koersel_Clear_all_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.koersel_Clear_all_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.koersel_Clear_all_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.koersel_Clear_all_button.ForeColor = System.Drawing.Color.Black;
+            this.koersel_Clear_all_button.Location = new System.Drawing.Point(118, 457);
+            this.koersel_Clear_all_button.Name = "koersel_Clear_all_button";
+            this.koersel_Clear_all_button.Size = new System.Drawing.Size(28, 23);
+            this.koersel_Clear_all_button.TabIndex = 31;
+            this.koersel_Clear_all_button.UseVisualStyleBackColor = false;
             // 
             // koersel_noter_textBox
             // 
-            this.koersel_noter_textBox.Location = new System.Drawing.Point(99, 279);
+            this.koersel_noter_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.koersel_noter_textBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.koersel_noter_textBox.Location = new System.Drawing.Point(98, 43);
             this.koersel_noter_textBox.Multiline = true;
             this.koersel_noter_textBox.Name = "koersel_noter_textBox";
             this.koersel_noter_textBox.Size = new System.Drawing.Size(202, 39);
@@ -433,26 +439,10 @@
             // 
             // koersel_date_dateTimePicker
             // 
-            this.koersel_date_dateTimePicker.Location = new System.Drawing.Point(165, 198);
+            this.koersel_date_dateTimePicker.Location = new System.Drawing.Point(164, 57);
             this.koersel_date_dateTimePicker.Name = "koersel_date_dateTimePicker";
             this.koersel_date_dateTimePicker.Size = new System.Drawing.Size(136, 20);
             this.koersel_date_dateTimePicker.TabIndex = 24;
-            // 
-            // koersel_advokat_ID_comboBox
-            // 
-            this.koersel_advokat_ID_comboBox.FormattingEnabled = true;
-            this.koersel_advokat_ID_comboBox.Location = new System.Drawing.Point(165, 63);
-            this.koersel_advokat_ID_comboBox.Name = "koersel_advokat_ID_comboBox";
-            this.koersel_advokat_ID_comboBox.Size = new System.Drawing.Size(70, 21);
-            this.koersel_advokat_ID_comboBox.TabIndex = 23;
-            // 
-            // koersel_sager_ID_comboBox
-            // 
-            this.koersel_sager_ID_comboBox.FormattingEnabled = true;
-            this.koersel_sager_ID_comboBox.Location = new System.Drawing.Point(163, 110);
-            this.koersel_sager_ID_comboBox.Name = "koersel_sager_ID_comboBox";
-            this.koersel_sager_ID_comboBox.Size = new System.Drawing.Size(70, 21);
-            this.koersel_sager_ID_comboBox.TabIndex = 22;
             // 
             // koersel_Save_button
             // 
@@ -463,7 +453,7 @@
             this.koersel_Save_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
             this.koersel_Save_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
             this.koersel_Save_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.koersel_Save_button.Location = new System.Drawing.Point(163, 335);
+            this.koersel_Save_button.Location = new System.Drawing.Point(163, 452);
             this.koersel_Save_button.Name = "koersel_Save_button";
             this.koersel_Save_button.Size = new System.Drawing.Size(90, 30);
             this.koersel_Save_button.TabIndex = 21;
@@ -477,7 +467,7 @@
             this.noter_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
             this.noter_label.Image = global::View_GUI.Properties.Resources.Note_icon;
             this.noter_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.noter_label.Location = new System.Drawing.Point(166, 237);
+            this.noter_label.Location = new System.Drawing.Point(143, 12);
             this.noter_label.Name = "noter_label";
             this.noter_label.Size = new System.Drawing.Size(95, 28);
             this.noter_label.TabIndex = 19;
@@ -486,7 +476,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(64)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.reg_koersel_label);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -512,7 +502,7 @@
             this.dato_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
             this.dato_label.Image = global::View_GUI.Properties.Resources.date_icon1;
             this.dato_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.dato_label.Location = new System.Drawing.Point(70, 197);
+            this.dato_label.Location = new System.Drawing.Point(69, 56);
             this.dato_label.Name = "dato_label";
             this.dato_label.Size = new System.Drawing.Size(87, 25);
             this.dato_label.TabIndex = 17;
@@ -525,7 +515,7 @@
             this.koersel_tid_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
             this.koersel_tid_label.Image = global::View_GUI.Properties.Resources.vw_beetle_icon2;
             this.koersel_tid_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.koersel_tid_label.Location = new System.Drawing.Point(24, 152);
+            this.koersel_tid_label.Location = new System.Drawing.Point(23, 14);
             this.koersel_tid_label.Name = "koersel_tid_label";
             this.koersel_tid_label.Size = new System.Drawing.Size(133, 25);
             this.koersel_tid_label.TabIndex = 13;
@@ -534,36 +524,10 @@
             // 
             // koersel_koersel_Tid_textBox
             // 
-            this.koersel_koersel_Tid_textBox.Location = new System.Drawing.Point(163, 152);
+            this.koersel_koersel_Tid_textBox.Location = new System.Drawing.Point(168, 17);
             this.koersel_koersel_Tid_textBox.Name = "koersel_koersel_Tid_textBox";
             this.koersel_koersel_Tid_textBox.Size = new System.Drawing.Size(70, 20);
             this.koersel_koersel_Tid_textBox.TabIndex = 14;
-            // 
-            // Advokat_id_label
-            // 
-            this.Advokat_id_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.Advokat_id_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(190)))), ((int)(((byte)(240)))));
-            this.Advokat_id_label.Image = global::View_GUI.Properties.Resources.barcode_icon;
-            this.Advokat_id_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Advokat_id_label.Location = new System.Drawing.Point(26, 60);
-            this.Advokat_id_label.Name = "Advokat_id_label";
-            this.Advokat_id_label.Size = new System.Drawing.Size(135, 24);
-            this.Advokat_id_label.TabIndex = 11;
-            this.Advokat_id_label.Text = "Advokat ID:";
-            this.Advokat_id_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // sag_Id_label
-            // 
-            this.sag_Id_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.sag_Id_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.sag_Id_label.Image = global::View_GUI.Properties.Resources.ID_icon;
-            this.sag_Id_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.sag_Id_label.Location = new System.Drawing.Point(54, 106);
-            this.sag_Id_label.Name = "sag_Id_label";
-            this.sag_Id_label.Size = new System.Drawing.Size(105, 24);
-            this.sag_Id_label.TabIndex = 2;
-            this.sag_Id_label.Text = "Sag ID:";
-            this.sag_Id_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel3
             // 
@@ -1105,6 +1069,121 @@
             this.panel11.Size = new System.Drawing.Size(394, 101);
             this.panel11.TabIndex = 35;
             // 
+            // panel6
+            // 
+            this.panel6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.koersel_Advokat_name_comboBox);
+            this.panel6.Controls.Add(this.label16);
+            this.panel6.Controls.Add(this.koersel_Advokat_Id_textBox);
+            this.panel6.Controls.Add(this.label17);
+            this.panel6.Location = new System.Drawing.Point(-1, 38);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(394, 101);
+            this.panel6.TabIndex = 34;
+            // 
+            // koersel_Advokat_name_comboBox
+            // 
+            this.koersel_Advokat_name_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.koersel_Advokat_name_comboBox.FormattingEnabled = true;
+            this.koersel_Advokat_name_comboBox.Location = new System.Drawing.Point(168, 14);
+            this.koersel_Advokat_name_comboBox.MaxDropDownItems = 100;
+            this.koersel_Advokat_name_comboBox.Name = "koersel_Advokat_name_comboBox";
+            this.koersel_Advokat_name_comboBox.Size = new System.Drawing.Size(191, 21);
+            this.koersel_Advokat_name_comboBox.TabIndex = 32;
+            // 
+            // label16
+            // 
+            this.label16.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(190)))), ((int)(((byte)(240)))));
+            this.label16.Image = global::View_GUI.Properties.Resources.barcode_icon;
+            this.label16.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label16.Location = new System.Drawing.Point(28, 55);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(135, 24);
+            this.label16.TabIndex = 26;
+            this.label16.Text = "Advokat ID:";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // koersel_Advokat_Id_textBox
+            // 
+            this.koersel_Advokat_Id_textBox.Location = new System.Drawing.Point(169, 59);
+            this.koersel_Advokat_Id_textBox.Name = "koersel_Advokat_Id_textBox";
+            this.koersel_Advokat_Id_textBox.Size = new System.Drawing.Size(190, 20);
+            this.koersel_Advokat_Id_textBox.TabIndex = 30;
+            // 
+            // label17
+            // 
+            this.label17.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.label17.Image = global::View_GUI.Properties.Resources.name_card_icon;
+            this.label17.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label17.Location = new System.Drawing.Point(5, 12);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(154, 24);
+            this.label17.TabIndex = 33;
+            this.label17.Text = "Advokat Navn:";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel7
+            // 
+            this.panel7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(64)))), ((int)(((byte)(84)))));
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.koersel_Sag_ID_textBox);
+            this.panel7.Controls.Add(this.label18);
+            this.panel7.Location = new System.Drawing.Point(0, 145);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(394, 61);
+            this.panel7.TabIndex = 43;
+            // 
+            // koersel_Sag_ID_textBox
+            // 
+            this.koersel_Sag_ID_textBox.Location = new System.Drawing.Point(168, 18);
+            this.koersel_Sag_ID_textBox.Name = "koersel_Sag_ID_textBox";
+            this.koersel_Sag_ID_textBox.Size = new System.Drawing.Size(190, 20);
+            this.koersel_Sag_ID_textBox.TabIndex = 42;
+            // 
+            // label18
+            // 
+            this.label18.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.label18.Image = global::View_GUI.Properties.Resources.ID_icon;
+            this.label18.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label18.Location = new System.Drawing.Point(52, 14);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(105, 24);
+            this.label18.TabIndex = 26;
+            this.label18.Text = "Sag ID:";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel12
+            // 
+            this.panel12.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(24)))), ((int)(((byte)(64)))));
+            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel12.Controls.Add(this.koersel_koersel_Tid_textBox);
+            this.panel12.Controls.Add(this.koersel_tid_label);
+            this.panel12.Controls.Add(this.koersel_date_dateTimePicker);
+            this.panel12.Controls.Add(this.dato_label);
+            this.panel12.Location = new System.Drawing.Point(0, 213);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(394, 101);
+            this.panel12.TabIndex = 42;
+            // 
+            // panel13
+            // 
+            this.panel13.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(64)))));
+            this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel13.Controls.Add(this.noter_label);
+            this.panel13.Controls.Add(this.koersel_noter_textBox);
+            this.panel13.Location = new System.Drawing.Point(0, 320);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(394, 101);
+            this.panel13.TabIndex = 43;
+            // 
             // Test1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1113,7 +1192,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.add_time_back_panel);
             this.Controls.Add(this.sag_Add_Ydelse_panel);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.Register_Koersel_Bag_Panel_panel);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.top_background_panel);
             this.Controls.Add(this.backPanel_Textboxes_panel);
@@ -1127,8 +1206,7 @@
             this.background_textboxes_top_panel.PerformLayout();
             this.backgroundName_Top_panel.ResumeLayout(false);
             this.backgroundName_Top_panel.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Register_Koersel_Bag_Panel_panel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -1152,6 +1230,14 @@
             this.panel10.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1175,11 +1261,9 @@
         private System.Windows.Forms.Label type_label;
         private System.Windows.Forms.Panel backgroundName_Top_panel;
         private System.Windows.Forms.Label Sager_Top_label;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel Register_Koersel_Bag_Panel_panel;
         private System.Windows.Forms.TextBox koersel_noter_textBox;
         private System.Windows.Forms.DateTimePicker koersel_date_dateTimePicker;
-        private System.Windows.Forms.ComboBox koersel_advokat_ID_comboBox;
-        private System.Windows.Forms.ComboBox koersel_sager_ID_comboBox;
         private System.Windows.Forms.Button koersel_Save_button;
         private System.Windows.Forms.Label noter_label;
         private System.Windows.Forms.Panel panel2;
@@ -1187,8 +1271,6 @@
         private System.Windows.Forms.Label dato_label;
         private System.Windows.Forms.Label koersel_tid_label;
         private System.Windows.Forms.TextBox koersel_koersel_Tid_textBox;
-        private System.Windows.Forms.Label Advokat_id_label;
-        private System.Windows.Forms.Label sag_Id_label;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label korsel_Top_label;
         private System.Windows.Forms.Label label2;
@@ -1210,7 +1292,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox add_time_Advokat_name_textBox;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button koersel_Clear_all_button;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button add_time_Clear_All_textboxes_button;
         private System.Windows.Forms.TextBox add_Ydelse_Ydelse_Nr_textBox;
@@ -1237,5 +1319,15 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.ComboBox koersel_Advokat_name_comboBox;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox koersel_Advokat_Id_textBox;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.TextBox koersel_Sag_ID_textBox;
+        private System.Windows.Forms.Label label18;
     }
 }
