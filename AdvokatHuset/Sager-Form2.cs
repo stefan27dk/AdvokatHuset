@@ -44,11 +44,7 @@ namespace View_GUI
         DataSet Sag_Dataset = new DataSet(); // Dataset for "Show Sag" and "Show Sag_Tlf"
                                                 
 
-
-        //TSag_Tlf - Database
-        static string Sag_Tlf_Select_Query = "Select* From Sag_Tlf";
-        //static string Sag_Tlf_Select_Query = "Select Sag_Tlf.*, Sag.Sag_Fornavn, Sag.Sag_Efternavn From Sag_Tlf Inner Join Sag ON Sag_Tlf.Sag_ID = Sag.Sag_ID;";
-
+        
 
 
 
@@ -65,8 +61,14 @@ namespace View_GUI
         bool successful = false; // Successful Transaction
 
 
+
+
         // Validate ADD-Ydelse
         bool Add_Ydelse_Validate = true;
+
+
+        // Validate Add Time
+        bool Add_time_validate = true;
 
         // Undo Delete
         List<DataGridViewRow> DeletedRowsList = new List<DataGridViewRow>(); // List with deleted Rows
@@ -392,6 +394,8 @@ namespace View_GUI
         // Hide All Menu_Windows
         private void HideAll_Menu_Windows()
         {
+            add_time_back_panel.Visible = false;
+            update_sag_Back_panel.Visible = false;
             backPanel_Textboxes_Opret_sag_panel.Visible = false;
             datagridviewBackground_panel.Visible = false;// Hide Datagridview
             sag_Add_Ydelse_panel.Visible = false;
@@ -651,7 +655,7 @@ namespace View_GUI
             {
                 Sag_dataGridView.EndEdit();
                 DatagridView_Save Update_Sag = new DatagridView_Save();
-                Update_Sag.DatagridView_Update(Sag_Tlf_Select_Query, Sag_Dataset, "Sag_Tlf", this.Sag_dataGridView);
+                Update_Sag.DatagridView_Update("", Sag_Dataset, "Sag_Tlf", this.Sag_dataGridView);
 
             }
 
@@ -1754,6 +1758,12 @@ namespace View_GUI
             Update_SAG_Slut_Dato_dateTimePicker.Value = DateTime.Now;
         }
 
+
+
+
+
+
+
         // Reset Color SAg ID Textbox
         private void Sag_ID_textBox_TextChanged(object sender, EventArgs e)
         {
@@ -1768,11 +1778,268 @@ namespace View_GUI
 
 
 
+        // Update Sag - Aflsut Sag
+        private void afslut_sag_button_Click(object sender, EventArgs e)
+        {
+            HideAll_Menu_Windows();
+            update_sag_Back_panel.Visible = true;
+        }
+
+
         // Update SAG ----"Afslut SAG"-------------::START::-------------------------------------------------------------------------------------------------
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //------------ADD Time--"Tilføj Tid"-----::START::------------------------------------------------------------
+
+    
+
+        //Add Time - "Tilføj Tid" - Button
+        private void add_time_button_Click(object sender, EventArgs e)
+        {
+
+            HideAll_Menu_Windows();
+            add_time_back_panel.Visible = true;
+        }
+
+
+
+
+
+
+
+
+        // Save Time Button
+        private void add_time_save_button_Click(object sender, EventArgs e)
+        {
+            Save_Time();
+        }
+
+
+
+
+
+
+        private void Valudate_Time()
+        {
+            Add_time_validate = true;
+
+            // Time - Validate
+            if(add_time_sag_textBox.Text.Length < 1)
+            {
+                Add_time_validate = false;
+                add_time_sag_textBox.BackColor = Color.FromArgb(255, 192, 192);
+            }
+
+            // Advokat ID - Validate
+            if(add_time_Advokat_name_textBox.Text.Length <15)
+            {
+                Add_time_validate = false;
+                add_time_Advokat_name_textBox.BackColor = Color.FromArgb(255, 192, 192);
+
+            }
+
+
+            if(add_time_sag_id_textBox.Text.Length < 15)
+            {
+                Add_time_validate = false;
+                add_time_sag_id_textBox.BackColor = Color.FromArgb(255, 192, 192);
+            }
+
+
+
+            if(add_time_ydelse_nr_textBox.Text.Length < 15)
+            {
+                Add_time_validate = false;
+                add_time_ydelse_nr_textBox.BackColor = Color.FromArgb(255, 192, 192);
+            }
+
+        }
+
+
+
+
+       
+
+
+
+        private void Save_Time()
+        {
+            Valudate_Time();
+
+            if(Add_time_validate == true)
+            {
+                DB_Connection_Write Add_time_toSag = new DB_Connection_Write();
+             bool succesfull_Added = Add_time_toSag.CreateCommand("$");
+
+                if(succesfull_Added == true)
+                {
+                    Clear_All_Inputs_Add_Time();
+                }
+
+            }
+
+        }
+
+
+
+
+        // TIME - Textbox - Validation
+        private void add_time_sag_textBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            bool have_comma = false;
+            if (e.KeyChar != (char)8 && e.KeyChar != (char)26)/// "Allow backspace"  and CTRL+Z
+            {
+                e.Handled = !decimal.TryParse(e.KeyChar.ToString(), out decimal isNumber);///Prevent letters
+            }
+
+
+
+            // Check for comma
+            for (int i = 0; i < add_time_sag_textBox.Text.Length; i++)
+            {
+                int commaIndex = 0;
+
+                if(add_time_sag_textBox.Text[i] == ',')
+                {
+                    commaIndex = i;
+                    have_comma = true;
+
+
+                    // Prevent Comma if comma exists
+                    if( e.KeyChar > (char)53)
+                    {
+                        e.Handled = true;
+
+                    }
+
+                    // Max 2 digits after Comma
+                    if(add_time_sag_textBox.Text.Length > commaIndex +2 && e.KeyChar != (char)8)
+                    {
+                        e.Handled = true;
+                    }
+
+                }
+
+         
+            }
+
+
+            if (e.KeyChar == (char)44 && have_comma == false)//If Comma and ther is no comma in the textbox than Add it
+            {
+                e.Handled = false;
+            }
+
+        }
+
+
+
+
+
+
+
+
+        //Reset Color - Time
+        private void add_time_sag_textBox_TextChanged(object sender, EventArgs e)
+        {
+            add_time_sag_textBox.BackColor = DefaultBackColor;
+        }
+
+
+
+
+
+
+
+        // Advokat Reset Color
+        private void add_time_Advokat_name_textBox_TextChanged(object sender, EventArgs e)
+        {
+            add_time_Advokat_name_textBox.BackColor = DefaultBackColor;
+        }
+
+
+
+
+
+
+
+        // Sag Reset Color
+        private void add_time_sag_id_textBox_TextChanged(object sender, EventArgs e)
+        {
+            add_time_sag_id_textBox.BackColor = DefaultBackColor;
+        }
+
+
+
+        // Ydelse NR - Reset Color
+        private void add_time_ydelse_nr_textBox_TextChanged(object sender, EventArgs e)
+        {
+            add_time_ydelse_nr_textBox.BackColor = DefaultBackColor;
+
+        }
+
+
+
+        // Clear All Inputs - Add - Time
+        private void add_time_Clear_All_textboxes_button_Click(object sender, EventArgs e)
+        {
+            Clear_All_Inputs_Add_Time();
+        }
+
+
+        private void Clear_All_Inputs_Add_Time()
+        {
+            Add_Time_sag_dateTimePicker.Value = DateTime.Now.Date;
+            add_time_sag_textBox.Clear();
+            add_time_Advokat_name_comboBox.SelectedIndex = -1;
+            add_time_Advokat_name_textBox.Clear();
+            add_time_sag_id_textBox.Clear();
+            add_time_ydelse_name_comboBox.SelectedIndex = -1;
+            add_time_ydelse_nr_textBox.Clear();
+            Reset_Input_Color();
+        }
+
+
+         // reset Color of the whole Input
+        private void Reset_Input_Color()
+        {
+            add_time_ydelse_nr_textBox.BackColor = DefaultBackColor;
+            add_time_sag_id_textBox.BackColor = DefaultBackColor;
+            add_time_Advokat_name_textBox.BackColor = DefaultBackColor;
+            add_time_sag_textBox.BackColor = DefaultBackColor;
+        }
+
+
+
+
+
+
+        //------------ADD Time--"Tilføj Tid"-----::START::------------------------------------------------------------
 
 
 

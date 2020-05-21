@@ -75,20 +75,17 @@
             this.ydelseNR_label = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.Ydelse_SagID_label = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.create_Clear_All_textboxes_button = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.add_time_back_panel = new System.Windows.Forms.Panel();
+            this.add_time_Clear_All_textboxes_button = new System.Windows.Forms.Button();
+            this.add_time_Advokat_name_textBox = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.add_time_sag_textBox = new System.Windows.Forms.TextBox();
+            this.Add_Time_sag_dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.add_time_save_button = new System.Windows.Forms.Button();
+            this.add_time_top_panel = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -99,6 +96,17 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.add_time_Advokat_name_comboBox = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.add_time_ydelse_name_comboBox = new System.Windows.Forms.ComboBox();
+            this.add_time_ydelse_nr_textBox = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.add_time_sag_id_textBox = new System.Windows.Forms.TextBox();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
             this.top_background_panel.SuspendLayout();
             this.backPanel_Textboxes_panel.SuspendLayout();
             this.background_textboxes_top_panel.SuspendLayout();
@@ -108,10 +116,14 @@
             this.panel3.SuspendLayout();
             this.sag_Add_Ydelse_panel.SuspendLayout();
             this.sag_Add_Ydelse_Top_panel.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
+            this.add_time_back_panel.SuspendLayout();
+            this.add_time_top_panel.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // top_background_panel
@@ -429,7 +441,7 @@
             // koersel_advokat_ID_comboBox
             // 
             this.koersel_advokat_ID_comboBox.FormattingEnabled = true;
-            this.koersel_advokat_ID_comboBox.Location = new System.Drawing.Point(163, 60);
+            this.koersel_advokat_ID_comboBox.Location = new System.Drawing.Point(165, 63);
             this.koersel_advokat_ID_comboBox.Name = "koersel_advokat_ID_comboBox";
             this.koersel_advokat_ID_comboBox.Size = new System.Drawing.Size(70, 21);
             this.koersel_advokat_ID_comboBox.TabIndex = 23;
@@ -709,51 +721,45 @@
             this.Ydelse_SagID_label.Text = "Sag ID:";
             this.Ydelse_SagID_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // panel6
+            // add_time_back_panel
             // 
-            this.panel6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(30)))), ((int)(((byte)(50)))));
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.create_Clear_All_textboxes_button);
-            this.panel6.Controls.Add(this.textBox2);
-            this.panel6.Controls.Add(this.label11);
-            this.panel6.Controls.Add(this.label10);
-            this.panel6.Controls.Add(this.textBox1);
-            this.panel6.Controls.Add(this.dateTimePicker1);
-            this.panel6.Controls.Add(this.comboBox1);
-            this.panel6.Controls.Add(this.label9);
-            this.panel6.Controls.Add(this.label3);
-            this.panel6.Controls.Add(this.comboBox4);
-            this.panel6.Controls.Add(this.label4);
-            this.panel6.Controls.Add(this.button2);
-            this.panel6.Controls.Add(this.panel7);
-            this.panel6.Location = new System.Drawing.Point(1022, 134);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(414, 388);
-            this.panel6.TabIndex = 30;
+            this.add_time_back_panel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.add_time_back_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(30)))), ((int)(((byte)(50)))));
+            this.add_time_back_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.add_time_back_panel.Controls.Add(this.panel10);
+            this.add_time_back_panel.Controls.Add(this.panel11);
+            this.add_time_back_panel.Controls.Add(this.panel9);
+            this.add_time_back_panel.Controls.Add(this.panel8);
+            this.add_time_back_panel.Controls.Add(this.add_time_Clear_All_textboxes_button);
+            this.add_time_back_panel.Controls.Add(this.add_time_save_button);
+            this.add_time_back_panel.Controls.Add(this.add_time_top_panel);
+            this.add_time_back_panel.Location = new System.Drawing.Point(1022, 50);
+            this.add_time_back_panel.Name = "add_time_back_panel";
+            this.add_time_back_panel.Size = new System.Drawing.Size(414, 502);
+            this.add_time_back_panel.TabIndex = 30;
             // 
-            // create_Clear_All_textboxes_button
+            // add_time_Clear_All_textboxes_button
             // 
-            this.create_Clear_All_textboxes_button.BackColor = System.Drawing.Color.Transparent;
-            this.create_Clear_All_textboxes_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
-            this.create_Clear_All_textboxes_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.create_Clear_All_textboxes_button.FlatAppearance.BorderSize = 0;
-            this.create_Clear_All_textboxes_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.create_Clear_All_textboxes_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.create_Clear_All_textboxes_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.create_Clear_All_textboxes_button.ForeColor = System.Drawing.Color.Black;
-            this.create_Clear_All_textboxes_button.Location = new System.Drawing.Point(137, 313);
-            this.create_Clear_All_textboxes_button.Name = "create_Clear_All_textboxes_button";
-            this.create_Clear_All_textboxes_button.Size = new System.Drawing.Size(28, 23);
-            this.create_Clear_All_textboxes_button.TabIndex = 31;
-            this.create_Clear_All_textboxes_button.UseVisualStyleBackColor = false;
+            this.add_time_Clear_All_textboxes_button.BackColor = System.Drawing.Color.Transparent;
+            this.add_time_Clear_All_textboxes_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
+            this.add_time_Clear_All_textboxes_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.add_time_Clear_All_textboxes_button.FlatAppearance.BorderSize = 0;
+            this.add_time_Clear_All_textboxes_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.add_time_Clear_All_textboxes_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.add_time_Clear_All_textboxes_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.add_time_Clear_All_textboxes_button.ForeColor = System.Drawing.Color.Black;
+            this.add_time_Clear_All_textboxes_button.Location = new System.Drawing.Point(116, 456);
+            this.add_time_Clear_All_textboxes_button.Name = "add_time_Clear_All_textboxes_button";
+            this.add_time_Clear_All_textboxes_button.Size = new System.Drawing.Size(28, 23);
+            this.add_time_Clear_All_textboxes_button.TabIndex = 31;
+            this.add_time_Clear_All_textboxes_button.UseVisualStyleBackColor = false;
             // 
-            // textBox2
+            // add_time_Advokat_name_textBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(171, 161);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(136, 20);
-            this.textBox2.TabIndex = 30;
+            this.add_time_Advokat_name_textBox.Location = new System.Drawing.Point(169, 59);
+            this.add_time_Advokat_name_textBox.Name = "add_time_Advokat_name_textBox";
+            this.add_time_Advokat_name_textBox.Size = new System.Drawing.Size(136, 20);
+            this.add_time_Advokat_name_textBox.TabIndex = 30;
             // 
             // label11
             // 
@@ -761,7 +767,7 @@
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(190)))), ((int)(((byte)(240)))));
             this.label11.Image = global::View_GUI.Properties.Resources.barcode_icon;
             this.label11.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label11.Location = new System.Drawing.Point(30, 157);
+            this.label11.Location = new System.Drawing.Point(28, 55);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(135, 24);
             this.label11.TabIndex = 26;
@@ -774,34 +780,26 @@
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
             this.label10.Image = global::View_GUI.Properties.Resources.Apps_clock_icon;
             this.label10.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label10.Location = new System.Drawing.Point(85, 107);
+            this.label10.Location = new System.Drawing.Point(92, 52);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(80, 29);
             this.label10.TabIndex = 25;
             this.label10.Text = "Tid:";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox1
+            // add_time_sag_textBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(170, 112);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(136, 20);
-            this.textBox1.TabIndex = 26;
+            this.add_time_sag_textBox.Location = new System.Drawing.Point(177, 57);
+            this.add_time_sag_textBox.Name = "add_time_sag_textBox";
+            this.add_time_sag_textBox.Size = new System.Drawing.Size(136, 20);
+            this.add_time_sag_textBox.TabIndex = 26;
             // 
-            // dateTimePicker1
+            // Add_Time_sag_dateTimePicker
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(170, 69);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(136, 20);
-            this.dateTimePicker1.TabIndex = 27;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(171, 255);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(135, 21);
-            this.comboBox1.TabIndex = 29;
+            this.Add_Time_sag_dateTimePicker.Location = new System.Drawing.Point(177, 14);
+            this.Add_Time_sag_dateTimePicker.Name = "Add_Time_sag_dateTimePicker";
+            this.Add_Time_sag_dateTimePicker.Size = new System.Drawing.Size(136, 20);
+            this.Add_Time_sag_dateTimePicker.TabIndex = 27;
             // 
             // label9
             // 
@@ -809,33 +807,12 @@
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
             this.label9.Image = global::View_GUI.Properties.Resources.date_icon1;
             this.label9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label9.Location = new System.Drawing.Point(77, 64);
+            this.label9.Location = new System.Drawing.Point(84, 9);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(87, 25);
             this.label9.TabIndex = 26;
             this.label9.Text = "Dato:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.label3.Image = global::View_GUI.Properties.Resources.name_card_icon1;
-            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label3.Location = new System.Drawing.Point(30, 252);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 24);
-            this.label3.TabIndex = 28;
-            this.label3.Text = "Ydelse Nr:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(170, 208);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(136, 21);
-            this.comboBox4.TabIndex = 27;
             // 
             // label4
             // 
@@ -843,40 +820,40 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
             this.label4.Image = global::View_GUI.Properties.Resources.ID_icon;
             this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label4.Location = new System.Drawing.Point(59, 205);
+            this.label4.Location = new System.Drawing.Point(52, 14);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(105, 24);
             this.label4.TabIndex = 26;
             this.label4.Text = "Sag ID:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // button2
+            // add_time_save_button
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
-            this.button2.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
-            this.button2.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(192, 308);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(90, 30);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "Gem";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = true;
+            this.add_time_save_button.FlatAppearance.BorderSize = 0;
+            this.add_time_save_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.add_time_save_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.add_time_save_button.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add_time_save_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
+            this.add_time_save_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
+            this.add_time_save_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.add_time_save_button.Location = new System.Drawing.Point(171, 451);
+            this.add_time_save_button.Name = "add_time_save_button";
+            this.add_time_save_button.Size = new System.Drawing.Size(90, 30);
+            this.add_time_save_button.TabIndex = 21;
+            this.add_time_save_button.Text = "Gem";
+            this.add_time_save_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.add_time_save_button.UseVisualStyleBackColor = true;
             // 
-            // panel7
+            // add_time_top_panel
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.label6);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(412, 26);
-            this.panel7.TabIndex = 10;
+            this.add_time_top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.add_time_top_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.add_time_top_panel.Controls.Add(this.label6);
+            this.add_time_top_panel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.add_time_top_panel.Location = new System.Drawing.Point(0, 0);
+            this.add_time_top_panel.Name = "add_time_top_panel";
+            this.add_time_top_panel.Size = new System.Drawing.Size(412, 26);
+            this.add_time_top_panel.TabIndex = 10;
             // 
             // label6
             // 
@@ -901,7 +878,7 @@
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.button6);
             this.panel4.Controls.Add(this.button7);
-            this.panel4.Location = new System.Drawing.Point(958, 49);
+            this.panel4.Location = new System.Drawing.Point(30, 184);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(414, 388);
             this.panel4.TabIndex = 38;
@@ -1001,13 +978,140 @@
             this.textBox3.Size = new System.Drawing.Size(209, 20);
             this.textBox3.TabIndex = 38;
             // 
+            // label14
+            // 
+            this.label14.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.label14.Image = global::View_GUI.Properties.Resources.name_card_icon;
+            this.label14.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label14.Location = new System.Drawing.Point(5, 12);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(154, 24);
+            this.label14.TabIndex = 33;
+            this.label14.Text = "Advokat Navn:";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // add_time_Advokat_name_comboBox
+            // 
+            this.add_time_Advokat_name_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.add_time_Advokat_name_comboBox.FormattingEnabled = true;
+            this.add_time_Advokat_name_comboBox.Location = new System.Drawing.Point(168, 14);
+            this.add_time_Advokat_name_comboBox.MaxDropDownItems = 100;
+            this.add_time_Advokat_name_comboBox.Name = "add_time_Advokat_name_comboBox";
+            this.add_time_Advokat_name_comboBox.Size = new System.Drawing.Size(191, 21);
+            this.add_time_Advokat_name_comboBox.TabIndex = 32;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.label3.Image = global::View_GUI.Properties.Resources.barcode_icon;
+            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label3.Location = new System.Drawing.Point(26, 62);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(135, 24);
+            this.label3.TabIndex = 41;
+            this.label3.Text = "Ydelse Nr:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // add_time_ydelse_name_comboBox
+            // 
+            this.add_time_ydelse_name_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.add_time_ydelse_name_comboBox.FormattingEnabled = true;
+            this.add_time_ydelse_name_comboBox.Location = new System.Drawing.Point(167, 17);
+            this.add_time_ydelse_name_comboBox.Name = "add_time_ydelse_name_comboBox";
+            this.add_time_ydelse_name_comboBox.Size = new System.Drawing.Size(209, 21);
+            this.add_time_ydelse_name_comboBox.TabIndex = 39;
+            // 
+            // add_time_ydelse_nr_textBox
+            // 
+            this.add_time_ydelse_nr_textBox.Location = new System.Drawing.Point(167, 62);
+            this.add_time_ydelse_nr_textBox.MaxLength = 50;
+            this.add_time_ydelse_nr_textBox.Name = "add_time_ydelse_nr_textBox";
+            this.add_time_ydelse_nr_textBox.Size = new System.Drawing.Size(209, 20);
+            this.add_time_ydelse_nr_textBox.TabIndex = 40;
+            // 
+            // label15
+            // 
+            this.label15.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.label15.Image = global::View_GUI.Properties.Resources.name_card_icon;
+            this.label15.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label15.Location = new System.Drawing.Point(10, 14);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(151, 24);
+            this.label15.TabIndex = 38;
+            this.label15.Text = "Ydelse Navn:";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // add_time_sag_id_textBox
+            // 
+            this.add_time_sag_id_textBox.Location = new System.Drawing.Point(163, 18);
+            this.add_time_sag_id_textBox.Name = "add_time_sag_id_textBox";
+            this.add_time_sag_id_textBox.Size = new System.Drawing.Size(136, 20);
+            this.add_time_sag_id_textBox.TabIndex = 42;
+            // 
+            // panel8
+            // 
+            this.panel8.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.Controls.Add(this.label10);
+            this.panel8.Controls.Add(this.label9);
+            this.panel8.Controls.Add(this.Add_Time_sag_dateTimePicker);
+            this.panel8.Controls.Add(this.add_time_sag_textBox);
+            this.panel8.Location = new System.Drawing.Point(11, 32);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(394, 101);
+            this.panel8.TabIndex = 32;
+            // 
+            // panel9
+            // 
+            this.panel9.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel9.Controls.Add(this.add_time_Advokat_name_comboBox);
+            this.panel9.Controls.Add(this.label11);
+            this.panel9.Controls.Add(this.add_time_Advokat_name_textBox);
+            this.panel9.Controls.Add(this.label14);
+            this.panel9.Location = new System.Drawing.Point(11, 139);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(394, 101);
+            this.panel9.TabIndex = 33;
+            // 
+            // panel10
+            // 
+            this.panel10.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(64)))), ((int)(((byte)(84)))));
+            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel10.Controls.Add(this.add_time_sag_id_textBox);
+            this.panel10.Controls.Add(this.label4);
+            this.panel10.Location = new System.Drawing.Point(11, 252);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(394, 61);
+            this.panel10.TabIndex = 34;
+            // 
+            // panel11
+            // 
+            this.panel11.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(24)))), ((int)(((byte)(64)))));
+            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel11.Controls.Add(this.add_time_ydelse_name_comboBox);
+            this.panel11.Controls.Add(this.label15);
+            this.panel11.Controls.Add(this.add_time_ydelse_nr_textBox);
+            this.panel11.Controls.Add(this.label3);
+            this.panel11.Location = new System.Drawing.Point(11, 322);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(394, 101);
+            this.panel11.TabIndex = 35;
+            // 
             // Test1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1913, 556);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.add_time_back_panel);
             this.Controls.Add(this.sag_Add_Ydelse_panel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
@@ -1033,14 +1137,21 @@
             this.sag_Add_Ydelse_panel.PerformLayout();
             this.sag_Add_Ydelse_Top_panel.ResumeLayout(false);
             this.sag_Add_Ydelse_Top_panel.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
+            this.add_time_back_panel.ResumeLayout(false);
+            this.add_time_top_panel.ResumeLayout(false);
+            this.add_time_top_panel.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1087,24 +1198,21 @@
         private System.Windows.Forms.Panel sag_Add_Ydelse_Top_panel;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label ydelseNR_label;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel add_time_back_panel;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox add_time_sag_textBox;
+        private System.Windows.Forms.DateTimePicker Add_Time_sag_dateTimePicker;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button add_time_save_button;
+        private System.Windows.Forms.Panel add_time_top_panel;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox add_time_Advokat_name_textBox;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button create_Clear_All_textboxes_button;
+        private System.Windows.Forms.Button add_time_Clear_All_textboxes_button;
         private System.Windows.Forms.TextBox add_Ydelse_Ydelse_Nr_textBox;
         private System.Windows.Forms.TextBox add_Ydelse_Sag_SagID_textBox;
         private System.Windows.Forms.Label label7;
@@ -1118,5 +1226,16 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox add_time_Advokat_name_comboBox;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.TextBox add_time_sag_id_textBox;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.ComboBox add_time_ydelse_name_comboBox;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox add_time_ydelse_nr_textBox;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel8;
     }
 }
