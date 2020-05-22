@@ -589,51 +589,131 @@ namespace View_GUI
         // Show Customers "Sag" - Main Method
         private void LoadSag()
         {
-            // Clear the Columns "Column Change order because of the second Table Sag_Tlf" TLF Colum becomes the first
-            if(Sag_dataGridView.DataMember == "Sag_Tlf")
+            if(Sag_dataGridView.DataMember != "Sag")
             {
-              Sag_dataGridView.Columns.Clear();
+            Sag_dataGridView.Columns.Clear();
             }
-
-
+        
             Sag_Dataset.Clear(); // Clear all rows so we begin on fresh datagridview "If We dont do that the old Data will remain and the new data will be inserted at the bottom of the datagridview"
             Datagridview_Loader Load_Customers = new Datagridview_Loader();
             Load_Customers.DB_Populate(show_Sag_Query, Sag_Dataset, "Sag");
             Sag_dataGridView.DataSource = Sag_Dataset;
             Sag_dataGridView.DataMember = "Sag";
+            
             Sag_dataGridView.Columns[5].ReadOnly = true;  // Forbid Editing 
             Sag_dataGridView.Columns[6].ReadOnly = true;  // Forbid Editing
             Sag_dataGridView.Columns[7].ReadOnly = true;  // Forbid Editing
             Sag_dataGridView.Columns[8].ReadOnly = true;  // Forbid Editing
             Sag_dataGridView.Columns[9].ReadOnly = true;  // Forbid Editing
             Sag_dataGridView.Columns[10].ReadOnly = true;  // Forbid Editing
+            Sag_dataGridView.Columns[11].ReadOnly = true;  // Forbid Editing
+            Sag_dataGridView.Columns[12].ReadOnly = true;  // Forbid Editing
+
+            
 
         }
 
 
 
-        // Show_Sag-Tlf - Load Sag_Tlf - Main Method
-        private void LoadSag_Tlf()
+        // Show_Ydelser - Main Method
+        private void LoadSag_Ydelser()
         {
-            string Sag_Tlf_Sag_navn_Select = "Select Sag_Tlf.*, Sag.Sag_Fornavn, Sag.Sag_Efternavn From Sag_Tlf Inner Join Sag ON Sag_Tlf.Sag_ID = Sag.Sag_ID;";
-            // Clear the Columns 
-            if (Sag_dataGridView.DataMember == "Sag")
-            {
-                Sag_dataGridView.Columns.Clear();
-            }
+            string Sag_Tlf_Sag_navn_Select = "Select SY.Sag_ID, SY.Sag_Ydelse_Oprets_Dato, Y.Ydelse_Navn, SY.Ydelse_Nr, T.Tid From Sag_Ydelser AS SY Full Join Ydelse As Y ON SY.Ydelse_Nr = Y.Ydelse_Nr Inner Join Tid AS T ON SY.Sag_ID = T.Sag_ID ";
 
-            // Sag_Tlf
+            if (Sag_dataGridView.DataMember != "Sag_Ydelser") 
+            {
+            Sag_dataGridView.Columns.Clear();
+
+            }
+       
+
+            // Sag_Ydelser
             Sag_Dataset.Clear();
             Datagridview_Loader Load_Sag_Tlf = new Datagridview_Loader();
-            Load_Sag_Tlf.DB_Populate(Sag_Tlf_Sag_navn_Select, Sag_Dataset, "Sag_Tlf");
+            Load_Sag_Tlf.DB_Populate(Sag_Tlf_Sag_navn_Select, Sag_Dataset, "Sag_Ydelser");
             Sag_dataGridView.DataSource = Sag_Dataset;
-            Sag_dataGridView.DataMember = "Sag_Tlf";
-            Sag_dataGridView.Columns[2].ReadOnly = true;  // Forbid Editing Sag_ForNavn
-            Sag_dataGridView.Columns[3].ReadOnly = true;  // Forbid Editing Sag_EfterNavn
+            Sag_dataGridView.DataMember = "Sag_Ydelser";
+            Sag_dataGridView.Columns[2].ReadOnly = true;  // Forbid Editing 
+            Sag_dataGridView.Columns[4].ReadOnly = true;  // Forbid Editing 
 
         }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // Show_Sag-Tid - Load Sag_Tid - Main Method
+        private void LoadSag_Tid()
+        {
+            string Sag_Tlf_Sag_navn_Select = "Select T.Tid, T.Tid_Dato, T.Tid_ID, T.Ydelse_Nr, M.Me_Fornavn, T.Advokat_ID From Tid AS T Inner Join Medarbejder AS M ON T.Advokat_ID = M.Me_ID ";
+
+
+            if (Sag_dataGridView.DataMember != "Tid")
+            {
+                Sag_dataGridView.Columns.Clear();
+
+            }
+
+
+            // Sag_Tid
+            Sag_Dataset.Clear();
+            Datagridview_Loader Load_Sag_Tlf = new Datagridview_Loader();
+            Load_Sag_Tlf.DB_Populate(Sag_Tlf_Sag_navn_Select, Sag_Dataset, "Tid");
+            Sag_dataGridView.DataSource = Sag_Dataset;
+            Sag_dataGridView.DataMember = "Tid";
+            Sag_dataGridView.Columns[4].ReadOnly = true;  // Forbid Editing 
+            //Sag_dataGridView.Columns[3].ReadOnly = true;  // Forbid Editing  
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // Show_Sag- Køre-Tid - Load Sag_køre_Tid - Main Method
+        private void LoadKoersel_Tid()
+        {
+            string Sag_Tlf_Sag_navn_Select = "Select K.Kørsel_Tid, K.Kørsel_Dato, K.Kørsel_Notering, K.Kørsel_ID, K.Sag_Id, M.Me_Fornavn AS Advokat_Fornavn, K.Advokat_ID  From Kørsel AS K Inner join Medarbejder As M ON K.Advokat_ID = M.Me_ID";
+
+
+            if (Sag_dataGridView.DataMember != "Kørsel")
+            {
+                Sag_dataGridView.Columns.Clear();
+
+            }
+
+
+            // Sag_Kørsel_Tid
+            Sag_Dataset.Clear();
+            Datagridview_Loader Load_Sag_Tlf = new Datagridview_Loader();
+            Load_Sag_Tlf.DB_Populate(Sag_Tlf_Sag_navn_Select, Sag_Dataset, "Kørsel");
+            Sag_dataGridView.DataSource = Sag_Dataset;
+            Sag_dataGridView.DataMember = "Kørsel";
+            Sag_dataGridView.Columns[5].ReadOnly = true;  // Forbid Editing  
+            //Sag_dataGridView.Columns[3].ReadOnly = true;  // Forbid Editing Sag_EfterNavn
+
+        }
         //---------------------------------LOAD-----------::END::---------------------------------------------------------------------------------------------------------
 
 
@@ -779,7 +859,7 @@ namespace View_GUI
             }
             else if (Sag_dataGridView.DataMember == "Sag_Tlf")
             {
-                LoadSag_Tlf();
+                LoadSag_Ydelser();
             }
         }
 
@@ -855,18 +935,52 @@ namespace View_GUI
 
 
 
-
-        // Sag_Tlf- Button - Show Tlf
-        private void Sag_Tlf_button_Click(object sender, EventArgs e)
+         //-----------------DG----MENU-----:START::--------------------------------------
+        // Sag_Ydelse- DG- Button - Show Ydelser
+        private void Sag_ydelse_DG__button_Click(object sender, EventArgs e)
         {
-            LoadSag_Tlf();
-            if(search_textBox.TextLength > 0)
+            LoadSag_Ydelser();
+            if (search_textBox.TextLength > 0)
             {
                 search_textBox.BackColor = Color.FromArgb(255, 192, 192);
             }
 
-
         }
+
+
+
+
+
+        // Sag_Tid - DG- Button - Show Tid
+        private void sag_Tid_DG_button_Click(object sender, EventArgs e)
+        {
+
+             LoadSag_Tid();
+            if (search_textBox.TextLength > 0)
+            {
+                search_textBox.BackColor = Color.FromArgb(255, 192, 192);
+            }
+        }
+
+
+
+
+
+
+        // Sag_Kørsel - DG- Button - Show Kørsel
+
+        private void sag_koersel_DG_button_Click(object sender, EventArgs e)
+        {
+            LoadKoersel_Tid();
+            if (search_textBox.TextLength > 0)
+            {
+                search_textBox.BackColor = Color.FromArgb(255, 192, 192);
+            }
+        }
+
+
+        //-----------------DG----MENU-----------::END::---------------------------
+
 
 
 
@@ -981,6 +1095,12 @@ namespace View_GUI
             Search_Column_comboBox.Items.Add("Advokat ID");
             Search_Column_comboBox.Items.Add("Tid");
             Search_Column_comboBox.Items.Add("Tid_Dato");
+            Search_Column_comboBox.Items.Add("Sag_Ydelse Fra Sag ID");
+            Search_Column_comboBox.Items.Add("Sag_Tid Fra Sag ID");
+            Search_Column_comboBox.Items.Add("Sag_Kørsel Fra Sag ID");
+            Search_Column_comboBox.Items.Add("Sag_Afslutet");
+            Search_Column_comboBox.Items.Add("Sag_Total Tid");
+            Search_Column_comboBox.Items.Add("Sag_Total_Kørsel");
             Search_Column_comboBox.SelectedIndex = 0;
 
         }
@@ -990,9 +1110,11 @@ namespace View_GUI
         private void Search_Column()
         {
             //SearchColumn_SearchString
+          
 
             switch (Search_Column_comboBox.SelectedIndex)
             {
+
                 case 0: // ALL
                     SearchColumn_SearchString = $"Select S.Sag_Type, S.Sag_ID, S.Sag_Oprets_Dato, S.Sag_Slut_Dato, S.Sag_Afslutet, K.Kunde_Fornavn, K.Kunde_Efternavn, S.Sag_Kunde_ID, M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn AS Advokat_Efternavn, S.Sag_Advokat_ID AS Ansvarlig_Advokat_ID, T.Tid, T.Tid_Dato From Sag As S Full Join Tid AS T On S.Sag_ID = T.Sag_ID Inner Join Kunde As K On S.Sag_Kunde_ID = K.Kunde_ID Inner Join Medarbejder AS M ON S.Sag_Advokat_ID = M.Me_ID Where S.Sag_Type {SearchOptions} OR S.Sag_ID {SearchOptions} OR S.Sag_Oprets_Dato {SearchOptions} OR S.Sag_Slut_Dato {SearchOptions} OR K.Kunde_Fornavn {SearchOptions} OR K.Kunde_Efternavn {SearchOptions} OR S.Sag_Kunde_ID {SearchOptions} OR M.Me_Fornavn {SearchOptions} OR M.Me_Efternavn {SearchOptions} OR S.Sag_Advokat_ID {SearchOptions} OR T.Tid {SearchOptions} OR T.Tid_Dato {SearchOptions};";
                     //IF(ISNUMERIC('{search_textBox.Text}') = 0) BEGIN Select* From Sag Where  Sag_Fornavn {SearchOptions} OR Sag_Efternavn {SearchOptions} OR Sag_Adresse {SearchOptions} OR Sag_Email {SearchOptions} OR Sag_Oprets_Dato {SearchOptions} OR Sag_ID {SearchOptions} END ELSE  BEGIN SELECT Sag.*, Sag_Tlf.Sag_Tlf From Sag Full Join Sag_Tlf ON Sag.Sag_ID = Sag_Tlf.Sag_ID Where Sag_PostNr {SearchOptions} OR Sag_Tlf.Sag_Tlf {SearchOptions} OR Sag_Fornavn {SearchOptions} OR Sag_Efternavn {SearchOptions} OR Sag_Adresse {SearchOptions} OR Sag_Email {SearchOptions} OR Sag_Oprets_Dato {SearchOptions} OR Sag.Sag_ID {SearchOptions} END;
@@ -1033,7 +1155,25 @@ namespace View_GUI
                 case 12: // Tid Dato
                     SearchColumn_SearchString = $"Select S.Sag_Type, S.Sag_ID, S.Sag_Oprets_Dato, S.Sag_Slut_Dato, S.Sag_Afslutet, K.Kunde_Fornavn, K.Kunde_Efternavn, S.Sag_Kunde_ID, M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn AS Advokat_Efternavn, S.Sag_Advokat_ID AS Ansvarlig_Advokat_ID, T.Tid, T.Tid_Dato From Sag As S Full Join Tid AS T On S.Sag_ID = T.Sag_ID Inner Join Kunde As K On S.Sag_Kunde_ID = K.Kunde_ID Inner Join Medarbejder AS M ON S.Sag_Advokat_ID = M.Me_ID Where T.Tid_Dato {SearchOptions}";
                     break;
-                   
+               case 13: // Sag_Ydelse
+                    SearchColumn_SearchString = $"Select SY.Sag_ID, Sy.Sag_Ydelse_Oprets_Dato, SY.Ydelse_Nr, Y.Ydelse_Navn, S.Sag_Kunde_ID, K.Kunde_Fornavn, K.Kunde_Efternavn, S.Sag_Advokat_ID AS Ansvarlig_Advokat_ID, M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn As Advokat_Efternavn, S.Sag_Afslutet, S.Sag_Oprets_Dato, S.Sag_Type, S.Sag_Slut_Dato, T.Tid, T.Tid_Dato, Y.Ydelse_Type From Sag_Ydelser AS Sy Inner Join Ydelse AS Y ON  Sy.Ydelse_Nr = Y.Ydelse_Nr Inner Join Sag AS S ON Sy.Sag_ID = S.Sag_ID Inner Join Kunde AS K ON S.Sag_Kunde_ID = K.Kunde_ID Inner Join Medarbejder M On S.Sag_Advokat_ID = M.Me_ID Inner JOIN Tid AS T ON Sy.Ydelse_Nr = T.Ydelse_Nr Where Sy.Sag_ID {SearchOptions}";
+                    break;
+               case 14: // Sag_Tid
+                    SearchColumn_SearchString = $"SELECT T.Tid_ID, T.Tid, T.Tid_Dato, T.Sag_ID, S.Sag_Type, S.Sag_Oprets_Dato, S.Sag_Slut_Dato, S.Sag_Afslutet, T.Ydelse_Nr, Y.Ydelse_Navn, T.Advokat_ID AS Ansvarlig_Advokat_ID, M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn AS Advokat_Efternavn, S.Sag_Kunde_ID, K.Kunde_Fornavn, K.Kunde_Efternavn FROM TID AS T Inner Join Ydelse AS Y ON T.Ydelse_Nr = Y.Ydelse_Nr  INNER JOIN Medarbejder AS M ON T.Advokat_ID = M.Me_ID Inner Join Sag AS S ON T.Sag_ID = S.Sag_ID Inner Join Kunde AS K ON Sag_Kunde_ID = K.Kunde_ID  Where T.Sag_ID {SearchOptions}";
+                    break;
+               case 15: // Sag_Køretid
+                    SearchColumn_SearchString = $"Select Ko.Kørsel_Tid, Ko.Kørsel_Dato, Ko.Kørsel_Notering, Ko.Advokat_ID AS Kørsel_Advokat_ID, M.Me_Fornavn AS Kørsel_Advokat_Fornavn, Ko.Kørsel_ID, S.Sag_Type, S.Sag_ID, S.Sag_Oprets_Dato, S.Sag_Slut_Dato, S.Sag_Afslutet, K.Kunde_Fornavn, K.Kunde_Efternavn, S.Sag_Kunde_ID, M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn AS Advokat_Efternavn, S.Sag_Advokat_ID AS Ansvarlig_Advokat_ID From Sag As S Full Join Kørsel AS Ko On S.Sag_ID = Ko.Sag_ID Inner Join Kunde As K On S.Sag_Kunde_ID = K.Kunde_ID Inner Join Medarbejder AS M ON Ko.Advokat_ID = M.Me_ID Where Ko.Sag_ID {SearchOptions}";
+                    break; 
+                case 16: // Sag_Afsluted
+                    SearchColumn_SearchString = $"Select S.Sag_Type, S.Sag_ID, S.Sag_Oprets_Dato, S.Sag_Slut_Dato, S.Sag_Afslutet, K.Kunde_Fornavn, K.Kunde_Efternavn, S.Sag_Kunde_ID, M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn AS Advokat_Efternavn, S.Sag_Advokat_ID AS Ansvarlig_Advokat_ID, T.Tid, T.Tid_Dato From Sag As S Full Join Tid AS T On S.Sag_ID = T.Sag_ID Inner Join Kunde As K On S.Sag_Kunde_ID = K.Kunde_ID Inner Join Medarbejder AS M ON S.Sag_Advokat_ID = M.Me_ID Where (S.Sag_Type {SearchOptions} OR S.Sag_ID {SearchOptions} OR S.Sag_Oprets_Dato {SearchOptions} OR S.Sag_Slut_Dato {SearchOptions} OR K.Kunde_Fornavn {SearchOptions} OR K.Kunde_Efternavn {SearchOptions} OR S.Sag_Kunde_ID {SearchOptions} OR M.Me_Fornavn {SearchOptions} OR M.Me_Efternavn {SearchOptions} OR S.Sag_Advokat_ID {SearchOptions} OR T.Tid {SearchOptions} OR T.Tid_Dato {SearchOptions}) AND S.Sag_Afslutet = 1";
+                    break;
+              case 17: // Sag_Total_TID
+                    SearchColumn_SearchString = $"Select SUM(T.Tid) AS Total_Tid From Tid AS T Where T.Sag_ID { SearchOptions}";
+                    break;  
+                case 18: // Sag_Køre_Total_TID
+                    SearchColumn_SearchString = $"Select SUM(K.Kørsel_Tid) AS Total_Kørsel_Tid From Kørsel AS K  Where K.Sag_ID { SearchOptions}";
+                    break;
+                    
             }
         }
 
@@ -1930,19 +2070,27 @@ namespace View_GUI
             }
 
 
+            // Comma To Dot Convert
+            if (e.KeyChar == (char)44)//If Comma
+            {
+                e.KeyChar = (char)46;
+            }
+
+
+           
 
             // Check for comma
             for (int i = 0; i < add_time_sag_textBox.Text.Length; i++)
             {
                 int commaIndex = 0;
 
-                if(add_time_sag_textBox.Text[i] == ',')
+                if(add_time_sag_textBox.Text[i] == '.')
                 {
                     commaIndex = i;
                     have_comma = true;
 
 
-                    // Prevent Comma if comma exists
+                    // Prevent Numbers from 5 and up 
                     if( e.KeyChar > (char)53)
                     {
                         e.Handled = true;
@@ -1960,11 +2108,11 @@ namespace View_GUI
          
             }
 
-
-            if (e.KeyChar == (char)44 && have_comma == false)//If Comma and ther is no comma in the textbox than Add it
+            if (e.KeyChar == (char)46 && have_comma == false && add_time_sag_textBox.Text != "")//If Comma and ther is no comma in the textbox than Add it
             {
                 e.Handled = false;
             }
+
 
         }
 
@@ -2161,24 +2309,34 @@ namespace View_GUI
             }
 
 
+            // Comma To Dot Convert
+            if (e.KeyChar == (char)44)//If Comma
+            {
+                e.KeyChar = (char)46;
+            }
+
+
+
 
             // Check for comma
             for (int i = 0; i < koersel_koersel_Tid_textBox.Text.Length; i++)
             {
                 int commaIndex = 0;
 
-                if (koersel_koersel_Tid_textBox.Text[i] == ',')
+                if (koersel_koersel_Tid_textBox.Text[i] == '.')
                 {
                     commaIndex = i;
                     have_comma = true;
 
 
-                    // Prevent Comma if comma exists
+                    // Prevent numbers fron 5 and up 
                     if (e.KeyChar > (char)53)
                     {
                         e.Handled = true;
 
                     }
+
+
 
                     // Max 2 digits after Comma
                     if (koersel_koersel_Tid_textBox.Text.Length > commaIndex + 2 && e.KeyChar != (char)8)
@@ -2191,11 +2349,12 @@ namespace View_GUI
 
             }
 
-
-            if (e.KeyChar == (char)44 && have_comma == false)//If Comma and ther is no comma in the textbox than Add it
+            if (e.KeyChar == (char)46 && have_comma == false && koersel_koersel_Tid_textBox.Text != "")//If Comma and ther is no comma in the textbox than Add it
             {
                 e.Handled = false;
             }
+
+
         }
 
 
@@ -2271,6 +2430,8 @@ namespace View_GUI
                 koersel_koersel_Tid_textBox.BackColor = Color.FromArgb(255, 192, 192);
             }
 
+        
+
        
 
         }
@@ -2303,8 +2464,7 @@ namespace View_GUI
             Clear_All_Input_Koersel();  
         }
 
-
-
+      
 
         //-------------------ADD---Kørsel ---------::END::---------------------------------------------------------------
 

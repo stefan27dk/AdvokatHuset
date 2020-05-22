@@ -1138,5 +1138,17 @@
   <ItemGroup>
     <None Include="Resources\win7_ico_shell32_dll-260 %282%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Car 789.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Top Background Panel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackPanel 7667.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bg124.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

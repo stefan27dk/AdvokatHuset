@@ -803,6 +803,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BackPanel_7667 {
+            get {
+                object obj = ResourceManager.GetObject("BackPanel 7667", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap barcode_icon {
             get {
                 object obj = ResourceManager.GetObject("barcode-icon", resourceCulture);
@@ -826,6 +836,16 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap bell_icon__1_ {
             get {
                 object obj = ResourceManager.GetObject("bell-icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Bg124 {
+            get {
+                object obj = ResourceManager.GetObject("Bg124", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -956,6 +976,16 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap Car_4 {
             get {
                 object obj = ResourceManager.GetObject("Car 4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Car_789 {
+            get {
+                object obj = ResourceManager.GetObject("Car 789", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2236,6 +2266,16 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap Top_Background_menu {
             get {
                 object obj = ResourceManager.GetObject("Top_Background_menu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Top_Background_Panel {
+            get {
+                object obj = ResourceManager.GetObject("Top Background Panel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

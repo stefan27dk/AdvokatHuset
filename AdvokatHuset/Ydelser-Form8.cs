@@ -196,16 +196,55 @@ namespace View_GUI
         // Validate Ydelse_Pris
         private void Ydelse_Pris_textBox_KeyPress(object sender, KeyPressEventArgs e)
         {
+
+            bool have_comma = false;
             if (e.KeyChar != (char)8 && e.KeyChar != (char)26)/// "Allow backspace"  and CTRL+Z
             {
                 e.Handled = !decimal.TryParse(e.KeyChar.ToString(), out decimal isNumber);///Prevent letters
             }
 
+
+            // Comma To Dot Convert
             if (e.KeyChar == (char)44)//If Comma
             {
                 e.KeyChar = (char)46;
+            }
+
+
+
+
+            // Check for comma
+            for (int i = 0; i < Ydelse_Pris_textBox.Text.Length; i++)
+            {
+                int commaIndex = 0;
+
+                if (Ydelse_Pris_textBox.Text[i] == '.')
+                {
+                    commaIndex = i;
+                    have_comma = true;
+
+
+                    
+
+                    // Max 2 digits after Comma
+                    if (Ydelse_Pris_textBox.Text.Length > commaIndex + 2 && e.KeyChar != (char)8)
+                    {
+                        e.Handled = true;
+                    }
+
+                }
+
+
+            }
+
+            if (e.KeyChar == (char)46 && have_comma == false && Ydelse_Pris_textBox.Text != "")//If Comma and ther is no comma in the textbox than Add it
+            {
                 e.Handled = false;
             }
+
+
+
+
 
         }
 
