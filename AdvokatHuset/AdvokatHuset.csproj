@@ -1150,5 +1150,17 @@
   <ItemGroup>
     <None Include="Resources\Bg124.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Status-dialog-password-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pass1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pass2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

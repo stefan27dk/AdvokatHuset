@@ -2267,7 +2267,7 @@ namespace View_GUI
         }
 
 
-        // kørsel - Advokat name Loader - Combobox
+        // Kørsel - Advokat name Loader - Combobox
         private void koersel_Advokat_name_comboBox_Click(object sender, EventArgs e)
         {
             koersel_Advokat_name_comboBox.Items.Clear();

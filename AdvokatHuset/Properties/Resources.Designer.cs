@@ -1653,6 +1653,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap key_icon {
+            get {
+                object obj = ResourceManager.GetObject("key-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap libreoffice_writer_icon {
             get {
                 object obj = ResourceManager.GetObject("libreoffice-writer-icon", resourceCulture);
@@ -1953,6 +1963,26 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Pass1 {
+            get {
+                object obj = ResourceManager.GetObject("Pass1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Pass2 {
+            get {
+                object obj = ResourceManager.GetObject("Pass2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pencil_icon {
             get {
                 object obj = ResourceManager.GetObject("pencil-icon", resourceCulture);
@@ -2246,6 +2276,16 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap Start_Menu_Search_icon1 {
             get {
                 object obj = ResourceManager.GetObject("Start-Menu-Search-icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Status_dialog_password_icon {
+            get {
+                object obj = ResourceManager.GetObject("Status-dialog-password-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

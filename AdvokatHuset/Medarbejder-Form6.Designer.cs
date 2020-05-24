@@ -32,53 +32,29 @@
             this.backgroundName_Top_panel = new System.Windows.Forms.Panel();
             this.medarbejdere_name_textBox = new System.Windows.Forms.TextBox();
             this.backPanel_Textboxes_panel = new System.Windows.Forms.Panel();
-            this.create_Clear_All_textboxes_button = new System.Windows.Forms.Button();
-            this.email_label = new System.Windows.Forms.Label();
             this.medarbejder_email_textBox = new System.Windows.Forms.TextBox();
-            this.medarbejdere_Save_button = new System.Windows.Forms.Button();
-            this.adr_label = new System.Windows.Forms.Label();
             this.medarbejdere_adr_textBox = new System.Windows.Forms.TextBox();
             this.background_textboxes_top_panel = new System.Windows.Forms.Panel();
             this.opret_Medarbejdere_label = new System.Windows.Forms.Label();
-            this.zipCode_label = new System.Windows.Forms.Label();
             this.medarbejdere_zipcCode_textBox = new System.Windows.Forms.TextBox();
-            this.tlf_label = new System.Windows.Forms.Label();
             this.medarbejdere_tlf_textBox = new System.Windows.Forms.TextBox();
-            this.surname_label = new System.Windows.Forms.Label();
             this.medarbejdere_surname_textBox = new System.Windows.Forms.TextBox();
-            this.name_label = new System.Windows.Forms.Label();
             this.datagridviewBackground_panel = new System.Windows.Forms.Panel();
-            this.speciale_BACK_panel = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.slet_speciale_from_medarbejdere_back__panel = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.delete_speciale_from_medarbejder_textBox = new System.Windows.Forms.TextBox();
-            this.delete_speciale_from_medarbejder_comboBox = new System.Windows.Forms.ComboBox();
-            this.delete_speciale_from_medarbejder_delete_button = new System.Windows.Forms.Button();
-            this.delete_speciale_backpanel_panel = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.delete_speciale_comboBox = new System.Windows.Forms.ComboBox();
-            this.delete_speciale_button = new System.Windows.Forms.Button();
-            this.add_speciale_backpanel_panel = new System.Windows.Forms.Panel();
-            this.Add_Specaile_To_DB_comboBox = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.save_speciale_button = new System.Windows.Forms.Button();
-            this.clear_speciale_button = new System.Windows.Forms.Button();
+            this.Log_In_BACK_panel = new System.Windows.Forms.Panel();
             this.background_Medarbejder_specialepanel = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.speciale_medarbejder_id_textBox = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.save_Medarbejder_specaile_button = new System.Windows.Forms.Button();
-            this.clear_medarbejder_speciale_button = new System.Windows.Forms.Button();
-            this.speciale_comboBox = new System.Windows.Forms.ComboBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.speciale_Midd_panel = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.log_in_textBox = new System.Windows.Forms.TextBox();
             this.speciale_Medarbejder_Top_panel = new System.Windows.Forms.Panel();
-            this.speciale_label = new System.Windows.Forms.Label();
+            this.Log_In_label = new System.Windows.Forms.Label();
+            this.Medarbejder_dataGridView = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.slet_log_in_label = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.Del_button = new System.Windows.Forms.Button();
+            this.Del_Clear_button = new System.Windows.Forms.Button();
+            this.Log_In_name_label = new System.Windows.Forms.Label();
+            this.pass_label = new System.Windows.Forms.Label();
+            this.save_log_in_button = new System.Windows.Forms.Button();
+            this.clear_all_log_in_button = new System.Windows.Forms.Button();
             this.background_DGV_Search_panel = new System.Windows.Forms.Panel();
             this.search_textBox = new System.Windows.Forms.TextBox();
             this.search_options_comboBox = new System.Windows.Forms.ComboBox();
@@ -93,37 +69,49 @@
             this.screenshot_datagridview_button = new System.Windows.Forms.Button();
             this.print_button = new System.Windows.Forms.Button();
             this.background_DGV_panel3 = new System.Windows.Forms.Panel();
+            this.copy_selected_column_button = new System.Windows.Forms.Button();
             this.change_DatagridView_Color_button = new System.Windows.Forms.Button();
             this.mark_current_row_button = new System.Windows.Forms.Button();
             this.background_DGV_panel2 = new System.Windows.Forms.Panel();
             this.Medarbejder_Tlf_button = new System.Windows.Forms.Button();
             this.show_all_button = new System.Windows.Forms.Button();
-            this.Medarbejder_dataGridView = new System.Windows.Forms.DataGridView();
             this.top_Menu_background_panel = new System.Windows.Forms.Panel();
             this.main_specialer_button = new System.Windows.Forms.Button();
             this.vis_rediger_medarbejdere_button = new System.Windows.Forms.Button();
             this.opret_medarbejder_button = new System.Windows.Forms.Button();
-            this.copy_selected_column_button = new System.Windows.Forms.Button();
+            this.create_Clear_All_textboxes_button = new System.Windows.Forms.Button();
+            this.email_label = new System.Windows.Forms.Label();
+            this.medarbejdere_Save_button = new System.Windows.Forms.Button();
+            this.adr_label = new System.Windows.Forms.Label();
+            this.zipCode_label = new System.Windows.Forms.Label();
+            this.tlf_label = new System.Windows.Forms.Label();
+            this.surname_label = new System.Windows.Forms.Label();
+            this.name_label = new System.Windows.Forms.Label();
+            this.pass_textBox = new System.Windows.Forms.TextBox();
+            this.Medarbejder_Navn_label = new System.Windows.Forms.Label();
+            this.load_ME_Names_comboBox = new System.Windows.Forms.ComboBox();
+            this.Medarbejder_ID_label = new System.Windows.Forms.Label();
+            this.Me_ID_textBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Del_ME_ID_textBox = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.Del_Me_name_comboBox = new System.Windows.Forms.ComboBox();
             this.backgroundName_Top_panel.SuspendLayout();
             this.backPanel_Textboxes_panel.SuspendLayout();
             this.background_textboxes_top_panel.SuspendLayout();
             this.datagridviewBackground_panel.SuspendLayout();
-            this.speciale_BACK_panel.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.slet_speciale_from_medarbejdere_back__panel.SuspendLayout();
-            this.delete_speciale_backpanel_panel.SuspendLayout();
-            this.add_speciale_backpanel_panel.SuspendLayout();
+            this.Log_In_BACK_panel.SuspendLayout();
             this.background_Medarbejder_specialepanel.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.speciale_Midd_panel.SuspendLayout();
             this.speciale_Medarbejder_Top_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Medarbejder_dataGridView)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.background_DGV_Search_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.search_Datagridview_pictureBox)).BeginInit();
             this.background_DGV_panel1.SuspendLayout();
             this.background_DGV_panel4.SuspendLayout();
             this.background_DGV_panel3.SuspendLayout();
             this.background_DGV_panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Medarbejder_dataGridView)).BeginInit();
             this.top_Menu_background_panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -185,36 +173,6 @@
             this.backPanel_Textboxes_panel.TabIndex = 11;
             this.backPanel_Textboxes_panel.Visible = false;
             // 
-            // create_Clear_All_textboxes_button
-            // 
-            this.create_Clear_All_textboxes_button.BackColor = System.Drawing.Color.Transparent;
-            this.create_Clear_All_textboxes_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
-            this.create_Clear_All_textboxes_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.create_Clear_All_textboxes_button.FlatAppearance.BorderSize = 0;
-            this.create_Clear_All_textboxes_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.create_Clear_All_textboxes_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.create_Clear_All_textboxes_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.create_Clear_All_textboxes_button.ForeColor = System.Drawing.Color.Black;
-            this.create_Clear_All_textboxes_button.Location = new System.Drawing.Point(119, 339);
-            this.create_Clear_All_textboxes_button.Name = "create_Clear_All_textboxes_button";
-            this.create_Clear_All_textboxes_button.Size = new System.Drawing.Size(28, 23);
-            this.create_Clear_All_textboxes_button.TabIndex = 23;
-            this.create_Clear_All_textboxes_button.UseVisualStyleBackColor = false;
-            this.create_Clear_All_textboxes_button.Click += new System.EventHandler(this.create_Clear_All_textboxes_button_Click);
-            // 
-            // email_label
-            // 
-            this.email_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.email_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.email_label.Image = global::View_GUI.Properties.Resources.At_Mail_icon;
-            this.email_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.email_label.Location = new System.Drawing.Point(53, 287);
-            this.email_label.Name = "email_label";
-            this.email_label.Size = new System.Drawing.Size(98, 33);
-            this.email_label.TabIndex = 22;
-            this.email_label.Text = "Email:";
-            this.email_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // medarbejder_email_textBox
             // 
             this.medarbejder_email_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
@@ -224,37 +182,6 @@
             this.medarbejder_email_textBox.Size = new System.Drawing.Size(100, 20);
             this.medarbejder_email_textBox.TabIndex = 6;
             this.medarbejder_email_textBox.TextChanged += new System.EventHandler(this.medarbejder_email_textBox_TextChanged);
-            // 
-            // medarbejdere_Save_button
-            // 
-            this.medarbejdere_Save_button.FlatAppearance.BorderSize = 0;
-            this.medarbejdere_Save_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.medarbejdere_Save_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
-            this.medarbejdere_Save_button.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.medarbejdere_Save_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
-            this.medarbejdere_Save_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
-            this.medarbejdere_Save_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.medarbejdere_Save_button.Location = new System.Drawing.Point(162, 336);
-            this.medarbejdere_Save_button.Name = "medarbejdere_Save_button";
-            this.medarbejdere_Save_button.Size = new System.Drawing.Size(90, 30);
-            this.medarbejdere_Save_button.TabIndex = 7;
-            this.medarbejdere_Save_button.Text = "Gem";
-            this.medarbejdere_Save_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.medarbejdere_Save_button.UseVisualStyleBackColor = true;
-            this.medarbejdere_Save_button.Click += new System.EventHandler(this.medarbejdere_Save_button_Click);
-            // 
-            // adr_label
-            // 
-            this.adr_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.adr_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.adr_label.Image = global::View_GUI.Properties.Resources.my_numbers_icon;
-            this.adr_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.adr_label.Location = new System.Drawing.Point(70, 197);
-            this.adr_label.Name = "adr_label";
-            this.adr_label.Size = new System.Drawing.Size(80, 25);
-            this.adr_label.TabIndex = 19;
-            this.adr_label.Text = "Adr:";
-            this.adr_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // medarbejdere_adr_textBox
             // 
@@ -288,19 +215,6 @@
             this.opret_Medarbejdere_label.TabIndex = 1;
             this.opret_Medarbejdere_label.Text = "Opret Chef";
             // 
-            // zipCode_label
-            // 
-            this.zipCode_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.zipCode_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.zipCode_label.Image = global::View_GUI.Properties.Resources.Compressed_File_Zip_icon;
-            this.zipCode_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.zipCode_label.Location = new System.Drawing.Point(49, 150);
-            this.zipCode_label.Name = "zipCode_label";
-            this.zipCode_label.Size = new System.Drawing.Size(105, 25);
-            this.zipCode_label.TabIndex = 17;
-            this.zipCode_label.Text = "PostNr:";
-            this.zipCode_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // medarbejdere_zipcCode_textBox
             // 
             this.medarbejdere_zipcCode_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
@@ -311,19 +225,6 @@
             this.medarbejdere_zipcCode_textBox.TabIndex = 3;
             this.medarbejdere_zipcCode_textBox.TextChanged += new System.EventHandler(this.medarbejdere_zipcCode_textBox_TextChanged);
             this.medarbejdere_zipcCode_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.medarbejdere_zipcCode_textBox_KeyPress);
-            // 
-            // tlf_label
-            // 
-            this.tlf_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.tlf_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.tlf_label.Image = global::View_GUI.Properties.Resources.Phone_icon__1_;
-            this.tlf_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.tlf_label.Location = new System.Drawing.Point(80, 243);
-            this.tlf_label.Name = "tlf_label";
-            this.tlf_label.Size = new System.Drawing.Size(73, 24);
-            this.tlf_label.TabIndex = 15;
-            this.tlf_label.Text = "Tlf:";
-            this.tlf_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // medarbejdere_tlf_textBox
             // 
@@ -336,19 +237,6 @@
             this.medarbejdere_tlf_textBox.TextChanged += new System.EventHandler(this.medarbejdere_tlf_textBox_TextChanged);
             this.medarbejdere_tlf_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.medarbejdere_tlf_textBox_KeyPress);
             // 
-            // surname_label
-            // 
-            this.surname_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.surname_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.surname_label.Image = global::View_GUI.Properties.Resources.name_card_icon;
-            this.surname_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.surname_label.Location = new System.Drawing.Point(25, 104);
-            this.surname_label.Name = "surname_label";
-            this.surname_label.Size = new System.Drawing.Size(125, 25);
-            this.surname_label.TabIndex = 13;
-            this.surname_label.Text = "Efternavn:";
-            this.surname_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // medarbejdere_surname_textBox
             // 
             this.medarbejdere_surname_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
@@ -360,25 +248,11 @@
             this.medarbejdere_surname_textBox.TextChanged += new System.EventHandler(this.medarbejdere_surname_textBox_TextChanged);
             this.medarbejdere_surname_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.medarbejdere_surname_textBox_KeyPress);
             // 
-            // name_label
-            // 
-            this.name_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.name_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.name_label.Image = global::View_GUI.Properties.Resources.ID_icon;
-            this.name_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.name_label.Location = new System.Drawing.Point(56, 59);
-            this.name_label.Name = "name_label";
-            this.name_label.Size = new System.Drawing.Size(95, 24);
-            this.name_label.TabIndex = 2;
-            this.name_label.Text = "Navn:";
-            this.name_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // datagridviewBackground_panel
             // 
             this.datagridviewBackground_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.datagridviewBackground_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.datagridviewBackground_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.datagridviewBackground_panel.Controls.Add(this.speciale_BACK_panel);
             this.datagridviewBackground_panel.Controls.Add(this.background_DGV_Search_panel);
             this.datagridviewBackground_panel.Controls.Add(this.background_DGV_panel1);
             this.datagridviewBackground_panel.Controls.Add(this.background_DGV_panel4);
@@ -390,408 +264,218 @@
             this.datagridviewBackground_panel.Size = new System.Drawing.Size(1540, 588);
             this.datagridviewBackground_panel.TabIndex = 13;
             // 
-            // speciale_BACK_panel
+            // Log_In_BACK_panel
             // 
-            this.speciale_BACK_panel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.speciale_BACK_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.speciale_BACK_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.speciale_BACK_panel.Controls.Add(this.panel5);
-            this.speciale_BACK_panel.Controls.Add(this.slet_speciale_from_medarbejdere_back__panel);
-            this.speciale_BACK_panel.Controls.Add(this.delete_speciale_backpanel_panel);
-            this.speciale_BACK_panel.Controls.Add(this.add_speciale_backpanel_panel);
-            this.speciale_BACK_panel.Controls.Add(this.background_Medarbejder_specialepanel);
-            this.speciale_BACK_panel.Controls.Add(this.panel1);
-            this.speciale_BACK_panel.Controls.Add(this.speciale_Midd_panel);
-            this.speciale_BACK_panel.Controls.Add(this.speciale_Medarbejder_Top_panel);
-            this.speciale_BACK_panel.Location = new System.Drawing.Point(457, 62);
-            this.speciale_BACK_panel.Name = "speciale_BACK_panel";
-            this.speciale_BACK_panel.Size = new System.Drawing.Size(786, 395);
-            this.speciale_BACK_panel.TabIndex = 24;
-            this.speciale_BACK_panel.Visible = false;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.label5);
-            this.panel5.Location = new System.Drawing.Point(392, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(392, 26);
-            this.panel5.TabIndex = 32;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(92)))));
-            this.label5.Location = new System.Drawing.Point(105, 3);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(237, 21);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Slet Speciale fra Medarbejder";
-            // 
-            // slet_speciale_from_medarbejdere_back__panel
-            // 
-            this.slet_speciale_from_medarbejdere_back__panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(34)))), ((int)(((byte)(44)))));
-            this.slet_speciale_from_medarbejdere_back__panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.slet_speciale_from_medarbejdere_back__panel.Controls.Add(this.label9);
-            this.slet_speciale_from_medarbejdere_back__panel.Controls.Add(this.label4);
-            this.slet_speciale_from_medarbejdere_back__panel.Controls.Add(this.delete_speciale_from_medarbejder_textBox);
-            this.slet_speciale_from_medarbejdere_back__panel.Controls.Add(this.delete_speciale_from_medarbejder_comboBox);
-            this.slet_speciale_from_medarbejdere_back__panel.Controls.Add(this.delete_speciale_from_medarbejder_delete_button);
-            this.slet_speciale_from_medarbejdere_back__panel.Location = new System.Drawing.Point(392, 26);
-            this.slet_speciale_from_medarbejdere_back__panel.Name = "slet_speciale_from_medarbejdere_back__panel";
-            this.slet_speciale_from_medarbejdere_back__panel.Size = new System.Drawing.Size(392, 168);
-            this.slet_speciale_from_medarbejdere_back__panel.TabIndex = 33;
-            // 
-            // label9
-            // 
-            this.label9.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.label9.Image = global::View_GUI.Properties.Resources.ID_icon;
-            this.label9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label9.Location = new System.Drawing.Point(47, 17);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(135, 24);
-            this.label9.TabIndex = 26;
-            this.label9.Text = "Medarbejder ID:";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.label4.Image = global::View_GUI.Properties.Resources.research_icon__1_;
-            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label4.Location = new System.Drawing.Point(69, 65);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(114, 25);
-            this.label4.TabIndex = 28;
-            this.label4.Text = "Speciale:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // delete_speciale_from_medarbejder_textBox
-            // 
-            this.delete_speciale_from_medarbejder_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
-            this.delete_speciale_from_medarbejder_textBox.Location = new System.Drawing.Point(190, 21);
-            this.delete_speciale_from_medarbejder_textBox.MaxLength = 49;
-            this.delete_speciale_from_medarbejder_textBox.Name = "delete_speciale_from_medarbejder_textBox";
-            this.delete_speciale_from_medarbejder_textBox.Size = new System.Drawing.Size(100, 20);
-            this.delete_speciale_from_medarbejder_textBox.TabIndex = 25;
-            // 
-            // delete_speciale_from_medarbejder_comboBox
-            // 
-            this.delete_speciale_from_medarbejder_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.delete_speciale_from_medarbejder_comboBox.FormattingEnabled = true;
-            this.delete_speciale_from_medarbejder_comboBox.Location = new System.Drawing.Point(191, 66);
-            this.delete_speciale_from_medarbejder_comboBox.MaxDropDownItems = 50;
-            this.delete_speciale_from_medarbejder_comboBox.Name = "delete_speciale_from_medarbejder_comboBox";
-            this.delete_speciale_from_medarbejder_comboBox.Size = new System.Drawing.Size(100, 21);
-            this.delete_speciale_from_medarbejder_comboBox.TabIndex = 29;
-            this.delete_speciale_from_medarbejder_comboBox.Click += new System.EventHandler(this.delete_speciale_from_medarbejder_comboBox_Click);
-            // 
-            // delete_speciale_from_medarbejder_delete_button
-            // 
-            this.delete_speciale_from_medarbejder_delete_button.FlatAppearance.BorderSize = 0;
-            this.delete_speciale_from_medarbejder_delete_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.delete_speciale_from_medarbejder_delete_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
-            this.delete_speciale_from_medarbejder_delete_button.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.delete_speciale_from_medarbejder_delete_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.delete_speciale_from_medarbejder_delete_button.Image = global::View_GUI.Properties.Resources.Actions_edit_delete_icon3;
-            this.delete_speciale_from_medarbejder_delete_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.delete_speciale_from_medarbejder_delete_button.Location = new System.Drawing.Point(197, 108);
-            this.delete_speciale_from_medarbejder_delete_button.Name = "delete_speciale_from_medarbejder_delete_button";
-            this.delete_speciale_from_medarbejder_delete_button.Size = new System.Drawing.Size(90, 30);
-            this.delete_speciale_from_medarbejder_delete_button.TabIndex = 25;
-            this.delete_speciale_from_medarbejder_delete_button.Text = "SLET";
-            this.delete_speciale_from_medarbejder_delete_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.delete_speciale_from_medarbejder_delete_button.UseVisualStyleBackColor = true;
-            this.delete_speciale_from_medarbejder_delete_button.Click += new System.EventHandler(this.delete_speciale_from_medarbejder_delete_button_Click);
-            // 
-            // delete_speciale_backpanel_panel
-            // 
-            this.delete_speciale_backpanel_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(34)))), ((int)(((byte)(44)))));
-            this.delete_speciale_backpanel_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.delete_speciale_backpanel_panel.Controls.Add(this.label8);
-            this.delete_speciale_backpanel_panel.Controls.Add(this.delete_speciale_comboBox);
-            this.delete_speciale_backpanel_panel.Controls.Add(this.delete_speciale_button);
-            this.delete_speciale_backpanel_panel.Location = new System.Drawing.Point(392, 276);
-            this.delete_speciale_backpanel_panel.Name = "delete_speciale_backpanel_panel";
-            this.delete_speciale_backpanel_panel.Size = new System.Drawing.Size(392, 117);
-            this.delete_speciale_backpanel_panel.TabIndex = 32;
-            // 
-            // label8
-            // 
-            this.label8.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.label8.Image = global::View_GUI.Properties.Resources.research_icon__2___3_;
-            this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label8.Location = new System.Drawing.Point(22, 20);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(161, 25);
-            this.label8.TabIndex = 28;
-            this.label8.Text = "SLET Speciale:";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // delete_speciale_comboBox
-            // 
-            this.delete_speciale_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.delete_speciale_comboBox.FormattingEnabled = true;
-            this.delete_speciale_comboBox.Location = new System.Drawing.Point(191, 24);
-            this.delete_speciale_comboBox.MaxDropDownItems = 50;
-            this.delete_speciale_comboBox.Name = "delete_speciale_comboBox";
-            this.delete_speciale_comboBox.Size = new System.Drawing.Size(100, 21);
-            this.delete_speciale_comboBox.TabIndex = 29;
-            this.delete_speciale_comboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.delete_speciale_comboBox_MouseClick);
-            // 
-            // delete_speciale_button
-            // 
-            this.delete_speciale_button.FlatAppearance.BorderSize = 0;
-            this.delete_speciale_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.delete_speciale_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
-            this.delete_speciale_button.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.delete_speciale_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.delete_speciale_button.Image = global::View_GUI.Properties.Resources.Actions_edit_delete_icon3;
-            this.delete_speciale_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.delete_speciale_button.Location = new System.Drawing.Point(197, 66);
-            this.delete_speciale_button.Name = "delete_speciale_button";
-            this.delete_speciale_button.Size = new System.Drawing.Size(90, 30);
-            this.delete_speciale_button.TabIndex = 25;
-            this.delete_speciale_button.Text = "SLET";
-            this.delete_speciale_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.delete_speciale_button.UseVisualStyleBackColor = true;
-            this.delete_speciale_button.Click += new System.EventHandler(this.delete_speciale_button_Click);
-            // 
-            // add_speciale_backpanel_panel
-            // 
-            this.add_speciale_backpanel_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(44)))));
-            this.add_speciale_backpanel_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.add_speciale_backpanel_panel.Controls.Add(this.Add_Specaile_To_DB_comboBox);
-            this.add_speciale_backpanel_panel.Controls.Add(this.label2);
-            this.add_speciale_backpanel_panel.Controls.Add(this.save_speciale_button);
-            this.add_speciale_backpanel_panel.Controls.Add(this.clear_speciale_button);
-            this.add_speciale_backpanel_panel.Location = new System.Drawing.Point(0, 276);
-            this.add_speciale_backpanel_panel.Name = "add_speciale_backpanel_panel";
-            this.add_speciale_backpanel_panel.Size = new System.Drawing.Size(392, 117);
-            this.add_speciale_backpanel_panel.TabIndex = 31;
-            // 
-            // Add_Specaile_To_DB_comboBox
-            // 
-            this.Add_Specaile_To_DB_comboBox.FormattingEnabled = true;
-            this.Add_Specaile_To_DB_comboBox.Location = new System.Drawing.Point(192, 18);
-            this.Add_Specaile_To_DB_comboBox.MaxDropDownItems = 50;
-            this.Add_Specaile_To_DB_comboBox.Name = "Add_Specaile_To_DB_comboBox";
-            this.Add_Specaile_To_DB_comboBox.Size = new System.Drawing.Size(100, 21);
-            this.Add_Specaile_To_DB_comboBox.TabIndex = 25;
-            this.Add_Specaile_To_DB_comboBox.SelectedIndexChanged += new System.EventHandler(this.Add_Specaile_To_DB_comboBox_SelectedIndexChanged);
-            this.Add_Specaile_To_DB_comboBox.Click += new System.EventHandler(this.Add_Specaile_To_DB_comboBox_Click);
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.label2.Image = global::View_GUI.Properties.Resources.name_card_icon1;
-            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label2.Location = new System.Drawing.Point(21, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(163, 24);
-            this.label2.TabIndex = 26;
-            this.label2.Text = "Speciale Navn:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // save_speciale_button
-            // 
-            this.save_speciale_button.FlatAppearance.BorderSize = 0;
-            this.save_speciale_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.save_speciale_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
-            this.save_speciale_button.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.save_speciale_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
-            this.save_speciale_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
-            this.save_speciale_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.save_speciale_button.Location = new System.Drawing.Point(197, 63);
-            this.save_speciale_button.Name = "save_speciale_button";
-            this.save_speciale_button.Size = new System.Drawing.Size(90, 30);
-            this.save_speciale_button.TabIndex = 27;
-            this.save_speciale_button.Text = "Gem";
-            this.save_speciale_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.save_speciale_button.UseVisualStyleBackColor = true;
-            this.save_speciale_button.Click += new System.EventHandler(this.save_speciale_button_Click);
-            // 
-            // clear_speciale_button
-            // 
-            this.clear_speciale_button.BackColor = System.Drawing.Color.Transparent;
-            this.clear_speciale_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
-            this.clear_speciale_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.clear_speciale_button.FlatAppearance.BorderSize = 0;
-            this.clear_speciale_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.clear_speciale_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.clear_speciale_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clear_speciale_button.ForeColor = System.Drawing.Color.Black;
-            this.clear_speciale_button.Location = new System.Drawing.Point(154, 66);
-            this.clear_speciale_button.Name = "clear_speciale_button";
-            this.clear_speciale_button.Size = new System.Drawing.Size(28, 23);
-            this.clear_speciale_button.TabIndex = 29;
-            this.clear_speciale_button.UseVisualStyleBackColor = false;
-            this.clear_speciale_button.Click += new System.EventHandler(this.clear_speciale_button_Click);
+            this.Log_In_BACK_panel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Log_In_BACK_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.Log_In_BACK_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Log_In_BACK_panel.Controls.Add(this.panel2);
+            this.Log_In_BACK_panel.Controls.Add(this.panel1);
+            this.Log_In_BACK_panel.Controls.Add(this.background_Medarbejder_specialepanel);
+            this.Log_In_BACK_panel.Controls.Add(this.speciale_Medarbejder_Top_panel);
+            this.Log_In_BACK_panel.Location = new System.Drawing.Point(473, 164);
+            this.Log_In_BACK_panel.Name = "Log_In_BACK_panel";
+            this.Log_In_BACK_panel.Size = new System.Drawing.Size(810, 437);
+            this.Log_In_BACK_panel.TabIndex = 24;
+            this.Log_In_BACK_panel.Visible = false;
             // 
             // background_Medarbejder_specialepanel
             // 
-            this.background_Medarbejder_specialepanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.background_Medarbejder_specialepanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
             this.background_Medarbejder_specialepanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.background_Medarbejder_specialepanel.Controls.Add(this.label7);
-            this.background_Medarbejder_specialepanel.Controls.Add(this.speciale_medarbejder_id_textBox);
-            this.background_Medarbejder_specialepanel.Controls.Add(this.label6);
-            this.background_Medarbejder_specialepanel.Controls.Add(this.save_Medarbejder_specaile_button);
-            this.background_Medarbejder_specialepanel.Controls.Add(this.clear_medarbejder_speciale_button);
-            this.background_Medarbejder_specialepanel.Controls.Add(this.speciale_comboBox);
-            this.background_Medarbejder_specialepanel.Location = new System.Drawing.Point(0, 26);
+            this.background_Medarbejder_specialepanel.Controls.Add(this.Medarbejder_ID_label);
+            this.background_Medarbejder_specialepanel.Controls.Add(this.Me_ID_textBox);
+            this.background_Medarbejder_specialepanel.Controls.Add(this.Medarbejder_Navn_label);
+            this.background_Medarbejder_specialepanel.Controls.Add(this.load_ME_Names_comboBox);
+            this.background_Medarbejder_specialepanel.Controls.Add(this.pass_textBox);
+            this.background_Medarbejder_specialepanel.Controls.Add(this.Log_In_name_label);
+            this.background_Medarbejder_specialepanel.Controls.Add(this.log_in_textBox);
+            this.background_Medarbejder_specialepanel.Controls.Add(this.pass_label);
+            this.background_Medarbejder_specialepanel.Controls.Add(this.save_log_in_button);
+            this.background_Medarbejder_specialepanel.Controls.Add(this.clear_all_log_in_button);
+            this.background_Medarbejder_specialepanel.Location = new System.Drawing.Point(0, 28);
             this.background_Medarbejder_specialepanel.Name = "background_Medarbejder_specialepanel";
-            this.background_Medarbejder_specialepanel.Size = new System.Drawing.Size(392, 168);
+            this.background_Medarbejder_specialepanel.Size = new System.Drawing.Size(402, 407);
             this.background_Medarbejder_specialepanel.TabIndex = 31;
             // 
-            // label7
+            // log_in_textBox
             // 
-            this.label7.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.label7.Image = global::View_GUI.Properties.Resources.ID_icon;
-            this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label7.Location = new System.Drawing.Point(48, 19);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(135, 24);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Medarbejder ID:";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // speciale_medarbejder_id_textBox
-            // 
-            this.speciale_medarbejder_id_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
-            this.speciale_medarbejder_id_textBox.Location = new System.Drawing.Point(191, 23);
-            this.speciale_medarbejder_id_textBox.MaxLength = 49;
-            this.speciale_medarbejder_id_textBox.Name = "speciale_medarbejder_id_textBox";
-            this.speciale_medarbejder_id_textBox.Size = new System.Drawing.Size(100, 20);
-            this.speciale_medarbejder_id_textBox.TabIndex = 1;
-            // 
-            // label6
-            // 
-            this.label6.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.label6.Image = global::View_GUI.Properties.Resources.research_icon__1_;
-            this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label6.Location = new System.Drawing.Point(70, 64);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(115, 25);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Speciale:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // save_Medarbejder_specaile_button
-            // 
-            this.save_Medarbejder_specaile_button.FlatAppearance.BorderSize = 0;
-            this.save_Medarbejder_specaile_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.save_Medarbejder_specaile_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
-            this.save_Medarbejder_specaile_button.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.save_Medarbejder_specaile_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
-            this.save_Medarbejder_specaile_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
-            this.save_Medarbejder_specaile_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.save_Medarbejder_specaile_button.Location = new System.Drawing.Point(197, 113);
-            this.save_Medarbejder_specaile_button.Name = "save_Medarbejder_specaile_button";
-            this.save_Medarbejder_specaile_button.Size = new System.Drawing.Size(90, 30);
-            this.save_Medarbejder_specaile_button.TabIndex = 7;
-            this.save_Medarbejder_specaile_button.Text = "Gem";
-            this.save_Medarbejder_specaile_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.save_Medarbejder_specaile_button.UseVisualStyleBackColor = true;
-            this.save_Medarbejder_specaile_button.Click += new System.EventHandler(this.save_Medarbejder_specaile_button_Click);
-            // 
-            // clear_medarbejder_speciale_button
-            // 
-            this.clear_medarbejder_speciale_button.BackColor = System.Drawing.Color.Transparent;
-            this.clear_medarbejder_speciale_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
-            this.clear_medarbejder_speciale_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.clear_medarbejder_speciale_button.FlatAppearance.BorderSize = 0;
-            this.clear_medarbejder_speciale_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.clear_medarbejder_speciale_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.clear_medarbejder_speciale_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clear_medarbejder_speciale_button.ForeColor = System.Drawing.Color.Black;
-            this.clear_medarbejder_speciale_button.Location = new System.Drawing.Point(154, 116);
-            this.clear_medarbejder_speciale_button.Name = "clear_medarbejder_speciale_button";
-            this.clear_medarbejder_speciale_button.Size = new System.Drawing.Size(28, 23);
-            this.clear_medarbejder_speciale_button.TabIndex = 23;
-            this.clear_medarbejder_speciale_button.UseVisualStyleBackColor = false;
-            this.clear_medarbejder_speciale_button.Click += new System.EventHandler(this.clear_medarbejder_speciale_button_Click);
-            // 
-            // speciale_comboBox
-            // 
-            this.speciale_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.speciale_comboBox.FormattingEnabled = true;
-            this.speciale_comboBox.Location = new System.Drawing.Point(191, 70);
-            this.speciale_comboBox.MaxDropDownItems = 50;
-            this.speciale_comboBox.Name = "speciale_comboBox";
-            this.speciale_comboBox.Size = new System.Drawing.Size(100, 21);
-            this.speciale_comboBox.TabIndex = 24;
-            this.speciale_comboBox.Click += new System.EventHandler(this.speciale_comboBox_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(392, 250);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(392, 26);
-            this.panel1.TabIndex = 31;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(92)))));
-            this.label1.Location = new System.Drawing.Point(143, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 21);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Slet Speciale";
-            // 
-            // speciale_Midd_panel
-            // 
-            this.speciale_Midd_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
-            this.speciale_Midd_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.speciale_Midd_panel.Controls.Add(this.label3);
-            this.speciale_Midd_panel.Location = new System.Drawing.Point(0, 250);
-            this.speciale_Midd_panel.Name = "speciale_Midd_panel";
-            this.speciale_Midd_panel.Size = new System.Drawing.Size(392, 26);
-            this.speciale_Midd_panel.TabIndex = 30;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(92)))));
-            this.label3.Location = new System.Drawing.Point(140, 3);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 21);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Tilføj Speciale";
+            this.log_in_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
+            this.log_in_textBox.Location = new System.Drawing.Point(220, 195);
+            this.log_in_textBox.MaxLength = 49;
+            this.log_in_textBox.Name = "log_in_textBox";
+            this.log_in_textBox.Size = new System.Drawing.Size(100, 20);
+            this.log_in_textBox.TabIndex = 1;
             // 
             // speciale_Medarbejder_Top_panel
             // 
             this.speciale_Medarbejder_Top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.speciale_Medarbejder_Top_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.speciale_Medarbejder_Top_panel.Controls.Add(this.speciale_label);
+            this.speciale_Medarbejder_Top_panel.Controls.Add(this.Log_In_label);
             this.speciale_Medarbejder_Top_panel.Location = new System.Drawing.Point(0, 0);
             this.speciale_Medarbejder_Top_panel.Name = "speciale_Medarbejder_Top_panel";
-            this.speciale_Medarbejder_Top_panel.Size = new System.Drawing.Size(392, 26);
+            this.speciale_Medarbejder_Top_panel.Size = new System.Drawing.Size(402, 26);
             this.speciale_Medarbejder_Top_panel.TabIndex = 3;
             // 
-            // speciale_label
+            // Log_In_label
             // 
-            this.speciale_label.AutoSize = true;
-            this.speciale_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.speciale_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(92)))));
-            this.speciale_label.Location = new System.Drawing.Point(98, 3);
-            this.speciale_label.Name = "speciale_label";
-            this.speciale_label.Size = new System.Drawing.Size(238, 21);
-            this.speciale_label.TabIndex = 1;
-            this.speciale_label.Text = "Tilføj Speciale til Medarbejder";
+            this.Log_In_label.AutoSize = true;
+            this.Log_In_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.Log_In_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(92)))));
+            this.Log_In_label.Location = new System.Drawing.Point(185, 3);
+            this.Log_In_label.Name = "Log_In_label";
+            this.Log_In_label.Size = new System.Drawing.Size(58, 21);
+            this.Log_In_label.TabIndex = 1;
+            this.Log_In_label.Text = "Log In";
+            // 
+            // Medarbejder_dataGridView
+            // 
+            this.Medarbejder_dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.Medarbejder_dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.Medarbejder_dataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Medarbejder_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Medarbejder_dataGridView.Location = new System.Drawing.Point(10, 59);
+            this.Medarbejder_dataGridView.MultiSelect = false;
+            this.Medarbejder_dataGridView.Name = "Medarbejder_dataGridView";
+            this.Medarbejder_dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Medarbejder_dataGridView.Size = new System.Drawing.Size(1520, 512);
+            this.Medarbejder_dataGridView.TabIndex = 15;
+            this.Medarbejder_dataGridView.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Medarbejder_dataGridView_ColumnHeaderMouseClick);
+            this.Medarbejder_dataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.Medarbejder_dataGridView_DataError);
+            this.Medarbejder_dataGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.Medarbejder_dataGridView_RowEnter);
+            this.Medarbejder_dataGridView.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.Medarbejder_dataGridView_RowValidated);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.slet_log_in_label);
+            this.panel1.Location = new System.Drawing.Point(408, 1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(399, 26);
+            this.panel1.TabIndex = 4;
+            // 
+            // slet_log_in_label
+            // 
+            this.slet_log_in_label.AutoSize = true;
+            this.slet_log_in_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.slet_log_in_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(92)))));
+            this.slet_log_in_label.Location = new System.Drawing.Point(165, 2);
+            this.slet_log_in_label.Name = "slet_log_in_label";
+            this.slet_log_in_label.Size = new System.Drawing.Size(94, 21);
+            this.slet_log_in_label.TabIndex = 1;
+            this.slet_log_in_label.Text = "Slet Log In";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(34)))), ((int)(((byte)(44)))));
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.Del_ME_ID_textBox);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.Del_Me_name_comboBox);
+            this.panel2.Controls.Add(this.Del_button);
+            this.panel2.Controls.Add(this.Del_Clear_button);
+            this.panel2.Location = new System.Drawing.Point(408, 27);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(399, 408);
+            this.panel2.TabIndex = 32;
+            // 
+            // Del_button
+            // 
+            this.Del_button.FlatAppearance.BorderSize = 0;
+            this.Del_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.Del_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.Del_button.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Del_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Del_button.Image = global::View_GUI.Properties.Resources.Actions_edit_delete_icon3;
+            this.Del_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Del_button.Location = new System.Drawing.Point(204, 185);
+            this.Del_button.Name = "Del_button";
+            this.Del_button.Size = new System.Drawing.Size(90, 30);
+            this.Del_button.TabIndex = 7;
+            this.Del_button.Text = "SLET";
+            this.Del_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Del_button.UseVisualStyleBackColor = true;
+            this.Del_button.Click += new System.EventHandler(this.Del_button_Click);
+            // 
+            // Del_Clear_button
+            // 
+            this.Del_Clear_button.BackColor = System.Drawing.Color.Transparent;
+            this.Del_Clear_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
+            this.Del_Clear_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Del_Clear_button.FlatAppearance.BorderSize = 0;
+            this.Del_Clear_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.Del_Clear_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.Del_Clear_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Del_Clear_button.ForeColor = System.Drawing.Color.Black;
+            this.Del_Clear_button.Location = new System.Drawing.Point(161, 188);
+            this.Del_Clear_button.Name = "Del_Clear_button";
+            this.Del_Clear_button.Size = new System.Drawing.Size(28, 23);
+            this.Del_Clear_button.TabIndex = 23;
+            this.Del_Clear_button.UseVisualStyleBackColor = false;
+            this.Del_Clear_button.Click += new System.EventHandler(this.Del_Clear_button_Click);
+            // 
+            // Log_In_name_label
+            // 
+            this.Log_In_name_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.Log_In_name_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.Log_In_name_label.Image = global::View_GUI.Properties.Resources.ID_icon;
+            this.Log_In_name_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Log_In_name_label.Location = new System.Drawing.Point(39, 191);
+            this.Log_In_name_label.Name = "Log_In_name_label";
+            this.Log_In_name_label.Size = new System.Drawing.Size(172, 24);
+            this.Log_In_name_label.TabIndex = 2;
+            this.Log_In_name_label.Text = "LOG IN - Navn:";
+            this.Log_In_name_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pass_label
+            // 
+            this.pass_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.pass_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.pass_label.Image = global::View_GUI.Properties.Resources.Pass2;
+            this.pass_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.pass_label.Location = new System.Drawing.Point(98, 238);
+            this.pass_label.Name = "pass_label";
+            this.pass_label.Size = new System.Drawing.Size(115, 25);
+            this.pass_label.TabIndex = 13;
+            this.pass_label.Text = "Kodeord:";
+            this.pass_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // save_log_in_button
+            // 
+            this.save_log_in_button.FlatAppearance.BorderSize = 0;
+            this.save_log_in_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.save_log_in_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.save_log_in_button.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.save_log_in_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
+            this.save_log_in_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
+            this.save_log_in_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.save_log_in_button.Location = new System.Drawing.Point(225, 284);
+            this.save_log_in_button.Name = "save_log_in_button";
+            this.save_log_in_button.Size = new System.Drawing.Size(90, 30);
+            this.save_log_in_button.TabIndex = 7;
+            this.save_log_in_button.Text = "Gem";
+            this.save_log_in_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.save_log_in_button.UseVisualStyleBackColor = true;
+            this.save_log_in_button.Click += new System.EventHandler(this.save_log_in_button_Click);
+            // 
+            // clear_all_log_in_button
+            // 
+            this.clear_all_log_in_button.BackColor = System.Drawing.Color.Transparent;
+            this.clear_all_log_in_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
+            this.clear_all_log_in_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.clear_all_log_in_button.FlatAppearance.BorderSize = 0;
+            this.clear_all_log_in_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.clear_all_log_in_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.clear_all_log_in_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clear_all_log_in_button.ForeColor = System.Drawing.Color.Black;
+            this.clear_all_log_in_button.Location = new System.Drawing.Point(182, 287);
+            this.clear_all_log_in_button.Name = "clear_all_log_in_button";
+            this.clear_all_log_in_button.Size = new System.Drawing.Size(28, 23);
+            this.clear_all_log_in_button.TabIndex = 23;
+            this.clear_all_log_in_button.UseVisualStyleBackColor = false;
+            this.clear_all_log_in_button.Click += new System.EventHandler(this.clear_all_log_in_button_Click);
             // 
             // background_DGV_Search_panel
             // 
@@ -1000,6 +684,27 @@
             this.background_DGV_panel3.Size = new System.Drawing.Size(194, 60);
             this.background_DGV_panel3.TabIndex = 4;
             // 
+            // copy_selected_column_button
+            // 
+            this.copy_selected_column_button.BackColor = System.Drawing.Color.Transparent;
+            this.copy_selected_column_button.BackgroundImage = global::View_GUI.Properties.Resources.win7_ico_shell32_dll_260__2_;
+            this.copy_selected_column_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.copy_selected_column_button.FlatAppearance.BorderSize = 0;
+            this.copy_selected_column_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.copy_selected_column_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.copy_selected_column_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.copy_selected_column_button.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.copy_selected_column_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.copy_selected_column_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.copy_selected_column_button.Location = new System.Drawing.Point(28, 12);
+            this.copy_selected_column_button.Margin = new System.Windows.Forms.Padding(0);
+            this.copy_selected_column_button.Name = "copy_selected_column_button";
+            this.copy_selected_column_button.Size = new System.Drawing.Size(40, 38);
+            this.copy_selected_column_button.TabIndex = 25;
+            this.copy_selected_column_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.copy_selected_column_button.UseVisualStyleBackColor = false;
+            this.copy_selected_column_button.Click += new System.EventHandler(this.copy_selected_column_button_Click);
+            // 
             // change_DatagridView_Color_button
             // 
             this.change_DatagridView_Color_button.BackColor = System.Drawing.Color.Transparent;
@@ -1081,23 +786,6 @@
             this.show_all_button.UseVisualStyleBackColor = false;
             this.show_all_button.Click += new System.EventHandler(this.show_all_button_Click);
             // 
-            // Medarbejder_dataGridView
-            // 
-            this.Medarbejder_dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.Medarbejder_dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.Medarbejder_dataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Medarbejder_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Medarbejder_dataGridView.Location = new System.Drawing.Point(10, 59);
-            this.Medarbejder_dataGridView.MultiSelect = false;
-            this.Medarbejder_dataGridView.Name = "Medarbejder_dataGridView";
-            this.Medarbejder_dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Medarbejder_dataGridView.Size = new System.Drawing.Size(1520, 512);
-            this.Medarbejder_dataGridView.TabIndex = 15;
-            this.Medarbejder_dataGridView.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Medarbejder_dataGridView_ColumnHeaderMouseClick);
-            this.Medarbejder_dataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.Medarbejder_dataGridView_DataError);
-            this.Medarbejder_dataGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.Medarbejder_dataGridView_RowEnter);
-            this.Medarbejder_dataGridView.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.Medarbejder_dataGridView_RowValidated);
-            // 
             // top_Menu_background_panel
             // 
             this.top_Menu_background_panel.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -1121,13 +809,13 @@
             this.main_specialer_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.main_specialer_button.Font = new System.Drawing.Font("OpenSymbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.main_specialer_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.main_specialer_button.Image = global::View_GUI.Properties.Resources.Speciale_advokat;
+            this.main_specialer_button.Image = global::View_GUI.Properties.Resources.key_icon;
             this.main_specialer_button.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.main_specialer_button.Location = new System.Drawing.Point(236, 11);
             this.main_specialer_button.Name = "main_specialer_button";
             this.main_specialer_button.Size = new System.Drawing.Size(95, 68);
             this.main_specialer_button.TabIndex = 2;
-            this.main_specialer_button.Text = "Specialer";
+            this.main_specialer_button.Text = "Opret Log In";
             this.main_specialer_button.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.main_specialer_button.UseVisualStyleBackColor = true;
             this.main_specialer_button.Click += new System.EventHandler(this.main_specialer_button_Click);
@@ -1172,26 +860,221 @@
             this.opret_medarbejder_button.UseVisualStyleBackColor = true;
             this.opret_medarbejder_button.Click += new System.EventHandler(this.opret_medarbejder_button_Click);
             // 
-            // copy_selected_column_button
+            // create_Clear_All_textboxes_button
             // 
-            this.copy_selected_column_button.BackColor = System.Drawing.Color.Transparent;
-            this.copy_selected_column_button.BackgroundImage = global::View_GUI.Properties.Resources.win7_ico_shell32_dll_260__2_;
-            this.copy_selected_column_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.copy_selected_column_button.FlatAppearance.BorderSize = 0;
-            this.copy_selected_column_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.copy_selected_column_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.copy_selected_column_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.copy_selected_column_button.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.copy_selected_column_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.copy_selected_column_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.copy_selected_column_button.Location = new System.Drawing.Point(28, 12);
-            this.copy_selected_column_button.Margin = new System.Windows.Forms.Padding(0);
-            this.copy_selected_column_button.Name = "copy_selected_column_button";
-            this.copy_selected_column_button.Size = new System.Drawing.Size(40, 38);
-            this.copy_selected_column_button.TabIndex = 25;
-            this.copy_selected_column_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.copy_selected_column_button.UseVisualStyleBackColor = false;
-            this.copy_selected_column_button.Click += new System.EventHandler(this.copy_selected_column_button_Click);
+            this.create_Clear_All_textboxes_button.BackColor = System.Drawing.Color.Transparent;
+            this.create_Clear_All_textboxes_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
+            this.create_Clear_All_textboxes_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.create_Clear_All_textboxes_button.FlatAppearance.BorderSize = 0;
+            this.create_Clear_All_textboxes_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.create_Clear_All_textboxes_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.create_Clear_All_textboxes_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.create_Clear_All_textboxes_button.ForeColor = System.Drawing.Color.Black;
+            this.create_Clear_All_textboxes_button.Location = new System.Drawing.Point(119, 339);
+            this.create_Clear_All_textboxes_button.Name = "create_Clear_All_textboxes_button";
+            this.create_Clear_All_textboxes_button.Size = new System.Drawing.Size(28, 23);
+            this.create_Clear_All_textboxes_button.TabIndex = 23;
+            this.create_Clear_All_textboxes_button.UseVisualStyleBackColor = false;
+            this.create_Clear_All_textboxes_button.Click += new System.EventHandler(this.create_Clear_All_textboxes_button_Click);
+            // 
+            // email_label
+            // 
+            this.email_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.email_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.email_label.Image = global::View_GUI.Properties.Resources.At_Mail_icon;
+            this.email_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.email_label.Location = new System.Drawing.Point(53, 287);
+            this.email_label.Name = "email_label";
+            this.email_label.Size = new System.Drawing.Size(98, 33);
+            this.email_label.TabIndex = 22;
+            this.email_label.Text = "Email:";
+            this.email_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // medarbejdere_Save_button
+            // 
+            this.medarbejdere_Save_button.FlatAppearance.BorderSize = 0;
+            this.medarbejdere_Save_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.medarbejdere_Save_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.medarbejdere_Save_button.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.medarbejdere_Save_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
+            this.medarbejdere_Save_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
+            this.medarbejdere_Save_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.medarbejdere_Save_button.Location = new System.Drawing.Point(162, 336);
+            this.medarbejdere_Save_button.Name = "medarbejdere_Save_button";
+            this.medarbejdere_Save_button.Size = new System.Drawing.Size(90, 30);
+            this.medarbejdere_Save_button.TabIndex = 7;
+            this.medarbejdere_Save_button.Text = "Gem";
+            this.medarbejdere_Save_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.medarbejdere_Save_button.UseVisualStyleBackColor = true;
+            this.medarbejdere_Save_button.Click += new System.EventHandler(this.medarbejdere_Save_button_Click);
+            // 
+            // adr_label
+            // 
+            this.adr_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.adr_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.adr_label.Image = global::View_GUI.Properties.Resources.my_numbers_icon;
+            this.adr_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.adr_label.Location = new System.Drawing.Point(70, 197);
+            this.adr_label.Name = "adr_label";
+            this.adr_label.Size = new System.Drawing.Size(80, 25);
+            this.adr_label.TabIndex = 19;
+            this.adr_label.Text = "Adr:";
+            this.adr_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // zipCode_label
+            // 
+            this.zipCode_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.zipCode_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.zipCode_label.Image = global::View_GUI.Properties.Resources.Compressed_File_Zip_icon;
+            this.zipCode_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.zipCode_label.Location = new System.Drawing.Point(49, 150);
+            this.zipCode_label.Name = "zipCode_label";
+            this.zipCode_label.Size = new System.Drawing.Size(105, 25);
+            this.zipCode_label.TabIndex = 17;
+            this.zipCode_label.Text = "PostNr:";
+            this.zipCode_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tlf_label
+            // 
+            this.tlf_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.tlf_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.tlf_label.Image = global::View_GUI.Properties.Resources.Phone_icon__1_;
+            this.tlf_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.tlf_label.Location = new System.Drawing.Point(80, 243);
+            this.tlf_label.Name = "tlf_label";
+            this.tlf_label.Size = new System.Drawing.Size(73, 24);
+            this.tlf_label.TabIndex = 15;
+            this.tlf_label.Text = "Tlf:";
+            this.tlf_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // surname_label
+            // 
+            this.surname_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.surname_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.surname_label.Image = global::View_GUI.Properties.Resources.name_card_icon;
+            this.surname_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.surname_label.Location = new System.Drawing.Point(25, 104);
+            this.surname_label.Name = "surname_label";
+            this.surname_label.Size = new System.Drawing.Size(125, 25);
+            this.surname_label.TabIndex = 13;
+            this.surname_label.Text = "Efternavn:";
+            this.surname_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // name_label
+            // 
+            this.name_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.name_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.name_label.Image = global::View_GUI.Properties.Resources.ID_icon;
+            this.name_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.name_label.Location = new System.Drawing.Point(56, 59);
+            this.name_label.Name = "name_label";
+            this.name_label.Size = new System.Drawing.Size(95, 24);
+            this.name_label.TabIndex = 2;
+            this.name_label.Text = "Navn:";
+            this.name_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pass_textBox
+            // 
+            this.pass_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
+            this.pass_textBox.Location = new System.Drawing.Point(220, 238);
+            this.pass_textBox.MaxLength = 49;
+            this.pass_textBox.Name = "pass_textBox";
+            this.pass_textBox.Size = new System.Drawing.Size(100, 20);
+            this.pass_textBox.TabIndex = 24;
+            // 
+            // Medarbejder_Navn_label
+            // 
+            this.Medarbejder_Navn_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.Medarbejder_Navn_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.Medarbejder_Navn_label.Image = global::View_GUI.Properties.Resources.name_card_icon1;
+            this.Medarbejder_Navn_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Medarbejder_Navn_label.Location = new System.Drawing.Point(18, 44);
+            this.Medarbejder_Navn_label.Name = "Medarbejder_Navn_label";
+            this.Medarbejder_Navn_label.Size = new System.Drawing.Size(192, 25);
+            this.Medarbejder_Navn_label.TabIndex = 25;
+            this.Medarbejder_Navn_label.Text = "Medarbejder Navn:";
+            this.Medarbejder_Navn_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // load_ME_Names_comboBox
+            // 
+            this.load_ME_Names_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.load_ME_Names_comboBox.FormattingEnabled = true;
+            this.load_ME_Names_comboBox.Location = new System.Drawing.Point(218, 48);
+            this.load_ME_Names_comboBox.MaxDropDownItems = 50;
+            this.load_ME_Names_comboBox.Name = "load_ME_Names_comboBox";
+            this.load_ME_Names_comboBox.Size = new System.Drawing.Size(107, 21);
+            this.load_ME_Names_comboBox.TabIndex = 26;
+            this.load_ME_Names_comboBox.SelectedIndexChanged += new System.EventHandler(this.load_ME_Names_comboBox_SelectedIndexChanged);
+            this.load_ME_Names_comboBox.Click += new System.EventHandler(this.load_ME_Names_comboBox_Click);
+            // 
+            // Medarbejder_ID_label
+            // 
+            this.Medarbejder_ID_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.Medarbejder_ID_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.Medarbejder_ID_label.Image = global::View_GUI.Properties.Resources.ID_icon;
+            this.Medarbejder_ID_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Medarbejder_ID_label.Location = new System.Drawing.Point(43, 95);
+            this.Medarbejder_ID_label.Name = "Medarbejder_ID_label";
+            this.Medarbejder_ID_label.Size = new System.Drawing.Size(167, 24);
+            this.Medarbejder_ID_label.TabIndex = 28;
+            this.Medarbejder_ID_label.Text = "Medarbejder ID:";
+            this.Medarbejder_ID_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // Me_ID_textBox
+            // 
+            this.Me_ID_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
+            this.Me_ID_textBox.Location = new System.Drawing.Point(218, 96);
+            this.Me_ID_textBox.MaxLength = 49;
+            this.Me_ID_textBox.Name = "Me_ID_textBox";
+            this.Me_ID_textBox.Size = new System.Drawing.Size(166, 20);
+            this.Me_ID_textBox.TabIndex = 27;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.label1.Image = global::View_GUI.Properties.Resources.ID_icon;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label1.Location = new System.Drawing.Point(18, 97);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(167, 24);
+            this.label1.TabIndex = 32;
+            this.label1.Text = "Medarbejder ID:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // Del_ME_ID_textBox
+            // 
+            this.Del_ME_ID_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
+            this.Del_ME_ID_textBox.Location = new System.Drawing.Point(193, 100);
+            this.Del_ME_ID_textBox.MaxLength = 49;
+            this.Del_ME_ID_textBox.Name = "Del_ME_ID_textBox";
+            this.Del_ME_ID_textBox.Size = new System.Drawing.Size(181, 20);
+            this.Del_ME_ID_textBox.TabIndex = 31;
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.label8.Image = global::View_GUI.Properties.Resources.name_card_icon1;
+            this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label8.Location = new System.Drawing.Point(18, 49);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(192, 25);
+            this.label8.TabIndex = 29;
+            this.label8.Text = "Medarbejder Navn:";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // Del_Me_name_comboBox
+            // 
+            this.Del_Me_name_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Del_Me_name_comboBox.FormattingEnabled = true;
+            this.Del_Me_name_comboBox.Location = new System.Drawing.Point(228, 50);
+            this.Del_Me_name_comboBox.MaxDropDownItems = 50;
+            this.Del_Me_name_comboBox.Name = "Del_Me_name_comboBox";
+            this.Del_Me_name_comboBox.Size = new System.Drawing.Size(146, 21);
+            this.Del_Me_name_comboBox.TabIndex = 30;
+            this.Del_Me_name_comboBox.SelectedIndexChanged += new System.EventHandler(this.Del_Me_name_comboBox_SelectedIndexChanged);
+            this.Del_Me_name_comboBox.Click += new System.EventHandler(this.Del_Me_name_comboBox_Click);
             // 
             // Medarbejder_Form6
             // 
@@ -1199,6 +1082,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(1600, 800);
+            this.Controls.Add(this.Log_In_BACK_panel);
             this.Controls.Add(this.datagridviewBackground_panel);
             this.Controls.Add(this.top_Menu_background_panel);
             this.Controls.Add(this.backPanel_Textboxes_panel);
@@ -1215,21 +1099,16 @@
             this.background_textboxes_top_panel.ResumeLayout(false);
             this.background_textboxes_top_panel.PerformLayout();
             this.datagridviewBackground_panel.ResumeLayout(false);
-            this.speciale_BACK_panel.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.slet_speciale_from_medarbejdere_back__panel.ResumeLayout(false);
-            this.slet_speciale_from_medarbejdere_back__panel.PerformLayout();
-            this.delete_speciale_backpanel_panel.ResumeLayout(false);
-            this.add_speciale_backpanel_panel.ResumeLayout(false);
+            this.Log_In_BACK_panel.ResumeLayout(false);
             this.background_Medarbejder_specialepanel.ResumeLayout(false);
             this.background_Medarbejder_specialepanel.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.speciale_Midd_panel.ResumeLayout(false);
-            this.speciale_Midd_panel.PerformLayout();
             this.speciale_Medarbejder_Top_panel.ResumeLayout(false);
             this.speciale_Medarbejder_Top_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Medarbejder_dataGridView)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.background_DGV_Search_panel.ResumeLayout(false);
             this.background_DGV_Search_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.search_Datagridview_pictureBox)).EndInit();
@@ -1237,7 +1116,6 @@
             this.background_DGV_panel4.ResumeLayout(false);
             this.background_DGV_panel3.ResumeLayout(false);
             this.background_DGV_panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Medarbejder_dataGridView)).EndInit();
             this.top_Menu_background_panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -1288,38 +1166,30 @@
         private System.Windows.Forms.Panel background_DGV_panel1;
         private System.Windows.Forms.Panel background_DGV_Search_panel;
         private System.Windows.Forms.Button create_Clear_All_textboxes_button;
-        private System.Windows.Forms.Panel speciale_BACK_panel;
-        private System.Windows.Forms.Button clear_medarbejder_speciale_button;
-        private System.Windows.Forms.Button save_Medarbejder_specaile_button;
+        private System.Windows.Forms.Panel Log_In_BACK_panel;
+        private System.Windows.Forms.Button clear_all_log_in_button;
+        private System.Windows.Forms.Button save_log_in_button;
         private System.Windows.Forms.Panel speciale_Medarbejder_Top_panel;
-        private System.Windows.Forms.Label speciale_label;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox speciale_medarbejder_id_textBox;
-        private System.Windows.Forms.Panel speciale_Midd_panel;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button clear_speciale_button;
-        private System.Windows.Forms.Button save_speciale_button;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox speciale_comboBox;
+        private System.Windows.Forms.Label Log_In_label;
+        private System.Windows.Forms.Label pass_label;
+        private System.Windows.Forms.Label Log_In_name_label;
+        private System.Windows.Forms.TextBox log_in_textBox;
         private System.Windows.Forms.Button main_specialer_button;
-        private System.Windows.Forms.Panel add_speciale_backpanel_panel;
         private System.Windows.Forms.Panel background_Medarbejder_specialepanel;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel delete_speciale_backpanel_panel;
-        private System.Windows.Forms.ComboBox Add_Specaile_To_DB_comboBox;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox delete_speciale_comboBox;
-        private System.Windows.Forms.Button delete_speciale_button;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel slet_speciale_from_medarbejdere_back__panel;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox delete_speciale_from_medarbejder_comboBox;
-        private System.Windows.Forms.Button delete_speciale_from_medarbejder_delete_button;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox delete_speciale_from_medarbejder_textBox;
         private System.Windows.Forms.Button copy_selected_column_button;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button Del_button;
+        private System.Windows.Forms.Button Del_Clear_button;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label slet_log_in_label;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox Del_ME_ID_textBox;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox Del_Me_name_comboBox;
+        private System.Windows.Forms.Label Medarbejder_ID_label;
+        private System.Windows.Forms.TextBox Me_ID_textBox;
+        private System.Windows.Forms.Label Medarbejder_Navn_label;
+        private System.Windows.Forms.ComboBox load_ME_Names_comboBox;
+        private System.Windows.Forms.TextBox pass_textBox;
     }
 }

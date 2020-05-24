@@ -35,7 +35,7 @@ namespace View_GUI
 
 
         // Show Medarbejdere - Database
-        static string show_Medarbejder_Query = "Select M.Me_Fornavn AS Medarbejder_Fornavn, M.Me_Efternavn AS Medarbejder_Efternavn , M.Me_PostNr AS Medarbejder_PostNr, P.Distrikt, M.Me_Adresse AS Medarbejder_Adresse, M.Me_Email AS Medarbejder_Email, T.Me_Tlf AS Medarbejder_Tlf, M.Me_ID AS Medarbejder_ID, M.Me_Type, M.Me_Oprets_Dato AS Medarbejder_Oprets_Dato From Medarbejder AS M FULL JOIN Medarbejder_Tlf As T ON M.Me_ID = T.Me_ID Full Join Post AS P ON M.Me_PostNr = P.PostNr; ";
+        static string show_Medarbejder_Query = "Select M.Me_Fornavn AS Medarbejder_Fornavn, M.Me_Efternavn AS Medarbejder_Efternavn , M.Me_PostNr AS Medarbejder_PostNr, P.Distrikt, M.Me_Adresse AS Medarbejder_Adresse, M.Me_Email AS Medarbejder_Email, T.Me_Tlf AS Medarbejder_Tlf, M.Me_ID AS Medarbejder_ID, M.Me_Type, M.Me_Oprets_Dato AS Medarbejder_Oprets_Dato From Medarbejder AS M FULL JOIN Medarbejder_Tlf As T ON M.Me_ID = T.Me_ID Inner Join Post AS P ON M.Me_PostNr = P.PostNr; ";
 
 
 
@@ -60,8 +60,11 @@ namespace View_GUI
         // Validate Textboxes bools
         bool isValid = true; // Inputboxes Validator
         bool successful = false; // Successful Transaction
-     
 
+
+
+        // Validate Log In
+        bool Log_In_Valid = true;
 
 
         // Undo Delete
@@ -473,7 +476,7 @@ namespace View_GUI
         private void vis_rediger_medarbejdere_button_Click(object sender, EventArgs e)
         {
             backPanel_Textboxes_panel.Visible = false; // Opret
-            speciale_BACK_panel.Visible = false;    // Speciale
+            Log_In_BACK_panel.Visible = false;    // Speciale
             datagridviewBackground_panel.Visible = true; // Datagridview
             //this.medarbejderTableAdapter.Fill(this.medarbejderhusetDataSet.Medarbejder);
         }
@@ -486,7 +489,7 @@ namespace View_GUI
         private void opret_medarbejder_button_Click(object sender, EventArgs e)
         {
             datagridviewBackground_panel.Visible = false;// Hide Datagridview
-            speciale_BACK_panel.Visible = false; // Speciale
+            Log_In_BACK_panel.Visible = false; // Speciale
             backPanel_Textboxes_panel.Visible = true; // Opret
            
         }
@@ -1449,226 +1452,12 @@ namespace View_GUI
             Medarbejder_dataGridView.RefreshEdit(); // Reset
             MessageBox.Show("Der Opståd Fejl, Input er ikke i korekt format","Fejl", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
- 
 
 
 
 
 
-
-        // Specialer - MAIN - BUTTON
-        private void main_specialer_button_Click(object sender, EventArgs e)
-        {
-            speciale_BACK_panel.Visible = true; // Speciale
-            datagridviewBackground_panel.Visible = false;  // Datagridview
-            backPanel_Textboxes_panel.Visible = false; // Opret
-        }
-
-
-
-
-
-        //Medarbejder-----SPECIALER-------::START::-----------------------------------------------------------------------------
-        // Load Specialer Medarbejder in Combobox
-        private void speciale_comboBox_Click(object sender, EventArgs e)
-        {
-            Load_Specialer((ComboBox)sender);
-        }
-
-
-
-
-        // Clear Medarbejder Speciale Textbox-- Button
-        private void clear_medarbejder_speciale_button_Click(object sender, EventArgs e)
-        {
-            speciale_medarbejder_id_textBox.Clear();
-            speciale_comboBox.Items.Clear();
-        }
-
-
-
-        // Save Medarbejder - Speciale
-        private void save_Medarbejder_specaile_button_Click(object sender, EventArgs e)
-        {
-            DB_Connection_Write Save_Medarbejder_Speciale = new DB_Connection_Write();
-
-            if(speciale_medarbejder_id_textBox.Text !="" && speciale_comboBox.SelectedItem != null)
-            {
-            Save_Medarbejder_Speciale.CreateCommand($"Insert INTO Medarbejder_Uddannelser VALUES ('{speciale_comboBox.SelectedItem.ToString()}', '{speciale_medarbejder_id_textBox.Text}');");
-            speciale_comboBox.Items.Clear();
-            speciale_medarbejder_id_textBox.Clear();
-            }
-            else
-            {
-                MessageBox.Show("Felterne er ugyldig","Fejl", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-
-        }
-
-
-        //Medarbejder-----SPECIALER-------::END::-----------------------------------------------------------------------------
-
-
-
-
-
-
-        // Load Specialer Main Methods ----||Advoakt-Specialer and Create Speciale||
-        private void Load_Specialer(ComboBox combo)
-        {
-            speciale_comboBox.Items.Clear();
-            Load_Combobox Load_Specialer = new Load_Combobox();
-            string Query = "Select* From Uddannelser";
-            combo = Load_Specialer.Populate_Combobox(Query, combo);
-        }
-
-
-
-
-
-
-
-
-
-        //---Create Speciale----------------::START::---------------------------------------------
-
-        // Save new Speciale --- CREATE SPECIALE
-        private void save_speciale_button_Click(object sender, EventArgs e)
-        {
-            DB_Connection_Write Save_Speciale = new DB_Connection_Write();
-            Save_Speciale.CreateCommand($"Insert Into Uddannelser Values('{Add_Specaile_To_DB_comboBox.Text}');");
-            Add_Specaile_To_DB_comboBox.Items.Clear();
-            Add_Specaile_To_DB_comboBox.Text = "";
-
-        }
-
-
-
-
-        // Clear Speciale "Uddanelse" Textbox --BUTTON
-        private void clear_speciale_button_Click(object sender, EventArgs e)
-        {
-            Add_Specaile_To_DB_comboBox.Items.Clear();
-            Add_Specaile_To_DB_comboBox.Text = "";
-        }
-
-
-
-
-
-
-        //Add Speciale to DB ----::SAVE::---- 
-        private void Add_Specaile_To_DB_comboBox_Click(object sender, EventArgs e)
-        {
-            Add_Specaile_To_DB_comboBox.Items.Clear();
-            Load_Specialer((ComboBox)sender);
-
-        }
-
-        private void Add_Specaile_To_DB_comboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Add_Specaile_To_DB_comboBox.SelectedIndex = -1; 
-                
-        }
-
-
-        //---Create Speciale----------------::END::---------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        //----DELETE SPECIALE-------------::START::----------------------------------------------
-
-    
-
-            // Delete Speciale - Combobox - SELECT
-        private void delete_speciale_comboBox_MouseClick(object sender, MouseEventArgs e)
-        {
-           delete_speciale_comboBox.Items.Clear();
-           Load_Specialer((ComboBox)sender);
-        }
-
-
-
-
-        // Delete - Speciale - Button
-        private void delete_speciale_button_Click(object sender, EventArgs e)
-        {
-            if(delete_speciale_comboBox.SelectedIndex != -1)
-            {
-              DB_Connection_Write Delete_Speciale = new DB_Connection_Write();
-              Delete_Speciale.CreateCommand($"Delete FROM Uddannelser Where Medarbejder_Uddanelse = '{delete_speciale_comboBox.SelectedItem.ToString()}';");
-              delete_speciale_comboBox.Items.Clear();
-            }
-            else
-            {
-                MessageBox.Show("Ugyldig Input","Fejl", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-
-        //----DELETE SPECIALE-------------::END::----------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        //----DELETE SPECIALE- From Medarbejdere------------::START::----------------------------------------------
-
-        // Delete_ Speciale_ From _ medarbejdere
-        private void delete_speciale_from_medarbejder_comboBox_Click(object sender, EventArgs e)
-        {
-            delete_speciale_from_medarbejder_comboBox.Items.Clear();
-            Load_Specialer((ComboBox)sender);
-
-        }
-
-
-
-        // Delete Speciale From Medarbejder  Button
-        private void delete_speciale_from_medarbejder_delete_button_Click(object sender, EventArgs e)
-        {
-            if (delete_speciale_from_medarbejder_comboBox.SelectedIndex != -1)
-            {
-  
-                DB_Connection_Write Delete_Speciale_From_Medarbejder = new DB_Connection_Write();
-                Delete_Speciale_From_Medarbejder.CreateCommand($"Delete FROM Medarbejder_Uddannelser Where Medarbejder_Uddannelser.Medarbejder_Uddanelse = '{delete_speciale_from_medarbejder_comboBox.SelectedItem.ToString()}' AND Medarbejder_Uddannelser.Me_ID = '{delete_speciale_from_medarbejder_textBox.Text}';");
-                delete_speciale_from_medarbejder_comboBox.Items.Clear();
-                delete_speciale_from_medarbejder_textBox.Clear();
-            }
-            else
-            {
-                MessageBox.Show("Ugyldig Input", "Fejl", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-
-        //----DELETE SPECIALE- From Medarbejdere------------::END::----------------------------------------------
-
-
-
+       // Copy Selected Column to CLipboard
         private void copy_selected_column_button_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(Medarbejder_dataGridView.SelectedRows[0].Cells[Medarbejder_dataGridView.CurrentCell.ColumnIndex].Value.ToString());
@@ -1683,6 +1472,330 @@ namespace View_GUI
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // Log-IN - MAIN - BUTTON
+        private void main_specialer_button_Click(object sender, EventArgs e)
+        {
+            datagridviewBackground_panel.Visible = false;  // Datagridview
+            backPanel_Textboxes_panel.Visible = false; // Opret
+            Log_In_BACK_panel.Visible = true; // Log In
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //-------------Create---LOG---IN----::START::----------------------------------------------------------------------------------
+
+        // Log IN - Medarbejder Load Names
+        private void load_ME_Names_comboBox_Click(object sender, EventArgs e)
+        {
+            string Query_Load_Me_Without_LogIN = "Select M.Me_Fornavn From Medarbejder AS M Left Join Log_In AS L ON M.Me_ID = L.Me_ID Where L.Me_ID IS Null; ";
+            Load_Me_Names_In_Combobx((ComboBox)sender, Query_Load_Me_Without_LogIN);
+        }
+
+
+
+
+
+
+        // Load - Medarbejder Names From DB in Combobx
+        private void Load_Me_Names_In_Combobx(ComboBox CBox, String Query)
+        {
+            CBox.Items.Clear();
+            Load_Combobox Load_Advokat_names = new Load_Combobox();
+            CBox = Load_Advokat_names.Populate_Combobox(Query, CBox);
+        }
+
+
+
+
+
+
+
+
+        // Populate Textbox - Medarbejder Name to ID
+        private void load_ME_Names_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Me_Name_To_Me_ID((ComboBox) sender, Me_ID_textBox);
+        }
+
+
+
+
+
+
+        
+
+
+        // Medarbejder Name TO ID
+        private void Me_Name_To_Me_ID(ComboBox CBox, TextBox TBox)
+        {
+            TBox.Clear();
+            Load_Combobox Get_Advokat_ID = new Load_Combobox();
+            TBox = Get_Advokat_ID.PopulateTextbox($"Select M.Me_ID From Medarbejder As M Where M.Me_Fornavn = '{CBox.SelectedItem.ToString()}' ", TBox);
+        }
+
+
+
+
+
+
+
+
+
+
+         //Validate Log In
+        private void Validate_Input_Log_In()
+        {
+            Log_In_Valid = true;
+
+            if(Me_ID_textBox.Text.Length < 1)
+            {
+                Log_In_Valid = false;
+                Me_ID_textBox.BackColor = Color.FromArgb(255, 192, 192);
+            }
+
+            if(log_in_textBox.Text.Length < 1)
+            {
+
+                Log_In_Valid = false;
+                log_in_textBox.BackColor = Color.FromArgb(255, 192, 192);
+
+            }
+
+            if (pass_textBox.Text.Length < 1)
+            {
+
+                Log_In_Valid = false;
+                pass_textBox.BackColor = Color.FromArgb(255, 192, 192);
+
+            }
+
+
+        }
+
+
+
+
+
+
+        //Save Log IN
+        private void Save_Log_IN()
+        {
+            DB_Connection_Write Save_Log_In_DB = new DB_Connection_Write();
+            bool successful_Saved  = Save_Log_In_DB.CreateCommand($"Insert INTO Log_In Values('{Me_ID_textBox.Text}','{log_in_textBox.Text}','{pass_textBox.Text}');");
+
+
+            // Clear if Succesfull Saved
+            if (successful_Saved == true)
+            {
+                Clear_Log_In_Input();
+            }
+        }
+
+
+
+
+
+
+        // Save Log In Button
+        private void save_log_in_button_Click(object sender, EventArgs e)
+        {
+            Validate_Input_Log_In();
+
+            if (Log_In_Valid == true)
+            {
+              Save_Log_IN();
+            }
+          
+        }
+
+
+        // Clear and reset Color
+
+        private void Clear_Log_In_Input()
+        {
+            pass_textBox.BackColor = DefaultBackColor;
+            log_in_textBox.BackColor = DefaultBackColor;
+            Me_ID_textBox.BackColor = DefaultBackColor;
+
+            load_ME_Names_comboBox.Items.Clear();
+            pass_textBox.Clear();
+            log_in_textBox.Clear();
+            Me_ID_textBox.Clear();
+          
+        }
+
+
+
+
+        // Clear All Inputs - Button
+        private void clear_all_log_in_button_Click(object sender, EventArgs e)
+        {
+            Clear_Log_In_Input();
+        }
+
+        //-------------Create---LOG---IN----::START::----------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //------DELETE----LOG--IN-----::START::--------------------------------------------------------------------
+        // Load ME _Names For deletion of Log IN
+        private void Del_Me_name_comboBox_Click(object sender, EventArgs e)
+        {
+            string Load_Me_With_LogIN_For_Del = "Select M.Me_Fornavn  From Log_In AS L Inner Join Medarbejder AS M ON L.Me_ID = M.Me_ID";
+            Load_Me_Names_In_Combobx((ComboBox)sender, Load_Me_With_LogIN_For_Del);
+
+        }
+
+
+
+        // Medarbejder Name To ID -- Delete Log IN
+        private void Del_Me_name_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Me_Name_To_Me_ID((ComboBox)sender, Del_ME_ID_textBox);
+        }
+
+
+
+
+
+       
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        // Clear Input - Del - Log In - Main Method
+        private void Clear_Del_Log_In_Input()
+        {
+            Del_ME_ID_textBox.Clear();
+            Del_ME_ID_textBox.BackColor = DefaultBackColor;
+            Del_Me_name_comboBox.Items.Clear();
+
+        }
+
+
+
+
+
+        // Clear - Input for Deletion Log In - Button
+        private void Del_Clear_button_Click(object sender, EventArgs e)
+        {
+            Clear_Del_Log_In_Input();
+        }
+
+
+
+
+
+
+
+
+
+
+        private void Delete_Log_In_Save()
+        {
+            if(Del_ME_ID_textBox.Text.Length > 15)
+            {
+                DB_Connection_Write Del_log_IN = new DB_Connection_Write();
+
+                DialogResult Slet = MessageBox.Show("Er du sikker på at du vil SLETTE: Hvis du trykker på Ja så sletter du det Permanent", "SLET", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if(Slet == DialogResult.Yes)
+                {
+                    bool successful = Del_log_IN.CreateCommand($"DELETE FROM LOG_IN Where LOG_IN.Me_ID = '{Del_ME_ID_textBox.Text}'");
+
+                    if(successful == true)
+                    {
+                        Clear_Del_Log_In_Input();
+                    }
+
+                }
+
+
+            }
+
+
+            else
+            {
+                Del_ME_ID_textBox.BackColor = Color.FromArgb(255, 192, 192);
+            }
+
+        }
+
+
+
+
+
+
+
+
+         // Delete Log IN - Save - Button
+        private void Del_button_Click(object sender, EventArgs e)
+        {
+            Delete_Log_In_Save();
+        }
+
+        //------DELETE----LOG--IN-----::END::--------------------------------------------------------------------
 
     }
 }
