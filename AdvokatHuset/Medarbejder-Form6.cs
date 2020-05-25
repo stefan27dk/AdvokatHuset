@@ -67,6 +67,12 @@ namespace View_GUI
         bool Log_In_Valid = true;
 
 
+        // Vis Rediger Log IN Validate
+        bool Vis_rediger_validated = true;
+
+
+
+
         // Undo Delete
         List<DataGridViewRow> DeletedRowsList = new List<DataGridViewRow>(); // List with deleted Rows
 
@@ -1709,18 +1715,7 @@ namespace View_GUI
 
 
 
-       
-
-
-
-
-
-        
-
-
-
-
-
+               
 
 
 
@@ -1751,7 +1746,7 @@ namespace View_GUI
 
 
 
-
+          // Dell Log IN Button
         private void Delete_Log_In_Save()
         {
             if(Del_ME_ID_textBox.Text.Length > 15)
@@ -1796,6 +1791,273 @@ namespace View_GUI
         }
 
         //------DELETE----LOG--IN-----::END::--------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         // Vis -Rediger - Log _IN ---- ::START::-------------------------------------------------------------------------------
+
+
+
+        // Vis Rediger - Show ME_Names - Combobox
+        private void vis_rediger_Me_Navn_comboBox_Click(object sender, EventArgs e)
+        {
+            string Load_Me_With_LogIN_For_vis_rediger = "Select M.Me_Fornavn  From Log_In AS L Inner Join Medarbejder AS M ON L.Me_ID = M.Me_ID";
+            Load_Me_Names_In_Combobx((ComboBox)sender, Load_Me_With_LogIN_For_vis_rediger);
+        }
+
+
+
+
+
+
+        // Load ID In textbox
+        private void vis_rediger_Me_Navn_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Reset_Color_All_Input(); // Reset Colors
+            Me_Name_To_Me_ID((ComboBox)sender, vis_rediger_Me_Id_textBox);
+            Load_Log_IN(); // Load Log IN
+
+            //if(vis_rediger_Me_Id_textBox.Text.Length > 15)
+            //{
+
+
+            //}
+        }
+
+
+
+
+
+
+        // Load Log IN Name and Pass
+         private void Load_Log_IN()
+         {
+             if(vis_rediger_Me_Id_textBox.Text.Length > 15)
+             {
+                 // Load User Name
+                 Load_Combobox Load_Log_IN_Name = new Load_Combobox();
+                 vis_rediger_Log_In_Navn_textBox = Load_Log_IN_Name.PopulateTextbox($"Select L.Log_In_Navn From Log_In AS L Where L.Me_ID = '{vis_rediger_Me_Id_textBox.Text}'", vis_rediger_Log_In_Navn_textBox);
+                 
+                 
+                 // Load Password
+                 Load_Combobox Load_Log_IN_Pass = new Load_Combobox();
+                 Vis_rediger_Log_In_Pass_textBox = Load_Log_IN_Pass.PopulateTextbox($"Select L.Log_In_Pass From Log_In AS L Where L.Me_ID = '{vis_rediger_Me_Id_textBox.Text}'", Vis_rediger_Log_In_Pass_textBox);
+
+             }
+
+         }
+
+
+
+
+
+
+
+        // ID - Textbox - Validated 
+        private void vis_rediger_Me_Id_textBox_Validated(object sender, EventArgs e)
+        {
+            Load_Log_IN(); // Load Log IN
+
+            if(vis_rediger_Me_Id_textBox.Text.Length <1)
+            {
+                vis_rediger_Log_In_Navn_textBox.Clear();
+                Vis_rediger_Log_In_Pass_textBox.Clear();
+                vis_rediger_Me_Navn_comboBox.Items.Clear();
+            }
+            
+        }
+
+
+
+
+            // Validate
+           private void Validate_Vis_Rediger_Log_In()
+           {
+
+            Vis_rediger_validated = true;
+
+                // Id Textbox Validating
+               if(vis_rediger_Me_Id_textBox.Text.Length < 15)
+               {
+                Vis_rediger_validated = false;
+                vis_rediger_Me_Id_textBox.BackColor = Color.FromArgb(255, 192, 192);
+               }
+
+
+               // Log_IN- Name
+               if(vis_rediger_Log_In_Navn_textBox.Text.Length < 1)
+               {
+                Vis_rediger_validated = false;
+                vis_rediger_Log_In_Navn_textBox.BackColor = Color.FromArgb(255, 192, 192);
+
+               }
+
+
+
+               // Log In Pass
+               if(Vis_rediger_Log_In_Pass_textBox.Text.Length < 1)
+               {
+
+                  Vis_rediger_validated = false;
+                  Vis_rediger_Log_In_Pass_textBox.BackColor = Color.FromArgb(255, 192, 192);
+
+               }
+
+
+
+
+           }
+
+
+
+
+          // Clear All Inputs and Reset Color
+          private void Clear_All_Input_Vis_rediger_Log_IN()
+          {
+            vis_rediger_Me_Navn_comboBox.Items.Clear();
+            vis_rediger_Me_Id_textBox.Clear();
+            vis_rediger_Log_In_Navn_textBox.Clear();
+            Vis_rediger_Log_In_Pass_textBox.Clear();
+            Reset_Color_All_Input(); // reset Color
+
+
+          }
+
+
+
+        // reset Colors
+          private void Reset_Color_All_Input()
+          {
+            vis_rediger_Me_Id_textBox.BackColor = DefaultBackColor;
+            vis_rediger_Log_In_Navn_textBox.BackColor = DefaultBackColor;
+            Vis_rediger_Log_In_Pass_textBox.BackColor = DefaultBackColor;
+          }
+
+
+
+
+
+
+
+        // Clear All Inputs- Vis Rediger - Button
+        private void vis_rediger_clear_All_button_Click(object sender, EventArgs e)
+        {
+            Clear_All_Input_Vis_rediger_Log_IN();
+        }
+
+
+
+         // SAve Edited Log IN - Main Method
+         private void Save_Edited_Log_IN()
+         {
+
+            if(Vis_rediger_validated == true)
+            {
+               DB_Connection_Write save_edited_log_in = new DB_Connection_Write();
+               DialogResult log_in_save_Changes = MessageBox.Show("Er du sikker på at du vil gemme ændringerne af denne Log In","GEM", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+             
+               if(log_in_save_Changes == DialogResult.Yes)
+               {
+                bool successfull_saved = save_edited_log_in.CreateCommand($"Update Log_In Set Log_In_Navn = '{vis_rediger_Log_In_Navn_textBox.Text}', Log_In_Pass = '{Vis_rediger_Log_In_Pass_textBox.Text}'  Where Log_In.Me_ID = '{vis_rediger_Me_Id_textBox.Text}'");
+
+
+                    if(successfull_saved == true)
+                    {
+                        Clear_All_Input_Vis_rediger_Log_IN();
+                    }
+
+
+               }
+            }
+
+         }
+
+
+
+
+
+
+
+
+
+        // Vis_rediger_Log_IN - Save Button
+        private void vis_rediger_save_button_Click(object sender, EventArgs e)
+        {
+            Validate_Vis_Rediger_Log_In(); // Validate
+            Save_Edited_Log_IN();
+
+
+        }
+
+
+
+
+
+
+
+        // Me_ID - Reset Color
+        private void vis_rediger_Me_Id_textBox_TextChanged(object sender, EventArgs e)
+        {
+            vis_rediger_Me_Id_textBox.BackColor = DefaultBackColor;
+        }
+
+
+
+
+
+
+
+        // Log In Name - Reset Color
+        private void vis_rediger_Log_In_Navn_textBox_TextChanged(object sender, EventArgs e)
+        {
+            vis_rediger_Log_In_Navn_textBox.BackColor = DefaultBackColor;
+        }
+
+
+
+
+
+
+
+
+        // Log_In_Pass - Color Reset
+        private void Vis_rediger_Log_In_Pass_textBox_TextChanged(object sender, EventArgs e)
+        {
+            Vis_rediger_Log_In_Pass_textBox.BackColor = DefaultBackColor;
+        }
+
+
+
+
+
+
+
+
+
+        // Vis -Rediger - Log _IN --------::END::-------------------------------------------------------------------------------
+
 
     }
 }

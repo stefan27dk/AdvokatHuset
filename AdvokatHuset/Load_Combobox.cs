@@ -22,24 +22,33 @@ namespace View_GUI
         {
             
 
-           if(Connection.DBConnectionString != null)
-           {
+            try
+            {
 
-                using (SqlConnection conn = new SqlConnection(Connection.DBConnectionString))
+
+                if(Connection.DBConnectionString != null)
                 {
-               
-                    conn.Open();
-                   SqlCommand cmd = new SqlCommand(Query, conn);
-                   SqlDataReader DataReader = cmd.ExecuteReader();
-               
-                   while (DataReader.Read())
-                   {
-                        Loader_Combobox.Items.Add(DataReader[0]);
-                   }
-               
+              
+                     using (SqlConnection conn = new SqlConnection(Connection.DBConnectionString))
+                     {
+                    
+                         conn.Open();
+                        SqlCommand cmd = new SqlCommand(Query, conn);
+                        SqlDataReader DataReader = cmd.ExecuteReader();
+                    
+                        while (DataReader.Read())
+                        {
+                             Loader_Combobox.Items.Add(DataReader[0]);
+                        }
+                    
+                     }
+                    
                 }
-               
-           }
+
+            }
+
+            catch(Exception e) { MessageBox.Show($"Fejl: {e.Message}", "Fejl", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+
                 return Loader_Combobox;
         }
 
@@ -49,26 +58,32 @@ namespace View_GUI
 
         public TextBox PopulateTextbox(string Query, TextBox Loader_TextBox)
         {
-
-
-            if (Connection.DBConnectionString != null)
+            try
             {
-                using (SqlConnection conn = new SqlConnection(Connection.DBConnectionString))
+
+
+                if (Connection.DBConnectionString != null)
                 {
-
-                    conn.Open();
-                    SqlCommand cmd = new SqlCommand(Query, conn);
-                    SqlDataReader DataReader = cmd.ExecuteReader();
-
-
-                    while(DataReader.Read())
+                    using (SqlConnection conn = new SqlConnection(Connection.DBConnectionString))
                     {
-                        Loader_TextBox.Text = DataReader[0].ToString();
+
+                        conn.Open();
+                        SqlCommand cmd = new SqlCommand(Query, conn);
+                        SqlDataReader DataReader = cmd.ExecuteReader();
+
+
+                        while (DataReader.Read())
+                        {
+                            Loader_TextBox.Text = DataReader[0].ToString();
+                        }
+
                     }
 
                 }
 
             }
+
+            catch (Exception e) { MessageBox.Show($"Fejl: {e.Message}", "Fejl", MessageBoxButtons.OK, MessageBoxIcon.Error); }
 
             return Loader_TextBox;
 

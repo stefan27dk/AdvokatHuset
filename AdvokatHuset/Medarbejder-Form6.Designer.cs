@@ -32,29 +32,22 @@
             this.backgroundName_Top_panel = new System.Windows.Forms.Panel();
             this.medarbejdere_name_textBox = new System.Windows.Forms.TextBox();
             this.backPanel_Textboxes_panel = new System.Windows.Forms.Panel();
+            this.create_Clear_All_textboxes_button = new System.Windows.Forms.Button();
+            this.email_label = new System.Windows.Forms.Label();
             this.medarbejder_email_textBox = new System.Windows.Forms.TextBox();
+            this.medarbejdere_Save_button = new System.Windows.Forms.Button();
+            this.adr_label = new System.Windows.Forms.Label();
             this.medarbejdere_adr_textBox = new System.Windows.Forms.TextBox();
             this.background_textboxes_top_panel = new System.Windows.Forms.Panel();
             this.opret_Medarbejdere_label = new System.Windows.Forms.Label();
+            this.zipCode_label = new System.Windows.Forms.Label();
             this.medarbejdere_zipcCode_textBox = new System.Windows.Forms.TextBox();
+            this.tlf_label = new System.Windows.Forms.Label();
             this.medarbejdere_tlf_textBox = new System.Windows.Forms.TextBox();
+            this.surname_label = new System.Windows.Forms.Label();
             this.medarbejdere_surname_textBox = new System.Windows.Forms.TextBox();
+            this.name_label = new System.Windows.Forms.Label();
             this.datagridviewBackground_panel = new System.Windows.Forms.Panel();
-            this.Log_In_BACK_panel = new System.Windows.Forms.Panel();
-            this.background_Medarbejder_specialepanel = new System.Windows.Forms.Panel();
-            this.log_in_textBox = new System.Windows.Forms.TextBox();
-            this.speciale_Medarbejder_Top_panel = new System.Windows.Forms.Panel();
-            this.Log_In_label = new System.Windows.Forms.Label();
-            this.Medarbejder_dataGridView = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.slet_log_in_label = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.Del_button = new System.Windows.Forms.Button();
-            this.Del_Clear_button = new System.Windows.Forms.Button();
-            this.Log_In_name_label = new System.Windows.Forms.Label();
-            this.pass_label = new System.Windows.Forms.Label();
-            this.save_log_in_button = new System.Windows.Forms.Button();
-            this.clear_all_log_in_button = new System.Windows.Forms.Button();
             this.background_DGV_Search_panel = new System.Windows.Forms.Panel();
             this.search_textBox = new System.Windows.Forms.TextBox();
             this.search_options_comboBox = new System.Windows.Forms.ComboBox();
@@ -75,43 +68,65 @@
             this.background_DGV_panel2 = new System.Windows.Forms.Panel();
             this.Medarbejder_Tlf_button = new System.Windows.Forms.Button();
             this.show_all_button = new System.Windows.Forms.Button();
+            this.Medarbejder_dataGridView = new System.Windows.Forms.DataGridView();
+            this.Log_In_BACK_panel = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.Vis_rediger_Log_In_Pass_textBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.vis_rediger_Log_In_Navn_textBox = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.vis_rediger_Me_Id_textBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.vis_rediger_Me_Navn_comboBox = new System.Windows.Forms.ComboBox();
+            this.vis_rediger_clear_All_button = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.slet_log_in_label = new System.Windows.Forms.Label();
+            this.Del_ME_ID_textBox = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.Del_Me_name_comboBox = new System.Windows.Forms.ComboBox();
+            this.Del_button = new System.Windows.Forms.Button();
+            this.Del_Clear_button = new System.Windows.Forms.Button();
+            this.background_Medarbejder_specialepanel = new System.Windows.Forms.Panel();
+            this.Medarbejder_ID_label = new System.Windows.Forms.Label();
+            this.Me_ID_textBox = new System.Windows.Forms.TextBox();
+            this.Medarbejder_Navn_label = new System.Windows.Forms.Label();
+            this.load_ME_Names_comboBox = new System.Windows.Forms.ComboBox();
+            this.pass_textBox = new System.Windows.Forms.TextBox();
+            this.Log_In_name_label = new System.Windows.Forms.Label();
+            this.log_in_textBox = new System.Windows.Forms.TextBox();
+            this.pass_label = new System.Windows.Forms.Label();
+            this.save_log_in_button = new System.Windows.Forms.Button();
+            this.clear_all_log_in_button = new System.Windows.Forms.Button();
+            this.speciale_Medarbejder_Top_panel = new System.Windows.Forms.Panel();
+            this.Log_In_label = new System.Windows.Forms.Label();
             this.top_Menu_background_panel = new System.Windows.Forms.Panel();
             this.main_specialer_button = new System.Windows.Forms.Button();
             this.vis_rediger_medarbejdere_button = new System.Windows.Forms.Button();
             this.opret_medarbejder_button = new System.Windows.Forms.Button();
-            this.create_Clear_All_textboxes_button = new System.Windows.Forms.Button();
-            this.email_label = new System.Windows.Forms.Label();
-            this.medarbejdere_Save_button = new System.Windows.Forms.Button();
-            this.adr_label = new System.Windows.Forms.Label();
-            this.zipCode_label = new System.Windows.Forms.Label();
-            this.tlf_label = new System.Windows.Forms.Label();
-            this.surname_label = new System.Windows.Forms.Label();
-            this.name_label = new System.Windows.Forms.Label();
-            this.pass_textBox = new System.Windows.Forms.TextBox();
-            this.Medarbejder_Navn_label = new System.Windows.Forms.Label();
-            this.load_ME_Names_comboBox = new System.Windows.Forms.ComboBox();
-            this.Medarbejder_ID_label = new System.Windows.Forms.Label();
-            this.Me_ID_textBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Del_ME_ID_textBox = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.Del_Me_name_comboBox = new System.Windows.Forms.ComboBox();
+            this.vis_rediger_save_button = new System.Windows.Forms.Button();
             this.backgroundName_Top_panel.SuspendLayout();
             this.backPanel_Textboxes_panel.SuspendLayout();
             this.background_textboxes_top_panel.SuspendLayout();
             this.datagridviewBackground_panel.SuspendLayout();
-            this.Log_In_BACK_panel.SuspendLayout();
-            this.background_Medarbejder_specialepanel.SuspendLayout();
-            this.speciale_Medarbejder_Top_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Medarbejder_dataGridView)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.background_DGV_Search_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.search_Datagridview_pictureBox)).BeginInit();
             this.background_DGV_panel1.SuspendLayout();
             this.background_DGV_panel4.SuspendLayout();
             this.background_DGV_panel3.SuspendLayout();
             this.background_DGV_panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Medarbejder_dataGridView)).BeginInit();
+            this.Log_In_BACK_panel.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.background_Medarbejder_specialepanel.SuspendLayout();
+            this.speciale_Medarbejder_Top_panel.SuspendLayout();
             this.top_Menu_background_panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -173,6 +188,36 @@
             this.backPanel_Textboxes_panel.TabIndex = 11;
             this.backPanel_Textboxes_panel.Visible = false;
             // 
+            // create_Clear_All_textboxes_button
+            // 
+            this.create_Clear_All_textboxes_button.BackColor = System.Drawing.Color.Transparent;
+            this.create_Clear_All_textboxes_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
+            this.create_Clear_All_textboxes_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.create_Clear_All_textboxes_button.FlatAppearance.BorderSize = 0;
+            this.create_Clear_All_textboxes_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.create_Clear_All_textboxes_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.create_Clear_All_textboxes_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.create_Clear_All_textboxes_button.ForeColor = System.Drawing.Color.Black;
+            this.create_Clear_All_textboxes_button.Location = new System.Drawing.Point(119, 339);
+            this.create_Clear_All_textboxes_button.Name = "create_Clear_All_textboxes_button";
+            this.create_Clear_All_textboxes_button.Size = new System.Drawing.Size(28, 23);
+            this.create_Clear_All_textboxes_button.TabIndex = 23;
+            this.create_Clear_All_textboxes_button.UseVisualStyleBackColor = false;
+            this.create_Clear_All_textboxes_button.Click += new System.EventHandler(this.create_Clear_All_textboxes_button_Click);
+            // 
+            // email_label
+            // 
+            this.email_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.email_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.email_label.Image = global::View_GUI.Properties.Resources.At_Mail_icon;
+            this.email_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.email_label.Location = new System.Drawing.Point(53, 287);
+            this.email_label.Name = "email_label";
+            this.email_label.Size = new System.Drawing.Size(98, 33);
+            this.email_label.TabIndex = 22;
+            this.email_label.Text = "Email:";
+            this.email_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // medarbejder_email_textBox
             // 
             this.medarbejder_email_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
@@ -182,6 +227,37 @@
             this.medarbejder_email_textBox.Size = new System.Drawing.Size(100, 20);
             this.medarbejder_email_textBox.TabIndex = 6;
             this.medarbejder_email_textBox.TextChanged += new System.EventHandler(this.medarbejder_email_textBox_TextChanged);
+            // 
+            // medarbejdere_Save_button
+            // 
+            this.medarbejdere_Save_button.FlatAppearance.BorderSize = 0;
+            this.medarbejdere_Save_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.medarbejdere_Save_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.medarbejdere_Save_button.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.medarbejdere_Save_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
+            this.medarbejdere_Save_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
+            this.medarbejdere_Save_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.medarbejdere_Save_button.Location = new System.Drawing.Point(162, 336);
+            this.medarbejdere_Save_button.Name = "medarbejdere_Save_button";
+            this.medarbejdere_Save_button.Size = new System.Drawing.Size(90, 30);
+            this.medarbejdere_Save_button.TabIndex = 7;
+            this.medarbejdere_Save_button.Text = "Gem";
+            this.medarbejdere_Save_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.medarbejdere_Save_button.UseVisualStyleBackColor = true;
+            this.medarbejdere_Save_button.Click += new System.EventHandler(this.medarbejdere_Save_button_Click);
+            // 
+            // adr_label
+            // 
+            this.adr_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.adr_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.adr_label.Image = global::View_GUI.Properties.Resources.my_numbers_icon;
+            this.adr_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.adr_label.Location = new System.Drawing.Point(70, 197);
+            this.adr_label.Name = "adr_label";
+            this.adr_label.Size = new System.Drawing.Size(80, 25);
+            this.adr_label.TabIndex = 19;
+            this.adr_label.Text = "Adr:";
+            this.adr_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // medarbejdere_adr_textBox
             // 
@@ -215,6 +291,19 @@
             this.opret_Medarbejdere_label.TabIndex = 1;
             this.opret_Medarbejdere_label.Text = "Opret Chef";
             // 
+            // zipCode_label
+            // 
+            this.zipCode_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.zipCode_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.zipCode_label.Image = global::View_GUI.Properties.Resources.Compressed_File_Zip_icon;
+            this.zipCode_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.zipCode_label.Location = new System.Drawing.Point(49, 150);
+            this.zipCode_label.Name = "zipCode_label";
+            this.zipCode_label.Size = new System.Drawing.Size(105, 25);
+            this.zipCode_label.TabIndex = 17;
+            this.zipCode_label.Text = "PostNr:";
+            this.zipCode_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // medarbejdere_zipcCode_textBox
             // 
             this.medarbejdere_zipcCode_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
@@ -225,6 +314,19 @@
             this.medarbejdere_zipcCode_textBox.TabIndex = 3;
             this.medarbejdere_zipcCode_textBox.TextChanged += new System.EventHandler(this.medarbejdere_zipcCode_textBox_TextChanged);
             this.medarbejdere_zipcCode_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.medarbejdere_zipcCode_textBox_KeyPress);
+            // 
+            // tlf_label
+            // 
+            this.tlf_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.tlf_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.tlf_label.Image = global::View_GUI.Properties.Resources.Phone_icon__1_;
+            this.tlf_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.tlf_label.Location = new System.Drawing.Point(80, 243);
+            this.tlf_label.Name = "tlf_label";
+            this.tlf_label.Size = new System.Drawing.Size(73, 24);
+            this.tlf_label.TabIndex = 15;
+            this.tlf_label.Text = "Tlf:";
+            this.tlf_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // medarbejdere_tlf_textBox
             // 
@@ -237,6 +339,19 @@
             this.medarbejdere_tlf_textBox.TextChanged += new System.EventHandler(this.medarbejdere_tlf_textBox_TextChanged);
             this.medarbejdere_tlf_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.medarbejdere_tlf_textBox_KeyPress);
             // 
+            // surname_label
+            // 
+            this.surname_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.surname_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.surname_label.Image = global::View_GUI.Properties.Resources.name_card_icon;
+            this.surname_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.surname_label.Location = new System.Drawing.Point(25, 104);
+            this.surname_label.Name = "surname_label";
+            this.surname_label.Size = new System.Drawing.Size(125, 25);
+            this.surname_label.TabIndex = 13;
+            this.surname_label.Text = "Efternavn:";
+            this.surname_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // medarbejdere_surname_textBox
             // 
             this.medarbejdere_surname_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
@@ -247,6 +362,19 @@
             this.medarbejdere_surname_textBox.TabIndex = 2;
             this.medarbejdere_surname_textBox.TextChanged += new System.EventHandler(this.medarbejdere_surname_textBox_TextChanged);
             this.medarbejdere_surname_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.medarbejdere_surname_textBox_KeyPress);
+            // 
+            // name_label
+            // 
+            this.name_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.name_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.name_label.Image = global::View_GUI.Properties.Resources.ID_icon;
+            this.name_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.name_label.Location = new System.Drawing.Point(56, 59);
+            this.name_label.Name = "name_label";
+            this.name_label.Size = new System.Drawing.Size(95, 24);
+            this.name_label.TabIndex = 2;
+            this.name_label.Text = "Navn:";
+            this.name_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // datagridviewBackground_panel
             // 
@@ -263,219 +391,6 @@
             this.datagridviewBackground_panel.Name = "datagridviewBackground_panel";
             this.datagridviewBackground_panel.Size = new System.Drawing.Size(1540, 588);
             this.datagridviewBackground_panel.TabIndex = 13;
-            // 
-            // Log_In_BACK_panel
-            // 
-            this.Log_In_BACK_panel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Log_In_BACK_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            this.Log_In_BACK_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Log_In_BACK_panel.Controls.Add(this.panel2);
-            this.Log_In_BACK_panel.Controls.Add(this.panel1);
-            this.Log_In_BACK_panel.Controls.Add(this.background_Medarbejder_specialepanel);
-            this.Log_In_BACK_panel.Controls.Add(this.speciale_Medarbejder_Top_panel);
-            this.Log_In_BACK_panel.Location = new System.Drawing.Point(473, 164);
-            this.Log_In_BACK_panel.Name = "Log_In_BACK_panel";
-            this.Log_In_BACK_panel.Size = new System.Drawing.Size(810, 437);
-            this.Log_In_BACK_panel.TabIndex = 24;
-            this.Log_In_BACK_panel.Visible = false;
-            // 
-            // background_Medarbejder_specialepanel
-            // 
-            this.background_Medarbejder_specialepanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
-            this.background_Medarbejder_specialepanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.background_Medarbejder_specialepanel.Controls.Add(this.Medarbejder_ID_label);
-            this.background_Medarbejder_specialepanel.Controls.Add(this.Me_ID_textBox);
-            this.background_Medarbejder_specialepanel.Controls.Add(this.Medarbejder_Navn_label);
-            this.background_Medarbejder_specialepanel.Controls.Add(this.load_ME_Names_comboBox);
-            this.background_Medarbejder_specialepanel.Controls.Add(this.pass_textBox);
-            this.background_Medarbejder_specialepanel.Controls.Add(this.Log_In_name_label);
-            this.background_Medarbejder_specialepanel.Controls.Add(this.log_in_textBox);
-            this.background_Medarbejder_specialepanel.Controls.Add(this.pass_label);
-            this.background_Medarbejder_specialepanel.Controls.Add(this.save_log_in_button);
-            this.background_Medarbejder_specialepanel.Controls.Add(this.clear_all_log_in_button);
-            this.background_Medarbejder_specialepanel.Location = new System.Drawing.Point(0, 28);
-            this.background_Medarbejder_specialepanel.Name = "background_Medarbejder_specialepanel";
-            this.background_Medarbejder_specialepanel.Size = new System.Drawing.Size(402, 407);
-            this.background_Medarbejder_specialepanel.TabIndex = 31;
-            // 
-            // log_in_textBox
-            // 
-            this.log_in_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
-            this.log_in_textBox.Location = new System.Drawing.Point(220, 195);
-            this.log_in_textBox.MaxLength = 49;
-            this.log_in_textBox.Name = "log_in_textBox";
-            this.log_in_textBox.Size = new System.Drawing.Size(100, 20);
-            this.log_in_textBox.TabIndex = 1;
-            // 
-            // speciale_Medarbejder_Top_panel
-            // 
-            this.speciale_Medarbejder_Top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.speciale_Medarbejder_Top_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.speciale_Medarbejder_Top_panel.Controls.Add(this.Log_In_label);
-            this.speciale_Medarbejder_Top_panel.Location = new System.Drawing.Point(0, 0);
-            this.speciale_Medarbejder_Top_panel.Name = "speciale_Medarbejder_Top_panel";
-            this.speciale_Medarbejder_Top_panel.Size = new System.Drawing.Size(402, 26);
-            this.speciale_Medarbejder_Top_panel.TabIndex = 3;
-            // 
-            // Log_In_label
-            // 
-            this.Log_In_label.AutoSize = true;
-            this.Log_In_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.Log_In_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(92)))));
-            this.Log_In_label.Location = new System.Drawing.Point(185, 3);
-            this.Log_In_label.Name = "Log_In_label";
-            this.Log_In_label.Size = new System.Drawing.Size(58, 21);
-            this.Log_In_label.TabIndex = 1;
-            this.Log_In_label.Text = "Log In";
-            // 
-            // Medarbejder_dataGridView
-            // 
-            this.Medarbejder_dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.Medarbejder_dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.Medarbejder_dataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Medarbejder_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Medarbejder_dataGridView.Location = new System.Drawing.Point(10, 59);
-            this.Medarbejder_dataGridView.MultiSelect = false;
-            this.Medarbejder_dataGridView.Name = "Medarbejder_dataGridView";
-            this.Medarbejder_dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Medarbejder_dataGridView.Size = new System.Drawing.Size(1520, 512);
-            this.Medarbejder_dataGridView.TabIndex = 15;
-            this.Medarbejder_dataGridView.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Medarbejder_dataGridView_ColumnHeaderMouseClick);
-            this.Medarbejder_dataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.Medarbejder_dataGridView_DataError);
-            this.Medarbejder_dataGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.Medarbejder_dataGridView_RowEnter);
-            this.Medarbejder_dataGridView.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.Medarbejder_dataGridView_RowValidated);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.slet_log_in_label);
-            this.panel1.Location = new System.Drawing.Point(408, 1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(399, 26);
-            this.panel1.TabIndex = 4;
-            // 
-            // slet_log_in_label
-            // 
-            this.slet_log_in_label.AutoSize = true;
-            this.slet_log_in_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.slet_log_in_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(92)))));
-            this.slet_log_in_label.Location = new System.Drawing.Point(165, 2);
-            this.slet_log_in_label.Name = "slet_log_in_label";
-            this.slet_log_in_label.Size = new System.Drawing.Size(94, 21);
-            this.slet_log_in_label.TabIndex = 1;
-            this.slet_log_in_label.Text = "Slet Log In";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(34)))), ((int)(((byte)(44)))));
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.Del_ME_ID_textBox);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.Del_Me_name_comboBox);
-            this.panel2.Controls.Add(this.Del_button);
-            this.panel2.Controls.Add(this.Del_Clear_button);
-            this.panel2.Location = new System.Drawing.Point(408, 27);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(399, 408);
-            this.panel2.TabIndex = 32;
-            // 
-            // Del_button
-            // 
-            this.Del_button.FlatAppearance.BorderSize = 0;
-            this.Del_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.Del_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
-            this.Del_button.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Del_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Del_button.Image = global::View_GUI.Properties.Resources.Actions_edit_delete_icon3;
-            this.Del_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Del_button.Location = new System.Drawing.Point(204, 185);
-            this.Del_button.Name = "Del_button";
-            this.Del_button.Size = new System.Drawing.Size(90, 30);
-            this.Del_button.TabIndex = 7;
-            this.Del_button.Text = "SLET";
-            this.Del_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Del_button.UseVisualStyleBackColor = true;
-            this.Del_button.Click += new System.EventHandler(this.Del_button_Click);
-            // 
-            // Del_Clear_button
-            // 
-            this.Del_Clear_button.BackColor = System.Drawing.Color.Transparent;
-            this.Del_Clear_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
-            this.Del_Clear_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Del_Clear_button.FlatAppearance.BorderSize = 0;
-            this.Del_Clear_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.Del_Clear_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.Del_Clear_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Del_Clear_button.ForeColor = System.Drawing.Color.Black;
-            this.Del_Clear_button.Location = new System.Drawing.Point(161, 188);
-            this.Del_Clear_button.Name = "Del_Clear_button";
-            this.Del_Clear_button.Size = new System.Drawing.Size(28, 23);
-            this.Del_Clear_button.TabIndex = 23;
-            this.Del_Clear_button.UseVisualStyleBackColor = false;
-            this.Del_Clear_button.Click += new System.EventHandler(this.Del_Clear_button_Click);
-            // 
-            // Log_In_name_label
-            // 
-            this.Log_In_name_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.Log_In_name_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.Log_In_name_label.Image = global::View_GUI.Properties.Resources.ID_icon;
-            this.Log_In_name_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Log_In_name_label.Location = new System.Drawing.Point(39, 191);
-            this.Log_In_name_label.Name = "Log_In_name_label";
-            this.Log_In_name_label.Size = new System.Drawing.Size(172, 24);
-            this.Log_In_name_label.TabIndex = 2;
-            this.Log_In_name_label.Text = "LOG IN - Navn:";
-            this.Log_In_name_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pass_label
-            // 
-            this.pass_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.pass_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.pass_label.Image = global::View_GUI.Properties.Resources.Pass2;
-            this.pass_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.pass_label.Location = new System.Drawing.Point(98, 238);
-            this.pass_label.Name = "pass_label";
-            this.pass_label.Size = new System.Drawing.Size(115, 25);
-            this.pass_label.TabIndex = 13;
-            this.pass_label.Text = "Kodeord:";
-            this.pass_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // save_log_in_button
-            // 
-            this.save_log_in_button.FlatAppearance.BorderSize = 0;
-            this.save_log_in_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.save_log_in_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
-            this.save_log_in_button.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.save_log_in_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
-            this.save_log_in_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
-            this.save_log_in_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.save_log_in_button.Location = new System.Drawing.Point(225, 284);
-            this.save_log_in_button.Name = "save_log_in_button";
-            this.save_log_in_button.Size = new System.Drawing.Size(90, 30);
-            this.save_log_in_button.TabIndex = 7;
-            this.save_log_in_button.Text = "Gem";
-            this.save_log_in_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.save_log_in_button.UseVisualStyleBackColor = true;
-            this.save_log_in_button.Click += new System.EventHandler(this.save_log_in_button_Click);
-            // 
-            // clear_all_log_in_button
-            // 
-            this.clear_all_log_in_button.BackColor = System.Drawing.Color.Transparent;
-            this.clear_all_log_in_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
-            this.clear_all_log_in_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.clear_all_log_in_button.FlatAppearance.BorderSize = 0;
-            this.clear_all_log_in_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.clear_all_log_in_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.clear_all_log_in_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clear_all_log_in_button.ForeColor = System.Drawing.Color.Black;
-            this.clear_all_log_in_button.Location = new System.Drawing.Point(182, 287);
-            this.clear_all_log_in_button.Name = "clear_all_log_in_button";
-            this.clear_all_log_in_button.Size = new System.Drawing.Size(28, 23);
-            this.clear_all_log_in_button.TabIndex = 23;
-            this.clear_all_log_in_button.UseVisualStyleBackColor = false;
-            this.clear_all_log_in_button.Click += new System.EventHandler(this.clear_all_log_in_button_Click);
             // 
             // background_DGV_Search_panel
             // 
@@ -786,6 +701,478 @@
             this.show_all_button.UseVisualStyleBackColor = false;
             this.show_all_button.Click += new System.EventHandler(this.show_all_button_Click);
             // 
+            // Medarbejder_dataGridView
+            // 
+            this.Medarbejder_dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.Medarbejder_dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.Medarbejder_dataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Medarbejder_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Medarbejder_dataGridView.Location = new System.Drawing.Point(10, 59);
+            this.Medarbejder_dataGridView.MultiSelect = false;
+            this.Medarbejder_dataGridView.Name = "Medarbejder_dataGridView";
+            this.Medarbejder_dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Medarbejder_dataGridView.Size = new System.Drawing.Size(1520, 512);
+            this.Medarbejder_dataGridView.TabIndex = 15;
+            this.Medarbejder_dataGridView.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Medarbejder_dataGridView_ColumnHeaderMouseClick);
+            this.Medarbejder_dataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.Medarbejder_dataGridView_DataError);
+            this.Medarbejder_dataGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.Medarbejder_dataGridView_RowEnter);
+            this.Medarbejder_dataGridView.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.Medarbejder_dataGridView_RowValidated);
+            // 
+            // Log_In_BACK_panel
+            // 
+            this.Log_In_BACK_panel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Log_In_BACK_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.Log_In_BACK_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Log_In_BACK_panel.Controls.Add(this.panel3);
+            this.Log_In_BACK_panel.Controls.Add(this.panel2);
+            this.Log_In_BACK_panel.Controls.Add(this.background_Medarbejder_specialepanel);
+            this.Log_In_BACK_panel.Controls.Add(this.speciale_Medarbejder_Top_panel);
+            this.Log_In_BACK_panel.Location = new System.Drawing.Point(124, 164);
+            this.Log_In_BACK_panel.Name = "Log_In_BACK_panel";
+            this.Log_In_BACK_panel.Size = new System.Drawing.Size(1209, 442);
+            this.Log_In_BACK_panel.TabIndex = 24;
+            this.Log_In_BACK_panel.Visible = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(34)))), ((int)(((byte)(44)))));
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.vis_rediger_save_button);
+            this.panel3.Controls.Add(this.Vis_rediger_Log_In_Pass_textBox);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.vis_rediger_Log_In_Navn_textBox);
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.vis_rediger_Me_Id_textBox);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.vis_rediger_Me_Navn_comboBox);
+            this.panel3.Controls.Add(this.vis_rediger_clear_All_button);
+            this.panel3.Location = new System.Drawing.Point(806, 1);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(399, 433);
+            this.panel3.TabIndex = 33;
+            // 
+            // Vis_rediger_Log_In_Pass_textBox
+            // 
+            this.Vis_rediger_Log_In_Pass_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
+            this.Vis_rediger_Log_In_Pass_textBox.Location = new System.Drawing.Point(199, 207);
+            this.Vis_rediger_Log_In_Pass_textBox.MaxLength = 49;
+            this.Vis_rediger_Log_In_Pass_textBox.Name = "Vis_rediger_Log_In_Pass_textBox";
+            this.Vis_rediger_Log_In_Pass_textBox.Size = new System.Drawing.Size(100, 20);
+            this.Vis_rediger_Log_In_Pass_textBox.TabIndex = 32;
+            this.Vis_rediger_Log_In_Pass_textBox.TextChanged += new System.EventHandler(this.Vis_rediger_Log_In_Pass_textBox_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.label2.Image = global::View_GUI.Properties.Resources.ID_icon;
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label2.Location = new System.Drawing.Point(18, 97);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(167, 24);
+            this.label2.TabIndex = 32;
+            this.label2.Text = "Medarbejder ID:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.label5.Image = global::View_GUI.Properties.Resources.ID_icon;
+            this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label5.Location = new System.Drawing.Point(18, 160);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(172, 24);
+            this.label5.TabIndex = 30;
+            this.label5.Text = "LOG IN - Navn:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // vis_rediger_Log_In_Navn_textBox
+            // 
+            this.vis_rediger_Log_In_Navn_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
+            this.vis_rediger_Log_In_Navn_textBox.Location = new System.Drawing.Point(199, 164);
+            this.vis_rediger_Log_In_Navn_textBox.MaxLength = 49;
+            this.vis_rediger_Log_In_Navn_textBox.Name = "vis_rediger_Log_In_Navn_textBox";
+            this.vis_rediger_Log_In_Navn_textBox.Size = new System.Drawing.Size(100, 20);
+            this.vis_rediger_Log_In_Navn_textBox.TabIndex = 29;
+            this.vis_rediger_Log_In_Navn_textBox.TextChanged += new System.EventHandler(this.vis_rediger_Log_In_Navn_textBox_TextChanged);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(397, 26);
+            this.panel4.TabIndex = 4;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(92)))));
+            this.label3.Location = new System.Drawing.Point(135, 2);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(166, 21);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Vis Log In / Rediger";
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.label6.Image = global::View_GUI.Properties.Resources.Pass2;
+            this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label6.Location = new System.Drawing.Point(77, 207);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(115, 25);
+            this.label6.TabIndex = 31;
+            this.label6.Text = "Kodeord:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // vis_rediger_Me_Id_textBox
+            // 
+            this.vis_rediger_Me_Id_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
+            this.vis_rediger_Me_Id_textBox.Location = new System.Drawing.Point(193, 100);
+            this.vis_rediger_Me_Id_textBox.MaxLength = 49;
+            this.vis_rediger_Me_Id_textBox.Name = "vis_rediger_Me_Id_textBox";
+            this.vis_rediger_Me_Id_textBox.Size = new System.Drawing.Size(181, 20);
+            this.vis_rediger_Me_Id_textBox.TabIndex = 31;
+            this.vis_rediger_Me_Id_textBox.TextChanged += new System.EventHandler(this.vis_rediger_Me_Id_textBox_TextChanged);
+            this.vis_rediger_Me_Id_textBox.Validated += new System.EventHandler(this.vis_rediger_Me_Id_textBox_Validated);
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.label4.Image = global::View_GUI.Properties.Resources.name_card_icon1;
+            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label4.Location = new System.Drawing.Point(18, 49);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(192, 25);
+            this.label4.TabIndex = 29;
+            this.label4.Text = "Medarbejder Navn:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // vis_rediger_Me_Navn_comboBox
+            // 
+            this.vis_rediger_Me_Navn_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.vis_rediger_Me_Navn_comboBox.FormattingEnabled = true;
+            this.vis_rediger_Me_Navn_comboBox.Location = new System.Drawing.Point(228, 50);
+            this.vis_rediger_Me_Navn_comboBox.MaxDropDownItems = 50;
+            this.vis_rediger_Me_Navn_comboBox.Name = "vis_rediger_Me_Navn_comboBox";
+            this.vis_rediger_Me_Navn_comboBox.Size = new System.Drawing.Size(146, 21);
+            this.vis_rediger_Me_Navn_comboBox.TabIndex = 30;
+            this.vis_rediger_Me_Navn_comboBox.SelectedIndexChanged += new System.EventHandler(this.vis_rediger_Me_Navn_comboBox_SelectedIndexChanged);
+            this.vis_rediger_Me_Navn_comboBox.Click += new System.EventHandler(this.vis_rediger_Me_Navn_comboBox_Click);
+            // 
+            // vis_rediger_clear_All_button
+            // 
+            this.vis_rediger_clear_All_button.BackColor = System.Drawing.Color.Transparent;
+            this.vis_rediger_clear_All_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
+            this.vis_rediger_clear_All_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.vis_rediger_clear_All_button.FlatAppearance.BorderSize = 0;
+            this.vis_rediger_clear_All_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.vis_rediger_clear_All_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.vis_rediger_clear_All_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.vis_rediger_clear_All_button.ForeColor = System.Drawing.Color.Black;
+            this.vis_rediger_clear_All_button.Location = new System.Drawing.Point(185, 293);
+            this.vis_rediger_clear_All_button.Name = "vis_rediger_clear_All_button";
+            this.vis_rediger_clear_All_button.Size = new System.Drawing.Size(28, 23);
+            this.vis_rediger_clear_All_button.TabIndex = 23;
+            this.vis_rediger_clear_All_button.UseVisualStyleBackColor = false;
+            this.vis_rediger_clear_All_button.Click += new System.EventHandler(this.vis_rediger_clear_All_button_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(34)))), ((int)(((byte)(44)))));
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.panel1);
+            this.panel2.Controls.Add(this.Del_ME_ID_textBox);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.Del_Me_name_comboBox);
+            this.panel2.Controls.Add(this.Del_button);
+            this.panel2.Controls.Add(this.Del_Clear_button);
+            this.panel2.Location = new System.Drawing.Point(405, 1);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(399, 433);
+            this.panel2.TabIndex = 32;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.label1.Image = global::View_GUI.Properties.Resources.ID_icon;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label1.Location = new System.Drawing.Point(18, 97);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(167, 24);
+            this.label1.TabIndex = 32;
+            this.label1.Text = "Medarbejder ID:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.slet_log_in_label);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(397, 26);
+            this.panel1.TabIndex = 4;
+            // 
+            // slet_log_in_label
+            // 
+            this.slet_log_in_label.AutoSize = true;
+            this.slet_log_in_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.slet_log_in_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(92)))));
+            this.slet_log_in_label.Location = new System.Drawing.Point(165, 2);
+            this.slet_log_in_label.Name = "slet_log_in_label";
+            this.slet_log_in_label.Size = new System.Drawing.Size(94, 21);
+            this.slet_log_in_label.TabIndex = 1;
+            this.slet_log_in_label.Text = "Slet Log In";
+            // 
+            // Del_ME_ID_textBox
+            // 
+            this.Del_ME_ID_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
+            this.Del_ME_ID_textBox.Location = new System.Drawing.Point(193, 100);
+            this.Del_ME_ID_textBox.MaxLength = 49;
+            this.Del_ME_ID_textBox.Name = "Del_ME_ID_textBox";
+            this.Del_ME_ID_textBox.Size = new System.Drawing.Size(181, 20);
+            this.Del_ME_ID_textBox.TabIndex = 31;
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.label8.Image = global::View_GUI.Properties.Resources.name_card_icon1;
+            this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label8.Location = new System.Drawing.Point(18, 49);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(192, 25);
+            this.label8.TabIndex = 29;
+            this.label8.Text = "Medarbejder Navn:";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // Del_Me_name_comboBox
+            // 
+            this.Del_Me_name_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Del_Me_name_comboBox.FormattingEnabled = true;
+            this.Del_Me_name_comboBox.Location = new System.Drawing.Point(228, 50);
+            this.Del_Me_name_comboBox.MaxDropDownItems = 50;
+            this.Del_Me_name_comboBox.Name = "Del_Me_name_comboBox";
+            this.Del_Me_name_comboBox.Size = new System.Drawing.Size(146, 21);
+            this.Del_Me_name_comboBox.TabIndex = 30;
+            this.Del_Me_name_comboBox.SelectedIndexChanged += new System.EventHandler(this.Del_Me_name_comboBox_SelectedIndexChanged);
+            this.Del_Me_name_comboBox.Click += new System.EventHandler(this.Del_Me_name_comboBox_Click);
+            // 
+            // Del_button
+            // 
+            this.Del_button.FlatAppearance.BorderSize = 0;
+            this.Del_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.Del_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.Del_button.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Del_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Del_button.Image = global::View_GUI.Properties.Resources.Actions_edit_delete_icon3;
+            this.Del_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Del_button.Location = new System.Drawing.Point(261, 154);
+            this.Del_button.Name = "Del_button";
+            this.Del_button.Size = new System.Drawing.Size(90, 30);
+            this.Del_button.TabIndex = 7;
+            this.Del_button.Text = "SLET";
+            this.Del_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Del_button.UseVisualStyleBackColor = true;
+            this.Del_button.Click += new System.EventHandler(this.Del_button_Click);
+            // 
+            // Del_Clear_button
+            // 
+            this.Del_Clear_button.BackColor = System.Drawing.Color.Transparent;
+            this.Del_Clear_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
+            this.Del_Clear_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Del_Clear_button.FlatAppearance.BorderSize = 0;
+            this.Del_Clear_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.Del_Clear_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.Del_Clear_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Del_Clear_button.ForeColor = System.Drawing.Color.Black;
+            this.Del_Clear_button.Location = new System.Drawing.Point(218, 157);
+            this.Del_Clear_button.Name = "Del_Clear_button";
+            this.Del_Clear_button.Size = new System.Drawing.Size(28, 23);
+            this.Del_Clear_button.TabIndex = 23;
+            this.Del_Clear_button.UseVisualStyleBackColor = false;
+            this.Del_Clear_button.Click += new System.EventHandler(this.Del_Clear_button_Click);
+            // 
+            // background_Medarbejder_specialepanel
+            // 
+            this.background_Medarbejder_specialepanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.background_Medarbejder_specialepanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.background_Medarbejder_specialepanel.Controls.Add(this.Medarbejder_ID_label);
+            this.background_Medarbejder_specialepanel.Controls.Add(this.Me_ID_textBox);
+            this.background_Medarbejder_specialepanel.Controls.Add(this.Medarbejder_Navn_label);
+            this.background_Medarbejder_specialepanel.Controls.Add(this.load_ME_Names_comboBox);
+            this.background_Medarbejder_specialepanel.Controls.Add(this.pass_textBox);
+            this.background_Medarbejder_specialepanel.Controls.Add(this.Log_In_name_label);
+            this.background_Medarbejder_specialepanel.Controls.Add(this.log_in_textBox);
+            this.background_Medarbejder_specialepanel.Controls.Add(this.pass_label);
+            this.background_Medarbejder_specialepanel.Controls.Add(this.save_log_in_button);
+            this.background_Medarbejder_specialepanel.Controls.Add(this.clear_all_log_in_button);
+            this.background_Medarbejder_specialepanel.Location = new System.Drawing.Point(0, 28);
+            this.background_Medarbejder_specialepanel.Name = "background_Medarbejder_specialepanel";
+            this.background_Medarbejder_specialepanel.Size = new System.Drawing.Size(402, 407);
+            this.background_Medarbejder_specialepanel.TabIndex = 31;
+            // 
+            // Medarbejder_ID_label
+            // 
+            this.Medarbejder_ID_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.Medarbejder_ID_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.Medarbejder_ID_label.Image = global::View_GUI.Properties.Resources.ID_icon;
+            this.Medarbejder_ID_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Medarbejder_ID_label.Location = new System.Drawing.Point(43, 95);
+            this.Medarbejder_ID_label.Name = "Medarbejder_ID_label";
+            this.Medarbejder_ID_label.Size = new System.Drawing.Size(167, 24);
+            this.Medarbejder_ID_label.TabIndex = 28;
+            this.Medarbejder_ID_label.Text = "Medarbejder ID:";
+            this.Medarbejder_ID_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // Me_ID_textBox
+            // 
+            this.Me_ID_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
+            this.Me_ID_textBox.Location = new System.Drawing.Point(218, 96);
+            this.Me_ID_textBox.MaxLength = 49;
+            this.Me_ID_textBox.Name = "Me_ID_textBox";
+            this.Me_ID_textBox.Size = new System.Drawing.Size(166, 20);
+            this.Me_ID_textBox.TabIndex = 27;
+            // 
+            // Medarbejder_Navn_label
+            // 
+            this.Medarbejder_Navn_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.Medarbejder_Navn_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.Medarbejder_Navn_label.Image = global::View_GUI.Properties.Resources.name_card_icon1;
+            this.Medarbejder_Navn_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Medarbejder_Navn_label.Location = new System.Drawing.Point(18, 44);
+            this.Medarbejder_Navn_label.Name = "Medarbejder_Navn_label";
+            this.Medarbejder_Navn_label.Size = new System.Drawing.Size(192, 25);
+            this.Medarbejder_Navn_label.TabIndex = 25;
+            this.Medarbejder_Navn_label.Text = "Medarbejder Navn:";
+            this.Medarbejder_Navn_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // load_ME_Names_comboBox
+            // 
+            this.load_ME_Names_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.load_ME_Names_comboBox.FormattingEnabled = true;
+            this.load_ME_Names_comboBox.Location = new System.Drawing.Point(218, 48);
+            this.load_ME_Names_comboBox.MaxDropDownItems = 50;
+            this.load_ME_Names_comboBox.Name = "load_ME_Names_comboBox";
+            this.load_ME_Names_comboBox.Size = new System.Drawing.Size(107, 21);
+            this.load_ME_Names_comboBox.TabIndex = 26;
+            this.load_ME_Names_comboBox.SelectedIndexChanged += new System.EventHandler(this.load_ME_Names_comboBox_SelectedIndexChanged);
+            this.load_ME_Names_comboBox.Click += new System.EventHandler(this.load_ME_Names_comboBox_Click);
+            // 
+            // pass_textBox
+            // 
+            this.pass_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
+            this.pass_textBox.Location = new System.Drawing.Point(220, 238);
+            this.pass_textBox.MaxLength = 49;
+            this.pass_textBox.Name = "pass_textBox";
+            this.pass_textBox.Size = new System.Drawing.Size(100, 20);
+            this.pass_textBox.TabIndex = 24;
+            // 
+            // Log_In_name_label
+            // 
+            this.Log_In_name_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.Log_In_name_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.Log_In_name_label.Image = global::View_GUI.Properties.Resources.ID_icon;
+            this.Log_In_name_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Log_In_name_label.Location = new System.Drawing.Point(39, 191);
+            this.Log_In_name_label.Name = "Log_In_name_label";
+            this.Log_In_name_label.Size = new System.Drawing.Size(172, 24);
+            this.Log_In_name_label.TabIndex = 2;
+            this.Log_In_name_label.Text = "LOG IN - Navn:";
+            this.Log_In_name_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // log_in_textBox
+            // 
+            this.log_in_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
+            this.log_in_textBox.Location = new System.Drawing.Point(220, 195);
+            this.log_in_textBox.MaxLength = 49;
+            this.log_in_textBox.Name = "log_in_textBox";
+            this.log_in_textBox.Size = new System.Drawing.Size(100, 20);
+            this.log_in_textBox.TabIndex = 1;
+            // 
+            // pass_label
+            // 
+            this.pass_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.pass_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
+            this.pass_label.Image = global::View_GUI.Properties.Resources.Pass2;
+            this.pass_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.pass_label.Location = new System.Drawing.Point(98, 238);
+            this.pass_label.Name = "pass_label";
+            this.pass_label.Size = new System.Drawing.Size(115, 25);
+            this.pass_label.TabIndex = 13;
+            this.pass_label.Text = "Kodeord:";
+            this.pass_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // save_log_in_button
+            // 
+            this.save_log_in_button.FlatAppearance.BorderSize = 0;
+            this.save_log_in_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.save_log_in_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.save_log_in_button.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.save_log_in_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
+            this.save_log_in_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
+            this.save_log_in_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.save_log_in_button.Location = new System.Drawing.Point(218, 311);
+            this.save_log_in_button.Name = "save_log_in_button";
+            this.save_log_in_button.Size = new System.Drawing.Size(90, 30);
+            this.save_log_in_button.TabIndex = 7;
+            this.save_log_in_button.Text = "Gem";
+            this.save_log_in_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.save_log_in_button.UseVisualStyleBackColor = true;
+            this.save_log_in_button.Click += new System.EventHandler(this.save_log_in_button_Click);
+            // 
+            // clear_all_log_in_button
+            // 
+            this.clear_all_log_in_button.BackColor = System.Drawing.Color.Transparent;
+            this.clear_all_log_in_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
+            this.clear_all_log_in_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.clear_all_log_in_button.FlatAppearance.BorderSize = 0;
+            this.clear_all_log_in_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.clear_all_log_in_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.clear_all_log_in_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clear_all_log_in_button.ForeColor = System.Drawing.Color.Black;
+            this.clear_all_log_in_button.Location = new System.Drawing.Point(175, 314);
+            this.clear_all_log_in_button.Name = "clear_all_log_in_button";
+            this.clear_all_log_in_button.Size = new System.Drawing.Size(28, 23);
+            this.clear_all_log_in_button.TabIndex = 23;
+            this.clear_all_log_in_button.UseVisualStyleBackColor = false;
+            this.clear_all_log_in_button.Click += new System.EventHandler(this.clear_all_log_in_button_Click);
+            // 
+            // speciale_Medarbejder_Top_panel
+            // 
+            this.speciale_Medarbejder_Top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.speciale_Medarbejder_Top_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.speciale_Medarbejder_Top_panel.Controls.Add(this.Log_In_label);
+            this.speciale_Medarbejder_Top_panel.Location = new System.Drawing.Point(0, 0);
+            this.speciale_Medarbejder_Top_panel.Name = "speciale_Medarbejder_Top_panel";
+            this.speciale_Medarbejder_Top_panel.Size = new System.Drawing.Size(402, 26);
+            this.speciale_Medarbejder_Top_panel.TabIndex = 3;
+            // 
+            // Log_In_label
+            // 
+            this.Log_In_label.AutoSize = true;
+            this.Log_In_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.Log_In_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(92)))));
+            this.Log_In_label.Location = new System.Drawing.Point(185, 3);
+            this.Log_In_label.Name = "Log_In_label";
+            this.Log_In_label.Size = new System.Drawing.Size(58, 21);
+            this.Log_In_label.TabIndex = 1;
+            this.Log_In_label.Text = "Log In";
+            // 
             // top_Menu_background_panel
             // 
             this.top_Menu_background_panel.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -860,221 +1247,23 @@
             this.opret_medarbejder_button.UseVisualStyleBackColor = true;
             this.opret_medarbejder_button.Click += new System.EventHandler(this.opret_medarbejder_button_Click);
             // 
-            // create_Clear_All_textboxes_button
+            // vis_rediger_save_button
             // 
-            this.create_Clear_All_textboxes_button.BackColor = System.Drawing.Color.Transparent;
-            this.create_Clear_All_textboxes_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
-            this.create_Clear_All_textboxes_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.create_Clear_All_textboxes_button.FlatAppearance.BorderSize = 0;
-            this.create_Clear_All_textboxes_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.create_Clear_All_textboxes_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.create_Clear_All_textboxes_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.create_Clear_All_textboxes_button.ForeColor = System.Drawing.Color.Black;
-            this.create_Clear_All_textboxes_button.Location = new System.Drawing.Point(119, 339);
-            this.create_Clear_All_textboxes_button.Name = "create_Clear_All_textboxes_button";
-            this.create_Clear_All_textboxes_button.Size = new System.Drawing.Size(28, 23);
-            this.create_Clear_All_textboxes_button.TabIndex = 23;
-            this.create_Clear_All_textboxes_button.UseVisualStyleBackColor = false;
-            this.create_Clear_All_textboxes_button.Click += new System.EventHandler(this.create_Clear_All_textboxes_button_Click);
-            // 
-            // email_label
-            // 
-            this.email_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.email_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.email_label.Image = global::View_GUI.Properties.Resources.At_Mail_icon;
-            this.email_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.email_label.Location = new System.Drawing.Point(53, 287);
-            this.email_label.Name = "email_label";
-            this.email_label.Size = new System.Drawing.Size(98, 33);
-            this.email_label.TabIndex = 22;
-            this.email_label.Text = "Email:";
-            this.email_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // medarbejdere_Save_button
-            // 
-            this.medarbejdere_Save_button.FlatAppearance.BorderSize = 0;
-            this.medarbejdere_Save_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.medarbejdere_Save_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
-            this.medarbejdere_Save_button.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.medarbejdere_Save_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
-            this.medarbejdere_Save_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
-            this.medarbejdere_Save_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.medarbejdere_Save_button.Location = new System.Drawing.Point(162, 336);
-            this.medarbejdere_Save_button.Name = "medarbejdere_Save_button";
-            this.medarbejdere_Save_button.Size = new System.Drawing.Size(90, 30);
-            this.medarbejdere_Save_button.TabIndex = 7;
-            this.medarbejdere_Save_button.Text = "Gem";
-            this.medarbejdere_Save_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.medarbejdere_Save_button.UseVisualStyleBackColor = true;
-            this.medarbejdere_Save_button.Click += new System.EventHandler(this.medarbejdere_Save_button_Click);
-            // 
-            // adr_label
-            // 
-            this.adr_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.adr_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.adr_label.Image = global::View_GUI.Properties.Resources.my_numbers_icon;
-            this.adr_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.adr_label.Location = new System.Drawing.Point(70, 197);
-            this.adr_label.Name = "adr_label";
-            this.adr_label.Size = new System.Drawing.Size(80, 25);
-            this.adr_label.TabIndex = 19;
-            this.adr_label.Text = "Adr:";
-            this.adr_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // zipCode_label
-            // 
-            this.zipCode_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.zipCode_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.zipCode_label.Image = global::View_GUI.Properties.Resources.Compressed_File_Zip_icon;
-            this.zipCode_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.zipCode_label.Location = new System.Drawing.Point(49, 150);
-            this.zipCode_label.Name = "zipCode_label";
-            this.zipCode_label.Size = new System.Drawing.Size(105, 25);
-            this.zipCode_label.TabIndex = 17;
-            this.zipCode_label.Text = "PostNr:";
-            this.zipCode_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // tlf_label
-            // 
-            this.tlf_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.tlf_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.tlf_label.Image = global::View_GUI.Properties.Resources.Phone_icon__1_;
-            this.tlf_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.tlf_label.Location = new System.Drawing.Point(80, 243);
-            this.tlf_label.Name = "tlf_label";
-            this.tlf_label.Size = new System.Drawing.Size(73, 24);
-            this.tlf_label.TabIndex = 15;
-            this.tlf_label.Text = "Tlf:";
-            this.tlf_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // surname_label
-            // 
-            this.surname_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.surname_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.surname_label.Image = global::View_GUI.Properties.Resources.name_card_icon;
-            this.surname_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.surname_label.Location = new System.Drawing.Point(25, 104);
-            this.surname_label.Name = "surname_label";
-            this.surname_label.Size = new System.Drawing.Size(125, 25);
-            this.surname_label.TabIndex = 13;
-            this.surname_label.Text = "Efternavn:";
-            this.surname_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // name_label
-            // 
-            this.name_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.name_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.name_label.Image = global::View_GUI.Properties.Resources.ID_icon;
-            this.name_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.name_label.Location = new System.Drawing.Point(56, 59);
-            this.name_label.Name = "name_label";
-            this.name_label.Size = new System.Drawing.Size(95, 24);
-            this.name_label.TabIndex = 2;
-            this.name_label.Text = "Navn:";
-            this.name_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pass_textBox
-            // 
-            this.pass_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
-            this.pass_textBox.Location = new System.Drawing.Point(220, 238);
-            this.pass_textBox.MaxLength = 49;
-            this.pass_textBox.Name = "pass_textBox";
-            this.pass_textBox.Size = new System.Drawing.Size(100, 20);
-            this.pass_textBox.TabIndex = 24;
-            // 
-            // Medarbejder_Navn_label
-            // 
-            this.Medarbejder_Navn_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.Medarbejder_Navn_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.Medarbejder_Navn_label.Image = global::View_GUI.Properties.Resources.name_card_icon1;
-            this.Medarbejder_Navn_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Medarbejder_Navn_label.Location = new System.Drawing.Point(18, 44);
-            this.Medarbejder_Navn_label.Name = "Medarbejder_Navn_label";
-            this.Medarbejder_Navn_label.Size = new System.Drawing.Size(192, 25);
-            this.Medarbejder_Navn_label.TabIndex = 25;
-            this.Medarbejder_Navn_label.Text = "Medarbejder Navn:";
-            this.Medarbejder_Navn_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // load_ME_Names_comboBox
-            // 
-            this.load_ME_Names_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.load_ME_Names_comboBox.FormattingEnabled = true;
-            this.load_ME_Names_comboBox.Location = new System.Drawing.Point(218, 48);
-            this.load_ME_Names_comboBox.MaxDropDownItems = 50;
-            this.load_ME_Names_comboBox.Name = "load_ME_Names_comboBox";
-            this.load_ME_Names_comboBox.Size = new System.Drawing.Size(107, 21);
-            this.load_ME_Names_comboBox.TabIndex = 26;
-            this.load_ME_Names_comboBox.SelectedIndexChanged += new System.EventHandler(this.load_ME_Names_comboBox_SelectedIndexChanged);
-            this.load_ME_Names_comboBox.Click += new System.EventHandler(this.load_ME_Names_comboBox_Click);
-            // 
-            // Medarbejder_ID_label
-            // 
-            this.Medarbejder_ID_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.Medarbejder_ID_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.Medarbejder_ID_label.Image = global::View_GUI.Properties.Resources.ID_icon;
-            this.Medarbejder_ID_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Medarbejder_ID_label.Location = new System.Drawing.Point(43, 95);
-            this.Medarbejder_ID_label.Name = "Medarbejder_ID_label";
-            this.Medarbejder_ID_label.Size = new System.Drawing.Size(167, 24);
-            this.Medarbejder_ID_label.TabIndex = 28;
-            this.Medarbejder_ID_label.Text = "Medarbejder ID:";
-            this.Medarbejder_ID_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // Me_ID_textBox
-            // 
-            this.Me_ID_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
-            this.Me_ID_textBox.Location = new System.Drawing.Point(218, 96);
-            this.Me_ID_textBox.MaxLength = 49;
-            this.Me_ID_textBox.Name = "Me_ID_textBox";
-            this.Me_ID_textBox.Size = new System.Drawing.Size(166, 20);
-            this.Me_ID_textBox.TabIndex = 27;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.label1.Image = global::View_GUI.Properties.Resources.ID_icon;
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label1.Location = new System.Drawing.Point(18, 97);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 24);
-            this.label1.TabIndex = 32;
-            this.label1.Text = "Medarbejder ID:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // Del_ME_ID_textBox
-            // 
-            this.Del_ME_ID_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
-            this.Del_ME_ID_textBox.Location = new System.Drawing.Point(193, 100);
-            this.Del_ME_ID_textBox.MaxLength = 49;
-            this.Del_ME_ID_textBox.Name = "Del_ME_ID_textBox";
-            this.Del_ME_ID_textBox.Size = new System.Drawing.Size(181, 20);
-            this.Del_ME_ID_textBox.TabIndex = 31;
-            // 
-            // label8
-            // 
-            this.label8.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
-            this.label8.Image = global::View_GUI.Properties.Resources.name_card_icon1;
-            this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label8.Location = new System.Drawing.Point(18, 49);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(192, 25);
-            this.label8.TabIndex = 29;
-            this.label8.Text = "Medarbejder Navn:";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // Del_Me_name_comboBox
-            // 
-            this.Del_Me_name_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Del_Me_name_comboBox.FormattingEnabled = true;
-            this.Del_Me_name_comboBox.Location = new System.Drawing.Point(228, 50);
-            this.Del_Me_name_comboBox.MaxDropDownItems = 50;
-            this.Del_Me_name_comboBox.Name = "Del_Me_name_comboBox";
-            this.Del_Me_name_comboBox.Size = new System.Drawing.Size(146, 21);
-            this.Del_Me_name_comboBox.TabIndex = 30;
-            this.Del_Me_name_comboBox.SelectedIndexChanged += new System.EventHandler(this.Del_Me_name_comboBox_SelectedIndexChanged);
-            this.Del_Me_name_comboBox.Click += new System.EventHandler(this.Del_Me_name_comboBox_Click);
+            this.vis_rediger_save_button.FlatAppearance.BorderSize = 0;
+            this.vis_rediger_save_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.vis_rediger_save_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.vis_rediger_save_button.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vis_rediger_save_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
+            this.vis_rediger_save_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
+            this.vis_rediger_save_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.vis_rediger_save_button.Location = new System.Drawing.Point(219, 288);
+            this.vis_rediger_save_button.Name = "vis_rediger_save_button";
+            this.vis_rediger_save_button.Size = new System.Drawing.Size(90, 30);
+            this.vis_rediger_save_button.TabIndex = 31;
+            this.vis_rediger_save_button.Text = "Gem";
+            this.vis_rediger_save_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.vis_rediger_save_button.UseVisualStyleBackColor = true;
+            this.vis_rediger_save_button.Click += new System.EventHandler(this.vis_rediger_save_button_Click);
             // 
             // Medarbejder_Form6
             // 
@@ -1099,16 +1288,6 @@
             this.background_textboxes_top_panel.ResumeLayout(false);
             this.background_textboxes_top_panel.PerformLayout();
             this.datagridviewBackground_panel.ResumeLayout(false);
-            this.Log_In_BACK_panel.ResumeLayout(false);
-            this.background_Medarbejder_specialepanel.ResumeLayout(false);
-            this.background_Medarbejder_specialepanel.PerformLayout();
-            this.speciale_Medarbejder_Top_panel.ResumeLayout(false);
-            this.speciale_Medarbejder_Top_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Medarbejder_dataGridView)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.background_DGV_Search_panel.ResumeLayout(false);
             this.background_DGV_Search_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.search_Datagridview_pictureBox)).EndInit();
@@ -1116,6 +1295,20 @@
             this.background_DGV_panel4.ResumeLayout(false);
             this.background_DGV_panel3.ResumeLayout(false);
             this.background_DGV_panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Medarbejder_dataGridView)).EndInit();
+            this.Log_In_BACK_panel.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.background_Medarbejder_specialepanel.ResumeLayout(false);
+            this.background_Medarbejder_specialepanel.PerformLayout();
+            this.speciale_Medarbejder_Top_panel.ResumeLayout(false);
+            this.speciale_Medarbejder_Top_panel.PerformLayout();
             this.top_Menu_background_panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -1191,5 +1384,18 @@
         private System.Windows.Forms.Label Medarbejder_Navn_label;
         private System.Windows.Forms.ComboBox load_ME_Names_comboBox;
         private System.Windows.Forms.TextBox pass_textBox;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox Vis_rediger_Log_In_Pass_textBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox vis_rediger_Log_In_Navn_textBox;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox vis_rediger_Me_Id_textBox;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox vis_rediger_Me_Navn_comboBox;
+        private System.Windows.Forms.Button vis_rediger_clear_All_button;
+        private System.Windows.Forms.Button vis_rediger_save_button;
     }
 }
