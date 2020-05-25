@@ -22,8 +22,16 @@ namespace View_GUI
 
     public partial class Main_Form1 : Form
     {
-    
-    
+
+        // log_In_info
+        Log_In_Info Log_In_info = Log_In_Info.Get_Log_In_Info();
+
+
+
+
+
+
+
         // Local Folder
         string LocalFolderPath = "C:\\";
 

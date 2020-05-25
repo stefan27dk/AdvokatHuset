@@ -36,7 +36,7 @@
             this.settings_button = new System.Windows.Forms.Button();
             this.name_label = new System.Windows.Forms.Label();
             this.pass_label = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.wrong_log_in_label = new System.Windows.Forms.Label();
             this.log_in_holder_panel = new System.Windows.Forms.Panel();
             this.log_in_holder_panel.SuspendLayout();
             this.SuspendLayout();
@@ -142,22 +142,23 @@
             this.pass_label.Text = "Kodeord:";
             this.pass_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label1
+            // wrong_log_in_label
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(46, 275);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(262, 16);
-            this.label1.TabIndex = 41;
-            this.label1.Text = "Bruger Navn eller kodeord er Forkert";
+            this.wrong_log_in_label.AutoSize = true;
+            this.wrong_log_in_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.wrong_log_in_label.ForeColor = System.Drawing.Color.Red;
+            this.wrong_log_in_label.Location = new System.Drawing.Point(62, 275);
+            this.wrong_log_in_label.Name = "wrong_log_in_label";
+            this.wrong_log_in_label.Size = new System.Drawing.Size(262, 16);
+            this.wrong_log_in_label.TabIndex = 41;
+            this.wrong_log_in_label.Text = "Bruger Navn eller kodeord er Forkert";
+            this.wrong_log_in_label.Visible = false;
             // 
             // log_in_holder_panel
             // 
             this.log_in_holder_panel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.log_in_holder_panel.Controls.Add(this.log_pass_textBox);
-            this.log_in_holder_panel.Controls.Add(this.label1);
+            this.log_in_holder_panel.Controls.Add(this.wrong_log_in_label);
             this.log_in_holder_panel.Controls.Add(this.pass_label);
             this.log_in_holder_panel.Controls.Add(this.log_in_button);
             this.log_in_holder_panel.Controls.Add(this.log_name_textBox);
@@ -181,6 +182,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Log_In_Form0";
             this.Text = "Log_In_Form0";
+            this.Load += new System.EventHandler(this.Log_In_Form0_Load);
             this.log_in_holder_panel.ResumeLayout(false);
             this.log_in_holder_panel.PerformLayout();
             this.ResumeLayout(false);
@@ -197,7 +199,7 @@
         private System.Windows.Forms.Button settings_button;
         private System.Windows.Forms.CheckBox remember_log_in_checkBox;
         private System.Windows.Forms.Button log_in_button;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label wrong_log_in_label;
         private System.Windows.Forms.Panel log_in_holder_panel;
     }
 }

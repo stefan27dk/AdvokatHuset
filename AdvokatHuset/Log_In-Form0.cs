@@ -13,6 +13,9 @@ namespace View_GUI
     public partial class Log_In_Form0 : Form
     {
 
+        
+
+
         // Forms
         Main_Form1 Main_Form = new Main_Form1();
 
@@ -25,6 +28,14 @@ namespace View_GUI
         // Input Vlidate
         bool Input_Is_Valid = true;
 
+
+
+
+
+
+
+        //Initialize
+
         public Log_In_Form0()
         {
             InitializeComponent();
@@ -32,6 +43,22 @@ namespace View_GUI
 
 
        
+
+
+
+
+
+
+        // Load
+        private void Log_In_Form0_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+
+
+
+
 
 
         // Log In Main Method
@@ -44,11 +71,21 @@ namespace View_GUI
                 Validate_Log_In Check_Log_IN = new Validate_Log_In();
                 Log_In_Is_Valid =  Check_Log_IN.Log_In_Check(log_name_textBox, log_pass_textBox);
 
-
-                // Play Log In Sound
-                System.Media.SoundPlayer log_in_sound = new System.Media.SoundPlayer(@"C:\Windows\Media\Windows Battery Critical.wav");
-                log_in_sound.Play();
+                 if(Log_In_Is_Valid == true)
+                 {
+                    Log_In_Sound();
+                 }
+               
             }
+
+           
+            if (Log_In_Is_Valid == false || Input_Is_Valid == false)
+            {
+                Error_Sound();
+            }
+
+
+
         }
 
 
@@ -56,10 +93,8 @@ namespace View_GUI
 
 
 
-
-
         // Validate Input
-         private void Validate_Input()
+        private void Validate_Input()
          {
             Input_Is_Valid = true;
 
@@ -67,7 +102,6 @@ namespace View_GUI
             {
                 Input_Is_Valid = false;
                 log_name_textBox.BackColor = Color.FromArgb(255, 192, 192);
-
             }
 
 
@@ -81,11 +115,27 @@ namespace View_GUI
          }
 
 
+        
+        
 
 
-            
+         // Error Sound
+        private void Error_Sound()
+        {
+            wrong_log_in_label.Visible = true;
+            System.Media.SoundPlayer log_in_sound = new System.Media.SoundPlayer(@"C:\Windows\Media\Windows Balloon.wav");
+            log_in_sound.Play();
+        }
 
 
+
+        // Log In Sound
+        private void Log_In_Sound()
+        {
+            // Play Log In Sound
+            System.Media.SoundPlayer log_in_sound = new System.Media.SoundPlayer(@"C:\Windows\Media\Windows Battery Critical.wav");
+            log_in_sound.Play();
+        }
 
 
         // Log In Button
@@ -96,33 +146,8 @@ namespace View_GUI
         }
 
 
-       //------LOAD - MAIN FORM---IF LOG--IN--IS---Valid-------------::Start::----------------------------------------
-        private void Show_Main_Form()
-        {
 
-            if (Log_In_Is_Valid == true)   // If Log IN is Valid
-            {
-                Main_Form.TopLevel = false;
-                this.Parent.Controls.Add(Main_Form);  // Get the Loader Panel of the Main Form Body
-                Main_Form.FormBorderStyle = FormBorderStyle.None;
-                Main_Form.Dock = DockStyle.Fill;
-                Main_Form.Show();
-                this.Dispose(); // Dispose Log In Form
-            }
-
-            else
-            {
-                log_name_textBox.BackColor = Color.FromArgb(255, 192, 192);
-                log_pass_textBox.BackColor = Color.FromArgb(255, 192, 192);
-            }
-
-        }
-
-
-        //------LOAD - MAIN FORM---IF LOG--IN--IS---Valid-------------::END::----------------------------------------
-
-
-
+          
 
         // Reset Color Name
         private void log_name_textBox_TextChanged(object sender, EventArgs e)
@@ -139,5 +164,80 @@ namespace View_GUI
             log_pass_textBox.BackColor = DefaultBackColor;
 
         }
+
+
+
+
+
+
+
+
+
+       //------LOAD - MAIN FORM---IF LOG--IN--IS---Valid-------------::Start::----------------------------------------
+        private void Show_Main_Form()
+        {
+
+            if (Log_In_Is_Valid == true)   // If Log IN is Valid
+            {
+                Load_Main_Form();
+            }
+
+            else
+            {
+                log_name_textBox.BackColor = Color.FromArgb(255, 192, 192);
+                log_pass_textBox.BackColor = Color.FromArgb(255, 192, 192);
+            }
+
+        }
+
+
+       // Load Main Form Code
+       private void Load_Main_Form()
+        {
+            Main_Form.TopLevel = false;
+            this.Parent.Controls.Add(Main_Form);  // Get the Loader Panel of the Main Form Body
+            Main_Form.FormBorderStyle = FormBorderStyle.None;
+            Main_Form.Dock = DockStyle.Fill;
+            Main_Form.Show();
+            this.Dispose(); // Dispose Log In Form
+        }
+
+        //------LOAD - MAIN FORM---IF LOG--IN--IS---Valid-------------::END::----------------------------------------
+
+
+
+
+
+
+
+
+
+
+        //Shortcut keys -----KEY WATCHER- ----SHORTCUT KEYS----------------::START::------------------------------------------------------------------------------------
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+
+            // Open Item Menu Shortcut
+            if (keyData == (Keys.Control | Keys.Shift | Keys.X))
+            {
+                Load_Main_Form(); // Log In As Developer
+                Log_In_Sound();
+            }
+
+            
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+
+        //Shortcut keys -----KEY WATCHER- ----SHORTCUT KEYS----------------::END::------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
     }
 }
