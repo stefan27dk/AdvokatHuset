@@ -16,7 +16,7 @@ namespace View_GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main_Form1());
+            Application.Run(new Main_Body_Form());
         }
     }
 }

@@ -2303,6 +2303,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap system_log_out_icon {
+            get {
+                object obj = ResourceManager.GetObject("system-log-out-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Top_Background_menu {
             get {
                 object obj = ResourceManager.GetObject("Top_Background_menu", resourceCulture);
