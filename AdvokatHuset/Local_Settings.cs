@@ -8,9 +8,9 @@ namespace View_GUI
 {
     class Local_Settings
     {
-        string LocalFolder;
+        public string LocalFolder { get; set; } = "C:\\";
 
-        Local_Settings()
+        public  Local_Settings()
         {
 
         }

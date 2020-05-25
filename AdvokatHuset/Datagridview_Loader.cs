@@ -11,8 +11,9 @@ namespace View_GUI
 {
     class Datagridview_Loader
     {
-        DB_Connection_String Connection = new DB_Connection_String(); // SQL Connection Singleton 
-       
+        // DB Connection
+        DB_Connection_String Connection = DB_Connection_String.Get_Connection_String_Instance(); // SQL Connection
+
         public Datagridview_Loader()
         {
            
@@ -27,7 +28,7 @@ namespace View_GUI
                  if(Connection.DBConnectionString != null)
                  {
 
-                    using (SqlConnection connection = new SqlConnection(new DB_Connection_String().DBConnectionString))// SQL Connection
+                    using (SqlConnection connection = new SqlConnection(Connection.DBConnectionString))// SQL Connection
                     {
                         //Kunde_Dataset.Clear(); // Clear all rows so we begin on fresh datagridview "If We dont do that the old Data will remain and the new data will be inserted at the bottom of the datagridview"
                         connection.Open();

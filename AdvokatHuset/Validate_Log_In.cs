@@ -16,7 +16,7 @@ namespace View_GUI
 
 
         // DB Connection
-        DB_Connection_String Connection = new DB_Connection_String(); // SQL Connection   
+        DB_Connection_String Connection = DB_Connection_String.Get_Connection_String_Instance(); // SQL Connection   
 
         public Validate_Log_In() { }
 

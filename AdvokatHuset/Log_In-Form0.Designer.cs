@@ -38,7 +38,16 @@
             this.pass_label = new System.Windows.Forms.Label();
             this.wrong_log_in_label = new System.Windows.Forms.Label();
             this.log_in_holder_panel = new System.Windows.Forms.Panel();
+            this.log_in_Clear_all_button = new System.Windows.Forms.Button();
+            this.settings_myPanel = new View_GUI.MyPanel();
+            this.conn_string__Save_button = new System.Windows.Forms.Button();
+            this.conn_ex2_label = new System.Windows.Forms.Label();
+            this.conn_string_textBox = new System.Windows.Forms.TextBox();
+            this.connection_string_label = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.log_in_holder_panel.SuspendLayout();
+            this.settings_myPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // log_pass_textBox
@@ -93,7 +102,7 @@
             this.log_in_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
             this.log_in_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
             this.log_in_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.log_in_button.Location = new System.Drawing.Point(177, 163);
+            this.log_in_button.Location = new System.Drawing.Point(190, 163);
             this.log_in_button.Name = "log_in_button";
             this.log_in_button.Size = new System.Drawing.Size(41, 39);
             this.log_in_button.TabIndex = 40;
@@ -115,6 +124,7 @@
             this.settings_button.Size = new System.Drawing.Size(41, 39);
             this.settings_button.TabIndex = 38;
             this.settings_button.UseVisualStyleBackColor = true;
+            this.settings_button.Click += new System.EventHandler(this.settings_button_Click);
             // 
             // name_label
             // 
@@ -157,6 +167,7 @@
             // log_in_holder_panel
             // 
             this.log_in_holder_panel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.log_in_holder_panel.Controls.Add(this.log_in_Clear_all_button);
             this.log_in_holder_panel.Controls.Add(this.log_pass_textBox);
             this.log_in_holder_panel.Controls.Add(this.wrong_log_in_label);
             this.log_in_holder_panel.Controls.Add(this.pass_label);
@@ -165,10 +176,117 @@
             this.log_in_holder_panel.Controls.Add(this.remember_log_in_checkBox);
             this.log_in_holder_panel.Controls.Add(this.name_label);
             this.log_in_holder_panel.Controls.Add(this.log_in_label);
-            this.log_in_holder_panel.Location = new System.Drawing.Point(623, 198);
+            this.log_in_holder_panel.Location = new System.Drawing.Point(621, 198);
             this.log_in_holder_panel.Name = "log_in_holder_panel";
             this.log_in_holder_panel.Size = new System.Drawing.Size(354, 356);
             this.log_in_holder_panel.TabIndex = 42;
+            // 
+            // log_in_Clear_all_button
+            // 
+            this.log_in_Clear_all_button.BackColor = System.Drawing.Color.Transparent;
+            this.log_in_Clear_all_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
+            this.log_in_Clear_all_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.log_in_Clear_all_button.FlatAppearance.BorderSize = 0;
+            this.log_in_Clear_all_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.log_in_Clear_all_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.log_in_Clear_all_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.log_in_Clear_all_button.ForeColor = System.Drawing.Color.Black;
+            this.log_in_Clear_all_button.Location = new System.Drawing.Point(154, 171);
+            this.log_in_Clear_all_button.Name = "log_in_Clear_all_button";
+            this.log_in_Clear_all_button.Size = new System.Drawing.Size(28, 23);
+            this.log_in_Clear_all_button.TabIndex = 42;
+            this.log_in_Clear_all_button.UseVisualStyleBackColor = false;
+            this.log_in_Clear_all_button.Click += new System.EventHandler(this.log_in_Clear_all_button_Click);
+            // 
+            // settings_myPanel
+            // 
+            this.settings_myPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.settings_myPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(54)))));
+            this.settings_myPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.settings_myPanel.Controls.Add(this.label1);
+            this.settings_myPanel.Controls.Add(this.textBox1);
+            this.settings_myPanel.Controls.Add(this.conn_string__Save_button);
+            this.settings_myPanel.Controls.Add(this.conn_ex2_label);
+            this.settings_myPanel.Controls.Add(this.conn_string_textBox);
+            this.settings_myPanel.Controls.Add(this.connection_string_label);
+            this.settings_myPanel.Location = new System.Drawing.Point(408, 546);
+            this.settings_myPanel.Name = "settings_myPanel";
+            this.settings_myPanel.Size = new System.Drawing.Size(1103, 188);
+            this.settings_myPanel.TabIndex = 43;
+            this.settings_myPanel.Visible = false;
+            // 
+            // conn_string__Save_button
+            // 
+            this.conn_string__Save_button.FlatAppearance.BorderSize = 0;
+            this.conn_string__Save_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.conn_string__Save_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(110)))), ((int)(((byte)(120)))));
+            this.conn_string__Save_button.Font = new System.Drawing.Font("Gentium Basic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.conn_string__Save_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
+            this.conn_string__Save_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
+            this.conn_string__Save_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.conn_string__Save_button.Location = new System.Drawing.Point(973, 45);
+            this.conn_string__Save_button.Name = "conn_string__Save_button";
+            this.conn_string__Save_button.Size = new System.Drawing.Size(90, 30);
+            this.conn_string__Save_button.TabIndex = 22;
+            this.conn_string__Save_button.Text = "Gem";
+            this.conn_string__Save_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.conn_string__Save_button.UseVisualStyleBackColor = true;
+            this.conn_string__Save_button.Click += new System.EventHandler(this.conn_string__Save_button_Click);
+            // 
+            // conn_ex2_label
+            // 
+            this.conn_ex2_label.AutoSize = true;
+            this.conn_ex2_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.conn_ex2_label.ForeColor = System.Drawing.Color.Aqua;
+            this.conn_ex2_label.Location = new System.Drawing.Point(44, 97);
+            this.conn_ex2_label.Name = "conn_ex2_label";
+            this.conn_ex2_label.Size = new System.Drawing.Size(241, 20);
+            this.conn_ex2_label.TabIndex = 3;
+            this.conn_ex2_label.Text = "Connection String Eksempel:";
+            // 
+            // conn_string_textBox
+            // 
+            this.conn_string_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.conn_string_textBox.Location = new System.Drawing.Point(48, 49);
+            this.conn_string_textBox.Name = "conn_string_textBox";
+            this.conn_string_textBox.Size = new System.Drawing.Size(907, 20);
+            this.conn_string_textBox.TabIndex = 1;
+            // 
+            // connection_string_label
+            // 
+            this.connection_string_label.AutoSize = true;
+            this.connection_string_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.connection_string_label.ForeColor = System.Drawing.Color.Lime;
+            this.connection_string_label.Location = new System.Drawing.Point(44, 15);
+            this.connection_string_label.Name = "connection_string_label";
+            this.connection_string_label.Size = new System.Drawing.Size(183, 24);
+            this.connection_string_label.TabIndex = 0;
+            this.connection_string_label.Text = "Connection String:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(54)))));
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1.ForeColor = System.Drawing.Color.Lime;
+            this.textBox1.Location = new System.Drawing.Point(291, 96);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(685, 22);
+            this.textBox1.TabIndex = 23;
+            this.textBox1.Text = "Data source=BG-1-PC\\\\SQLEXPRESS; Database = Advokathuset; User Id = abc; Password" +
+    " = abc;";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(45, 144);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(944, 15);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Vær opmærksom på den dobbelte \\\\ efter BG-1-PC \\\\ . Det kan give en fejl. Den Lav" +
+    "er det automatisk til // hvis du sætter /. Kommer end på tilfælden";
             // 
             // Log_In_Form0
             // 
@@ -177,6 +295,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1600, 800);
+            this.Controls.Add(this.settings_myPanel);
             this.Controls.Add(this.log_in_holder_panel);
             this.Controls.Add(this.settings_button);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -185,6 +304,8 @@
             this.Load += new System.EventHandler(this.Log_In_Form0_Load);
             this.log_in_holder_panel.ResumeLayout(false);
             this.log_in_holder_panel.PerformLayout();
+            this.settings_myPanel.ResumeLayout(false);
+            this.settings_myPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -201,5 +322,13 @@
         private System.Windows.Forms.Button log_in_button;
         private System.Windows.Forms.Label wrong_log_in_label;
         private System.Windows.Forms.Panel log_in_holder_panel;
+        private System.Windows.Forms.Button log_in_Clear_all_button;
+        private MyPanel settings_myPanel;
+        private System.Windows.Forms.TextBox conn_string_textBox;
+        private System.Windows.Forms.Label connection_string_label;
+        private System.Windows.Forms.Label conn_ex2_label;
+        private System.Windows.Forms.Button conn_string__Save_button;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

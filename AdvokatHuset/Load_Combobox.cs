@@ -12,7 +12,8 @@ namespace View_GUI
     class Load_Combobox
     {
 
-        DB_Connection_String Connection = new DB_Connection_String(); // SQL Connection Singleton 
+        // DB Connection
+        DB_Connection_String Connection = DB_Connection_String.Get_Connection_String_Instance(); // SQL Connection 
 
         public Load_Combobox(){}
 

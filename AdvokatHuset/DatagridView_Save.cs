@@ -13,9 +13,10 @@ namespace View_GUI
     class DatagridView_Save
     {
 
-       
 
-        DB_Connection_String Connection = new DB_Connection_String(); // SQL Connection Singleton 
+
+        // DB Connection
+        DB_Connection_String Connection = DB_Connection_String.Get_Connection_String_Instance(); // SQL Connection 
 
 
         public DatagridView_Save()
@@ -34,7 +35,7 @@ namespace View_GUI
                        if(Connection.DBConnectionString != null)
                        {
                      
-                              using (SqlConnection connection = new SqlConnection(new DB_Connection_String().DBConnectionString))// SQL Connection
+                              using (SqlConnection connection = new SqlConnection(Connection.DBConnectionString))// SQL Connection
                               {
                              
                                   //Kunde_dataGridView.EndEdit();

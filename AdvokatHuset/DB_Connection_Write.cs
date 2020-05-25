@@ -11,8 +11,12 @@ namespace Domain
     class DB_Connection_Write
     {
 
-        DB_Connection_String Connection = new DB_Connection_String(); // SQL Connection Singleton 
+        // DB Connection
+        DB_Connection_String Connection = DB_Connection_String.Get_Connection_String_Instance(); // SQL Connection
+        
 
+
+        
         bool successful = false;
         
         public bool CreateCommand(string Query)
@@ -21,7 +25,7 @@ namespace Domain
             {
                 if (Connection.DBConnectionString != null)
                 {
-                    using (SqlConnection connection = new SqlConnection(new DB_Connection_String().DBConnectionString))
+                    using (SqlConnection connection = new SqlConnection(Connection.DBConnectionString))
                     {
                         SqlCommand command = new SqlCommand(Query, connection);
                         command.Connection.Open();
