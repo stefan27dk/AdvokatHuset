@@ -551,11 +551,54 @@ namespace View_GUI
 
 
 
-
         //-----------------Connection String--------::END::--------------------------------------------------------------------
 
 
 
+
+
+
+
+
+        // Secret Button----------------::Start::-----------------------------------------------------------
+
+
+        // Secret Developer Mode - Hover - Button
+        private void secret_developer_mode_button_MouseEnter(object sender, EventArgs e)
+        {
+
+            secret_developer_mode_button.BackgroundImage = Properties.Resources.Apps_utilities_terminal_icon;
+            secret_developer_mode_button.BackgroundImageLayout = ImageLayout.Stretch;
+        }
+
+
+
+
+
+
+        // Developer Mode Secret Button - Leave - Hide Image
+        private void secret_developer_mode_button_MouseLeave(object sender, EventArgs e)
+        {
+            secret_developer_mode_button.BackgroundImage = null;
+
+        }
+
+
+
+        // Open Developer Mode
+        private void secret_developer_mode_button_Click(object sender, EventArgs e)
+        {
+            DeveloperForm_Form12 DeveloperForm = new DeveloperForm_Form12();
+            DeveloperForm.TopLevel = false;
+            DeveloperForm.FormBorderStyle = FormBorderStyle.SizableToolWindow;
+            this.Controls.Add(DeveloperForm);
+            DeveloperForm.Show();
+            DeveloperForm.BringToFront();
+
+        }
+
+
+        //-Secret Button-------------------::END::-----------------------------------------------------
 
     }
 }

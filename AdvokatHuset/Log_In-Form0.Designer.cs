@@ -46,6 +46,8 @@
             this.connection_string_label = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.secret_label = new System.Windows.Forms.Label();
+            this.secret_developer_mode_button = new System.Windows.Forms.Button();
             this.log_in_holder_panel.SuspendLayout();
             this.settings_myPanel.SuspendLayout();
             this.SuspendLayout();
@@ -203,13 +205,14 @@
             this.settings_myPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.settings_myPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(54)))));
             this.settings_myPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.settings_myPanel.Controls.Add(this.secret_label);
             this.settings_myPanel.Controls.Add(this.label1);
             this.settings_myPanel.Controls.Add(this.textBox1);
             this.settings_myPanel.Controls.Add(this.conn_string__Save_button);
             this.settings_myPanel.Controls.Add(this.conn_ex2_label);
             this.settings_myPanel.Controls.Add(this.conn_string_textBox);
             this.settings_myPanel.Controls.Add(this.connection_string_label);
-            this.settings_myPanel.Location = new System.Drawing.Point(408, 546);
+            this.settings_myPanel.Location = new System.Drawing.Point(406, 546);
             this.settings_myPanel.Name = "settings_myPanel";
             this.settings_myPanel.Size = new System.Drawing.Size(1103, 188);
             this.settings_myPanel.TabIndex = 43;
@@ -288,6 +291,34 @@
             this.label1.Text = "Vær opmærksom på den dobbelte \\\\ efter BG-1-PC \\\\ . Det kan give en fejl. Den Lav" +
     "er det automatisk til // hvis du sætter /. Kommer end på tilfælden";
             // 
+            // secret_label
+            // 
+            this.secret_label.AutoSize = true;
+            this.secret_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.secret_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(45)))));
+            this.secret_label.Location = new System.Drawing.Point(45, 166);
+            this.secret_label.Name = "secret_label";
+            this.secret_label.Size = new System.Drawing.Size(336, 13);
+            this.secret_label.TabIndex = 25;
+            this.secret_label.Text = "Hvis du vil finde den Ubegrænset magt find den ved placering \"0;0\" . ";
+            // 
+            // secret_developer_mode_button
+            // 
+            this.secret_developer_mode_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.secret_developer_mode_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.secret_developer_mode_button.FlatAppearance.BorderSize = 0;
+            this.secret_developer_mode_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.secret_developer_mode_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
+            this.secret_developer_mode_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.secret_developer_mode_button.Location = new System.Drawing.Point(5, 4);
+            this.secret_developer_mode_button.Name = "secret_developer_mode_button";
+            this.secret_developer_mode_button.Size = new System.Drawing.Size(41, 39);
+            this.secret_developer_mode_button.TabIndex = 44;
+            this.secret_developer_mode_button.UseVisualStyleBackColor = true;
+            this.secret_developer_mode_button.Click += new System.EventHandler(this.secret_developer_mode_button_Click);
+            this.secret_developer_mode_button.MouseEnter += new System.EventHandler(this.secret_developer_mode_button_MouseEnter);
+            this.secret_developer_mode_button.MouseLeave += new System.EventHandler(this.secret_developer_mode_button_MouseLeave);
+            // 
             // Log_In_Form0
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -295,6 +326,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1600, 800);
+            this.Controls.Add(this.secret_developer_mode_button);
             this.Controls.Add(this.settings_myPanel);
             this.Controls.Add(this.log_in_holder_panel);
             this.Controls.Add(this.settings_button);
@@ -330,5 +362,7 @@
         private System.Windows.Forms.Button conn_string__Save_button;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label secret_label;
+        private System.Windows.Forms.Button secret_developer_mode_button;
     }
 }
