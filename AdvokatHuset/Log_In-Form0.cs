@@ -112,7 +112,7 @@ namespace View_GUI
 
 
 
-         //----XML----::START---------------------------------
+         //----XML------Login---File--------------::START---------------------------------------------------------------------------------------------
 
         // Save Log in To XML
         private void Remember_Log_In()
@@ -248,7 +248,37 @@ namespace View_GUI
 
         }
 
-        //----XML----::END---------------------------------
+
+
+
+
+
+
+        // Delete login File - Button
+        private void delete_login_file_button_Click(object sender, EventArgs e)
+        {
+            Delete_Log_In_File();
+        }
+
+
+        // Delete Login File Main - Method
+        private void Delete_Log_In_File()
+        {
+
+
+
+            DialogResult delete_login = MessageBox.Show("Er du sikker på at du vil SLETTE den Husket Login?!?!","Slet Husket Log In", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+            if (File.Exists($@"{log_info_dir.LocalFolder}Log_In.xml") && delete_login == DialogResult.Yes)// If Log_Info_xml file exists
+            {
+                File.Delete($@"{log_info_dir.LocalFolder}Log_In.xml");
+                Clear_All_Input();
+            }
+
+
+        }
+
+        //----XML-----------Login---File------------::END------------------------------------------------------------------------------------------------
 
 
 
@@ -446,6 +476,18 @@ namespace View_GUI
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
         //-----------------Connection String--------::START::--------------------------------------------------------------------
 
 
@@ -560,6 +602,23 @@ namespace View_GUI
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         // Secret Button----------------::Start::-----------------------------------------------------------
 
 
@@ -597,7 +656,7 @@ namespace View_GUI
 
         }
 
-
+      
         //-Secret Button-------------------::END::-----------------------------------------------------
 
     }

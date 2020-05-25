@@ -1183,6 +1183,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Delete_file_icon {
+            get {
+                object obj = ResourceManager.GetObject("Delete-file-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DGV_Panel {
             get {
                 object obj = ResourceManager.GetObject("DGV-Panel", resourceCulture);

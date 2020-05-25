@@ -38,15 +38,16 @@
             this.pass_label = new System.Windows.Forms.Label();
             this.wrong_log_in_label = new System.Windows.Forms.Label();
             this.log_in_holder_panel = new System.Windows.Forms.Panel();
+            this.delete_login_file_button = new System.Windows.Forms.Button();
             this.log_in_Clear_all_button = new System.Windows.Forms.Button();
             this.settings_myPanel = new View_GUI.MyPanel();
+            this.secret_label = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.conn_string__Save_button = new System.Windows.Forms.Button();
             this.conn_ex2_label = new System.Windows.Forms.Label();
             this.conn_string_textBox = new System.Windows.Forms.TextBox();
             this.connection_string_label = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.secret_label = new System.Windows.Forms.Label();
             this.secret_developer_mode_button = new System.Windows.Forms.Button();
             this.log_in_holder_panel.SuspendLayout();
             this.settings_myPanel.SuspendLayout();
@@ -159,7 +160,7 @@
             this.wrong_log_in_label.AutoSize = true;
             this.wrong_log_in_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.wrong_log_in_label.ForeColor = System.Drawing.Color.Red;
-            this.wrong_log_in_label.Location = new System.Drawing.Point(62, 275);
+            this.wrong_log_in_label.Location = new System.Drawing.Point(67, 286);
             this.wrong_log_in_label.Name = "wrong_log_in_label";
             this.wrong_log_in_label.Size = new System.Drawing.Size(262, 16);
             this.wrong_log_in_label.TabIndex = 41;
@@ -169,6 +170,7 @@
             // log_in_holder_panel
             // 
             this.log_in_holder_panel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.log_in_holder_panel.Controls.Add(this.delete_login_file_button);
             this.log_in_holder_panel.Controls.Add(this.log_in_Clear_all_button);
             this.log_in_holder_panel.Controls.Add(this.log_pass_textBox);
             this.log_in_holder_panel.Controls.Add(this.wrong_log_in_label);
@@ -182,6 +184,22 @@
             this.log_in_holder_panel.Name = "log_in_holder_panel";
             this.log_in_holder_panel.Size = new System.Drawing.Size(354, 356);
             this.log_in_holder_panel.TabIndex = 42;
+            // 
+            // delete_login_file_button
+            // 
+            this.delete_login_file_button.BackgroundImage = global::View_GUI.Properties.Resources.Delete_file_icon;
+            this.delete_login_file_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.delete_login_file_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.delete_login_file_button.FlatAppearance.BorderSize = 0;
+            this.delete_login_file_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.delete_login_file_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
+            this.delete_login_file_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.delete_login_file_button.Location = new System.Drawing.Point(188, 246);
+            this.delete_login_file_button.Name = "delete_login_file_button";
+            this.delete_login_file_button.Size = new System.Drawing.Size(26, 31);
+            this.delete_login_file_button.TabIndex = 43;
+            this.delete_login_file_button.UseVisualStyleBackColor = true;
+            this.delete_login_file_button.Click += new System.EventHandler(this.delete_login_file_button_Click);
             // 
             // log_in_Clear_all_button
             // 
@@ -217,6 +235,42 @@
             this.settings_myPanel.Size = new System.Drawing.Size(1103, 188);
             this.settings_myPanel.TabIndex = 43;
             this.settings_myPanel.Visible = false;
+            // 
+            // secret_label
+            // 
+            this.secret_label.AutoSize = true;
+            this.secret_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.secret_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(45)))));
+            this.secret_label.Location = new System.Drawing.Point(45, 166);
+            this.secret_label.Name = "secret_label";
+            this.secret_label.Size = new System.Drawing.Size(336, 13);
+            this.secret_label.TabIndex = 25;
+            this.secret_label.Text = "Hvis du vil finde den Ubegrænset magt find den ved placering \"0;0\" . ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(45, 144);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(944, 15);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Vær opmærksom på den dobbelte \\\\ efter BG-1-PC \\\\ . Det kan give en fejl. Den Lav" +
+    "er det automatisk til // hvis du sætter /. Kommer end på tilfælden";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(54)))));
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1.ForeColor = System.Drawing.Color.Lime;
+            this.textBox1.Location = new System.Drawing.Point(291, 96);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(685, 22);
+            this.textBox1.TabIndex = 23;
+            this.textBox1.Text = "Data source=BG-1-PC\\\\SQLEXPRESS; Database = Advokathuset; User Id = abc; Password" +
+    " = abc;";
             // 
             // conn_string__Save_button
             // 
@@ -265,42 +319,6 @@
             this.connection_string_label.Size = new System.Drawing.Size(183, 24);
             this.connection_string_label.TabIndex = 0;
             this.connection_string_label.Text = "Connection String:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(54)))));
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.ForeColor = System.Drawing.Color.Lime;
-            this.textBox1.Location = new System.Drawing.Point(291, 96);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(685, 22);
-            this.textBox1.TabIndex = 23;
-            this.textBox1.Text = "Data source=BG-1-PC\\\\SQLEXPRESS; Database = Advokathuset; User Id = abc; Password" +
-    " = abc;";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(45, 144);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(944, 15);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "Vær opmærksom på den dobbelte \\\\ efter BG-1-PC \\\\ . Det kan give en fejl. Den Lav" +
-    "er det automatisk til // hvis du sætter /. Kommer end på tilfælden";
-            // 
-            // secret_label
-            // 
-            this.secret_label.AutoSize = true;
-            this.secret_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.secret_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(45)))));
-            this.secret_label.Location = new System.Drawing.Point(45, 166);
-            this.secret_label.Name = "secret_label";
-            this.secret_label.Size = new System.Drawing.Size(336, 13);
-            this.secret_label.TabIndex = 25;
-            this.secret_label.Text = "Hvis du vil finde den Ubegrænset magt find den ved placering \"0;0\" . ";
             // 
             // secret_developer_mode_button
             // 
@@ -364,5 +382,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label secret_label;
         private System.Windows.Forms.Button secret_developer_mode_button;
+        private System.Windows.Forms.Button delete_login_file_button;
     }
 }
