@@ -30,9 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             this.Loader_panel = new System.Windows.Forms.Panel();
+            this.log_in_border_panel = new System.Windows.Forms.Panel();
+            this.log_in_background_panel = new System.Windows.Forms.Panel();
+            this.type_log_in_label = new System.Windows.Forms.Label();
+            this.type_log_in_textBox = new System.Windows.Forms.TextBox();
+            this.copy_id_button = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.log_in_off_menu_Pass_textBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.log_in_off_menu_Username_textBox = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.log_in_din_id_textBox = new System.Windows.Forms.TextBox();
+            this.log_off_button = new System.Windows.Forms.Button();
+            this.shut_down_button = new System.Windows.Forms.Button();
             this.task_bar_panel = new System.Windows.Forms.Panel();
-            this.item_menu_top_panel = new System.Windows.Forms.Panel();
-            this.item_menu_back_panel_top_panel = new System.Windows.Forms.Panel();
             this.itemMenuPanelDropDown = new System.Windows.Forms.Panel();
             this.item_menu_back_panekBlack_panel = new System.Windows.Forms.Panel();
             this.statistics_button = new System.Windows.Forms.Button();
@@ -56,6 +67,9 @@
             this.selection_screenshot_button = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.Top_Menu_panel = new System.Windows.Forms.Panel();
+            this.log_In_top_Bottom_panel = new System.Windows.Forms.Panel();
+            this.log_in_top_panel = new System.Windows.Forms.Panel();
+            this.hode_Program_button = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Home_Button = new System.Windows.Forms.Button();
             this.Menu_Search_button = new System.Windows.Forms.Button();
@@ -70,34 +84,215 @@
             this.kørselToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bell_button = new System.Windows.Forms.Button();
             this.Loacal_Folder_button = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.log_In_off_button = new System.Windows.Forms.Button();
             this.Back_Button = new System.Windows.Forms.Button();
             this.item_menu_button = new System.Windows.Forms.Button();
             this.Forward_Button = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.hode_Program_button = new System.Windows.Forms.Button();
-            this.item_menu_top_panel.SuspendLayout();
+            this.item_menu_back_panel_top_panel = new System.Windows.Forms.Panel();
+            this.item_menu_top_panel = new System.Windows.Forms.Panel();
+            this.Loader_panel.SuspendLayout();
+            this.log_in_border_panel.SuspendLayout();
+            this.log_in_background_panel.SuspendLayout();
             this.itemMenuPanelDropDown.SuspendLayout();
             this.item_menu_back_panekBlack_panel.SuspendLayout();
             this.screenshot_DropDown_menustrip.SuspendLayout();
             this.Top_Menu_panel.SuspendLayout();
+            this.log_In_top_Bottom_panel.SuspendLayout();
             this.General_Menu_Panel.SuspendLayout();
             this.General_menuStrip.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
+            this.item_menu_top_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // Loader_panel
             // 
             this.Loader_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Loader_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Loader_panel.Controls.Add(this.log_In_top_Bottom_panel);
+            this.Loader_panel.Controls.Add(this.log_in_border_panel);
             this.Loader_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Loader_panel.ForeColor = System.Drawing.Color.Transparent;
             this.Loader_panel.Location = new System.Drawing.Point(0, 0);
             this.Loader_panel.Name = "Loader_panel";
             this.Loader_panel.Size = new System.Drawing.Size(1584, 762);
             this.Loader_panel.TabIndex = 9;
+            // 
+            // log_in_border_panel
+            // 
+            this.log_in_border_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.log_in_border_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(196)))), ((int)(((byte)(60)))));
+            this.log_in_border_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.log_in_border_panel.Controls.Add(this.log_in_background_panel);
+            this.log_in_border_panel.Location = new System.Drawing.Point(5, 72);
+            this.log_in_border_panel.Name = "log_in_border_panel";
+            this.log_in_border_panel.Size = new System.Drawing.Size(445, 321);
+            this.log_in_border_panel.TabIndex = 4;
+            this.log_in_border_panel.Visible = false;
+            // 
+            // log_in_background_panel
+            // 
+            this.log_in_background_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.log_in_background_panel.Controls.Add(this.type_log_in_label);
+            this.log_in_background_panel.Controls.Add(this.type_log_in_textBox);
+            this.log_in_background_panel.Controls.Add(this.copy_id_button);
+            this.log_in_background_panel.Controls.Add(this.label2);
+            this.log_in_background_panel.Controls.Add(this.log_in_off_menu_Pass_textBox);
+            this.log_in_background_panel.Controls.Add(this.label1);
+            this.log_in_background_panel.Controls.Add(this.log_in_off_menu_Username_textBox);
+            this.log_in_background_panel.Controls.Add(this.label16);
+            this.log_in_background_panel.Controls.Add(this.log_in_din_id_textBox);
+            this.log_in_background_panel.Controls.Add(this.log_off_button);
+            this.log_in_background_panel.Controls.Add(this.shut_down_button);
+            this.log_in_background_panel.Location = new System.Drawing.Point(2, 1);
+            this.log_in_background_panel.Name = "log_in_background_panel";
+            this.log_in_background_panel.Size = new System.Drawing.Size(438, 317);
+            this.log_in_background_panel.TabIndex = 3;
+            // 
+            // type_log_in_label
+            // 
+            this.type_log_in_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.type_log_in_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(100)))));
+            this.type_log_in_label.Image = global::View_GUI.Properties.Resources.Pass2;
+            this.type_log_in_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.type_log_in_label.Location = new System.Drawing.Point(63, 206);
+            this.type_log_in_label.Name = "type_log_in_label";
+            this.type_log_in_label.Size = new System.Drawing.Size(91, 24);
+            this.type_log_in_label.TabIndex = 34;
+            this.type_log_in_label.Text = "Type:";
+            this.type_log_in_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // type_log_in_textBox
+            // 
+            this.type_log_in_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.type_log_in_textBox.Location = new System.Drawing.Point(160, 210);
+            this.type_log_in_textBox.Name = "type_log_in_textBox";
+            this.type_log_in_textBox.ReadOnly = true;
+            this.type_log_in_textBox.Size = new System.Drawing.Size(171, 20);
+            this.type_log_in_textBox.TabIndex = 33;
+            // 
+            // copy_id_button
+            // 
+            this.copy_id_button.BackColor = System.Drawing.Color.Transparent;
+            this.copy_id_button.BackgroundImage = global::View_GUI.Properties.Resources.win7_ico_shell32_dll_260__2_;
+            this.copy_id_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.copy_id_button.FlatAppearance.BorderSize = 0;
+            this.copy_id_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.copy_id_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.copy_id_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.copy_id_button.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.copy_id_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.copy_id_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.copy_id_button.Location = new System.Drawing.Point(386, 63);
+            this.copy_id_button.Margin = new System.Windows.Forms.Padding(0);
+            this.copy_id_button.Name = "copy_id_button";
+            this.copy_id_button.Size = new System.Drawing.Size(40, 38);
+            this.copy_id_button.TabIndex = 32;
+            this.copy_id_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.copy_id_button.UseVisualStyleBackColor = false;
+            this.copy_id_button.Click += new System.EventHandler(this.copy_id_button_Click);
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(100)))));
+            this.label2.Image = global::View_GUI.Properties.Resources.Pass2;
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label2.Location = new System.Drawing.Point(63, 159);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 24);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "Pass:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // log_in_off_menu_Pass_textBox
+            // 
+            this.log_in_off_menu_Pass_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.log_in_off_menu_Pass_textBox.Location = new System.Drawing.Point(160, 163);
+            this.log_in_off_menu_Pass_textBox.Name = "log_in_off_menu_Pass_textBox";
+            this.log_in_off_menu_Pass_textBox.ReadOnly = true;
+            this.log_in_off_menu_Pass_textBox.Size = new System.Drawing.Size(171, 20);
+            this.log_in_off_menu_Pass_textBox.TabIndex = 30;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(100)))));
+            this.label1.Image = global::View_GUI.Properties.Resources.name_card_icon1;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label1.Location = new System.Drawing.Point(16, 115);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(138, 24);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Brugernavn:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // log_in_off_menu_Username_textBox
+            // 
+            this.log_in_off_menu_Username_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.log_in_off_menu_Username_textBox.Location = new System.Drawing.Point(160, 117);
+            this.log_in_off_menu_Username_textBox.Name = "log_in_off_menu_Username_textBox";
+            this.log_in_off_menu_Username_textBox.ReadOnly = true;
+            this.log_in_off_menu_Username_textBox.Size = new System.Drawing.Size(171, 20);
+            this.log_in_off_menu_Username_textBox.TabIndex = 28;
+            // 
+            // label16
+            // 
+            this.label16.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(100)))));
+            this.label16.Image = global::View_GUI.Properties.Resources.barcode_icon;
+            this.label16.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label16.Location = new System.Drawing.Point(56, 69);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(98, 24);
+            this.label16.TabIndex = 27;
+            this.label16.Text = "Din ID:";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // log_in_din_id_textBox
+            // 
+            this.log_in_din_id_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.log_in_din_id_textBox.Location = new System.Drawing.Point(160, 73);
+            this.log_in_din_id_textBox.Name = "log_in_din_id_textBox";
+            this.log_in_din_id_textBox.ReadOnly = true;
+            this.log_in_din_id_textBox.Size = new System.Drawing.Size(214, 20);
+            this.log_in_din_id_textBox.TabIndex = 4;
+            // 
+            // log_off_button
+            // 
+            this.log_off_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.log_off_button.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.log_off_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.log_off_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(94)))));
+            this.log_off_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.log_off_button.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.log_off_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.log_off_button.Location = new System.Drawing.Point(88, 7);
+            this.log_off_button.Name = "log_off_button";
+            this.log_off_button.Size = new System.Drawing.Size(75, 27);
+            this.log_off_button.TabIndex = 3;
+            this.log_off_button.Text = "Log Af";
+            this.log_off_button.UseVisualStyleBackColor = false;
+            this.log_off_button.Click += new System.EventHandler(this.log_off_button_Click);
+            // 
+            // shut_down_button
+            // 
+            this.shut_down_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.shut_down_button.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.shut_down_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.shut_down_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.shut_down_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.shut_down_button.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.shut_down_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.shut_down_button.Location = new System.Drawing.Point(7, 7);
+            this.shut_down_button.Name = "shut_down_button";
+            this.shut_down_button.Size = new System.Drawing.Size(75, 27);
+            this.shut_down_button.TabIndex = 2;
+            this.shut_down_button.Text = "Sluk";
+            this.shut_down_button.UseVisualStyleBackColor = false;
+            this.shut_down_button.Click += new System.EventHandler(this.shut_down_button_Click);
             // 
             // task_bar_panel
             // 
@@ -108,26 +303,6 @@
             this.task_bar_panel.Name = "task_bar_panel";
             this.task_bar_panel.Size = new System.Drawing.Size(1584, 39);
             this.task_bar_panel.TabIndex = 2;
-            // 
-            // item_menu_top_panel
-            // 
-            this.item_menu_top_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.item_menu_top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(217)))), ((int)(((byte)(255)))));
-            this.item_menu_top_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.item_menu_top_panel.Controls.Add(this.item_menu_back_panel_top_panel);
-            this.item_menu_top_panel.Location = new System.Drawing.Point(1520, 61);
-            this.item_menu_top_panel.Name = "item_menu_top_panel";
-            this.item_menu_top_panel.Size = new System.Drawing.Size(40, 21);
-            this.item_menu_top_panel.TabIndex = 1;
-            this.item_menu_top_panel.Visible = false;
-            // 
-            // item_menu_back_panel_top_panel
-            // 
-            this.item_menu_back_panel_top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.item_menu_back_panel_top_panel.Location = new System.Drawing.Point(1, 4);
-            this.item_menu_back_panel_top_panel.Name = "item_menu_back_panel_top_panel";
-            this.item_menu_back_panel_top_panel.Size = new System.Drawing.Size(36, 18);
-            this.item_menu_back_panel_top_panel.TabIndex = 4;
             // 
             // itemMenuPanelDropDown
             // 
@@ -489,7 +664,7 @@
             this.Top_Menu_panel.Controls.Add(this.General_Menu_Panel);
             this.Top_Menu_panel.Controls.Add(this.bell_button);
             this.Top_Menu_panel.Controls.Add(this.Loacal_Folder_button);
-            this.Top_Menu_panel.Controls.Add(this.button3);
+            this.Top_Menu_panel.Controls.Add(this.log_In_off_button);
             this.Top_Menu_panel.Controls.Add(this.Back_Button);
             this.Top_Menu_panel.Controls.Add(this.item_menu_button);
             this.Top_Menu_panel.Controls.Add(this.Forward_Button);
@@ -498,6 +673,42 @@
             this.Top_Menu_panel.Name = "Top_Menu_panel";
             this.Top_Menu_panel.Size = new System.Drawing.Size(1584, 63);
             this.Top_Menu_panel.TabIndex = 1;
+            // 
+            // log_In_top_Bottom_panel
+            // 
+            this.log_In_top_Bottom_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.log_In_top_Bottom_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(196)))), ((int)(((byte)(60)))));
+            this.log_In_top_Bottom_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.log_In_top_Bottom_panel.Controls.Add(this.log_in_top_panel);
+            this.log_In_top_Bottom_panel.Location = new System.Drawing.Point(5, 61);
+            this.log_In_top_Bottom_panel.Name = "log_In_top_Bottom_panel";
+            this.log_In_top_Bottom_panel.Size = new System.Drawing.Size(40, 29);
+            this.log_In_top_Bottom_panel.TabIndex = 5;
+            this.log_In_top_Bottom_panel.Visible = false;
+            // 
+            // log_in_top_panel
+            // 
+            this.log_in_top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.log_in_top_panel.Location = new System.Drawing.Point(1, 4);
+            this.log_in_top_panel.Name = "log_in_top_panel";
+            this.log_in_top_panel.Size = new System.Drawing.Size(36, 18);
+            this.log_in_top_panel.TabIndex = 4;
+            // 
+            // hode_Program_button
+            // 
+            this.hode_Program_button.BackgroundImage = global::View_GUI.Properties.Resources.date_icon;
+            this.hode_Program_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.hode_Program_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.hode_Program_button.FlatAppearance.BorderSize = 0;
+            this.hode_Program_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.hode_Program_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
+            this.hode_Program_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.hode_Program_button.Location = new System.Drawing.Point(1246, 6);
+            this.hode_Program_button.Name = "hode_Program_button";
+            this.hode_Program_button.Size = new System.Drawing.Size(41, 39);
+            this.hode_Program_button.TabIndex = 15;
+            this.hode_Program_button.UseVisualStyleBackColor = true;
+            this.hode_Program_button.Click += new System.EventHandler(this.hode_Program_button_Click);
             // 
             // panel1
             // 
@@ -734,22 +945,23 @@
             this.Loacal_Folder_button.Click += new System.EventHandler(this.Loacal_Folder_button_Click);
             this.Loacal_Folder_button.MouseHover += new System.EventHandler(this.Loacal_Folder_button_MouseHover);
             // 
-            // button3
+            // log_In_off_button
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.log_In_off_button.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.button3.BackgroundImage = global::View_GUI.Properties.Resources.Apps_Dialog_Shutdown_icon__1_;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(11, 11);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(33, 33);
-            this.button3.TabIndex = 1;
-            this.button3.UseVisualStyleBackColor = true;
+            this.log_In_off_button.BackgroundImage = global::View_GUI.Properties.Resources.Apps_Dialog_Shutdown_icon__1_;
+            this.log_In_off_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.log_In_off_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.log_In_off_button.FlatAppearance.BorderSize = 0;
+            this.log_In_off_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.log_In_off_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.log_In_off_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.log_In_off_button.Location = new System.Drawing.Point(11, 11);
+            this.log_In_off_button.Name = "log_In_off_button";
+            this.log_In_off_button.Size = new System.Drawing.Size(33, 33);
+            this.log_In_off_button.TabIndex = 1;
+            this.log_In_off_button.UseVisualStyleBackColor = true;
+            this.log_In_off_button.Click += new System.EventHandler(this.log_In_off_button_Click);
             // 
             // Back_Button
             // 
@@ -819,21 +1031,25 @@
             this.toolStripMenuItem5.Size = new System.Drawing.Size(80, 22);
             this.toolStripMenuItem5.Text = "2";
             // 
-            // hode_Program_button
+            // item_menu_back_panel_top_panel
             // 
-            this.hode_Program_button.BackgroundImage = global::View_GUI.Properties.Resources.date_icon;
-            this.hode_Program_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.hode_Program_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.hode_Program_button.FlatAppearance.BorderSize = 0;
-            this.hode_Program_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.hode_Program_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
-            this.hode_Program_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.hode_Program_button.Location = new System.Drawing.Point(1246, 6);
-            this.hode_Program_button.Name = "hode_Program_button";
-            this.hode_Program_button.Size = new System.Drawing.Size(41, 39);
-            this.hode_Program_button.TabIndex = 15;
-            this.hode_Program_button.UseVisualStyleBackColor = true;
-            this.hode_Program_button.Click += new System.EventHandler(this.hode_Program_button_Click);
+            this.item_menu_back_panel_top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.item_menu_back_panel_top_panel.Location = new System.Drawing.Point(1, 4);
+            this.item_menu_back_panel_top_panel.Name = "item_menu_back_panel_top_panel";
+            this.item_menu_back_panel_top_panel.Size = new System.Drawing.Size(36, 18);
+            this.item_menu_back_panel_top_panel.TabIndex = 4;
+            // 
+            // item_menu_top_panel
+            // 
+            this.item_menu_top_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.item_menu_top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(217)))), ((int)(((byte)(255)))));
+            this.item_menu_top_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.item_menu_top_panel.Controls.Add(this.item_menu_back_panel_top_panel);
+            this.item_menu_top_panel.Location = new System.Drawing.Point(1520, 61);
+            this.item_menu_top_panel.Name = "item_menu_top_panel";
+            this.item_menu_top_panel.Size = new System.Drawing.Size(40, 21);
+            this.item_menu_top_panel.TabIndex = 1;
+            this.item_menu_top_panel.Visible = false;
             // 
             // Main_Form1
             // 
@@ -849,16 +1065,21 @@
             this.Name = "Main_Form1";
             this.Text = "Main_Form1";
             this.Load += new System.EventHandler(this.Main_Form1_Load);
-            this.item_menu_top_panel.ResumeLayout(false);
+            this.Loader_panel.ResumeLayout(false);
+            this.log_in_border_panel.ResumeLayout(false);
+            this.log_in_background_panel.ResumeLayout(false);
+            this.log_in_background_panel.PerformLayout();
             this.itemMenuPanelDropDown.ResumeLayout(false);
             this.item_menu_back_panekBlack_panel.ResumeLayout(false);
             this.screenshot_DropDown_menustrip.ResumeLayout(false);
             this.screenshot_DropDown_menustrip.PerformLayout();
             this.Top_Menu_panel.ResumeLayout(false);
+            this.log_In_top_Bottom_panel.ResumeLayout(false);
             this.General_Menu_Panel.ResumeLayout(false);
             this.General_menuStrip.ResumeLayout(false);
             this.General_menuStrip.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
+            this.item_menu_top_panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -888,7 +1109,6 @@
         private System.Windows.Forms.Button bell_button;
         private System.Windows.Forms.Button sound_recorder_button;
         private System.Windows.Forms.Button open_paint_button;
-        private System.Windows.Forms.Panel item_menu_top_panel;
         private System.Windows.Forms.Panel task_bar_panel;
         private System.Windows.Forms.Button open_browser_button;
         private System.Windows.Forms.Button open_my_email_button;
@@ -900,9 +1120,8 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
         private System.Windows.Forms.Panel item_menu_back_panekBlack_panel;
-        private System.Windows.Forms.Panel item_menu_back_panel_top_panel;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button log_In_off_button;
         private System.Windows.Forms.Panel General_Menu_Panel;
         private System.Windows.Forms.MenuStrip General_menuStrip;
         private System.Windows.Forms.ToolStripMenuItem sagerToolStripMenuItem;
@@ -913,5 +1132,22 @@
         private System.Windows.Forms.ToolStripMenuItem kunderToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kørselToolStripMenuItem;
         private System.Windows.Forms.Button hode_Program_button;
+        private System.Windows.Forms.Panel item_menu_back_panel_top_panel;
+        private System.Windows.Forms.Panel item_menu_top_panel;
+        private System.Windows.Forms.Panel log_in_border_panel;
+        private System.Windows.Forms.Panel log_in_background_panel;
+        private System.Windows.Forms.Panel log_In_top_Bottom_panel;
+        private System.Windows.Forms.Panel log_in_top_panel;
+        private System.Windows.Forms.Button log_off_button;
+        private System.Windows.Forms.Button shut_down_button;
+        private System.Windows.Forms.TextBox log_in_din_id_textBox;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox log_in_off_menu_Pass_textBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox log_in_off_menu_Username_textBox;
+        private System.Windows.Forms.Button copy_id_button;
+        private System.Windows.Forms.Label type_log_in_label;
+        private System.Windows.Forms.TextBox type_log_in_textBox;
     }
 }

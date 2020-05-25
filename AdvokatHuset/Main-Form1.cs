@@ -27,7 +27,7 @@ namespace View_GUI
         Log_In_Info Log_In_info = Log_In_Info.Get_Log_In_Info();
 
 
-
+        
 
 
 
@@ -908,6 +908,118 @@ namespace View_GUI
 
 
 
+
+
+
+
+
+       // Log In_OFF-Menu-------------------::START::----------------------------------------------------------------------------------
+
+        // log IN - OFF - Button
+        private void log_In_off_button_Click(object sender, EventArgs e)
+        {
+            Show_Hide_Log_in_Panel();
+            lOAD_LOG_IN_INFO();
+            Log_In_Off_button_sound();
+        }
+
+
+        private void Log_In_Off_button_sound()
+        {
+            SoundPlayer log_btn = new SoundPlayer(@"C:\Windows\Media\Speech Misrecognition.wav");
+            log_btn.Play();
+
+        }
+
+        // Show Hide Log In Info - Panel
+        private void Show_Hide_Log_in_Panel()
+        {
+            if (log_in_border_panel.Visible == false)
+            {
+                log_in_border_panel.Visible = true;
+                log_In_top_Bottom_panel.Visible = true;
+            }
+            else
+            {
+                log_in_border_panel.Visible = false;
+                log_In_top_Bottom_panel.Visible = false;    
+            }
+
+        }
+
+
+        // Copy ID Button
+        private void copy_id_button_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(log_in_din_id_textBox.Text);
+        }
+
+
+
+        // Get Log In Info
+        private void lOAD_LOG_IN_INFO()
+        {
+            Log_In_Info Log_Info = Log_In_Info.Get_Log_In_Info();
+            log_in_din_id_textBox.Text =  Log_Info.Me_ID;
+            log_in_off_menu_Username_textBox.Text = Log_Info.Log_User_Name;
+            log_in_off_menu_Pass_textBox.Text = Log_Info.Log_Password;
+            type_log_in_textBox.Text = Log_Info.Log_IN_Type;
+
+        }
+
+
+
+
+
+        // Log_in_Close the program
+        private void shut_down_button_Click(object sender, EventArgs e)
+        {
+            this.ParentForm.Close();
+        }
+
+
+
+
+
+        // Log Off Button
+        private void log_off_button_Click(object sender, EventArgs e)
+        {
+            // Log in Form
+            Log_In_Form0 log_in_form = new Log_In_Form0();
+            log_in_form.TopLevel = false;
+            this.Parent.Controls.Add(log_in_form);
+            log_in_form.Dock = DockStyle.Fill;
+            log_in_form.FormBorderStyle = FormBorderStyle.None;
+            log_in_form.Show();
+            this.Dispose();
+            Log_Of_Sound();
+        }
+
+
+        // Log Off SOund
+        private void Log_Of_Sound()
+        {
+            SoundPlayer log_off_sound = new SoundPlayer(@"C:\Windows\Media\notify.wav");
+            log_off_sound.Play();
+        }
+
+        // Log In_OFF-Menu-------------------::END::----------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         //---------------TEST-----------------------------------------------------------------------////////////////////////////////////////////////////////////////////////
 
         // Hide Program- Button
@@ -932,8 +1044,12 @@ namespace View_GUI
 
         private void Notfy1_Click(object sender, EventArgs e)
         {
-            this.Show();
+         
         }
+
+  
+
+
 
         //---------------TEST-----------------------------------------------------------------------////////////////////////////////////////////////////////////////////////
 
