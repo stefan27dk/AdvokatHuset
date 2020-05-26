@@ -57,8 +57,10 @@ namespace View_GUI
 
 
         // TextBox populate
-        public TextBox PopulateTextbox(string Query, TextBox Loader_TextBox)
+        public string PopulateTextbox(string Query)
         {
+
+            string Output = "";
             try
             {
 
@@ -75,7 +77,7 @@ namespace View_GUI
 
                         while (DataReader.Read())
                         {
-                            Loader_TextBox.Text = DataReader[0].ToString();
+                            Output = DataReader[0].ToString();
                         }
 
                     }
@@ -86,7 +88,7 @@ namespace View_GUI
 
             catch (Exception e) { MessageBox.Show($"Fejl: {e.Message}", "Fejl", MessageBoxButtons.OK, MessageBoxIcon.Error); }
 
-            return Loader_TextBox;
+            return Output;
 
         }
 

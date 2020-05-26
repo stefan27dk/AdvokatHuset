@@ -42,33 +42,15 @@ namespace View_GUI
 
             // Input
             Statistics_Facade Statistic = new Statistics_Facade();
-            Statistic.Indkomst = indkomst_textBox; // Indkomst
-            Statistic.Me_salary_Time = Me_salary_textBox; // Me_Salary
-
-
-
-            if (Hour_Salary_textBox.Text.Length > 0)
-            {
-                Statistic.Hour_salary = decimal.Parse(Hour_Salary_textBox.Text); // Me_Salary
-            }
-
-            if (fees_textBox.Text.Length > 0)
-            {
-                Statistic.Fees = decimal.Parse(fees_textBox.Text); // Fees
-
-            }
-
-            
-
-            Statistic.Profit = profit_textBox; // Profit
+              
             Statistic.Me_Salary_Query = $"Select(ISNULL((Select SUM(T.Tid) From Tid As T Where Convert(datetime, T.Tid_Dato, 105) >= Convert(datetime, '{statistics_From_dateTimePicker.Value.ToShortDateString()}', 105) AND Convert(datetime, T.Tid_Dato, 105) <= Convert(datetime, '{statistics_To_dateTimePicker.Value.ToShortDateString()}', 105)),0));";
             Statistic.Indkomst_Query = $"SELECT (IsNull((Select SUM(Y.Ydelse_Pris) From Tid As T Inner Join Ydelse As Y On T.Ydelse_Nr = Y.Ydelse_Nr  Where (Y.Ydelse_Type = 'Fast Pris') AND Convert(datetime, T.Tid_Dato ,105) >= Convert(datetime, '{statistics_From_dateTimePicker.Value.ToShortDateString()}', 105) AND Convert(datetime, T.Tid_Dato ,105) <= Convert(datetime, '{statistics_To_dateTimePicker.Value.ToShortDateString()}', 105) ),0) + IsNull((Select SUM(T.Tid * Y.Ydelse_Pris) From Tid As T Inner Join Ydelse As Y On T.Ydelse_Nr = Y.Ydelse_Nr  Where (Y.Ydelse_Type = 'Time') AND Convert(datetime, T.Tid_Dato ,105) >= Convert(datetime, '{statistics_From_dateTimePicker.Value.ToShortDateString()}', 105) AND Convert(datetime, T.Tid_Dato ,105) <= Convert(datetime, '{statistics_To_dateTimePicker.Value.ToShortDateString()}', 105)), 0)) AS Total;";
             Statistic.Get_Statistics(); // Calculate
 
             // Output
-            indkomst_textBox.Text = Statistic.Indkomst.Text;
-            Me_salary_textBox.Text = Statistic.Me_Total_Salary.Text;
-            profit_textBox.Text = Statistic.Profit.Text;
+            indkomst_textBox.Text = Statistic.Indkomst;
+            Me_salary_textBox.Text = Statistic.Me_Total_Salary;
+            profit_textBox.Text = Statistic.Profit;
 
 
 

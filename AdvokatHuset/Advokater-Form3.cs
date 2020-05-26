@@ -1548,7 +1548,7 @@ namespace View_GUI
             speciale_advokat_id_textBox.Clear();
 
             DB_Loader Get_Advokat_ID = new DB_Loader();
-            speciale_advokat_id_textBox = Get_Advokat_ID.PopulateTextbox($"Select M.Me_ID From Medarbejder As M Where M.Me_Fornavn = '{Add_speciale_Advokat_name_comboBox.SelectedItem.ToString()}'", speciale_advokat_id_textBox);
+            speciale_advokat_id_textBox.Text = Get_Advokat_ID.PopulateTextbox($"Select M.Me_ID From Medarbejder As M Where M.Me_Fornavn = '{Add_speciale_Advokat_name_comboBox.SelectedItem.ToString()}'");
         }
 
 
@@ -1752,7 +1752,7 @@ namespace View_GUI
             delete_speciale_from_advokat_textBox.Clear();
 
             DB_Loader Get_Advokat_ID = new DB_Loader();
-            delete_speciale_from_advokat_textBox = Get_Advokat_ID.PopulateTextbox($"Select M.Me_ID From Medarbejder As M Where M.Me_Fornavn = '{delete_speciale_Advokat_name_comboBox.SelectedItem.ToString()}'", delete_speciale_from_advokat_textBox);
+            delete_speciale_from_advokat_textBox.Text = Get_Advokat_ID.PopulateTextbox($"Select M.Me_ID From Medarbejder As M Where M.Me_Fornavn = '{delete_speciale_Advokat_name_comboBox.SelectedItem.ToString()}'");
         }
 
         //----DELETE SPECIALE- From Advokate------------::END::----------------------------------------------

@@ -23,12 +23,12 @@ namespace Domain
 
 
         // Resources
-        public TextBox Indkomst { get; set; }
-        public TextBox Me_salary_Time { get; set; }
-        public TextBox Me_Total_Salary { get; set; } = new TextBox();
+        public string Indkomst { get; set; }
+        public string Me_salary_Time { get; set; }
+        public string Me_Total_Salary { get; set; } = "0";
         public decimal Hour_salary { get; set; } = 200;
         public decimal Fees { get; set; } = 0;
-        public TextBox Profit { get; set; }
+        public string Profit { get; set; }
 
 
 
@@ -66,7 +66,7 @@ namespace Domain
         // Get Data - Inkomst
         private void Get_Inkomst_Data_From_DB()
         {
-            Indkomst =  Load_Data.PopulateTextbox(Indkomst_Query, Indkomst);
+            Indkomst =  Load_Data.PopulateTextbox(Indkomst_Query);
         }
 
 
@@ -76,7 +76,7 @@ namespace Domain
         // Me_Salary - "Løn"
         private void Get_Me_Salary()
         {
-            Me_salary_Time = Load_Data.PopulateTextbox(Me_Salary_Query, Me_salary_Time);
+            Me_salary_Time = Load_Data.PopulateTextbox(Me_Salary_Query);
 
         }
 
@@ -87,10 +87,10 @@ namespace Domain
         // Calculate Profit
         private void Calculate_Profit()
         {
-            if(Me_salary_Time.Text.Length > 0 && Indkomst.Text.Length > 0)
+            if(Me_salary_Time !="" && Indkomst !="")
             {
-              Me_Total_Salary.Text = (decimal.Parse(Me_salary_Time.Text) * Hour_salary).ToString();
-              Profit.Text = (decimal.Parse(Indkomst.Text) - (decimal.Parse(Me_Total_Salary.Text) + Fees)).ToString();
+              Me_Total_Salary = (decimal.Parse(Me_salary_Time) * Hour_salary).ToString();
+              Profit = (decimal.Parse(Indkomst) - (decimal.Parse(Me_Total_Salary) + Fees)).ToString();
             }
 
         }

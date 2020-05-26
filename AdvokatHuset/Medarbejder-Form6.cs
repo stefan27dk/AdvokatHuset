@@ -1569,7 +1569,7 @@ namespace View_GUI
         {
             TBox.Clear();
             DB_Loader Get_Advokat_ID = new DB_Loader();
-            TBox = Get_Advokat_ID.PopulateTextbox($"Select M.Me_ID From Medarbejder As M Where M.Me_Fornavn = '{CBox.SelectedItem.ToString()}' ", TBox);
+            TBox.Text = Get_Advokat_ID.PopulateTextbox($"Select M.Me_ID From Medarbejder As M Where M.Me_Fornavn = '{CBox.SelectedItem.ToString()}' ");
         }
 
 
@@ -1858,12 +1858,12 @@ namespace View_GUI
              {
                  // Load User Name
                  DB_Loader Load_Log_IN_Name = new DB_Loader();
-                 vis_rediger_Log_In_Navn_textBox = Load_Log_IN_Name.PopulateTextbox($"Select L.Log_In_Navn From Log_In AS L Where L.Me_ID = '{vis_rediger_Me_Id_textBox.Text}'", vis_rediger_Log_In_Navn_textBox);
+                 vis_rediger_Log_In_Navn_textBox.Text = Load_Log_IN_Name.PopulateTextbox($"Select L.Log_In_Navn From Log_In AS L Where L.Me_ID = '{vis_rediger_Me_Id_textBox.Text}'");
                  
                  
                  // Load Password
                  DB_Loader Load_Log_IN_Pass = new DB_Loader();
-                 Vis_rediger_Log_In_Pass_textBox = Load_Log_IN_Pass.PopulateTextbox($"Select L.Log_In_Pass From Log_In AS L Where L.Me_ID = '{vis_rediger_Me_Id_textBox.Text}'", Vis_rediger_Log_In_Pass_textBox);
+                 Vis_rediger_Log_In_Pass_textBox.Text = Load_Log_IN_Pass.PopulateTextbox($"Select L.Log_In_Pass From Log_In AS L Where L.Me_ID = '{vis_rediger_Me_Id_textBox.Text}'");
 
              }
 

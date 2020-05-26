@@ -1663,7 +1663,7 @@ namespace View_GUI
         {
             add_Ydelse_Ydelse_Nr_textBox.Clear(); // Clear
             DB_Loader Load_Ydelse_Nr = new DB_Loader();
-            add_Ydelse_Ydelse_Nr_textBox = Load_Ydelse_Nr.PopulateTextbox($"Select Ydelse_Nr From Ydelse Where Ydelse_Navn Like '{ydelse_navn_comboBox.SelectedItem.ToString()}' ", add_Ydelse_Ydelse_Nr_textBox); // Load NR Ydelse NR "ID"
+            add_Ydelse_Ydelse_Nr_textBox.Text = Load_Ydelse_Nr.PopulateTextbox($"Select Ydelse_Nr From Ydelse Where Ydelse_Navn Like '{ydelse_navn_comboBox.SelectedItem.ToString()}'"); // Load NR Ydelse NR "ID"
         }
 
 
@@ -1817,7 +1817,7 @@ namespace View_GUI
             opret_sag_advokatID_textBox.Clear();
 
             DB_Loader Get_Advokat_ID = new DB_Loader();
-            opret_sag_advokatID_textBox = Get_Advokat_ID.PopulateTextbox($"Select M.Me_ID From Medarbejder As M Where M.Me_Fornavn = '{add_sag_Advokat_name_comboBox.SelectedItem.ToString()}'", opret_sag_advokatID_textBox);
+            opret_sag_advokatID_textBox.Text = Get_Advokat_ID.PopulateTextbox($"Select M.Me_ID From Medarbejder As M Where M.Me_Fornavn = '{add_sag_Advokat_name_comboBox.SelectedItem.ToString()}'");
         }
 
 
@@ -2217,7 +2217,7 @@ namespace View_GUI
             add_time_Advokat_name_textBox.Clear();
 
             DB_Loader Get_Advokat_ID = new DB_Loader();
-            add_time_Advokat_name_textBox = Get_Advokat_ID.PopulateTextbox($"Select M.Me_ID From Medarbejder As M Where M.Me_Fornavn = '{add_time_Advokat_name_comboBox.SelectedItem.ToString()}'", add_time_Advokat_name_textBox);
+            add_time_Advokat_name_textBox.Text = Get_Advokat_ID.PopulateTextbox($"Select M.Me_ID From Medarbejder As M Where M.Me_Fornavn = '{add_time_Advokat_name_comboBox.SelectedItem.ToString()}'");
         }
 
 
@@ -2240,7 +2240,7 @@ namespace View_GUI
         {
             add_Ydelse_Ydelse_Nr_textBox.Clear(); // Clear
             DB_Loader Load_Ydelse_Nr = new DB_Loader();
-            add_time_ydelse_nr_textBox = Load_Ydelse_Nr.PopulateTextbox($"Select Ydelse_Nr From Ydelse Where Ydelse_Navn Like '{add_time_ydelse_name_comboBox.SelectedItem.ToString()}' ", add_time_ydelse_nr_textBox); // Load NR Ydelse NR "ID"
+            add_time_ydelse_nr_textBox.Text = Load_Ydelse_Nr.PopulateTextbox($"Select Ydelse_Nr From Ydelse Where Ydelse_Navn Like '{add_time_ydelse_name_comboBox.SelectedItem.ToString()}'"); // Load NR Ydelse NR "ID"
         }
 
 
@@ -2283,7 +2283,7 @@ namespace View_GUI
 
             koersel_Advokat_Id_textBox.Clear();
             DB_Loader Get_Advokat_ID = new DB_Loader();
-            koersel_Advokat_Id_textBox = Get_Advokat_ID.PopulateTextbox($"Select M.Me_ID From Medarbejder As M Where M.Me_Fornavn = '{koersel_Advokat_name_comboBox.SelectedItem.ToString()}'", koersel_Advokat_Id_textBox);
+            koersel_Advokat_Id_textBox.Text = Get_Advokat_ID.PopulateTextbox($"Select M.Me_ID From Medarbejder As M Where M.Me_Fornavn = '{koersel_Advokat_name_comboBox.SelectedItem.ToString()}'");
         }
 
 
