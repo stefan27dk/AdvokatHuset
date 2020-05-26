@@ -260,9 +260,9 @@
             this.secret_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(45)))));
             this.secret_label.Location = new System.Drawing.Point(45, 166);
             this.secret_label.Name = "secret_label";
-            this.secret_label.Size = new System.Drawing.Size(336, 13);
+            this.secret_label.Size = new System.Drawing.Size(240, 13);
             this.secret_label.TabIndex = 25;
-            this.secret_label.Text = "Hvis du vil finde den Ubegrænset magt find den ved placering \"0;0\" . ";
+            this.secret_label.Text = "Find den Ubegrænset magt ved placering \"0;0\" . ";
             // 
             // label1
             // 

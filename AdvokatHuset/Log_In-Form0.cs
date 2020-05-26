@@ -519,6 +519,9 @@ namespace View_GUI
         private void conn_string__Save_button_Click(object sender, EventArgs e)
         {
             Connection_String_To_File();
+             
+            Application.Restart();
+            Environment.Exit(0);
         }
 
 

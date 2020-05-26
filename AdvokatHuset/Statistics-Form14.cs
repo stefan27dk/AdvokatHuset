@@ -47,7 +47,7 @@ namespace View_GUI
                                
              //Variable      // IF ...this = true      than do this                    else 0
             Statistic.Fees = (fees_textBox.Text != "") ? decimal.Parse(fees_textBox.Text) : 0;  // One Line If Statement
-            Statistic.Hour_salary = (Hour_Salary_textBox.Text !="") ? decimal.Parse(Hour_Salary_textBox.Text) : 0;
+            Statistic.Hour_salary = (Hour_Salary_textBox.Text !="") ? decimal.Parse(Hour_Salary_textBox.Text) : 200;
             Statistic.Me_Salary_Query = $"Select(ISNULL((Select SUM(T.Tid) From Tid As T Where Convert(datetime, T.Tid_Dato, 105) >= Convert(datetime, '{statistics_From_dateTimePicker.Value.ToShortDateString()}', 105) AND Convert(datetime, T.Tid_Dato, 105) <= Convert(datetime, '{statistics_To_dateTimePicker.Value.ToShortDateString()}', 105)),0));";
             Statistic.Indkomst_Query = $"SELECT (IsNull((Select SUM(Y.Ydelse_Pris) From Tid As T Inner Join Ydelse As Y On T.Ydelse_Nr = Y.Ydelse_Nr  Where (Y.Ydelse_Type = 'Fast Pris') AND Convert(datetime, T.Tid_Dato ,105) >= Convert(datetime, '{statistics_From_dateTimePicker.Value.ToShortDateString()}', 105) AND Convert(datetime, T.Tid_Dato ,105) <= Convert(datetime, '{statistics_To_dateTimePicker.Value.ToShortDateString()}', 105) ),0) + IsNull((Select SUM(T.Tid * Y.Ydelse_Pris) From Tid As T Inner Join Ydelse As Y On T.Ydelse_Nr = Y.Ydelse_Nr  Where (Y.Ydelse_Type = 'Time') AND Convert(datetime, T.Tid_Dato ,105) >= Convert(datetime, '{statistics_From_dateTimePicker.Value.ToShortDateString()}', 105) AND Convert(datetime, T.Tid_Dato ,105) <= Convert(datetime, '{statistics_To_dateTimePicker.Value.ToShortDateString()}', 105)), 0)) AS Total;";
             Statistic.Get_Statistics(); // Calculate
