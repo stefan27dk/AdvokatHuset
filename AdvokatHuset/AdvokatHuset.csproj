@@ -175,7 +175,7 @@
     <Compile Include="SelectionScreenshot-Form4.Designer.cs">
       <DependentUpon>SelectionScreenshot-Form4.cs</DependentUpon>
     </Compile>
-    <Compile Include="Load_Combobox.cs" />
+    <Compile Include="DB_Loader.cs" />
     <Compile Include="Test1.cs">
       <SubType>Form</SubType>
     </Compile>

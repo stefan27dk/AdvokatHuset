@@ -9,13 +9,13 @@ using System.Windows.Forms;
 
 namespace View_GUI
 {
-    class Load_Combobox
+    class DB_Loader
     {
 
         // DB Connection
         DB_Connection_String Connection = DB_Connection_String.Get_Connection_String_Instance(); // SQL Connection 
 
-        public Load_Combobox(){}
+        public DB_Loader(){}
 
 
 
