@@ -753,6 +753,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap arrow_right_icon {
+            get {
+                object obj = ResourceManager.GetObject("arrow-right-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap At_Mail_icon {
             get {
                 object obj = ResourceManager.GetObject("At-Mail-icon", resourceCulture);
@@ -1073,6 +1083,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Clockwise_arrow_icon {
+            get {
+                object obj = ResourceManager.GetObject("Clockwise-arrow-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CM_7 {
             get {
                 object obj = ResourceManager.GetObject("CM 7", resourceCulture);
@@ -1186,6 +1206,36 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap Control_Panel_icon {
             get {
                 object obj = ResourceManager.GetObject("Control-Panel-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Counterclockwise_arrow_icon {
+            get {
+                object obj = ResourceManager.GetObject("Counterclockwise-arrow-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Counterclockwise_arrow_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("Counterclockwise-arrow-icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Counterclockwise_arrow_icon2 {
+            get {
+                object obj = ResourceManager.GetObject("Counterclockwise-arrow-icon2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1783,6 +1833,36 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap load_log_in_file {
+            get {
+                object obj = ResourceManager.GetObject("load log in file", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap load_log_in_file___Copy {
+            get {
+                object obj = ResourceManager.GetObject("load log in file - Copy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Log_In_12 {
+            get {
+                object obj = ResourceManager.GetObject("Log In 12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Mail_at_icon {
             get {
                 object obj = ResourceManager.GetObject("Mail-at-icon", resourceCulture);
@@ -2273,6 +2353,46 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Refresh_icon {
+            get {
+                object obj = ResourceManager.GetObject("Refresh-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Refresh_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Refresh-icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Refresh_icon__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Refresh-icon (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Refresh_icon__2_1 {
+            get {
+                object obj = ResourceManager.GetObject("Refresh-icon (2)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap research_icon {
             get {
                 object obj = ResourceManager.GetObject("research-icon", resourceCulture);
@@ -2326,6 +2446,16 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap research_icon1 {
             get {
                 object obj = ResourceManager.GetObject("research-icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap scroll_right_icon {
+            get {
+                object obj = ResourceManager.GetObject("scroll-right-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2496,6 +2626,26 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap Top_Background_Panel {
             get {
                 object obj = ResourceManager.GetObject("Top Background Panel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap transmission_download_icon {
+            get {
+                object obj = ResourceManager.GetObject("transmission-download-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap transmission_download_icon___Copy {
+            get {
+                object obj = ResourceManager.GetObject("transmission-download-icon - Copy", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

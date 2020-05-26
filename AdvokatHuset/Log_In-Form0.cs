@@ -11,11 +11,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using System.Diagnostics;
+using System.Data.SqlClient;
 
 namespace View_GUI
 {
     public partial class Log_In_Form0 : Form
     {
+
+        
+
+
         // Log_In_info - Directory
         Local_Settings log_info_dir = new Local_Settings();
 
@@ -103,11 +108,73 @@ namespace View_GUI
             if (Log_In_Is_Valid == false || Input_Is_Valid == false)
             {
                 Error_Sound();
+
+
+                 
+                 // Show Message Labels - Error SQL Connection
+                if (Check_Sql_server_Connection() == false)
+                {
+                    sql_connection_error_label.Visible = true;
+                    conn_string_tip_label.Visible = true;
+
+                }
+
+
+            }
+
+          
+
+        }
+
+
+
+
+
+
+
+
+        // Check SQL Connection
+        private bool Check_Sql_server_Connection()
+        {
+
+            // Sql Connection String Check
+            DB_Connection_String connection = DB_Connection_String.Get_Connection_String_Instance();
+
+            if(connection.DBConnectionString != "")
+            {
+
+               using (SqlConnection DBconnection = new SqlConnection(connection.DBConnectionString))
+               {
+                   try
+                   {
+                       DBconnection.Open();
+                       return true;
+                   }
+
+                   catch (SqlException)
+                   {
+                       return false;
+                   }
+               
+               }
+
+            }
+
+            else
+            {
+                return false;
             }
 
 
-
         }
+
+
+
+
+
+
+
+
 
 
 
@@ -497,21 +564,26 @@ namespace View_GUI
         //Setting button
         private void settings_button_Click(object sender, EventArgs e)
         {
-             //Show Hide
-            if(settings_myPanel.Visible == false)
+            Show_Settings();
+        }
+
+
+
+
+        // SHow log  In Settings - Main Method
+         private void Show_Settings()
+        {
+            //Show Hide
+            if (settings_myPanel.Visible == false)
             {
                 settings_myPanel.Visible = true;
             }
             else
             {
                 settings_myPanel.Visible = false;
-
+                sql_script_textBox.Visible = false;
             }
-
         }
-
-
-
 
 
 
@@ -669,6 +741,14 @@ namespace View_GUI
 
 
 
+        // Load Log In - Button
+        private void load_log_in_button_Click(object sender, EventArgs e)
+        {
+            Load_Log_In();
+        }
+
+
+
 
 
 
@@ -687,6 +767,10 @@ namespace View_GUI
 
             }
         }
+
+
+
+
 
 
 
@@ -1112,7 +1196,7 @@ namespace View_GUI
 
 
 
-
+         // Save Database Diagram - To Desktop
         private void Save_Db_Diagram()
         {
 
@@ -1134,6 +1218,10 @@ namespace View_GUI
 
 
 
-
+        // Sql Connection Label -- Tip - Click 
+        private void conn_string_tip_label_Click(object sender, EventArgs e)
+        {
+            Show_Settings();
+        }
     }
 }

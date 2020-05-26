@@ -1246,5 +1246,50 @@
   <ItemGroup>
     <None Include="Resources\Advokathuset - Design -Diagram.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh-icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Counterclockwise-arrow-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clockwise-arrow-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Counterclockwise-arrow-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scroll-right-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-right-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transmission-download-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh-icon %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\load log in file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\load log in file - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transmission-download-icon - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Log In 12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Counterclockwise-arrow-icon2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

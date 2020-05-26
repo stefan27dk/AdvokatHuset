@@ -34,12 +34,17 @@
             this.remember_log_in_checkBox = new System.Windows.Forms.CheckBox();
             this.wrong_log_in_label = new System.Windows.Forms.Label();
             this.log_in_holder_panel = new System.Windows.Forms.Panel();
+            this.secret_developer_mode_button = new System.Windows.Forms.Button();
+            this.sql_script_textBox = new System.Windows.Forms.TextBox();
+            this.load_log_in_button = new System.Windows.Forms.Button();
             this.delete_login_file_button = new System.Windows.Forms.Button();
             this.log_in_Clear_all_button = new System.Windows.Forms.Button();
             this.pass_label = new System.Windows.Forms.Label();
             this.log_in_button = new System.Windows.Forms.Button();
             this.name_label = new System.Windows.Forms.Label();
-            this.secret_developer_mode_button = new System.Windows.Forms.Button();
+            this.settings_button = new System.Windows.Forms.Button();
+            this.sql_connection_error_label = new System.Windows.Forms.Label();
+            this.conn_string_tip_label = new System.Windows.Forms.Label();
             this.settings_myPanel = new View_GUI.MyPanel();
             this.sql_diagram_button = new System.Windows.Forms.Button();
             this.SQL_Script_button = new System.Windows.Forms.Button();
@@ -50,8 +55,6 @@
             this.conn_ex2_label = new System.Windows.Forms.Label();
             this.conn_string_textBox = new System.Windows.Forms.TextBox();
             this.connection_string_label = new System.Windows.Forms.Label();
-            this.settings_button = new System.Windows.Forms.Button();
-            this.sql_script_textBox = new System.Windows.Forms.TextBox();
             this.log_in_holder_panel.SuspendLayout();
             this.settings_myPanel.SuspendLayout();
             this.SuspendLayout();
@@ -114,6 +117,9 @@
             // log_in_holder_panel
             // 
             this.log_in_holder_panel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.log_in_holder_panel.Controls.Add(this.conn_string_tip_label);
+            this.log_in_holder_panel.Controls.Add(this.sql_connection_error_label);
+            this.log_in_holder_panel.Controls.Add(this.load_log_in_button);
             this.log_in_holder_panel.Controls.Add(this.delete_login_file_button);
             this.log_in_holder_panel.Controls.Add(this.log_in_Clear_all_button);
             this.log_in_holder_panel.Controls.Add(this.log_pass_textBox);
@@ -126,8 +132,54 @@
             this.log_in_holder_panel.Controls.Add(this.log_in_label);
             this.log_in_holder_panel.Location = new System.Drawing.Point(621, 198);
             this.log_in_holder_panel.Name = "log_in_holder_panel";
-            this.log_in_holder_panel.Size = new System.Drawing.Size(354, 356);
+            this.log_in_holder_panel.Size = new System.Drawing.Size(363, 356);
             this.log_in_holder_panel.TabIndex = 42;
+            // 
+            // secret_developer_mode_button
+            // 
+            this.secret_developer_mode_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.secret_developer_mode_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.secret_developer_mode_button.FlatAppearance.BorderSize = 0;
+            this.secret_developer_mode_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.secret_developer_mode_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
+            this.secret_developer_mode_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.secret_developer_mode_button.Location = new System.Drawing.Point(5, 4);
+            this.secret_developer_mode_button.Name = "secret_developer_mode_button";
+            this.secret_developer_mode_button.Size = new System.Drawing.Size(41, 39);
+            this.secret_developer_mode_button.TabIndex = 44;
+            this.secret_developer_mode_button.UseVisualStyleBackColor = true;
+            this.secret_developer_mode_button.Click += new System.EventHandler(this.secret_developer_mode_button_Click);
+            this.secret_developer_mode_button.MouseEnter += new System.EventHandler(this.secret_developer_mode_button_MouseEnter);
+            this.secret_developer_mode_button.MouseLeave += new System.EventHandler(this.secret_developer_mode_button_MouseLeave);
+            // 
+            // sql_script_textBox
+            // 
+            this.sql_script_textBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.sql_script_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(14)))), ((int)(((byte)(34)))));
+            this.sql_script_textBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sql_script_textBox.Location = new System.Drawing.Point(406, 152);
+            this.sql_script_textBox.Multiline = true;
+            this.sql_script_textBox.Name = "sql_script_textBox";
+            this.sql_script_textBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.sql_script_textBox.Size = new System.Drawing.Size(1103, 528);
+            this.sql_script_textBox.TabIndex = 45;
+            this.sql_script_textBox.Visible = false;
+            // 
+            // load_log_in_button
+            // 
+            this.load_log_in_button.BackgroundImage = global::View_GUI.Properties.Resources.Counterclockwise_arrow_icon2;
+            this.load_log_in_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.load_log_in_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.load_log_in_button.FlatAppearance.BorderSize = 0;
+            this.load_log_in_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.load_log_in_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
+            this.load_log_in_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.load_log_in_button.Location = new System.Drawing.Point(130, 171);
+            this.load_log_in_button.Name = "load_log_in_button";
+            this.load_log_in_button.Size = new System.Drawing.Size(31, 23);
+            this.load_log_in_button.TabIndex = 44;
+            this.load_log_in_button.UseVisualStyleBackColor = true;
+            this.load_log_in_button.Click += new System.EventHandler(this.load_log_in_button_Click);
             // 
             // delete_login_file_button
             // 
@@ -138,7 +190,7 @@
             this.delete_login_file_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
             this.delete_login_file_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
             this.delete_login_file_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.delete_login_file_button.Location = new System.Drawing.Point(191, 246);
+            this.delete_login_file_button.Location = new System.Drawing.Point(188, 246);
             this.delete_login_file_button.Name = "delete_login_file_button";
             this.delete_login_file_button.Size = new System.Drawing.Size(26, 31);
             this.delete_login_file_button.TabIndex = 43;
@@ -155,7 +207,7 @@
             this.log_in_Clear_all_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
             this.log_in_Clear_all_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.log_in_Clear_all_button.ForeColor = System.Drawing.Color.Black;
-            this.log_in_Clear_all_button.Location = new System.Drawing.Point(154, 171);
+            this.log_in_Clear_all_button.Location = new System.Drawing.Point(178, 171);
             this.log_in_Clear_all_button.Name = "log_in_Clear_all_button";
             this.log_in_Clear_all_button.Size = new System.Drawing.Size(28, 23);
             this.log_in_Clear_all_button.TabIndex = 42;
@@ -177,14 +229,14 @@
             // 
             // log_in_button
             // 
-            this.log_in_button.BackgroundImage = global::View_GUI.Properties.Resources.system_log_out_icon;
+            this.log_in_button.BackgroundImage = global::View_GUI.Properties.Resources.Log_In_12;
             this.log_in_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.log_in_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.log_in_button.FlatAppearance.BorderSize = 0;
             this.log_in_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
             this.log_in_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
             this.log_in_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.log_in_button.Location = new System.Drawing.Point(190, 163);
+            this.log_in_button.Location = new System.Drawing.Point(224, 163);
             this.log_in_button.Name = "log_in_button";
             this.log_in_button.Size = new System.Drawing.Size(41, 39);
             this.log_in_button.TabIndex = 40;
@@ -204,22 +256,48 @@
             this.name_label.Text = "Navn:";
             this.name_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // secret_developer_mode_button
+            // settings_button
             // 
-            this.secret_developer_mode_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.secret_developer_mode_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.secret_developer_mode_button.FlatAppearance.BorderSize = 0;
-            this.secret_developer_mode_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.secret_developer_mode_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
-            this.secret_developer_mode_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.secret_developer_mode_button.Location = new System.Drawing.Point(5, 4);
-            this.secret_developer_mode_button.Name = "secret_developer_mode_button";
-            this.secret_developer_mode_button.Size = new System.Drawing.Size(41, 39);
-            this.secret_developer_mode_button.TabIndex = 44;
-            this.secret_developer_mode_button.UseVisualStyleBackColor = true;
-            this.secret_developer_mode_button.Click += new System.EventHandler(this.secret_developer_mode_button_Click);
-            this.secret_developer_mode_button.MouseEnter += new System.EventHandler(this.secret_developer_mode_button_MouseEnter);
-            this.secret_developer_mode_button.MouseLeave += new System.EventHandler(this.secret_developer_mode_button_MouseLeave);
+            this.settings_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.settings_button.BackgroundImage = global::View_GUI.Properties.Resources.Categories_preferences_system_icon;
+            this.settings_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.settings_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.settings_button.FlatAppearance.BorderSize = 0;
+            this.settings_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.settings_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
+            this.settings_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.settings_button.Location = new System.Drawing.Point(1517, 730);
+            this.settings_button.Name = "settings_button";
+            this.settings_button.Size = new System.Drawing.Size(41, 39);
+            this.settings_button.TabIndex = 38;
+            this.settings_button.UseVisualStyleBackColor = true;
+            this.settings_button.Click += new System.EventHandler(this.settings_button_Click);
+            // 
+            // sql_connection_error_label
+            // 
+            this.sql_connection_error_label.AutoSize = true;
+            this.sql_connection_error_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sql_connection_error_label.ForeColor = System.Drawing.Color.Red;
+            this.sql_connection_error_label.Location = new System.Drawing.Point(57, 306);
+            this.sql_connection_error_label.Name = "sql_connection_error_label";
+            this.sql_connection_error_label.Size = new System.Drawing.Size(282, 16);
+            this.sql_connection_error_label.TabIndex = 45;
+            this.sql_connection_error_label.Text = "Der er ikke forbindelse til SQL Serveren";
+            this.sql_connection_error_label.Visible = false;
+            // 
+            // conn_string_tip_label
+            // 
+            this.conn_string_tip_label.AutoSize = true;
+            this.conn_string_tip_label.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.conn_string_tip_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.conn_string_tip_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.conn_string_tip_label.Location = new System.Drawing.Point(74, 329);
+            this.conn_string_tip_label.Name = "conn_string_tip_label";
+            this.conn_string_tip_label.Size = new System.Drawing.Size(240, 13);
+            this.conn_string_tip_label.TabIndex = 46;
+            this.conn_string_tip_label.Text = "Tip: Tjek \"ConnectionString\"  : Tryk Her:";
+            this.conn_string_tip_label.Visible = false;
+            this.conn_string_tip_label.Click += new System.EventHandler(this.conn_string_tip_label_Click);
             // 
             // settings_myPanel
             // 
@@ -359,36 +437,6 @@
             this.connection_string_label.TabIndex = 0;
             this.connection_string_label.Text = "Connection String:";
             // 
-            // settings_button
-            // 
-            this.settings_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.settings_button.BackgroundImage = global::View_GUI.Properties.Resources.Categories_preferences_system_icon;
-            this.settings_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.settings_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.settings_button.FlatAppearance.BorderSize = 0;
-            this.settings_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.settings_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
-            this.settings_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.settings_button.Location = new System.Drawing.Point(1517, 730);
-            this.settings_button.Name = "settings_button";
-            this.settings_button.Size = new System.Drawing.Size(41, 39);
-            this.settings_button.TabIndex = 38;
-            this.settings_button.UseVisualStyleBackColor = true;
-            this.settings_button.Click += new System.EventHandler(this.settings_button_Click);
-            // 
-            // sql_script_textBox
-            // 
-            this.sql_script_textBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.sql_script_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(14)))), ((int)(((byte)(34)))));
-            this.sql_script_textBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.sql_script_textBox.Location = new System.Drawing.Point(406, 152);
-            this.sql_script_textBox.Multiline = true;
-            this.sql_script_textBox.Name = "sql_script_textBox";
-            this.sql_script_textBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.sql_script_textBox.Size = new System.Drawing.Size(1103, 528);
-            this.sql_script_textBox.TabIndex = 45;
-            this.sql_script_textBox.Visible = false;
-            // 
             // Log_In_Form0
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -399,8 +447,8 @@
             this.Controls.Add(this.sql_script_textBox);
             this.Controls.Add(this.secret_developer_mode_button);
             this.Controls.Add(this.settings_myPanel);
-            this.Controls.Add(this.log_in_holder_panel);
             this.Controls.Add(this.settings_button);
+            this.Controls.Add(this.log_in_holder_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Log_In_Form0";
             this.Text = "Log_In_Form0";
@@ -440,5 +488,8 @@
         private System.Windows.Forms.Button SQL_Script_button;
         private System.Windows.Forms.Button sql_diagram_button;
         private System.Windows.Forms.TextBox sql_script_textBox;
+        private System.Windows.Forms.Button load_log_in_button;
+        private System.Windows.Forms.Label conn_string_tip_label;
+        private System.Windows.Forms.Label sql_connection_error_label;
     }
 }
