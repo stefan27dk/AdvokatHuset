@@ -783,6 +783,26 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap back_Rectangle {
+            get {
+                object obj = ResourceManager.GetObject("back_Rectangle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BackCube {
+            get {
+                object obj = ResourceManager.GetObject("BackCube", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Background {
             get {
                 object obj = ResourceManager.GetObject("Background", resourceCulture);
@@ -996,6 +1016,16 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap cash_icon {
             get {
                 object obj = ResourceManager.GetObject("cash-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cash_register_icon {
+            get {
+                object obj = ResourceManager.GetObject("cash-register-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1786,6 +1816,46 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap mmm {
             get {
                 object obj = ResourceManager.GetObject("mmm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Money_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Money-icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Money_icon__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Money-icon (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Money_icon__3_ {
+            get {
+                object obj = ResourceManager.GetObject("Money-icon (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap money_jar_icon {
+            get {
+                object obj = ResourceManager.GetObject("money-jar-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

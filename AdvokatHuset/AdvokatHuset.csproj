@@ -1210,5 +1210,26 @@
   <ItemGroup>
     <None Include="Resources\cash-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackCube.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash-register-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Money-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-jar-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Money-icon %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Money-icon %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back_Rectangle.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
