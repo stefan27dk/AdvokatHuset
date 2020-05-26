@@ -44,6 +44,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Hour_Salary_textBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -52,7 +53,7 @@
             // 
             // indkomst_textBox
             // 
-            this.indkomst_textBox.Location = new System.Drawing.Point(59, 436);
+            this.indkomst_textBox.Location = new System.Drawing.Point(391, 313);
             this.indkomst_textBox.Name = "indkomst_textBox";
             this.indkomst_textBox.Size = new System.Drawing.Size(118, 20);
             this.indkomst_textBox.TabIndex = 0;
@@ -62,7 +63,7 @@
             this.indkomst_label.AutoSize = true;
             this.indkomst_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.indkomst_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(167)))), ((int)(((byte)(84)))));
-            this.indkomst_label.Location = new System.Drawing.Point(82, 413);
+            this.indkomst_label.Location = new System.Drawing.Point(412, 281);
             this.indkomst_label.Name = "indkomst_label";
             this.indkomst_label.Size = new System.Drawing.Size(83, 20);
             this.indkomst_label.TabIndex = 2;
@@ -73,7 +74,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(167)))), ((int)(((byte)(84)))));
-            this.label1.Location = new System.Drawing.Point(42, 557);
+            this.label1.Location = new System.Drawing.Point(214, 279);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(144, 20);
             this.label1.TabIndex = 5;
@@ -81,7 +82,7 @@
             // 
             // Me_salary_textBox
             // 
-            this.Me_salary_textBox.Location = new System.Drawing.Point(56, 580);
+            this.Me_salary_textBox.Location = new System.Drawing.Point(227, 313);
             this.Me_salary_textBox.Name = "Me_salary_textBox";
             this.Me_salary_textBox.Size = new System.Drawing.Size(118, 20);
             this.Me_salary_textBox.TabIndex = 3;
@@ -91,7 +92,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(167)))), ((int)(((byte)(84)))));
-            this.label2.Location = new System.Drawing.Point(51, 695);
+            this.label2.Location = new System.Drawing.Point(40, 281);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(120, 20);
             this.label2.TabIndex = 8;
@@ -99,25 +100,27 @@
             // 
             // fees_textBox
             // 
-            this.fees_textBox.Location = new System.Drawing.Point(52, 718);
+            this.fees_textBox.Location = new System.Drawing.Point(44, 313);
             this.fees_textBox.Name = "fees_textBox";
             this.fees_textBox.Size = new System.Drawing.Size(118, 20);
             this.fees_textBox.TabIndex = 6;
             // 
             // statistics_From_dateTimePicker
             // 
-            this.statistics_From_dateTimePicker.Location = new System.Drawing.Point(12, 106);
+            this.statistics_From_dateTimePicker.Location = new System.Drawing.Point(12, 89);
             this.statistics_From_dateTimePicker.Name = "statistics_From_dateTimePicker";
             this.statistics_From_dateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.statistics_From_dateTimePicker.TabIndex = 9;
+            this.statistics_From_dateTimePicker.ValueChanged += new System.EventHandler(this.statistics_From_dateTimePicker_ValueChanged);
             this.statistics_From_dateTimePicker.Enter += new System.EventHandler(this.statistics_From_dateTimePicker_Enter);
             // 
             // statistics_To_dateTimePicker
             // 
-            this.statistics_To_dateTimePicker.Location = new System.Drawing.Point(12, 162);
+            this.statistics_To_dateTimePicker.Location = new System.Drawing.Point(12, 145);
             this.statistics_To_dateTimePicker.Name = "statistics_To_dateTimePicker";
             this.statistics_To_dateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.statistics_To_dateTimePicker.TabIndex = 10;
+            this.statistics_To_dateTimePicker.ValueChanged += new System.EventHandler(this.statistics_To_dateTimePicker_ValueChanged);
             this.statistics_To_dateTimePicker.Enter += new System.EventHandler(this.statistics_To_dateTimePicker_Enter);
             // 
             // label3
@@ -125,7 +128,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.Color.Lime;
-            this.label3.Location = new System.Drawing.Point(11, 83);
+            this.label3.Location = new System.Drawing.Point(11, 66);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 20);
             this.label3.TabIndex = 11;
@@ -136,7 +139,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.ForeColor = System.Drawing.Color.Cyan;
-            this.label4.Location = new System.Drawing.Point(8, 139);
+            this.label4.Location = new System.Drawing.Point(8, 122);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(32, 20);
             this.label4.TabIndex = 12;
@@ -147,7 +150,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(167)))), ((int)(((byte)(84)))));
-            this.label5.Location = new System.Drawing.Point(79, 270);
+            this.label5.Location = new System.Drawing.Point(581, 281);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(84, 20);
             this.label5.TabIndex = 15;
@@ -155,7 +158,7 @@
             // 
             // profit_textBox
             // 
-            this.profit_textBox.Location = new System.Drawing.Point(62, 293);
+            this.profit_textBox.Location = new System.Drawing.Point(563, 313);
             this.profit_textBox.Name = "profit_textBox";
             this.profit_textBox.Size = new System.Drawing.Size(118, 20);
             this.profit_textBox.TabIndex = 13;
@@ -163,7 +166,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::View_GUI.Properties.Resources.cash_icon;
-            this.pictureBox4.Location = new System.Drawing.Point(92, 213);
+            this.pictureBox4.Location = new System.Drawing.Point(594, 227);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(60, 54);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -173,7 +176,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::View_GUI.Properties.Resources.Dollar_USD_icon;
-            this.pictureBox3.Location = new System.Drawing.Point(76, 645);
+            this.pictureBox3.Location = new System.Drawing.Point(65, 231);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(76, 47);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -183,7 +186,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::View_GUI.Properties.Resources.coin_us_dollar_icon124;
-            this.pictureBox2.Location = new System.Drawing.Point(83, 509);
+            this.pictureBox2.Location = new System.Drawing.Point(255, 231);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(75, 45);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -193,12 +196,19 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::View_GUI.Properties.Resources.Untitled;
-            this.pictureBox1.Location = new System.Drawing.Point(79, 359);
+            this.pictureBox1.Location = new System.Drawing.Point(409, 227);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(82, 51);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            // 
+            // Hour_Salary_textBox
+            // 
+            this.Hour_Salary_textBox.Location = new System.Drawing.Point(227, 349);
+            this.Hour_Salary_textBox.Name = "Hour_Salary_textBox";
+            this.Hour_Salary_textBox.Size = new System.Drawing.Size(118, 20);
+            this.Hour_Salary_textBox.TabIndex = 16;
             // 
             // Statistics_Form14
             // 
@@ -206,6 +216,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(50)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(990, 754);
+            this.Controls.Add(this.Hour_Salary_textBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.profit_textBox);
@@ -252,5 +263,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.TextBox profit_textBox;
+        private System.Windows.Forms.TextBox Hour_Salary_textBox;
     }
 }

@@ -11,17 +11,33 @@ namespace Domain
     class Statistics_Facade
     {
 
-        string Data_Query = "Select ((Select SUM(Y.Ydelse_Pris) From Tid As T Inner Join Ydelse As Y On T.Ydelse_Nr = Y.Ydelse_Nr Inner Join Sag AS S ON T.Sag_ID = S.Sag_ID Where Y.Ydelse_Type = 'Fast Pris' AND S.Sag_Afslutet = '1') + (Select SUM(T.Tid * Y.Ydelse_Pris) From Tid As T Inner Join Ydelse As Y On T.Ydelse_Nr = Y.Ydelse_Nr Inner Join Sag AS S ON T.Sag_ID = S.Sag_ID Where Y.Ydelse_Type = 'Time' AND S.Sag_Afslutet = '1'));
-";
+        //string Time_From { get; set; }
+        //string Time_To { get; set; }
+
+        //string Data_Query = $"Select ((Select SUM(Y.Ydelse_Pris) From Tid As T Inner Join Ydelse As Y On T.Ydelse_Nr = Y.Ydelse_Nr Inner Join Sag AS S ON T.Sag_ID = S.Sag_ID Where (Y.Ydelse_Type = 'Fast Pris' AND S.Sag_Afslutet = '1') AND S.Sag_Slut_Dato BETWEEN '{Time_From}' AND '{Time_To}' ) + (Select SUM(T.Tid * Y.Ydelse_Pris) From Tid As T Inner Join Ydelse As Y On T.Ydelse_Nr = Y.Ydelse_Nr Inner Join Sag AS S ON T.Sag_ID = S.Sag_ID Where (Y.Ydelse_Type = 'Time' AND S.Sag_Afslutet = '1') AND S.Sag_Slut_Dato BETWEEN '{Time_From}' AND '{Time_To}' ));";
+        //string Me_Time = Select SUM(T.Tid) From Tid As T Where T.Tid_Dato BETWEEN '22-05-2020' AND '22-05-2020';
+
 
         // Classes
         private DB_Loader Load_Data;
 
 
         // Resources
-        private TextBox Indkomst;
-        private TextBox Me_salary;
-        private TextBox Profit;
+        public TextBox Indkomst { get; set; }
+        public TextBox Me_salary_Time { get; set; }
+        public TextBox Me_Total_Salary { get; set; } = new TextBox();
+        public decimal Hour_salary { get; set; } = 200;
+        public decimal Fees { get; set; } = 0;
+        public TextBox Profit { get; set; }
+
+
+
+        // Querys
+        public string Me_Salary_Query { get; set; }
+        public string Indkomst_Query { get; set; }
+
+
+
 
         public Statistics_Facade()
         {
@@ -32,12 +48,56 @@ namespace Domain
 
 
 
-        // Get Data
-        private void Get_Statistics_Data_From_DB(string  Query)
+
+        // Get Statistics - MAIN
+        public void Get_Statistics()
         {
-            Load_Data.PopulateTextbox(Data_Query, );
+            Get_Inkomst_Data_From_DB(); // Get Inkomst
+            Get_Me_Salary(); // Get Me_Salary
+            Calculate_Profit(); // Calculating
+        }
+
+
+
+
+
+
+
+        // Get Data - Inkomst
+        private void Get_Inkomst_Data_From_DB()
+        {
+            Indkomst =  Load_Data.PopulateTextbox(Indkomst_Query, Indkomst);
+        }
+
+
+
+
+
+        // Me_Salary - "Løn"
+        private void Get_Me_Salary()
+        {
+            Me_salary_Time = Load_Data.PopulateTextbox(Me_Salary_Query, Me_salary_Time);
 
         }
+
+
+
+
+
+        // Calculate Profit
+        private void Calculate_Profit()
+        {
+            if(Me_salary_Time.Text.Length > 0 && Indkomst.Text.Length > 0)
+            {
+              Me_Total_Salary.Text = (decimal.Parse(Me_salary_Time.Text) * Hour_salary).ToString();
+              Profit.Text = (decimal.Parse(Indkomst.Text) - (decimal.Parse(Me_Total_Salary.Text) + Fees)).ToString();
+            }
+
+        }
+
+
+
+
 
 
     }
