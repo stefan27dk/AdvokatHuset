@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using System.Diagnostics;
 
 namespace View_GUI
 {
@@ -659,8 +660,480 @@ namespace View_GUI
 
         }
 
-      
+
         //-Secret Button-------------------::END::-----------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+        // Show Sql Script Textbox
+        private void SQL_Script_button_Click(object sender, EventArgs e)
+        {
+            Load_SQL_script(); // Load Script
+
+            if(sql_script_textBox.Visible == false)
+            {
+                sql_script_textBox.Visible = true;
+            }
+            else
+            {
+                sql_script_textBox.Visible = false;
+
+            }
+        }
+
+
+
+
+        // Load - Sql Script to textbox
+        private void Load_SQL_script()
+        {
+            sql_script_textBox.Text = "----This is Empty---Database - Advokathuset" + Environment.NewLine + 
+"" + Environment.NewLine +
+"USE [master]" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"/****** Object:  Database [Advokathuset]    Script Date: 26-05-2020 23:30:49 ******/" + Environment.NewLine +
+"CREATE DATABASE [Advokathuset]" + Environment.NewLine +
+" " + Environment.NewLine +
+"GO" + Environment.NewLine +
+"USE [Advokathuset]" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"/****** Object:  User [abc]    Script Date: 26-05-2020 23:30:49 ******/" + Environment.NewLine +
+"CREATE USER [abc] FOR LOGIN [abc] WITH DEFAULT_SCHEMA=[dbo]-----------------------LOG IN----------- Showld be allowed in the SQL Managment Studio Settings in order to use" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"/****** Object:  Table [dbo].[Adv_Arbejds_Ydelser]    Script Date: 26-05-2020 23:30:50 ******/" + Environment.NewLine +
+"SET ANSI_NULLS ON" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"SET QUOTED_IDENTIFIER ON" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"CREATE TABLE [dbo].[Adv_Arbejds_Ydelser](" + Environment.NewLine +
+"\t[Ydelse_Nr] [int] NOT NULL," + Environment.NewLine +
+"\t[Adv_ID] [uniqueidentifier] NOT NULL," + Environment.NewLine +
+" CONSTRAINT [PK_Adv_Arbejds_Ydelser] PRIMARY KEY CLUSTERED " + Environment.NewLine +
+"(" + Environment.NewLine +
+"\t[Ydelse_Nr] ASC," + Environment.NewLine +
+"\t[Adv_ID] ASC" + Environment.NewLine +
+")WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]" + Environment.NewLine +
+") ON [PRIMARY]" + Environment.NewLine +
+"" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"/****** Object:  Table [dbo].[Advokat_Uddannelser]    Script Date: 26-05-2020 23:30:50 ******/" + Environment.NewLine +
+"SET ANSI_NULLS ON" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"SET QUOTED_IDENTIFIER ON" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"CREATE TABLE [dbo].[Advokat_Uddannelser](" + Environment.NewLine +
+"\t[Advokat_Uddanelse] [nvarchar](30) NOT NULL," + Environment.NewLine +
+"\t[Me_ID] [uniqueidentifier] NOT NULL," + Environment.NewLine +
+" CONSTRAINT [PK_Advokat_Uddannelser_1] PRIMARY KEY CLUSTERED " + Environment.NewLine +
+"(" + Environment.NewLine +
+"\t[Advokat_Uddanelse] ASC," + Environment.NewLine +
+"\t[Me_ID] ASC" + Environment.NewLine +
+")WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]" + Environment.NewLine +
+") ON [PRIMARY]" + Environment.NewLine +
+"" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"/****** Object:  Table [dbo].[Kørsel]    Script Date: 26-05-2020 23:30:50 ******/" + Environment.NewLine +
+"SET ANSI_NULLS ON" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"SET QUOTED_IDENTIFIER ON" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"CREATE TABLE [dbo].[Kørsel](" + Environment.NewLine +
+"\t[Kørsel_Tid] [decimal](18, 4) NOT NULL," + Environment.NewLine +
+"\t[Kørsel_Dato] [nvarchar](50) NOT NULL," + Environment.NewLine +
+"\t[Kørsel_Notering] [nvarchar](70) NULL," + Environment.NewLine +
+"\t[Kørsel_ID] [uniqueidentifier] NOT NULL," + Environment.NewLine +
+"\t[Sag_ID] [uniqueidentifier] NOT NULL," + Environment.NewLine +
+"\t[Advokat_ID] [uniqueidentifier] NOT NULL," + Environment.NewLine +
+" CONSTRAINT [PK_Kørsel] PRIMARY KEY CLUSTERED " + Environment.NewLine +
+"(" + Environment.NewLine +
+"\t[Kørsel_ID] ASC" + Environment.NewLine +
+")WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]" + Environment.NewLine +
+") ON [PRIMARY]" + Environment.NewLine +
+"" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"/****** Object:  Table [dbo].[Kunde]    Script Date: 26-05-2020 23:30:50 ******/" + Environment.NewLine +
+"SET ANSI_NULLS ON" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"SET QUOTED_IDENTIFIER ON" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"CREATE TABLE [dbo].[Kunde](" + Environment.NewLine +
+"\t[Kunde_Fornavn] [nvarchar](50) NOT NULL," + Environment.NewLine +
+"\t[Kunde_Efternavn] [nvarchar](50) NOT NULL," + Environment.NewLine +
+"\t[Kunde_PostNr] [int] NOT NULL," + Environment.NewLine +
+"\t[Kunde_Adresse] [nvarchar](50) NOT NULL," + Environment.NewLine +
+"\t[Kunde_ID] [uniqueidentifier] NOT NULL," + Environment.NewLine +
+"\t[Kunde_Email] [nvarchar](50) NULL," + Environment.NewLine +
+"\t[Kunde_Oprets_Dato] [nvarchar](25) NULL," + Environment.NewLine +
+" CONSTRAINT [PK_Kunde_1] PRIMARY KEY CLUSTERED " + Environment.NewLine +
+"(" + Environment.NewLine +
+"\t[Kunde_ID] ASC" + Environment.NewLine +
+")WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]" + Environment.NewLine +
+") ON [PRIMARY]" + Environment.NewLine +
+"" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"/****** Object:  Table [dbo].[Kunde_Tlf]    Script Date: 26-05-2020 23:30:50 ******/" + Environment.NewLine +
+"SET ANSI_NULLS ON" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"SET QUOTED_IDENTIFIER ON" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"CREATE TABLE [dbo].[Kunde_Tlf](" + Environment.NewLine +
+"\t[Kunde_Tlf] [int] NOT NULL," + Environment.NewLine +
+"\t[Kunde_ID] [uniqueidentifier] NOT NULL," + Environment.NewLine +
+" CONSTRAINT [PK_Kunde_Tlf] PRIMARY KEY CLUSTERED " + Environment.NewLine +
+"(" + Environment.NewLine +
+"\t[Kunde_Tlf] ASC," + Environment.NewLine +
+"\t[Kunde_ID] ASC" + Environment.NewLine +
+")WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]" + Environment.NewLine +
+") ON [PRIMARY]" + Environment.NewLine +
+"" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"/****** Object:  Table [dbo].[Log_In]    Script Date: 26-05-2020 23:30:50 ******/" + Environment.NewLine +
+"SET ANSI_NULLS ON" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"SET QUOTED_IDENTIFIER ON" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"CREATE TABLE [dbo].[Log_In](" + Environment.NewLine +
+"\t[Me_ID] [uniqueidentifier] NOT NULL," + Environment.NewLine +
+"\t[Log_In_Navn] [nvarchar](20) NOT NULL," + Environment.NewLine +
+"\t[Log_In_Pass] [nvarchar](20) NOT NULL," + Environment.NewLine +
+" CONSTRAINT [IX_Log_In] UNIQUE NONCLUSTERED " + Environment.NewLine +
+"(" + Environment.NewLine +
+"\t[Log_In_Navn] ASC" + Environment.NewLine +
+")WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]," + Environment.NewLine +
+" CONSTRAINT [IX_Log_In_1] UNIQUE NONCLUSTERED " + Environment.NewLine +
+"(" + Environment.NewLine +
+"\t[Me_ID] ASC" + Environment.NewLine +
+")WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]" + Environment.NewLine +
+") ON [PRIMARY]" + Environment.NewLine +
+"" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"/****** Object:  Table [dbo].[Medarbejder]    Script Date: 26-05-2020 23:30:50 ******/" + Environment.NewLine +
+"SET ANSI_NULLS ON" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"SET QUOTED_IDENTIFIER ON" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"CREATE TABLE [dbo].[Medarbejder](" + Environment.NewLine +
+"\t[Me_Fornavn] [nvarchar](50) NOT NULL," + Environment.NewLine +
+"\t[Me_Efternavn] [nvarchar](50) NOT NULL," + Environment.NewLine +
+"\t[Me_PostNr] [int] NOT NULL," + Environment.NewLine +
+"\t[Me_Adresse] [nvarchar](50) NOT NULL," + Environment.NewLine +
+"\t[Me_ID] [uniqueidentifier] NOT NULL," + Environment.NewLine +
+"\t[Me_Type] [nvarchar](20) NOT NULL," + Environment.NewLine +
+"\t[Me_Email] [nvarchar](50) NULL," + Environment.NewLine +
+"\t[Me_Oprets_Dato] [nvarchar](25) NULL," + Environment.NewLine +
+" CONSTRAINT [PK_Medarbejder_1] PRIMARY KEY CLUSTERED " + Environment.NewLine +
+"(" + Environment.NewLine +
+"\t[Me_ID] ASC" + Environment.NewLine +
+")WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]," + Environment.NewLine +
+" CONSTRAINT [IX_Medarbejder] UNIQUE NONCLUSTERED " + Environment.NewLine +
+"(" + Environment.NewLine +
+"\t[Me_Fornavn] ASC" + Environment.NewLine +
+")WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]" + Environment.NewLine +
+") ON [PRIMARY]" + Environment.NewLine +
+"" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"/****** Object:  Table [dbo].[Medarbejder_Tlf]    Script Date: 26-05-2020 23:30:50 ******/" + Environment.NewLine +
+"SET ANSI_NULLS ON" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"SET QUOTED_IDENTIFIER ON" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"CREATE TABLE [dbo].[Medarbejder_Tlf](" + Environment.NewLine +
+"\t[Me_Tlf] [int] NOT NULL," + Environment.NewLine +
+"\t[Me_ID] [uniqueidentifier] NOT NULL," + Environment.NewLine +
+" CONSTRAINT [PK_Medarbejder_Tlf] PRIMARY KEY CLUSTERED " + Environment.NewLine +
+"(" + Environment.NewLine +
+"\t[Me_Tlf] ASC," + Environment.NewLine +
+"\t[Me_ID] ASC" + Environment.NewLine +
+")WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]" + Environment.NewLine +
+") ON [PRIMARY]" + Environment.NewLine +
+"" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"/****** Object:  Table [dbo].[Medarbejder_Type]    Script Date: 26-05-2020 23:30:50 ******/" + Environment.NewLine +
+"SET ANSI_NULLS ON" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"SET QUOTED_IDENTIFIER ON" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"CREATE TABLE [dbo].[Medarbejder_Type](" + Environment.NewLine +
+"\t[Me_Type] [nvarchar](20) NOT NULL," + Environment.NewLine +
+" CONSTRAINT [PK_Medarbejder_Type] PRIMARY KEY CLUSTERED " + Environment.NewLine +
+"(" + Environment.NewLine +
+"\t[Me_Type] ASC" + Environment.NewLine +
+")WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]" + Environment.NewLine +
+") ON [PRIMARY]" + Environment.NewLine +
+"" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"/****** Object:  Table [dbo].[Post]    Script Date: 26-05-2020 23:30:50 ******/" + Environment.NewLine +
+"SET ANSI_NULLS ON" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"SET QUOTED_IDENTIFIER ON" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"CREATE TABLE [dbo].[Post](" + Environment.NewLine +
+"\t[PostNr] [int] NOT NULL," + Environment.NewLine +
+"\t[Distrikt] [nvarchar](50) NULL," + Environment.NewLine +
+" CONSTRAINT [PK_Post] PRIMARY KEY CLUSTERED " + Environment.NewLine +
+"(" + Environment.NewLine +
+"\t[PostNr] ASC" + Environment.NewLine +
+")WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]" + Environment.NewLine +
+") ON [PRIMARY]" + Environment.NewLine +
+"" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"/****** Object:  Table [dbo].[Sag]    Script Date: 26-05-2020 23:30:50 ******/" + Environment.NewLine +
+"SET ANSI_NULLS ON" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"SET QUOTED_IDENTIFIER ON" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"CREATE TABLE [dbo].[Sag](" + Environment.NewLine +
+"\t[Sag_Oprets_Dato] [nvarchar](25) NOT NULL," + Environment.NewLine +
+"\t[Sag_Slut_Dato] [nvarchar](15) NULL," + Environment.NewLine +
+"\t[Sag_Type] [nvarchar](15) NOT NULL," + Environment.NewLine +
+"\t[Sag_Afslutet] [bit] NOT NULL," + Environment.NewLine +
+"\t[Sag_ID] [uniqueidentifier] NOT NULL," + Environment.NewLine +
+"\t[Sag_Kunde_ID] [uniqueidentifier] NOT NULL," + Environment.NewLine +
+"\t[Sag_Advokat_ID] [uniqueidentifier] NOT NULL," + Environment.NewLine +
+" CONSTRAINT [PK_Sag_1] PRIMARY KEY CLUSTERED " + Environment.NewLine +
+"(" + Environment.NewLine +
+"\t[Sag_ID] ASC" + Environment.NewLine +
+")WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]" + Environment.NewLine +
+") ON [PRIMARY]" + Environment.NewLine +
+"" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"/****** Object:  Table [dbo].[Sag_Ydelser]    Script Date: 26-05-2020 23:30:50 ******/" + Environment.NewLine +
+"SET ANSI_NULLS ON" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"SET QUOTED_IDENTIFIER ON" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"CREATE TABLE [dbo].[Sag_Ydelser](" + Environment.NewLine +
+"\t[Sag_Ydelse_Oprets_Dato] [nvarchar](25) NOT NULL," + Environment.NewLine +
+"\t[Sag_ID] [uniqueidentifier] NOT NULL," + Environment.NewLine +
+"\t[Ydelse_Nr] [uniqueidentifier] NOT NULL," + Environment.NewLine +
+" CONSTRAINT [PK_Sag_Ydelser] PRIMARY KEY CLUSTERED " + Environment.NewLine +
+"(" + Environment.NewLine +
+"\t[Sag_ID] ASC," + Environment.NewLine +
+"\t[Ydelse_Nr] ASC" + Environment.NewLine +
+")WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]" + Environment.NewLine +
+") ON [PRIMARY]" + Environment.NewLine +
+"" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"/****** Object:  Table [dbo].[Tid]    Script Date: 26-05-2020 23:30:50 ******/" + Environment.NewLine +
+"SET ANSI_NULLS ON" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"SET QUOTED_IDENTIFIER ON" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"CREATE TABLE [dbo].[Tid](" + Environment.NewLine +
+"\t[Tid] [decimal](18, 4) NOT NULL," + Environment.NewLine +
+"\t[Tid_Dato] [nvarchar](25) NOT NULL," + Environment.NewLine +
+"\t[Tid_ID] [uniqueidentifier] NOT NULL," + Environment.NewLine +
+"\t[Sag_ID] [uniqueidentifier] NOT NULL," + Environment.NewLine +
+"\t[Ydelse_Nr] [uniqueidentifier] NOT NULL," + Environment.NewLine +
+"\t[Advokat_ID] [uniqueidentifier] NOT NULL," + Environment.NewLine +
+" CONSTRAINT [PK_Tid] PRIMARY KEY CLUSTERED " + Environment.NewLine +
+"(" + Environment.NewLine +
+"\t[Tid_ID] ASC" + Environment.NewLine +
+")WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]" + Environment.NewLine +
+") ON [PRIMARY]" + Environment.NewLine +
+"" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"/****** Object:  Table [dbo].[Type_Ydelse]    Script Date: 26-05-2020 23:30:50 ******/" + Environment.NewLine +
+"SET ANSI_NULLS ON" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"SET QUOTED_IDENTIFIER ON" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"CREATE TABLE [dbo].[Type_Ydelse](" + Environment.NewLine +
+"\t[Ydelse_Type] [nvarchar](10) NOT NULL," + Environment.NewLine +
+" CONSTRAINT [PK_Type_Ydelse] PRIMARY KEY CLUSTERED " + Environment.NewLine +
+"(" + Environment.NewLine +
+"\t[Ydelse_Type] ASC" + Environment.NewLine +
+")WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]" + Environment.NewLine +
+") ON [PRIMARY]" + Environment.NewLine +
+"" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"/****** Object:  Table [dbo].[Uddannelser]    Script Date: 26-05-2020 23:30:50 ******/" + Environment.NewLine +
+"SET ANSI_NULLS ON" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"SET QUOTED_IDENTIFIER ON" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"CREATE TABLE [dbo].[Uddannelser](" + Environment.NewLine +
+"\t[Advokat_Uddanelse] [nvarchar](30) NOT NULL," + Environment.NewLine +
+" CONSTRAINT [PK_Advokat_Udanelser] PRIMARY KEY CLUSTERED " + Environment.NewLine +
+"(" + Environment.NewLine +
+"\t[Advokat_Uddanelse] ASC" + Environment.NewLine +
+")WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]" + Environment.NewLine +
+") ON [PRIMARY]" + Environment.NewLine +
+"" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"/****** Object:  Table [dbo].[Ydelse]    Script Date: 26-05-2020 23:30:50 ******/" + Environment.NewLine +
+"SET ANSI_NULLS ON" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"SET QUOTED_IDENTIFIER ON" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"CREATE TABLE [dbo].[Ydelse](" + Environment.NewLine +
+"\t[Ydelse_Navn] [nvarchar](25) NOT NULL," + Environment.NewLine +
+"\t[Ydelse_Pris] [decimal](18, 4) NOT NULL," + Environment.NewLine +
+"\t[Ydelse_Type] [nvarchar](10) NOT NULL," + Environment.NewLine +
+"\t[Ydelse_Art] [nvarchar](20) NOT NULL," + Environment.NewLine +
+"\t[Ydelse_Nr] [uniqueidentifier] NOT NULL," + Environment.NewLine +
+"\t[Ydelse_Oprets_Dato] [nvarchar](25) NULL," + Environment.NewLine +
+" CONSTRAINT [PK_Ydelse] PRIMARY KEY CLUSTERED " + Environment.NewLine +
+"(" + Environment.NewLine +
+"\t[Ydelse_Nr] ASC" + Environment.NewLine +
+")WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]," + Environment.NewLine +
+" CONSTRAINT [IX_Ydelse] UNIQUE NONCLUSTERED " + Environment.NewLine +
+"(" + Environment.NewLine +
+"\t[Ydelse_Navn] ASC" + Environment.NewLine +
+")WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]" + Environment.NewLine +
+") ON [PRIMARY]" + Environment.NewLine +
+"" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER TABLE [dbo].[Adv_Arbejds_Ydelser]  WITH CHECK ADD  CONSTRAINT [FK_Adv_Arbejds_Ydelser_Medarbejder] FOREIGN KEY([Adv_ID])" + Environment.NewLine +
+"REFERENCES [dbo].[Medarbejder] ([Me_ID])" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER TABLE [dbo].[Adv_Arbejds_Ydelser] CHECK CONSTRAINT [FK_Adv_Arbejds_Ydelser_Medarbejder]" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER TABLE [dbo].[Advokat_Uddannelser]  WITH CHECK ADD  CONSTRAINT [FK_Advokat_Advokat_Udanelser] FOREIGN KEY([Advokat_Uddanelse])" + Environment.NewLine +
+"REFERENCES [dbo].[Uddannelser] ([Advokat_Uddanelse])" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER TABLE [dbo].[Advokat_Uddannelser] CHECK CONSTRAINT [FK_Advokat_Advokat_Udanelser]" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER TABLE [dbo].[Advokat_Uddannelser]  WITH CHECK ADD  CONSTRAINT [FK_Advokat_Uddannelser_Medarbejder] FOREIGN KEY([Me_ID])" + Environment.NewLine +
+"REFERENCES [dbo].[Medarbejder] ([Me_ID])" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER TABLE [dbo].[Advokat_Uddannelser] CHECK CONSTRAINT [FK_Advokat_Uddannelser_Medarbejder]" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER TABLE [dbo].[Kørsel]  WITH CHECK ADD  CONSTRAINT [FK_Kørsel_Medarbejder] FOREIGN KEY([Advokat_ID])" + Environment.NewLine +
+"REFERENCES [dbo].[Medarbejder] ([Me_ID])" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER TABLE [dbo].[Kørsel] CHECK CONSTRAINT [FK_Kørsel_Medarbejder]" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER TABLE [dbo].[Kørsel]  WITH CHECK ADD  CONSTRAINT [FK_Kørsel_Sag1] FOREIGN KEY([Sag_ID])" + Environment.NewLine +
+"REFERENCES [dbo].[Sag] ([Sag_ID])" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER TABLE [dbo].[Kørsel] CHECK CONSTRAINT [FK_Kørsel_Sag1]" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER TABLE [dbo].[Kunde]  WITH CHECK ADD  CONSTRAINT [FK_Kunde_Post] FOREIGN KEY([Kunde_PostNr])" + Environment.NewLine +
+"REFERENCES [dbo].[Post] ([PostNr])" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER TABLE [dbo].[Kunde] CHECK CONSTRAINT [FK_Kunde_Post]" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER TABLE [dbo].[Kunde_Tlf]  WITH CHECK ADD  CONSTRAINT [FK_Kunde_Tlf_Kunde1] FOREIGN KEY([Kunde_ID])" + Environment.NewLine +
+"REFERENCES [dbo].[Kunde] ([Kunde_ID])" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER TABLE [dbo].[Kunde_Tlf] CHECK CONSTRAINT [FK_Kunde_Tlf_Kunde1]" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER TABLE [dbo].[Log_In]  WITH CHECK ADD  CONSTRAINT [FK_Log_In_Medarbejder] FOREIGN KEY([Me_ID])" + Environment.NewLine +
+"REFERENCES [dbo].[Medarbejder] ([Me_ID])" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER TABLE [dbo].[Log_In] CHECK CONSTRAINT [FK_Log_In_Medarbejder]" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER TABLE [dbo].[Medarbejder]  WITH CHECK ADD  CONSTRAINT [FK_Medarbejder_Medarbejder_Type] FOREIGN KEY([Me_Type])" + Environment.NewLine +
+"REFERENCES [dbo].[Medarbejder_Type] ([Me_Type])" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER TABLE [dbo].[Medarbejder] CHECK CONSTRAINT [FK_Medarbejder_Medarbejder_Type]" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER TABLE [dbo].[Medarbejder]  WITH CHECK ADD  CONSTRAINT [FK_Medarbejder_Post] FOREIGN KEY([Me_PostNr])" + Environment.NewLine +
+"REFERENCES [dbo].[Post] ([PostNr])" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER TABLE [dbo].[Medarbejder] CHECK CONSTRAINT [FK_Medarbejder_Post]" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER TABLE [dbo].[Medarbejder_Tlf]  WITH CHECK ADD  CONSTRAINT [FK_Medarbejder_Tlf_Medarbejder1] FOREIGN KEY([Me_ID])" + Environment.NewLine +
+"REFERENCES [dbo].[Medarbejder] ([Me_ID])" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER TABLE [dbo].[Medarbejder_Tlf] CHECK CONSTRAINT [FK_Medarbejder_Tlf_Medarbejder1]" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER TABLE [dbo].[Sag]  WITH CHECK ADD  CONSTRAINT [FK_Sag_Kunde] FOREIGN KEY([Sag_Kunde_ID])" + Environment.NewLine +
+"REFERENCES [dbo].[Kunde] ([Kunde_ID])" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER TABLE [dbo].[Sag] CHECK CONSTRAINT [FK_Sag_Kunde]" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER TABLE [dbo].[Sag]  WITH CHECK ADD  CONSTRAINT [FK_Sag_Medarbejder] FOREIGN KEY([Sag_Advokat_ID])" + Environment.NewLine +
+"REFERENCES [dbo].[Medarbejder] ([Me_ID])" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER TABLE [dbo].[Sag] CHECK CONSTRAINT [FK_Sag_Medarbejder]" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER TABLE [dbo].[Sag_Ydelser]  WITH CHECK ADD  CONSTRAINT [FK_Sag_Ydelser_Sag1] FOREIGN KEY([Sag_ID])" + Environment.NewLine +
+"REFERENCES [dbo].[Sag] ([Sag_ID])" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER TABLE [dbo].[Sag_Ydelser] CHECK CONSTRAINT [FK_Sag_Ydelser_Sag1]" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER TABLE [dbo].[Sag_Ydelser]  WITH CHECK ADD  CONSTRAINT [FK_Sag_Ydelser_Ydelse] FOREIGN KEY([Ydelse_Nr])" + Environment.NewLine +
+"REFERENCES [dbo].[Ydelse] ([Ydelse_Nr])" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER TABLE [dbo].[Sag_Ydelser] CHECK CONSTRAINT [FK_Sag_Ydelser_Ydelse]" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER TABLE [dbo].[Tid]  WITH CHECK ADD  CONSTRAINT [FK_Tid_Medarbejder] FOREIGN KEY([Advokat_ID])" + Environment.NewLine +
+"REFERENCES [dbo].[Medarbejder] ([Me_ID])" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER TABLE [dbo].[Tid] CHECK CONSTRAINT [FK_Tid_Medarbejder]" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER TABLE [dbo].[Tid]  WITH CHECK ADD  CONSTRAINT [FK_Tid_Sag_Ydelser] FOREIGN KEY([Sag_ID], [Ydelse_Nr])" + Environment.NewLine +
+"REFERENCES [dbo].[Sag_Ydelser] ([Sag_ID], [Ydelse_Nr])" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER TABLE [dbo].[Tid] CHECK CONSTRAINT [FK_Tid_Sag_Ydelser]" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER TABLE [dbo].[Tid]  WITH CHECK ADD  CONSTRAINT [FK_Tid_Sag1] FOREIGN KEY([Sag_ID])" + Environment.NewLine +
+"REFERENCES [dbo].[Sag] ([Sag_ID])" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER TABLE [dbo].[Tid] CHECK CONSTRAINT [FK_Tid_Sag1]" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER TABLE [dbo].[Ydelse]  WITH CHECK ADD  CONSTRAINT [FK_Ydelse_Type_Ydelse] FOREIGN KEY([Ydelse_Type])" + Environment.NewLine +
+"REFERENCES [dbo].[Type_Ydelse] ([Ydelse_Type])" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER TABLE [dbo].[Ydelse] CHECK CONSTRAINT [FK_Ydelse_Type_Ydelse]" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"USE [master]" + Environment.NewLine +
+"GO" + Environment.NewLine +
+"ALTER DATABASE [Advokathuset] SET  READ_WRITE " + Environment.NewLine +
+"GO" ;
+        }
+
+
+
+
+
+
+
+
+        // Sql Diagram Button
+        private void sql_diagram_button_Click(object sender, EventArgs e)
+        {
+            Save_Db_Diagram();
+        }
+
+
+
+
+
+
+
+
+
+        private void Save_Db_Diagram()
+        {
+
+            string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
+            desktopPath += "\\";
+
+            // Bitmap
+            Bitmap bitmapScreenshot = Properties.Resources.Advokathuset___Design__Diagram;
+
+             
+           
+            // Save bitmap
+            bitmapScreenshot.Save(desktopPath + "Advokat_Design_Diagram.png");
+            Clipboard.SetDataObject(bitmapScreenshot);  // Copy Image to Clipboard Also
+
+            // Open File
+            Process.Start(desktopPath + "Advokat_Design_Diagram.png");
+        }
+
+
+
 
     }
 }

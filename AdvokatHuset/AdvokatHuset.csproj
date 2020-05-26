@@ -1231,5 +1231,20 @@
   <ItemGroup>
     <None Include="Resources\back_Rectangle.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mimetypes-text-x-sql-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sql - Script.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DB - Image - Diagram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DB - Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Advokathuset - Design -Diagram.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

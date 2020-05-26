@@ -473,6 +473,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Advokathuset___Design__Diagram {
+            get {
+                object obj = ResourceManager.GetObject("Advokathuset - Design -Diagram", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap app_drawer_icon {
             get {
                 object obj = ResourceManager.GetObject("app-drawer-icon", resourceCulture);
@@ -1213,6 +1223,26 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap DB___Image {
+            get {
+                object obj = ResourceManager.GetObject("DB - Image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DB___Image___Diagram {
+            get {
+                object obj = ResourceManager.GetObject("DB - Image - Diagram", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DC_ADD {
             get {
                 object obj = ResourceManager.GetObject("DC ADD", resourceCulture);
@@ -1803,6 +1833,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Mimetypes_text_x_sql_icon {
+            get {
+                object obj = ResourceManager.GetObject("Mimetypes-text-x-sql-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap minimize {
             get {
                 object obj = ResourceManager.GetObject("minimize", resourceCulture);
@@ -2376,6 +2416,16 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap Speciale_advokat {
             get {
                 object obj = ResourceManager.GetObject("Speciale advokat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sql___Script {
+            get {
+                object obj = ResourceManager.GetObject("Sql - Script", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
