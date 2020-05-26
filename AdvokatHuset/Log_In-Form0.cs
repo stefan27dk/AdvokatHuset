@@ -789,7 +789,7 @@ namespace View_GUI
 "USE [Advokathuset]" + Environment.NewLine +
 "GO" + Environment.NewLine +
 "/****** Object:  User [abc]    Script Date: 26-05-2020 23:30:49 ******/" + Environment.NewLine +
-"CREATE USER [abc] FOR LOGIN [abc] WITH DEFAULT_SCHEMA=[dbo]-----------------------LOG IN----------- Showld be allowed in the SQL Managment Studio Settings in order to use" + Environment.NewLine +
+"CREATE USER [abc] FOR LOGIN [abc] WITH DEFAULT_SCHEMA=[dbo]-----------------------LOG IN----------- Should be allowed in the SQL Managment Studio Settings in order to use!!!!!!!!!!!!!!" + Environment.NewLine +
 "GO" + Environment.NewLine +
 "/****** Object:  Table [dbo].[Adv_Arbejds_Ydelser]    Script Date: 26-05-2020 23:30:50 ******/" + Environment.NewLine +
 "SET ANSI_NULLS ON" + Environment.NewLine +

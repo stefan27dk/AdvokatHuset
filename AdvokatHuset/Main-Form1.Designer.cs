@@ -134,7 +134,7 @@
             // 
             // log_in_top_panel
             // 
-            this.log_in_top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.log_in_top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
             this.log_in_top_panel.Location = new System.Drawing.Point(1, 4);
             this.log_in_top_panel.Name = "log_in_top_panel";
             this.log_in_top_panel.Size = new System.Drawing.Size(36, 18);
@@ -154,7 +154,7 @@
             // 
             // log_in_background_panel
             // 
-            this.log_in_background_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.log_in_background_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
             this.log_in_background_panel.Controls.Add(this.type_log_in_label);
             this.log_in_background_panel.Controls.Add(this.type_log_in_textBox);
             this.log_in_background_panel.Controls.Add(this.copy_id_button);
