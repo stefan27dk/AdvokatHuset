@@ -993,6 +993,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cash_icon {
+            get {
+                object obj = ResourceManager.GetObject("cash-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Categories_applications_utilities_icon {
             get {
                 object obj = ResourceManager.GetObject("Categories-applications-utilities-icon", resourceCulture);
@@ -1376,6 +1386,16 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap Documents_icon7 {
             get {
                 object obj = ResourceManager.GetObject("Documents-icon7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dollar_collection_icon {
+            get {
+                object obj = ResourceManager.GetObject("dollar-collection-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

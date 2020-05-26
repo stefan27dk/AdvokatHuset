@@ -1204,5 +1204,11 @@
   <ItemGroup>
     <None Include="Resources\Dollar-USD-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dollar-collection-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash-icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

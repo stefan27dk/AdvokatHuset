@@ -18,7 +18,7 @@ namespace View_GUI
         public DB_Loader(){}
 
 
-
+        // Combobox Populate
         public ComboBox Populate_Combobox(string Query, ComboBox Loader_Combobox)
         {
             
@@ -56,7 +56,7 @@ namespace View_GUI
 
 
 
-
+        // TextBox populate
         public TextBox PopulateTextbox(string Query, TextBox Loader_TextBox)
         {
             try
@@ -92,6 +92,9 @@ namespace View_GUI
 
 
 
+
+
+       
 
 
     }
