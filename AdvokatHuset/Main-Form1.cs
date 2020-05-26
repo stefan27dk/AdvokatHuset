@@ -45,10 +45,11 @@ namespace View_GUI
         Koersel_Form10 KoerselForm10 = new Koersel_Form10(); // Form 10
         Home_Form11 HomeForm11 = new Home_Form11();// Start
         DeveloperForm_Form12 DeveloperForm12 = new DeveloperForm_Form12();//DEV
+        Statistics_Form14 Statistics_Form = new Statistics_Form14();
 
-        //Forms--::END::
+    //Forms--::END::
 
-        Screenshot screenshot; // Screenshot 
+    Screenshot screenshot; // Screenshot 
         List<Form> formList = new List<Form>();  // Form List: Used to go back to the previews Form that was opened
         int formMinus1 = 0;
         bool itemClicked = false;
@@ -332,6 +333,7 @@ namespace View_GUI
             KoerselForm10.Hide();
             HomeForm11.Hide();
             DeveloperForm12.Hide();
+            Statistics_Form.Hide();
 
         }
 
@@ -625,11 +627,21 @@ namespace View_GUI
 
 
 
+
+
+
         //Open Browser
         private void open_browser_button_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("http:\\google.com");
         }
+
+
+
+
+
+
+
 
 
 
@@ -646,6 +658,30 @@ namespace View_GUI
             DeveloperForm12.Show();
 
         }
+
+
+
+
+
+
+        // Statistics Button
+        private void statistics_button_Click(object sender, EventArgs e)
+        {
+            //Forms for Hide "Hide all other Forms"
+            HideAllForms();
+            Statistics_Form.TopLevel = false;
+            Loader_panel.Controls.Add(Statistics_Form);
+            Statistics_Form.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            Statistics_Form.Dock = DockStyle.Fill;
+            Statistics_Form.Show();
+           
+        }
+
+
+
+
+
+
 
 
 
@@ -1047,7 +1083,8 @@ namespace View_GUI
          
         }
 
-  
+      
+
 
 
 

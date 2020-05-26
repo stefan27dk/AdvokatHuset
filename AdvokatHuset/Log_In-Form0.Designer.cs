@@ -40,6 +40,7 @@
             this.log_in_holder_panel = new System.Windows.Forms.Panel();
             this.delete_login_file_button = new System.Windows.Forms.Button();
             this.log_in_Clear_all_button = new System.Windows.Forms.Button();
+            this.secret_developer_mode_button = new System.Windows.Forms.Button();
             this.settings_myPanel = new View_GUI.MyPanel();
             this.secret_label = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,7 +49,6 @@
             this.conn_ex2_label = new System.Windows.Forms.Label();
             this.conn_string_textBox = new System.Windows.Forms.TextBox();
             this.connection_string_label = new System.Windows.Forms.Label();
-            this.secret_developer_mode_button = new System.Windows.Forms.Button();
             this.log_in_holder_panel.SuspendLayout();
             this.settings_myPanel.SuspendLayout();
             this.SuspendLayout();
@@ -194,7 +194,7 @@
             this.delete_login_file_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
             this.delete_login_file_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
             this.delete_login_file_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.delete_login_file_button.Location = new System.Drawing.Point(188, 246);
+            this.delete_login_file_button.Location = new System.Drawing.Point(191, 246);
             this.delete_login_file_button.Name = "delete_login_file_button";
             this.delete_login_file_button.Size = new System.Drawing.Size(26, 31);
             this.delete_login_file_button.TabIndex = 43;
@@ -217,6 +217,23 @@
             this.log_in_Clear_all_button.TabIndex = 42;
             this.log_in_Clear_all_button.UseVisualStyleBackColor = false;
             this.log_in_Clear_all_button.Click += new System.EventHandler(this.log_in_Clear_all_button_Click);
+            // 
+            // secret_developer_mode_button
+            // 
+            this.secret_developer_mode_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.secret_developer_mode_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.secret_developer_mode_button.FlatAppearance.BorderSize = 0;
+            this.secret_developer_mode_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.secret_developer_mode_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
+            this.secret_developer_mode_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.secret_developer_mode_button.Location = new System.Drawing.Point(5, 4);
+            this.secret_developer_mode_button.Name = "secret_developer_mode_button";
+            this.secret_developer_mode_button.Size = new System.Drawing.Size(41, 39);
+            this.secret_developer_mode_button.TabIndex = 44;
+            this.secret_developer_mode_button.UseVisualStyleBackColor = true;
+            this.secret_developer_mode_button.Click += new System.EventHandler(this.secret_developer_mode_button_Click);
+            this.secret_developer_mode_button.MouseEnter += new System.EventHandler(this.secret_developer_mode_button_MouseEnter);
+            this.secret_developer_mode_button.MouseLeave += new System.EventHandler(this.secret_developer_mode_button_MouseLeave);
             // 
             // settings_myPanel
             // 
@@ -319,23 +336,6 @@
             this.connection_string_label.Size = new System.Drawing.Size(183, 24);
             this.connection_string_label.TabIndex = 0;
             this.connection_string_label.Text = "Connection String:";
-            // 
-            // secret_developer_mode_button
-            // 
-            this.secret_developer_mode_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.secret_developer_mode_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.secret_developer_mode_button.FlatAppearance.BorderSize = 0;
-            this.secret_developer_mode_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.secret_developer_mode_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
-            this.secret_developer_mode_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.secret_developer_mode_button.Location = new System.Drawing.Point(5, 4);
-            this.secret_developer_mode_button.Name = "secret_developer_mode_button";
-            this.secret_developer_mode_button.Size = new System.Drawing.Size(41, 39);
-            this.secret_developer_mode_button.TabIndex = 44;
-            this.secret_developer_mode_button.UseVisualStyleBackColor = true;
-            this.secret_developer_mode_button.Click += new System.EventHandler(this.secret_developer_mode_button_Click);
-            this.secret_developer_mode_button.MouseEnter += new System.EventHandler(this.secret_developer_mode_button_MouseEnter);
-            this.secret_developer_mode_button.MouseLeave += new System.EventHandler(this.secret_developer_mode_button_MouseLeave);
             // 
             // Log_In_Form0
             // 

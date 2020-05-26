@@ -1053,6 +1053,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap coin_us_dollar_icon124 {
+            get {
+                object obj = ResourceManager.GetObject("coin-us-dollar-icon124", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Color_Meter_icon {
             get {
                 object obj = ResourceManager.GetObject("Color-Meter-icon", resourceCulture);
@@ -1366,6 +1376,16 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap Documents_icon7 {
             get {
                 object obj = ResourceManager.GetObject("Documents-icon7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Dollar_USD_icon {
+            get {
+                object obj = ResourceManager.GetObject("Dollar-USD-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
