@@ -54,9 +54,11 @@ namespace View_GUI
         // Load
         private void World_Clock_Form13_Load(object sender, EventArgs e)
         {
+
             Populate_Combobx();
+            World_Time();
             My_Timer();
-            Thread_Clock();
+            Thread_Clock(); // Verdens Ur Opggave
         }
 
 
