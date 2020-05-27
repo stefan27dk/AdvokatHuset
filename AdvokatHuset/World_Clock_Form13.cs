@@ -16,5 +16,18 @@ namespace View_GUI
         {
             InitializeComponent();
         }
+
+
+
+
+
+        // Load
+        private void World_Clock_Form13_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
+
     }
 }

@@ -305,6 +305,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "World_Clock_Form13";
             this.Text = "World_Clock_Form13";
+            this.Load += new System.EventHandler(this.World_Clock_Form13_Load);
             this.statistics_Top_name__panel.ResumeLayout(false);
             this.statistics_Top_name__panel.PerformLayout();
             this.rest_world_back_panel.ResumeLayout(false);
