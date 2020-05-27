@@ -28,20 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.statistics_Top_name__panel = new System.Windows.Forms.Panel();
+            this.Medarbejder_Top_label = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.reset_all_button = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.statistics_From_dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.statistics_To_dateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.profit_textBox = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.indkomst_textBox = new System.Windows.Forms.TextBox();
             this.indkomst_label = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Me_salary_textBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,17 +57,13 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
             this.fees_textBox = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.reset_all_button = new System.Windows.Forms.Button();
+            this.statistics_Top_name__panel.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -71,6 +74,70 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
+            // 
+            // statistics_Top_name__panel
+            // 
+            this.statistics_Top_name__panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
+            this.statistics_Top_name__panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.statistics_Top_name__panel.Controls.Add(this.Medarbejder_Top_label);
+            this.statistics_Top_name__panel.Location = new System.Drawing.Point(18, 58);
+            this.statistics_Top_name__panel.Name = "statistics_Top_name__panel";
+            this.statistics_Top_name__panel.Size = new System.Drawing.Size(106, 44);
+            this.statistics_Top_name__panel.TabIndex = 26;
+            // 
+            // Medarbejder_Top_label
+            // 
+            this.Medarbejder_Top_label.AutoSize = true;
+            this.Medarbejder_Top_label.Font = new System.Drawing.Font("Miriam CLM", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.Medarbejder_Top_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(92)))));
+            this.Medarbejder_Top_label.Location = new System.Drawing.Point(11, 10);
+            this.Medarbejder_Top_label.Name = "Medarbejder_Top_label";
+            this.Medarbejder_Top_label.Size = new System.Drawing.Size(82, 23);
+            this.Medarbejder_Top_label.TabIndex = 0;
+            this.Medarbejder_Top_label.Text = "Statistik";
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = global::View_GUI.Properties.Resources.back_Rectangle;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Controls.Add(this.reset_all_button);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.statistics_From_dateTimePicker);
+            this.panel2.Controls.Add(this.statistics_To_dateTimePicker);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Location = new System.Drawing.Point(-30, 149);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(337, 185);
+            this.panel2.TabIndex = 25;
+            // 
+            // reset_all_button
+            // 
+            this.reset_all_button.BackColor = System.Drawing.Color.Transparent;
+            this.reset_all_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
+            this.reset_all_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.reset_all_button.FlatAppearance.BorderSize = 0;
+            this.reset_all_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.reset_all_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.reset_all_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reset_all_button.ForeColor = System.Drawing.Color.Black;
+            this.reset_all_button.Location = new System.Drawing.Point(268, 88);
+            this.reset_all_button.Name = "reset_all_button";
+            this.reset_all_button.Size = new System.Drawing.Size(28, 23);
+            this.reset_all_button.TabIndex = 30;
+            this.reset_all_button.UseVisualStyleBackColor = false;
+            this.reset_all_button.Click += new System.EventHandler(this.reset_all_button_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.Color.Lime;
+            this.label3.Location = new System.Drawing.Point(60, 37);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(41, 20);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Fra:";
             // 
             // statistics_From_dateTimePicker
             // 
@@ -92,18 +159,6 @@
             this.statistics_To_dateTimePicker.ValueChanged += new System.EventHandler(this.statistics_To_dateTimePicker_ValueChanged);
             this.statistics_To_dateTimePicker.Enter += new System.EventHandler(this.statistics_To_dateTimePicker_Enter);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.Color.Lime;
-            this.label3.Location = new System.Drawing.Point(60, 37);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 20);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Fra:";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -116,20 +171,6 @@
             this.label4.TabIndex = 12;
             this.label4.Text = "Til:";
             // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = global::View_GUI.Properties.Resources.back_Rectangle;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Controls.Add(this.reset_all_button);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.statistics_From_dateTimePicker);
-            this.panel2.Controls.Add(this.statistics_To_dateTimePicker);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Location = new System.Drawing.Point(-30, 80);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(337, 185);
-            this.panel2.TabIndex = 25;
-            // 
             // panel3
             // 
             this.panel3.BackgroundImage = global::View_GUI.Properties.Resources.BackCube;
@@ -138,10 +179,22 @@
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.profit_textBox);
             this.panel3.Controls.Add(this.pictureBox4);
-            this.panel3.Location = new System.Drawing.Point(1137, 80);
+            this.panel3.Location = new System.Drawing.Point(1137, 149);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(230, 270);
             this.panel3.TabIndex = 24;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label14.Location = new System.Drawing.Point(172, 132);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(23, 15);
+            this.label14.TabIndex = 25;
+            this.label14.Text = "kr.";
             // 
             // label5
             // 
@@ -184,10 +237,22 @@
             this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Controls.Add(this.indkomst_textBox);
             this.panel4.Controls.Add(this.indkomst_label);
-            this.panel4.Location = new System.Drawing.Point(889, 80);
+            this.panel4.Location = new System.Drawing.Point(889, 149);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(230, 270);
             this.panel4.TabIndex = 24;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label11.Location = new System.Drawing.Point(174, 132);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(23, 15);
+            this.label11.TabIndex = 22;
+            this.label11.Text = "kr.";
             // 
             // pictureBox1
             // 
@@ -234,10 +299,34 @@
             this.panel5.Controls.Add(this.Hour_Salary_textBox);
             this.panel5.Controls.Add(this.label8);
             this.panel5.Controls.Add(this.label9);
-            this.panel5.Location = new System.Drawing.Point(637, 80);
+            this.panel5.Location = new System.Drawing.Point(637, 149);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(230, 270);
             this.panel5.TabIndex = 24;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label15.Location = new System.Drawing.Point(176, 170);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(23, 15);
+            this.label15.TabIndex = 24;
+            this.label15.Text = "kr.";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label12.Location = new System.Drawing.Point(176, 132);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(23, 15);
+            this.label12.TabIndex = 23;
+            this.label12.Text = "kr.";
             // 
             // pictureBox2
             // 
@@ -328,10 +417,22 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Location = new System.Drawing.Point(396, 80);
+            this.panel1.Location = new System.Drawing.Point(396, 149);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(230, 270);
             this.panel1.TabIndex = 22;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label13.Location = new System.Drawing.Point(172, 126);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(23, 15);
+            this.label13.TabIndex = 24;
+            this.label13.Text = "kr.";
             // 
             // fees_textBox
             // 
@@ -391,89 +492,13 @@
             this.label7.TabIndex = 18;
             this.label7.Text = "Default = 0kr";
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label11.Location = new System.Drawing.Point(174, 132);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(23, 15);
-            this.label11.TabIndex = 22;
-            this.label11.Text = "kr.";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label12.Location = new System.Drawing.Point(176, 132);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(23, 15);
-            this.label12.TabIndex = 23;
-            this.label12.Text = "kr.";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label13.Location = new System.Drawing.Point(172, 126);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(23, 15);
-            this.label13.TabIndex = 24;
-            this.label13.Text = "kr.";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label14.Location = new System.Drawing.Point(172, 132);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(23, 15);
-            this.label14.TabIndex = 25;
-            this.label14.Text = "kr.";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label15.Location = new System.Drawing.Point(176, 170);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(23, 15);
-            this.label15.TabIndex = 24;
-            this.label15.Text = "kr.";
-            // 
-            // reset_all_button
-            // 
-            this.reset_all_button.BackColor = System.Drawing.Color.Transparent;
-            this.reset_all_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon1;
-            this.reset_all_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.reset_all_button.FlatAppearance.BorderSize = 0;
-            this.reset_all_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.reset_all_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.reset_all_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.reset_all_button.ForeColor = System.Drawing.Color.Black;
-            this.reset_all_button.Location = new System.Drawing.Point(268, 90);
-            this.reset_all_button.Name = "reset_all_button";
-            this.reset_all_button.Size = new System.Drawing.Size(28, 23);
-            this.reset_all_button.TabIndex = 30;
-            this.reset_all_button.UseVisualStyleBackColor = false;
-            this.reset_all_button.Click += new System.EventHandler(this.reset_all_button_Click);
-            // 
             // Statistics_Form14
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(50)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1800, 754);
+            this.Controls.Add(this.statistics_Top_name__panel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
@@ -482,6 +507,8 @@
             this.Name = "Statistics_Form14";
             this.Text = "Statistics_Form14";
             this.Load += new System.EventHandler(this.Statistics_Form14_Load);
+            this.statistics_Top_name__panel.ResumeLayout(false);
+            this.statistics_Top_name__panel.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -535,5 +562,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button reset_all_button;
+        private System.Windows.Forms.Panel statistics_Top_name__panel;
+        private System.Windows.Forms.Label Medarbejder_Top_label;
     }
 }

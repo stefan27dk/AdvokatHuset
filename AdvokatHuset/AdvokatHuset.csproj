@@ -86,6 +86,12 @@
     </Compile>
     <Compile Include="Statistics_Facade.cs" />
     <Compile Include="Validate_Log_In.cs" />
+    <Compile Include="World_Clock_Form13.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="World_Clock_Form13.Designer.cs">
+      <DependentUpon>World_Clock_Form13.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ydelser-Form8.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Statistics-Form14.resx">
       <DependentUpon>Statistics-Form14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="World_Clock_Form13.resx">
+      <DependentUpon>World_Clock_Form13.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ydelser-Form8.resx">
       <DependentUpon>Ydelser-Form8.cs</DependentUpon>
@@ -1290,6 +1299,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Counterclockwise-arrow-icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apps-clock-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back Panel  1243.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Block - Back Panel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BLock back Panel 1242.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

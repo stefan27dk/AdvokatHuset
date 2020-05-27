@@ -663,6 +663,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Apps_clock_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("Apps-clock-icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Apps_Dialog_Shutdown_icon {
             get {
                 object obj = ResourceManager.GetObject("Apps-Dialog-Shutdown-icon", resourceCulture);
@@ -793,6 +803,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Back_Panel__1243 {
+            get {
+                object obj = ResourceManager.GetObject("Back Panel  1243", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Back_Panel__black_Search {
             get {
                 object obj = ResourceManager.GetObject("Back-Panel- black-Search", resourceCulture);
@@ -886,6 +906,26 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap Bg124 {
             get {
                 object obj = ResourceManager.GetObject("Bg124", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Block___Back_Panel {
+            get {
+                object obj = ResourceManager.GetObject("Block - Back Panel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BLock_back_Panel_1242 {
+            get {
+                object obj = ResourceManager.GetObject("BLock back Panel 1242", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

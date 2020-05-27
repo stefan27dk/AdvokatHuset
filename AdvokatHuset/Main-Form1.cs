@@ -28,8 +28,7 @@ namespace View_GUI
 
 
         
-
-
+         
 
 
         // Local Folder
@@ -45,11 +44,13 @@ namespace View_GUI
         Koersel_Form10 KoerselForm10 = new Koersel_Form10(); // Form 10
         Home_Form11 HomeForm11 = new Home_Form11();// Start
         DeveloperForm_Form12 DeveloperForm12 = new DeveloperForm_Form12();//DEV
-        Statistics_Form14 Statistics_Form = new Statistics_Form14();
+        Statistics_Form14 Statistics_Form = new Statistics_Form14(); // Statistics
+        World_Clock_Form13 world_clocks_Form13 = new World_Clock_Form13(); // World Clocks Form
 
-    //Forms--::END::
 
-    Screenshot screenshot; // Screenshot 
+        //Forms--::END::
+
+        Screenshot screenshot; // Screenshot 
         List<Form> formList = new List<Form>();  // Form List: Used to go back to the previews Form that was opened
         int formMinus1 = 0;
         bool itemClicked = false;
@@ -334,6 +335,7 @@ namespace View_GUI
             HomeForm11.Hide();
             DeveloperForm12.Hide();
             Statistics_Form.Hide();
+            world_clocks_Form13.Hide();
 
         }
 
@@ -683,6 +685,26 @@ namespace View_GUI
 
 
 
+        // World Clock - Button
+        private void world_clock_button_Click(object sender, EventArgs e)
+        {   
+            
+            //Forms for Hide "Hide all other Forms"
+            HideAllForms();
+            world_clocks_Form13.TopLevel = false;
+            Loader_panel.Controls.Add(world_clocks_Form13);
+            world_clocks_Form13.Dock = DockStyle.Fill;
+            world_clocks_Form13.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            world_clocks_Form13.Show();
+
+        }
+
+
+
+
+
+
+
 
 
 
@@ -960,12 +982,20 @@ namespace View_GUI
         }
 
 
+
+
+
+         // CLick Log Off-ON - Red Button - Sound
         private void Log_In_Off_button_sound()
         {
             SoundPlayer log_btn = new SoundPlayer(@"C:\Windows\Media\Speech Misrecognition.wav");
             log_btn.Play();
 
         }
+
+
+
+
 
         // Show Hide Log In Info - Panel
         private void Show_Hide_Log_in_Panel()
@@ -984,11 +1014,16 @@ namespace View_GUI
         }
 
 
+
+
+
         // Copy ID Button
         private void copy_id_button_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(log_in_din_id_textBox.Text);
         }
+
+
 
 
 
@@ -1030,6 +1065,9 @@ namespace View_GUI
             this.Dispose();
             Log_Of_Sound();
         }
+
+
+
 
 
         // Log Off SOund
@@ -1083,10 +1121,7 @@ namespace View_GUI
          
         }
 
-      
-
-
-
+             
 
         //---------------TEST-----------------------------------------------------------------------////////////////////////////////////////////////////////////////////////
 
