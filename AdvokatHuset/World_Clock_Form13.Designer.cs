@@ -68,7 +68,7 @@
             this.statistics_Top_name__panel.Controls.Add(this.Medarbejder_Top_label);
             this.statistics_Top_name__panel.Location = new System.Drawing.Point(18, 58);
             this.statistics_Top_name__panel.Name = "statistics_Top_name__panel";
-            this.statistics_Top_name__panel.Size = new System.Drawing.Size(140, 44);
+            this.statistics_Top_name__panel.Size = new System.Drawing.Size(132, 44);
             this.statistics_Top_name__panel.TabIndex = 27;
             // 
             // Medarbejder_Top_label
@@ -78,9 +78,9 @@
             this.Medarbejder_Top_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(92)))));
             this.Medarbejder_Top_label.Location = new System.Drawing.Point(11, 10);
             this.Medarbejder_Top_label.Name = "Medarbejder_Top_label";
-            this.Medarbejder_Top_label.Size = new System.Drawing.Size(113, 23);
+            this.Medarbejder_Top_label.Size = new System.Drawing.Size(105, 23);
             this.Medarbejder_Top_label.TabIndex = 0;
-            this.Medarbejder_Top_label.Text = "Verdens Ur";
+            this.Medarbejder_Top_label.Text = "VerdensUr";
             // 
             // rest_world_back_panel
             // 
