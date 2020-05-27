@@ -144,7 +144,7 @@
             this.rest_world_clock_pictureBox.BackColor = System.Drawing.Color.Transparent;
             this.rest_world_clock_pictureBox.BackgroundImage = global::View_GUI.Properties.Resources.Apps_clock_icon1;
             this.rest_world_clock_pictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.rest_world_clock_pictureBox.Location = new System.Drawing.Point(66, 87);
+            this.rest_world_clock_pictureBox.Location = new System.Drawing.Point(64, 87);
             this.rest_world_clock_pictureBox.Name = "rest_world_clock_pictureBox";
             this.rest_world_clock_pictureBox.Size = new System.Drawing.Size(100, 99);
             this.rest_world_clock_pictureBox.TabIndex = 30;
@@ -152,15 +152,15 @@
             // 
             // rest_world_clock_textBox
             // 
-            this.rest_world_clock_textBox.BackColor = System.Drawing.Color.Black;
+            this.rest_world_clock_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
             this.rest_world_clock_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rest_world_clock_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.rest_world_clock_textBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(206)))), ((int)(((byte)(71)))));
-            this.rest_world_clock_textBox.Location = new System.Drawing.Point(80, 198);
+            this.rest_world_clock_textBox.Location = new System.Drawing.Point(60, 199);
             this.rest_world_clock_textBox.Name = "rest_world_clock_textBox";
-            this.rest_world_clock_textBox.Size = new System.Drawing.Size(75, 28);
+            this.rest_world_clock_textBox.Size = new System.Drawing.Size(112, 28);
             this.rest_world_clock_textBox.TabIndex = 0;
-            this.rest_world_clock_textBox.Text = "13:05";
+            this.rest_world_clock_textBox.Text = "??:??";
             // 
             // local_clocks_back_panel
             // 
@@ -180,7 +180,7 @@
             this.panel2.BackgroundImage = global::View_GUI.Properties.Resources.back_Rectangle;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(175, 37);
+            this.panel2.Location = new System.Drawing.Point(167, 37);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(349, 79);
             this.panel2.TabIndex = 29;
@@ -235,7 +235,7 @@
             // 
             // KB_clock_textBox
             // 
-            this.KB_clock_textBox.BackColor = System.Drawing.Color.Black;
+            this.KB_clock_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
             this.KB_clock_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.KB_clock_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.KB_clock_textBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -243,7 +243,7 @@
             this.KB_clock_textBox.Name = "KB_clock_textBox";
             this.KB_clock_textBox.Size = new System.Drawing.Size(75, 28);
             this.KB_clock_textBox.TabIndex = 0;
-            this.KB_clock_textBox.Text = "13:05";
+            this.KB_clock_textBox.Text = "??:??";
             // 
             // SF_Back_panel
             // 
@@ -283,7 +283,7 @@
             // 
             // San_Francisco_Time_textBox
             // 
-            this.San_Francisco_Time_textBox.BackColor = System.Drawing.Color.Black;
+            this.San_Francisco_Time_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
             this.San_Francisco_Time_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.San_Francisco_Time_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.San_Francisco_Time_textBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(206)))), ((int)(((byte)(71)))));
@@ -291,14 +291,14 @@
             this.San_Francisco_Time_textBox.Name = "San_Francisco_Time_textBox";
             this.San_Francisco_Time_textBox.Size = new System.Drawing.Size(75, 28);
             this.San_Francisco_Time_textBox.TabIndex = 0;
-            this.San_Francisco_Time_textBox.Text = "13:05";
+            this.San_Francisco_Time_textBox.Text = "??:??";
             // 
             // World_Clock_Form13
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(44)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(1600, 800);
+            this.ClientSize = new System.Drawing.Size(1600, 797);
             this.Controls.Add(this.rest_world_back_panel);
             this.Controls.Add(this.local_clocks_back_panel);
             this.Controls.Add(this.statistics_Top_name__panel);
