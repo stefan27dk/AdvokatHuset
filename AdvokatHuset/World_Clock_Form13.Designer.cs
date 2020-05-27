@@ -30,13 +30,13 @@
         {
             this.statistics_Top_name__panel = new System.Windows.Forms.Panel();
             this.Medarbejder_Top_label = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.rest_world_back_panel = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.rets_world_back_inner_panel = new System.Windows.Forms.Panel();
+            this.rest_world_clocks_comboBox = new System.Windows.Forms.ComboBox();
+            this.rest_world_clock_pictureBox = new System.Windows.Forms.PictureBox();
+            this.rest_world_clock_textBox = new System.Windows.Forms.TextBox();
             this.local_clocks_back_panel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,10 +49,10 @@
             this.SF_label = new System.Windows.Forms.Label();
             this.San_Francisco_Time_textBox = new System.Windows.Forms.TextBox();
             this.statistics_Top_name__panel.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.rest_world_back_panel.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.rets_world_back_inner_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rest_world_clock_pictureBox)).BeginInit();
             this.local_clocks_back_panel.SuspendLayout();
             this.panel2.SuspendLayout();
             this.KB_clock_back_panel_panel.SuspendLayout();
@@ -82,16 +82,16 @@
             this.Medarbejder_Top_label.TabIndex = 0;
             this.Medarbejder_Top_label.Text = "Verdens Ur";
             // 
-            // panel4
+            // rest_world_back_panel
             // 
-            this.panel4.BackgroundImage = global::View_GUI.Properties.Resources.BLock_back_Panel_1242;
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel4.Controls.Add(this.panel5);
-            this.panel4.Controls.Add(this.panel7);
-            this.panel4.Location = new System.Drawing.Point(877, 173);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(357, 481);
-            this.panel4.TabIndex = 33;
+            this.rest_world_back_panel.BackgroundImage = global::View_GUI.Properties.Resources.BLock_back_Panel_1242;
+            this.rest_world_back_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.rest_world_back_panel.Controls.Add(this.panel5);
+            this.rest_world_back_panel.Controls.Add(this.rets_world_back_inner_panel);
+            this.rest_world_back_panel.Location = new System.Drawing.Point(877, 173);
+            this.rest_world_back_panel.Name = "rest_world_back_panel";
+            this.rest_world_back_panel.Size = new System.Drawing.Size(357, 481);
+            this.rest_world_back_panel.TabIndex = 33;
             // 
             // panel5
             // 
@@ -116,51 +116,51 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Verden";
             // 
-            // panel7
+            // rets_world_back_inner_panel
             // 
-            this.panel7.BackColor = System.Drawing.Color.Transparent;
-            this.panel7.BackgroundImage = global::View_GUI.Properties.Resources.BackCube;
-            this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel7.Controls.Add(this.comboBox1);
-            this.panel7.Controls.Add(this.pictureBox2);
-            this.panel7.Controls.Add(this.textBox2);
-            this.panel7.Location = new System.Drawing.Point(68, 152);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(229, 260);
-            this.panel7.TabIndex = 28;
+            this.rets_world_back_inner_panel.BackColor = System.Drawing.Color.Transparent;
+            this.rets_world_back_inner_panel.BackgroundImage = global::View_GUI.Properties.Resources.BackCube;
+            this.rets_world_back_inner_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.rets_world_back_inner_panel.Controls.Add(this.rest_world_clocks_comboBox);
+            this.rets_world_back_inner_panel.Controls.Add(this.rest_world_clock_pictureBox);
+            this.rets_world_back_inner_panel.Controls.Add(this.rest_world_clock_textBox);
+            this.rets_world_back_inner_panel.Location = new System.Drawing.Point(68, 152);
+            this.rets_world_back_inner_panel.Name = "rets_world_back_inner_panel";
+            this.rets_world_back_inner_panel.Size = new System.Drawing.Size(229, 260);
+            this.rets_world_back_inner_panel.TabIndex = 28;
             // 
-            // comboBox1
+            // rest_world_clocks_comboBox
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(33, 42);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(158, 26);
-            this.comboBox1.TabIndex = 31;
+            this.rest_world_clocks_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.rest_world_clocks_comboBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rest_world_clocks_comboBox.FormattingEnabled = true;
+            this.rest_world_clocks_comboBox.Location = new System.Drawing.Point(33, 42);
+            this.rest_world_clocks_comboBox.Name = "rest_world_clocks_comboBox";
+            this.rest_world_clocks_comboBox.Size = new System.Drawing.Size(158, 26);
+            this.rest_world_clocks_comboBox.TabIndex = 31;
             // 
-            // pictureBox2
+            // rest_world_clock_pictureBox
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImage = global::View_GUI.Properties.Resources.Apps_clock_icon1;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox2.Location = new System.Drawing.Point(66, 87);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 99);
-            this.pictureBox2.TabIndex = 30;
-            this.pictureBox2.TabStop = false;
+            this.rest_world_clock_pictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.rest_world_clock_pictureBox.BackgroundImage = global::View_GUI.Properties.Resources.Apps_clock_icon1;
+            this.rest_world_clock_pictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.rest_world_clock_pictureBox.Location = new System.Drawing.Point(66, 87);
+            this.rest_world_clock_pictureBox.Name = "rest_world_clock_pictureBox";
+            this.rest_world_clock_pictureBox.Size = new System.Drawing.Size(100, 99);
+            this.rest_world_clock_pictureBox.TabIndex = 30;
+            this.rest_world_clock_pictureBox.TabStop = false;
             // 
-            // textBox2
+            // rest_world_clock_textBox
             // 
-            this.textBox2.BackColor = System.Drawing.Color.Black;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(206)))), ((int)(((byte)(71)))));
-            this.textBox2.Location = new System.Drawing.Point(80, 198);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(75, 28);
-            this.textBox2.TabIndex = 0;
-            this.textBox2.Text = "13:05";
+            this.rest_world_clock_textBox.BackColor = System.Drawing.Color.Black;
+            this.rest_world_clock_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rest_world_clock_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rest_world_clock_textBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(206)))), ((int)(((byte)(71)))));
+            this.rest_world_clock_textBox.Location = new System.Drawing.Point(80, 198);
+            this.rest_world_clock_textBox.Name = "rest_world_clock_textBox";
+            this.rest_world_clock_textBox.Size = new System.Drawing.Size(75, 28);
+            this.rest_world_clock_textBox.TabIndex = 0;
+            this.rest_world_clock_textBox.Text = "13:05";
             // 
             // local_clocks_back_panel
             // 
@@ -299,7 +299,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(44)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(1600, 800);
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.rest_world_back_panel);
             this.Controls.Add(this.local_clocks_back_panel);
             this.Controls.Add(this.statistics_Top_name__panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -307,12 +307,12 @@
             this.Text = "World_Clock_Form13";
             this.statistics_Top_name__panel.ResumeLayout(false);
             this.statistics_Top_name__panel.PerformLayout();
-            this.panel4.ResumeLayout(false);
+            this.rest_world_back_panel.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.rets_world_back_inner_panel.ResumeLayout(false);
+            this.rets_world_back_inner_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rest_world_clock_pictureBox)).EndInit();
             this.local_clocks_back_panel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -341,12 +341,12 @@
         private System.Windows.Forms.Label KB_label;
         private System.Windows.Forms.TextBox KB_clock_textBox;
         private System.Windows.Forms.Panel local_clocks_back_panel;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel rest_world_back_panel;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Panel rets_world_back_inner_panel;
+        private System.Windows.Forms.ComboBox rest_world_clocks_comboBox;
+        private System.Windows.Forms.PictureBox rest_world_clock_pictureBox;
+        private System.Windows.Forms.TextBox rest_world_clock_textBox;
     }
 }
