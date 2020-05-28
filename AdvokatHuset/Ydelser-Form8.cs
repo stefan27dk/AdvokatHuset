@@ -1330,11 +1330,16 @@ namespace View_GUI
         }
 
 
+
+
         // Load TYPE Ydelse
         private void load_Type_Ydelse_comboBox_Click(object sender, EventArgs e)
         {
             Load_Type_ydelse((ComboBox)sender);
         }
+
+
+
 
 
         // Copy Selected Column Cell Text
