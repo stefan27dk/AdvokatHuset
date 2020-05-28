@@ -41,7 +41,6 @@ namespace View_GUI
         Sekretaer_Form7 SekretaerForm7 = new Sekretaer_Form7();// Form 7
         Ydelser_Form8 YdelserForm8 = new Ydelser_Form8();// Form 8
         Kunder_Form9 KunderForm9 = new Kunder_Form9(); // Form 9
-        Koersel_Form10 KoerselForm10 = new Koersel_Form10(); // Form 10
         Home_Form11 HomeForm11 = new Home_Form11();// Start
         DeveloperForm_Form12 DeveloperForm12 = new DeveloperForm_Form12();//DEV
         Statistics_Form14 Statistics_Form = new Statistics_Form14(); // Statistics
@@ -332,7 +331,6 @@ namespace View_GUI
             SekretaerForm7.Hide();
             YdelserForm8.Hide();
             KunderForm9.Hide();
-            KoerselForm10.Hide();
             HomeForm11.Hide();
             DeveloperForm12.Hide();
             Statistics_Form.Hide();
@@ -460,20 +458,7 @@ namespace View_GUI
 
 
 
-
-        // Kørsel
-        private void kørselToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //Forms for Hide "Hide all other Forms"
-            HideAllForms();
-
-            KoerselForm10.TopLevel = false;
-            Loader_panel.Controls.Add(KoerselForm10);
-            KoerselForm10.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            KoerselForm10.Dock = DockStyle.Fill;
-
-            KoerselForm10.Show();
-        }
+       
 
         // General Menu Button Events---::END::---------------------------------------------------------------------------------------------------------------------------------------------
 

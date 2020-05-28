@@ -121,12 +121,6 @@
     <Compile Include="Home-Form11.Designer.cs">
       <DependentUpon>Home-Form11.cs</DependentUpon>
     </Compile>
-    <Compile Include="Koersel-Form10.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Koersel-Form10.Designer.cs">
-      <DependentUpon>Koersel-Form10.cs</DependentUpon>
-    </Compile>
     <Compile Include="Kunde.cs" />
     <Compile Include="Advokater-Form3.cs">
       <SubType>Form</SubType>
@@ -215,9 +209,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Home-Form11.resx">
       <DependentUpon>Home-Form11.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Koersel-Form10.resx">
-      <DependentUpon>Koersel-Form10.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Advokater-Form3.resx">
       <DependentUpon>Advokater-Form3.cs</DependentUpon>
