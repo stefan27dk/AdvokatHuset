@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace View_GUI
+namespace Domain
 {
     class DB_Loader
     {

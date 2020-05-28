@@ -8,7 +8,7 @@ namespace Domain
 {
     class Chef:Person
     {
-        private int id;
+       
 
         public Chef() //Constructor
         {

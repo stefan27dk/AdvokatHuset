@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Domain;
-namespace View_GUI
+namespace Domain
 {
     class Validate_Log_In
     {
