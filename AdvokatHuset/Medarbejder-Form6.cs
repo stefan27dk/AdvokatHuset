@@ -16,6 +16,7 @@ using iTextSharp.text.pdf;
 using iTextSharp.text;
 using System.Media;
 
+
 namespace View_GUI
 {
     public partial class Medarbejder_Form6 : Form
@@ -532,6 +533,19 @@ namespace View_GUI
             Clipboard.SetText(Medarbejder_dataGridView.SelectedRows[0].Cells[Medarbejder_dataGridView.CurrentCell.ColumnIndex].Value.ToString());
 
             }
+
+
+
+            // Open Login Menu
+            if (keyData == (Keys.Control | Keys.Alt | Keys.X))
+            {
+                Log_In_Create_Edit();
+
+            }
+
+
+
+
 
 
             return base.ProcessCmdKey(ref msg, keyData);
@@ -1498,9 +1512,16 @@ namespace View_GUI
         // Log-IN - MAIN - BUTTON
         private void main_specialer_button_Click(object sender, EventArgs e)
         {
-            datagridviewBackground_panel.Visible = false;  // Datagridview
-            backPanel_Textboxes_panel.Visible = false; // Opret
-            Log_In_BACK_panel.Visible = true; // Log In
+
+            // Get Log in Info
+            Log_In_Info Allow_acces_To_log_In = Log_In_Info.Get_Log_In_Info();
+
+            // Log Ins can be accessed only from Me_Type Chef
+            if(Allow_acces_To_log_In.Log_IN_Type == "Chef")
+            {
+                Log_In_Create_Edit();
+
+            }
 
         }
 
@@ -1509,8 +1530,13 @@ namespace View_GUI
 
 
 
-
-
+         // Show log In - Edit, Create etc.
+         private void Log_In_Create_Edit()
+         {
+            datagridviewBackground_panel.Visible = false;  // Datagridview
+            backPanel_Textboxes_panel.Visible = false; // Opret
+            Log_In_BACK_panel.Visible = true; // Log In
+         }
 
 
 
