@@ -1565,7 +1565,7 @@ namespace View_GUI
         private void Load_Me_Names_In_Combobx(ComboBox CBox, String Query)
         {
             CBox.Items.Clear();
-            DB_Loader Load_Advokat_names = new DB_Loader();
+            Domain_DB_Loader Load_Advokat_names = new Domain_DB_Loader();
             CBox = Load_Advokat_names.Populate_Combobox(Query, CBox);
         }
 
@@ -1594,7 +1594,7 @@ namespace View_GUI
         private void Me_Name_To_Me_ID(ComboBox CBox, TextBox TBox)
         {
             TBox.Clear();
-            DB_Loader Get_Advokat_ID = new DB_Loader();
+            Domain_DB_Loader Get_Advokat_ID = new Domain_DB_Loader();
             TBox.Text = Get_Advokat_ID.PopulateTextbox($"Select M.Me_ID From Medarbejder As M Where M.Me_Fornavn = '{CBox.SelectedItem.ToString()}' ");
         }
 
@@ -1882,13 +1882,13 @@ namespace View_GUI
          {
              if(vis_rediger_Me_Id_textBox.Text.Length > 15)
              {
-                 // Load User Name
-                 DB_Loader Load_Log_IN_Name = new DB_Loader();
+                // Load User Name
+                Domain_DB_Loader Load_Log_IN_Name = new Domain_DB_Loader();
                  vis_rediger_Log_In_Navn_textBox.Text = Load_Log_IN_Name.PopulateTextbox($"Select L.Log_In_Navn From Log_In AS L Where L.Me_ID = '{vis_rediger_Me_Id_textBox.Text}'");
-                 
-                 
-                 // Load Password
-                 DB_Loader Load_Log_IN_Pass = new DB_Loader();
+
+
+                // Load Password
+                Domain_DB_Loader Load_Log_IN_Pass = new Domain_DB_Loader();
                  Vis_rediger_Log_In_Pass_textBox.Text = Load_Log_IN_Pass.PopulateTextbox($"Select L.Log_In_Pass From Log_In AS L Where L.Me_ID = '{vis_rediger_Me_Id_textBox.Text}'");
 
              }

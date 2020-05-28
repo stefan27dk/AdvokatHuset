@@ -1324,7 +1324,7 @@ namespace View_GUI
         private void Load_Type_ydelse(ComboBox combo)
         {
             load_Type_Ydelse_comboBox.Items.Clear();
-            DB_Loader Load_Type_ydelse = new DB_Loader();
+            Domain_DB_Loader Load_Type_ydelse = new Domain_DB_Loader();
             string Query = "Select* From Type_Ydelse";
             combo = Load_Type_ydelse.Populate_Combobox(Query, combo);
         }
@@ -1352,7 +1352,7 @@ namespace View_GUI
         private void Ydelse_name_comboBox_Click(object sender, EventArgs e)
         {
             Ydelse_name_comboBox.Items.Clear(); // Clear
-            DB_Loader ydelse_Name = new DB_Loader();
+            Domain_DB_Loader ydelse_Name = new Domain_DB_Loader();
             Ydelse_name_comboBox = ydelse_Name.Populate_Combobox("Select Ydelse_Navn From Ydelse", Ydelse_name_comboBox);
 
         }

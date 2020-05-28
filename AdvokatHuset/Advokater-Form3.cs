@@ -1533,7 +1533,7 @@ namespace View_GUI
         private void Add_speciale_Advokat_name_comboBox_Click(object sender, EventArgs e)
         {
             Add_speciale_Advokat_name_comboBox.Items.Clear();
-            DB_Loader Load_Advokat_names = new DB_Loader();
+            Domain_DB_Loader Load_Advokat_names = new Domain_DB_Loader();
             Add_speciale_Advokat_name_comboBox = Load_Advokat_names.Populate_Combobox("Select M.Me_Fornavn From Medarbejder AS M Where M.Me_Type = 'Advokat'; ", Add_speciale_Advokat_name_comboBox);
         }
 
@@ -1544,7 +1544,7 @@ namespace View_GUI
         {
             speciale_advokat_id_textBox.Clear();
 
-            DB_Loader Get_Advokat_ID = new DB_Loader();
+            Domain_DB_Loader Get_Advokat_ID = new Domain_DB_Loader();
             speciale_advokat_id_textBox.Text = Get_Advokat_ID.PopulateTextbox($"Select M.Me_ID From Medarbejder As M Where M.Me_Fornavn = '{Add_speciale_Advokat_name_comboBox.SelectedItem.ToString()}'");
         }
 
@@ -1573,7 +1573,7 @@ namespace View_GUI
         private void Load_Specialer(ComboBox combo)
         {
             speciale_comboBox.Items.Clear();
-            DB_Loader Load_Specialer = new DB_Loader();
+            Domain_DB_Loader Load_Specialer = new Domain_DB_Loader();
             string Query = "Select* From Uddannelser";
             combo = Load_Specialer.Populate_Combobox(Query, combo);
         }
@@ -1737,7 +1737,7 @@ namespace View_GUI
         private void delete_speciale_Advokat_name_comboBox_Click(object sender, EventArgs e)
         {
             delete_speciale_Advokat_name_comboBox.Items.Clear();
-            DB_Loader Load_Advokat_names_For_delete_Speciale = new DB_Loader();
+            Domain_DB_Loader Load_Advokat_names_For_delete_Speciale = new Domain_DB_Loader();
             delete_speciale_Advokat_name_comboBox = Load_Advokat_names_For_delete_Speciale.Populate_Combobox("Select M.Me_Fornavn From Medarbejder AS M Where M.Me_Type = 'Advokat'; ", delete_speciale_Advokat_name_comboBox);
         }
 
@@ -1748,7 +1748,7 @@ namespace View_GUI
         {
             delete_speciale_from_advokat_textBox.Clear();
 
-            DB_Loader Get_Advokat_ID = new DB_Loader();
+            Domain_DB_Loader Get_Advokat_ID = new Domain_DB_Loader();
             delete_speciale_from_advokat_textBox.Text = Get_Advokat_ID.PopulateTextbox($"Select M.Me_ID From Medarbejder As M Where M.Me_Fornavn = '{delete_speciale_Advokat_name_comboBox.SelectedItem.ToString()}'");
         }
 

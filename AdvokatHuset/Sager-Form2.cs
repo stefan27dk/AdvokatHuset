@@ -1648,7 +1648,7 @@ namespace View_GUI
         private void ydelse_navn_comboBox_Click(object sender, EventArgs e)
         {
             ydelse_navn_comboBox.Items.Clear();
-            DB_Loader Load_Ydelser = new DB_Loader();
+            Domain_DB_Loader Load_Ydelser = new Domain_DB_Loader();
             ydelse_navn_comboBox = Load_Ydelser.Populate_Combobox("Select Ydelse_Navn From Ydelse", ydelse_navn_comboBox);
         }
 
@@ -1659,7 +1659,7 @@ namespace View_GUI
         private void ydelse_navn_comboBox_SelectionChangeCommitted(object sender, EventArgs e)
         {
             add_Ydelse_Ydelse_Nr_textBox.Clear(); // Clear
-            DB_Loader Load_Ydelse_Nr = new DB_Loader();
+            Domain_DB_Loader Load_Ydelse_Nr = new Domain_DB_Loader();
             add_Ydelse_Ydelse_Nr_textBox.Text = Load_Ydelse_Nr.PopulateTextbox($"Select Ydelse_Nr From Ydelse Where Ydelse_Navn Like '{ydelse_navn_comboBox.SelectedItem.ToString()}'"); // Load NR Ydelse NR "ID"
         }
 
@@ -1802,7 +1802,7 @@ namespace View_GUI
         private void add_sag_Advokat_name_comboBox_Click(object sender, EventArgs e)
         {
             add_sag_Advokat_name_comboBox.Items.Clear();
-            DB_Loader Load_Advokat_names = new DB_Loader();
+            Domain_DB_Loader Load_Advokat_names = new Domain_DB_Loader();
             add_sag_Advokat_name_comboBox = Load_Advokat_names.Populate_Combobox("Select M.Me_Fornavn From Medarbejder AS M Where M.Me_Type = 'Advokat'; ", add_sag_Advokat_name_comboBox);
         }
 
@@ -1813,7 +1813,7 @@ namespace View_GUI
         {
             opret_sag_advokatID_textBox.Clear();
 
-            DB_Loader Get_Advokat_ID = new DB_Loader();
+            Domain_DB_Loader Get_Advokat_ID = new Domain_DB_Loader();
             opret_sag_advokatID_textBox.Text = Get_Advokat_ID.PopulateTextbox($"Select M.Me_ID From Medarbejder As M Where M.Me_Fornavn = '{add_sag_Advokat_name_comboBox.SelectedItem.ToString()}'");
         }
 
@@ -2197,7 +2197,7 @@ namespace View_GUI
         private void add_time_Advokat_name_comboBox_Click(object sender, EventArgs e)
         {
             add_time_Advokat_name_comboBox.Items.Clear();
-            DB_Loader Load_Advokat_names = new DB_Loader();
+            Domain_DB_Loader Load_Advokat_names = new Domain_DB_Loader();
             add_time_Advokat_name_comboBox = Load_Advokat_names.Populate_Combobox("Select M.Me_Fornavn From Medarbejder AS M Where M.Me_Type = 'Advokat'; ", add_time_Advokat_name_comboBox);
         }
 
@@ -2213,7 +2213,7 @@ namespace View_GUI
 
             add_time_Advokat_name_textBox.Clear();
 
-            DB_Loader Get_Advokat_ID = new DB_Loader();
+            Domain_DB_Loader Get_Advokat_ID = new Domain_DB_Loader();
             add_time_Advokat_name_textBox.Text = Get_Advokat_ID.PopulateTextbox($"Select M.Me_ID From Medarbejder As M Where M.Me_Fornavn = '{add_time_Advokat_name_comboBox.SelectedItem.ToString()}'");
         }
 
@@ -2225,7 +2225,7 @@ namespace View_GUI
         private void add_time_ydelse_name_comboBox_Click(object sender, EventArgs e)
         {
             add_time_ydelse_name_comboBox.Items.Clear();
-            DB_Loader Load_Ydelser = new DB_Loader();
+            Domain_DB_Loader Load_Ydelser = new Domain_DB_Loader();
             add_time_ydelse_name_comboBox = Load_Ydelser.Populate_Combobox("Select Ydelse_Navn From Ydelse", add_time_ydelse_name_comboBox);
         }
 
@@ -2236,7 +2236,7 @@ namespace View_GUI
         private void add_time_ydelse_name_comboBox_SelectionChangeCommitted(object sender, EventArgs e)
         {
             add_Ydelse_Ydelse_Nr_textBox.Clear(); // Clear
-            DB_Loader Load_Ydelse_Nr = new DB_Loader();
+            Domain_DB_Loader Load_Ydelse_Nr = new Domain_DB_Loader();
             add_time_ydelse_nr_textBox.Text = Load_Ydelse_Nr.PopulateTextbox($"Select Ydelse_Nr From Ydelse Where Ydelse_Navn Like '{add_time_ydelse_name_comboBox.SelectedItem.ToString()}'"); // Load NR Ydelse NR "ID"
         }
 
@@ -2268,7 +2268,7 @@ namespace View_GUI
         private void koersel_Advokat_name_comboBox_Click(object sender, EventArgs e)
         {
             koersel_Advokat_name_comboBox.Items.Clear();
-            DB_Loader Load_Advokat_names = new DB_Loader();
+            Domain_DB_Loader Load_Advokat_names = new Domain_DB_Loader();
             koersel_Advokat_name_comboBox = Load_Advokat_names.Populate_Combobox("Select M.Me_Fornavn From Medarbejder AS M Where M.Me_Type = 'Advokat'; ", koersel_Advokat_name_comboBox);
         }
 
@@ -2279,7 +2279,7 @@ namespace View_GUI
         {
 
             koersel_Advokat_Id_textBox.Clear();
-            DB_Loader Get_Advokat_ID = new DB_Loader();
+            Domain_DB_Loader Get_Advokat_ID = new Domain_DB_Loader();
             koersel_Advokat_Id_textBox.Text = Get_Advokat_ID.PopulateTextbox($"Select M.Me_ID From Medarbejder As M Where M.Me_Fornavn = '{koersel_Advokat_name_comboBox.SelectedItem.ToString()}'");
         }
 
