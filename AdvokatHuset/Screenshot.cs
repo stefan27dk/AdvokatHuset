@@ -62,16 +62,16 @@ namespace Domain
 
         public void MakeFormScreenshot()
         {
-            Form currentForm = Form.ActiveForm; // Get the Active Form  
+            //Form currentForm = Form.ActiveForm; // Get the Active Form  
 
-            
-            using (Bitmap bmp = new Bitmap(currentForm.Width, currentForm.Height)) // New Bitmap
+            Rectangle formBounds = new Rectangle(Form.ActiveForm.Location, Form.ActiveForm.Size);
+            using (Bitmap bmp = new Bitmap(formBounds.Width, formBounds.Height)) // New Bitmap
             {
                  
                 using (Graphics gr = Graphics.FromImage(bmp))
                 {
 
-                    gr.CopyFromScreen(currentForm.Location.X, currentForm.Location.Y, 0, 0, bmp.Size, CopyPixelOperation.SourceCopy);
+                    gr.CopyFromScreen(formBounds.Location.X, formBounds.Location.Y, 0, 0, bmp.Size, CopyPixelOperation.SourceCopy);
                     bmp.Save($"{ScreenshotSavePath}{ScreenshotNameDateTime}.png", ImageFormat.Png);// Screenshot -  Unique Name so it dont get overwrited everytime new screenshot is made
 
                     // Add to Clipboard
