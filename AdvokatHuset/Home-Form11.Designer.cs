@@ -132,6 +132,7 @@
             this.wbbeowser_Search_textBox.TabIndex = 21;
             this.wbbeowser_Search_textBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.wbbeowser_Search_textBox_KeyDown);
             this.wbbeowser_Search_textBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.wbbeowser_Search_textBox_MouseDown);
+            this.wbbeowser_Search_textBox.MouseHover += new System.EventHandler(this.wbbeowser_Search_textBox_MouseHover);
             // 
             // web_browser_google_button
             // 
@@ -142,7 +143,7 @@
             this.web_browser_google_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.web_browser_google_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
             this.web_browser_google_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.web_browser_google_button.Location = new System.Drawing.Point(152, 2);
+            this.web_browser_google_button.Location = new System.Drawing.Point(152, 1);
             this.web_browser_google_button.Margin = new System.Windows.Forms.Padding(0);
             this.web_browser_google_button.Name = "web_browser_google_button";
             this.web_browser_google_button.Size = new System.Drawing.Size(45, 43);

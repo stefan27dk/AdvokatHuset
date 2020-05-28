@@ -57,11 +57,16 @@ namespace View_GUI
 
            
 
+
+
         // Search Button
         private void web_browser_Search_button_Click(object sender, EventArgs e)
         {
             Search();
         }
+
+
+
 
 
 
@@ -82,6 +87,7 @@ namespace View_GUI
 
 
 
+
         // Focus When the page is loaded
         private void home_webBrowser_Navigated(object sender, WebBrowserNavigatedEventArgs e)
         {
@@ -90,6 +96,9 @@ namespace View_GUI
              
 
         }
+
+
+
 
 
 
@@ -105,12 +114,14 @@ namespace View_GUI
 
 
 
+
         // Webbrowser Go Back
         private void browser_back_button_Click(object sender, EventArgs e)
         {
             home_webBrowser.GoBack();
 
         }
+
 
 
 
@@ -124,6 +135,9 @@ namespace View_GUI
         }
 
 
+
+
+
         // Web - Browser - Home
         private void Web_Browser_Home_button_Click(object sender, EventArgs e)
         {
@@ -134,22 +148,55 @@ namespace View_GUI
 
 
 
+
+
+
         // Browser_Show_ Google
         private void web_browser_google_button_Click(object sender, EventArgs e)
         {
             home_webBrowser.Navigate("google.com");
         }
 
+
+
+
+
+
+
+        // Clear Textbox on CTRL + Left mouse button
         private void wbbeowser_Search_textBox_MouseDown(object sender, MouseEventArgs e)
         {
-
             if(e.Button == MouseButtons.Left && (ModifierKeys & Keys.Control) == Keys.Control)
             {
                 wbbeowser_Search_textBox.Clear();
             }
-
-
            
         }
+
+
+
+
+        // Tool Tip For Search
+        private void Search_Tool_Tip()
+        {
+            ToolTip Search_ToolTip = new ToolTip();
+            Search_ToolTip.AutoPopDelay = 3000;
+            Search_ToolTip.InitialDelay = 500;
+            Search_ToolTip.ReshowDelay = 1000;
+            Search_ToolTip.ShowAlways = true;
+
+            Search_ToolTip.SetToolTip(wbbeowser_Search_textBox, "CTRL + Mouse Left Button for Clear");
+        }
+
+
+
+
+
+        // Search Tool Tip
+        private void wbbeowser_Search_textBox_MouseHover(object sender, EventArgs e)
+        {
+            Search_Tool_Tip();
+        }
     }
+
 }
