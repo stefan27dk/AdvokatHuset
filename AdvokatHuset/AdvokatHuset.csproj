@@ -1312,5 +1312,17 @@
   <ItemGroup>
     <None Include="Resources\BLock back Panel 1242.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back Panel  12431.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back Panel  12432.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back Panel  12433.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Long 4455.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

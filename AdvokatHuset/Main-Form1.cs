@@ -46,11 +46,11 @@ namespace View_GUI
         DeveloperForm_Form12 DeveloperForm12 = new DeveloperForm_Form12();//DEV
         Statistics_Form14 Statistics_Form = new Statistics_Form14(); // Statistics
         World_Clock_Form13 world_clocks_Form13 = new World_Clock_Form13(); // World Clocks Form
+ 
 
+       //Forms--::END::
 
-        //Forms--::END::
-
-        Screenshot screenshot; // Screenshot 
+       Screenshot screenshot; // Screenshot 
         List<Form> formList = new List<Form>();  // Form List: Used to go back to the previews Form that was opened
         int formMinus1 = 0;
         bool itemClicked = false;
@@ -172,6 +172,7 @@ namespace View_GUI
             General_menuStrip.Renderer = new MyRenderer(); // Used for General_menuStrip to change the "Selection Background Color" "Renderer"
             General_menuStrip.ForeColor = Color.FromArgb(0, 204, 255);//Color of the Menu Strip "General menu"
             General_Menu_Panel.BringToFront();// Advokate,Sager ETC. menu to top
+            
         }
 
 
@@ -1092,8 +1093,6 @@ namespace View_GUI
 
 
 
-
-
         //---------------TEST-----------------------------------------------------------------------////////////////////////////////////////////////////////////////////////
 
         // Hide Program- Button
@@ -1121,7 +1120,7 @@ namespace View_GUI
          
         }
 
-             
+
 
         //---------------TEST-----------------------------------------------------------------------////////////////////////////////////////////////////////////////////////
 

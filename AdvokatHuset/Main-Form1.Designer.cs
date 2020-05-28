@@ -111,8 +111,8 @@
             // 
             this.Loader_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Loader_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Loader_panel.Controls.Add(this.log_In_top_Bottom_panel);
             this.Loader_panel.Controls.Add(this.log_in_border_panel);
+            this.Loader_panel.Controls.Add(this.log_In_top_Bottom_panel);
             this.Loader_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Loader_panel.ForeColor = System.Drawing.Color.Transparent;
             this.Loader_panel.Location = new System.Drawing.Point(0, 0);

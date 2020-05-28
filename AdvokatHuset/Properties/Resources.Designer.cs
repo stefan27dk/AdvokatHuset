@@ -813,6 +813,36 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Back_Panel__12431 {
+            get {
+                object obj = ResourceManager.GetObject("Back Panel  12431", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Back_Panel__12432 {
+            get {
+                object obj = ResourceManager.GetObject("Back Panel  12432", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Back_Panel__12433 {
+            get {
+                object obj = ResourceManager.GetObject("Back Panel  12433", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Back_Panel__black_Search {
             get {
                 object obj = ResourceManager.GetObject("Back-Panel- black-Search", resourceCulture);
@@ -1896,6 +1926,16 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap Log_In_12 {
             get {
                 object obj = ResourceManager.GetObject("Log In 12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Long_4455 {
+            get {
+                object obj = ResourceManager.GetObject("Long 4455", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
