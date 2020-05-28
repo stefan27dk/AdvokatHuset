@@ -86,6 +86,8 @@ namespace View_GUI
         private void home_webBrowser_Navigated(object sender, WebBrowserNavigatedEventArgs e)
         {
             home_webBrowser.Focus();
+            wbbeowser_Search_textBox.Text = home_webBrowser.Url.AbsoluteUri;
+             
 
         }
 
@@ -136,6 +138,18 @@ namespace View_GUI
         private void web_browser_google_button_Click(object sender, EventArgs e)
         {
             home_webBrowser.Navigate("google.com");
+        }
+
+        private void wbbeowser_Search_textBox_MouseDown(object sender, MouseEventArgs e)
+        {
+
+            if(e.Button == MouseButtons.Left && (ModifierKeys & Keys.Control) == Keys.Control)
+            {
+                wbbeowser_Search_textBox.Clear();
+            }
+
+
+           
         }
     }
 }

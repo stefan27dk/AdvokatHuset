@@ -1324,5 +1324,11 @@
   <ItemGroup>
     <None Include="Resources\360-Chrome-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search Thick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search Thin.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

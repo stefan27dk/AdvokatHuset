@@ -169,6 +169,9 @@
   <data name="untitled (7)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\untitled (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="360-Chrome-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\360-Chrome-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Add Time 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Add Time 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -192,6 +195,9 @@
   </data>
   <data name="Car 789" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Car 789.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Search Thick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Search Thick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="chart-search-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chart-search-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -432,9 +438,6 @@
   </data>
   <data name="170796_button_256x256 (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\170796_button_256x256 (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Document-txt-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Document-txt-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Documents-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Documents-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -859,9 +862,6 @@
   <data name="application-edit-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\application-edit-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="win7_ico_shell32_dll-080" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\win7_ico_shell32_dll-080.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Add time 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Add time 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -892,6 +892,9 @@
   <data name="research-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\research-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Groups-Meeting-Light-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Groups-Meeting-Light-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Untitled (3)2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Untitled (3)2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -913,8 +916,8 @@
   <data name="win7_ico_shell32_dll-265" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\win7_ico_shell32_dll-265.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Apps-clock-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Apps-clock-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="win7_ico_shell32_dll-080" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\win7_ico_shell32_dll-080.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Actions-edit-delete-icon3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Actions-edit-delete-icon3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -928,8 +931,8 @@
   <data name="Completed 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Completed 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Groups-Meeting-Light-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Groups-Meeting-Light-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Document-txt-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Document-txt-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bell-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bell-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1039,6 +1042,9 @@
   <data name="win7_ico_shell32_dll-295" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\win7_ico_shell32_dll-295.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Apps-clock-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Apps-clock-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Groups-Meeting-Light-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Groups-Meeting-Light-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -1090,7 +1096,7 @@
   <data name="Office-Customer-Male-Light-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Office-Customer-Male-Light-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="360-Chrome-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\360-Chrome-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Search Thin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Search Thin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

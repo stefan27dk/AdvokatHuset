@@ -31,9 +31,10 @@
             this.Home_Top_label = new System.Windows.Forms.Label();
             this.backgroundName_Top_panel = new System.Windows.Forms.Panel();
             this.browser_back_panel = new System.Windows.Forms.Panel();
-            this.home_webBrowser = new System.Windows.Forms.WebBrowser();
-            this.wbbeowser_Search_textBox = new System.Windows.Forms.TextBox();
             this.Browser_menu_panel = new System.Windows.Forms.Panel();
+            this.home_webBrowser = new System.Windows.Forms.WebBrowser();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.wbbeowser_Search_textBox = new System.Windows.Forms.TextBox();
             this.web_browser_google_button = new System.Windows.Forms.Button();
             this.Web_Browser_Home_button = new System.Windows.Forms.Button();
             this.browser_back_button = new System.Windows.Forms.Button();
@@ -42,6 +43,7 @@
             this.backgroundName_Top_panel.SuspendLayout();
             this.browser_back_panel.SuspendLayout();
             this.Browser_menu_panel.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Home_Top_label
@@ -80,6 +82,22 @@
             this.browser_back_panel.Size = new System.Drawing.Size(1454, 640);
             this.browser_back_panel.TabIndex = 23;
             // 
+            // Browser_menu_panel
+            // 
+            this.Browser_menu_panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Browser_menu_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
+            this.Browser_menu_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Browser_menu_panel.Controls.Add(this.panel1);
+            this.Browser_menu_panel.Controls.Add(this.web_browser_google_button);
+            this.Browser_menu_panel.Controls.Add(this.Web_Browser_Home_button);
+            this.Browser_menu_panel.Controls.Add(this.browser_back_button);
+            this.Browser_menu_panel.Controls.Add(this.Webbrowser_Gog_Forward_button);
+            this.Browser_menu_panel.Location = new System.Drawing.Point(1, 1);
+            this.Browser_menu_panel.Name = "Browser_menu_panel";
+            this.Browser_menu_panel.Size = new System.Drawing.Size(1450, 48);
+            this.Browser_menu_panel.TabIndex = 24;
+            // 
             // home_webBrowser
             // 
             this.home_webBrowser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -92,31 +110,28 @@
             this.home_webBrowser.TabIndex = 20;
             this.home_webBrowser.Navigated += new System.Windows.Forms.WebBrowserNavigatedEventHandler(this.home_webBrowser_Navigated);
             // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::View_GUI.Properties.Resources.Search_Thin;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel1.Controls.Add(this.wbbeowser_Search_textBox);
+            this.panel1.Controls.Add(this.web_browser_Search_button);
+            this.panel1.Location = new System.Drawing.Point(325, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(691, 47);
+            this.panel1.TabIndex = 24;
+            // 
             // wbbeowser_Search_textBox
             // 
-            this.wbbeowser_Search_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.wbbeowser_Search_textBox.Location = new System.Drawing.Point(467, 13);
+            this.wbbeowser_Search_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
+            this.wbbeowser_Search_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.wbbeowser_Search_textBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.wbbeowser_Search_textBox.Location = new System.Drawing.Point(29, 18);
             this.wbbeowser_Search_textBox.Name = "wbbeowser_Search_textBox";
-            this.wbbeowser_Search_textBox.Size = new System.Drawing.Size(540, 20);
+            this.wbbeowser_Search_textBox.Size = new System.Drawing.Size(587, 13);
             this.wbbeowser_Search_textBox.TabIndex = 21;
             this.wbbeowser_Search_textBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.wbbeowser_Search_textBox_KeyDown);
-            // 
-            // Browser_menu_panel
-            // 
-            this.Browser_menu_panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Browser_menu_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
-            this.Browser_menu_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Browser_menu_panel.Controls.Add(this.web_browser_google_button);
-            this.Browser_menu_panel.Controls.Add(this.Web_Browser_Home_button);
-            this.Browser_menu_panel.Controls.Add(this.browser_back_button);
-            this.Browser_menu_panel.Controls.Add(this.web_browser_Search_button);
-            this.Browser_menu_panel.Controls.Add(this.Webbrowser_Gog_Forward_button);
-            this.Browser_menu_panel.Controls.Add(this.wbbeowser_Search_textBox);
-            this.Browser_menu_panel.Location = new System.Drawing.Point(1, 1);
-            this.Browser_menu_panel.Name = "Browser_menu_panel";
-            this.Browser_menu_panel.Size = new System.Drawing.Size(1450, 48);
-            this.Browser_menu_panel.TabIndex = 24;
+            this.wbbeowser_Search_textBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.wbbeowser_Search_textBox_MouseDown);
             // 
             // web_browser_google_button
             // 
@@ -178,7 +193,7 @@
             this.web_browser_Search_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.web_browser_Search_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
             this.web_browser_Search_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.web_browser_Search_button.Location = new System.Drawing.Point(1019, 9);
+            this.web_browser_Search_button.Location = new System.Drawing.Point(657, 10);
             this.web_browser_Search_button.Margin = new System.Windows.Forms.Padding(0);
             this.web_browser_Search_button.Name = "web_browser_Search_button";
             this.web_browser_Search_button.Size = new System.Drawing.Size(30, 30);
@@ -220,7 +235,8 @@
             this.backgroundName_Top_panel.PerformLayout();
             this.browser_back_panel.ResumeLayout(false);
             this.Browser_menu_panel.ResumeLayout(false);
-            this.Browser_menu_panel.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -238,5 +254,6 @@
         private System.Windows.Forms.Button Web_Browser_Home_button;
         private System.Windows.Forms.Panel Browser_menu_panel;
         private System.Windows.Forms.Button web_browser_google_button;
+        private System.Windows.Forms.Panel panel1;
     }
 }
