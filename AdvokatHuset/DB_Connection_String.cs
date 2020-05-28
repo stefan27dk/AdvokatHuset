@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain
+namespace DAL
 {
     class DB_Connection_String
     {
@@ -32,7 +32,7 @@ namespace Domain
             return ConnString_Instance;
         }
 
-
+        
 
     }
 }

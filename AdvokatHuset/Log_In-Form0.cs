@@ -136,36 +136,9 @@ namespace View_GUI
         // Check SQL Connection
         private bool Check_Sql_server_Connection()
         {
-
-            // Sql Connection String Check
-            DB_Connection_String connection = DB_Connection_String.Get_Connection_String_Instance();
-
-            if(connection.DBConnectionString != "")
-            {
-
-               using (SqlConnection DBconnection = new SqlConnection(connection.DBConnectionString))
-               {
-                   try
-                   {
-                       DBconnection.Open();
-                       return true;
-                   }
-
-                   catch (SqlException)
-                   {
-                       return false;
-                   }
-               
-               }
-
-            }
-
-            else
-            {
-                return false;
-            }
-
-
+            Check_SQL_Connection check_connection = new Check_SQL_Connection();
+            return check_connection.Check_My_SQL_Connection();
+         
         }
 
 
@@ -648,9 +621,8 @@ namespace View_GUI
 
                             if (reader.HasAttributes)
                             {
-                                DB_Connection_String ConnectionString_instance = DB_Connection_String.Get_Connection_String_Instance();
-
-                                ConnectionString_instance.DBConnectionString = reader.GetAttribute("connecrion_string_data").ToString();
+                                Domain_Connection_String ConnString = new Domain_Connection_String();
+                                ConnString.SET_DAL_Connectionstring(reader.GetAttribute("connecrion_string_data").ToString());
                                 conn_string_textBox.Text = reader.GetAttribute("connecrion_string_data").ToString();
 
                             }

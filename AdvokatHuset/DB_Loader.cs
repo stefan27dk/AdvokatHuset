@@ -1,4 +1,5 @@
-﻿using Domain;
+﻿using DAL;
+using Domain;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -96,7 +97,8 @@ namespace Domain
 
 
 
-       
+        
+
 
 
     }
