@@ -28,7 +28,7 @@ namespace View_GUI
 
         //DB
         Sekretær sekretaerinstance = new Sekretær(); // Instance af Sekretaer 
-        DB_Connection_Write ConnWrite; // Sql Write "
+        Domain_DB_Connection_Write ConnWrite; // Sql Write "
       
       
 
@@ -182,7 +182,7 @@ namespace View_GUI
         // Insert to DB  "Insert Sekretaer to DB"
         private void InsertToDB()
         {
-            ConnWrite = new DB_Connection_Write(); // "Write to DB Class instance"
+            ConnWrite = new Domain_DB_Connection_Write(); // "Write to DB Class instance"
             string SekretaerQuery = $"BEGIN DECLARE @UNIQUEX UNIQUEIDENTIFIER SET @UNIQUEX = NEWID(); Insert Into Medarbejder Values('{sekretaerinstance.Fornavn}','{sekretaerinstance.Efternavn}',{sekretaerinstance.PostNr},'{sekretaerinstance.Adresse}', (@UNIQUEX),'Sekretær','{sekretaerinstance.Mail}', '{DateTime.Now.ToString("dd-MM-yyyy HH-mm-ss")}'); Insert INTO Medarbejder_Tlf Values('{sekretaerer_tlf_textBox.Text}',(@UNIQUEX)); END;"; // Query
             successful = ConnWrite.CreateCommand(SekretaerQuery); // Write to DB Input and "Execution"
         }

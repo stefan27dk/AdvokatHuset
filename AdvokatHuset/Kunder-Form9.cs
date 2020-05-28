@@ -28,7 +28,7 @@ namespace View_GUI
 
         //DB
         Kunde kundeinstance = new Kunde(); // Instance af Kunde 
-        DB_Connection_Write ConnWrite; // Sql Write "
+        Domain_DB_Connection_Write ConnWrite; // Sql Write "
         
       
 
@@ -185,7 +185,7 @@ namespace View_GUI
         // Insert to DB  "Insert Kunde to DB"
         private void InsertToDB()
         {
-            ConnWrite = new DB_Connection_Write(); // "Write to DB Class instance"
+            ConnWrite = new Domain_DB_Connection_Write(); // "Write to DB Class instance"
             string KundeQuery = $"BEGIN DECLARE @UNIQUEX UNIQUEIDENTIFIER SET @UNIQUEX = NEWID(); Insert into Kunde Values('{kundeinstance.Fornavn}','{kundeinstance.Efternavn}',{kundeinstance.PostNr},'{kundeinstance.Adresse}', (@UNIQUEX),'{kundeinstance.Mail}', '{DateTime.Now.ToString("dd-MM-yyyy HH-mm-ss")}'); Insert INTO Kunde_Tlf Values('{kunder_tlf_textBox.Text}',(@UNIQUEX)); END;"; // Query
             successful = ConnWrite.CreateCommand(KundeQuery); // Write to DB Input and "Execution"
         }

@@ -62,6 +62,7 @@
     <Compile Include="Check_SQL_Connection.cs" />
     <Compile Include="DAL_Check_Connection.cs" />
     <Compile Include="Domain_Connection_String.cs" />
+    <Compile Include="Domain_DB_Connection_Write.cs" />
     <Compile Include="Log_In-Form0.cs">
       <SubType>Form</SubType>
     </Compile>

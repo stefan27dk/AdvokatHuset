@@ -29,7 +29,7 @@ namespace View_GUI
 
         //DB
         Medarbejder medarbejderinstance = new Medarbejder(); // Instance af Medarbejder 
-        DB_Connection_Write ConnWrite; // Sql Write "
+        Domain_DB_Connection_Write ConnWrite; // Sql Write "
                                    
 
 
@@ -191,7 +191,7 @@ namespace View_GUI
         // Insert to DB  "Insert Medarbejder to DB"
         private void InsertToDB()
         {
-            ConnWrite = new DB_Connection_Write(); // "Write to DB Class instance"
+            ConnWrite = new Domain_DB_Connection_Write(); // "Write to DB Class instance"
             string MedarbejderQuery = $"BEGIN DECLARE @UNIQUEX UNIQUEIDENTIFIER SET @UNIQUEX = NEWID(); Insert Into Medarbejder Values('{medarbejderinstance.Fornavn}','{medarbejderinstance.Efternavn}',{medarbejderinstance.PostNr},'{medarbejderinstance.Adresse}', (@UNIQUEX),'Chef','{medarbejderinstance.Mail}', '{DateTime.Now.ToString("dd-MM-yyyy HH-mm-ss")}'); Insert INTO Medarbejder_Tlf Values('{medarbejdere_tlf_textBox.Text}',(@UNIQUEX)); END;"; // Query
             successful = ConnWrite.CreateCommand(MedarbejderQuery); // Write to DB Input and "Execution"
         }
@@ -1645,7 +1645,7 @@ namespace View_GUI
         //Save Log IN
         private void Save_Log_IN()
         {
-            DB_Connection_Write Save_Log_In_DB = new DB_Connection_Write();
+            Domain_DB_Connection_Write Save_Log_In_DB = new Domain_DB_Connection_Write();
             bool successful_Saved  = Save_Log_In_DB.CreateCommand($"Insert INTO Log_In Values('{Me_ID_textBox.Text}','{log_in_textBox.Text}','{pass_textBox.Text}');");
 
 
@@ -1777,7 +1777,7 @@ namespace View_GUI
         {
             if(Del_ME_ID_textBox.Text.Length > 15)
             {
-                DB_Connection_Write Del_log_IN = new DB_Connection_Write();
+                Domain_DB_Connection_Write Del_log_IN = new Domain_DB_Connection_Write();
 
                 DialogResult Slet = MessageBox.Show("Er du sikker på at du vil SLETTE: Hvis du trykker på Ja så sletter du det Permanent", "SLET", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
@@ -2001,7 +2001,7 @@ namespace View_GUI
 
             if(Vis_rediger_validated == true)
             {
-               DB_Connection_Write save_edited_log_in = new DB_Connection_Write();
+                Domain_DB_Connection_Write save_edited_log_in = new Domain_DB_Connection_Write();
                DialogResult log_in_save_Changes = MessageBox.Show("Er du sikker på at du vil gemme ændringerne af denne Log In","GEM", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
              
                if(log_in_save_Changes == DialogResult.Yes)

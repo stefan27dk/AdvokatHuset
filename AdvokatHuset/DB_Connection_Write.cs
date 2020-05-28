@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Domain
+namespace DAL
 {
     class DB_Connection_Write
     {
@@ -20,7 +20,7 @@ namespace Domain
         
         bool successful = false;
         
-        public bool CreateCommand(string Query)
+        public bool DAL_CreateCommand(string Query)
         {
             try
             {

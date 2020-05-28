@@ -28,7 +28,7 @@ namespace View_GUI
 
         //DB
         Ydelse ydelseinstance = new Ydelse(); // Instance af Ydelse 
-        DB_Connection_Write ConnWrite; // Sql Write "
+        Domain_DB_Connection_Write ConnWrite; // Sql Write "
         //static readonly  DB_Connection_String ConnectionString = DB_Connection_String.GetConnectionString(); // Global Connectionstring
         //static SqlConnection connection = null; 
       
@@ -175,7 +175,7 @@ namespace View_GUI
         // Insert to DB  "Insert Ydelse to DB"
         private void InsertToDB()
         {
-            ConnWrite = new DB_Connection_Write(); // "Write to DB Class instance"
+            ConnWrite = new Domain_DB_Connection_Write(); // "Write to DB Class instance"
             string YdelseQuery = $"BEGIN DECLARE @UNIQUEX UNIQUEIDENTIFIER SET @UNIQUEX = NEWID(); Insert Into Ydelse Values('{ydelseinstance.Navn}', {ydelseinstance.Pris},'{ydelseinstance.Type}','{ydelseinstance.Art}', (@UNIQUEX), '{DateTime.Now.ToString("dd-MM-yyyy HH-mm-ss")}') END;"; // Query
             successful = ConnWrite.CreateCommand(YdelseQuery); // Write to DB Input and "Execution"
         }

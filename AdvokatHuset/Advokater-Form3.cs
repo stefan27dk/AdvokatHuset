@@ -28,7 +28,7 @@ namespace View_GUI
 
         //DB
         Advokat advokatinstance = new Advokat(); // Instance af Advokat 
-        DB_Connection_Write ConnWrite; // Sql Write "
+        Domain_DB_Connection_Write ConnWrite; // Sql Write 
                                    
 
 
@@ -181,7 +181,7 @@ namespace View_GUI
         // Insert to DB  "Insert Advokat to DB"
         private void InsertToDB()
         {
-            ConnWrite = new DB_Connection_Write(); // "Write to DB Class instance"
+            ConnWrite = new Domain_DB_Connection_Write(); // "Write to DB Class instance"
             string AdvokatQuery = $"BEGIN DECLARE @UNIQUEX UNIQUEIDENTIFIER SET @UNIQUEX = NEWID(); Insert Into Medarbejder Values('{advokatinstance.Fornavn}','{advokatinstance.Efternavn}',{advokatinstance.PostNr},'{advokatinstance.Adresse}', (@UNIQUEX),'Advokat','{advokatinstance.Mail}', '{DateTime.Now.ToString("dd-MM-yyyy HH-mm-ss")}'); Insert INTO Medarbejder_Tlf Values('{advokater_tlf_textBox.Text}',(@UNIQUEX)); END;"; // Query
             successful = ConnWrite.CreateCommand(AdvokatQuery); // Write to DB Input and "Execution"
         }
@@ -1500,7 +1500,7 @@ namespace View_GUI
         // Save Advokat - Speciale
         private void save_Advokat_specaile_button_Click(object sender, EventArgs e)
         {
-            DB_Connection_Write Save_Advokat_Speciale = new DB_Connection_Write();
+            Domain_DB_Connection_Write Save_Advokat_Speciale = new Domain_DB_Connection_Write();
 
             if(speciale_advokat_id_textBox.Text !="" && speciale_comboBox.SelectedItem != null)
             {
@@ -1593,7 +1593,7 @@ namespace View_GUI
         // Save new Speciale --- CREATE SPECIALE
         private void save_speciale_button_Click(object sender, EventArgs e)
         {
-            DB_Connection_Write Save_Speciale = new DB_Connection_Write();
+            Domain_DB_Connection_Write Save_Speciale = new Domain_DB_Connection_Write();
             Save_Speciale.CreateCommand($"Insert Into Uddannelser Values('{Add_Specaile_To_DB_comboBox.Text}');");
             Add_Specaile_To_DB_comboBox.Items.Clear();
             Add_Specaile_To_DB_comboBox.Text = "";
@@ -1668,7 +1668,7 @@ namespace View_GUI
         {
             if(delete_speciale_comboBox.SelectedIndex != -1)
             {
-              DB_Connection_Write Delete_Speciale = new DB_Connection_Write();
+              Domain_DB_Connection_Write Delete_Speciale = new Domain_DB_Connection_Write();
               Delete_Speciale.CreateCommand($"Delete FROM Uddannelser Where Advokat_Uddanelse = '{delete_speciale_comboBox.SelectedItem.ToString()}';");
               delete_speciale_comboBox.Items.Clear();
             }
@@ -1712,8 +1712,8 @@ namespace View_GUI
         {
             if (delete_speciale_from_advokat_comboBox.SelectedIndex != -1)
             {
-  
-                DB_Connection_Write Delete_Speciale_From_Advokat = new DB_Connection_Write();
+
+                Domain_DB_Connection_Write Delete_Speciale_From_Advokat = new Domain_DB_Connection_Write();
                 Delete_Speciale_From_Advokat.CreateCommand($"Delete FROM Advokat_Uddannelser Where Advokat_Uddannelser.Advokat_Uddanelse = '{delete_speciale_from_advokat_comboBox.SelectedItem.ToString()}' AND Advokat_Uddannelser.Me_ID = '{delete_speciale_from_advokat_textBox.Text}';");
                 delete_speciale_from_advokat_comboBox.Items.Clear();
                 delete_speciale_from_advokat_textBox.Clear();

@@ -28,7 +28,7 @@ namespace View_GUI
 
         //DB
         Sag Saginstance = new Sag(); // Instance af Sag 
-        DB_Connection_Write ConnWrite; // Sql Write "
+        Domain_DB_Connection_Write ConnWrite; // Sql Write "
          
       
 
@@ -202,7 +202,7 @@ namespace View_GUI
         // Insert to DB  "Insert Sag to DB"------------------------------------------
         private void InsertToDB()
         {
-            ConnWrite = new DB_Connection_Write(); // "Write to DB Class instance"
+            ConnWrite = new Domain_DB_Connection_Write(); // "Write to DB Class instance"
             string SagQuery = $"DECLARE @UNIQUEX UNIQUEIDENTIFIER SET @UNIQUEX = NEWID(); Insert Into Sag Values('{DateTime.Now.ToString("dd-MM-yyyy HH-mm-ss")}', Null, '{Saginstance.SagType}', 0, (@UNIQUEX), '{Saginstance.KundeID}', '{Saginstance.AdvokatID}');"; // Query
             successful = ConnWrite.CreateCommand(SagQuery); // Write to DB Input and "Execution"
         }
@@ -1705,7 +1705,7 @@ namespace View_GUI
 
             if(Add_Ydelse_Validate == true)
             {
-                DB_Connection_Write Add_SAg_Ydelse = new DB_Connection_Write();
+                Domain_DB_Connection_Write Add_SAg_Ydelse = new Domain_DB_Connection_Write();
                 successful =  Add_SAg_Ydelse.CreateCommand($"Insert Into Sag_Ydelser Values('{DateTime.Now.ToString("dd-MM-yyyy   HH-mm-ss")}','{add_Ydelse_Sag_SagID_textBox.Text}','{add_Ydelse_Ydelse_Nr_textBox.Text}');");
                 
                 if(successful == true)
@@ -1873,7 +1873,7 @@ namespace View_GUI
             {
 
 
-            DB_Connection_Write Update_Sag = new DB_Connection_Write();
+                Domain_DB_Connection_Write Update_Sag = new Domain_DB_Connection_Write();
             successful = Update_Sag.CreateCommand($"Update Sag Set Sag.Sag_Afslutet = 1, Sag.Sag_Slut_Dato ='{Update_SAG_Slut_Dato_dateTimePicker.Value.Date.ToShortDateString()}' Where Sag.Sag_ID = '{Sag_ID_textBox.Text}'; IF @@RowCount = 0 BEGIN Select 1/0; END");
 
 
@@ -2042,7 +2042,7 @@ namespace View_GUI
 
             if(Add_time_validate == true)
             {
-                DB_Connection_Write Add_time_toSag = new DB_Connection_Write();
+                Domain_DB_Connection_Write Add_time_toSag = new Domain_DB_Connection_Write();
                 bool succesfull_Added = Add_time_toSag.CreateCommand($"DECLARE @UniqueID Uniqueidentifier SET @UniqueID = NewID();  Insert Into TID Values('{add_time_sag_textBox.Text}','{Add_Time_sag_dateTimePicker.Value.ToShortDateString()}', (@UniqueID), '{add_time_sag_id_textBox.Text}', '{add_time_ydelse_nr_textBox.Text}', '{add_time_Advokat_name_textBox.Text}'); ");
 
                 if(succesfull_Added == true)
@@ -2367,7 +2367,7 @@ namespace View_GUI
 
             if (Validate_Koersel_TId == true)
             {
-                DB_Connection_Write Add_Driving_Time = new DB_Connection_Write();
+                Domain_DB_Connection_Write Add_Driving_Time = new Domain_DB_Connection_Write();
                  bool successful = Add_Driving_Time.CreateCommand($" Declare @UniqueID uniqueidentifier SET @UniqueID = NewID(); Insert Into Kørsel Values('{koersel_koersel_Tid_textBox.Text}', '{koersel_date_dateTimePicker.Value.ToShortDateString()}', '{koersel_noter_textBox.Text}', (@UniqueID), '{koersel_Sag_ID_textBox.Text}', '{koersel_Advokat_Id_textBox.Text}');");
 
                 if(successful == true)
