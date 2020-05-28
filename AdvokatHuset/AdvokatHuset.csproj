@@ -78,6 +78,7 @@
     <Compile Include="Main-Body-Form.Designer.cs">
       <DependentUpon>Main-Body-Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="My_Timer.cs" />
     <Compile Include="Sager-Form2.cs">
       <SubType>Form</SubType>
     </Compile>
