@@ -27,7 +27,7 @@ namespace View_GUI
         string LocalFolderPath = "C://";  // Gets Assignet in initialize
 
         //DB
-        Advokat advokatinstance; // Instance af Advokat 
+        Advokat advokatinstance = new Advokat(); // Instance af Advokat 
         DB_Connection_Write ConnWrite; // Sql Write "
                                    
 
@@ -652,8 +652,8 @@ namespace View_GUI
               Advokat_dataGridView.Columns.Clear();
             }
             Advokat_Dataset.Clear(); // Clear all rows so we begin on fresh datagridview "If We dont do that the old Data will remain and the new data will be inserted at the bottom of the datagridview"
-            Datagridview_Loader Load_Customers = new Datagridview_Loader();
-            Load_Customers.DB_Populate(show_Advokat_Query, Advokat_Dataset, "Medarbejder");
+
+            advokatinstance.Person_Datagridview_Loader(show_Advokat_Query, Advokat_Dataset, "Medarbejder");
             Advokat_dataGridView.DataSource = Advokat_Dataset;
             Advokat_dataGridView.DataMember = "Medarbejder";
             Advokat_dataGridView.Columns[3].ReadOnly = true;  // Forbid Editing Advokat_Tlf
@@ -675,8 +675,8 @@ namespace View_GUI
 
             // Advokat_Tlf
             Advokat_Dataset.Clear();
-            Datagridview_Loader Load_Advokat_Tlf = new Datagridview_Loader();
-            Load_Advokat_Tlf.DB_Populate(Advokat_Tlf_Advokat_Navn_Select, Advokat_Dataset, "Medarbejder_Tlf");
+
+            advokatinstance.Person_Datagridview_Loader(Advokat_Tlf_Advokat_Navn_Select, Advokat_Dataset, "Medarbejder_Tlf");
             Advokat_dataGridView.DataSource = Advokat_Dataset;
             Advokat_dataGridView.DataMember = "Medarbejder_Tlf";
             Advokat_dataGridView.Columns[2].ReadOnly = true;  // Forbid Editing Advokat_ForNavn
@@ -1048,8 +1048,8 @@ namespace View_GUI
         private void Search()
         {
             Advokat_Dataset.Clear(); // Clear all rows so we begin on fresh datagridview "If We dont do that the old Data will remain and the new data will be inserted at the bottom of the datagridview"
-            Datagridview_Loader Load_Search_Result = new Datagridview_Loader();
-            Load_Search_Result.DB_Populate(SearchColumn_SearchString, Advokat_Dataset, "Medarbejder");
+
+            advokatinstance.Person_Datagridview_Loader(SearchColumn_SearchString, Advokat_Dataset, "Medarbejder");
             Advokat_dataGridView.DataSource = Advokat_Dataset;
             Advokat_dataGridView.DataMember = "Medarbejder";
  

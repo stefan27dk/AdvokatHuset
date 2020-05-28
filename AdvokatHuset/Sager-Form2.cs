@@ -27,10 +27,9 @@ namespace View_GUI
         string LocalFolderPath = "C://";  // Gets Assignet in initialize
 
         //DB
-        Sag Saginstance; // Instance af Sag 
+        Sag Saginstance = new Sag(); // Instance af Sag 
         DB_Connection_Write ConnWrite; // Sql Write "
-        //static readonly  DB_Connection_String ConnectionString = DB_Connection_String.GetConnectionString(); // Global Connectionstring
-        //static SqlConnection connection = null; 
+         
       
 
        
@@ -595,8 +594,8 @@ namespace View_GUI
             }
         
             Sag_Dataset.Clear(); // Clear all rows so we begin on fresh datagridview "If We dont do that the old Data will remain and the new data will be inserted at the bottom of the datagridview"
-            Datagridview_Loader Load_Customers = new Datagridview_Loader();
-            Load_Customers.DB_Populate(show_Sag_Query, Sag_Dataset, "Sag");
+
+            Saginstance.Sag_Datagridview_Loader(show_Sag_Query, Sag_Dataset, "Sag");
             Sag_dataGridView.DataSource = Sag_Dataset;
             Sag_dataGridView.DataMember = "Sag";
             
@@ -629,8 +628,8 @@ namespace View_GUI
 
             // Sag_Ydelser
             Sag_Dataset.Clear();
-            Datagridview_Loader Load_Sag_Tlf = new Datagridview_Loader();
-            Load_Sag_Tlf.DB_Populate(Sag_Tlf_Sag_navn_Select, Sag_Dataset, "Sag_Ydelser");
+
+            Saginstance.Sag_Datagridview_Loader(Sag_Tlf_Sag_navn_Select, Sag_Dataset, "Sag_Ydelser");
             Sag_dataGridView.DataSource = Sag_Dataset;
             Sag_dataGridView.DataMember = "Sag_Ydelser";
             Sag_dataGridView.Columns[2].ReadOnly = true;  // Forbid Editing 
@@ -668,8 +667,8 @@ namespace View_GUI
 
             // Sag_Tid
             Sag_Dataset.Clear();
-            Datagridview_Loader Load_Sag_Tlf = new Datagridview_Loader();
-            Load_Sag_Tlf.DB_Populate(Sag_Tlf_Sag_navn_Select, Sag_Dataset, "Tid");
+
+            Saginstance.Sag_Datagridview_Loader(Sag_Tlf_Sag_navn_Select, Sag_Dataset, "Tid");
             Sag_dataGridView.DataSource = Sag_Dataset;
             Sag_dataGridView.DataMember = "Tid";
             Sag_dataGridView.Columns[4].ReadOnly = true;  // Forbid Editing 
@@ -694,7 +693,7 @@ namespace View_GUI
         // Show_Sag- Køre-Tid - Load Sag_køre_Tid - Main Method
         private void LoadKoersel_Tid()
         {
-            string Sag_Tlf_Sag_navn_Select = "Select K.Kørsel_Tid, K.Kørsel_Dato, K.Kørsel_Notering, K.Kørsel_ID, K.Sag_Id, M.Me_Fornavn AS Advokat_Fornavn, K.Advokat_ID  From Kørsel AS K Inner join Medarbejder As M ON K.Advokat_ID = M.Me_ID";
+            string Koersel_Select = "Select K.Kørsel_Tid, K.Kørsel_Dato, K.Kørsel_Notering, K.Kørsel_ID, K.Sag_Id, M.Me_Fornavn AS Advokat_Fornavn, K.Advokat_ID  From Kørsel AS K Inner join Medarbejder As M ON K.Advokat_ID = M.Me_ID";
 
 
             if (Sag_dataGridView.DataMember != "Kørsel")
@@ -706,8 +705,8 @@ namespace View_GUI
 
             // Sag_Kørsel_Tid
             Sag_Dataset.Clear();
-            Datagridview_Loader Load_Sag_Tlf = new Datagridview_Loader();
-            Load_Sag_Tlf.DB_Populate(Sag_Tlf_Sag_navn_Select, Sag_Dataset, "Kørsel");
+
+            Saginstance.Sag_Datagridview_Loader(Koersel_Select, Sag_Dataset, "Kørsel");
             Sag_dataGridView.DataSource = Sag_Dataset;
             Sag_dataGridView.DataMember = "Kørsel";
             Sag_dataGridView.Columns[5].ReadOnly = true;  // Forbid Editing  
@@ -1183,8 +1182,8 @@ namespace View_GUI
         private void Search()
         {
             Sag_Dataset.Clear(); // Clear all rows so we begin on fresh datagridview "If We dont do that the old Data will remain and the new data will be inserted at the bottom of the datagridview"
-            Datagridview_Loader Load_Search_Result = new Datagridview_Loader();
-            Load_Search_Result.DB_Populate(SearchColumn_SearchString, Sag_Dataset, "Sag");
+
+            Saginstance.Sag_Datagridview_Loader(SearchColumn_SearchString, Sag_Dataset, "Sag");
             Sag_dataGridView.DataSource = Sag_Dataset;
             Sag_dataGridView.DataMember = "Sag";
  

@@ -27,10 +27,9 @@ namespace View_GUI
         string LocalFolderPath = "C://";  // Gets Assignet in initialize
 
         //DB
-        Kunde kundeinstance; // Instance af Kunde 
+        Kunde kundeinstance = new Kunde(); // Instance af Kunde 
         DB_Connection_Write ConnWrite; // Sql Write "
-        //static readonly  DB_Connection_String ConnectionString = DB_Connection_String.GetConnectionString(); // Global Connectionstring
-        //static SqlConnection connection = null; 
+        
       
 
        
@@ -659,8 +658,8 @@ namespace View_GUI
               Kunde_dataGridView.Columns.Clear();
             }
             Kunde_Dataset.Clear(); // Clear all rows so we begin on fresh datagridview "If We dont do that the old Data will remain and the new data will be inserted at the bottom of the datagridview"
-            Datagridview_Loader Load_Customers = new Datagridview_Loader();
-            Load_Customers.DB_Populate(show_Kunde_Query, Kunde_Dataset, "Kunde");
+
+            kundeinstance.Person_Datagridview_Loader(show_Kunde_Query, Kunde_Dataset, "Kunde");
             Kunde_dataGridView.DataSource = Kunde_Dataset;
             Kunde_dataGridView.DataMember = "Kunde";
             Kunde_dataGridView.Columns[3].ReadOnly = true;  // Forbid Editing Kunde_Tlf
@@ -682,8 +681,8 @@ namespace View_GUI
 
             // Kunde_Tlf
             Kunde_Dataset.Clear();
-            Datagridview_Loader Load_Kunde_Tlf = new Datagridview_Loader();
-            Load_Kunde_Tlf.DB_Populate(Kunde_Tlf_Kunde_navn_Select, Kunde_Dataset, "Kunde_Tlf");
+
+            kundeinstance.Person_Datagridview_Loader(Kunde_Tlf_Kunde_navn_Select, Kunde_Dataset, "Kunde_Tlf");
             Kunde_dataGridView.DataSource = Kunde_Dataset;
             Kunde_dataGridView.DataMember = "Kunde_Tlf";
             Kunde_dataGridView.Columns[2].ReadOnly = true;  // Forbid Editing Kunde_ForNavn
@@ -1058,8 +1057,8 @@ namespace View_GUI
         private void Search()
         {
             Kunde_Dataset.Clear(); // Clear all rows so we begin on fresh datagridview "If We dont do that the old Data will remain and the new data will be inserted at the bottom of the datagridview"
-            Datagridview_Loader Load_Search_Result = new Datagridview_Loader();
-            Load_Search_Result.DB_Populate(SearchColumn_SearchString, Kunde_Dataset, "Kunde");
+
+            kundeinstance.Person_Datagridview_Loader(SearchColumn_SearchString, Kunde_Dataset, "Kunde");
             Kunde_dataGridView.DataSource = Kunde_Dataset;
             Kunde_dataGridView.DataMember = "Kunde";
  

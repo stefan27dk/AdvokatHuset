@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-
-namespace Domain
+using Domain;
+                
+namespace DAL
 {
     class Datagridview_Loader
     {
@@ -23,7 +23,7 @@ namespace Domain
 
         public void DB_Populate(string Query, DataSet Dataset1, string TableName)
         {
-
+             
             try
             {
                  if(Connection.DBConnectionString != null)

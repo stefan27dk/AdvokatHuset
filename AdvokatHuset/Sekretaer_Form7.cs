@@ -27,10 +27,9 @@ namespace View_GUI
         string LocalFolderPath = "C://";  // Gets Assignet in initialize
 
         //DB
-        Sekretær sekretaerinstance; // Instance af Sekretaer 
+        Sekretær sekretaerinstance = new Sekretær(); // Instance af Sekretaer 
         DB_Connection_Write ConnWrite; // Sql Write "
-        //static readonly  DB_Connection_String ConnectionString = DB_Connection_String.GetConnectionString(); // Global Connectionstring
-        //static SqlConnection connection = null; 
+      
       
 
        
@@ -47,7 +46,6 @@ namespace View_GUI
 
         //Sekretaer_Tlf - Database
         static string Sekretaer_Tlf_Select_Query = "Select* From Medarbejder_Tlf";
-        //static string Sekretaer_Tlf_Select_Query = "Select Sekretaer_Tlf.*, Sekretaer.Sekretaer_Fornavn, Sekretaer.Sekretaer_Efternavn From Sekretaer_Tlf Inner Join Sekretaer ON Sekretaer_Tlf.Sekretaer_ID = Sekretaer.Sekretaer_ID;";
 
 
 
@@ -652,9 +650,11 @@ namespace View_GUI
             {
               Sekretaer_dataGridView.Columns.Clear();
             }
+
+
             Sekretaer_Dataset.Clear(); // Clear all rows so we begin on fresh datagridview "If We dont do that the old Data will remain and the new data will be inserted at the bottom of the datagridview"
-            Datagridview_Loader Load_Customers = new Datagridview_Loader();
-            Load_Customers.DB_Populate(show_Sekretaer_Query, Sekretaer_Dataset, "Medarbejder");
+
+            sekretaerinstance.Person_Datagridview_Loader(show_Sekretaer_Query, Sekretaer_Dataset, "Medarbejder");
             Sekretaer_dataGridView.DataSource = Sekretaer_Dataset;
             Sekretaer_dataGridView.DataMember = "Medarbejder";
             Sekretaer_dataGridView.Columns[3].ReadOnly = true;  // Forbid Editing Sekretaer_Tlf
@@ -676,8 +676,8 @@ namespace View_GUI
 
             // Sekretaer_Tlf
             Sekretaer_Dataset.Clear();
-            Datagridview_Loader Load_Sekretaer_Tlf = new Datagridview_Loader();
-            Load_Sekretaer_Tlf.DB_Populate(Sekretaer_Tlf_Sekretaer_navn_Select, Sekretaer_Dataset, "Medarbejder_Tlf");
+
+            sekretaerinstance.Person_Datagridview_Loader(Sekretaer_Tlf_Sekretaer_navn_Select, Sekretaer_Dataset, "Medarbejder_Tlf");
             Sekretaer_dataGridView.DataSource = Sekretaer_Dataset;
             Sekretaer_dataGridView.DataMember = "Medarbejder_Tlf";
             Sekretaer_dataGridView.Columns[2].ReadOnly = true;  // Forbid Editing Sekretaer_ForNavn
@@ -1054,8 +1054,8 @@ namespace View_GUI
         private void Search()
         {
             Sekretaer_Dataset.Clear(); // Clear all rows so we begin on fresh datagridview "If We dont do that the old Data will remain and the new data will be inserted at the bottom of the datagridview"
-            Datagridview_Loader Load_Search_Result = new Datagridview_Loader();
-            Load_Search_Result.DB_Populate(SearchColumn_SearchString, Sekretaer_Dataset, "Medarnejder");
+
+            sekretaerinstance.Person_Datagridview_Loader(SearchColumn_SearchString, Sekretaer_Dataset, "Medarnejder");
             Sekretaer_dataGridView.DataSource = Sekretaer_Dataset;
             Sekretaer_dataGridView.DataMember = "Medarnejder";
  

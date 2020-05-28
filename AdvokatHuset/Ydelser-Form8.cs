@@ -27,7 +27,7 @@ namespace View_GUI
         string LocalFolderPath = "C://";  // Gets Assignet in initialize
 
         //DB
-        Ydelse ydelseinstance; // Instance af Ydelse 
+        Ydelse ydelseinstance = new Ydelse(); // Instance af Ydelse 
         DB_Connection_Write ConnWrite; // Sql Write "
         //static readonly  DB_Connection_String ConnectionString = DB_Connection_String.GetConnectionString(); // Global Connectionstring
         //static SqlConnection connection = null; 
@@ -607,9 +607,11 @@ namespace View_GUI
             {
               Ydelse_dataGridView.Columns.Clear();
             }
+
+
             Ydelse_Dataset.Clear(); // Clear all rows so we begin on fresh datagridview "If We dont do that the old Data will remain and the new data will be inserted at the bottom of the datagridview"
-            Datagridview_Loader Load_Customers = new Datagridview_Loader();
-            Load_Customers.DB_Populate(show_Ydelse_Query, Ydelse_Dataset, "Ydelse");
+
+            ydelseinstance.Ydelse_Datagridview_Loader(show_Ydelse_Query, Ydelse_Dataset, "Ydelse");
             Ydelse_dataGridView.DataSource = Ydelse_Dataset;
             Ydelse_dataGridView.DataMember = "Ydelse";
  
@@ -941,8 +943,8 @@ namespace View_GUI
         private void Search()
         {
             Ydelse_Dataset.Clear(); // Clear all rows so we begin on fresh datagridview "If We dont do that the old Data will remain and the new data will be inserted at the bottom of the datagridview"
-            Datagridview_Loader Load_Search_Result = new Datagridview_Loader();
-            Load_Search_Result.DB_Populate(SearchColumn_SearchString, Ydelse_Dataset, "Ydelse");
+
+            ydelseinstance.Ydelse_Datagridview_Loader(SearchColumn_SearchString, Ydelse_Dataset, "Ydelse");
             Ydelse_dataGridView.DataSource = Ydelse_Dataset;
             Ydelse_dataGridView.DataMember = "Ydelse";
  

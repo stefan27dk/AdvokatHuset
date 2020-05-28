@@ -28,7 +28,7 @@ namespace View_GUI
         string LocalFolderPath = "C://";  // Gets Assignet in initialize
 
         //DB
-        Medarbejder medarbejderinstance; // Instance af Medarbejder 
+        Medarbejder medarbejderinstance = new Medarbejder(); // Instance af Medarbejder 
         DB_Connection_Write ConnWrite; // Sql Write "
                                    
 
@@ -674,9 +674,11 @@ namespace View_GUI
             {
               Medarbejder_dataGridView.Columns.Clear();
             }
+
+
             Medarbejder_Dataset.Clear(); // Clear all rows so we begin on fresh datagridview "If We dont do that the old Data will remain and the new data will be inserted at the bottom of the datagridview"
-            Datagridview_Loader Load_Customers = new Datagridview_Loader();
-            Load_Customers.DB_Populate(show_Medarbejder_Query, Medarbejder_Dataset, "Medarbejder");
+
+            medarbejderinstance.Person_Datagridview_Loader(show_Medarbejder_Query, Medarbejder_Dataset, "Medarbejder");
             Medarbejder_dataGridView.DataSource = Medarbejder_Dataset;
             Medarbejder_dataGridView.DataMember = "Medarbejder";
             Medarbejder_dataGridView.Columns[3].ReadOnly = true;  // Forbid Editing Medarbejder_Tlf
@@ -698,8 +700,8 @@ namespace View_GUI
 
             // Medarbejder_Tlf
             Medarbejder_Dataset.Clear();
-            Datagridview_Loader Load_Medarbejder_Tlf = new Datagridview_Loader();
-            Load_Medarbejder_Tlf.DB_Populate(Medarbejder_Tlf_Medarbejder_Navn_Select, Medarbejder_Dataset, "Medarbejder_Tlf");
+
+            medarbejderinstance.Person_Datagridview_Loader(Medarbejder_Tlf_Medarbejder_Navn_Select, Medarbejder_Dataset, "Medarbejder_Tlf");
             Medarbejder_dataGridView.DataSource = Medarbejder_Dataset;
             Medarbejder_dataGridView.DataMember = "Medarbejder_Tlf";
             Medarbejder_dataGridView.Columns[2].ReadOnly = true;  // Forbid Editing Medarbejder_ForNavn
@@ -1066,8 +1068,8 @@ namespace View_GUI
         private void Search()
         {
             Medarbejder_Dataset.Clear(); // Clear all rows so we begin on fresh datagridview "If We dont do that the old Data will remain and the new data will be inserted at the bottom of the datagridview"
-            Datagridview_Loader Load_Search_Result = new Datagridview_Loader();
-            Load_Search_Result.DB_Populate(SearchColumn_SearchString, Medarbejder_Dataset, "Medarbejder");
+
+            medarbejderinstance.Person_Datagridview_Loader(SearchColumn_SearchString, Medarbejder_Dataset, "Medarbejder");
             Medarbejder_dataGridView.DataSource = Medarbejder_Dataset;
             Medarbejder_dataGridView.DataMember = "Medarbejder";
  
