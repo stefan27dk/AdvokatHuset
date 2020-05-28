@@ -173,6 +173,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _360_Chrome_icon {
+            get {
+                object obj = ResourceManager.GetObject("360-Chrome-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _42608_stopwatch_icon {
             get {
                 object obj = ResourceManager.GetObject("42608-stopwatch-icon", resourceCulture);

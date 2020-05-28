@@ -97,5 +97,45 @@ namespace View_GUI
             home_webBrowser.Focus();
 
         }
+
+
+
+
+
+
+        // Webbrowser Go Back
+        private void browser_back_button_Click(object sender, EventArgs e)
+        {
+            home_webBrowser.GoBack();
+
+        }
+
+
+
+      
+    
+        // Webbrowser Go Forward
+        private void Webbrowser_Go_Forward_button_Click(object sender, EventArgs e)
+        {
+            home_webBrowser.GoForward();
+
+        }
+
+
+        // Web - Browser - Home
+        private void Web_Browser_Home_button_Click(object sender, EventArgs e)
+        {
+           this.home_webBrowser.Navigate("https://advokathuset.dk/medarbejdere/");
+
+        }
+
+
+
+
+        // Browser_Show_ Google
+        private void web_browser_google_button_Click(object sender, EventArgs e)
+        {
+            home_webBrowser.Navigate("google.com");
+        }
     }
 }
