@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Body_Form));
             this.Main_Body_Loader_panel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
@@ -46,8 +47,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1584, 762);
             this.Controls.Add(this.Main_Body_Loader_panel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main_Body_Form";
-            this.Text = "Main_Body_Form";
+            this.Text = "Advokathuset";
             this.Load += new System.EventHandler(this.Main_Body_Form_Load);
             this.ResumeLayout(false);
 
