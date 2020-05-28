@@ -723,17 +723,15 @@ namespace View_GUI
             // Save changes to DB  "UPDATE Medarbejdere"
             if(Medarbejder_dataGridView.DataMember == "Medarbejder_Tlf") // Medarbejder_Tlf
             {
-                Medarbejder_dataGridView.EndEdit();
-                DatagridView_Save Update_Medarbejdere = new DatagridView_Save();
-                Update_Medarbejdere.DatagridView_Update("Select Medarbejder_Tlf.Me_Tlf AS Medarbejder_Tlf, Medarbejder_Tlf.Me_ID AS Medarbejder_ID From Medarbejder_Tlf", Medarbejder_Dataset, "Medarbejder_Tlf", this.Medarbejder_dataGridView);
+                Medarbejder_dataGridView.EndEdit();  
+                medarbejderinstance.Person_Save_DGV("Select Medarbejder_Tlf.Me_Tlf AS Medarbejder_Tlf, Medarbejder_Tlf.Me_ID AS Medarbejder_ID From Medarbejder_Tlf", Medarbejder_Dataset, "Medarbejder_Tlf", this.Medarbejder_dataGridView);
 
             }
 
             else if(Medarbejder_dataGridView.DataMember == "Medarbejder")   // Medarbejder
             {
                 Medarbejder_dataGridView.EndEdit();
-                DatagridView_Save Update_Medarbejdere = new DatagridView_Save();
-                Update_Medarbejdere.DatagridView_Update("Select M.Me_Fornavn AS Medarbejder_Fornavn, M.Me_Efternavn AS Medarbejder_Efternavn , M.Me_PostNr AS Medarbejder_PostNr, M.Me_Adresse AS Medarbejder_Adresse, M.Me_Email AS Medarbejder_Email, M.Me_ID AS Medarbejder_ID, M.Me_Type, M.Me_Oprets_Dato AS Medarbejder_Oprets_Dato From Medarbejder AS M", Medarbejder_Dataset, "Medarbejder", this.Medarbejder_dataGridView);
+                medarbejderinstance.Person_Save_DGV("Select M.Me_Fornavn AS Medarbejder_Fornavn, M.Me_Efternavn AS Medarbejder_Efternavn , M.Me_PostNr AS Medarbejder_PostNr, M.Me_Adresse AS Medarbejder_Adresse, M.Me_Email AS Medarbejder_Email, M.Me_ID AS Medarbejder_ID, M.Me_Type, M.Me_Oprets_Dato AS Medarbejder_Oprets_Dato From Medarbejder AS M", Medarbejder_Dataset, "Medarbejder", this.Medarbejder_dataGridView);
             }
          
 

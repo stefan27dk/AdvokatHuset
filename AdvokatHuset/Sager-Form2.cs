@@ -742,16 +742,14 @@ namespace View_GUI
             if(Sag_dataGridView.DataMember == "Sag_Tlf") // Sag_Tlf
             {
                 Sag_dataGridView.EndEdit();
-                DatagridView_Save Update_Sag = new DatagridView_Save();
-                Update_Sag.DatagridView_Update("", Sag_Dataset, "Sag_Tlf", this.Sag_dataGridView);
+                Saginstance.Sag_Save_DGV("", Sag_Dataset, "Sag_Tlf", this.Sag_dataGridView);
 
             }
 
             else if(Sag_dataGridView.DataMember == "Sag")   // Sag
             {
                 Sag_dataGridView.EndEdit();
-                DatagridView_Save Update_Sag = new DatagridView_Save();
-                Update_Sag.DatagridView_Update("Select S.Sag_Type, S.Sag_ID, S.Sag_Oprets_Dato, S.Sag_Slut_Dato, S.Sag_Afslutet, S.Sag_Kunde_ID, S.Sag_Advokat_ID AS Ansvarlig_Advokat_ID From Sag As S ", Sag_Dataset, "Sag", this.Sag_dataGridView);
+                Saginstance.Sag_Save_DGV("Select S.Sag_Type, S.Sag_ID, S.Sag_Oprets_Dato, S.Sag_Slut_Dato, S.Sag_Afslutet, S.Sag_Kunde_ID, S.Sag_Advokat_ID AS Ansvarlig_Advokat_ID From Sag As S ", Sag_Dataset, "Sag", this.Sag_dataGridView);
             }
          
 

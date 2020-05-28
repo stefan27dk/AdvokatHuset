@@ -704,18 +704,16 @@ namespace View_GUI
             // Save changes to DB  "UPDATE Sekretaerer"
             if(Sekretaer_dataGridView.DataMember == "Medarbejder_Tlf") // Sekretaer_Tlf
             {
-                Sekretaer_dataGridView.EndEdit();
-                DatagridView_Save Update_Sekretaerer = new DatagridView_Save();
-                Update_Sekretaerer.DatagridView_Update(Sekretaer_Tlf_Select_Query, Sekretaer_Dataset, "Medarbejder_Tlf", this.Sekretaer_dataGridView);
+                Sekretaer_dataGridView.EndEdit(); 
+                sekretaerinstance.Person_Save_DGV(Sekretaer_Tlf_Select_Query, Sekretaer_Dataset, "Medarbejder_Tlf", this.Sekretaer_dataGridView);
 
             }
 
             else if(Sekretaer_dataGridView.DataMember == "Medarbejder")   // Sekretaer
             {
                 string Sekretaer_Query = "Select M.Me_Fornavn AS Sekretær_Fornavn, M.Me_Efternavn AS Sekretær_Efternavn , M.Me_PostNr AS Sekretær_PostNr, M.Me_Adresse AS Sekretær_Adresse, M.Me_Email AS Sekretær_Email, M.Me_ID AS Sekretær_ID, M.Me_Type, M.Me_Oprets_Dato AS Sekretær_Oprets_Dato From Medarbejder AS M";
-                Sekretaer_dataGridView.EndEdit();
-                DatagridView_Save Update_Sekretaerer = new DatagridView_Save();
-                Update_Sekretaerer.DatagridView_Update(Sekretaer_Query, Sekretaer_Dataset, "Medarbejder", this.Sekretaer_dataGridView);
+                Sekretaer_dataGridView.EndEdit(); 
+                sekretaerinstance.Person_Save_DGV(Sekretaer_Query, Sekretaer_Dataset, "Medarbejder", this.Sekretaer_dataGridView);
             }
          
 

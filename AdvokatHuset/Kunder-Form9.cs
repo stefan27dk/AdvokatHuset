@@ -709,16 +709,14 @@ namespace View_GUI
             if(Kunde_dataGridView.DataMember == "Kunde_Tlf") // Kunde_Tlf
             {
                 Kunde_dataGridView.EndEdit();
-                DatagridView_Save Update_Kunder = new DatagridView_Save();
-                Update_Kunder.DatagridView_Update(Kunde_Tlf_Select_Query, Kunde_Dataset, "Kunde_Tlf", this.Kunde_dataGridView);
+                kundeinstance.Person_Save_DGV(Kunde_Tlf_Select_Query, Kunde_Dataset, "Kunde_Tlf", this.Kunde_dataGridView);
 
             }
 
             else if(Kunde_dataGridView.DataMember == "Kunde")   // KUNDE
             {
                 Kunde_dataGridView.EndEdit();
-                DatagridView_Save Update_Kunder = new DatagridView_Save();
-                Update_Kunder.DatagridView_Update("Select* From Kunde", Kunde_Dataset, "Kunde", this.Kunde_dataGridView);
+                kundeinstance.Person_Save_DGV("Select* From Kunde", Kunde_Dataset, "Kunde", this.Kunde_dataGridView);
             }
          
 

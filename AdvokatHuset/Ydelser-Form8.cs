@@ -630,9 +630,8 @@ namespace View_GUI
             
             if(Ydelse_dataGridView.DataMember == "Ydelse")   // Ydelse
             {
-                Ydelse_dataGridView.EndEdit();
-                DatagridView_Save Update_Ydelse = new DatagridView_Save();
-                Update_Ydelse.DatagridView_Update("Select* From Ydelse", Ydelse_Dataset, "Ydelse", this.Ydelse_dataGridView);
+                Ydelse_dataGridView.EndEdit(); 
+                ydelseinstance.Ydelse_Save_DGV("Select* From Ydelse", Ydelse_Dataset, "Ydelse", this.Ydelse_dataGridView);
             }
          
 

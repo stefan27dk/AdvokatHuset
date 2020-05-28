@@ -698,16 +698,13 @@ namespace View_GUI
             if(Advokat_dataGridView.DataMember == "Medarbejder_Tlf") // Advokat_Tlf
             {
                 Advokat_dataGridView.EndEdit();
-                DatagridView_Save Update_Advokater = new DatagridView_Save();
-                Update_Advokater.DatagridView_Update("Select Medarbejder_Tlf.Me_Tlf AS Advokat_Tlf, Medarbejder_Tlf.Me_ID AS Advokat_ID From Medarbejder_Tlf", Advokat_Dataset, "Medarbejder_Tlf", this.Advokat_dataGridView);
-
+                advokatinstance.Person_Save_DGV("Select Medarbejder_Tlf.Me_Tlf AS Advokat_Tlf, Medarbejder_Tlf.Me_ID AS Advokat_ID From Medarbejder_Tlf", Advokat_Dataset, "Medarbejder_Tlf", this.Advokat_dataGridView);
             }
 
             else if(Advokat_dataGridView.DataMember == "Medarbejder")   // ADVOKAT
             {
                 Advokat_dataGridView.EndEdit();
-                DatagridView_Save Update_Advokater = new DatagridView_Save();
-                Update_Advokater.DatagridView_Update("Select M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn AS Advokat_Efternavn , M.Me_PostNr AS Advokat_PostNr, M.Me_Adresse AS Advokat_Adresse, M.Me_Email AS Advokat_Email, M.Me_ID AS Advokat_ID, M.Me_Type, M.Me_Oprets_Dato AS Advokat_Oprets_Dato From Medarbejder AS M;", Advokat_Dataset, "Medarbejder", this.Advokat_dataGridView);
+                advokatinstance.Person_Save_DGV("Select M.Me_Fornavn AS Advokat_Fornavn, M.Me_Efternavn AS Advokat_Efternavn , M.Me_PostNr AS Advokat_PostNr, M.Me_Adresse AS Advokat_Adresse, M.Me_Email AS Advokat_Email, M.Me_ID AS Advokat_ID, M.Me_Type, M.Me_Oprets_Dato AS Advokat_Oprets_Dato From Medarbejder AS M;", Advokat_Dataset, "Medarbejder", this.Advokat_dataGridView);
             }
          
 
