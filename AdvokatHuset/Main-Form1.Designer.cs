@@ -30,50 +30,24 @@
         {
             this.components = new System.ComponentModel.Container();
             this.Loader_panel = new System.Windows.Forms.Panel();
-            this.log_In_top_Bottom_panel = new System.Windows.Forms.Panel();
-            this.log_in_top_panel = new System.Windows.Forms.Panel();
             this.log_in_border_panel = new System.Windows.Forms.Panel();
             this.log_in_background_panel = new System.Windows.Forms.Panel();
+            this.type_log_in_label = new System.Windows.Forms.Label();
             this.type_log_in_textBox = new System.Windows.Forms.TextBox();
+            this.copy_id_button = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.log_in_off_menu_Pass_textBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.log_in_off_menu_Username_textBox = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.log_in_din_id_textBox = new System.Windows.Forms.TextBox();
             this.log_off_button = new System.Windows.Forms.Button();
             this.shut_down_button = new System.Windows.Forms.Button();
+            this.log_In_top_Bottom_panel = new System.Windows.Forms.Panel();
+            this.log_in_top_panel = new System.Windows.Forms.Panel();
             this.task_bar_panel = new System.Windows.Forms.Panel();
             this.itemMenuPanelDropDown = new System.Windows.Forms.Panel();
             this.item_menu_back_panekBlack_panel = new System.Windows.Forms.Panel();
-            this.screenshot_DropDown_menustrip = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.Top_Menu_panel = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.item_menu_back_panel_top_panel = new System.Windows.Forms.Panel();
-            this.item_menu_top_panel = new System.Windows.Forms.Panel();
-            this.hode_Program_button = new System.Windows.Forms.Button();
-            this.main_screenshot_button = new System.Windows.Forms.ToolStripMenuItem();
-            this.screenshotEntireScreen_button = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.selection_screenshot_button = new System.Windows.Forms.ToolStripMenuItem();
-            this.Home_Button = new System.Windows.Forms.Button();
-            this.Menu_Search_button = new System.Windows.Forms.Button();
-            this.General_Menu_Panel = new System.Windows.Forms.Panel();
-            this.General_menuStrip = new System.Windows.Forms.MenuStrip();
-            this.sagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ydelserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.medarbejder_item = new System.Windows.Forms.ToolStripMenuItem();
-            this.advokaterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sekretærToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kunderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kørselToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bell_button = new System.Windows.Forms.Button();
-            this.Loacal_Folder_button = new System.Windows.Forms.Button();
-            this.log_In_off_button = new System.Windows.Forms.Button();
-            this.Back_Button = new System.Windows.Forms.Button();
-            this.item_menu_button = new System.Windows.Forms.Button();
-            this.Forward_Button = new System.Windows.Forms.Button();
             this.statistics_button = new System.Windows.Forms.Button();
             this.text_writer_button = new System.Windows.Forms.Button();
             this.world_clock_button = new System.Windows.Forms.Button();
@@ -88,23 +62,47 @@
             this.sound_recorder_button = new System.Windows.Forms.Button();
             this.open_paint_button = new System.Windows.Forms.Button();
             this.setting_button = new System.Windows.Forms.Button();
-            this.type_log_in_label = new System.Windows.Forms.Label();
-            this.copy_id_button = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.screenshot_DropDown_menustrip = new System.Windows.Forms.MenuStrip();
+            this.main_screenshot_button = new System.Windows.Forms.ToolStripMenuItem();
+            this.screenshotEntireScreen_button = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.selection_screenshot_button = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.Top_Menu_panel = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.Home_Button = new System.Windows.Forms.Button();
+            this.Menu_Search_button = new System.Windows.Forms.Button();
+            this.General_Menu_Panel = new System.Windows.Forms.Panel();
+            this.General_menuStrip = new System.Windows.Forms.MenuStrip();
+            this.sagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ydelserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.medarbejder_item = new System.Windows.Forms.ToolStripMenuItem();
+            this.advokaterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sekretærToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kunderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bell_button = new System.Windows.Forms.Button();
+            this.Loacal_Folder_button = new System.Windows.Forms.Button();
+            this.log_In_off_button = new System.Windows.Forms.Button();
+            this.Back_Button = new System.Windows.Forms.Button();
+            this.item_menu_button = new System.Windows.Forms.Button();
+            this.Forward_Button = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.item_menu_back_panel_top_panel = new System.Windows.Forms.Panel();
+            this.item_menu_top_panel = new System.Windows.Forms.Panel();
             this.Loader_panel.SuspendLayout();
-            this.log_In_top_Bottom_panel.SuspendLayout();
             this.log_in_border_panel.SuspendLayout();
             this.log_in_background_panel.SuspendLayout();
+            this.log_In_top_Bottom_panel.SuspendLayout();
             this.itemMenuPanelDropDown.SuspendLayout();
             this.item_menu_back_panekBlack_panel.SuspendLayout();
             this.screenshot_DropDown_menustrip.SuspendLayout();
             this.Top_Menu_panel.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
-            this.item_menu_top_panel.SuspendLayout();
             this.General_Menu_Panel.SuspendLayout();
             this.General_menuStrip.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
+            this.item_menu_top_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // Loader_panel
@@ -119,26 +117,6 @@
             this.Loader_panel.Name = "Loader_panel";
             this.Loader_panel.Size = new System.Drawing.Size(1584, 762);
             this.Loader_panel.TabIndex = 9;
-            // 
-            // log_In_top_Bottom_panel
-            // 
-            this.log_In_top_Bottom_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.log_In_top_Bottom_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(196)))), ((int)(((byte)(60)))));
-            this.log_In_top_Bottom_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.log_In_top_Bottom_panel.Controls.Add(this.log_in_top_panel);
-            this.log_In_top_Bottom_panel.Location = new System.Drawing.Point(5, 61);
-            this.log_In_top_Bottom_panel.Name = "log_In_top_Bottom_panel";
-            this.log_In_top_Bottom_panel.Size = new System.Drawing.Size(40, 29);
-            this.log_In_top_Bottom_panel.TabIndex = 5;
-            this.log_In_top_Bottom_panel.Visible = false;
-            // 
-            // log_in_top_panel
-            // 
-            this.log_in_top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
-            this.log_in_top_panel.Location = new System.Drawing.Point(1, 4);
-            this.log_in_top_panel.Name = "log_in_top_panel";
-            this.log_in_top_panel.Size = new System.Drawing.Size(36, 18);
-            this.log_in_top_panel.TabIndex = 4;
             // 
             // log_in_border_panel
             // 
@@ -171,6 +149,18 @@
             this.log_in_background_panel.Size = new System.Drawing.Size(438, 317);
             this.log_in_background_panel.TabIndex = 3;
             // 
+            // type_log_in_label
+            // 
+            this.type_log_in_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.type_log_in_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(100)))));
+            this.type_log_in_label.Image = global::View_GUI.Properties.Resources.question_type_one_correct_icon1;
+            this.type_log_in_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.type_log_in_label.Location = new System.Drawing.Point(57, 208);
+            this.type_log_in_label.Name = "type_log_in_label";
+            this.type_log_in_label.Size = new System.Drawing.Size(91, 34);
+            this.type_log_in_label.TabIndex = 34;
+            this.type_log_in_label.Text = "Type:";
+            // 
             // type_log_in_textBox
             // 
             this.type_log_in_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -179,6 +169,40 @@
             this.type_log_in_textBox.ReadOnly = true;
             this.type_log_in_textBox.Size = new System.Drawing.Size(171, 20);
             this.type_log_in_textBox.TabIndex = 33;
+            // 
+            // copy_id_button
+            // 
+            this.copy_id_button.BackColor = System.Drawing.Color.Transparent;
+            this.copy_id_button.BackgroundImage = global::View_GUI.Properties.Resources.win7_ico_shell32_dll_260__2_;
+            this.copy_id_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.copy_id_button.FlatAppearance.BorderSize = 0;
+            this.copy_id_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.copy_id_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.copy_id_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.copy_id_button.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.copy_id_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.copy_id_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.copy_id_button.Location = new System.Drawing.Point(386, 63);
+            this.copy_id_button.Margin = new System.Windows.Forms.Padding(0);
+            this.copy_id_button.Name = "copy_id_button";
+            this.copy_id_button.Size = new System.Drawing.Size(40, 38);
+            this.copy_id_button.TabIndex = 32;
+            this.copy_id_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.copy_id_button.UseVisualStyleBackColor = false;
+            this.copy_id_button.Click += new System.EventHandler(this.copy_id_button_Click);
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(100)))));
+            this.label2.Image = global::View_GUI.Properties.Resources.Pass2;
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label2.Location = new System.Drawing.Point(63, 159);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 24);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "Pass:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // log_in_off_menu_Pass_textBox
             // 
@@ -189,6 +213,19 @@
             this.log_in_off_menu_Pass_textBox.Size = new System.Drawing.Size(171, 20);
             this.log_in_off_menu_Pass_textBox.TabIndex = 30;
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(100)))));
+            this.label1.Image = global::View_GUI.Properties.Resources.name_card_icon1;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label1.Location = new System.Drawing.Point(16, 115);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(138, 24);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Brugernavn:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // log_in_off_menu_Username_textBox
             // 
             this.log_in_off_menu_Username_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -197,6 +234,19 @@
             this.log_in_off_menu_Username_textBox.ReadOnly = true;
             this.log_in_off_menu_Username_textBox.Size = new System.Drawing.Size(171, 20);
             this.log_in_off_menu_Username_textBox.TabIndex = 28;
+            // 
+            // label16
+            // 
+            this.label16.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(100)))));
+            this.label16.Image = global::View_GUI.Properties.Resources.barcode_icon;
+            this.label16.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label16.Location = new System.Drawing.Point(56, 69);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(98, 24);
+            this.label16.TabIndex = 27;
+            this.label16.Text = "Din ID:";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // log_in_din_id_textBox
             // 
@@ -241,6 +291,26 @@
             this.shut_down_button.UseVisualStyleBackColor = false;
             this.shut_down_button.Click += new System.EventHandler(this.shut_down_button_Click);
             // 
+            // log_In_top_Bottom_panel
+            // 
+            this.log_In_top_Bottom_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.log_In_top_Bottom_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(196)))), ((int)(((byte)(60)))));
+            this.log_In_top_Bottom_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.log_In_top_Bottom_panel.Controls.Add(this.log_in_top_panel);
+            this.log_In_top_Bottom_panel.Location = new System.Drawing.Point(5, 61);
+            this.log_In_top_Bottom_panel.Name = "log_In_top_Bottom_panel";
+            this.log_In_top_Bottom_panel.Size = new System.Drawing.Size(40, 29);
+            this.log_In_top_Bottom_panel.TabIndex = 5;
+            this.log_In_top_Bottom_panel.Visible = false;
+            // 
+            // log_in_top_panel
+            // 
+            this.log_in_top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
+            this.log_in_top_panel.Location = new System.Drawing.Point(1, 4);
+            this.log_in_top_panel.Name = "log_in_top_panel";
+            this.log_in_top_panel.Size = new System.Drawing.Size(36, 18);
+            this.log_in_top_panel.TabIndex = 4;
+            // 
             // task_bar_panel
             // 
             this.task_bar_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(34)))), ((int)(((byte)(44)))));
@@ -284,483 +354,6 @@
             this.item_menu_back_panekBlack_panel.Name = "item_menu_back_panekBlack_panel";
             this.item_menu_back_panekBlack_panel.Size = new System.Drawing.Size(198, 317);
             this.item_menu_back_panekBlack_panel.TabIndex = 3;
-            // 
-            // screenshot_DropDown_menustrip
-            // 
-            this.screenshot_DropDown_menustrip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.screenshot_DropDown_menustrip.AutoSize = false;
-            this.screenshot_DropDown_menustrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.screenshot_DropDown_menustrip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.screenshot_DropDown_menustrip.Dock = System.Windows.Forms.DockStyle.None;
-            this.screenshot_DropDown_menustrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.main_screenshot_button,
-            this.toolStripMenuItem1});
-            this.screenshot_DropDown_menustrip.Location = new System.Drawing.Point(1387, 2);
-            this.screenshot_DropDown_menustrip.Name = "screenshot_DropDown_menustrip";
-            this.screenshot_DropDown_menustrip.Padding = new System.Windows.Forms.Padding(1, 1, 0, 1);
-            this.screenshot_DropDown_menustrip.Size = new System.Drawing.Size(42, 43);
-            this.screenshot_DropDown_menustrip.TabIndex = 8;
-            this.screenshot_DropDown_menustrip.TabStop = true;
-            this.screenshot_DropDown_menustrip.Text = "menuStrip1";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(12, 41);
-            // 
-            // Top_Menu_panel
-            // 
-            this.Top_Menu_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.Top_Menu_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Top_Menu_panel.Controls.Add(this.hode_Program_button);
-            this.Top_Menu_panel.Controls.Add(this.screenshot_DropDown_menustrip);
-            this.Top_Menu_panel.Controls.Add(this.panel1);
-            this.Top_Menu_panel.Controls.Add(this.Home_Button);
-            this.Top_Menu_panel.Controls.Add(this.Menu_Search_button);
-            this.Top_Menu_panel.Controls.Add(this.General_Menu_Panel);
-            this.Top_Menu_panel.Controls.Add(this.bell_button);
-            this.Top_Menu_panel.Controls.Add(this.Loacal_Folder_button);
-            this.Top_Menu_panel.Controls.Add(this.log_In_off_button);
-            this.Top_Menu_panel.Controls.Add(this.Back_Button);
-            this.Top_Menu_panel.Controls.Add(this.item_menu_button);
-            this.Top_Menu_panel.Controls.Add(this.Forward_Button);
-            this.Top_Menu_panel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Top_Menu_panel.Location = new System.Drawing.Point(0, 0);
-            this.Top_Menu_panel.Name = "Top_Menu_panel";
-            this.Top_Menu_panel.Size = new System.Drawing.Size(1584, 63);
-            this.Top_Menu_panel.TabIndex = 1;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Gray;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 59);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1582, 2);
-            this.panel1.TabIndex = 13;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem3,
-            this.toolStripMenuItem5});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(81, 48);
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(80, 22);
-            this.toolStripMenuItem3.Text = "1";
-            // 
-            // toolStripMenuItem5
-            // 
-            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(80, 22);
-            this.toolStripMenuItem5.Text = "2";
-            // 
-            // item_menu_back_panel_top_panel
-            // 
-            this.item_menu_back_panel_top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.item_menu_back_panel_top_panel.Location = new System.Drawing.Point(1, 4);
-            this.item_menu_back_panel_top_panel.Name = "item_menu_back_panel_top_panel";
-            this.item_menu_back_panel_top_panel.Size = new System.Drawing.Size(36, 18);
-            this.item_menu_back_panel_top_panel.TabIndex = 4;
-            // 
-            // item_menu_top_panel
-            // 
-            this.item_menu_top_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.item_menu_top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(217)))), ((int)(((byte)(255)))));
-            this.item_menu_top_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.item_menu_top_panel.Controls.Add(this.item_menu_back_panel_top_panel);
-            this.item_menu_top_panel.Location = new System.Drawing.Point(1520, 61);
-            this.item_menu_top_panel.Name = "item_menu_top_panel";
-            this.item_menu_top_panel.Size = new System.Drawing.Size(40, 21);
-            this.item_menu_top_panel.TabIndex = 1;
-            this.item_menu_top_panel.Visible = false;
-            // 
-            // hode_Program_button
-            // 
-            this.hode_Program_button.BackgroundImage = global::View_GUI.Properties.Resources.date_icon;
-            this.hode_Program_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.hode_Program_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.hode_Program_button.FlatAppearance.BorderSize = 0;
-            this.hode_Program_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.hode_Program_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
-            this.hode_Program_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.hode_Program_button.Location = new System.Drawing.Point(1246, 6);
-            this.hode_Program_button.Name = "hode_Program_button";
-            this.hode_Program_button.Size = new System.Drawing.Size(41, 39);
-            this.hode_Program_button.TabIndex = 15;
-            this.hode_Program_button.UseVisualStyleBackColor = true;
-            this.hode_Program_button.Click += new System.EventHandler(this.hode_Program_button_Click);
-            // 
-            // main_screenshot_button
-            // 
-            this.main_screenshot_button.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
-            this.main_screenshot_button.AutoSize = false;
-            this.main_screenshot_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.main_screenshot_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.main_screenshot_button.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.main_screenshot_button.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.screenshotEntireScreen_button,
-            this.toolStripMenuItem4,
-            this.selection_screenshot_button});
-            this.main_screenshot_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.main_screenshot_button.Image = global::View_GUI.Properties.Resources.camera_icon;
-            this.main_screenshot_button.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.main_screenshot_button.ImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.main_screenshot_button.MergeAction = System.Windows.Forms.MergeAction.Replace;
-            this.main_screenshot_button.Name = "main_screenshot_button";
-            this.main_screenshot_button.Padding = new System.Windows.Forms.Padding(0);
-            this.main_screenshot_button.Size = new System.Drawing.Size(36, 41);
-            this.main_screenshot_button.Click += new System.EventHandler(this.main_screenshot_button_Click);
-            this.main_screenshot_button.MouseEnter += new System.EventHandler(this.main_screenshot_button_MouseEnter);
-            // 
-            // screenshotEntireScreen_button
-            // 
-            this.screenshotEntireScreen_button.AutoSize = false;
-            this.screenshotEntireScreen_button.AutoToolTip = true;
-            this.screenshotEntireScreen_button.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.screenshotEntireScreen_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.screenshotEntireScreen_button.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.screenshotEntireScreen_button.Image = global::View_GUI.Properties.Resources.win7_ico_shell32_dll_159;
-            this.screenshotEntireScreen_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.screenshotEntireScreen_button.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.screenshotEntireScreen_button.ImageTransparentColor = System.Drawing.SystemColors.Control;
-            this.screenshotEntireScreen_button.Margin = new System.Windows.Forms.Padding(5, 10, 0, 10);
-            this.screenshotEntireScreen_button.Name = "screenshotEntireScreen_button";
-            this.screenshotEntireScreen_button.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
-            | System.Windows.Forms.Keys.A)));
-            this.screenshotEntireScreen_button.Size = new System.Drawing.Size(41, 40);
-            this.screenshotEntireScreen_button.ToolTipText = "CTRL + ALT + A";
-            this.screenshotEntireScreen_button.Click += new System.EventHandler(this.screenshotEntireScreen_button_Click);
-            // 
-            // toolStripMenuItem4
-            // 
-            this.toolStripMenuItem4.AutoSize = false;
-            this.toolStripMenuItem4.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.toolStripMenuItem4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.toolStripMenuItem4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripMenuItem4.Image = global::View_GUI.Properties.Resources.win7_ico_shell32_dll_295;
-            this.toolStripMenuItem4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripMenuItem4.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
-            | System.Windows.Forms.Keys.S)));
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(41, 40);
-            this.toolStripMenuItem4.Text = "2";
-            this.toolStripMenuItem4.ToolTipText = "CTRL + ALT + S";
-            this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
-            // 
-            // selection_screenshot_button
-            // 
-            this.selection_screenshot_button.AutoSize = false;
-            this.selection_screenshot_button.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.selection_screenshot_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.selection_screenshot_button.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.selection_screenshot_button.Image = global::View_GUI.Properties.Resources.win7_ico_shell32_dll_259;
-            this.selection_screenshot_button.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.selection_screenshot_button.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
-            this.selection_screenshot_button.Name = "selection_screenshot_button";
-            this.selection_screenshot_button.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
-            | System.Windows.Forms.Keys.D)));
-            this.selection_screenshot_button.Size = new System.Drawing.Size(41, 40);
-            this.selection_screenshot_button.Text = "1";
-            this.selection_screenshot_button.ToolTipText = "CTRL + ALT + D";
-            this.selection_screenshot_button.Click += new System.EventHandler(this.selection_screenshot_button_Click);
-            // 
-            // Home_Button
-            // 
-            this.Home_Button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_home_icon;
-            this.Home_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Home_Button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Home_Button.FlatAppearance.BorderSize = 0;
-            this.Home_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Home_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.Home_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Home_Button.Location = new System.Drawing.Point(107, 10);
-            this.Home_Button.Name = "Home_Button";
-            this.Home_Button.Size = new System.Drawing.Size(35, 35);
-            this.Home_Button.TabIndex = 3;
-            this.Home_Button.UseVisualStyleBackColor = true;
-            this.Home_Button.Click += new System.EventHandler(this.Home_Button_Click);
-            // 
-            // Menu_Search_button
-            // 
-            this.Menu_Search_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_page_zoom_icon1;
-            this.Menu_Search_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Menu_Search_button.FlatAppearance.BorderSize = 0;
-            this.Menu_Search_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.Menu_Search_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.Menu_Search_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Menu_Search_button.Location = new System.Drawing.Point(207, 12);
-            this.Menu_Search_button.Margin = new System.Windows.Forms.Padding(0);
-            this.Menu_Search_button.Name = "Menu_Search_button";
-            this.Menu_Search_button.Size = new System.Drawing.Size(30, 30);
-            this.Menu_Search_button.TabIndex = 5;
-            this.Menu_Search_button.UseVisualStyleBackColor = true;
-            // 
-            // General_Menu_Panel
-            // 
-            this.General_Menu_Panel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.General_Menu_Panel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.General_Menu_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.General_Menu_Panel.BackgroundImage = global::View_GUI.Properties.Resources.Untitled__3_;
-            this.General_Menu_Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.General_Menu_Panel.Controls.Add(this.General_menuStrip);
-            this.General_Menu_Panel.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.General_Menu_Panel.Location = new System.Drawing.Point(468, -1);
-            this.General_Menu_Panel.Name = "General_Menu_Panel";
-            this.General_Menu_Panel.Size = new System.Drawing.Size(718, 59);
-            this.General_Menu_Panel.TabIndex = 7;
-            // 
-            // General_menuStrip
-            // 
-            this.General_menuStrip.AutoSize = false;
-            this.General_menuStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.General_menuStrip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.General_menuStrip.Dock = System.Windows.Forms.DockStyle.None;
-            this.General_menuStrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.General_menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sagerToolStripMenuItem,
-            this.ydelserToolStripMenuItem,
-            this.medarbejder_item,
-            this.advokaterToolStripMenuItem,
-            this.sekretærToolStripMenuItem,
-            this.kunderToolStripMenuItem,
-            this.kørselToolStripMenuItem});
-            this.General_menuStrip.Location = new System.Drawing.Point(48, 2);
-            this.General_menuStrip.Margin = new System.Windows.Forms.Padding(0, 30, 0, 0);
-            this.General_menuStrip.Name = "General_menuStrip";
-            this.General_menuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.General_menuStrip.ShowItemToolTips = true;
-            this.General_menuStrip.Size = new System.Drawing.Size(623, 57);
-            this.General_menuStrip.TabIndex = 0;
-            this.General_menuStrip.TabStop = true;
-            this.General_menuStrip.Text = "centerMenu";
-            this.General_menuStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.General_menuStrip_ItemClicked);
-            // 
-            // sagerToolStripMenuItem
-            // 
-            this.sagerToolStripMenuItem.AutoSize = false;
-            this.sagerToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.sagerToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.sagerToolStripMenuItem.Image = global::View_GUI.Properties.Resources.folder_documents_icon__2_;
-            this.sagerToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.sagerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.sagerToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.sagerToolStripMenuItem.Name = "sagerToolStripMenuItem";
-            this.sagerToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
-            this.sagerToolStripMenuItem.ShortcutKeyDisplayString = "";
-            this.sagerToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.A)));
-            this.sagerToolStripMenuItem.Size = new System.Drawing.Size(60, 50);
-            this.sagerToolStripMenuItem.Text = "Sager";
-            this.sagerToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.sagerToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.sagerToolStripMenuItem.ToolTipText = "CTRL +SHIFT + A";
-            this.sagerToolStripMenuItem.Click += new System.EventHandler(this.sagerToolStripMenuItem_Click);
-            // 
-            // ydelserToolStripMenuItem
-            // 
-            this.ydelserToolStripMenuItem.AutoSize = false;
-            this.ydelserToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ydelserToolStripMenuItem.Image = global::View_GUI.Properties.Resources.document_excel_icon__1_;
-            this.ydelserToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ydelserToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ydelserToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.ydelserToolStripMenuItem.Name = "ydelserToolStripMenuItem";
-            this.ydelserToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.S)));
-            this.ydelserToolStripMenuItem.Size = new System.Drawing.Size(60, 50);
-            this.ydelserToolStripMenuItem.Text = "Ydelser";
-            this.ydelserToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.ydelserToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.ydelserToolStripMenuItem.ToolTipText = "CTRL + SHIFT + S";
-            this.ydelserToolStripMenuItem.Click += new System.EventHandler(this.ydelserToolStripMenuItem_Click);
-            // 
-            // medarbejder_item
-            // 
-            this.medarbejder_item.AutoSize = false;
-            this.medarbejder_item.Image = global::View_GUI.Properties.Resources.Groups_Meeting_Light_icon__1_;
-            this.medarbejder_item.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.medarbejder_item.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.medarbejder_item.Name = "medarbejder_item";
-            this.medarbejder_item.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.D)));
-            this.medarbejder_item.Size = new System.Drawing.Size(90, 60);
-            this.medarbejder_item.Text = "Medarbejder";
-            this.medarbejder_item.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.medarbejder_item.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.medarbejder_item.ToolTipText = "CTRL + SHIFT + D";
-            this.medarbejder_item.Click += new System.EventHandler(this.medarbejder_item_Click);
-            // 
-            // advokaterToolStripMenuItem
-            // 
-            this.advokaterToolStripMenuItem.AutoSize = false;
-            this.advokaterToolStripMenuItem.Image = global::View_GUI.Properties.Resources.Office_Customer_Male_Light_icon__1_;
-            this.advokaterToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.advokaterToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.advokaterToolStripMenuItem.Name = "advokaterToolStripMenuItem";
-            this.advokaterToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.F)));
-            this.advokaterToolStripMenuItem.Size = new System.Drawing.Size(75, 55);
-            this.advokaterToolStripMenuItem.Text = "Advokater";
-            this.advokaterToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.advokaterToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.advokaterToolStripMenuItem.ToolTipText = "CTRL + SHIFT + F";
-            this.advokaterToolStripMenuItem.Click += new System.EventHandler(this.advokaterToolStripMenuItem_Click);
-            // 
-            // sekretærToolStripMenuItem
-            // 
-            this.sekretærToolStripMenuItem.AutoSize = false;
-            this.sekretærToolStripMenuItem.Image = global::View_GUI.Properties.Resources.Office_Customer_Female_Light_icon__1_;
-            this.sekretærToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.sekretærToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.sekretærToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.sekretærToolStripMenuItem.Name = "sekretærToolStripMenuItem";
-            this.sekretærToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.G)));
-            this.sekretærToolStripMenuItem.Size = new System.Drawing.Size(70, 50);
-            this.sekretærToolStripMenuItem.Text = "Sekretær";
-            this.sekretærToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.sekretærToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.sekretærToolStripMenuItem.ToolTipText = "CTRL + SHIFT + G";
-            this.sekretærToolStripMenuItem.Click += new System.EventHandler(this.sekretærToolStripMenuItem_Click);
-            // 
-            // kunderToolStripMenuItem
-            // 
-            this.kunderToolStripMenuItem.AutoSize = false;
-            this.kunderToolStripMenuItem.Image = global::View_GUI.Properties.Resources.people_icon__1_;
-            this.kunderToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.kunderToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.kunderToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.kunderToolStripMenuItem.Name = "kunderToolStripMenuItem";
-            this.kunderToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.Z)));
-            this.kunderToolStripMenuItem.Size = new System.Drawing.Size(50, 50);
-            this.kunderToolStripMenuItem.Text = "Kunder";
-            this.kunderToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.kunderToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.kunderToolStripMenuItem.ToolTipText = "CTRL + SHIFT + Z";
-            this.kunderToolStripMenuItem.Click += new System.EventHandler(this.kunderToolStripMenuItem_Click);
-            // 
-            // kørselToolStripMenuItem
-            // 
-            this.kørselToolStripMenuItem.AutoSize = false;
-            this.kørselToolStripMenuItem.Image = global::View_GUI.Properties.Resources._11111111111;
-            this.kørselToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.kørselToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.kørselToolStripMenuItem.Name = "kørselToolStripMenuItem";
-            this.kørselToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.X)));
-            this.kørselToolStripMenuItem.Size = new System.Drawing.Size(60, 70);
-            this.kørselToolStripMenuItem.Text = "Kørsel";
-            this.kørselToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.kørselToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.kørselToolStripMenuItem.ToolTipText = "CTRL + SHIFT + X";
-            this.kørselToolStripMenuItem.Click += new System.EventHandler(this.kørselToolStripMenuItem_Click);
-            // 
-            // bell_button
-            // 
-            this.bell_button.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.bell_button.BackgroundImage = global::View_GUI.Properties.Resources.bell_icon__1_;
-            this.bell_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.bell_button.FlatAppearance.BorderSize = 0;
-            this.bell_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.bell_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.bell_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bell_button.Location = new System.Drawing.Point(1466, 3);
-            this.bell_button.Name = "bell_button";
-            this.bell_button.Size = new System.Drawing.Size(35, 35);
-            this.bell_button.TabIndex = 9;
-            this.bell_button.UseVisualStyleBackColor = true;
-            this.bell_button.Click += new System.EventHandler(this.bell_button_Click);
-            // 
-            // Loacal_Folder_button
-            // 
-            this.Loacal_Folder_button.BackgroundImage = global::View_GUI.Properties.Resources.folder_icon;
-            this.Loacal_Folder_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Loacal_Folder_button.FlatAppearance.BorderSize = 0;
-            this.Loacal_Folder_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.Loacal_Folder_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.Loacal_Folder_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Loacal_Folder_button.Location = new System.Drawing.Point(263, 10);
-            this.Loacal_Folder_button.Margin = new System.Windows.Forms.Padding(0);
-            this.Loacal_Folder_button.Name = "Loacal_Folder_button";
-            this.Loacal_Folder_button.Size = new System.Drawing.Size(35, 35);
-            this.Loacal_Folder_button.TabIndex = 6;
-            this.Loacal_Folder_button.UseVisualStyleBackColor = true;
-            this.Loacal_Folder_button.Click += new System.EventHandler(this.Loacal_Folder_button_Click);
-            this.Loacal_Folder_button.MouseHover += new System.EventHandler(this.Loacal_Folder_button_MouseHover);
-            // 
-            // log_In_off_button
-            // 
-            this.log_In_off_button.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.log_In_off_button.BackgroundImage = global::View_GUI.Properties.Resources.Apps_Dialog_Shutdown_icon__1_;
-            this.log_In_off_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.log_In_off_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.log_In_off_button.FlatAppearance.BorderSize = 0;
-            this.log_In_off_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.log_In_off_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.log_In_off_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.log_In_off_button.Location = new System.Drawing.Point(11, 11);
-            this.log_In_off_button.Name = "log_In_off_button";
-            this.log_In_off_button.Size = new System.Drawing.Size(33, 33);
-            this.log_In_off_button.TabIndex = 1;
-            this.log_In_off_button.UseVisualStyleBackColor = true;
-            this.log_In_off_button.Click += new System.EventHandler(this.log_In_off_button_Click);
-            // 
-            // Back_Button
-            // 
-            this.Back_Button.BackgroundImage = global::View_GUI.Properties.Resources.navigate_left_icon__1_;
-            this.Back_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Back_Button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Back_Button.FlatAppearance.BorderSize = 0;
-            this.Back_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.Back_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.Back_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Back_Button.Location = new System.Drawing.Point(69, 12);
-            this.Back_Button.Name = "Back_Button";
-            this.Back_Button.Size = new System.Drawing.Size(30, 30);
-            this.Back_Button.TabIndex = 2;
-            this.Back_Button.UseVisualStyleBackColor = true;
-            this.Back_Button.Click += new System.EventHandler(this.Back_Button_Click);
-            // 
-            // item_menu_button
-            // 
-            this.item_menu_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.item_menu_button.BackgroundImage = global::View_GUI.Properties.Resources.Untitled__1_;
-            this.item_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.item_menu_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.item_menu_button.FlatAppearance.BorderSize = 0;
-            this.item_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.item_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.item_menu_button.Location = new System.Drawing.Point(1528, 9);
-            this.item_menu_button.Name = "item_menu_button";
-            this.item_menu_button.Size = new System.Drawing.Size(33, 33);
-            this.item_menu_button.TabIndex = 10;
-            this.item_menu_button.UseVisualStyleBackColor = true;
-            this.item_menu_button.Click += new System.EventHandler(this.item_menu_button_Click_1);
-            this.item_menu_button.MouseHover += new System.EventHandler(this.item_menu_button_MouseHover);
-            // 
-            // Forward_Button
-            // 
-            this.Forward_Button.BackgroundImage = global::View_GUI.Properties.Resources.navigate_left_icon__1___1_;
-            this.Forward_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Forward_Button.FlatAppearance.BorderSize = 0;
-            this.Forward_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.Forward_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.Forward_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Forward_Button.Location = new System.Drawing.Point(152, 12);
-            this.Forward_Button.Name = "Forward_Button";
-            this.Forward_Button.Size = new System.Drawing.Size(30, 30);
-            this.Forward_Button.TabIndex = 4;
-            this.Forward_Button.UseVisualStyleBackColor = true;
-            this.Forward_Button.Click += new System.EventHandler(this.Forward_Button_Click);
             // 
             // statistics_button
             // 
@@ -980,77 +573,448 @@
             this.setting_button.TabIndex = 8;
             this.setting_button.UseVisualStyleBackColor = true;
             // 
-            // type_log_in_label
+            // screenshot_DropDown_menustrip
             // 
-            this.type_log_in_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.type_log_in_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(100)))));
-            this.type_log_in_label.Image = global::View_GUI.Properties.Resources.question_type_one_correct_icon1;
-            this.type_log_in_label.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.type_log_in_label.Location = new System.Drawing.Point(57, 208);
-            this.type_log_in_label.Name = "type_log_in_label";
-            this.type_log_in_label.Size = new System.Drawing.Size(91, 34);
-            this.type_log_in_label.TabIndex = 34;
-            this.type_log_in_label.Text = "Type:";
+            this.screenshot_DropDown_menustrip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.screenshot_DropDown_menustrip.AutoSize = false;
+            this.screenshot_DropDown_menustrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
+            this.screenshot_DropDown_menustrip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.screenshot_DropDown_menustrip.Dock = System.Windows.Forms.DockStyle.None;
+            this.screenshot_DropDown_menustrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.main_screenshot_button,
+            this.toolStripMenuItem1});
+            this.screenshot_DropDown_menustrip.Location = new System.Drawing.Point(1387, 2);
+            this.screenshot_DropDown_menustrip.Name = "screenshot_DropDown_menustrip";
+            this.screenshot_DropDown_menustrip.Padding = new System.Windows.Forms.Padding(1, 1, 0, 1);
+            this.screenshot_DropDown_menustrip.Size = new System.Drawing.Size(42, 43);
+            this.screenshot_DropDown_menustrip.TabIndex = 8;
+            this.screenshot_DropDown_menustrip.TabStop = true;
+            this.screenshot_DropDown_menustrip.Text = "menuStrip1";
             // 
-            // copy_id_button
+            // main_screenshot_button
             // 
-            this.copy_id_button.BackColor = System.Drawing.Color.Transparent;
-            this.copy_id_button.BackgroundImage = global::View_GUI.Properties.Resources.win7_ico_shell32_dll_260__2_;
-            this.copy_id_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.copy_id_button.FlatAppearance.BorderSize = 0;
-            this.copy_id_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.copy_id_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.copy_id_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.copy_id_button.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.copy_id_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.copy_id_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.copy_id_button.Location = new System.Drawing.Point(386, 63);
-            this.copy_id_button.Margin = new System.Windows.Forms.Padding(0);
-            this.copy_id_button.Name = "copy_id_button";
-            this.copy_id_button.Size = new System.Drawing.Size(40, 38);
-            this.copy_id_button.TabIndex = 32;
-            this.copy_id_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.copy_id_button.UseVisualStyleBackColor = false;
-            this.copy_id_button.Click += new System.EventHandler(this.copy_id_button_Click);
+            this.main_screenshot_button.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
+            this.main_screenshot_button.AutoSize = false;
+            this.main_screenshot_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
+            this.main_screenshot_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.main_screenshot_button.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.main_screenshot_button.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.screenshotEntireScreen_button,
+            this.toolStripMenuItem4,
+            this.selection_screenshot_button});
+            this.main_screenshot_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
+            this.main_screenshot_button.Image = global::View_GUI.Properties.Resources.camera_icon;
+            this.main_screenshot_button.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.main_screenshot_button.ImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
+            this.main_screenshot_button.MergeAction = System.Windows.Forms.MergeAction.Replace;
+            this.main_screenshot_button.Name = "main_screenshot_button";
+            this.main_screenshot_button.Padding = new System.Windows.Forms.Padding(0);
+            this.main_screenshot_button.Size = new System.Drawing.Size(36, 41);
+            this.main_screenshot_button.Click += new System.EventHandler(this.main_screenshot_button_Click);
+            this.main_screenshot_button.MouseEnter += new System.EventHandler(this.main_screenshot_button_MouseEnter);
             // 
-            // label2
+            // screenshotEntireScreen_button
             // 
-            this.label2.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(100)))));
-            this.label2.Image = global::View_GUI.Properties.Resources.Pass2;
-            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label2.Location = new System.Drawing.Point(63, 159);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 24);
-            this.label2.TabIndex = 31;
-            this.label2.Text = "Pass:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.screenshotEntireScreen_button.AutoSize = false;
+            this.screenshotEntireScreen_button.AutoToolTip = true;
+            this.screenshotEntireScreen_button.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.screenshotEntireScreen_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.screenshotEntireScreen_button.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.screenshotEntireScreen_button.Image = global::View_GUI.Properties.Resources.win7_ico_shell32_dll_159;
+            this.screenshotEntireScreen_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.screenshotEntireScreen_button.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.screenshotEntireScreen_button.ImageTransparentColor = System.Drawing.SystemColors.Control;
+            this.screenshotEntireScreen_button.Margin = new System.Windows.Forms.Padding(5, 10, 0, 10);
+            this.screenshotEntireScreen_button.Name = "screenshotEntireScreen_button";
+            this.screenshotEntireScreen_button.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.A)));
+            this.screenshotEntireScreen_button.Size = new System.Drawing.Size(41, 40);
+            this.screenshotEntireScreen_button.ToolTipText = "CTRL + ALT + A";
+            this.screenshotEntireScreen_button.Click += new System.EventHandler(this.screenshotEntireScreen_button_Click);
             // 
-            // label1
+            // toolStripMenuItem4
             // 
-            this.label1.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(100)))));
-            this.label1.Image = global::View_GUI.Properties.Resources.name_card_icon1;
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label1.Location = new System.Drawing.Point(16, 115);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 24);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "Brugernavn:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripMenuItem4.AutoSize = false;
+            this.toolStripMenuItem4.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.toolStripMenuItem4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.toolStripMenuItem4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripMenuItem4.Image = global::View_GUI.Properties.Resources.win7_ico_shell32_dll_295;
+            this.toolStripMenuItem4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItem4.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.S)));
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(41, 40);
+            this.toolStripMenuItem4.Text = "2";
+            this.toolStripMenuItem4.ToolTipText = "CTRL + ALT + S";
+            this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
-            // label16
+            // selection_screenshot_button
             // 
-            this.label16.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(158)))), ((int)(((byte)(100)))));
-            this.label16.Image = global::View_GUI.Properties.Resources.barcode_icon;
-            this.label16.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label16.Location = new System.Drawing.Point(56, 69);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(98, 24);
-            this.label16.TabIndex = 27;
-            this.label16.Text = "Din ID:";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.selection_screenshot_button.AutoSize = false;
+            this.selection_screenshot_button.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.selection_screenshot_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.selection_screenshot_button.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.selection_screenshot_button.Image = global::View_GUI.Properties.Resources.win7_ico_shell32_dll_259;
+            this.selection_screenshot_button.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.selection_screenshot_button.Margin = new System.Windows.Forms.Padding(5, 0, 0, 10);
+            this.selection_screenshot_button.Name = "selection_screenshot_button";
+            this.selection_screenshot_button.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.D)));
+            this.selection_screenshot_button.Size = new System.Drawing.Size(41, 40);
+            this.selection_screenshot_button.Text = "1";
+            this.selection_screenshot_button.ToolTipText = "CTRL + ALT + D";
+            this.selection_screenshot_button.Click += new System.EventHandler(this.selection_screenshot_button_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(12, 41);
+            // 
+            // Top_Menu_panel
+            // 
+            this.Top_Menu_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
+            this.Top_Menu_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Top_Menu_panel.Controls.Add(this.screenshot_DropDown_menustrip);
+            this.Top_Menu_panel.Controls.Add(this.panel1);
+            this.Top_Menu_panel.Controls.Add(this.Home_Button);
+            this.Top_Menu_panel.Controls.Add(this.Menu_Search_button);
+            this.Top_Menu_panel.Controls.Add(this.General_Menu_Panel);
+            this.Top_Menu_panel.Controls.Add(this.bell_button);
+            this.Top_Menu_panel.Controls.Add(this.Loacal_Folder_button);
+            this.Top_Menu_panel.Controls.Add(this.log_In_off_button);
+            this.Top_Menu_panel.Controls.Add(this.Back_Button);
+            this.Top_Menu_panel.Controls.Add(this.item_menu_button);
+            this.Top_Menu_panel.Controls.Add(this.Forward_Button);
+            this.Top_Menu_panel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Top_Menu_panel.Location = new System.Drawing.Point(0, 0);
+            this.Top_Menu_panel.Name = "Top_Menu_panel";
+            this.Top_Menu_panel.Size = new System.Drawing.Size(1584, 63);
+            this.Top_Menu_panel.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Gray;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 59);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1582, 2);
+            this.panel1.TabIndex = 13;
+            // 
+            // Home_Button
+            // 
+            this.Home_Button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_home_icon;
+            this.Home_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Home_Button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Home_Button.FlatAppearance.BorderSize = 0;
+            this.Home_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Home_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.Home_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Home_Button.Location = new System.Drawing.Point(107, 10);
+            this.Home_Button.Name = "Home_Button";
+            this.Home_Button.Size = new System.Drawing.Size(35, 35);
+            this.Home_Button.TabIndex = 3;
+            this.Home_Button.UseVisualStyleBackColor = true;
+            this.Home_Button.Click += new System.EventHandler(this.Home_Button_Click);
+            // 
+            // Menu_Search_button
+            // 
+            this.Menu_Search_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_page_zoom_icon1;
+            this.Menu_Search_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Menu_Search_button.FlatAppearance.BorderSize = 0;
+            this.Menu_Search_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.Menu_Search_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.Menu_Search_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Menu_Search_button.Location = new System.Drawing.Point(207, 12);
+            this.Menu_Search_button.Margin = new System.Windows.Forms.Padding(0);
+            this.Menu_Search_button.Name = "Menu_Search_button";
+            this.Menu_Search_button.Size = new System.Drawing.Size(30, 30);
+            this.Menu_Search_button.TabIndex = 5;
+            this.Menu_Search_button.UseVisualStyleBackColor = true;
+            // 
+            // General_Menu_Panel
+            // 
+            this.General_Menu_Panel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.General_Menu_Panel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.General_Menu_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
+            this.General_Menu_Panel.BackgroundImage = global::View_GUI.Properties.Resources.Untitled__3_;
+            this.General_Menu_Panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.General_Menu_Panel.Controls.Add(this.General_menuStrip);
+            this.General_Menu_Panel.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.General_Menu_Panel.Location = new System.Drawing.Point(468, -1);
+            this.General_Menu_Panel.Name = "General_Menu_Panel";
+            this.General_Menu_Panel.Size = new System.Drawing.Size(646, 59);
+            this.General_Menu_Panel.TabIndex = 7;
+            // 
+            // General_menuStrip
+            // 
+            this.General_menuStrip.AutoSize = false;
+            this.General_menuStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.General_menuStrip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.General_menuStrip.Dock = System.Windows.Forms.DockStyle.None;
+            this.General_menuStrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.General_menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sagerToolStripMenuItem,
+            this.ydelserToolStripMenuItem,
+            this.medarbejder_item,
+            this.advokaterToolStripMenuItem,
+            this.sekretærToolStripMenuItem,
+            this.kunderToolStripMenuItem});
+            this.General_menuStrip.Location = new System.Drawing.Point(48, 2);
+            this.General_menuStrip.Margin = new System.Windows.Forms.Padding(0, 30, 0, 0);
+            this.General_menuStrip.Name = "General_menuStrip";
+            this.General_menuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.General_menuStrip.ShowItemToolTips = true;
+            this.General_menuStrip.Size = new System.Drawing.Size(552, 57);
+            this.General_menuStrip.TabIndex = 0;
+            this.General_menuStrip.TabStop = true;
+            this.General_menuStrip.Text = "centerMenu";
+            this.General_menuStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.General_menuStrip_ItemClicked);
+            // 
+            // sagerToolStripMenuItem
+            // 
+            this.sagerToolStripMenuItem.AutoSize = false;
+            this.sagerToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.sagerToolStripMenuItem.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sagerToolStripMenuItem.Image = global::View_GUI.Properties.Resources.folder_documents_icon__2_;
+            this.sagerToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.sagerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.sagerToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.sagerToolStripMenuItem.Name = "sagerToolStripMenuItem";
+            this.sagerToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
+            this.sagerToolStripMenuItem.ShortcutKeyDisplayString = "";
+            this.sagerToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.A)));
+            this.sagerToolStripMenuItem.Size = new System.Drawing.Size(60, 50);
+            this.sagerToolStripMenuItem.Text = "Sager";
+            this.sagerToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.sagerToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            this.sagerToolStripMenuItem.ToolTipText = "CTRL +SHIFT + A";
+            this.sagerToolStripMenuItem.Click += new System.EventHandler(this.sagerToolStripMenuItem_Click);
+            // 
+            // ydelserToolStripMenuItem
+            // 
+            this.ydelserToolStripMenuItem.AutoSize = false;
+            this.ydelserToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ydelserToolStripMenuItem.Image = global::View_GUI.Properties.Resources.document_excel_icon__1_;
+            this.ydelserToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ydelserToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ydelserToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.ydelserToolStripMenuItem.Name = "ydelserToolStripMenuItem";
+            this.ydelserToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.S)));
+            this.ydelserToolStripMenuItem.Size = new System.Drawing.Size(60, 50);
+            this.ydelserToolStripMenuItem.Text = "Ydelser";
+            this.ydelserToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ydelserToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ydelserToolStripMenuItem.ToolTipText = "CTRL + SHIFT + S";
+            this.ydelserToolStripMenuItem.Click += new System.EventHandler(this.ydelserToolStripMenuItem_Click);
+            // 
+            // medarbejder_item
+            // 
+            this.medarbejder_item.AutoSize = false;
+            this.medarbejder_item.Image = global::View_GUI.Properties.Resources.Groups_Meeting_Light_icon__1_;
+            this.medarbejder_item.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.medarbejder_item.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.medarbejder_item.Name = "medarbejder_item";
+            this.medarbejder_item.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.D)));
+            this.medarbejder_item.Size = new System.Drawing.Size(90, 60);
+            this.medarbejder_item.Text = "Medarbejder";
+            this.medarbejder_item.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.medarbejder_item.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.medarbejder_item.ToolTipText = "CTRL + SHIFT + D";
+            this.medarbejder_item.Click += new System.EventHandler(this.medarbejder_item_Click);
+            // 
+            // advokaterToolStripMenuItem
+            // 
+            this.advokaterToolStripMenuItem.AutoSize = false;
+            this.advokaterToolStripMenuItem.Image = global::View_GUI.Properties.Resources.Office_Customer_Male_Light_icon__1_;
+            this.advokaterToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.advokaterToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.advokaterToolStripMenuItem.Name = "advokaterToolStripMenuItem";
+            this.advokaterToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.F)));
+            this.advokaterToolStripMenuItem.Size = new System.Drawing.Size(75, 55);
+            this.advokaterToolStripMenuItem.Text = "Advokater";
+            this.advokaterToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.advokaterToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.advokaterToolStripMenuItem.ToolTipText = "CTRL + SHIFT + F";
+            this.advokaterToolStripMenuItem.Click += new System.EventHandler(this.advokaterToolStripMenuItem_Click);
+            // 
+            // sekretærToolStripMenuItem
+            // 
+            this.sekretærToolStripMenuItem.AutoSize = false;
+            this.sekretærToolStripMenuItem.Image = global::View_GUI.Properties.Resources.Office_Customer_Female_Light_icon__1_;
+            this.sekretærToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.sekretærToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.sekretærToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.sekretærToolStripMenuItem.Name = "sekretærToolStripMenuItem";
+            this.sekretærToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.G)));
+            this.sekretærToolStripMenuItem.Size = new System.Drawing.Size(70, 50);
+            this.sekretærToolStripMenuItem.Text = "Sekretær";
+            this.sekretærToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.sekretærToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.sekretærToolStripMenuItem.ToolTipText = "CTRL + SHIFT + G";
+            this.sekretærToolStripMenuItem.Click += new System.EventHandler(this.sekretærToolStripMenuItem_Click);
+            // 
+            // kunderToolStripMenuItem
+            // 
+            this.kunderToolStripMenuItem.AutoSize = false;
+            this.kunderToolStripMenuItem.Image = global::View_GUI.Properties.Resources.people_icon__1_;
+            this.kunderToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.kunderToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.kunderToolStripMenuItem.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.kunderToolStripMenuItem.Name = "kunderToolStripMenuItem";
+            this.kunderToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.Z)));
+            this.kunderToolStripMenuItem.Size = new System.Drawing.Size(50, 50);
+            this.kunderToolStripMenuItem.Text = "Kunder";
+            this.kunderToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.kunderToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.kunderToolStripMenuItem.ToolTipText = "CTRL + SHIFT + Z";
+            this.kunderToolStripMenuItem.Click += new System.EventHandler(this.kunderToolStripMenuItem_Click);
+            // 
+            // bell_button
+            // 
+            this.bell_button.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.bell_button.BackgroundImage = global::View_GUI.Properties.Resources.bell_icon__1_;
+            this.bell_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.bell_button.FlatAppearance.BorderSize = 0;
+            this.bell_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.bell_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.bell_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bell_button.Location = new System.Drawing.Point(1466, 3);
+            this.bell_button.Name = "bell_button";
+            this.bell_button.Size = new System.Drawing.Size(35, 35);
+            this.bell_button.TabIndex = 9;
+            this.bell_button.UseVisualStyleBackColor = true;
+            this.bell_button.Click += new System.EventHandler(this.bell_button_Click);
+            // 
+            // Loacal_Folder_button
+            // 
+            this.Loacal_Folder_button.BackgroundImage = global::View_GUI.Properties.Resources.folder_icon;
+            this.Loacal_Folder_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Loacal_Folder_button.FlatAppearance.BorderSize = 0;
+            this.Loacal_Folder_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.Loacal_Folder_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.Loacal_Folder_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Loacal_Folder_button.Location = new System.Drawing.Point(263, 10);
+            this.Loacal_Folder_button.Margin = new System.Windows.Forms.Padding(0);
+            this.Loacal_Folder_button.Name = "Loacal_Folder_button";
+            this.Loacal_Folder_button.Size = new System.Drawing.Size(35, 35);
+            this.Loacal_Folder_button.TabIndex = 6;
+            this.Loacal_Folder_button.UseVisualStyleBackColor = true;
+            this.Loacal_Folder_button.Click += new System.EventHandler(this.Loacal_Folder_button_Click);
+            this.Loacal_Folder_button.MouseHover += new System.EventHandler(this.Loacal_Folder_button_MouseHover);
+            // 
+            // log_In_off_button
+            // 
+            this.log_In_off_button.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.log_In_off_button.BackgroundImage = global::View_GUI.Properties.Resources.Apps_Dialog_Shutdown_icon__1_;
+            this.log_In_off_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.log_In_off_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.log_In_off_button.FlatAppearance.BorderSize = 0;
+            this.log_In_off_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.log_In_off_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.log_In_off_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.log_In_off_button.Location = new System.Drawing.Point(11, 11);
+            this.log_In_off_button.Name = "log_In_off_button";
+            this.log_In_off_button.Size = new System.Drawing.Size(33, 33);
+            this.log_In_off_button.TabIndex = 1;
+            this.log_In_off_button.UseVisualStyleBackColor = true;
+            this.log_In_off_button.Click += new System.EventHandler(this.log_In_off_button_Click);
+            // 
+            // Back_Button
+            // 
+            this.Back_Button.BackgroundImage = global::View_GUI.Properties.Resources.navigate_left_icon__1_;
+            this.Back_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Back_Button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Back_Button.FlatAppearance.BorderSize = 0;
+            this.Back_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.Back_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.Back_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Back_Button.Location = new System.Drawing.Point(69, 12);
+            this.Back_Button.Name = "Back_Button";
+            this.Back_Button.Size = new System.Drawing.Size(30, 30);
+            this.Back_Button.TabIndex = 2;
+            this.Back_Button.UseVisualStyleBackColor = true;
+            this.Back_Button.Click += new System.EventHandler(this.Back_Button_Click);
+            // 
+            // item_menu_button
+            // 
+            this.item_menu_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.item_menu_button.BackgroundImage = global::View_GUI.Properties.Resources.Untitled__1_;
+            this.item_menu_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.item_menu_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.item_menu_button.FlatAppearance.BorderSize = 0;
+            this.item_menu_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.item_menu_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.item_menu_button.Location = new System.Drawing.Point(1528, 9);
+            this.item_menu_button.Name = "item_menu_button";
+            this.item_menu_button.Size = new System.Drawing.Size(33, 33);
+            this.item_menu_button.TabIndex = 10;
+            this.item_menu_button.UseVisualStyleBackColor = true;
+            this.item_menu_button.Click += new System.EventHandler(this.item_menu_button_Click_1);
+            this.item_menu_button.MouseHover += new System.EventHandler(this.item_menu_button_MouseHover);
+            // 
+            // Forward_Button
+            // 
+            this.Forward_Button.BackgroundImage = global::View_GUI.Properties.Resources.navigate_left_icon__1___1_;
+            this.Forward_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Forward_Button.FlatAppearance.BorderSize = 0;
+            this.Forward_Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.Forward_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.Forward_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Forward_Button.Location = new System.Drawing.Point(152, 12);
+            this.Forward_Button.Name = "Forward_Button";
+            this.Forward_Button.Size = new System.Drawing.Size(30, 30);
+            this.Forward_Button.TabIndex = 4;
+            this.Forward_Button.UseVisualStyleBackColor = true;
+            this.Forward_Button.Click += new System.EventHandler(this.Forward_Button_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem3,
+            this.toolStripMenuItem5});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(81, 48);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(80, 22);
+            this.toolStripMenuItem3.Text = "1";
+            // 
+            // toolStripMenuItem5
+            // 
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(80, 22);
+            this.toolStripMenuItem5.Text = "2";
+            // 
+            // item_menu_back_panel_top_panel
+            // 
+            this.item_menu_back_panel_top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.item_menu_back_panel_top_panel.Location = new System.Drawing.Point(1, 4);
+            this.item_menu_back_panel_top_panel.Name = "item_menu_back_panel_top_panel";
+            this.item_menu_back_panel_top_panel.Size = new System.Drawing.Size(36, 18);
+            this.item_menu_back_panel_top_panel.TabIndex = 4;
+            // 
+            // item_menu_top_panel
+            // 
+            this.item_menu_top_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.item_menu_top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(217)))), ((int)(((byte)(255)))));
+            this.item_menu_top_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.item_menu_top_panel.Controls.Add(this.item_menu_back_panel_top_panel);
+            this.item_menu_top_panel.Location = new System.Drawing.Point(1520, 61);
+            this.item_menu_top_panel.Name = "item_menu_top_panel";
+            this.item_menu_top_panel.Size = new System.Drawing.Size(40, 21);
+            this.item_menu_top_panel.TabIndex = 1;
+            this.item_menu_top_panel.Visible = false;
             // 
             // Main_Form1
             // 
@@ -1067,20 +1031,20 @@
             this.Text = "Main_Form1";
             this.Load += new System.EventHandler(this.Main_Form1_Load);
             this.Loader_panel.ResumeLayout(false);
-            this.log_In_top_Bottom_panel.ResumeLayout(false);
             this.log_in_border_panel.ResumeLayout(false);
             this.log_in_background_panel.ResumeLayout(false);
             this.log_in_background_panel.PerformLayout();
+            this.log_In_top_Bottom_panel.ResumeLayout(false);
             this.itemMenuPanelDropDown.ResumeLayout(false);
             this.item_menu_back_panekBlack_panel.ResumeLayout(false);
             this.screenshot_DropDown_menustrip.ResumeLayout(false);
             this.screenshot_DropDown_menustrip.PerformLayout();
             this.Top_Menu_panel.ResumeLayout(false);
-            this.contextMenuStrip1.ResumeLayout(false);
-            this.item_menu_top_panel.ResumeLayout(false);
             this.General_Menu_Panel.ResumeLayout(false);
             this.General_menuStrip.ResumeLayout(false);
             this.General_menuStrip.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
+            this.item_menu_top_panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1131,8 +1095,6 @@
         private System.Windows.Forms.ToolStripMenuItem advokaterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sekretærToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kunderToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem kørselToolStripMenuItem;
-        private System.Windows.Forms.Button hode_Program_button;
         private System.Windows.Forms.Panel item_menu_back_panel_top_panel;
         private System.Windows.Forms.Panel item_menu_top_panel;
         private System.Windows.Forms.Panel log_in_border_panel;
