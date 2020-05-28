@@ -729,7 +729,7 @@
             this.Log_In_BACK_panel.Controls.Add(this.speciale_Medarbejder_Top_panel);
             this.Log_In_BACK_panel.Location = new System.Drawing.Point(255, 164);
             this.Log_In_BACK_panel.Name = "Log_In_BACK_panel";
-            this.Log_In_BACK_panel.Size = new System.Drawing.Size(1209, 442);
+            this.Log_In_BACK_panel.Size = new System.Drawing.Size(1207, 439);
             this.Log_In_BACK_panel.TabIndex = 24;
             this.Log_In_BACK_panel.Visible = false;
             // 
@@ -748,9 +748,9 @@
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.vis_rediger_Me_Navn_comboBox);
             this.panel3.Controls.Add(this.vis_rediger_clear_All_button);
-            this.panel3.Location = new System.Drawing.Point(806, 1);
+            this.panel3.Location = new System.Drawing.Point(806, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(399, 433);
+            this.panel3.Size = new System.Drawing.Size(399, 435);
             this.panel3.TabIndex = 33;
             // 
             // vis_rediger_save_button
@@ -916,9 +916,9 @@
             this.panel2.Controls.Add(this.Del_Me_name_comboBox);
             this.panel2.Controls.Add(this.Del_button);
             this.panel2.Controls.Add(this.Del_Clear_button);
-            this.panel2.Location = new System.Drawing.Point(405, 1);
+            this.panel2.Location = new System.Drawing.Point(404, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(399, 433);
+            this.panel2.Size = new System.Drawing.Size(399, 435);
             this.panel2.TabIndex = 32;
             // 
             // label1
