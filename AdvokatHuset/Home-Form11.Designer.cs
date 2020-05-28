@@ -75,7 +75,7 @@
             this.browser_back_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.browser_back_panel.Controls.Add(this.Browser_menu_panel);
             this.browser_back_panel.Controls.Add(this.home_webBrowser);
-            this.browser_back_panel.Location = new System.Drawing.Point(66, 108);
+            this.browser_back_panel.Location = new System.Drawing.Point(79, 108);
             this.browser_back_panel.Name = "browser_back_panel";
             this.browser_back_panel.Size = new System.Drawing.Size(1454, 640);
             this.browser_back_panel.TabIndex = 23;
@@ -144,7 +144,7 @@
             this.Web_Browser_Home_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.Web_Browser_Home_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
             this.Web_Browser_Home_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Web_Browser_Home_button.Location = new System.Drawing.Point(54, 13);
+            this.Web_Browser_Home_button.Location = new System.Drawing.Point(56, 7);
             this.Web_Browser_Home_button.Margin = new System.Windows.Forms.Padding(0);
             this.Web_Browser_Home_button.Name = "Web_Browser_Home_button";
             this.Web_Browser_Home_button.Size = new System.Drawing.Size(30, 30);
@@ -161,7 +161,7 @@
             this.browser_back_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.browser_back_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
             this.browser_back_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.browser_back_button.Location = new System.Drawing.Point(10, 13);
+            this.browser_back_button.Location = new System.Drawing.Point(12, 7);
             this.browser_back_button.Margin = new System.Windows.Forms.Padding(0);
             this.browser_back_button.Name = "browser_back_button";
             this.browser_back_button.Size = new System.Drawing.Size(30, 30);
@@ -195,7 +195,7 @@
             this.Webbrowser_Gog_Forward_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.Webbrowser_Gog_Forward_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
             this.Webbrowser_Gog_Forward_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Webbrowser_Gog_Forward_button.Location = new System.Drawing.Point(94, 13);
+            this.Webbrowser_Gog_Forward_button.Location = new System.Drawing.Point(96, 7);
             this.Webbrowser_Gog_Forward_button.Margin = new System.Windows.Forms.Padding(0);
             this.Webbrowser_Gog_Forward_button.Name = "Webbrowser_Gog_Forward_button";
             this.Webbrowser_Gog_Forward_button.Size = new System.Drawing.Size(30, 30);
