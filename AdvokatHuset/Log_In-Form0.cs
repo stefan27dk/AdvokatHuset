@@ -84,8 +84,8 @@ namespace View_GUI
 
             if(Input_Is_Valid == true)
             {
-                Validate_Log_In Check_Log_IN = new Validate_Log_In();
-                Log_In_Is_Valid =  Check_Log_IN.Log_In_Check(log_name_textBox, log_pass_textBox);
+                Domain_Log_In_Check Check_Log_IN = new Domain_Log_In_Check();
+                Log_In_Is_Valid =  Check_Log_IN.Log_In_Check(log_name_textBox.Text, log_pass_textBox.Text);
 
 
                  // If Remember Me Check Box is Checked

@@ -5,9 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DAL;
 using Domain;
-namespace Domain
+namespace DAL
 {
     class Validate_Log_In
     {
@@ -24,7 +23,7 @@ namespace Domain
 
 
 
-        public bool Log_In_Check(TextBox Log_Name, TextBox log_Pass)
+        public bool Log_In_Check(string Log_Name, string log_Pass)
         {
             bool Log_In_valid = false;
 
@@ -44,14 +43,14 @@ namespace Domain
 
                         while (reader.Read())
                         {
-                            if (reader["Log_In_Navn"].ToString() == Log_Name.Text && reader["Log_In_Pass"].ToString() == log_Pass.Text)
+                            if (reader["Log_In_Navn"].ToString() == Log_Name && reader["Log_In_Pass"].ToString() == log_Pass)
                             {
                                 Log_In_valid = true; // Log In Validated
 
-                                log_In_Info.Log_User_Name = Log_Name.Text;
-                                log_In_Info.Log_Password = log_Pass.Text;
+                                log_In_Info.Log_User_Name = Log_Name;
+                                log_In_Info.Log_Password = log_Pass;
 
-                                Medarbejder_Get_Info(Log_Name.Text, log_Pass.Text); // Get Me_ID and Me_Type
+                                Medarbejder_Get_Info(Log_Name, log_Pass); // Get Me_ID and Me_Type
 
                                 break;
                             }
