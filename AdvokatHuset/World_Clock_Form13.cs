@@ -133,13 +133,7 @@ namespace View_GUI
         //------VerdensUR - Opgave------::END::--------------------------------------
 
 
-
-
-
-
-
-
-
+          
 
 
        // Populate Rest_world_Combobox

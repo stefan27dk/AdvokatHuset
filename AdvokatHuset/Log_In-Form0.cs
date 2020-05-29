@@ -241,10 +241,7 @@ namespace View_GUI
                         }
 
 
-                     
-
-
-
+                      
 
                         // Get UserName
                         if ((reader.NodeType == XmlNodeType.Element) && (reader.Name == "log_in_name"))
@@ -256,11 +253,7 @@ namespace View_GUI
                         }
 
 
-
-
-
-
-
+                     
 
                         // Get Password
                         if ((reader.NodeType == XmlNodeType.Element) && (reader.Name == "log_in_password"))
@@ -273,15 +266,7 @@ namespace View_GUI
 
                         }
 
-
-
-
-
-
-
-
-
-
+                  
                     }
              
                 }

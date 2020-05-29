@@ -48,20 +48,7 @@ namespace Domain
 
         //}
 
+        
 
-
-
-
-
-        // Write Log In  - To file
-        private void Remember_Log_In()
-        {
-              
-
-        }
-
-
-   
-
-        }
+    }
 }
