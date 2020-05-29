@@ -9,12 +9,17 @@ using System.Windows.Forms;
 
 namespace View_GUI
 {
-    class My_Timer
+    class My_Timer 
     {
 
+        public Panel Get_My_Timer { get; set; }
+  
 
-         public My_Timer()
+
+        // Constructor
+        public My_Timer()
          {
+            
             this.hours_textBox = new System.Windows.Forms.TextBox();
             this.minutes_textBox = new System.Windows.Forms.TextBox();
             this.seconds_textBox = new System.Windows.Forms.TextBox();
@@ -320,7 +325,7 @@ namespace View_GUI
             // 
             // resetAndContinue_button
             // 
-            this.resetAndContinue_button.BackgroundImage = global::View_GUI.Properties.Resources.Untitled;
+            this.resetAndContinue_button.BackgroundImage = global::View_GUI.Properties.Resources.Plus1;
             this.resetAndContinue_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.resetAndContinue_button.FlatAppearance.BorderSize = 0;
             this.resetAndContinue_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
@@ -336,7 +341,7 @@ namespace View_GUI
             // 
             // AddresetAnd_stop_button
             // 
-            this.AddresetAnd_stop_button.BackgroundImage = global::View_GUI.Properties.Resources.Untitled__1_;
+            this.AddresetAnd_stop_button.BackgroundImage = global::View_GUI.Properties.Resources.Plus2;
             this.AddresetAnd_stop_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.AddresetAnd_stop_button.FlatAppearance.BorderSize = 0;
             this.AddresetAnd_stop_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
@@ -395,7 +400,7 @@ namespace View_GUI
             // 
             // stop_button
             // 
-            this.stop_button.BackgroundImage = global::View_GUI.Properties.Actions_stop_icon;
+            this.stop_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_stop_icon;
             this.stop_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.stop_button.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.stop_button.FlatAppearance.BorderSize = 0;
@@ -494,9 +499,12 @@ namespace View_GUI
             this.holder_panel.Controls.Add(this.save_Edit_button);
             this.holder_panel.Controls.Add(this.AbortEdit_button);
             this.holder_panel.Controls.Add(this.resize_trackBar);
-            this.holder_panel.Location = new System.Drawing.Point(12, 12);
+            this.holder_panel.Location = new System.Drawing.Point(12, 30);
+            this.holder_panel.BorderStyle = BorderStyle.FixedSingle;
             this.holder_panel.Name = "holder_panel";
             this.holder_panel.Size = new System.Drawing.Size(373, 314);
+            this.holder_panel.MaximumSize = new System.Drawing.Size(600, 314);
+            this.holder_panel.AutoSize = true;
             this.holder_panel.TabIndex = 29;
             // 
             // save_button
@@ -543,9 +551,9 @@ namespace View_GUI
             this.AbortEdit_button.UseVisualStyleBackColor = true;
             this.AbortEdit_button.Click += new System.EventHandler(this.AbortEdit_button_Click);
             // 
-           
 
-
+            Get_My_Timer = holder_panel;
+            Timer1();
          }
 
 

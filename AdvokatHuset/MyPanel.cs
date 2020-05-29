@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -23,7 +24,7 @@ namespace View_GUI
 
         public MyPanel()
         {
-           
+
             SetStyle(ControlStyles.UserPaint | ControlStyles.ResizeRedraw | ControlStyles.OptimizedDoubleBuffer | ControlStyles.AllPaintingInWmPaint, true);
             Border = Pens.Gray;
             
@@ -33,10 +34,11 @@ namespace View_GUI
 
         protected override void OnPaint(PaintEventArgs e)
         {
-                using (SolidBrush brush = new SolidBrush(MyPanelBackgroundColor))// Inside Color of the Panel
+            using (SolidBrush brush = new SolidBrush(MyPanelBackgroundColor))// Inside Color of the Panel
                 e.Graphics.FillRectangle(brush, ClientRectangle);
-                e.Graphics.DrawRectangle(Border, 0, 0, ClientSize.Width - 1, ClientSize.Height - 1); // Border Area
-            //base.OnPaint(e);
+            e.Graphics.DrawRectangle(Border, 0, 0, ClientSize.Width - 1, ClientSize.Height - 1); // Border Area
+            base.OnPaint(e);
+            
         }
     }
 }

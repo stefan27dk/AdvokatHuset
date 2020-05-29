@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using System.ComponentModel;
 using System.Data;
 using System.Windows;
+using System.Reflection;
 
 namespace View_GUI
 {
@@ -17,7 +18,7 @@ namespace View_GUI
         public Panel LoaderPanel { get; set; }
         public Panel TaskbarPanel { get; set; }
 
-
+        public Control Add_Object { get; private set; }
 
 
         /////CLEAN
@@ -29,13 +30,12 @@ namespace View_GUI
         //public int ItemPanelLocationY {get; set;}
         /////CLEAN
 
-
-
+     
 
         // Item Panel - Relations
         private Control activeControl;
         private Point Start_TaskPanel;
-        public MyPanel ItemPanel = new MyPanel();//Added task panel
+        public  MyPanel ItemPanel = new MyPanel();//Added task panel
         
 
 
@@ -55,7 +55,9 @@ namespace View_GUI
 
         public MovingItemPanels() // Constructor
         {
-            
+            Add_Object = this.ItemPanel;
+
+         
 
         }
 
@@ -365,8 +367,7 @@ namespace View_GUI
             exitButton.BackgroundImageLayout = ImageLayout.Zoom;
 
             exitButton.MouseClick += new MouseEventHandler(ExitButton_Click);
-
-
+      
             ItemPanel.Controls.Add(exitButton);
             exitButton.BringToFront();
         }
@@ -518,7 +519,7 @@ namespace View_GUI
             ////ItemPanel.Tag = TaskbarPanel.Controls.Count + 1;
             ItemPanel.Tag = this.ItemPanel;
             ItemPanel.Tag1 = this.miniPanel;
-
+            ItemPanel.AutoSize = true;
 
             // Event Handlers
             ItemPanel.MouseDown += new MouseEventHandler(ItemPanel_MouseDown);///Added panel Declaring MouseDown
@@ -526,6 +527,7 @@ namespace View_GUI
             ItemPanel.MouseUp += new MouseEventHandler(ItemPanel_MouseUp);///Added panel Declaring MouseUp
             //ItemPanel.Paint += new PaintEventHandler(ItemPanel_Paint);// On loading the ItemPanel "On Apearing in the Form"
             ItemPanel.MouseClick += new MouseEventHandler(ItemPanel_MouseClick);
+
 
 
             //ItemPanel.LocationChanged += new System.EventHandler(ItemPanel_LocationChanged);
@@ -595,7 +597,7 @@ namespace View_GUI
         // ItemPanel Mouse Move
         private void ItemPanel_MouseMove(object sender, MouseEventArgs e)
         {
-          
+
             // If it is not sender does not move any panel  "The sender is the panel that owns the current MouseEvent"  
             if (activeControl == null/* || activeControl != sender*/)
             {
@@ -629,6 +631,9 @@ namespace View_GUI
                 }
 
             }
+
+
+             
 
         }
 

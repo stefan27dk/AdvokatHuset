@@ -156,7 +156,6 @@ namespace View_GUI
         private void Main_Form1_Load(object sender, EventArgs e)
         {
 
-           
 
             Home();// Start Form in the Loader_Panel
             formList.Add(HomeForm11);
@@ -913,8 +912,8 @@ namespace View_GUI
 
             // ITEM PANEL
             MyMovingTimer.ItemPanel.Location = new System.Drawing.Point(30, 100);//Added panel Location
-            //MovingPanels.ItemPanel.MaximumSize = new Size(300, 100);
-            MyMovingTimer.ItemPanel.Size = new Size(300, 150);
+            MyMovingTimer.ItemPanel.MaximumSize = new Size(600, 450);
+            MyMovingTimer.ItemPanel.Size = new Size(400, 450);
             MyMovingTimer.ItemPanel.MyPanelBackgroundColor = Color.FromArgb(94, 54, 74);
             MyMovingTimer.ItemPanel.BorderStyle = BorderStyle.FixedSingle;
             //TaskPanel.Padding = new Padding(200);
@@ -937,8 +936,12 @@ namespace View_GUI
             // Add ITEM PANEL
             MyMovingTimer.AddItemPanel();
             MyMovingTimer.ItemPanel.BringToFront();// Show on top of everything in the Loader Panel
+            
 
 
+            // The Timer
+            My_Timer My_Timer1 = new My_Timer();
+            MyMovingTimer.Add_Object.Controls.Add(My_Timer1.Get_My_Timer); // Get the Panel And Add The timer to the panel
         }
 
 
