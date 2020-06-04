@@ -24,13 +24,14 @@ namespace View_GUI
 
         public MyPanel()
         {
-
+                      
             SetStyle(ControlStyles.UserPaint | ControlStyles.ResizeRedraw | ControlStyles.OptimizedDoubleBuffer | ControlStyles.AllPaintingInWmPaint, true);
             Border = Pens.Gray;
             
         }
 
 
+        
 
         protected override void OnPaint(PaintEventArgs e)
         {

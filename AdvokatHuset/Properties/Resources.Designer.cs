@@ -173,6 +173,26 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _23424 {
+            get {
+                object obj = ResourceManager.GetObject("23424", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _34234 {
+            get {
+                object obj = ResourceManager.GetObject("34234", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _360_Chrome_icon {
             get {
                 object obj = ResourceManager.GetObject("360-Chrome-icon", resourceCulture);
@@ -1673,6 +1693,36 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Exit_Form12 {
+            get {
+                object obj = ResourceManager.GetObject("Exit_Form12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Exit_Form1432 {
+            get {
+                object obj = ResourceManager.GetObject("Exit_Form1432", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Exit_Form14321 {
+            get {
+                object obj = ResourceManager.GetObject("Exit_Form14321", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Exit_Red {
             get {
                 object obj = ResourceManager.GetObject("Exit-Red", resourceCulture);
@@ -1746,6 +1796,16 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap File_Word_icon {
             get {
                 object obj = ResourceManager.GetObject("File-Word-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flash_kard_icon {
+            get {
+                object obj = ResourceManager.GetObject("flash-kard-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2076,6 +2136,16 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap minimize {
             get {
                 object obj = ResourceManager.GetObject("minimize", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Minimize12342 {
+            get {
+                object obj = ResourceManager.GetObject("Minimize12342", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -3103,9 +3173,49 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Untitled1212 {
+            get {
+                object obj = ResourceManager.GetObject("Untitled1212", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled12121 {
+            get {
+                object obj = ResourceManager.GetObject("Untitled12121", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Untitled2 {
             get {
                 object obj = ResourceManager.GetObject("Untitled2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled213234 {
+            get {
+                object obj = ResourceManager.GetObject("Untitled213234", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled23123 {
+            get {
+                object obj = ResourceManager.GetObject("Untitled23123", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -3126,6 +3236,16 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap Untitled4 {
             get {
                 object obj = ResourceManager.GetObject("Untitled4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled4335 {
+            get {
+                object obj = ResourceManager.GetObject("Untitled4335", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

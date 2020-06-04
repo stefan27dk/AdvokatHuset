@@ -39,6 +39,7 @@
     <Reference Include="itextsharp, Version=5.5.13.1, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
       <HintPath>..\packages\iTextSharp.5.5.13.1\lib\itextsharp.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SqlClient, Version=4.6.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -1372,6 +1373,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Plus2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit_Form12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit_Form1432.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit_Form14321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimize12342.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled1212.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled213234.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled23123.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled12121.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled4335.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\23424.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\34234.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flash-kard-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -170,7 +170,7 @@ namespace View_GUI
             General_menuStrip.Renderer = new MyRenderer(); // Used for General_menuStrip to change the "Selection Background Color" "Renderer"
             General_menuStrip.ForeColor = Color.FromArgb(0, 204, 255);//Color of the Menu Strip "General menu"
             General_Menu_Panel.BringToFront();// Advokate,Sager ETC. menu to top
-            
+
         }
 
 
@@ -463,6 +463,27 @@ namespace View_GUI
 
         
             
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             
         //Top Menu Bar Left------::START::--------------------------------------------------------------------------------------------------------------------------------------------------
         // Home
@@ -936,7 +957,7 @@ namespace View_GUI
             // Add ITEM PANEL
             MyMovingTimer.AddItemPanel();
             MyMovingTimer.ItemPanel.BringToFront();// Show on top of everything in the Loader Panel
-            
+
 
 
             // The Timer
