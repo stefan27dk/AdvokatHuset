@@ -1446,5 +1446,59 @@
   <ItemGroup>
     <None Include="Resources\Minimize_OOP.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hover_Maximize_Last1432.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maximize_Hover_Ll234.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hover_Maximize_Now.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flash-kard-icon %281%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flash-kard-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flash-kard-icon %281%29 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flash-kard-icon %281%29 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flash-kard-icon %281%29 %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flash-kard-icon %281%29 %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flash-kard-icon %281%29 %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flash-kard-icon %281%29 %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flash-kard-icon %281%29 %285%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flash-kard-icon %281%29 %285%29 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flash-kard-icon %281%29 %285%29 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flash-kard-icon %281%29 %285%29 %283%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flash-kard-icon %281%29 %285%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flash-kard-icon %281%29 %285%29 %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flash-kard-icon %281%29 %285%29 %285%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

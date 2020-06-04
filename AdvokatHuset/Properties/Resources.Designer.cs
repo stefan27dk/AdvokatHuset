@@ -1823,6 +1823,156 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap flash_kard_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("flash-kard-icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flash_kard_icon__1___1_ {
+            get {
+                object obj = ResourceManager.GetObject("flash-kard-icon (1) (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flash_kard_icon__1___2_ {
+            get {
+                object obj = ResourceManager.GetObject("flash-kard-icon (1) (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flash_kard_icon__1___3_ {
+            get {
+                object obj = ResourceManager.GetObject("flash-kard-icon (1) (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flash_kard_icon__1___4_ {
+            get {
+                object obj = ResourceManager.GetObject("flash-kard-icon (1) (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flash_kard_icon__1___5_ {
+            get {
+                object obj = ResourceManager.GetObject("flash-kard-icon (1) (5)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flash_kard_icon__1___5___1_ {
+            get {
+                object obj = ResourceManager.GetObject("flash-kard-icon (1) (5) (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flash_kard_icon__1___5___2_ {
+            get {
+                object obj = ResourceManager.GetObject("flash-kard-icon (1) (5) (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flash_kard_icon__1___5___3_ {
+            get {
+                object obj = ResourceManager.GetObject("flash-kard-icon (1) (5) (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flash_kard_icon__1___5___3_1 {
+            get {
+                object obj = ResourceManager.GetObject("flash-kard-icon (1) (5) (3)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flash_kard_icon__1___5___4_ {
+            get {
+                object obj = ResourceManager.GetObject("flash-kard-icon (1) (5) (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flash_kard_icon__1___5___5_ {
+            get {
+                object obj = ResourceManager.GetObject("flash-kard-icon (1) (5) (5)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flash_kard_icon__1___5_1 {
+            get {
+                object obj = ResourceManager.GetObject("flash-kard-icon (1) (5)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flash_kard_icon__1___6_ {
+            get {
+                object obj = ResourceManager.GetObject("flash-kard-icon (1) (6)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flash_kard_icon__1___7_ {
+            get {
+                object obj = ResourceManager.GetObject("flash-kard-icon (1) (7)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap floppy_icon {
             get {
                 object obj = ResourceManager.GetObject("floppy_icon", resourceCulture);
@@ -1976,6 +2126,26 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap Hover_Del_3 {
             get {
                 object obj = ResourceManager.GetObject("Hover Del 3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hover_Maximize_Last1432 {
+            get {
+                object obj = ResourceManager.GetObject("Hover_Maximize_Last1432", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hover_Maximize_Now {
+            get {
+                object obj = ResourceManager.GetObject("Hover_Maximize_Now", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2146,6 +2316,16 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap mail_yellow_icon {
             get {
                 object obj = ResourceManager.GetObject("mail-yellow-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Maximize_Hover_Ll234 {
+            get {
+                object obj = ResourceManager.GetObject("Maximize_Hover_Ll234", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
