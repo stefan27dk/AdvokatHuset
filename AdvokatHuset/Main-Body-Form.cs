@@ -380,6 +380,24 @@ namespace View_GUI
 
 
 
+
+        // Show Only TitleBar
+        private void Show_Only_TitleBar_button_Click(object sender, EventArgs e)
+        {
+
+            int ScreenW = Screen.PrimaryScreen.Bounds.Width;
+            int ScreenH = Screen.PrimaryScreen.Bounds.Height;
+
+            this.Size = new Size(ScreenW - 150, 50);
+            this.Location = new Point(0,0);
+        }
+
+
+
+
+
+
+
         //-------------Buttons---Hover--------------<<<<--------------------------------
 
 

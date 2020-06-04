@@ -2783,6 +2783,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap photoshop_icon {
+            get {
+                object obj = ResourceManager.GetObject("photoshop-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Places_folder_orange_icon {
             get {
                 object obj = ResourceManager.GetObject("Places-folder-orange-icon", resourceCulture);

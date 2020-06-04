@@ -1500,5 +1500,8 @@
   <ItemGroup>
     <None Include="Resources\flash-kard-icon %281%29 %285%29 %285%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photoshop-icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
