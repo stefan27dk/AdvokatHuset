@@ -1723,6 +1723,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Exit_Hover_Form1432 {
+            get {
+                object obj = ResourceManager.GetObject("Exit_Hover_Form1432", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Exit_Red {
             get {
                 object obj = ResourceManager.GetObject("Exit-Red", resourceCulture);
@@ -1973,9 +1983,39 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Hover_Maximize143234 {
+            get {
+                object obj = ResourceManager.GetObject("Hover_Maximize143234", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hover1212 {
+            get {
+                object obj = ResourceManager.GetObject("Hover1212", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap HoverDel {
             get {
                 object obj = ResourceManager.GetObject("HoverDel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap HOVERED_Maximize233 {
+            get {
+                object obj = ResourceManager.GetObject("HOVERED_Maximize233", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2113,6 +2153,36 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Maximize_Hover1212 {
+            get {
+                object obj = ResourceManager.GetObject("Maximize_Hover1212", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Mazimize_On_Hover_1234345 {
+            get {
+                object obj = ResourceManager.GetObject("Mazimize_On_Hover_1234345", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Mazimize_On_Hover_12343451 {
+            get {
+                object obj = ResourceManager.GetObject("Mazimize_On_Hover_12343451", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap microphone_icon {
             get {
                 object obj = ResourceManager.GetObject("microphone-icon", resourceCulture);
@@ -2143,9 +2213,59 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Minimize_OOP {
+            get {
+                object obj = ResourceManager.GetObject("Minimize_OOP", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Minimize12342 {
             get {
                 object obj = ResourceManager.GetObject("Minimize12342", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Minimize12342__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Minimize12342 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Minimize23432543 {
+            get {
+                object obj = ResourceManager.GetObject("Minimize23432543", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Minimize23432543__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Minimize23432543 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Minimize23432543__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Minimize23432543 (2)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

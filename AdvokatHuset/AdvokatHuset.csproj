@@ -1410,5 +1410,41 @@
   <ItemGroup>
     <None Include="Resources\flash-kard-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit_Hover_Form1432.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maximize_Hover1212.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hover1212.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mazimize_On_Hover_1234345.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hover_Maximize143234.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mazimize_On_Hover_12343451.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HOVERED_Maximize233.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimize23432543 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimize23432543 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimize23432543.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimize12342 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimize_OOP.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

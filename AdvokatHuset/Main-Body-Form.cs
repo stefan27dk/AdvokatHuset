@@ -44,6 +44,8 @@ namespace View_GUI
         const int WS_MINIMIZEBOX = 0x20000;
         const int CS_DBLCLKS = 0x8;
 
+
+        
         //-----------FORM--Border----TitleBar-----Settings-----::END::-------------------------------------------
 
 
@@ -76,11 +78,32 @@ namespace View_GUI
         {
             Main_Body_Settings(); // Settings
             Show_Log_In(); // Load Log In Form on Start
-          
+
             //var prop = TitleBar_panel.GetType().GetProperty("DoubleBuffered", BindingFlags.Instance | BindingFlags.NonPublic);
             //prop.SetValue(TitleBar_panel, true, null);
+        }
+
+
+
+
+
+
+
+
+
+        // Log In Form
+        private void Show_Log_In()
+        {
+            Log_In_Form.TopLevel = false;
+            Main_Body_Loader_panel.Controls.Add(Log_In_Form);
+            Log_In_Form.FormBorderStyle = FormBorderStyle.None;
+            Log_In_Form.Dock = DockStyle.Fill;
+            Log_In_Form.Show();
 
         }
+
+
+
 
 
 
@@ -106,11 +129,6 @@ namespace View_GUI
 
 
         //-------------------Custom--Form--Border----::START::-----------------------------------------------
-
-
-
-
-
 
         //-------------------------SPECIAL-->>>-----------------------------------------------------------------
 
@@ -153,12 +171,9 @@ namespace View_GUI
                 cp.Style |= WS_MINIMIZEBOX;
                 cp.ClassStyle |= CS_DBLCLKS;
 
-
                 return cp;   
-             }
-
-            
-
+            }
+         
         }
 
 
@@ -178,6 +193,9 @@ namespace View_GUI
 
 
          //-------------------------SPECIAL-----<<<--------------------------------------------------------------
+
+
+
 
 
 
@@ -245,6 +263,7 @@ namespace View_GUI
 
 
         }
+
         //----Buttons-------------------------<<<--------------------------------------
 
 
@@ -253,32 +272,58 @@ namespace View_GUI
 
 
 
-        //-----------Remove FLickering-TITLE BAR------------------------------------------------
+        //-------------Buttons---Hover-------------->>>--------------------------------
+
+        // Exit Button - MouseEnter
+        private void close_form_button_MouseEnter(object sender, EventArgs e)
+        {
+            close_form_button.BackgroundImage = Properties.Resources.Exit_Hover_Form1432;
+        }
+
+
+        //Exit Button - Reset Image On Leave
+        private void close_form_button_MouseLeave(object sender, EventArgs e)
+        {
+            close_form_button.BackgroundImage = Properties.Resources.Exit_Form14321;
+            
+        }
+
+
+        //Maximize - Mouse Enter
+        private void maximize_button_MouseEnter(object sender, EventArgs e)
+        {
+            maximize_button.BackgroundImage = Properties.Resources.HOVERED_Maximize233;
+        }
+
+         // Maximize - Mouse Leave
+        private void maximize_button_MouseLeave(object sender, EventArgs e)
+        {
+            maximize_button.BackgroundImage = Properties.Resources._34234;
+          
+        }
 
 
 
 
-        //protected override void OnPaintBackground(PaintEventArgs e)
-        //{
 
-        //}
-
-
-
-        //protected override void OnPaint(PaintEventArgs e)
-        //{
-
-
-        //}
-
-        //-----------Remove FLickering-TITLE BAR------------------------------------------------
+        // Minimizee - Enter
+        private void minimize_button_MouseEnter(object sender, EventArgs e)
+        {
+            minimize_button.BackgroundImage = Properties.Resources.Minimize_OOP;
+        }
 
 
 
+        // Minimizee - Leave
+        private void minimize_button_MouseLeave(object sender, EventArgs e)
+        {
+            minimize_button.BackgroundImage = Properties.Resources.Minimize12342;
+            
+        }
 
 
 
-
+        //-------------Buttons---Hover--------------<<<<--------------------------------
 
 
 
@@ -299,17 +344,5 @@ namespace View_GUI
 
 
 
-        // Log In Form
-        private void Show_Log_In()
-        {
-            Log_In_Form.TopLevel = false;
-            Main_Body_Loader_panel.Controls.Add(Log_In_Form);
-            Log_In_Form.FormBorderStyle = FormBorderStyle.None;
-            Log_In_Form.Dock = DockStyle.Fill;
-            Log_In_Form.Show();
-          
-        }
-
-      
     }
 }

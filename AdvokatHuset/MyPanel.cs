@@ -24,10 +24,10 @@ namespace View_GUI
 
         public MyPanel()
         {
-                      
+            //this.SetStyle( System.Windows.Forms.ControlStyles.UserPaint | System.Windows.Forms.ControlStyles.AllPaintingInWmPaint | System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer, true);
             SetStyle(ControlStyles.UserPaint | ControlStyles.ResizeRedraw | ControlStyles.OptimizedDoubleBuffer | ControlStyles.AllPaintingInWmPaint, true);
             Border = Pens.Gray;
-            
+
         }
 
 
@@ -35,11 +35,13 @@ namespace View_GUI
 
         protected override void OnPaint(PaintEventArgs e)
         {
+
+
             using (SolidBrush brush = new SolidBrush(MyPanelBackgroundColor))// Inside Color of the Panel
                 e.Graphics.FillRectangle(brush, ClientRectangle);
             e.Graphics.DrawRectangle(Border, 0, 0, ClientSize.Width - 1, ClientSize.Height - 1); // Border Area
             base.OnPaint(e);
-            
+
         }
     }
 }
