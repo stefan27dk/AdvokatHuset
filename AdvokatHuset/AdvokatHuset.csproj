@@ -1503,5 +1503,47 @@
   <ItemGroup>
     <None Include="Resources\photoshop-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Top343534.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Top3435341.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Top3fds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Top343.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Top344.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Top45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Top34.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Top55777.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Top777777.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bottom5555.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Center3333.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Center32222.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Top_bar_only.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\To_Bar_Only_11111.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

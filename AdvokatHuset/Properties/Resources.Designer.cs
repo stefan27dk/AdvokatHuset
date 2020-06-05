@@ -1033,6 +1033,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Bottom5555 {
+            get {
+                object obj = ResourceManager.GetObject("Bottom5555", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Cabriolet_icon {
             get {
                 object obj = ResourceManager.GetObject("Cabriolet-icon", resourceCulture);
@@ -1206,6 +1216,26 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap Categories_preferences_system_icon {
             get {
                 object obj = ResourceManager.GetObject("Categories-preferences-system-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Center32222 {
+            get {
+                object obj = ResourceManager.GetObject("Center32222", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Center3333 {
+            get {
+                object obj = ResourceManager.GetObject("Center3333", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -3203,6 +3233,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap To_Bar_Only_11111 {
+            get {
+                object obj = ResourceManager.GetObject("To_Bar_Only_11111", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Top_Background_menu {
             get {
                 object obj = ResourceManager.GetObject("Top_Background_menu", resourceCulture);
@@ -3216,6 +3256,106 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap Top_Background_Panel {
             get {
                 object obj = ResourceManager.GetObject("Top Background Panel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Top_bar_only {
+            get {
+                object obj = ResourceManager.GetObject("Top_bar_only", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Top34 {
+            get {
+                object obj = ResourceManager.GetObject("Top34", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Top343 {
+            get {
+                object obj = ResourceManager.GetObject("Top343", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Top343534 {
+            get {
+                object obj = ResourceManager.GetObject("Top343534", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Top3435341 {
+            get {
+                object obj = ResourceManager.GetObject("Top3435341", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Top344 {
+            get {
+                object obj = ResourceManager.GetObject("Top344", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Top3fds {
+            get {
+                object obj = ResourceManager.GetObject("Top3fds", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Top45 {
+            get {
+                object obj = ResourceManager.GetObject("Top45", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Top55777 {
+            get {
+                object obj = ResourceManager.GetObject("Top55777", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Top777777 {
+            get {
+                object obj = ResourceManager.GetObject("Top777777", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
