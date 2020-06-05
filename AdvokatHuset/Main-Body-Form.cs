@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Domain;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -389,6 +391,18 @@ namespace View_GUI
 
             this.Size = new Size(ScreenW - 150, 50);
             this.Location = new Point(0,0);
+        }
+
+
+
+        // Form Screenshot Button
+        private void Form_Screenshot_button_button_Click(object sender, EventArgs e)
+        {
+            SoundPlayer sscreenshotSound = new SoundPlayer(@"C:\\Windows\Media\Windows Information Bar.wav");
+            sscreenshotSound.Play();
+
+            Screenshot screenshot = new Screenshot();
+            screenshot.MakeFormScreenshot();
         }
 
 

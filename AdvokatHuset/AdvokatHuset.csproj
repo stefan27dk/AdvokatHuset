@@ -1545,5 +1545,11 @@
   <ItemGroup>
     <None Include="Resources\To_Bar_Only_11111.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Camera-Next-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Camera-Next-icon3.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

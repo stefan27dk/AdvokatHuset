@@ -688,6 +688,9 @@
   <data name="Compressed-File-Zip-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Compressed-File-Zip-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Camera-Next-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Camera-Next-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Folders-OS-Documents-Library-Metro-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Folders-OS-Documents-Library-Metro-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -933,6 +936,9 @@
   </data>
   <data name="Minimize_OOP" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Minimize_OOP.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="To_Bar_Only_11111" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\To_Bar_Only_11111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="File-Word-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\File-Word-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1309,7 +1315,7 @@
   <data name="Office-Customer-Male-Light-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Office-Customer-Male-Light-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="To_Bar_Only_11111" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\To_Bar_Only_11111.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Camera-Next-icon3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Camera-Next-icon3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

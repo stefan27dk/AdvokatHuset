@@ -32,7 +32,7 @@
             this.Main_Body_Loader_panel = new System.Windows.Forms.Panel();
             this.TitleBar_panel = new System.Windows.Forms.Panel();
             this.Move_Form_Top_button = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Form_Screenshot_button_button = new System.Windows.Forms.Button();
             this.Show_Only_TitleBar_button = new System.Windows.Forms.Button();
             this.Normal_Size_Form_button = new System.Windows.Forms.Button();
             this.Move_Form_Bottom_button = new System.Windows.Forms.Button();
@@ -50,9 +50,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Main_Body_Loader_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(64)))));
             this.Main_Body_Loader_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Main_Body_Loader_panel.Location = new System.Drawing.Point(0, 42);
+            this.Main_Body_Loader_panel.Location = new System.Drawing.Point(0, 38);
             this.Main_Body_Loader_panel.Name = "Main_Body_Loader_panel";
-            this.Main_Body_Loader_panel.Size = new System.Drawing.Size(1601, 737);
+            this.Main_Body_Loader_panel.Size = new System.Drawing.Size(1601, 741);
             this.Main_Body_Loader_panel.TabIndex = 0;
             // 
             // TitleBar_panel
@@ -64,15 +64,15 @@
             this.TitleBar_panel.BackgroundImage = global::View_GUI.Properties.Resources._23424;
             this.TitleBar_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.TitleBar_panel.CausesValidation = false;
-            this.TitleBar_panel.Controls.Add(this.Move_Form_Top_button);
-            this.TitleBar_panel.Controls.Add(this.button1);
-            this.TitleBar_panel.Controls.Add(this.Show_Only_TitleBar_button);
-            this.TitleBar_panel.Controls.Add(this.Normal_Size_Form_button);
-            this.TitleBar_panel.Controls.Add(this.Move_Form_Bottom_button);
-            this.TitleBar_panel.Controls.Add(this.allays_on_top_button);
-            this.TitleBar_panel.Controls.Add(this.maximize_button);
-            this.TitleBar_panel.Controls.Add(this.minimize_button);
             this.TitleBar_panel.Controls.Add(this.close_form_button);
+            this.TitleBar_panel.Controls.Add(this.minimize_button);
+            this.TitleBar_panel.Controls.Add(this.Move_Form_Top_button);
+            this.TitleBar_panel.Controls.Add(this.maximize_button);
+            this.TitleBar_panel.Controls.Add(this.Move_Form_Bottom_button);
+            this.TitleBar_panel.Controls.Add(this.Normal_Size_Form_button);
+            this.TitleBar_panel.Controls.Add(this.Show_Only_TitleBar_button);
+            this.TitleBar_panel.Controls.Add(this.Form_Screenshot_button_button);
+            this.TitleBar_panel.Controls.Add(this.allays_on_top_button);
             this.TitleBar_panel.Location = new System.Drawing.Point(0, 0);
             this.TitleBar_panel.Name = "TitleBar_panel";
             this.TitleBar_panel.Size = new System.Drawing.Size(1608, 38);
@@ -84,7 +84,7 @@
             this.Move_Form_Top_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Move_Form_Top_button.BackColor = System.Drawing.Color.Transparent;
             this.Move_Form_Top_button.BackgroundImage = global::View_GUI.Properties.Resources.Top777777;
-            this.Move_Form_Top_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Move_Form_Top_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Move_Form_Top_button.FlatAppearance.BorderSize = 0;
             this.Move_Form_Top_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.Move_Form_Top_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
@@ -92,35 +92,35 @@
             this.Move_Form_Top_button.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Move_Form_Top_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.Move_Form_Top_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Move_Form_Top_button.Location = new System.Drawing.Point(1297, 6);
+            this.Move_Form_Top_button.Location = new System.Drawing.Point(1224, 1);
             this.Move_Form_Top_button.Margin = new System.Windows.Forms.Padding(0);
             this.Move_Form_Top_button.Name = "Move_Form_Top_button";
-            this.Move_Form_Top_button.Size = new System.Drawing.Size(33, 23);
+            this.Move_Form_Top_button.Size = new System.Drawing.Size(33, 32);
             this.Move_Form_Top_button.TabIndex = 37;
             this.Move_Form_Top_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Move_Form_Top_button.UseVisualStyleBackColor = false;
             this.Move_Form_Top_button.Click += new System.EventHandler(this.Move_Form_Top_button_Click);
             // 
-            // button1
+            // Form_Screenshot_button_button
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::View_GUI.Properties.Resources.photoshop_icon;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(835, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(45, 34);
-            this.button1.TabIndex = 44;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
+            this.Form_Screenshot_button_button.BackColor = System.Drawing.Color.Transparent;
+            this.Form_Screenshot_button_button.BackgroundImage = global::View_GUI.Properties.Resources.Camera_Next_icon3;
+            this.Form_Screenshot_button_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Form_Screenshot_button_button.FlatAppearance.BorderSize = 0;
+            this.Form_Screenshot_button_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.Form_Screenshot_button_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.Form_Screenshot_button_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Form_Screenshot_button_button.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Form_Screenshot_button_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Form_Screenshot_button_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Form_Screenshot_button_button.Location = new System.Drawing.Point(21, 4);
+            this.Form_Screenshot_button_button.Margin = new System.Windows.Forms.Padding(0);
+            this.Form_Screenshot_button_button.Name = "Form_Screenshot_button_button";
+            this.Form_Screenshot_button_button.Size = new System.Drawing.Size(41, 29);
+            this.Form_Screenshot_button_button.TabIndex = 44;
+            this.Form_Screenshot_button_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Form_Screenshot_button_button.UseVisualStyleBackColor = false;
+            this.Form_Screenshot_button_button.Click += new System.EventHandler(this.Form_Screenshot_button_button_Click);
             // 
             // Show_Only_TitleBar_button
             // 
@@ -135,12 +135,13 @@
             this.Show_Only_TitleBar_button.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Show_Only_TitleBar_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.Show_Only_TitleBar_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Show_Only_TitleBar_button.Location = new System.Drawing.Point(1170, 6);
+            this.Show_Only_TitleBar_button.Location = new System.Drawing.Point(1095, 1);
             this.Show_Only_TitleBar_button.Margin = new System.Windows.Forms.Padding(0);
             this.Show_Only_TitleBar_button.Name = "Show_Only_TitleBar_button";
-            this.Show_Only_TitleBar_button.Size = new System.Drawing.Size(33, 23);
+            this.Show_Only_TitleBar_button.Size = new System.Drawing.Size(33, 32);
             this.Show_Only_TitleBar_button.TabIndex = 43;
-            this.Show_Only_TitleBar_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Show_Only_TitleBar_button.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.Show_Only_TitleBar_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Show_Only_TitleBar_button.UseVisualStyleBackColor = false;
             this.Show_Only_TitleBar_button.Click += new System.EventHandler(this.Show_Only_TitleBar_button_Click);
             // 
@@ -157,10 +158,10 @@
             this.Normal_Size_Form_button.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Normal_Size_Form_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.Normal_Size_Form_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Normal_Size_Form_button.Location = new System.Drawing.Point(1211, 6);
+            this.Normal_Size_Form_button.Location = new System.Drawing.Point(1139, 1);
             this.Normal_Size_Form_button.Margin = new System.Windows.Forms.Padding(0);
             this.Normal_Size_Form_button.Name = "Normal_Size_Form_button";
-            this.Normal_Size_Form_button.Size = new System.Drawing.Size(33, 23);
+            this.Normal_Size_Form_button.Size = new System.Drawing.Size(33, 32);
             this.Normal_Size_Form_button.TabIndex = 42;
             this.Normal_Size_Form_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Normal_Size_Form_button.UseVisualStyleBackColor = false;
@@ -179,10 +180,10 @@
             this.Move_Form_Bottom_button.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Move_Form_Bottom_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.Move_Form_Bottom_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Move_Form_Bottom_button.Location = new System.Drawing.Point(1254, 6);
+            this.Move_Form_Bottom_button.Location = new System.Drawing.Point(1182, 1);
             this.Move_Form_Bottom_button.Margin = new System.Windows.Forms.Padding(0);
             this.Move_Form_Bottom_button.Name = "Move_Form_Bottom_button";
-            this.Move_Form_Bottom_button.Size = new System.Drawing.Size(33, 23);
+            this.Move_Form_Bottom_button.Size = new System.Drawing.Size(33, 32);
             this.Move_Form_Bottom_button.TabIndex = 41;
             this.Move_Form_Bottom_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Move_Form_Bottom_button.UseVisualStyleBackColor = false;
@@ -201,7 +202,7 @@
             this.allays_on_top_button.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.allays_on_top_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.allays_on_top_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.allays_on_top_button.Location = new System.Drawing.Point(1392, 1);
+            this.allays_on_top_button.Location = new System.Drawing.Point(1267, 0);
             this.allays_on_top_button.Margin = new System.Windows.Forms.Padding(0);
             this.allays_on_top_button.Name = "allays_on_top_button";
             this.allays_on_top_button.Size = new System.Drawing.Size(33, 32);
@@ -224,7 +225,7 @@
             this.maximize_button.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.maximize_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.maximize_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.maximize_button.Location = new System.Drawing.Point(1513, 0);
+            this.maximize_button.Location = new System.Drawing.Point(1516, 0);
             this.maximize_button.Margin = new System.Windows.Forms.Padding(0);
             this.maximize_button.Name = "maximize_button";
             this.maximize_button.Size = new System.Drawing.Size(40, 35);
@@ -248,7 +249,7 @@
             this.minimize_button.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.minimize_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.minimize_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.minimize_button.Location = new System.Drawing.Point(1470, 6);
+            this.minimize_button.Location = new System.Drawing.Point(1473, 7);
             this.minimize_button.Margin = new System.Windows.Forms.Padding(0);
             this.minimize_button.Name = "minimize_button";
             this.minimize_button.Size = new System.Drawing.Size(32, 20);
@@ -273,7 +274,7 @@
             this.close_form_button.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.close_form_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.close_form_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.close_form_button.Location = new System.Drawing.Point(1564, 4);
+            this.close_form_button.Location = new System.Drawing.Point(1567, 4);
             this.close_form_button.Margin = new System.Windows.Forms.Padding(0);
             this.close_form_button.Name = "close_form_button";
             this.close_form_button.Size = new System.Drawing.Size(25, 25);
@@ -315,6 +316,6 @@
         private System.Windows.Forms.Button Move_Form_Bottom_button;
         private System.Windows.Forms.Button Normal_Size_Form_button;
         private System.Windows.Forms.Button Show_Only_TitleBar_button;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Form_Screenshot_button_button;
     }
 }
