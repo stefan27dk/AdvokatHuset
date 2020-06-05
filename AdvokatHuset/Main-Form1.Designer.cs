@@ -292,8 +292,6 @@
             // 
             // log_In_top_Bottom_panel
             // 
-            this.log_In_top_Bottom_panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.log_In_top_Bottom_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(196)))), ((int)(((byte)(60)))));
             this.log_In_top_Bottom_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.log_In_top_Bottom_panel.Controls.Add(this.log_in_top_panel);
