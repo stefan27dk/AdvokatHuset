@@ -34,17 +34,17 @@
             this.remember_log_in_checkBox = new System.Windows.Forms.CheckBox();
             this.wrong_log_in_label = new System.Windows.Forms.Label();
             this.log_in_holder_panel = new System.Windows.Forms.Panel();
-            this.secret_developer_mode_button = new System.Windows.Forms.Button();
-            this.sql_script_textBox = new System.Windows.Forms.TextBox();
+            this.conn_string_tip_label = new System.Windows.Forms.Label();
+            this.sql_connection_error_label = new System.Windows.Forms.Label();
             this.load_log_in_button = new System.Windows.Forms.Button();
             this.delete_login_file_button = new System.Windows.Forms.Button();
             this.log_in_Clear_all_button = new System.Windows.Forms.Button();
             this.pass_label = new System.Windows.Forms.Label();
             this.log_in_button = new System.Windows.Forms.Button();
             this.name_label = new System.Windows.Forms.Label();
+            this.secret_developer_mode_button = new System.Windows.Forms.Button();
+            this.sql_script_textBox = new System.Windows.Forms.TextBox();
             this.settings_button = new System.Windows.Forms.Button();
-            this.sql_connection_error_label = new System.Windows.Forms.Label();
-            this.conn_string_tip_label = new System.Windows.Forms.Label();
             this.settings_myPanel = new View_GUI.MyPanel();
             this.sql_diagram_button = new System.Windows.Forms.Button();
             this.SQL_Script_button = new System.Windows.Forms.Button();
@@ -135,35 +135,31 @@
             this.log_in_holder_panel.Size = new System.Drawing.Size(363, 356);
             this.log_in_holder_panel.TabIndex = 42;
             // 
-            // secret_developer_mode_button
+            // conn_string_tip_label
             // 
-            this.secret_developer_mode_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.secret_developer_mode_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.secret_developer_mode_button.FlatAppearance.BorderSize = 0;
-            this.secret_developer_mode_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.secret_developer_mode_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
-            this.secret_developer_mode_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.secret_developer_mode_button.Location = new System.Drawing.Point(5, 4);
-            this.secret_developer_mode_button.Name = "secret_developer_mode_button";
-            this.secret_developer_mode_button.Size = new System.Drawing.Size(41, 39);
-            this.secret_developer_mode_button.TabIndex = 44;
-            this.secret_developer_mode_button.UseVisualStyleBackColor = true;
-            this.secret_developer_mode_button.Click += new System.EventHandler(this.secret_developer_mode_button_Click);
-            this.secret_developer_mode_button.MouseEnter += new System.EventHandler(this.secret_developer_mode_button_MouseEnter);
-            this.secret_developer_mode_button.MouseLeave += new System.EventHandler(this.secret_developer_mode_button_MouseLeave);
+            this.conn_string_tip_label.AutoSize = true;
+            this.conn_string_tip_label.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.conn_string_tip_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.conn_string_tip_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.conn_string_tip_label.Location = new System.Drawing.Point(74, 329);
+            this.conn_string_tip_label.Name = "conn_string_tip_label";
+            this.conn_string_tip_label.Size = new System.Drawing.Size(240, 13);
+            this.conn_string_tip_label.TabIndex = 46;
+            this.conn_string_tip_label.Text = "Tip: Tjek \"ConnectionString\"  : Tryk Her:";
+            this.conn_string_tip_label.Visible = false;
+            this.conn_string_tip_label.Click += new System.EventHandler(this.conn_string_tip_label_Click);
             // 
-            // sql_script_textBox
+            // sql_connection_error_label
             // 
-            this.sql_script_textBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.sql_script_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(14)))), ((int)(((byte)(34)))));
-            this.sql_script_textBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.sql_script_textBox.Location = new System.Drawing.Point(406, 152);
-            this.sql_script_textBox.Multiline = true;
-            this.sql_script_textBox.Name = "sql_script_textBox";
-            this.sql_script_textBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.sql_script_textBox.Size = new System.Drawing.Size(1103, 528);
-            this.sql_script_textBox.TabIndex = 45;
-            this.sql_script_textBox.Visible = false;
+            this.sql_connection_error_label.AutoSize = true;
+            this.sql_connection_error_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sql_connection_error_label.ForeColor = System.Drawing.Color.Red;
+            this.sql_connection_error_label.Location = new System.Drawing.Point(57, 306);
+            this.sql_connection_error_label.Name = "sql_connection_error_label";
+            this.sql_connection_error_label.Size = new System.Drawing.Size(282, 16);
+            this.sql_connection_error_label.TabIndex = 45;
+            this.sql_connection_error_label.Text = "Der er ikke forbindelse til SQL Serveren";
+            this.sql_connection_error_label.Visible = false;
             // 
             // load_log_in_button
             // 
@@ -256,6 +252,36 @@
             this.name_label.Text = "Navn:";
             this.name_label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // secret_developer_mode_button
+            // 
+            this.secret_developer_mode_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.secret_developer_mode_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.secret_developer_mode_button.FlatAppearance.BorderSize = 0;
+            this.secret_developer_mode_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.secret_developer_mode_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(186)))), ((int)(((byte)(82)))));
+            this.secret_developer_mode_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.secret_developer_mode_button.Location = new System.Drawing.Point(5, 4);
+            this.secret_developer_mode_button.Name = "secret_developer_mode_button";
+            this.secret_developer_mode_button.Size = new System.Drawing.Size(41, 39);
+            this.secret_developer_mode_button.TabIndex = 44;
+            this.secret_developer_mode_button.UseVisualStyleBackColor = true;
+            this.secret_developer_mode_button.Click += new System.EventHandler(this.secret_developer_mode_button_Click);
+            this.secret_developer_mode_button.MouseEnter += new System.EventHandler(this.secret_developer_mode_button_MouseEnter);
+            this.secret_developer_mode_button.MouseLeave += new System.EventHandler(this.secret_developer_mode_button_MouseLeave);
+            // 
+            // sql_script_textBox
+            // 
+            this.sql_script_textBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.sql_script_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(14)))), ((int)(((byte)(34)))));
+            this.sql_script_textBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.sql_script_textBox.Location = new System.Drawing.Point(408, 143);
+            this.sql_script_textBox.Multiline = true;
+            this.sql_script_textBox.Name = "sql_script_textBox";
+            this.sql_script_textBox.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.sql_script_textBox.Size = new System.Drawing.Size(1103, 528);
+            this.sql_script_textBox.TabIndex = 45;
+            this.sql_script_textBox.Visible = false;
+            // 
             // settings_button
             // 
             this.settings_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -273,32 +299,6 @@
             this.settings_button.UseVisualStyleBackColor = true;
             this.settings_button.Click += new System.EventHandler(this.settings_button_Click);
             // 
-            // sql_connection_error_label
-            // 
-            this.sql_connection_error_label.AutoSize = true;
-            this.sql_connection_error_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.sql_connection_error_label.ForeColor = System.Drawing.Color.Red;
-            this.sql_connection_error_label.Location = new System.Drawing.Point(57, 306);
-            this.sql_connection_error_label.Name = "sql_connection_error_label";
-            this.sql_connection_error_label.Size = new System.Drawing.Size(282, 16);
-            this.sql_connection_error_label.TabIndex = 45;
-            this.sql_connection_error_label.Text = "Der er ikke forbindelse til SQL Serveren";
-            this.sql_connection_error_label.Visible = false;
-            // 
-            // conn_string_tip_label
-            // 
-            this.conn_string_tip_label.AutoSize = true;
-            this.conn_string_tip_label.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.conn_string_tip_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.conn_string_tip_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.conn_string_tip_label.Location = new System.Drawing.Point(74, 329);
-            this.conn_string_tip_label.Name = "conn_string_tip_label";
-            this.conn_string_tip_label.Size = new System.Drawing.Size(240, 13);
-            this.conn_string_tip_label.TabIndex = 46;
-            this.conn_string_tip_label.Text = "Tip: Tjek \"ConnectionString\"  : Tryk Her:";
-            this.conn_string_tip_label.Visible = false;
-            this.conn_string_tip_label.Click += new System.EventHandler(this.conn_string_tip_label_Click);
-            // 
             // settings_myPanel
             // 
             this.settings_myPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -313,7 +313,7 @@
             this.settings_myPanel.Controls.Add(this.conn_ex2_label);
             this.settings_myPanel.Controls.Add(this.conn_string_textBox);
             this.settings_myPanel.Controls.Add(this.connection_string_label);
-            this.settings_myPanel.Location = new System.Drawing.Point(406, 503);
+            this.settings_myPanel.Location = new System.Drawing.Point(408, 494);
             this.settings_myPanel.Name = "settings_myPanel";
             this.settings_myPanel.Size = new System.Drawing.Size(1103, 231);
             this.settings_myPanel.TabIndex = 43;

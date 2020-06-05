@@ -17,7 +17,7 @@ namespace DAL
             // Sql Connection String Check
             DB_Connection_String connection = DB_Connection_String.Get_Connection_String_Instance();
 
-            if (connection.DBConnectionString != "")
+            if (connection.DBConnectionString != "" || connection != null)
             {
 
                 using (SqlConnection DBconnection = new SqlConnection(connection.DBConnectionString))
@@ -28,7 +28,7 @@ namespace DAL
                         return true;
                     }
 
-                    catch (SqlException)
+                    catch (Exception)
                     {
                         return false;
                     }
