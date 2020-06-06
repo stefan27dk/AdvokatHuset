@@ -256,7 +256,7 @@ namespace View_GUI
 
             if(this.TopMost == false)
             {
-            this.TopMost = true;
+                this.TopMost = true;
                 allays_on_top_button.BackgroundImage = Properties.Resources.flash_kard_icon__1___5___4_;
 
             }
@@ -306,11 +306,10 @@ namespace View_GUI
         private void maximize_button_MouseLeave(object sender, EventArgs e)
         {
             maximize_button.BackgroundImage = Properties.Resources.Hover_Maximize_Now;
-             
+
         }
 
-
-
+                 
 
 
         // Minimizee - Enter
@@ -389,6 +388,7 @@ namespace View_GUI
             int ScreenW = Screen.PrimaryScreen.Bounds.Width;
             int ScreenH = Screen.PrimaryScreen.Bounds.Height;
 
+            this.WindowState = FormWindowState.Normal;
             this.Size = new Size(ScreenW - 150, 50);
             this.Location = new Point(0,0);
         }
