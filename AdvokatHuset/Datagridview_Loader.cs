@@ -44,7 +44,21 @@ namespace DAL
             }
             catch(Exception err)
             {
-                MessageBox.Show(err.Message.ToString());
+                if(TableName != "DEV")  // Show Message Box Error by Default
+                {
+                  MessageBox.Show(err.Message.ToString());
+                }
+
+                else  // If DEV Mode Than Show it in The Datagridview
+                {
+                    DataTable ErrorTable = Dataset1.Tables.Add("DEV");
+                    ErrorTable.Columns.Add("Error");
+                    ErrorTable.Rows.Add(err.Message.ToString());
+                    ErrorTable.Dispose();
+
+
+                }
+
             }
 
         }

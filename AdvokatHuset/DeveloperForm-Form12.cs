@@ -14,8 +14,14 @@ namespace View_GUI
 {
     public partial class DeveloperForm_Form12 : Form
     {
+
+        //Resources
         DataSet DEV_DataSet;
         Datagridview_Loader Load_Script;
+
+        private string Script_For_Run = "";
+
+
 
         public DeveloperForm_Form12()
         {
@@ -33,7 +39,12 @@ namespace View_GUI
         // Run - Button
         private void Run_button_Click(object sender, EventArgs e)
         {
-            Run_Scrupt();
+            if(Script_richTextBox.Text.Length > 1)
+            {
+               Script_Selector();
+               Run_Script();
+
+            }
         }
 
 
@@ -49,8 +60,11 @@ namespace View_GUI
 
 
          // Run Script
-        private void Run_Scrupt()
+        private void Run_Script()
         {
+            try
+            {
+
             //Script_richTextBox
             DEV_DataSet = new DataSet(); // 1# New Dataset - This will be the Source
             Load_Script = new Datagridview_Loader(); // Loader DGV Class
@@ -59,13 +73,30 @@ namespace View_GUI
             Load_Script.DB_Populate(Script_richTextBox.SelectedText, DEV_DataSet, "DEV"); // Loader Method to Populate the Dataset
             Dev_dataGridView.DataSource = DEV_DataSet; // Datagridview Source is the Dataset that was populated in the Loader Class
             Dev_dataGridView.DataMember = "DEV"; // Data Member is the Part of the DataSet we want to read from "You can have different Datamembers in the same Dataset ans just switch trought them"
+            }
+            catch(Exception)
+            {
+
+            }
           
         }
 
 
 
 
-
+          private void Script_Selector()
+          {
+              if(Script_richTextBox.SelectedText != String.Empty)
+              {
+                Script_For_Run = Script_richTextBox.SelectedText;
+              }
+              else
+              {
+                Script_richTextBox.SelectAll();
+                Script_For_Run = Script_richTextBox.SelectedText;
+                Script_richTextBox.DeselectAll();
+              }
+          }
 
 
 
