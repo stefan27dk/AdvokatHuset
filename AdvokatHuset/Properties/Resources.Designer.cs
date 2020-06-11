@@ -1273,6 +1273,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Circle_right_icon {
+            get {
+                object obj = ResourceManager.GetObject("Circle-right-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Clockwise_arrow_icon {
             get {
                 object obj = ResourceManager.GetObject("Clockwise-arrow-icon", resourceCulture);
@@ -2626,6 +2636,16 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap Navigate_right_icon {
             get {
                 object obj = ResourceManager.GetObject("Navigate-right-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap next_icon {
+            get {
+                object obj = ResourceManager.GetObject("next-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

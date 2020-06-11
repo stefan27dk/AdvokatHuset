@@ -1584,5 +1584,11 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Circle-right-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next-icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
