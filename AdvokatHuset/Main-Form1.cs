@@ -1068,9 +1068,9 @@ namespace View_GUI
             // Log in Form
             Log_In_Form0 log_in_form = new Log_In_Form0();
             log_in_form.TopLevel = false;
-            this.Parent.Controls.Add(log_in_form);
             log_in_form.Dock = DockStyle.Fill;
             log_in_form.FormBorderStyle = FormBorderStyle.None;
+            this.Parent.Controls.Add(log_in_form);
             log_in_form.Show();
             this.Dispose();
             Log_Of_Sound();
