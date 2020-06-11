@@ -38,21 +38,14 @@ namespace View_GUI
 
         // Run - Button
         private void Run_button_Click(object sender, EventArgs e)
-        {
-            if(Script_richTextBox.Text.Length > 1)
-            {
-               Script_Selector();
-               Run_Script();
-
-            }
+        {    
+           Run_Script(); 
         }
 
 
 
 
-
-
-
+     
 
 
 
@@ -62,19 +55,23 @@ namespace View_GUI
          // Run Script
         private void Run_Script()
         {
+
             try
             {
-
-            //Script_richTextBox
-            DEV_DataSet = new DataSet(); // 1# New Dataset - This will be the Source
-            Load_Script = new Datagridview_Loader(); // Loader DGV Class
-
-
-            Load_Script.DB_Populate(Script_richTextBox.SelectedText, DEV_DataSet, "DEV"); // Loader Method to Populate the Dataset
-            Dev_dataGridView.DataSource = DEV_DataSet; // Datagridview Source is the Dataset that was populated in the Loader Class
-            Dev_dataGridView.DataMember = "DEV"; // Data Member is the Part of the DataSet we want to read from "You can have different Datamembers in the same Dataset ans just switch trought them"
+                Script_Selector();
+              
+                //Script_richTextBox
+                DEV_DataSet = new DataSet(); // 1# New Dataset - This will be the Source
+                Load_Script = new Datagridview_Loader(); // Loader DGV Class
+              
+              
+                Load_Script.DB_Populate(Script_richTextBox.SelectedText, DEV_DataSet, "DEV"); // Loader Method to Populate the Dataset
+                Dev_dataGridView.DataSource = DEV_DataSet; // Datagridview Source is the Dataset that was populated in the Loader Class
+                Dev_dataGridView.DataMember = "DEV"; // Data Member is the Part of the DataSet we want to read from "You can have different Datamembers in the same Dataset ans just switch trought them"
+              
+                Script_richTextBox.DeselectAll();
             }
-            catch(Exception)
+            catch (Exception)
             {
 
             }
@@ -83,7 +80,7 @@ namespace View_GUI
 
 
 
-
+           // Select Script /Selected or All
           private void Script_Selector()
           {
               if(Script_richTextBox.SelectedText != String.Empty)
@@ -94,7 +91,7 @@ namespace View_GUI
               {
                 Script_richTextBox.SelectAll();
                 Script_For_Run = Script_richTextBox.SelectedText;
-                Script_richTextBox.DeselectAll();
+                
               }
           }
 
@@ -136,12 +133,30 @@ namespace View_GUI
 
 
 
+        //Shortcut keys-----KEY WATCHER-----------::START::--------------------------------------------------------------------------------
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
 
+            // Run Script
+            if (keyData == (Keys.F5))
+            {
+                Run_Script();
+            }
 
+         
 
-
-
-
-
+            return base.ProcessCmdKey(ref msg, keyData);
         }
+
+        //Shortcut keys-----KEY WATCHER---------::END::------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
     }
+}

@@ -89,7 +89,7 @@
             this.Script_richTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Script_richTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
-            this.Script_richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Script_richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Script_richTextBox.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Script_richTextBox.ForeColor = System.Drawing.Color.Yellow;
             this.Script_richTextBox.Location = new System.Drawing.Point(18, 104);
@@ -104,7 +104,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Dev_dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.Dev_dataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.Dev_dataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Dev_dataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
             this.Dev_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dev_dataGridView.Location = new System.Drawing.Point(18, 376);
             this.Dev_dataGridView.Name = "Dev_dataGridView";
