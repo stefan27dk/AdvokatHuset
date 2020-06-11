@@ -1329,27 +1329,9 @@ namespace View_GUI
         private void DatagridviewScreenshot()
         {
 
-
-            int oldHeight = Advokat_dataGridView.Height;
-            Advokat_dataGridView.Height = Advokat_dataGridView.RowCount * Advokat_dataGridView.RowTemplate.Height;
-
-
-
-
-            // Bitmap
-            Bitmap bitmapScreenshot = new Bitmap(this.Advokat_dataGridView.Width, this.Advokat_dataGridView.Height);
-
-            // Draw to the bitmap
-            Advokat_dataGridView.DrawToBitmap(bitmapScreenshot, new System.Drawing.Rectangle(0, 0, this.Advokat_dataGridView.Width, this.Advokat_dataGridView.Height));
-
-            // Reset the height
-            Advokat_dataGridView.Height = oldHeight;
-
-            // Save bitmap
-            bitmapScreenshot.Save(LocalFolderPath + "Advokat_Snapshot  " + DateTime.Now.ToString("dd-MM-yyyy  HH-mm-ss") + ".png");
-            Clipboard.SetDataObject(bitmapScreenshot);  // Copy Image to Clipboard Also
-
-        
+            Datagridview_Screenshot DGV_Screenshot = new Datagridview_Screenshot();
+            DGV_Screenshot.Take_DGV_Screenshot(this.Advokat_dataGridView);
+           
         }
 
 

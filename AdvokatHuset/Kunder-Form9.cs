@@ -1338,28 +1338,9 @@ namespace View_GUI
         // Datagridview Screenshot - Main Mehtod
         private void DatagridviewScreenshot()
         {
+            Datagridview_Screenshot DGV_Screenshot = new Datagridview_Screenshot();
+            DGV_Screenshot.Take_DGV_Screenshot(this.Kunde_dataGridView);
 
-
-            int oldHeight = Kunde_dataGridView.Height;
-            Kunde_dataGridView.Height = Kunde_dataGridView.RowCount * Kunde_dataGridView.RowTemplate.Height;
-
-
-
-
-            // Bitmap
-            Bitmap bitmapScreenshot = new Bitmap(this.Kunde_dataGridView.Width, this.Kunde_dataGridView.Height);
-
-            // Draw to the bitmap
-            Kunde_dataGridView.DrawToBitmap(bitmapScreenshot, new System.Drawing.Rectangle(0, 0, this.Kunde_dataGridView.Width, this.Kunde_dataGridView.Height));
-
-            // Reset the height
-            Kunde_dataGridView.Height = oldHeight;
-
-            // Save bitmap
-            bitmapScreenshot.Save(LocalFolderPath + "Kunde_Snapshot  " + DateTime.Now.ToString("dd-MM-yyyy  HH-mm-ss") + ".png");
-            Clipboard.SetDataObject(bitmapScreenshot);  // Copy Image to Clipboard Also
-
-        
         }
 
 

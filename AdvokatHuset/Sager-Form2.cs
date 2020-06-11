@@ -1489,27 +1489,9 @@ namespace View_GUI
         private void DatagridviewScreenshot()
         {
 
+            Datagridview_Screenshot DGV_Screenshot = new Datagridview_Screenshot();
+            DGV_Screenshot.Take_DGV_Screenshot(this.Sag_dataGridView);
 
-            int oldHeight = Sag_dataGridView.Height;
-            Sag_dataGridView.Height = Sag_dataGridView.RowCount * Sag_dataGridView.RowTemplate.Height;
-
-
-
-
-            // Bitmap
-            Bitmap bitmapScreenshot = new Bitmap(this.Sag_dataGridView.Width, this.Sag_dataGridView.Height);
-
-            // Draw to the bitmap
-            Sag_dataGridView.DrawToBitmap(bitmapScreenshot, new System.Drawing.Rectangle(0, 0, this.Sag_dataGridView.Width, this.Sag_dataGridView.Height));
-
-            // Reset the height
-            Sag_dataGridView.Height = oldHeight;
-
-            // Save bitmap
-            bitmapScreenshot.Save(LocalFolderPath + "Sag_Snapshot  " + DateTime.Now.ToString("dd-MM-yyyy  HH-mm-ss") + ".png");
-            Clipboard.SetDataObject(bitmapScreenshot);  // Copy Image to Clipboard Also
-
-        
         }
 
 

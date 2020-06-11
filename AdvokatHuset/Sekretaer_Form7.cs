@@ -1336,27 +1336,9 @@ namespace View_GUI
         private void DatagridviewScreenshot()
         {
 
+            Datagridview_Screenshot DGV_Screenshot = new Datagridview_Screenshot();
+            DGV_Screenshot.Take_DGV_Screenshot(this.Sekretaer_dataGridView);
 
-            int oldHeight = Sekretaer_dataGridView.Height;
-            Sekretaer_dataGridView.Height = Sekretaer_dataGridView.RowCount * Sekretaer_dataGridView.RowTemplate.Height;
-
-
-
-
-            // Bitmap
-            Bitmap bitmapScreenshot = new Bitmap(this.Sekretaer_dataGridView.Width, this.Sekretaer_dataGridView.Height);
-
-            // Draw to the bitmap
-            Sekretaer_dataGridView.DrawToBitmap(bitmapScreenshot, new System.Drawing.Rectangle(0, 0, this.Sekretaer_dataGridView.Width, this.Sekretaer_dataGridView.Height));
-
-            // Reset the height
-            Sekretaer_dataGridView.Height = oldHeight;
-
-            // Save bitmap
-            bitmapScreenshot.Save(LocalFolderPath + "Sekretaer_Snapshot  " + DateTime.Now.ToString("dd-MM-yyyy  HH-mm-ss") + ".png");
-            Clipboard.SetDataObject(bitmapScreenshot);  // Copy Image to Clipboard Also
-
-        
         }
 
 

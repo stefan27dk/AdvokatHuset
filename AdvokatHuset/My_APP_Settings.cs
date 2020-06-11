@@ -6,13 +6,9 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    class Kunde:Person
+    class My_APP_Settings
     {
-        
-        
-        public Kunde() //Constructor
-        {
 
-        }
+        public string LocalPath = "C:\\";
     }
 }
