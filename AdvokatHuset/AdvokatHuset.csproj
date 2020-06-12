@@ -100,7 +100,13 @@
       <DependentUpon>Main-Body-Form.cs</DependentUpon>
     </Compile>
     <Compile Include="My_APP_Settings.cs" />
+    <Compile Include="My_RichTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="My_Timer.cs" />
+    <Compile Include="My_TranslucentOanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Sager-Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1589,6 +1595,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\next-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\futuristic-technology-based-matrix-coding-background_1302-17086.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

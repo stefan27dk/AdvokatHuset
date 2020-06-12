@@ -31,27 +31,19 @@ namespace View_GUI
         private void DeveloperForm_Form12_Load(object sender, EventArgs e)
         {
             DatagridviewSettings_Style(); // DGV - Settings
+            Script_RichTextbox_Background();
         }
 
 
 
-
+       //------------------------::RUN::----------::START::---------------------------------------------------------
         // Run - Button
         private void Run_button_Click(object sender, EventArgs e)
         {    
            Run_Script(); 
         }
 
-
-
-
-     
-
-
-
-
-
-
+           
          // Run Script
         private void Run_Script()
         {
@@ -94,6 +86,11 @@ namespace View_GUI
                 
               }
           }
+
+        //------------------------::RUN::----------::END::---------------------------------------------------------
+
+
+
 
 
 
@@ -148,15 +145,83 @@ namespace View_GUI
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
+
+
+
+        // Copy - Selected Cell
+        private void copy_selected_column_button_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(Dev_dataGridView.SelectedRows[0].Cells[Dev_dataGridView.CurrentCell.ColumnIndex].Value.ToString());
+        }
+
         //Shortcut keys-----KEY WATCHER---------::END::------------------------------------------------------------------------------------
 
 
 
 
+           
+
+         // Keyword Colors
+         private void Stylize_Custom_SQL_Words(string word, Color color, int startIndex)  // StartIndex is not required
+         {
+              
+
+                int index = -1; // Word index  
+                int selectStart = Script_richTextBox.SelectionStart;  // The Index of the Typer
+
+                while((index = Script_richTextBox.Text.IndexOf(word, (index+1), StringComparison.OrdinalIgnoreCase)) != -1)   // index = word start index // if there is no more words than returns  -1 Text ended
+                {
+                    Script_richTextBox.Select((index + startIndex), word.Length); // Select the word
+                    Script_richTextBox.SelectionColor = color; // Change color of the Selected Word
+                    Script_richTextBox.Select(selectStart, 0); // Selecteion start is the Typers last position before i began to select word
+                    Script_richTextBox.SelectionColor = Color.FromArgb(255, 204, 64); // Reset Fore Color
+
+                }
+
+         }
 
 
 
 
+        // On Text Changed - Change Word Color
+        private void Script_richTextBox_TextChanged(object sender, EventArgs e)
+        {
 
+            int selectStart = Script_richTextBox.SelectionStart;  // Remember The Index of the Typer
+            Script_richTextBox.SelectAll(); // Select The whole text
+            Script_richTextBox.SelectionColor = Color.FromArgb(255, 204, 64); // The whole text to Yellow 
+            Script_richTextBox.Select(selectStart, 0); // Move the typper to the previeous position
+
+
+            Stylize_Custom_SQL_Words("Select", Color.FromArgb(187, 255, 69), 0);
+            Stylize_Custom_SQL_Words("From", Color.FromArgb(82, 233, 255), 0); // StartIndex is not required
+            Stylize_Custom_SQL_Words("Where", Color.FromArgb(0, 133, 250), 0);
+            Stylize_Custom_SQL_Words("if", Color.Red, 0);
+            Stylize_Custom_SQL_Words("Inner", Color.BlueViolet, 0);
+            Stylize_Custom_SQL_Words("Join", Color.Azure, 0);
+            Stylize_Custom_SQL_Words("Outter", Color.Bisque, 0);
+            Stylize_Custom_SQL_Words("Full", Color.Green, 0);
+            Stylize_Custom_SQL_Words("Date", Color.Green, 0);
+            Stylize_Custom_SQL_Words("Delete", Color.Red, 0);
+            Stylize_Custom_SQL_Words("Update", Color.Orange, 0);
+            Stylize_Custom_SQL_Words("Values", Color.FromArgb(0, 250, 62), 0);
+            Stylize_Custom_SQL_Words("Insert", Color.ForestGreen, 0);
+            Stylize_Custom_SQL_Words("Else", Color.FromArgb(66, 135, 245), 0);
+        }
+
+       
+
+    
+
+
+        private void Script_RichTextbox_Background()
+        {
+            
+
+          
+        }
+
+
+   
     }
 }

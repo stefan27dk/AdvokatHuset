@@ -2103,6 +2103,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap futuristic_technology_based_matrix_coding_background_1302_17086 {
+            get {
+                object obj = ResourceManager.GetObject("futuristic-technology-based-matrix-coding-background_1302-17086", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap glossy_3d_blue_orbs2_075_icon {
             get {
                 object obj = ResourceManager.GetObject("glossy-3d-blue-orbs2-075-icon", resourceCulture);
