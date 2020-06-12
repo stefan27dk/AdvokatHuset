@@ -1433,6 +1433,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap copy_icon16 {
+            get {
+                object obj = ResourceManager.GetObject("copy-icon16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap copy_icon323 {
             get {
                 object obj = ResourceManager.GetObject("copy-icon323", resourceCulture);

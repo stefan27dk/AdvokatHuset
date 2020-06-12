@@ -682,7 +682,8 @@ namespace View_GUI
         {
             DeveloperForm_Form12 DeveloperForm = new DeveloperForm_Form12();
             DeveloperForm.TopLevel = false;
-            DeveloperForm.FormBorderStyle = FormBorderStyle.SizableToolWindow;
+            DeveloperForm.FormBorderStyle = FormBorderStyle.Sizable;
+            DeveloperForm.Width = 600;
             this.Controls.Add(DeveloperForm);
             DeveloperForm.Show();
             DeveloperForm.BringToFront();

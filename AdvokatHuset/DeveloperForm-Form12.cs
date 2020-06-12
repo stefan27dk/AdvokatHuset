@@ -303,7 +303,7 @@ namespace View_GUI
                    Script_richTextBox.SelectionBackColor = Color.FromArgb(196, 49, 86); // Change color of the Selected Word
                    Script_richTextBox.Select(selectStart, 0); // Selecteion start is the Typers last position before i began to select word
                    Script_richTextBox.SelectionBackColor = Script_richTextBox.BackColor; // Reset Fore Color
-            
+                    Script_richTextBox.ScrollToCaret();  // Scroll To Word
                 }
 
             }

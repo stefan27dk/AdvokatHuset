@@ -35,10 +35,10 @@
             this.Advokater_Top_label = new System.Windows.Forms.Label();
             this.Script_richTextBox = new System.Windows.Forms.RichTextBox();
             this.Dev_dataGridView = new System.Windows.Forms.DataGridView();
-            this.copy_selected_column_button = new System.Windows.Forms.Button();
-            this.Run_button = new System.Windows.Forms.Button();
             this.Search_Script_textBox = new System.Windows.Forms.TextBox();
             this.Clear_SearchBox_button = new System.Windows.Forms.Button();
+            this.copy_selected_column_button = new System.Windows.Forms.Button();
+            this.Run_button = new System.Windows.Forms.Button();
             this.top_Title_Background_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dev_dataGridView)).BeginInit();
             this.SuspendLayout();
@@ -96,7 +96,7 @@
             this.Script_richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Script_richTextBox.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Script_richTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(188)))), ((int)(((byte)(255)))));
-            this.Script_richTextBox.Location = new System.Drawing.Point(18, 104);
+            this.Script_richTextBox.Location = new System.Drawing.Point(18, 130);
             this.Script_richTextBox.Name = "Script_richTextBox";
             this.Script_richTextBox.Size = new System.Drawing.Size(939, 257);
             this.Script_richTextBox.TabIndex = 8;
@@ -111,16 +111,49 @@
             this.Dev_dataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.Dev_dataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
             this.Dev_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dev_dataGridView.Location = new System.Drawing.Point(18, 432);
+            this.Dev_dataGridView.Location = new System.Drawing.Point(18, 429);
             this.Dev_dataGridView.Name = "Dev_dataGridView";
             this.Dev_dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Dev_dataGridView.Size = new System.Drawing.Size(939, 207);
             this.Dev_dataGridView.TabIndex = 9;
             // 
+            // Search_Script_textBox
+            // 
+            this.Search_Script_textBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Search_Script_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Search_Script_textBox.Location = new System.Drawing.Point(703, 95);
+            this.Search_Script_textBox.Name = "Search_Script_textBox";
+            this.Search_Script_textBox.Size = new System.Drawing.Size(242, 20);
+            this.Search_Script_textBox.TabIndex = 18;
+            this.Search_Script_textBox.TextChanged += new System.EventHandler(this.Search_Script_textBox_TextChanged);
+            this.Search_Script_textBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Search_Script_textBox_MouseDown);
+            // 
+            // Clear_SearchBox_button
+            // 
+            this.Clear_SearchBox_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Clear_SearchBox_button.BackColor = System.Drawing.Color.Transparent;
+            this.Clear_SearchBox_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon2;
+            this.Clear_SearchBox_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Clear_SearchBox_button.FlatAppearance.BorderSize = 0;
+            this.Clear_SearchBox_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.Clear_SearchBox_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.Clear_SearchBox_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Clear_SearchBox_button.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Clear_SearchBox_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Clear_SearchBox_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Clear_SearchBox_button.Location = new System.Drawing.Point(655, 89);
+            this.Clear_SearchBox_button.Margin = new System.Windows.Forms.Padding(0);
+            this.Clear_SearchBox_button.Name = "Clear_SearchBox_button";
+            this.Clear_SearchBox_button.Size = new System.Drawing.Size(34, 34);
+            this.Clear_SearchBox_button.TabIndex = 19;
+            this.Clear_SearchBox_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Clear_SearchBox_button.UseVisualStyleBackColor = false;
+            this.Clear_SearchBox_button.Click += new System.EventHandler(this.Clear_SearchBox_button_Click);
+            // 
             // copy_selected_column_button
             // 
             this.copy_selected_column_button.BackColor = System.Drawing.Color.Transparent;
-            this.copy_selected_column_button.BackgroundImage = global::View_GUI.Properties.Resources.copy_icon323;
+            this.copy_selected_column_button.BackgroundImage = global::View_GUI.Properties.Resources.copy_icon16;
             this.copy_selected_column_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.copy_selected_column_button.FlatAppearance.BorderSize = 0;
             this.copy_selected_column_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
@@ -129,10 +162,10 @@
             this.copy_selected_column_button.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.copy_selected_column_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.copy_selected_column_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.copy_selected_column_button.Location = new System.Drawing.Point(32, 383);
+            this.copy_selected_column_button.Location = new System.Drawing.Point(26, 400);
             this.copy_selected_column_button.Margin = new System.Windows.Forms.Padding(0);
             this.copy_selected_column_button.Name = "copy_selected_column_button";
-            this.copy_selected_column_button.Size = new System.Drawing.Size(41, 37);
+            this.copy_selected_column_button.Size = new System.Drawing.Size(29, 26);
             this.copy_selected_column_button.TabIndex = 17;
             this.copy_selected_column_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.copy_selected_column_button.UseVisualStyleBackColor = false;
@@ -146,45 +179,13 @@
             this.Run_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.Run_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
             this.Run_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Run_button.Location = new System.Drawing.Point(367, 69);
+            this.Run_button.Location = new System.Drawing.Point(26, 102);
             this.Run_button.Margin = new System.Windows.Forms.Padding(0);
             this.Run_button.Name = "Run_button";
             this.Run_button.Size = new System.Drawing.Size(26, 25);
             this.Run_button.TabIndex = 10;
             this.Run_button.UseVisualStyleBackColor = true;
             this.Run_button.Click += new System.EventHandler(this.Run_button_Click);
-            // 
-            // Search_Script_textBox
-            // 
-            this.Search_Script_textBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Search_Script_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Search_Script_textBox.Location = new System.Drawing.Point(703, 69);
-            this.Search_Script_textBox.Name = "Search_Script_textBox";
-            this.Search_Script_textBox.Size = new System.Drawing.Size(242, 20);
-            this.Search_Script_textBox.TabIndex = 18;
-            this.Search_Script_textBox.TextChanged += new System.EventHandler(this.Search_Script_textBox_TextChanged);
-            this.Search_Script_textBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Search_Script_textBox_MouseDown);
-            // 
-            // Clear_SearchBox_button
-            // 
-            this.Clear_SearchBox_button.BackColor = System.Drawing.Color.Transparent;
-            this.Clear_SearchBox_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_edit_delete_icon2;
-            this.Clear_SearchBox_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Clear_SearchBox_button.FlatAppearance.BorderSize = 0;
-            this.Clear_SearchBox_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.Clear_SearchBox_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.Clear_SearchBox_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Clear_SearchBox_button.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Clear_SearchBox_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Clear_SearchBox_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Clear_SearchBox_button.Location = new System.Drawing.Point(655, 63);
-            this.Clear_SearchBox_button.Margin = new System.Windows.Forms.Padding(0);
-            this.Clear_SearchBox_button.Name = "Clear_SearchBox_button";
-            this.Clear_SearchBox_button.Size = new System.Drawing.Size(34, 34);
-            this.Clear_SearchBox_button.TabIndex = 19;
-            this.Clear_SearchBox_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Clear_SearchBox_button.UseVisualStyleBackColor = false;
-            this.Clear_SearchBox_button.Click += new System.EventHandler(this.Clear_SearchBox_button_Click);
             // 
             // DeveloperForm_Form12
             // 
