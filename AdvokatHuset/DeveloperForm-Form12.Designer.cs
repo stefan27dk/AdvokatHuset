@@ -29,29 +29,30 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeveloperForm_Form12));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.top_Title_Background_panel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Advokater_Top_label = new System.Windows.Forms.Label();
             this.Script_richTextBox = new System.Windows.Forms.RichTextBox();
             this.Dev_dataGridView = new System.Windows.Forms.DataGridView();
-            this.Run_button = new System.Windows.Forms.Button();
             this.copy_selected_column_button = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.Run_button = new System.Windows.Forms.Button();
+            this.Search_Script_textBox = new System.Windows.Forms.TextBox();
+            this.top_Title_Background_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dev_dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // top_Title_Background_panel
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.Advokater_Top_label);
-            this.panel1.Location = new System.Drawing.Point(18, 63);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(300, 25);
-            this.panel1.TabIndex = 6;
+            this.top_Title_Background_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.top_Title_Background_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.top_Title_Background_panel.Controls.Add(this.label2);
+            this.top_Title_Background_panel.Controls.Add(this.label1);
+            this.top_Title_Background_panel.Controls.Add(this.Advokater_Top_label);
+            this.top_Title_Background_panel.Location = new System.Drawing.Point(18, 63);
+            this.top_Title_Background_panel.Name = "top_Title_Background_panel";
+            this.top_Title_Background_panel.Size = new System.Drawing.Size(300, 25);
+            this.top_Title_Background_panel.TabIndex = 6;
             // 
             // label2
             // 
@@ -115,6 +116,27 @@
             this.Dev_dataGridView.Size = new System.Drawing.Size(939, 207);
             this.Dev_dataGridView.TabIndex = 9;
             // 
+            // copy_selected_column_button
+            // 
+            this.copy_selected_column_button.BackColor = System.Drawing.Color.Transparent;
+            this.copy_selected_column_button.BackgroundImage = global::View_GUI.Properties.Resources.copy_icon323;
+            this.copy_selected_column_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.copy_selected_column_button.FlatAppearance.BorderSize = 0;
+            this.copy_selected_column_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.copy_selected_column_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.copy_selected_column_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.copy_selected_column_button.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.copy_selected_column_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.copy_selected_column_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.copy_selected_column_button.Location = new System.Drawing.Point(32, 383);
+            this.copy_selected_column_button.Margin = new System.Windows.Forms.Padding(0);
+            this.copy_selected_column_button.Name = "copy_selected_column_button";
+            this.copy_selected_column_button.Size = new System.Drawing.Size(41, 37);
+            this.copy_selected_column_button.TabIndex = 17;
+            this.copy_selected_column_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.copy_selected_column_button.UseVisualStyleBackColor = false;
+            this.copy_selected_column_button.Click += new System.EventHandler(this.copy_selected_column_button_Click);
+            // 
             // Run_button
             // 
             this.Run_button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Run_button.BackgroundImage")));
@@ -123,34 +145,21 @@
             this.Run_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.Run_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
             this.Run_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Run_button.Location = new System.Drawing.Point(367, 59);
+            this.Run_button.Location = new System.Drawing.Point(367, 69);
             this.Run_button.Margin = new System.Windows.Forms.Padding(0);
             this.Run_button.Name = "Run_button";
-            this.Run_button.Size = new System.Drawing.Size(35, 35);
+            this.Run_button.Size = new System.Drawing.Size(26, 25);
             this.Run_button.TabIndex = 10;
             this.Run_button.UseVisualStyleBackColor = true;
             this.Run_button.Click += new System.EventHandler(this.Run_button_Click);
             // 
-            // copy_selected_column_button
+            // Search_Script_textBox
             // 
-            this.copy_selected_column_button.BackColor = System.Drawing.Color.Transparent;
-            this.copy_selected_column_button.BackgroundImage = global::View_GUI.Properties.Resources.win7_ico_shell32_dll_260__2_;
-            this.copy_selected_column_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.copy_selected_column_button.FlatAppearance.BorderSize = 0;
-            this.copy_selected_column_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.copy_selected_column_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.copy_selected_column_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.copy_selected_column_button.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.copy_selected_column_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.copy_selected_column_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.copy_selected_column_button.Location = new System.Drawing.Point(32, 382);
-            this.copy_selected_column_button.Margin = new System.Windows.Forms.Padding(0);
-            this.copy_selected_column_button.Name = "copy_selected_column_button";
-            this.copy_selected_column_button.Size = new System.Drawing.Size(40, 38);
-            this.copy_selected_column_button.TabIndex = 17;
-            this.copy_selected_column_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.copy_selected_column_button.UseVisualStyleBackColor = false;
-            this.copy_selected_column_button.Click += new System.EventHandler(this.copy_selected_column_button_Click);
+            this.Search_Script_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.Search_Script_textBox.Location = new System.Drawing.Point(702, 72);
+            this.Search_Script_textBox.Name = "Search_Script_textBox";
+            this.Search_Script_textBox.Size = new System.Drawing.Size(242, 20);
+            this.Search_Script_textBox.TabIndex = 18;
             // 
             // DeveloperForm_Form12
             // 
@@ -158,25 +167,27 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(46)))));
             this.ClientSize = new System.Drawing.Size(1000, 673);
+            this.Controls.Add(this.Search_Script_textBox);
             this.Controls.Add(this.copy_selected_column_button);
             this.Controls.Add(this.Run_button);
             this.Controls.Add(this.Dev_dataGridView);
             this.Controls.Add(this.Script_richTextBox);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.top_Title_Background_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DeveloperForm_Form12";
             this.Text = "DeveloperForm_Form12";
             this.Load += new System.EventHandler(this.DeveloperForm_Form12_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.top_Title_Background_panel.ResumeLayout(false);
+            this.top_Title_Background_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dev_dataGridView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel top_Title_Background_panel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Advokater_Top_label;
@@ -184,5 +195,6 @@
         private System.Windows.Forms.DataGridView Dev_dataGridView;
         private System.Windows.Forms.Button Run_button;
         private System.Windows.Forms.Button copy_selected_column_button;
+        private System.Windows.Forms.TextBox Search_Script_textBox;
     }
 }

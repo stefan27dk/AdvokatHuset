@@ -1413,6 +1413,36 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Coppy_323 {
+            get {
+                object obj = ResourceManager.GetObject("Coppy 323", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Coppy_3231 {
+            get {
+                object obj = ResourceManager.GetObject("Coppy 3231", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap copy_icon323 {
+            get {
+                object obj = ResourceManager.GetObject("copy-icon323", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Counterclockwise_arrow_icon {
             get {
                 object obj = ResourceManager.GetObject("Counterclockwise-arrow-icon", resourceCulture);

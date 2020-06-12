@@ -151,7 +151,11 @@ namespace View_GUI
         // Copy - Selected Cell
         private void copy_selected_column_button_Click(object sender, EventArgs e)
         {
+            if(Dev_dataGridView.SelectedRows.Count != 0)
+            {
             Clipboard.SetText(Dev_dataGridView.SelectedRows[0].Cells[Dev_dataGridView.CurrentCell.ColumnIndex].Value.ToString());
+
+            }
         }
 
         //Shortcut keys-----KEY WATCHER---------::END::------------------------------------------------------------------------------------
