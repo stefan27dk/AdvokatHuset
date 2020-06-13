@@ -365,7 +365,7 @@ namespace View_GUI
             exitButton.Height = 20;
             exitButton.BackgroundImage = Properties.Resources.Exit_Red;
             exitButton.BackgroundImageLayout = ImageLayout.Zoom;
-
+            //exitButton.Anchor = (AnchorStyles.Right);
             exitButton.MouseClick += new MouseEventHandler(ExitButton_Click);
       
             ItemPanel.Controls.Add(exitButton);
