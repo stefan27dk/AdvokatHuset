@@ -272,7 +272,7 @@ namespace View_GUI
             // 
             // timer_Controls_holder_panel
             // 
-            this.timer_Controls_holder_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.timer_Controls_holder_panel.BackColor = System.Drawing.Color.FromArgb(56, 40, 49);
             this.timer_Controls_holder_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.timer_Controls_holder_panel.Controls.Add(this.equals_label);
             this.timer_Controls_holder_panel.Controls.Add(this.panel1);
@@ -296,10 +296,12 @@ namespace View_GUI
             this.timer_Controls_holder_panel.Controls.Add(this.fk1);
             this.timer_Controls_holder_panel.Controls.Add(this.add_time_button);
             this.timer_Controls_holder_panel.Controls.Add(this.textBox1);
-            this.timer_Controls_holder_panel.Location = new System.Drawing.Point(19, 187);
+            this.timer_Controls_holder_panel.Location = new System.Drawing.Point(0, 180);
             this.timer_Controls_holder_panel.Name = "timer_Controls_holder_panel";
-            this.timer_Controls_holder_panel.Size = new System.Drawing.Size(347, 124);
+            this.timer_Controls_holder_panel.Size = new System.Drawing.Size(370, 135);
             this.timer_Controls_holder_panel.TabIndex = 27;
+            //this.timer_Controls_holder_panel.Anchor = (AnchorStyles.Left | AnchorStyles.Right);
+                                                       
             // 
             // equals_label
             // 
@@ -314,7 +316,7 @@ namespace View_GUI
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(54, 44, 54);
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.resetAndContinue_button);
             this.panel1.Controls.Add(this.AddresetAnd_stop_button);
@@ -488,8 +490,8 @@ namespace View_GUI
             // 
             // holder_panel
             // 
-            this.holder_panel.AutoSize = true;
-            this.holder_panel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            //this.holder_panel.AutoSize = false;
+            //this.holder_panel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.holder_panel.Controls.Add(this.edit_textBox);
             this.holder_panel.Controls.Add(this.timer_Controls_holder_panel);
             this.holder_panel.Controls.Add(this.textBox2);
@@ -506,6 +508,7 @@ namespace View_GUI
             this.holder_panel.MaximumSize = new System.Drawing.Size(600, 314);
             this.holder_panel.AutoSize = true;
             this.holder_panel.TabIndex = 29;
+            this.holder_panel.Margin = new Padding(10);
             // 
             // save_button
             // 
@@ -1110,7 +1113,8 @@ namespace View_GUI
         {
 
             timeTable_listView.Width = resize_trackBar.Value;
-
+            timer_Controls_holder_panel.Width = resize_trackBar.Value;
+            holder_panel.Width = resize_trackBar.Value;
             textBox2.Text = resize_trackBar.Value.ToString();
 
         }

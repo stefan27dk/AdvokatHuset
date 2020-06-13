@@ -933,7 +933,7 @@ namespace View_GUI
 
             // ITEM PANEL
             MyMovingTimer.ItemPanel.Location = new System.Drawing.Point(30, 100);//Added panel Location
-            MyMovingTimer.ItemPanel.MaximumSize = new Size(600, 450);
+            MyMovingTimer.ItemPanel.MaximumSize = new Size(650, 450);
             MyMovingTimer.ItemPanel.Size = new Size(400, 450);
             MyMovingTimer.ItemPanel.MyPanelBackgroundColor = Color.FromArgb(94, 54, 74);
             MyMovingTimer.ItemPanel.BorderStyle = BorderStyle.FixedSingle;

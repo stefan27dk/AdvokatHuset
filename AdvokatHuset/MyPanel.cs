@@ -30,7 +30,7 @@ namespace View_GUI
 
         }
 
-
+                       
         
 
         protected override void OnPaint(PaintEventArgs e)
