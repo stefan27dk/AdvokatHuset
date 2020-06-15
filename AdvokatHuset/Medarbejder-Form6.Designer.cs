@@ -727,9 +727,9 @@
             this.Log_In_BACK_panel.Controls.Add(this.panel2);
             this.Log_In_BACK_panel.Controls.Add(this.background_Medarbejder_specialepanel);
             this.Log_In_BACK_panel.Controls.Add(this.speciale_Medarbejder_Top_panel);
-            this.Log_In_BACK_panel.Location = new System.Drawing.Point(255, 164);
+            this.Log_In_BACK_panel.Location = new System.Drawing.Point(165, 164);
             this.Log_In_BACK_panel.Name = "Log_In_BACK_panel";
-            this.Log_In_BACK_panel.Size = new System.Drawing.Size(1207, 439);
+            this.Log_In_BACK_panel.Size = new System.Drawing.Size(1293, 438);
             this.Log_In_BACK_panel.TabIndex = 24;
             this.Log_In_BACK_panel.Visible = false;
             // 
@@ -748,9 +748,9 @@
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.vis_rediger_Me_Navn_comboBox);
             this.panel3.Controls.Add(this.vis_rediger_clear_All_button);
-            this.panel3.Location = new System.Drawing.Point(806, 0);
+            this.panel3.Location = new System.Drawing.Point(856, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(399, 435);
+            this.panel3.Size = new System.Drawing.Size(433, 435);
             this.panel3.TabIndex = 33;
             // 
             // vis_rediger_save_button
@@ -762,7 +762,7 @@
             this.vis_rediger_save_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(143)))), ((int)(((byte)(235)))));
             this.vis_rediger_save_button.Image = global::View_GUI.Properties.Resources.Actions_document_save_icon;
             this.vis_rediger_save_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.vis_rediger_save_button.Location = new System.Drawing.Point(219, 288);
+            this.vis_rediger_save_button.Location = new System.Drawing.Point(263, 266);
             this.vis_rediger_save_button.Name = "vis_rediger_save_button";
             this.vis_rediger_save_button.Size = new System.Drawing.Size(90, 30);
             this.vis_rediger_save_button.TabIndex = 31;
@@ -774,10 +774,10 @@
             // Vis_rediger_Log_In_Pass_textBox
             // 
             this.Vis_rediger_Log_In_Pass_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
-            this.Vis_rediger_Log_In_Pass_textBox.Location = new System.Drawing.Point(199, 207);
+            this.Vis_rediger_Log_In_Pass_textBox.Location = new System.Drawing.Point(226, 207);
             this.Vis_rediger_Log_In_Pass_textBox.MaxLength = 49;
             this.Vis_rediger_Log_In_Pass_textBox.Name = "Vis_rediger_Log_In_Pass_textBox";
-            this.Vis_rediger_Log_In_Pass_textBox.Size = new System.Drawing.Size(100, 20);
+            this.Vis_rediger_Log_In_Pass_textBox.Size = new System.Drawing.Size(160, 20);
             this.Vis_rediger_Log_In_Pass_textBox.TabIndex = 32;
             this.Vis_rediger_Log_In_Pass_textBox.TextChanged += new System.EventHandler(this.Vis_rediger_Log_In_Pass_textBox_TextChanged);
             // 
@@ -787,7 +787,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
             this.label2.Image = global::View_GUI.Properties.Resources.ID_icon;
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label2.Location = new System.Drawing.Point(18, 97);
+            this.label2.Location = new System.Drawing.Point(41, 96);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(167, 24);
             this.label2.TabIndex = 32;
@@ -800,7 +800,7 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
             this.label5.Image = global::View_GUI.Properties.Resources.ID_icon;
             this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label5.Location = new System.Drawing.Point(18, 160);
+            this.label5.Location = new System.Drawing.Point(36, 160);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(172, 24);
             this.label5.TabIndex = 30;
@@ -810,10 +810,10 @@
             // vis_rediger_Log_In_Navn_textBox
             // 
             this.vis_rediger_Log_In_Navn_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
-            this.vis_rediger_Log_In_Navn_textBox.Location = new System.Drawing.Point(199, 164);
+            this.vis_rediger_Log_In_Navn_textBox.Location = new System.Drawing.Point(226, 161);
             this.vis_rediger_Log_In_Navn_textBox.MaxLength = 49;
             this.vis_rediger_Log_In_Navn_textBox.Name = "vis_rediger_Log_In_Navn_textBox";
-            this.vis_rediger_Log_In_Navn_textBox.Size = new System.Drawing.Size(100, 20);
+            this.vis_rediger_Log_In_Navn_textBox.Size = new System.Drawing.Size(158, 20);
             this.vis_rediger_Log_In_Navn_textBox.TabIndex = 29;
             this.vis_rediger_Log_In_Navn_textBox.TextChanged += new System.EventHandler(this.vis_rediger_Log_In_Navn_textBox_TextChanged);
             // 
@@ -825,19 +825,18 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(397, 26);
+            this.panel4.Size = new System.Drawing.Size(431, 26);
             this.panel4.TabIndex = 4;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(92)))));
-            this.label3.Location = new System.Drawing.Point(135, 2);
+            this.label3.Location = new System.Drawing.Point(129, 2);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(166, 21);
+            this.label3.Size = new System.Drawing.Size(190, 21);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Vis Log In / Rediger";
+            this.label3.Text = "Vis - Log In / Rediger";
             // 
             // label6
             // 
@@ -845,7 +844,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
             this.label6.Image = global::View_GUI.Properties.Resources.Pass2;
             this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label6.Location = new System.Drawing.Point(77, 207);
+            this.label6.Location = new System.Drawing.Point(96, 207);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(115, 25);
             this.label6.TabIndex = 31;
@@ -855,7 +854,7 @@
             // vis_rediger_Me_Id_textBox
             // 
             this.vis_rediger_Me_Id_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
-            this.vis_rediger_Me_Id_textBox.Location = new System.Drawing.Point(193, 100);
+            this.vis_rediger_Me_Id_textBox.Location = new System.Drawing.Point(226, 100);
             this.vis_rediger_Me_Id_textBox.MaxLength = 49;
             this.vis_rediger_Me_Id_textBox.Name = "vis_rediger_Me_Id_textBox";
             this.vis_rediger_Me_Id_textBox.Size = new System.Drawing.Size(181, 20);
@@ -869,7 +868,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(200)))), ((int)(((byte)(250)))));
             this.label4.Image = global::View_GUI.Properties.Resources.name_card_icon1;
             this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label4.Location = new System.Drawing.Point(18, 49);
+            this.label4.Location = new System.Drawing.Point(16, 49);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(192, 25);
             this.label4.TabIndex = 29;
@@ -880,10 +879,10 @@
             // 
             this.vis_rediger_Me_Navn_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.vis_rediger_Me_Navn_comboBox.FormattingEnabled = true;
-            this.vis_rediger_Me_Navn_comboBox.Location = new System.Drawing.Point(228, 50);
+            this.vis_rediger_Me_Navn_comboBox.Location = new System.Drawing.Point(226, 50);
             this.vis_rediger_Me_Navn_comboBox.MaxDropDownItems = 50;
             this.vis_rediger_Me_Navn_comboBox.Name = "vis_rediger_Me_Navn_comboBox";
-            this.vis_rediger_Me_Navn_comboBox.Size = new System.Drawing.Size(146, 21);
+            this.vis_rediger_Me_Navn_comboBox.Size = new System.Drawing.Size(181, 21);
             this.vis_rediger_Me_Navn_comboBox.TabIndex = 30;
             this.vis_rediger_Me_Navn_comboBox.SelectedIndexChanged += new System.EventHandler(this.vis_rediger_Me_Navn_comboBox_SelectedIndexChanged);
             this.vis_rediger_Me_Navn_comboBox.Click += new System.EventHandler(this.vis_rediger_Me_Navn_comboBox_Click);
@@ -898,7 +897,7 @@
             this.vis_rediger_clear_All_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
             this.vis_rediger_clear_All_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.vis_rediger_clear_All_button.ForeColor = System.Drawing.Color.Black;
-            this.vis_rediger_clear_All_button.Location = new System.Drawing.Point(185, 293);
+            this.vis_rediger_clear_All_button.Location = new System.Drawing.Point(219, 271);
             this.vis_rediger_clear_All_button.Name = "vis_rediger_clear_All_button";
             this.vis_rediger_clear_All_button.Size = new System.Drawing.Size(28, 23);
             this.vis_rediger_clear_All_button.TabIndex = 23;
@@ -918,7 +917,7 @@
             this.panel2.Controls.Add(this.Del_Clear_button);
             this.panel2.Location = new System.Drawing.Point(404, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(399, 435);
+            this.panel2.Size = new System.Drawing.Size(447, 435);
             this.panel2.TabIndex = 32;
             // 
             // label1
@@ -942,7 +941,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(397, 26);
+            this.panel1.Size = new System.Drawing.Size(445, 26);
             this.panel1.TabIndex = 4;
             // 
             // slet_log_in_label
@@ -950,11 +949,11 @@
             this.slet_log_in_label.AutoSize = true;
             this.slet_log_in_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.slet_log_in_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(92)))));
-            this.slet_log_in_label.Location = new System.Drawing.Point(165, 2);
+            this.slet_log_in_label.Location = new System.Drawing.Point(181, 2);
             this.slet_log_in_label.Name = "slet_log_in_label";
-            this.slet_log_in_label.Size = new System.Drawing.Size(94, 21);
+            this.slet_log_in_label.Size = new System.Drawing.Size(109, 21);
             this.slet_log_in_label.TabIndex = 1;
-            this.slet_log_in_label.Text = "Slet Log In";
+            this.slet_log_in_label.Text = "Slet - Log In";
             // 
             // Del_ME_ID_textBox
             // 
@@ -1185,11 +1184,11 @@
             this.Log_In_label.AutoSize = true;
             this.Log_In_label.Font = new System.Drawing.Font("Miriam CLM", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.Log_In_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(201)))), ((int)(((byte)(92)))));
-            this.Log_In_label.Location = new System.Drawing.Point(185, 3);
+            this.Log_In_label.Location = new System.Drawing.Point(141, 3);
             this.Log_In_label.Name = "Log_In_label";
-            this.Log_In_label.Size = new System.Drawing.Size(58, 21);
+            this.Log_In_label.Size = new System.Drawing.Size(122, 21);
             this.Log_In_label.TabIndex = 1;
-            this.Log_In_label.Text = "Log In";
+            this.Log_In_label.Text = "Opret - Log In";
             // 
             // top_Menu_background_panel
             // 
@@ -1300,7 +1299,6 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
