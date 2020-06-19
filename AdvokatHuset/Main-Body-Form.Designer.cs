@@ -32,6 +32,7 @@
             this.Main_Body_Loader_panel = new System.Windows.Forms.Panel();
             this.opacity_trackBar = new System.Windows.Forms.TrackBar();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.semi_middle_opacity_button = new System.Windows.Forms.Button();
             this.opacity_min_button = new System.Windows.Forms.Button();
             this.opacity_max_button = new System.Windows.Forms.Button();
             this.TitleBar_panel = new System.Windows.Forms.Panel();
@@ -44,7 +45,6 @@
             this.Show_Only_TitleBar_button = new System.Windows.Forms.Button();
             this.Form_Screenshot_button_button = new System.Windows.Forms.Button();
             this.allays_on_top_button = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.Main_Body_Loader_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.opacity_trackBar)).BeginInit();
             this.TitleBar_panel.SuspendLayout();
@@ -86,6 +86,29 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(70, 22);
             this.panel1.TabIndex = 0;
+            // 
+            // semi_middle_opacity_button
+            // 
+            this.semi_middle_opacity_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.semi_middle_opacity_button.BackColor = System.Drawing.Color.Transparent;
+            this.semi_middle_opacity_button.BackgroundImage = global::View_GUI.Properties.Resources.Middle_3;
+            this.semi_middle_opacity_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.semi_middle_opacity_button.FlatAppearance.BorderSize = 0;
+            this.semi_middle_opacity_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.semi_middle_opacity_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.semi_middle_opacity_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.semi_middle_opacity_button.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.semi_middle_opacity_button.ForeColor = System.Drawing.Color.Black;
+            this.semi_middle_opacity_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.semi_middle_opacity_button.Location = new System.Drawing.Point(1509, 781);
+            this.semi_middle_opacity_button.Margin = new System.Windows.Forms.Padding(0);
+            this.semi_middle_opacity_button.Name = "semi_middle_opacity_button";
+            this.semi_middle_opacity_button.Size = new System.Drawing.Size(10, 18);
+            this.semi_middle_opacity_button.TabIndex = 48;
+            this.semi_middle_opacity_button.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.semi_middle_opacity_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.semi_middle_opacity_button.UseVisualStyleBackColor = false;
+            this.semi_middle_opacity_button.Click += new System.EventHandler(this.semi_middle_opacity_button_Click);
             // 
             // opacity_min_button
             // 
@@ -363,35 +386,13 @@
             this.allays_on_top_button.UseVisualStyleBackColor = false;
             this.allays_on_top_button.Click += new System.EventHandler(this.allays_on_top_button_Click);
             // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::View_GUI.Properties.Resources._1_Arrow_Left__1___1_1;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(1367, 781);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(23, 18);
-            this.button1.TabIndex = 48;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // Main_Body_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
             this.ClientSize = new System.Drawing.Size(1601, 800);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.semi_middle_opacity_button);
             this.Controls.Add(this.opacity_min_button);
             this.Controls.Add(this.opacity_max_button);
             this.Controls.Add(this.opacity_trackBar);
@@ -427,6 +428,6 @@
         private System.Windows.Forms.Button opacity_max_button;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button opacity_min_button;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button semi_middle_opacity_button;
     }
 }
