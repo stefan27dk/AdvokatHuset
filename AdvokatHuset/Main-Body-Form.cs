@@ -438,7 +438,26 @@ namespace View_GUI
         private void opacity_trackBar_ValueChanged(object sender, EventArgs e)
         {
             this.Opacity = opacity_trackBar.Value * 0.01;  // Adjust Form Opacity
-        }   
+        }
+
+      
+            
+        // Opacity MAX
+        private void opacity_max_button_Click(object sender, EventArgs e)
+        {
+            this.Opacity = 1;
+            opacity_trackBar.Value = opacity_trackBar.Minimum;
+        }
+
+
+
+
+        // Opacity MINIMUM
+        private void opacity_min_button_Click(object sender, EventArgs e)
+        {
+            this.Opacity = opacity_trackBar.Maximum * 0.01;
+            opacity_trackBar.Value = opacity_trackBar.Maximum;
+        }
         //------Form - Opacity----::START::-------------------------------------------------------------
 
 

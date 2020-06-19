@@ -727,6 +727,9 @@
   <data name="date-icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\date-icon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="1 Arrow Left (1) (1) - Copy1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1 Arrow Left (1) (1) - Copy1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Car 4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Car 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -1306,6 +1309,9 @@
   <data name="win7_ico_shell32_dll-269" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\win7_ico_shell32_dll-269.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="1 Arrow Left (1) (1) - Copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1 Arrow Left (1) (1) - Copy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="date-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\date-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -1345,7 +1351,7 @@
   <data name="Office-Customer-Male-Light-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Office-Customer-Male-Light-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1 Arrow Left (1) (1) - Copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1 Arrow Left (1) (1) - Copy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1 Arrow Left (1) (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1 Arrow Left (1) (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
