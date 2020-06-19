@@ -17,11 +17,11 @@ using System.Reflection;
 
 namespace View_GUI
 {
-  
 
 
     public partial class Main_Form1 : Form
     {
+    
 
         // log_In_info
         Log_In_Info Log_In_info = Log_In_Info.Get_Log_In_Info();
@@ -524,11 +524,16 @@ namespace View_GUI
         //Shortcut keys -----KEY WATCHER- ----SHORTCUT KEYS----------------::START::------------------------------------------------------------------------------------
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
+            
+               
+             
 
             // Open Item Menu Shortcut
             if (keyData == (Keys.Control | Keys.G))
             {
+                Home_Button.Focus(); // Focus on The Home Button so the webbrowser losses focus
                 OpenItemMenu();
+                
             }
 
             // Open Folder Shortcut
@@ -909,13 +914,13 @@ namespace View_GUI
 
 
          private void MovingItempanels()
-        {
+         {
             //Panel a = new Panel();
             //a.BackColor = Color.Red;
             //a.Height = 30;
             //a.Width = 40;
         
-        }
+         }
 
 
      

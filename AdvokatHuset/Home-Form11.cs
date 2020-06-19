@@ -30,10 +30,8 @@ namespace View_GUI
         }
 
 
-
-
-
-
+     
+          
 
         private void Browser_Settings()
         {
@@ -45,6 +43,41 @@ namespace View_GUI
            //home_webBrowser.Focus();
 
         }
+
+
+
+
+
+        ////Shortcut keys -----KEY WATCHER- ----SHORTCUT KEYS----------------::START::------------------------------------------------------------------------------------
+        //protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        //{
+             
+
+        //    // Open Item Menu Shortcut
+        //    if (keyData == (Keys.Control | Keys.G))
+        //    {
+        //       this.Chil
+
+
+        //    }
+
+        //    // Open Folder Shortcut
+        //    if (keyData == (Keys.Control | Keys.F))
+        //    {
+        //        OpenLocalFolder();// FOLDER
+        //    }
+
+        //    return base.ProcessCmdKey(ref msg, keyData);
+        //}
+
+        ////Shortcut keys -----KEY WATCHER- ----SHORTCUT KEYS----------------::END::------------------------------------------------------------------------------------
+
+
+
+
+
+
+
 
 
 
@@ -88,7 +121,7 @@ namespace View_GUI
 
 
 
-        // Focus When the page is loaded
+        // Focus When the page on load  
         private void home_webBrowser_Navigated(object sender, WebBrowserNavigatedEventArgs e)
         {
             home_webBrowser.Focus();

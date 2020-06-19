@@ -30,7 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Body_Form));
             this.Main_Body_Loader_panel = new System.Windows.Forms.Panel();
+            this.opacity_trackBar = new System.Windows.Forms.TrackBar();
+            this.opacity_min_button = new System.Windows.Forms.Button();
+            this.opacity_max_button = new System.Windows.Forms.Button();
             this.TitleBar_panel = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.close_form_button = new System.Windows.Forms.Button();
             this.minimize_button = new System.Windows.Forms.Button();
             this.Move_Form_Top_button = new System.Windows.Forms.Button();
@@ -40,6 +44,7 @@
             this.Show_Only_TitleBar_button = new System.Windows.Forms.Button();
             this.Form_Screenshot_button_button = new System.Windows.Forms.Button();
             this.allays_on_top_button = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.opacity_trackBar)).BeginInit();
             this.TitleBar_panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,6 +60,66 @@
             this.Main_Body_Loader_panel.Size = new System.Drawing.Size(1601, 741);
             this.Main_Body_Loader_panel.TabIndex = 0;
             // 
+            // opacity_trackBar
+            // 
+            this.opacity_trackBar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.opacity_trackBar.AutoSize = false;
+            this.opacity_trackBar.LargeChange = 1;
+            this.opacity_trackBar.Location = new System.Drawing.Point(1475, 779);
+            this.opacity_trackBar.Maximum = 100;
+            this.opacity_trackBar.Minimum = 30;
+            this.opacity_trackBar.Name = "opacity_trackBar";
+            this.opacity_trackBar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.opacity_trackBar.Size = new System.Drawing.Size(104, 32);
+            this.opacity_trackBar.TabIndex = 0;
+            this.opacity_trackBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.opacity_trackBar.Value = 100;
+            this.opacity_trackBar.ValueChanged += new System.EventHandler(this.opacity_trackBar_ValueChanged);
+            // 
+            // opacity_min_button
+            // 
+            this.opacity_min_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.opacity_min_button.BackColor = System.Drawing.Color.Transparent;
+            this.opacity_min_button.BackgroundImage = global::View_GUI.Properties.Resources.To_Bar_Only_11111;
+            this.opacity_min_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.opacity_min_button.FlatAppearance.BorderSize = 0;
+            this.opacity_min_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.opacity_min_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.opacity_min_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.opacity_min_button.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.opacity_min_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.opacity_min_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.opacity_min_button.Location = new System.Drawing.Point(1373, 785);
+            this.opacity_min_button.Margin = new System.Windows.Forms.Padding(0);
+            this.opacity_min_button.Name = "opacity_min_button";
+            this.opacity_min_button.Size = new System.Drawing.Size(24, 26);
+            this.opacity_min_button.TabIndex = 46;
+            this.opacity_min_button.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.opacity_min_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.opacity_min_button.UseVisualStyleBackColor = false;
+            // 
+            // opacity_max_button
+            // 
+            this.opacity_max_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.opacity_max_button.BackColor = System.Drawing.Color.Transparent;
+            this.opacity_max_button.BackgroundImage = global::View_GUI.Properties.Resources.Left_Arrow_1243;
+            this.opacity_max_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.opacity_max_button.FlatAppearance.BorderSize = 0;
+            this.opacity_max_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.opacity_max_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.opacity_max_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.opacity_max_button.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.opacity_max_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.opacity_max_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.opacity_max_button.Location = new System.Drawing.Point(1454, 782);
+            this.opacity_max_button.Margin = new System.Windows.Forms.Padding(0);
+            this.opacity_max_button.Name = "opacity_max_button";
+            this.opacity_max_button.Size = new System.Drawing.Size(18, 19);
+            this.opacity_max_button.TabIndex = 45;
+            this.opacity_max_button.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.opacity_max_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.opacity_max_button.UseVisualStyleBackColor = false;
+            // 
             // TitleBar_panel
             // 
             this.TitleBar_panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -64,6 +129,7 @@
             this.TitleBar_panel.BackgroundImage = global::View_GUI.Properties.Resources._23424;
             this.TitleBar_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.TitleBar_panel.CausesValidation = false;
+            this.TitleBar_panel.Controls.Add(this.panel1);
             this.TitleBar_panel.Controls.Add(this.close_form_button);
             this.TitleBar_panel.Controls.Add(this.minimize_button);
             this.TitleBar_panel.Controls.Add(this.Move_Form_Top_button);
@@ -78,6 +144,14 @@
             this.TitleBar_panel.Size = new System.Drawing.Size(1608, 38);
             this.TitleBar_panel.TabIndex = 1;
             this.TitleBar_panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TitleBar_panel_MouseDown);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Red;
+            this.panel1.Location = new System.Drawing.Point(471, 7);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(70, 22);
+            this.panel1.TabIndex = 0;
             // 
             // close_form_button
             // 
@@ -291,6 +365,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
             this.ClientSize = new System.Drawing.Size(1601, 800);
+            this.Controls.Add(this.opacity_min_button);
+            this.Controls.Add(this.opacity_max_button);
+            this.Controls.Add(this.opacity_trackBar);
             this.Controls.Add(this.TitleBar_panel);
             this.Controls.Add(this.Main_Body_Loader_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -299,6 +376,7 @@
             this.Name = "Main_Body_Form";
             this.Text = "Advokathuset";
             this.Load += new System.EventHandler(this.Main_Body_Form_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.opacity_trackBar)).EndInit();
             this.TitleBar_panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -317,5 +395,9 @@
         private System.Windows.Forms.Button Normal_Size_Form_button;
         private System.Windows.Forms.Button Show_Only_TitleBar_button;
         private System.Windows.Forms.Button Form_Screenshot_button_button;
+        private System.Windows.Forms.TrackBar opacity_trackBar;
+        private System.Windows.Forms.Button opacity_max_button;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button opacity_min_button;
     }
 }

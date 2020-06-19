@@ -78,16 +78,26 @@ namespace View_GUI
         // Load
         private void Main_Body_Form_Load(object sender, EventArgs e)
         {
+           
+
             Main_Body_Settings(); // Settings
             Show_Log_In(); // Load Log In Form on Start
 
             //var prop = TitleBar_panel.GetType().GetProperty("DoubleBuffered", BindingFlags.Instance | BindingFlags.NonPublic);
             //prop.SetValue(TitleBar_panel, true, null);
+
+            //BackColor = Color.Blue;
+            TransparencyKey = Color.Red;
+            //this.Opacity = 1;
+            opacity_trackBar.Value = (int)(this.Opacity * 100);
         }
 
 
 
 
+
+
+ 
 
 
 
@@ -96,6 +106,7 @@ namespace View_GUI
         // Log In Form
         private void Show_Log_In()
         {
+            this.Opacity = 0.95; // Main Form Opacity
             Log_In_Form.TopLevel = false;
             Main_Body_Loader_panel.Controls.Add(Log_In_Form);
             Log_In_Form.FormBorderStyle = FormBorderStyle.None;
@@ -406,17 +417,7 @@ namespace View_GUI
         }
 
 
-
-
-
-
-
         //-------------Buttons---Hover--------------<<<<--------------------------------
-
-
-
-
-
 
 
         //-------------------Custom--Form--Border----::END::-----------------------------------------------
@@ -429,6 +430,16 @@ namespace View_GUI
 
 
 
+
+
+        //------Form - Opacity----::START::-------------------------------------------------------------
+
+        //Track bar "Opacity"
+        private void opacity_trackBar_ValueChanged(object sender, EventArgs e)
+        {
+            this.Opacity = opacity_trackBar.Value * 0.01;  // Adjust Form Opacity
+        }   
+        //------Form - Opacity----::START::-------------------------------------------------------------
 
 
 

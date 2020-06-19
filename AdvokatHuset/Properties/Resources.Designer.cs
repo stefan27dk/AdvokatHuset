@@ -63,6 +63,26 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1_Arrow_Left__1___1_ {
+            get {
+                object obj = ResourceManager.GetObject("1 Arrow Left (1) (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1_Arrow_Left__1___1____Copy {
+            get {
+                object obj = ResourceManager.GetObject("1 Arrow Left (1) (1) - Copy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _11 {
             get {
                 object obj = ResourceManager.GetObject("11", resourceCulture);
@@ -2336,6 +2356,16 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap key_icon {
             get {
                 object obj = ResourceManager.GetObject("key-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Left_Arrow_1243 {
+            get {
+                object obj = ResourceManager.GetObject("Left Arrow 1243", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

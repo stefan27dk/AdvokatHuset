@@ -32,14 +32,14 @@
             this.backgroundName_Top_panel = new System.Windows.Forms.Panel();
             this.browser_back_panel = new System.Windows.Forms.Panel();
             this.Browser_menu_panel = new System.Windows.Forms.Panel();
-            this.home_webBrowser = new System.Windows.Forms.WebBrowser();
             this.panel1 = new System.Windows.Forms.Panel();
             this.wbbeowser_Search_textBox = new System.Windows.Forms.TextBox();
+            this.web_browser_Search_button = new System.Windows.Forms.Button();
             this.web_browser_google_button = new System.Windows.Forms.Button();
             this.Web_Browser_Home_button = new System.Windows.Forms.Button();
             this.browser_back_button = new System.Windows.Forms.Button();
-            this.web_browser_Search_button = new System.Windows.Forms.Button();
             this.Webbrowser_Gog_Forward_button = new System.Windows.Forms.Button();
+            this.home_webBrowser = new System.Windows.Forms.WebBrowser();
             this.backgroundName_Top_panel.SuspendLayout();
             this.browser_back_panel.SuspendLayout();
             this.Browser_menu_panel.SuspendLayout();
@@ -98,18 +98,6 @@
             this.Browser_menu_panel.Size = new System.Drawing.Size(1450, 48);
             this.Browser_menu_panel.TabIndex = 24;
             // 
-            // home_webBrowser
-            // 
-            this.home_webBrowser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.home_webBrowser.Location = new System.Drawing.Point(1, 52);
-            this.home_webBrowser.MinimumSize = new System.Drawing.Size(20, 20);
-            this.home_webBrowser.Name = "home_webBrowser";
-            this.home_webBrowser.Size = new System.Drawing.Size(1448, 583);
-            this.home_webBrowser.TabIndex = 20;
-            this.home_webBrowser.Navigated += new System.Windows.Forms.WebBrowserNavigatedEventHandler(this.home_webBrowser_Navigated);
-            // 
             // panel1
             // 
             this.panel1.BackgroundImage = global::View_GUI.Properties.Resources.Search_Thin;
@@ -133,6 +121,23 @@
             this.wbbeowser_Search_textBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.wbbeowser_Search_textBox_KeyDown);
             this.wbbeowser_Search_textBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.wbbeowser_Search_textBox_MouseDown);
             this.wbbeowser_Search_textBox.MouseHover += new System.EventHandler(this.wbbeowser_Search_textBox_MouseHover);
+            // 
+            // web_browser_Search_button
+            // 
+            this.web_browser_Search_button.BackColor = System.Drawing.Color.Transparent;
+            this.web_browser_Search_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_page_zoom_icon1;
+            this.web_browser_Search_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.web_browser_Search_button.FlatAppearance.BorderSize = 0;
+            this.web_browser_Search_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.web_browser_Search_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
+            this.web_browser_Search_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.web_browser_Search_button.Location = new System.Drawing.Point(657, 10);
+            this.web_browser_Search_button.Margin = new System.Windows.Forms.Padding(0);
+            this.web_browser_Search_button.Name = "web_browser_Search_button";
+            this.web_browser_Search_button.Size = new System.Drawing.Size(30, 30);
+            this.web_browser_Search_button.TabIndex = 22;
+            this.web_browser_Search_button.UseVisualStyleBackColor = false;
+            this.web_browser_Search_button.Click += new System.EventHandler(this.web_browser_Search_button_Click);
             // 
             // web_browser_google_button
             // 
@@ -185,23 +190,6 @@
             this.browser_back_button.UseVisualStyleBackColor = false;
             this.browser_back_button.Click += new System.EventHandler(this.browser_back_button_Click);
             // 
-            // web_browser_Search_button
-            // 
-            this.web_browser_Search_button.BackColor = System.Drawing.Color.Transparent;
-            this.web_browser_Search_button.BackgroundImage = global::View_GUI.Properties.Resources.Actions_page_zoom_icon1;
-            this.web_browser_Search_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.web_browser_Search_button.FlatAppearance.BorderSize = 0;
-            this.web_browser_Search_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.web_browser_Search_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(74)))));
-            this.web_browser_Search_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.web_browser_Search_button.Location = new System.Drawing.Point(657, 10);
-            this.web_browser_Search_button.Margin = new System.Windows.Forms.Padding(0);
-            this.web_browser_Search_button.Name = "web_browser_Search_button";
-            this.web_browser_Search_button.Size = new System.Drawing.Size(30, 30);
-            this.web_browser_Search_button.TabIndex = 22;
-            this.web_browser_Search_button.UseVisualStyleBackColor = false;
-            this.web_browser_Search_button.Click += new System.EventHandler(this.web_browser_Search_button_Click);
-            // 
             // Webbrowser_Gog_Forward_button
             // 
             this.Webbrowser_Gog_Forward_button.BackColor = System.Drawing.Color.Transparent;
@@ -219,6 +207,18 @@
             this.Webbrowser_Gog_Forward_button.UseVisualStyleBackColor = false;
             this.Webbrowser_Gog_Forward_button.Click += new System.EventHandler(this.Webbrowser_Go_Forward_button_Click);
             // 
+            // home_webBrowser
+            // 
+            this.home_webBrowser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.home_webBrowser.Location = new System.Drawing.Point(1, 52);
+            this.home_webBrowser.MinimumSize = new System.Drawing.Size(20, 20);
+            this.home_webBrowser.Name = "home_webBrowser";
+            this.home_webBrowser.Size = new System.Drawing.Size(1448, 583);
+            this.home_webBrowser.TabIndex = 20;
+            this.home_webBrowser.Navigated += new System.Windows.Forms.WebBrowserNavigatedEventHandler(this.home_webBrowser_Navigated);
+            // 
             // Home_Form11
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,7 +231,6 @@
             this.Name = "Home_Form11";
             this.Text = "Home_Form11";
             this.Load += new System.EventHandler(this.Home_Form11_Load);
-            this.MouseEnter += new System.EventHandler(this.Home_Form11_MouseEnter);
             this.backgroundName_Top_panel.ResumeLayout(false);
             this.backgroundName_Top_panel.PerformLayout();
             this.browser_back_panel.ResumeLayout(false);
