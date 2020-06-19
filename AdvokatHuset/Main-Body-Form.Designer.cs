@@ -45,6 +45,7 @@
             this.Show_Only_TitleBar_button = new System.Windows.Forms.Button();
             this.Form_Screenshot_button_button = new System.Windows.Forms.Button();
             this.allays_on_top_button = new System.Windows.Forms.Button();
+            this.opacity_25_percent_button = new System.Windows.Forms.Button();
             this.Main_Body_Loader_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.opacity_trackBar)).BeginInit();
             this.TitleBar_panel.SuspendLayout();
@@ -91,8 +92,9 @@
             // 
             this.semi_middle_opacity_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.semi_middle_opacity_button.BackColor = System.Drawing.Color.Transparent;
-            this.semi_middle_opacity_button.BackgroundImage = global::View_GUI.Properties.Resources.Middle_3;
+            this.semi_middle_opacity_button.BackgroundImage = global::View_GUI.Properties.Resources.Pin121;
             this.semi_middle_opacity_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.semi_middle_opacity_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.semi_middle_opacity_button.FlatAppearance.BorderSize = 0;
             this.semi_middle_opacity_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.semi_middle_opacity_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
@@ -100,10 +102,10 @@
             this.semi_middle_opacity_button.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.semi_middle_opacity_button.ForeColor = System.Drawing.Color.Black;
             this.semi_middle_opacity_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.semi_middle_opacity_button.Location = new System.Drawing.Point(1509, 781);
+            this.semi_middle_opacity_button.Location = new System.Drawing.Point(1509, 791);
             this.semi_middle_opacity_button.Margin = new System.Windows.Forms.Padding(0);
             this.semi_middle_opacity_button.Name = "semi_middle_opacity_button";
-            this.semi_middle_opacity_button.Size = new System.Drawing.Size(10, 18);
+            this.semi_middle_opacity_button.Size = new System.Drawing.Size(15, 22);
             this.semi_middle_opacity_button.TabIndex = 48;
             this.semi_middle_opacity_button.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.semi_middle_opacity_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -386,12 +388,37 @@
             this.allays_on_top_button.UseVisualStyleBackColor = false;
             this.allays_on_top_button.Click += new System.EventHandler(this.allays_on_top_button_Click);
             // 
+            // opacity_25_percent_button
+            // 
+            this.opacity_25_percent_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.opacity_25_percent_button.BackColor = System.Drawing.Color.Transparent;
+            this.opacity_25_percent_button.BackgroundImage = global::View_GUI.Properties.Resources.Pin121;
+            this.opacity_25_percent_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.opacity_25_percent_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.opacity_25_percent_button.FlatAppearance.BorderSize = 0;
+            this.opacity_25_percent_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.opacity_25_percent_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.opacity_25_percent_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.opacity_25_percent_button.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.opacity_25_percent_button.ForeColor = System.Drawing.Color.Black;
+            this.opacity_25_percent_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.opacity_25_percent_button.Location = new System.Drawing.Point(1478, 791);
+            this.opacity_25_percent_button.Margin = new System.Windows.Forms.Padding(0);
+            this.opacity_25_percent_button.Name = "opacity_25_percent_button";
+            this.opacity_25_percent_button.Size = new System.Drawing.Size(15, 22);
+            this.opacity_25_percent_button.TabIndex = 49;
+            this.opacity_25_percent_button.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.opacity_25_percent_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.opacity_25_percent_button.UseVisualStyleBackColor = false;
+            this.opacity_25_percent_button.Click += new System.EventHandler(this.opacity_25_percent_button_Click);
+            // 
             // Main_Body_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
             this.ClientSize = new System.Drawing.Size(1601, 800);
+            this.Controls.Add(this.opacity_25_percent_button);
             this.Controls.Add(this.semi_middle_opacity_button);
             this.Controls.Add(this.opacity_min_button);
             this.Controls.Add(this.opacity_max_button);
@@ -429,5 +456,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button opacity_min_button;
         private System.Windows.Forms.Button semi_middle_opacity_button;
+        private System.Windows.Forms.Button opacity_25_percent_button;
     }
 }

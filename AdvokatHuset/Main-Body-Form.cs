@@ -445,7 +445,7 @@ namespace View_GUI
         // Opacity MAX
         private void opacity_max_button_Click(object sender, EventArgs e)
         {
-            this.Opacity = 0.3;
+             
             opacity_trackBar.Value = opacity_trackBar.Minimum;
         }
 
@@ -455,19 +455,25 @@ namespace View_GUI
         // Opacity MINIMUM
         private void opacity_min_button_Click(object sender, EventArgs e)
         {
-            this.Opacity = 1;
-            //opacity_trackBar.Value = opacity_trackBar.Maximum;
+            
+            opacity_trackBar.Value = opacity_trackBar.Maximum;
         }
 
 
         // Middle
         private void semi_middle_opacity_button_Click(object sender, EventArgs e)
         {
-            this.Opacity = 0.5;
-            opacity_trackBar.Value = ((opacity_trackBar.Maximum) / 2);
+ 
+            opacity_trackBar.Value = ((opacity_trackBar.Maximum) / 2) +7;
         }
 
-           
+        private void opacity_25_percent_button_Click(object sender, EventArgs e)
+        {
+            opacity_trackBar.Value = 85;
+
+        }
+
+
         //------Form - Opacity----::START::-------------------------------------------------------------
 
 
