@@ -48,8 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>
-    </StartupObject>
+    <StartupObject>View_GUI.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ImageProcessor, Version=2.9.0.207, Culture=neutral, processorArchitecture=MSIL">
@@ -129,6 +128,11 @@
     </Compile>
     <Compile Include="My_APP_Settings.cs" />
     <Compile Include="My_Timer.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Sager-Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,11 +228,6 @@
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Sag.cs" />
     <Compile Include="Screenshot.cs" />
     <Compile Include="Sekretær.cs" />
@@ -1677,6 +1676,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Transaparrent Window 12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoadFile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoadFile2323.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoadFile2327773.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

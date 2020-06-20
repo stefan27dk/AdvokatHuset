@@ -2423,6 +2423,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap LoadFile2327773 {
+            get {
+                object obj = ResourceManager.GetObject("LoadFile2327773", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Log_In_12 {
             get {
                 object obj = ResourceManager.GetObject("Log In 12", resourceCulture);
