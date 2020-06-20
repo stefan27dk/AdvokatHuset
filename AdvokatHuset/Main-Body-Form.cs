@@ -113,14 +113,97 @@ namespace View_GUI
         {
              
             // Open Item Menu Shortcut
-            if (keyData == (Keys.Alt | Keys.CapsLock))
+            if (keyData == (Keys.Control | Keys.LWin))
             {
                 Add_Ttransparent_form_button.Focus();
                 Reset_Transparency_Key();
                 Transparent_Form_Show_Hide();
             }
 
+
+
+
+            // Close Form
+            if(keyData == (Keys.Control | Keys.X))
+            {
+                this.Close();
+            }
+
+
+
+            // Maximize Form / Normal Form Window
+            if (keyData == (Keys.Shift | Keys.LWin ))
+            {
+                if (this.WindowState != FormWindowState.Maximized)
+                {
+
+                  this.WindowState = FormWindowState.Maximized; 
+                }
+                else
+                {
+                    this.WindowState = FormWindowState.Normal;
+                }
+            }
+
+
+
+
+
+
+
+            // Normal Window
+            if (keyData == (Keys.Alt | Keys.B))
+            {
+                Normal_Window_Size_Location();
               
+            }
+
+
+
+
+            // Normal Window - Shortcut 2
+            if (keyData == Keys.End)
+            {
+                Normal_Window_Size_Location();
+            }
+
+
+
+
+
+            // Window Up
+            if (keyData == (Keys.Up))
+            {
+                Form_Window_Top();
+            }
+
+
+
+            // Window Down
+            if (keyData == (Keys.Down))
+            {
+                Form_Window_Down();
+            }
+
+
+            // Window Left
+            if (keyData == (Keys.Left))
+            {
+                this.Location = new Point(0,0);
+                this.Size = new Size(Screen.PrimaryScreen.WorkingArea.Width / 2, Screen.PrimaryScreen.WorkingArea.Height);
+
+            }
+
+
+
+            // Window Right
+            if (keyData == (Keys.Right))
+            {
+                this.Location = new Point(Screen.PrimaryScreen.WorkingArea.Width / 2, 0);
+                this.Size = new Size(Screen.PrimaryScreen.WorkingArea.Width / 2, Screen.PrimaryScreen.WorkingArea.Height);
+            }
+
+
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
@@ -389,6 +472,14 @@ namespace View_GUI
         // Move Form Top
         private void Move_Form_Top_button_Click(object sender, EventArgs e)
         {
+            Form_Window_Top();
+        }
+
+
+
+          // Form Window Top
+          private void Form_Window_Top()
+          {
             int ScreenW = Screen.PrimaryScreen.Bounds.Width;  // Get Screen Width
             int ScreenH = Screen.PrimaryScreen.Bounds.Height; // Get Screen Height
 
@@ -396,7 +487,8 @@ namespace View_GUI
             this.Location = new Point(0, 0); // Location Top Left Corner
             this.Width = ScreenW;
             this.Height = (int)(ScreenH * 0.5);
-        }
+          }
+
 
 
 
@@ -404,6 +496,14 @@ namespace View_GUI
 
         // Move Form Botom
         private void Move_Form_Bottom_button_Click(object sender, EventArgs e)
+        {
+            Form_Window_Down();
+        }
+
+
+
+         // Form Window Down
+        private void Form_Window_Down()
         {
             int ScreenW = Screen.PrimaryScreen.Bounds.Width;
             int ScreenH = Screen.PrimaryScreen.Bounds.Height;
@@ -423,6 +523,14 @@ namespace View_GUI
         private void Normal_Size_Form_button_Click(object sender, EventArgs e)
         {
 
+            Normal_Window_Size_Location();
+        }
+
+
+
+        // Normal Window - Size - Locatiomn
+        private void Normal_Window_Size_Location()
+        {
             int ScreenW = Screen.PrimaryScreen.Bounds.Width;
             int ScreenH = Screen.PrimaryScreen.Bounds.Height;
             WindowState = FormWindowState.Normal;
@@ -431,9 +539,6 @@ namespace View_GUI
             this.Location = new Point((ScreenW / 2) - (this.Width / 2), (ScreenH / 2) - (this.Height / 2)); // Position is determined by the top left corner of the Object in this Case the Form
             // Get The screens Width / 2 monus the half of the form size and you get the form at tte center
         }
-
-
-
 
 
 

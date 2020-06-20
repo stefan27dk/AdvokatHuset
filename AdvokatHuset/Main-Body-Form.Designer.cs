@@ -73,7 +73,7 @@
             this.opacity_trackBar.Name = "opacity_trackBar";
             this.opacity_trackBar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.opacity_trackBar.Size = new System.Drawing.Size(104, 32);
-            this.opacity_trackBar.TabIndex = 0;
+            this.opacity_trackBar.TabIndex = 15;
             this.opacity_trackBar.TickStyle = System.Windows.Forms.TickStyle.None;
             this.opacity_trackBar.Value = 100;
             this.opacity_trackBar.ValueChanged += new System.EventHandler(this.opacity_trackBar_ValueChanged);
@@ -96,7 +96,7 @@
             this.opacity_25_percent_button.Margin = new System.Windows.Forms.Padding(0);
             this.opacity_25_percent_button.Name = "opacity_25_percent_button";
             this.opacity_25_percent_button.Size = new System.Drawing.Size(15, 22);
-            this.opacity_25_percent_button.TabIndex = 49;
+            this.opacity_25_percent_button.TabIndex = 12;
             this.opacity_25_percent_button.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.opacity_25_percent_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.opacity_25_percent_button.UseVisualStyleBackColor = false;
@@ -120,7 +120,7 @@
             this.semi_middle_opacity_button.Margin = new System.Windows.Forms.Padding(0);
             this.semi_middle_opacity_button.Name = "semi_middle_opacity_button";
             this.semi_middle_opacity_button.Size = new System.Drawing.Size(15, 22);
-            this.semi_middle_opacity_button.TabIndex = 48;
+            this.semi_middle_opacity_button.TabIndex = 13;
             this.semi_middle_opacity_button.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.semi_middle_opacity_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.semi_middle_opacity_button.UseVisualStyleBackColor = false;
@@ -143,7 +143,7 @@
             this.opacity_min_button.Margin = new System.Windows.Forms.Padding(0);
             this.opacity_min_button.Name = "opacity_min_button";
             this.opacity_min_button.Size = new System.Drawing.Size(23, 18);
-            this.opacity_min_button.TabIndex = 47;
+            this.opacity_min_button.TabIndex = 11;
             this.opacity_min_button.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.opacity_min_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.opacity_min_button.UseVisualStyleBackColor = false;
@@ -166,7 +166,7 @@
             this.opacity_max_button.Margin = new System.Windows.Forms.Padding(0);
             this.opacity_max_button.Name = "opacity_max_button";
             this.opacity_max_button.Size = new System.Drawing.Size(23, 18);
-            this.opacity_max_button.TabIndex = 45;
+            this.opacity_max_button.TabIndex = 14;
             this.opacity_max_button.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.opacity_max_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.opacity_max_button.UseVisualStyleBackColor = false;
@@ -214,7 +214,7 @@
             this.Add_Ttransparent_form_button.Margin = new System.Windows.Forms.Padding(0);
             this.Add_Ttransparent_form_button.Name = "Add_Ttransparent_form_button";
             this.Add_Ttransparent_form_button.Size = new System.Drawing.Size(36, 32);
-            this.Add_Ttransparent_form_button.TabIndex = 45;
+            this.Add_Ttransparent_form_button.TabIndex = 9;
             this.Add_Ttransparent_form_button.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.Add_Ttransparent_form_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Add_Ttransparent_form_button.UseVisualStyleBackColor = false;
@@ -239,7 +239,7 @@
             this.close_form_button.Margin = new System.Windows.Forms.Padding(0);
             this.close_form_button.Name = "close_form_button";
             this.close_form_button.Size = new System.Drawing.Size(25, 25);
-            this.close_form_button.TabIndex = 33;
+            this.close_form_button.TabIndex = 1;
             this.close_form_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.close_form_button.UseVisualStyleBackColor = false;
             this.close_form_button.Click += new System.EventHandler(this.close_form_button_Click);
@@ -263,7 +263,7 @@
             this.minimize_button.Margin = new System.Windows.Forms.Padding(0);
             this.minimize_button.Name = "minimize_button";
             this.minimize_button.Size = new System.Drawing.Size(32, 20);
-            this.minimize_button.TabIndex = 34;
+            this.minimize_button.TabIndex = 3;
             this.minimize_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.minimize_button.UseVisualStyleBackColor = false;
             this.minimize_button.Click += new System.EventHandler(this.minimize_button_Click);
@@ -287,7 +287,7 @@
             this.Move_Form_Top_button.Margin = new System.Windows.Forms.Padding(0);
             this.Move_Form_Top_button.Name = "Move_Form_Top_button";
             this.Move_Form_Top_button.Size = new System.Drawing.Size(33, 32);
-            this.Move_Form_Top_button.TabIndex = 37;
+            this.Move_Form_Top_button.TabIndex = 5;
             this.Move_Form_Top_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Move_Form_Top_button.UseVisualStyleBackColor = false;
             this.Move_Form_Top_button.Click += new System.EventHandler(this.Move_Form_Top_button_Click);
@@ -310,7 +310,7 @@
             this.maximize_button.Margin = new System.Windows.Forms.Padding(0);
             this.maximize_button.Name = "maximize_button";
             this.maximize_button.Size = new System.Drawing.Size(40, 35);
-            this.maximize_button.TabIndex = 35;
+            this.maximize_button.TabIndex = 2;
             this.maximize_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.maximize_button.UseVisualStyleBackColor = false;
             this.maximize_button.Click += new System.EventHandler(this.maximize_button_Click);
@@ -334,7 +334,7 @@
             this.Move_Form_Bottom_button.Margin = new System.Windows.Forms.Padding(0);
             this.Move_Form_Bottom_button.Name = "Move_Form_Bottom_button";
             this.Move_Form_Bottom_button.Size = new System.Drawing.Size(33, 32);
-            this.Move_Form_Bottom_button.TabIndex = 41;
+            this.Move_Form_Bottom_button.TabIndex = 6;
             this.Move_Form_Bottom_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Move_Form_Bottom_button.UseVisualStyleBackColor = false;
             this.Move_Form_Bottom_button.Click += new System.EventHandler(this.Move_Form_Bottom_button_Click);
@@ -356,7 +356,7 @@
             this.Normal_Size_Form_button.Margin = new System.Windows.Forms.Padding(0);
             this.Normal_Size_Form_button.Name = "Normal_Size_Form_button";
             this.Normal_Size_Form_button.Size = new System.Drawing.Size(33, 32);
-            this.Normal_Size_Form_button.TabIndex = 42;
+            this.Normal_Size_Form_button.TabIndex = 7;
             this.Normal_Size_Form_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Normal_Size_Form_button.UseVisualStyleBackColor = false;
             this.Normal_Size_Form_button.Click += new System.EventHandler(this.Normal_Size_Form_button_Click);
@@ -378,7 +378,7 @@
             this.Show_Only_TitleBar_button.Margin = new System.Windows.Forms.Padding(0);
             this.Show_Only_TitleBar_button.Name = "Show_Only_TitleBar_button";
             this.Show_Only_TitleBar_button.Size = new System.Drawing.Size(33, 32);
-            this.Show_Only_TitleBar_button.TabIndex = 43;
+            this.Show_Only_TitleBar_button.TabIndex = 8;
             this.Show_Only_TitleBar_button.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.Show_Only_TitleBar_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Show_Only_TitleBar_button.UseVisualStyleBackColor = false;
@@ -400,7 +400,7 @@
             this.Form_Screenshot_button_button.Margin = new System.Windows.Forms.Padding(0);
             this.Form_Screenshot_button_button.Name = "Form_Screenshot_button_button";
             this.Form_Screenshot_button_button.Size = new System.Drawing.Size(41, 29);
-            this.Form_Screenshot_button_button.TabIndex = 44;
+            this.Form_Screenshot_button_button.TabIndex = 10;
             this.Form_Screenshot_button_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Form_Screenshot_button_button.UseVisualStyleBackColor = false;
             this.Form_Screenshot_button_button.Click += new System.EventHandler(this.Form_Screenshot_button_button_Click);
@@ -422,7 +422,7 @@
             this.allays_on_top_button.Margin = new System.Windows.Forms.Padding(0);
             this.allays_on_top_button.Name = "allays_on_top_button";
             this.allays_on_top_button.Size = new System.Drawing.Size(33, 32);
-            this.allays_on_top_button.TabIndex = 36;
+            this.allays_on_top_button.TabIndex = 4;
             this.allays_on_top_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.allays_on_top_button.UseVisualStyleBackColor = false;
             this.allays_on_top_button.Click += new System.EventHandler(this.allays_on_top_button_Click);
