@@ -201,7 +201,7 @@
             // 
             this.Add_Ttransparent_form_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Add_Ttransparent_form_button.BackColor = System.Drawing.Color.Transparent;
-            this.Add_Ttransparent_form_button.BackgroundImage = global::View_GUI.Properties.Resources.To_Bar_Only_11111;
+            this.Add_Ttransparent_form_button.BackgroundImage = global::View_GUI.Properties.Resources.Transaparrent_Window_11;
             this.Add_Ttransparent_form_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Add_Ttransparent_form_button.FlatAppearance.BorderSize = 0;
             this.Add_Ttransparent_form_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
@@ -210,10 +210,10 @@
             this.Add_Ttransparent_form_button.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Add_Ttransparent_form_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.Add_Ttransparent_form_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Add_Ttransparent_form_button.Location = new System.Drawing.Point(1001, 1);
+            this.Add_Ttransparent_form_button.Location = new System.Drawing.Point(1047, 2);
             this.Add_Ttransparent_form_button.Margin = new System.Windows.Forms.Padding(0);
             this.Add_Ttransparent_form_button.Name = "Add_Ttransparent_form_button";
-            this.Add_Ttransparent_form_button.Size = new System.Drawing.Size(33, 32);
+            this.Add_Ttransparent_form_button.Size = new System.Drawing.Size(36, 32);
             this.Add_Ttransparent_form_button.TabIndex = 45;
             this.Add_Ttransparent_form_button.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.Add_Ttransparent_form_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;

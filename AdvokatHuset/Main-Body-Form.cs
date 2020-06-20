@@ -524,13 +524,14 @@ namespace View_GUI
             {
                 TransparencyKey = Color.Red;
                 TransparentForm1.Visible = true;
+                Add_Ttransparent_form_button.BackgroundImage = Properties.Resources.Transaparrent_Window_12;
             }
             else
             {
                 this.TransparencyKey = this.BackColor = Color.Red; // Makes it so we don see red Color on Removing the Transaprent Form
                 TransparentForm1.Visible = false;
                 this.BackColor = Color.FromArgb(24, 24, 34); // Remove Red Background and Transparency on the main form at the Bottom
-                 
+                Add_Ttransparent_form_button.BackgroundImage = Properties.Resources.Transaparrent_Window_11;
             }
 
         }

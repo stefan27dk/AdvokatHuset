@@ -2633,6 +2633,16 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Misc_Desktop_Mac_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Misc-Desktop-Mac-icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mmm {
             get {
                 object obj = ResourceManager.GetObject("mmm", resourceCulture);
@@ -3533,6 +3543,26 @@ namespace View_GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Transaparrent_Window_11 {
+            get {
+                object obj = ResourceManager.GetObject("Transaparrent Window 11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Transaparrent_Window_12 {
+            get {
+                object obj = ResourceManager.GetObject("Transaparrent Window 12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap transmission_download_icon {
             get {
                 object obj = ResourceManager.GetObject("transmission-download-icon", resourceCulture);
@@ -3546,6 +3576,36 @@ namespace View_GUI.Properties {
         internal static System.Drawing.Bitmap transmission_download_icon___Copy {
             get {
                 object obj = ResourceManager.GetObject("transmission-download-icon - Copy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Transparent_Panel_ {
+            get {
+                object obj = ResourceManager.GetObject("Transparent Panel ", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Transparrent_45453 {
+            get {
+                object obj = ResourceManager.GetObject("Transparrent 45453", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Transparrent_Form_12323 {
+            get {
+                object obj = ResourceManager.GetObject("Transparrent Form 12323", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -412,6 +412,12 @@
   <data name="Start-Menu-Search-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Start-Menu-Search-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Misc-Desktop-Mac-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Misc-Desktop-Mac-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Transparent Panel " type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Transparent Panel .png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Apps-ktorrent-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Apps-ktorrent-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -742,6 +748,9 @@
   <data name="App-klines-game-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\App-klines-game-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Transparrent Form 12323" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Transparrent Form 12323.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pencil-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pencil-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -784,6 +793,9 @@
   <data name="Untitled4335" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Untitled4335.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Transaparrent Window 11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Transaparrent Window 11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="question-type-one-correct-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\question-type-one-correct-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -804,6 +816,9 @@
   </data>
   <data name="Mazimize_On_Hover_12343451" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Mazimize_On_Hover_12343451.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pin121" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pin121.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Minimize12342" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Minimize12342.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -937,9 +952,6 @@
   <data name="document-excel-icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\document-excel-icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Places-folder-yellow-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Places-folder-yellow-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Documents-icon3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Documents-icon3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -979,9 +991,6 @@
   <data name="App-world-clock-icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\App-world-clock-icon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Back Panel  12433" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Back Panel  12433.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="flash-kard-icon (1) (5)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\flash-kard-icon (1) (5)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -996,6 +1005,9 @@
   </data>
   <data name="navigate-left-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\navigate-left-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="research-icon (2) (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\research-icon (2) (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Top344" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Top344.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1018,8 +1030,8 @@
   <data name="Untitled2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Untitled2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Top_Background_menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Top_Background_menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Back Panel  12433" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Back Panel  12433.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Minimize23432543 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Minimize23432543 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1033,8 +1045,11 @@
   <data name="Add time 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Add time 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="research-icon (2) (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\research-icon (2) (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Top_Background_menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Top_Background_menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Places-folder-yellow-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Places-folder-yellow-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="addressbook-edit-icon (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\addressbook-edit-icon (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1104,6 +1119,9 @@
   </data>
   <data name="question-type-one-correct-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\question-type-one-correct-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Transparrent 45453" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Transparrent 45453.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Completed 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Completed 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -1360,7 +1378,7 @@
   <data name="Office-Customer-Male-Light-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Office-Customer-Male-Light-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Pin121" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Pin121.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Transaparrent Window 12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Transaparrent Window 12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

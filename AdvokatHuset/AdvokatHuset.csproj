@@ -1660,5 +1660,23 @@
   <ItemGroup>
     <None Include="Resources\Pin121.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Transparent Panel .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Misc-Desktop-Mac-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Transparrent Form 12323.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Transparrent 45453.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Transaparrent Window 11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Transaparrent Window 12.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
