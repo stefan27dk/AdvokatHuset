@@ -490,6 +490,8 @@ namespace View_GUI
         private void Home_Button_Click(object sender, EventArgs e)
         {
             Home(); // Main Method forHome
+            itemClicked = true;
+            AddFormToList();
         }
 
 
@@ -801,18 +803,18 @@ namespace View_GUI
 
             if (formMinus1 < formList.Count - 1)///////////////////// formMinus1 is the the value of going back " It should be less than the list Size"
             {
-                formMinus1 = formMinus1 + 1; // If it is less than the list siz than + 1
+                formMinus1 = formMinus1 + 1; // If it is less than the list size, than + 1
             }
 
 
 
 
 
-            if (formMinus1 > 0 && formMinus1 < formList.Count)// minimum = 0 and maximum = the last item in the list "formList.Count -1"
+            if (formMinus1 > 0 && formMinus1 < formList.Count)// Minimum = 0 and maximum = the last item in the list "formList.Count -1"
             {
                 HideAllForms(); // Hide ALL    
                 Form lastForm = formList[(formList.Count) - formMinus1]; // Value Back "The value is stored at the top and Reseted when Item in the Menu is Clicked
-               lastForm.Show();
+                lastForm.Show();
  
             }
 
