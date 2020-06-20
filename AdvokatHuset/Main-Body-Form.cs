@@ -108,6 +108,31 @@ namespace View_GUI
 
 
 
+        //Shortcut keys -----KEY WATCHER- ----SHORTCUT KEYS----------------::START::------------------------------------------------------------------------------------
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+             
+            // Open Item Menu Shortcut
+            if (keyData == (Keys.Alt | Keys.CapsLock))
+            {
+                Add_Ttransparent_form_button.Focus();
+                Reset_Transparency_Key();
+                Transparent_Form_Show_Hide();
+            }
+
+              
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        //Shortcut keys -----KEY WATCHER- ----SHORTCUT KEYS----------------::END::------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
 
 
         // Log In Form
@@ -453,6 +478,8 @@ namespace View_GUI
 
 
 
+
+
         //------Form - Opacity----::START::-------------------------------------------------------------
 
         //Track bar "Opacity"
@@ -514,29 +541,40 @@ namespace View_GUI
 
 
 
+
+
+
+
+
+
+
         // ADD / Show - Transparent Form -------::START::------------------------------------------------------
 
 
         // Toggle Transparrent Form
         private void Add_Ttransparent_form_button_MouseDown(object sender, MouseEventArgs e)
+        {   
+            Transparent_Form_Show_Hide();
+        }
+
+
+        private void Transparent_Form_Show_Hide()
         {
+            //Show
             if (TransparentForm1.Visible == false)
             {
                 TransparencyKey = Color.Red;
                 TransparentForm1.Visible = true;
                 Add_Ttransparent_form_button.BackgroundImage = Properties.Resources.Transaparrent_Window_12;
             }
-            else
+            else // Hide
             {
                 this.TransparencyKey = this.BackColor = Color.Red; // Makes it so we don see red Color on Removing the Transaprent Form
                 TransparentForm1.Visible = false;
                 this.BackColor = Color.FromArgb(24, 24, 34); // Remove Red Background and Transparency on the main form at the Bottom
                 Add_Ttransparent_form_button.BackgroundImage = Properties.Resources.Transaparrent_Window_11;
             }
-
         }
-
-
 
        
      
@@ -545,20 +583,21 @@ namespace View_GUI
         // Mouse UP - Remove Red Flickering on Transparent Form Toggle
         private void Add_Ttransparent_form_button_MouseUp(object sender, MouseEventArgs e)
         {
-            if(TransparentForm1.Visible == false)
-            {
-              this.TransparencyKey = this.BackColor = Color.Empty;
-              this.BackColor = Color.FromArgb(24, 24, 34); // Remove Red Background and Transparency on the main form at the Bottom
-            }
+            Reset_Transparency_Key();
 
         }
 
-        // ADD - Transparency Form -------::START::------------------------------------------------------
 
 
-
-
-
+        // reset Transparency Key
+         private void Reset_Transparency_Key()
+         {
+            if (TransparentForm1.Visible == false)
+            {
+                this.TransparencyKey = this.BackColor = Color.Empty;
+                this.BackColor = Color.FromArgb(24, 24, 34); // Remove Red Background and Transparency on the main form at the Bottom
+            }
+         }
 
 
 
@@ -575,6 +614,17 @@ namespace View_GUI
             //TransparentForm1.Show();
             //TransparentForm1.BringToFront();
         }
+
+
+
+        // ADD - Transparency Form -------::END::------------------------------------------------------
+
+
+
+
+
+
+
 
       
     }

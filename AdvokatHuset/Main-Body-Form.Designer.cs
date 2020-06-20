@@ -442,7 +442,7 @@
             this.Controls.Add(this.Main_Body_Loader_panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(100, 50);
+            this.MinimumSize = new System.Drawing.Size(100, 70);
             this.Name = "Main_Body_Form";
             this.Text = "Advokathuset";
             this.Load += new System.EventHandler(this.Main_Body_Form_Load);
