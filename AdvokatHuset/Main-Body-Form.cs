@@ -24,6 +24,60 @@ namespace View_GUI
 
 
 
+
+        // Fade In On Start --------::START::------------------------------------------------------
+        Timer Fade_In_Timer = new Timer(); 
+
+
+        // Fade In On StartUP  - Timmer - Settings
+         private void Fade_In_Timmer_Settings()
+         {
+            this.Opacity = 0;
+            Fade_In_Timer.Interval = 1;
+            Fade_In_Timer.Tick += FormFadeIN;
+            Fade_In_Timer.Enabled = true;
+            Fade_In_Timer.Start();
+          
+         }
+
+
+        // Calling Method - Fade IN
+        void FormFadeIN(object sender, EventArgs e)
+        {
+            ;
+            this.Opacity += .03;
+
+            if(this.Opacity == 1) 
+            { 
+                Fade_In_Timer.Stop();
+            }
+                
+        }
+
+
+
+
+        // On Startup Fade IN
+        private void Main_Body_Form_Shown(object sender, EventArgs e)
+        {
+            this.Opacity = 0.0;
+            Fade_In_Timer.Start();
+        }
+
+
+        // Fade In On Start --------::END::------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
         //-----------FORM--Border----TitleBar-----Settings-----::SATRT::-------------------------------------------
 
         // For the Title Bar make it Dragable with The Form so you can drag the form
@@ -79,7 +133,7 @@ namespace View_GUI
         // Load
         private void Main_Body_Form_Load(object sender, EventArgs e)
         {
-
+            Fade_In_Timmer_Settings();
 
             // Transaparent Form 
             Transparent_Panel();
@@ -734,7 +788,8 @@ namespace View_GUI
 
 
 
-        // reset Transparency Key
+
+        // Reset Transparency Key
          private void Reset_Transparency_Key()
          {
             if (TransparentForm1.Visible == false)
@@ -743,6 +798,8 @@ namespace View_GUI
                 this.BackColor = Color.FromArgb(24, 24, 34); // Remove Red Background and Transparency on the main form at the Bottom
             }
          }
+
+
 
 
 
@@ -760,8 +817,7 @@ namespace View_GUI
             //TransparentForm1.BringToFront();
         }
 
-
-
+         
         // ADD - Transparency Form -------::END::------------------------------------------------------
 
 
@@ -771,7 +827,7 @@ namespace View_GUI
 
 
 
-      
+
     }
 
 

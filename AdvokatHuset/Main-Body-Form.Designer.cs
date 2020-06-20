@@ -446,6 +446,7 @@
             this.Name = "Main_Body_Form";
             this.Text = "Advokathuset";
             this.Load += new System.EventHandler(this.Main_Body_Form_Load);
+            this.Shown += new System.EventHandler(this.Main_Body_Form_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.opacity_trackBar)).EndInit();
             this.TitleBar_panel.ResumeLayout(false);
             this.ResumeLayout(false);
