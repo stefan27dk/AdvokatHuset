@@ -81,7 +81,7 @@ namespace View_GUI
 
 
             // Transaparent Form 
-            Transparetn_Panel();
+            Transparent_Panel();
 
 
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -248,6 +248,8 @@ namespace View_GUI
 
 
 
+
+
         // Maximize - Button
         private void maximize_button_Click(object sender, EventArgs e)
         {
@@ -304,6 +306,8 @@ namespace View_GUI
         }
 
 
+
+
         //Exit Button - Reset Image On Leave
         private void close_form_button_MouseLeave(object sender, EventArgs e)
         {
@@ -312,12 +316,18 @@ namespace View_GUI
         }
 
 
+
+
         //Maximize - Mouse Enter
         private void maximize_button_MouseEnter(object sender, EventArgs e)
         {
             maximize_button.BackgroundImage = Properties.Resources.Maximize_Hover_Ll234;
         }
          
+
+
+
+
 
         // Maximize - Mouse Leave
         private void maximize_button_MouseLeave(object sender, EventArgs e)
@@ -329,6 +339,8 @@ namespace View_GUI
                  
 
 
+
+
         // Minimizee - Enter
         private void minimize_button_MouseEnter(object sender, EventArgs e)
         {
@@ -337,12 +349,13 @@ namespace View_GUI
 
 
 
+
         // Minimizee - Leave
         private void minimize_button_MouseLeave(object sender, EventArgs e)
         {
-            minimize_button.BackgroundImage = Properties.Resources.Minimize12342;
-            
+            minimize_button.BackgroundImage = Properties.Resources.Minimize12342;   
         }
+
 
 
 
@@ -358,6 +371,7 @@ namespace View_GUI
             this.Width = ScreenW;
             this.Height = (int)(ScreenH * 0.5);
         }
+
 
 
 
@@ -507,24 +521,41 @@ namespace View_GUI
 
         // ADD / Show - Transparent Form -------::START::------------------------------------------------------
 
-
+           
         // Toggle Transparrent Form
-        private void Add_Ttransparent_form_button_Click(object sender, EventArgs e)
+        private void Add_Ttransparent_form_button_MouseDown(object sender, MouseEventArgs e)
         {
-
             if (TransparentForm1.Visible == false)
-            {   
+            {
                 TransparencyKey = Color.Red;
-                TransparentForm1.Visible = true;       
+                TransparentForm1.Visible = true;
             }
             else
-            {   
+            {
                 this.TransparencyKey = this.BackColor = Color.Red; // Makes it so we don see red Color on Removing the Transaprent Form
-                TransparentForm1.Visible = false;    
+                TransparentForm1.Visible = false;
+                this.BackColor = Color.FromArgb(24, 24, 34); // Remove Red Background and Transparency on the main form at the Bottom
+
+
             }
 
         }
-      
+
+
+
+
+
+        // Mouse UP - Remove Red Flickering on Transparent Form Toggle
+        private void Add_Ttransparent_form_button_MouseUp(object sender, MouseEventArgs e)
+        {
+            if(TransparentForm1.Visible == false)
+            {
+              this.TransparencyKey = this.BackColor = Color.Empty;
+              this.BackColor = Color.FromArgb(24, 24, 34); // Remove Red Background and Transparency on the main form at the Bottom
+            }
+
+        }
+
         // ADD - Transparency Form -------::START::------------------------------------------------------
 
 
@@ -535,7 +566,7 @@ namespace View_GUI
 
 
         // Transparent panel / Form
-        private void Transparetn_Panel()
+        private void Transparent_Panel()
         {
             
             TransparentForm1.TopLevel = false;
@@ -548,6 +579,7 @@ namespace View_GUI
             //TransparentForm1.BringToFront();
         }
 
+      
     }
 
 

@@ -218,7 +218,8 @@
             this.Add_Ttransparent_form_button.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.Add_Ttransparent_form_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Add_Ttransparent_form_button.UseVisualStyleBackColor = false;
-            this.Add_Ttransparent_form_button.Click += new System.EventHandler(this.Add_Ttransparent_form_button_Click);
+            this.Add_Ttransparent_form_button.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Add_Ttransparent_form_button_MouseDown);
+            this.Add_Ttransparent_form_button.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Add_Ttransparent_form_button_MouseUp);
             // 
             // close_form_button
             // 
