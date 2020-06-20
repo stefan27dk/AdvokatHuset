@@ -20,9 +20,9 @@ namespace View_GUI
             InitializeComponent();
             this.TopMost = false; // make the form always on top
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None; // hidden border
-            this.WindowState = FormWindowState.Maximized; // maximized
-            this.MinimizeBox = this.MaximizeBox = false; // not allowed to be minimized
-            this.MinimumSize = this.MaximumSize = this.Size; // not allowed to be resized
+            //this.WindowState = FormWindowState.Maximized; // maximized
+            //this.MinimizeBox = this.MaximizeBox = false; // not allowed to be minimized
+            //this.MinimumSize = this.MaximumSize = this.Size; // not allowed to be resized
             this.TransparencyKey = this.BackColor = Color.Red; // the color key to transparent, choose a color that you don't use
         }
 
@@ -44,10 +44,6 @@ namespace View_GUI
         {
             Point newLocation = PointToClient(Cursor.Position);
             panel1.Location = newLocation;
-
-            //Point currentPos = PointToClient(Cursor.Position);
-            //currentPos.Offset(-1,-1);
-            //panel1.Location = currentPos;
             this.Refresh();
         }
 

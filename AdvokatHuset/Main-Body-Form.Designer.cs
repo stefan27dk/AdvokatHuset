@@ -31,13 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Body_Form));
             this.Main_Body_Loader_panel = new System.Windows.Forms.Panel();
             this.opacity_trackBar = new System.Windows.Forms.TrackBar();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.opacity_25_percent_button = new System.Windows.Forms.Button();
             this.semi_middle_opacity_button = new System.Windows.Forms.Button();
             this.opacity_min_button = new System.Windows.Forms.Button();
             this.opacity_max_button = new System.Windows.Forms.Button();
             this.TitleBar_panel = new System.Windows.Forms.Panel();
+            this.Add_Ttransparent_form_button = new System.Windows.Forms.Button();
             this.close_form_button = new System.Windows.Forms.Button();
             this.minimize_button = new System.Windows.Forms.Button();
             this.Move_Form_Top_button = new System.Windows.Forms.Button();
@@ -47,8 +46,6 @@
             this.Show_Only_TitleBar_button = new System.Windows.Forms.Button();
             this.Form_Screenshot_button_button = new System.Windows.Forms.Button();
             this.allays_on_top_button = new System.Windows.Forms.Button();
-            this.Add_Ttransparent_form_button = new System.Windows.Forms.Button();
-            this.Main_Body_Loader_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.opacity_trackBar)).BeginInit();
             this.TitleBar_panel.SuspendLayout();
             this.SuspendLayout();
@@ -60,8 +57,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Main_Body_Loader_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(64)))));
             this.Main_Body_Loader_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Main_Body_Loader_panel.Controls.Add(this.panel2);
-            this.Main_Body_Loader_panel.Controls.Add(this.panel1);
             this.Main_Body_Loader_panel.Location = new System.Drawing.Point(0, 38);
             this.Main_Body_Loader_panel.Name = "Main_Body_Loader_panel";
             this.Main_Body_Loader_panel.Size = new System.Drawing.Size(1601, 741);
@@ -82,22 +77,6 @@
             this.opacity_trackBar.TickStyle = System.Windows.Forms.TickStyle.None;
             this.opacity_trackBar.Value = 100;
             this.opacity_trackBar.ValueChanged += new System.EventHandler(this.opacity_trackBar_ValueChanged);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Red;
-            this.panel1.Location = new System.Drawing.Point(514, 32);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(70, 22);
-            this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Blue;
-            this.panel2.Location = new System.Drawing.Point(1157, 400);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(303, 290);
-            this.panel2.TabIndex = 1;
             // 
             // opacity_25_percent_button
             // 
@@ -217,6 +196,29 @@
             this.TitleBar_panel.Size = new System.Drawing.Size(1608, 38);
             this.TitleBar_panel.TabIndex = 1;
             this.TitleBar_panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TitleBar_panel_MouseDown);
+            // 
+            // Add_Ttransparent_form_button
+            // 
+            this.Add_Ttransparent_form_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Add_Ttransparent_form_button.BackColor = System.Drawing.Color.Transparent;
+            this.Add_Ttransparent_form_button.BackgroundImage = global::View_GUI.Properties.Resources.To_Bar_Only_11111;
+            this.Add_Ttransparent_form_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Add_Ttransparent_form_button.FlatAppearance.BorderSize = 0;
+            this.Add_Ttransparent_form_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.Add_Ttransparent_form_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.Add_Ttransparent_form_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Add_Ttransparent_form_button.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Add_Ttransparent_form_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Add_Ttransparent_form_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Add_Ttransparent_form_button.Location = new System.Drawing.Point(1001, 1);
+            this.Add_Ttransparent_form_button.Margin = new System.Windows.Forms.Padding(0);
+            this.Add_Ttransparent_form_button.Name = "Add_Ttransparent_form_button";
+            this.Add_Ttransparent_form_button.Size = new System.Drawing.Size(33, 32);
+            this.Add_Ttransparent_form_button.TabIndex = 45;
+            this.Add_Ttransparent_form_button.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.Add_Ttransparent_form_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.Add_Ttransparent_form_button.UseVisualStyleBackColor = false;
+            this.Add_Ttransparent_form_button.Click += new System.EventHandler(this.Add_Ttransparent_form_button_Click);
             // 
             // close_form_button
             // 
@@ -424,29 +426,6 @@
             this.allays_on_top_button.UseVisualStyleBackColor = false;
             this.allays_on_top_button.Click += new System.EventHandler(this.allays_on_top_button_Click);
             // 
-            // Add_Ttransparent_form_button
-            // 
-            this.Add_Ttransparent_form_button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Add_Ttransparent_form_button.BackColor = System.Drawing.Color.Transparent;
-            this.Add_Ttransparent_form_button.BackgroundImage = global::View_GUI.Properties.Resources.To_Bar_Only_11111;
-            this.Add_Ttransparent_form_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Add_Ttransparent_form_button.FlatAppearance.BorderSize = 0;
-            this.Add_Ttransparent_form_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.Add_Ttransparent_form_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.Add_Ttransparent_form_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Add_Ttransparent_form_button.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Add_Ttransparent_form_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Add_Ttransparent_form_button.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Add_Ttransparent_form_button.Location = new System.Drawing.Point(1001, 1);
-            this.Add_Ttransparent_form_button.Margin = new System.Windows.Forms.Padding(0);
-            this.Add_Ttransparent_form_button.Name = "Add_Ttransparent_form_button";
-            this.Add_Ttransparent_form_button.Size = new System.Drawing.Size(33, 32);
-            this.Add_Ttransparent_form_button.TabIndex = 45;
-            this.Add_Ttransparent_form_button.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.Add_Ttransparent_form_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.Add_Ttransparent_form_button.UseVisualStyleBackColor = false;
-            this.Add_Ttransparent_form_button.Click += new System.EventHandler(this.Add_Ttransparent_form_button_Click);
-            // 
             // Main_Body_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -466,7 +445,6 @@
             this.Name = "Main_Body_Form";
             this.Text = "Advokathuset";
             this.Load += new System.EventHandler(this.Main_Body_Form_Load);
-            this.Main_Body_Loader_panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.opacity_trackBar)).EndInit();
             this.TitleBar_panel.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -488,11 +466,9 @@
         private System.Windows.Forms.Button Form_Screenshot_button_button;
         private System.Windows.Forms.TrackBar opacity_trackBar;
         private System.Windows.Forms.Button opacity_max_button;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button opacity_min_button;
         private System.Windows.Forms.Button semi_middle_opacity_button;
         private System.Windows.Forms.Button opacity_25_percent_button;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button Add_Ttransparent_form_button;
     }
 }
