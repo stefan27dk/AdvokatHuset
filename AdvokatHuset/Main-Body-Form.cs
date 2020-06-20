@@ -152,7 +152,7 @@ namespace View_GUI
 
 
             // Normal Window
-            if (keyData == (Keys.Alt | Keys.B))
+            if (keyData == (Keys.Alt | Keys.A))
             {
                 Normal_Window_Size_Location();
               
@@ -201,6 +201,29 @@ namespace View_GUI
             {
                 this.Location = new Point(Screen.PrimaryScreen.WorkingArea.Width / 2, 0);
                 this.Size = new Size(Screen.PrimaryScreen.WorkingArea.Width / 2, Screen.PrimaryScreen.WorkingArea.Height);
+            }
+
+
+            // On top of All
+            if (keyData == (Keys.Alt | Keys.Z))
+            {
+                Form_On_Top_Of_All();
+            }
+
+
+            // Form As Bar on Top
+            if (keyData == (Keys.Alt | Keys.S))
+            {
+                Form_As_Only_Bar();
+
+            }
+
+
+            //Screenshot
+            if (keyData == (Keys.Alt | Keys.D))
+            {
+                Form_Screenshot();
+
             }
 
 
@@ -381,7 +404,14 @@ namespace View_GUI
         // Allways on top
         private void allays_on_top_button_Click(object sender, EventArgs e)
         {
+            Form_On_Top_Of_All();
+        }
 
+
+
+        // On Top Of All
+        private void Form_On_Top_Of_All()
+        {
             if (this.TopMost == false)
             {
                 this.TopMost = true;
@@ -394,8 +424,6 @@ namespace View_GUI
                 allays_on_top_button.BackgroundImage = Properties.Resources.flash_kard_icon__1___5___3_1;
 
             }
-
-
         }
 
         //----Buttons-------------------------<<<--------------------------------------
@@ -546,7 +574,14 @@ namespace View_GUI
         // Show Only TitleBar
         private void Show_Only_TitleBar_button_Click(object sender, EventArgs e)
         {
+            Form_As_Only_Bar();
+        }
 
+
+
+         // Form As Bar On Top
+        private void Form_As_Only_Bar()
+        {
             int ScreenW = Screen.PrimaryScreen.Bounds.Width;
             int ScreenH = Screen.PrimaryScreen.Bounds.Height;
 
@@ -556,9 +591,15 @@ namespace View_GUI
         }
 
 
-
         // Form Screenshot Button
         private void Form_Screenshot_button_button_Click(object sender, EventArgs e)
+        {
+            Form_Screenshot();
+        }
+
+
+        // Screenshot
+        private void Form_Screenshot()
         {
             SoundPlayer sscreenshotSound = new SoundPlayer(@"C:\\Windows\Media\Windows Information Bar.wav");
             sscreenshotSound.Play();
@@ -566,7 +607,6 @@ namespace View_GUI
             Screenshot screenshot = new Screenshot();
             screenshot.MakeFormScreenshot();
         }
-
 
         //-------------Buttons---Hover--------------<<<<--------------------------------
 
