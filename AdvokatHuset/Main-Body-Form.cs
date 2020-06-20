@@ -15,12 +15,12 @@ using System.Windows.Forms;
 namespace View_GUI
 {
 
- 
 
     public partial class Main_Body_Form : Form
     {
-
-       
+         // Transparent Form
+        Transparent_Form TransparentForm1 = null;
+        bool transparentPanel_Visible = false;
 
 
         //-----------FORM--Border----TitleBar-----Settings-----::SATRT::-------------------------------------------
@@ -78,7 +78,7 @@ namespace View_GUI
         // Load
         private void Main_Body_Form_Load(object sender, EventArgs e)
         {
-           
+            this.StartPosition = FormStartPosition.CenterScreen;
 
             Main_Body_Settings(); // Settings
             Show_Log_In(); // Load Log In Form on Start
@@ -86,7 +86,7 @@ namespace View_GUI
             //var prop = TitleBar_panel.GetType().GetProperty("DoubleBuffered", BindingFlags.Instance | BindingFlags.NonPublic);
             //prop.SetValue(TitleBar_panel, true, null);
 
-            //BackColor = Color.Blue;
+         
             TransparencyKey = Color.Red;
             //this.Opacity = 1;
             opacity_trackBar.Value = (int)(this.Opacity * 100);
@@ -460,6 +460,9 @@ namespace View_GUI
         }
 
 
+
+
+
         // Middle
         private void semi_middle_opacity_button_Click(object sender, EventArgs e)
         {
@@ -467,6 +470,11 @@ namespace View_GUI
             opacity_trackBar.Value = ((opacity_trackBar.Maximum) / 2) +7;
         }
 
+
+
+
+
+        // 25 % Opacity Button
         private void opacity_25_percent_button_Click(object sender, EventArgs e)
         {
             opacity_trackBar.Value = 85;
@@ -478,5 +486,82 @@ namespace View_GUI
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+        // ADD - Transparency Form -------::START::------------------------------------------------------
+
+        // Add Transparrent Form
+        private void Add_Ttransparent_form_button_Click(object sender, EventArgs e)
+        {
+
+            if (TransparentForm1 == null)
+            {
+                Transparetn_Panel();
+                transparentPanel_Visible = true;
+            }
+            else
+            {
+                TransparentForm1.Dispose();
+                TransparentForm1 = null;
+                transparentPanel_Visible = false;
+            }
+
+        }
+
+
+
+         // On resize - Update The Transparency Form
+        protected override void OnResize(EventArgs e)
+        {
+            base.OnResize(e);
+
+            // If Transparent Form Visible Update the Size on Resize
+            if (transparentPanel_Visible == true)
+            {
+                Transparetn_Panel();
+            }
+
+
+        }
+
+        // ADD - Transparency Form -------::START::------------------------------------------------------
+
+
+
+
+
+
+
+
+        // Transparent panel
+        private void Transparetn_Panel()
+        {
+            TransparentForm1 = new Transparent_Form();
+            TransparentForm1.TopLevel = false;
+            TransparentForm1.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            //TransparentForm1.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right);
+
+            Main_Body_Loader_panel.Controls.Add(TransparentForm1);
+            TransparentForm1.Show();
+            TransparentForm1.BringToFront();
+        }
+
     }
+
+
+      
+
+
+
+
 }
+ 

@@ -416,12 +416,12 @@ namespace View_GUI
         // Load Main Form Code 
         private void Load_Main_Form()
         {
-            Form Get_Main_Body_Form = Application.OpenForms["Main_Body_Form"];
-            //TrackBar Get_Opacity_TrackBar = (TrackBar)Get_Main_Body_Form.Controls["opacity_trackBar"];
-            //Get_Opacity_TrackBar.Value = 100;
 
+            // Set TrackBar
+            Form Get_Main_Body_Form = Application.OpenForms["Main_Body_Form"];
             ((TrackBar)Get_Main_Body_Form.Controls["opacity_trackBar"]).Value = 100;
             Get_Main_Body_Form.Opacity = 1;
+
             Main_Form.TopLevel = false;
             this.Parent.Controls.Add(Main_Form);  // Get the Loader Panel of the Main Form Body
             Main_Form.FormBorderStyle = FormBorderStyle.None;

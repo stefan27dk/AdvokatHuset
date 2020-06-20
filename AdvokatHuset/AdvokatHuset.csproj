@@ -114,6 +114,12 @@
       <DependentUpon>Statistics-Form14.cs</DependentUpon>
     </Compile>
     <Compile Include="Statistics_Facade.cs" />
+    <Compile Include="Transparent_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transparent_Form.Designer.cs">
+      <DependentUpon>Transparent_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Validate_Log_In.cs" />
     <Compile Include="World_Clock_Form13.cs">
       <SubType>Form</SubType>
@@ -223,6 +229,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Statistics-Form14.resx">
       <DependentUpon>Statistics-Form14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transparent_Form.resx">
+      <DependentUpon>Transparent_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="World_Clock_Form13.resx">
       <DependentUpon>World_Clock_Form13.cs</DependentUpon>
