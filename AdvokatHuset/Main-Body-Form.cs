@@ -133,24 +133,18 @@ namespace View_GUI
         // Load
         private void Main_Body_Form_Load(object sender, EventArgs e)
         {
-            Fade_In_Timmer_Settings();
 
-            // Transaparent Form 
-            Transparent_Panel();
-
-
-            this.StartPosition = FormStartPosition.CenterScreen;
-
-            Main_Body_Settings(); // Settings
+           
+            Fade_In_Timmer_Settings(); // Fade In Timmer Settings  
+            Transparent_Panel(); // Transaparent Form     
+            this.StartPosition = FormStartPosition.CenterScreen;  n_Body_Settings(); // Settings
             Show_Log_In(); // Load Log In Form on Start
 
             //var prop = TitleBar_panel.GetType().GetProperty("DoubleBuffered", BindingFlags.Instance | BindingFlags.NonPublic);
             //prop.SetValue(TitleBar_panel, true, null);
-
-
-
+                
             //this.Opacity = 1;
-            opacity_trackBar.Value = (int)(this.Opacity * 100);
+            opacity_trackBar.Value = (int)(this.Opacity * 100); // Opacity Down Right Corner "Trackbar" Value
         }
 
 
