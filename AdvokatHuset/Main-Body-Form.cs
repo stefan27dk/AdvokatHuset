@@ -44,7 +44,7 @@ namespace View_GUI
         // Calling Method - Fade IN
         void FormFadeIN(object sender, EventArgs e)
         {
-            ;
+            
             this.Opacity += .03;
 
             if(this.Opacity == 1) 
@@ -137,7 +137,8 @@ namespace View_GUI
            
             Fade_In_Timmer_Settings(); // Fade In Timmer Settings  
             Transparent_Panel(); // Transaparent Form     
-            this.StartPosition = FormStartPosition.CenterScreen;  n_Body_Settings(); // Settings
+            this.StartPosition = FormStartPosition.CenterScreen;  
+            Main_Body_Settings(); // Settings
             Show_Log_In(); // Load Log In Form on Start
 
             //var prop = TitleBar_panel.GetType().GetProperty("DoubleBuffered", BindingFlags.Instance | BindingFlags.NonPublic);
