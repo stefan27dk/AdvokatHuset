@@ -26,35 +26,59 @@ namespace View_GUI
 
 
         // Fade In On Start --------::START::------------------------------------------------------
-        Timer Fade_In_Timer = new Timer(); 
+        Timer Fade_In_Timer = new Timer();
+
+
+        // Form Start Location
+        int Form_Start_Location_Y = 0;
 
 
         // Fade In On StartUP  - Timmer - Settings
-         private void Fade_In_Timmer_Settings()
-         {
+        private void Fade_In_Timmer_Settings()
+        {
             this.Opacity = 0;
             Fade_In_Timer.Interval = 1;
             Fade_In_Timer.Tick += FormFadeIN;
             Fade_In_Timer.Enabled = true;
             Fade_In_Timer.Start();
           
-         }
+        }
+
 
 
         // Calling Method - Fade IN
         void FormFadeIN(object sender, EventArgs e)
         {
-            
-            this.Opacity += .03;
+             // Opacity  of Form
+            if (this.Opacity != 1)
+            {
+                
+                this.Opacity += .07;
+            }
 
-            if(this.Opacity == 1) 
+
+             // Moving Location of Form
+            if(this.Location.Y > (Screen.PrimaryScreen.Bounds.Height /2) - this.Size.Height / 2)
+            {
+
+              this.Location = new Point(this.Location.X, this.Location.Y - 50);
+           
+            }
+
+
+            // Stop If all is in its place
+            if (this.Opacity == 1 && (this.Location.Y < (Screen.PrimaryScreen.Bounds.Height / 2) - this.Size.Height / 2)) 
             { 
                 Fade_In_Timer.Stop();
+                SoundPlayer ShowUp = new SoundPlayer(@"C:\Windows\Media\Windows Print complete.wav");
+                ShowUp.LoadAsync();
+                ShowUp.Play();
             }
-                
+
         }
+        
 
-
+       
 
 
         // On Startup Fade IN
@@ -124,6 +148,12 @@ namespace View_GUI
         public Main_Body_Form()
         {
             InitializeComponent();
+
+            this.StartPosition = FormStartPosition.Manual;  // Manual Form Start Position
+            // Form Start Location Y
+            Form_Start_Location_Y = this.Location.Y;
+            this.Location = new Point((Screen.PrimaryScreen.Bounds.Width / 2) - this.Size.Width / 2, Screen.PrimaryScreen.Bounds.Height);// Form Start Position Middle Bottm
+             
         }
 
 
@@ -133,11 +163,11 @@ namespace View_GUI
         // Load
         private void Main_Body_Form_Load(object sender, EventArgs e)
         {
+            
 
-           
             Fade_In_Timmer_Settings(); // Fade In Timmer Settings  
             Transparent_Panel(); // Transaparent Form     
-            this.StartPosition = FormStartPosition.CenterScreen;  
+       
             Main_Body_Settings(); // Settings
             Show_Log_In(); // Load Log In Form on Start
 
