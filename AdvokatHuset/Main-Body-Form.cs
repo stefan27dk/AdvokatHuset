@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Media;
@@ -18,9 +19,9 @@ namespace View_GUI
 
     public partial class Main_Body_Form : Form
     {
-         // Transparent Form
+        // Transparent Form
         Transparent_Form TransparentForm1 = new Transparent_Form();
-        
+
 
 
         //-----------FORM--Border----TitleBar-----Settings-----::SATRT::-------------------------------------------
@@ -34,7 +35,7 @@ namespace View_GUI
 
 
 
-        
+
 
         // Form Resize Resources
         const int WM_NCHITTEST = 0x84;
@@ -47,7 +48,7 @@ namespace View_GUI
         const int CS_DBLCLKS = 0x8;
 
 
-        
+
         //-----------FORM--Border----TitleBar-----Settings-----::END::-------------------------------------------
 
 
@@ -92,8 +93,8 @@ namespace View_GUI
             //var prop = TitleBar_panel.GetType().GetProperty("DoubleBuffered", BindingFlags.Instance | BindingFlags.NonPublic);
             //prop.SetValue(TitleBar_panel, true, null);
 
-         
-            
+
+
             //this.Opacity = 1;
             opacity_trackBar.Value = (int)(this.Opacity * 100);
         }
@@ -103,7 +104,7 @@ namespace View_GUI
 
 
 
- 
+
 
 
 
@@ -180,7 +181,7 @@ namespace View_GUI
 
             get
             {
-              
+
                 // For Moving the Form and resize it
                 CreateParams cp = base.CreateParams;
                 cp.Style = (cp.Style | 262144);
@@ -190,9 +191,9 @@ namespace View_GUI
                 cp.Style |= WS_MINIMIZEBOX;
                 cp.ClassStyle |= CS_DBLCLKS;
 
-                return cp;   
+                return cp;
             }
-         
+
         }
 
 
@@ -211,7 +212,7 @@ namespace View_GUI
         }
 
 
-         //-------------------------SPECIAL-----<<<--------------------------------------------------------------
+        //-------------------------SPECIAL-----<<<--------------------------------------------------------------
 
 
 
@@ -253,9 +254,9 @@ namespace View_GUI
         // Maximize - Button
         private void maximize_button_Click(object sender, EventArgs e)
         {
-            if(WindowState != FormWindowState.Maximized)
+            if (WindowState != FormWindowState.Maximized)
             {
-               WindowState = FormWindowState.Maximized;
+                WindowState = FormWindowState.Maximized;
             }
             else
             {
@@ -273,7 +274,7 @@ namespace View_GUI
         private void allays_on_top_button_Click(object sender, EventArgs e)
         {
 
-            if(this.TopMost == false)
+            if (this.TopMost == false)
             {
                 this.TopMost = true;
                 allays_on_top_button.BackgroundImage = Properties.Resources.flash_kard_icon__1___5___4_;
@@ -283,7 +284,7 @@ namespace View_GUI
             {
                 this.TopMost = false;
                 allays_on_top_button.BackgroundImage = Properties.Resources.flash_kard_icon__1___5___3_1;
-              
+
             }
 
 
@@ -312,7 +313,7 @@ namespace View_GUI
         private void close_form_button_MouseLeave(object sender, EventArgs e)
         {
             close_form_button.BackgroundImage = Properties.Resources.Exit_Form14321;
-            
+
         }
 
 
@@ -323,7 +324,7 @@ namespace View_GUI
         {
             maximize_button.BackgroundImage = Properties.Resources.Maximize_Hover_Ll234;
         }
-         
+
 
 
 
@@ -336,7 +337,7 @@ namespace View_GUI
 
         }
 
-                 
+
 
 
 
@@ -353,7 +354,7 @@ namespace View_GUI
         // Minimizee - Leave
         private void minimize_button_MouseLeave(object sender, EventArgs e)
         {
-            minimize_button.BackgroundImage = Properties.Resources.Minimize12342;   
+            minimize_button.BackgroundImage = Properties.Resources.Minimize12342;
         }
 
 
@@ -384,9 +385,9 @@ namespace View_GUI
             int ScreenY = Screen.PrimaryScreen.Bounds.Y;
 
             this.WindowState = FormWindowState.Normal;
-            this.Location = new Point(0, (int)(ScreenH/2));
+            this.Location = new Point(0, (int)(ScreenH / 2));
             this.Width = ScreenW;
-            this.Height = (int)(ScreenH * 0.5)-41;
+            this.Height = (int)(ScreenH * 0.5) - 41;
         }
 
 
@@ -407,8 +408,8 @@ namespace View_GUI
         }
 
 
-                   
-                     
+
+
 
 
 
@@ -421,7 +422,7 @@ namespace View_GUI
 
             this.WindowState = FormWindowState.Normal;
             this.Size = new Size(ScreenW - 150, 50);
-            this.Location = new Point(0,0);
+            this.Location = new Point(0, 0);
         }
 
 
@@ -460,12 +461,12 @@ namespace View_GUI
             this.Opacity = opacity_trackBar.Value * 0.01;  // Adjust Form Opacity
         }
 
-      
-            
+
+
         // Opacity MAX
         private void opacity_max_button_Click(object sender, EventArgs e)
         {
-             
+
             opacity_trackBar.Value = opacity_trackBar.Minimum;
         }
 
@@ -475,7 +476,7 @@ namespace View_GUI
         // Opacity MINIMUM
         private void opacity_min_button_Click(object sender, EventArgs e)
         {
-            
+
             opacity_trackBar.Value = opacity_trackBar.Maximum;
         }
 
@@ -486,8 +487,8 @@ namespace View_GUI
         // Middle
         private void semi_middle_opacity_button_Click(object sender, EventArgs e)
         {
- 
-            opacity_trackBar.Value = ((opacity_trackBar.Maximum) / 2) +7;
+
+            opacity_trackBar.Value = ((opacity_trackBar.Maximum) / 2) + 7;
         }
 
 
@@ -507,13 +508,7 @@ namespace View_GUI
 
 
 
-
-
-
-
-
-
-
+      
 
 
 
@@ -521,7 +516,7 @@ namespace View_GUI
 
         // ADD / Show - Transparent Form -------::START::------------------------------------------------------
 
-           
+
         // Toggle Transparrent Form
         private void Add_Ttransparent_form_button_MouseDown(object sender, MouseEventArgs e)
         {
@@ -535,15 +530,16 @@ namespace View_GUI
                 this.TransparencyKey = this.BackColor = Color.Red; // Makes it so we don see red Color on Removing the Transaprent Form
                 TransparentForm1.Visible = false;
                 this.BackColor = Color.FromArgb(24, 24, 34); // Remove Red Background and Transparency on the main form at the Bottom
-
-
+                 
             }
 
         }
 
 
 
-
+       
+     
+ 
 
         // Mouse UP - Remove Red Flickering on Transparent Form Toggle
         private void Add_Ttransparent_form_button_MouseUp(object sender, MouseEventArgs e)
