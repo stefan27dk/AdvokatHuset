@@ -241,7 +241,7 @@ namespace View_GUI
                 opret_sag_advokatID_textBox.BackColor = Color.FromArgb(255, 192, 192);
            }
 
-           if(opret_sag_Kunde_ID_textBox.Text.Length <15)
+            if(opret_sag_Kunde_ID_textBox.Text.Length <15)
             {
                 isValid = false;
                 opret_sag_Kunde_ID_textBox.BackColor = Color.FromArgb(255, 192, 192);
@@ -297,6 +297,7 @@ namespace View_GUI
         // Save Button- 
         private void Sag_Save_button_Click(object sender, EventArgs e)
         {
+            isValid = true;
             TextboxesResetColor(); // Reset Color
             ValidateAll(); // Validate
 

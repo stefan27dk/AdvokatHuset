@@ -1699,11 +1699,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(1600, 800);
+            this.Controls.Add(this.backPanel_Textboxes_Opret_sag_panel);
             this.Controls.Add(this.add_time_back_panel);
             this.Controls.Add(this.Register_Koersel_Back_Panel_panel);
             this.Controls.Add(this.datagridviewBackground_panel);
             this.Controls.Add(this.sag_Add_Ydelse_panel);
-            this.Controls.Add(this.backPanel_Textboxes_Opret_sag_panel);
             this.Controls.Add(this.update_sag_Back_panel);
             this.Controls.Add(this.top_Menu_background_panel);
             this.Controls.Add(this.backgroundName_Top_panel);

@@ -40,31 +40,39 @@ namespace DAL
             }
 
                 // Get Information about the Exception        
-            catch (SqlException e) 
+            catch (Exception e) 
             {
 
+                if (e is SqlException)     // If Exception is SQL Exception
+                {
+                    SqlException a = (SqlException)e;
+                    switch (a.Number)
+                    {
+                        case 8134:
+                            MessageBox.Show("Fokeret ID", "Fejl", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            break;
+                        case 8169:
+                            MessageBox.Show("Forkert Input: Fejlen kan skyldes fx. forkeret \"ID\"", "Fejl", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            break;
+                        case 2627:
+                            MessageBox.Show("Forkert Input: Fejlen kan skyldes fx. Tomt \"Input\"", "Fejl", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            break;
+                        case 547:
+                            MessageBox.Show("Forkert Input", "Fejl", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            break;
+                        default:
+                            MessageBox.Show($"{a.Number.ToString()} \t {a.Message} \t {a.InnerException} \t {a.Data} \t {a.ToString()}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            break;
+                    }
 
-                switch(e.Number)
-                 {
-                    case 8134:
-                        MessageBox.Show("Fokeret ID", "Fejl", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        break;
-                    case 8169:
-                        MessageBox.Show("Forkert Input: Fejlen kan skyldes fx. forkeret \"ID\"", "Fejl", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        break;
-                    case 2627:
-                        MessageBox.Show("Forkert Input: Fejlen kan skyldes fx. Tomt \"Input\"", "Fejl", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        break;
-                    case 547:
-                        MessageBox.Show("Forkert Input", "Fejl", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        break;
-                    default:
-                  MessageBox.Show($"{e.Number.ToString()} \t {e.Message} \t {e.InnerException} \t {e.Data} \t {e.ToString()}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        break;
+                }
+                else
+                {
+                    MessageBox.Show($" {e.Message} \t {e.InnerException} \t {e.Data} \t {e.ToString()}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
 
-          
+                 
 
             }
 
