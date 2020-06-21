@@ -55,7 +55,7 @@ namespace DAL
                             MessageBox.Show("Forkert Input: Fejlen kan skyldes fx. forkeret \"ID\"", "Fejl", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             break;
                         case 2627:
-                            MessageBox.Show("Forkert Input: Fejlen kan skyldes fx. Tomt \"Input\"", "Fejl", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Forkert Input: Fejlen kan skyldes fx. Tomt \"Input\" Eller Dataen Eksister i forvejen", "Fejl", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             break;
                         case 547:
                             MessageBox.Show("Forkert Input", "Fejl", MessageBoxButtons.OK, MessageBoxIcon.Error);
