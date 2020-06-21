@@ -241,7 +241,7 @@ namespace View_GUI
 
 
             // Normal Window - Shortcut 2
-            if (keyData == Keys.End)
+            if (keyData == (Keys.Control | Keys.NumPad5))
             {
                 Normal_Window_Size_Location();
             }
@@ -251,7 +251,7 @@ namespace View_GUI
 
 
             // Window Up
-            if (keyData == (Keys.Up))
+            if (keyData == (Keys.Control | Keys.NumPad8))
             {
                 Form_Window_Top();
             }
@@ -259,14 +259,14 @@ namespace View_GUI
 
 
             // Window Down
-            if (keyData == (Keys.Down))
+            if (keyData == (Keys.Control | Keys.NumPad2))
             {
                 Form_Window_Down();
             }
 
 
             // Window Left
-            if (keyData == (Keys.Left))
+            if (keyData == (Keys.Control | Keys.NumPad4))
             {
                 this.Location = new Point(0,0);
                 this.Size = new Size(Screen.PrimaryScreen.WorkingArea.Width / 2, Screen.PrimaryScreen.WorkingArea.Height);
@@ -276,7 +276,7 @@ namespace View_GUI
 
 
             // Window Right
-            if (keyData == (Keys.Right))
+            if (keyData == (Keys.Control | Keys.NumPad6))
             {
                 this.Location = new Point(Screen.PrimaryScreen.WorkingArea.Width / 2, 0);
                 this.Size = new Size(Screen.PrimaryScreen.WorkingArea.Width / 2, Screen.PrimaryScreen.WorkingArea.Height);
