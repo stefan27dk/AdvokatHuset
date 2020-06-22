@@ -12,7 +12,11 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-    
+
+
+ 
+ 
+ 
 namespace View_GUI
 {
 
@@ -149,6 +153,7 @@ namespace View_GUI
         {
             InitializeComponent();
 
+
             this.StartPosition = FormStartPosition.Manual;  // Manual Form Start Position
             // Form Start Location Y
             Form_Start_Location_Y = this.Location.Y;
@@ -163,8 +168,6 @@ namespace View_GUI
         // Load
         private void Main_Body_Form_Load(object sender, EventArgs e)
         {
-            
-
             Fade_In_Timmer_Settings(); // Fade In Timmer Settings  
             Transparent_Panel(); // Transaparent Form     
        
@@ -395,7 +398,6 @@ namespace View_GUI
                 // For Moving the Form and resize it
                 CreateParams cp = base.CreateParams;
                 cp.Style = (cp.Style | 262144);
-
 
                 // For Minimize and maximize when you click on the taskbar
                 cp.Style |= WS_MINIMIZEBOX;
@@ -842,17 +844,14 @@ namespace View_GUI
             //TransparentForm1.BringToFront();
         }
 
-         
+
+
+
         // ADD - Transparency Form -------::END::------------------------------------------------------
 
 
 
-
-
-
-
-
-
+         
     }
 
 
