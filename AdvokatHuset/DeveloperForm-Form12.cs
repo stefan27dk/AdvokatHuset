@@ -212,14 +212,16 @@ namespace View_GUI
 
             while ((index = Script_richTextBox.Text.IndexOf(word, (index + 1), StringComparison.OrdinalIgnoreCase)) != -1)   // index = word start index // if there is no more words than returns  -1 Text ended
             {
+                
                 Script_richTextBox.Select((index + startIndex), word.Length); // Select the word
                 Script_richTextBox.SelectionColor = color; // Change color of the Selected Word
                 Script_richTextBox.Select(selectStart, 0); // Selecteion start is the Typers last position before i began to select word
                 Script_richTextBox.SelectionColor = Color.FromArgb(255, 204, 64); // Reset Fore Color
                 Script_richTextBox.SelectionBackColor = Script_richTextBox.BackColor;
+               
             }
 
-        }
+         }
 
 
 
@@ -227,7 +229,7 @@ namespace View_GUI
         // On Text Changed - Change Word Color
         private void Script_richTextBox_TextChanged(object sender, EventArgs e)
         {
-
+             
             int selectStart = Script_richTextBox.SelectionStart;  // Remember The Index of the Typer
             Script_richTextBox.SelectAll(); // Select The whole text
             Script_richTextBox.SelectionColor = Color.FromArgb(255, 204, 64); // The whole text to Yellow 
@@ -248,13 +250,15 @@ namespace View_GUI
             Stylize_Custom_SQL_Words("Values", Color.FromArgb(0, 250, 62), 0);
             Stylize_Custom_SQL_Words("Insert", Color.ForestGreen, 0);
             Stylize_Custom_SQL_Words("Else", Color.FromArgb(66, 135, 245), 0);
+             
+
         }
 
-       
 
-    
 
-     
+
+
+
 
 
 
@@ -296,14 +300,17 @@ namespace View_GUI
             // Search
             if(Search_Script_textBox.Text.Length > 0) // IF SearxhTexbox is not empty
             {
+                
                 while ((index = Script_richTextBox.Text.IndexOf(Search_Script_textBox.Text, (index +1), StringComparison.OrdinalIgnoreCase)) != -1)
                 {
-                 
+                    
                    Script_richTextBox.Select((index), Search_Script_textBox.Text.Length); // Select the word
                    Script_richTextBox.SelectionBackColor = Color.FromArgb(196, 49, 86); // Change color of the Selected Word
                    Script_richTextBox.Select(selectStart, 0); // Selecteion start is the Typers last position before i began to select word
                    Script_richTextBox.SelectionBackColor = Script_richTextBox.BackColor; // Reset Fore Color
                    Script_richTextBox.ScrollToCaret();  // Scroll To Word
+                    
+
                 }
 
             }

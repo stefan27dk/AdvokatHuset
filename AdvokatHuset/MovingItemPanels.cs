@@ -56,9 +56,7 @@ namespace View_GUI
         public MovingItemPanels() // Constructor
         {
             Add_Object = this.ItemPanel;
-
-         
-
+            
         }
 
   

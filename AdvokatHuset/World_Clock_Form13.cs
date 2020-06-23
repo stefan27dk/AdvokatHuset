@@ -30,7 +30,7 @@ namespace View_GUI
 
 
         // Delaegate
-        public delegate void CLock_Delegate(String SF_Clock, string KB_Clock);
+        public delegate void CLock_Delegate(String SF_Clock, string KB_Clock);  // Delegate med Input parameter string, string
 
 
 
@@ -53,8 +53,7 @@ namespace View_GUI
 
         // Load
         private void World_Clock_Form13_Load(object sender, EventArgs e)
-        {
-
+        {   
             Populate_Combobx();
             World_Time();
             My_Timer();
@@ -81,8 +80,8 @@ namespace View_GUI
        
             
     
-        // Update Clock - Time
-        public void Update_Time()
+            // Update Clock - Time
+            public void Update_Time()
             {
                    
      
@@ -95,22 +94,22 @@ namespace View_GUI
                                    string SF_Time = DateTime.Now.AddHours(-9).ToShortTimeString(); // San Francisco
                                    string KB_Time = DateTime.Now.ToShortTimeString(); // København - Time
                                    Update_View(SF_Time, KB_Time);
-                                   Thread.Sleep(60000);
+                                   Thread.Sleep(60000); // 1 Minute = 60000 MilliSeconds
 
                                  }
 
                              
-                          
+                             // Mellem metode til Give metode til Delegaten og Invoke "Kalde Delegaten og give parameter til delegat metoden"
                              void Update_View(string SF, string KB)
                              {
-                                 CLock_Delegate c_delegate = new CLock_Delegate(Update_Clocks);
-                                 Invoke(c_delegate, SF, KB);
+                                 CLock_Delegate c_delegate = new CLock_Delegate(Update_Clocks);   // Give metode til delegaten
+                                 Invoke(c_delegate, SF, KB); // Invoke kræver Delegate, og delegatens metode input Parameter.  // Invoke Giver Input til Delegatens Metode - "Update_Clocks" og kalder Delegaten
                             
                              }
                           
 
 
-
+                              // Opdater Viewet som er på den Win Forms Thread
                              void Update_Clocks(string SF_Clock, string KB_Clock)
                              {
                                San_Francisco_Time_textBox.Text = SF_Clock; // San Francisco
@@ -121,7 +120,7 @@ namespace View_GUI
                        }
               
 
-        }
+            }
 
 
         //------VerdensUR - Opgave------::END::--------------------------------------
